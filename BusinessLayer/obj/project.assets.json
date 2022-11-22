@@ -603,11 +603,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -628,11 +628,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj": {
-              "projectPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj"
+            "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj": {
+              "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj"
             },
-            "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

@@ -32,3 +32,7 @@ C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessLayer\obj\Debug\net6.0-windows\
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.dll
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessLayer\obj\Debug\net6.0-windows\ref\BusinessLayer.dll
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.pdb
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfo.cs
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.csproj.CoreCompileInputs.cache

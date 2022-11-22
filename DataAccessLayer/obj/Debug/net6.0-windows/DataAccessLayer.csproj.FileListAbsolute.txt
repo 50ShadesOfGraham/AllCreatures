@@ -28,3 +28,8 @@ C:\Users\Darragh\Downloads\ACGS (1)\ACGS\DataAccessLayer\obj\Debug\net6.0-window
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.dll
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\ref\DataAccessLayer.dll
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.pdb
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\DataAccessLayer\obj\Debug\net6.0-windows\DataAccessLayer.csproj.CoreCompileInputs.cache

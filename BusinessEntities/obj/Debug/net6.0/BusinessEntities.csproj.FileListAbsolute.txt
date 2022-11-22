@@ -21,3 +21,14 @@ C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessEntities\obj\Debug\net6.0\Busin
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.dll
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessEntities\obj\Debug\net6.0\ref\BusinessEntities.dll
 C:\Users\Darragh\Downloads\ACGS (1)\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.pdb
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\bin\Debug\net6.0\BusinessEntities.deps.json
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\bin\Debug\net6.0\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\bin\Debug\net6.0\ref\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\bin\Debug\net6.0\BusinessEntities.pdb
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.AssemblyInfoInputs.cache
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.AssemblyInfo.cs
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\ref\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\Darragh96\ACGS\BusinessEntities\obj\Debug\net6.0\BusinessEntities.pdb

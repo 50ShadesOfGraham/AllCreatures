@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj": {
+    "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj",
+        "projectUniqueName": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj",
         "projectName": "BusinessEntities",
-        "projectPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj",
+        "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\obj\\",
+        "outputPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,8 +90,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "C:\\Users\\Darragh\\Downloads\\ACGS (1)\\ACGS\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\Darragh96\\ACGS\\BusinessEntities\\BusinessEntities.csproj"
               }
             }
           }
