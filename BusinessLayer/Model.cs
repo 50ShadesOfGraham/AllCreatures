@@ -1,23 +1,25 @@
-﻿using DataAccessLayer;
-using BusinessEntities;
-using Microsoft.VisualBasic.ApplicationServices;
+﻿using BusinessEntities;
+using DataAccessLayer;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
     public class Model : IModel
     {
         #region Static Attributes
-        private static IModel modelSingletonInstance;  // Model object is a singleton so only one instance allowed
-        static readonly object padlock = new object(); // Need this for thread safety on the Model singleton creation. ie in GetInstance () method
+        private static IModel modelSingletonInstance;
+        static readonly object padlock = new object();
         #endregion
         #region Instance Attribures
         private IDataLayer dataLayer;
-        private BusinessEntities.User currentUser;
+        private User currentUser;
         private ArrayList userList;
+        private ArrayList advertList;
         #endregion
         #region Instance Properties
         public IDataLayer DataLayer
@@ -25,7 +27,7 @@ namespace BusinessLayer
             get { return dataLayer; }
             set { dataLayer = value; }
         }
-        public BusinessEntities.User CurrentUser
+        public User CurrentUser
         {
             get
             {
@@ -43,6 +45,17 @@ namespace BusinessLayer
             get
             {
                 return userList;
+            }
+            //set
+            //{
+            //}
+        }
+
+        public ArrayList AdvertList
+        {
+            get
+            {
+                return advertList;
             }
             //set
             //{
@@ -67,6 +80,9 @@ namespace BusinessLayer
             userList = new ArrayList();
             dataLayer = _DataLayer;
             userList = dataLayer.getAllUsers(); // setup Models userList so we can login
+
+            advertList = new ArrayList();
+            dataLayer.getAllAdvertisements();
         }
 
         ~Model()
@@ -74,12 +90,15 @@ namespace BusinessLayer
             tearDown();
         }
         #endregion
-        public Boolean login(String name, String password)
+        public Boolean login(string email, string password)
         {
-
-            foreach (BusinessEntities.User user in userList)
+            foreach (User user in userList)
             {
-                if (name == user.FirstName && password == user.Password)
+                String DBUserEmail = user.Email.Trim();
+                String DBUserPassword = user.Password.Trim();
+                MessageBox.Show("DBUserEmail: " + DBUserEmail);
+
+                if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
                     CurrentUser = user;
                     return true;
@@ -87,13 +106,14 @@ namespace BusinessLayer
             }
             return false;
         }
-        public Boolean addNewUser(string firstname, string lastname, string password, string userType, string email)
+
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, string userType)
         {
             try
             {
-                IUser user = UserCreator.GetUser(firstname,lastname, password, userType,email); 
-                UserList.Add(user);                            
-                DataLayer.addNewUserToDB(firstname, lastname, password, userType, email); 
+                IUser user = UserCreator.GetUser(email, firstname, lastname, password, userType);
+                UserList.Add(user);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password, userType);
                 return true;
             }
             catch (System.Exception excep)
@@ -102,9 +122,44 @@ namespace BusinessLayer
             }
         }
 
+        public Boolean addNewAdvert(string advertid, string title, string description, string price, string quantity, string selleremail)
+        {
+            try
+            {
+                IAdvertisement ad = AdvertisementCreator.GetAdvert(advertid, title, description, price, quantity, selleremail);
+                AdvertList.Add(ad);
+                DataLayer.addNewAdvertToDB(advertid, title, description, price, quantity, selleremail);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+
+
+
         public String getUserTypeForCurrentuser()
         {
             return currentUser.UserType;
+        }
+
+        public String getUserNameCurrentuser()
+        {
+            return currentUser.FirstName;
+        }
+
+        public Boolean EmailPresent(string Email)
+        {
+            string EmailTrim = Email.Trim();
+
+            foreach (User user in userList)
+            {
+                string DBEmail = user.Email.Trim();
+
+                if (DBEmail.Equals(EmailTrim)) { return true; }
+            }
+            return false;
         }
 
         public void tearDown()
@@ -112,5 +167,5 @@ namespace BusinessLayer
             DataLayer.closeConnection();
         }
     }
-
 }
+

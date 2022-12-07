@@ -1,12 +1,9 @@
-﻿using System.Data;
-using System.Data.SqlClient;
+﻿using BusinessEntities;
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using Application = System.Windows.Forms.Application;
-using BusinessEntities;
-using System.Xml.Linq;
+using System.Data;
+using System.Data.SqlClient;
+
 
 namespace DataAccessLayer
 {
@@ -17,6 +14,7 @@ namespace DataAccessLayer
         DataSet ds;
         SqlDataAdapter da;
         int maxUsers;
+        int maxAdverts;
         SqlCommandBuilder cb;
         #endregion
         #region Static Attributes
@@ -43,7 +41,7 @@ namespace DataAccessLayer
         public void openConnection()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=localhost;Initial Catalog=ACGS;Integrated Security=True";
+            con.ConnectionString = "Data Source=DESKTOP-AQPAJFP;Initial Catalog=ACGS;Integrated Security=True";
             try
             {
                 con.Open();
@@ -55,17 +53,14 @@ namespace DataAccessLayer
                 Environment.Exit(0); //Force the application to close
             }
         }
-
         public void closeConnection()
         {
             con.Close();
         }
-
         public SqlConnection getConnection()
         {
             return con;
         }
-
         public ArrayList getAllUsers()
         {
             ArrayList UserList = new ArrayList();
@@ -80,13 +75,15 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    IUser user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),  
+                    IUser user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
                                                         dRow.ItemArray.GetValue(4).ToString());
                     UserList.Add(user);
                 }
+
+
             }
             catch (System.Exception excep)
             {
@@ -98,8 +95,42 @@ namespace DataAccessLayer
             }
             return UserList;
         }
+        public ArrayList getAllAdvertisements()
+        {
+            ArrayList AdvertList = new ArrayList();
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Advertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    IAdvertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        dRow.ItemArray.GetValue(2).ToString(),
+                                                        dRow.ItemArray.GetValue(3).ToString(),
+                                                        dRow.ItemArray.GetValue(4).ToString(),
+                                                        dRow.ItemArray.GetValue(5).ToString());
+                    AdvertList.Add(advert);
+                }
 
-        public void addNewUserToDB(string firstname, string lastname, string password, string usertype, string email)
+
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+            return AdvertList;
+        }
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype)
         {
             try
             {
@@ -108,16 +139,46 @@ namespace DataAccessLayer
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "UsersData");
-                maxUsers = ds.Tables["UsersData"].Rows.Count;
+                maxAdverts = ds.Tables["UsersData"].Rows.Count;
                 DataRow dRow = ds.Tables["UsersData"].NewRow();
-                dRow[0] = firstname;
-                dRow[1] = lastname;
-                dRow[2] = password;
-                dRow[3] = usertype;
-                dRow[4] = email;
+                dRow[0] = email;
+                dRow[1] = firstname;
+                dRow[2] = lastname;
+                dRow[3] = password;
+                dRow[4] = usertype;
 
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
+
+        public void addNewAdvertToDB(string advertid, string title, string description, string price, string quantity, string selleremail)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Advertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                DataRow dRow = ds.Tables["AdvertData"].NewRow();
+                dRow[0] = advertid;
+                dRow[1] = title;
+                dRow[2] = description;
+                dRow[3] = price;
+                dRow[4] = quantity;
+                dRow[5] = selleremail;
+                ds.Tables["AdvertData"].Rows.Add(dRow);
+                da.Update(ds, "AdvertData");
             }
             catch (System.Exception excep)
             {
