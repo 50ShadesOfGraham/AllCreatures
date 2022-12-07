@@ -12,3 +12,5 @@ ACGS/obj/ACGS.csproj.nuget.dgspec.json
 *.v5.1
 .vs/ACGS/v17/.suo
 .vs/ACGS/v17/.suo
+*.editorconfig
+*.cache
