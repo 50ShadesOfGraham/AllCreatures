@@ -51,7 +51,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message); //Test Comment for Git - Graham x
+                MessageBox.Show(excep.Message);
                 Environment.Exit(0); //Force the application to close
             }
         }
