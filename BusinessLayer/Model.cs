@@ -64,6 +64,7 @@ namespace BusinessLayer
         }
         #endregion
         //Eddies Second Comment
+        //Graham's First Comment
         #region Constructors/Destructors
         public static IModel GetInstance(IDataLayer _DataLayer) // With Singleton pattern this method is used rather than constructor
         {
