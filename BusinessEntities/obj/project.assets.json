@@ -8,54 +8,31 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Darragh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
-=======
-    "C:\\Users\\eddie\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
->>>>>>> c0ac92a6ed2434319bf153b9bdb9da604187be70
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectUniqueName": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "projectName": "BusinessEntities",
-      "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
+      "outputPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Darragh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-      "projectName": "BusinessEntities",
-      "projectPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-      "packagesPath": "C:\\Users\\eddie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
-      "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
-      "configFilePaths": [
-        "C:\\Users\\eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> c0ac92a6ed2434319bf153b9bdb9da604187be70
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -88,11 +65,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
->>>>>>> c0ac92a6ed2434319bf153b9bdb9da604187be70
       }
     }
   }
