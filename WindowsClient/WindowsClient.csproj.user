@@ -19,5 +19,8 @@
     <Compile Update="UserIndex.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ViewAds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -207,5 +207,28 @@ namespace WindowsClient
             PlaceAdvertisement placeAd = new PlaceAdvertisement(Model);
             placeAd.Show();
         }
+
+        private void DogBttn_Click(object sender, EventArgs e)
+        {
+            FlowLayout.Controls.Clear();
+            foreach (User u in Model.UserList)
+            {
+                ViewAds ads = new ViewAds();
+                ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+                FlowLayout.Controls.Add(ads);
+            }
+        }
+
+        private void CatBttn_Click(object sender, EventArgs e)
+        {
+            FlowLayout.Controls.Clear(); //clean screen first
+
+            foreach (User u in Model.UserList)
+            {
+                ViewAds ads = new ViewAds();
+                ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+                FlowLayout.Controls.Add(ads);
+            }
+        }
     }
 }

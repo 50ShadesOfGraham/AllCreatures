@@ -41,7 +41,7 @@ namespace DataAccessLayer
         public void openConnection()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-AQPAJFP;Initial Catalog=ACGS;Integrated Security=True";
+            con.ConnectionString = "Data Source=localhost;Initial Catalog=ACGS;Integrated Security=True";
             try
             {
                 con.Open();
