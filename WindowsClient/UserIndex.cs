@@ -221,7 +221,7 @@ namespace WindowsClient
 
         private void CatBttn_Click(object sender, EventArgs e)
         {
-            FlowLayout.Controls.Clear(); //clean screen first
+            FlowLayout.Controls.Clear(); 
 
             foreach (User u in Model.UserList)
             {
