@@ -221,7 +221,7 @@ namespace WindowsClient
 
         private void CatBttn_Click(object sender, EventArgs e)
         {
-            FlowLayout.Controls.Clear(); 
+            FlowLayout.Controls.Clear();  //testing git changes
 
             foreach (User u in Model.UserList)
             {
