@@ -9,7 +9,7 @@ namespace DataAccessLayer
 {
     public interface IDataLayer
     {
-        void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype);
+        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype);
         public void addNewAdvertToDB(string advertid, string title, string description, string price, string quantity, string selleremail);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();

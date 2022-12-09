@@ -41,7 +41,7 @@ namespace DataAccessLayer
         public void openConnection()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=localhost;Initial Catalog=ACGS;Integrated Security=True";
+            con.ConnectionString = "Data Source=localhost;Initial Catalog=Team7ACGS;Integrated Security=True";
             try
             {
                 con.Open();
@@ -79,7 +79,8 @@ namespace DataAccessLayer
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
-                                                        dRow.ItemArray.GetValue(4).ToString());
+                                                        Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
+                                                        dRow.ItemArray.GetValue(5).ToString());
                     UserList.Add(user);
                 }
 
@@ -187,6 +188,11 @@ namespace DataAccessLayer
                 Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
+        }
+
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -111,13 +111,13 @@ namespace BusinessLayer
             return false;
         }
 
-        public Boolean addNewUser(string email, string firstname, string lastname, string password, string userType)
+        public Boolean addNewUser(string email, string firstname, string lastname, string password,bool verified, string userType)
         {
             try
             {
-                IUser user = UserCreator.GetUser(email, firstname, lastname, password, userType);
+                IUser user = UserCreator.GetUser(email, firstname, lastname, password,verified, userType);
                 UserList.Add(user);
-                DataLayer.addNewUserToDB(email, firstname, lastname, password, userType);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password,verified, userType);
                 return true;
             }
             catch (System.Exception excep)
@@ -169,6 +169,11 @@ namespace BusinessLayer
         public void tearDown()
         {
             DataLayer.closeConnection();
+        }
+
+        public bool addNewUser(string email, string firstname, string lastname, string password, string userType)
+        {
+            throw new NotImplementedException();
         }
     }
 }

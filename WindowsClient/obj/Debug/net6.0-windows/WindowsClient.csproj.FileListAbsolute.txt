@@ -158,3 +158,4 @@ C:\Users\Annayap\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-window
 C:\Users\Annayap\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.pdb
 C:\Users\Annayap\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\Annayap\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAds.resources
