@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "ZKQBU2bteAy8X22MNwhmtEonVnjHrlaG77vVFJMkz34fRiZK/eulebclVkhrF8btetWHl/UIWr0u++y60GO6mA==",
+  "dgSpecHash": "GI8IlzXZErRvy22kvv2/FDuq/Jg0cAVpoZj4ze3PhuUuexfluJ98ajLnXeuNFS+XjXI0XL/9pyTjI78sPuRx4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-=======
-  "dgSpecHash": "0l/cgE7fTiPA8pl0NUeDGLaKqq8KWoNdnW2CpInZgQ8SXzxnfQvQg5WkyZnr+V502tPHrzzT47EBqeoXq4HEFg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
->>>>>>> c0ac92a6ed2434319bf153b9bdb9da604187be70
+  "projectFilePath": "C:\\Users\\eddie\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

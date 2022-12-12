@@ -1,24 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "tn4dG+9RJXlQraQ2i6kcI0NWMkl1bHMb+iYiChbL7bRG0XvGC+fV0xk1DHQ0V52NkHUtni75UPCEtcVs3MSxcg==",
+  "dgSpecHash": "r53PtBGe7wVpI9XHhQItKYwpwTw4WWmcjanJ3viruizBnVz3s8GqV8GgrcEijPsGSazKg2zTILPF4KtmEVGw9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Darragh\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Darragh\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
-=======
-  "dgSpecHash": "Ix9k9MWCC2Ff6Q7ew68rqFX2e0nFcpyO6zMAHKAwF811qgHaajnYaeaY5GnRhsC2/OuWdYHqXzEX1G76fc8o+Q==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\eddie\\Source\\Repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eddie\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512",
     "C:\\Users\\eddie\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
@@ -30,7 +14,6 @@
     "C:\\Users\\eddie\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\eddie\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\eddie\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
->>>>>>> c0ac92a6ed2434319bf153b9bdb9da604187be70
   ],
   "logs": []
 }

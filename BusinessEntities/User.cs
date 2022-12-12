@@ -12,6 +12,7 @@ namespace BusinessEntities
         private string firstname;
         private string lastname;
         private string password;
+        private bool verified;
         private string userType;
         private string email;
         #endregion
@@ -75,6 +76,12 @@ namespace BusinessEntities
                 email = value;
             }
         }
+
+        public bool Verified
+        {
+            get { return verified; }
+            set { verified = value; }
+        }
         #endregion
         #region Constructors
         public User()
@@ -82,12 +89,13 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public User(string email, string firstname, string lastname, string password, string userType)
+        public User(string email, string firstname, string lastname, string password,bool verified, string userType)
         {
             this.email = email;
             this.firstname = firstname;
             this.lastname = lastname;
             this.password = password;
+            this.verified = verified;
             this.userType = userType;
         }
         #endregion
