@@ -58,10 +58,10 @@ namespace BusinessLayer
             {
                 return advertList;
             }
-            //set
-            //{
-            //}
+            set { advertList = value; }
         }
+
+      //  ArrayList IModel.AdvertList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         #endregion
         //Eddies Class Comment
         //Graham's First Comment
@@ -87,6 +87,7 @@ namespace BusinessLayer
 
             advertList = new ArrayList();
             dataLayer.getAllAdvertisements();
+            advertList = dataLayer.getAllAdvertisements();
         }
 
         ~Model()
@@ -175,6 +176,8 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }
 

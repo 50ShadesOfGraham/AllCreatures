@@ -1223,6 +1223,7 @@
             this.FlowLayout.Name = "FlowLayout";
             this.FlowLayout.Size = new System.Drawing.Size(616, 546);
             this.FlowLayout.TabIndex = 10;
+            this.FlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayout_Paint);
             // 
             // UserIndex
             // 

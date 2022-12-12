@@ -230,5 +230,10 @@ namespace WindowsClient
                 FlowLayout.Controls.Add(ads);
             }
         }
+
+        private void FlowLayout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace BusinessLayer
 {
     public interface IModel
     {
-        bool addNewUser(string email, string firstname, string lastname, string password, string userType);
+        bool addNewUser(string email, string firstname, string lastname, string password,bool verified, string userType);
 
         bool addNewAdvert(string advertid, string title, string description, string price, string quantity, string selleremail);
         BusinessEntities.User CurrentUser { get; set; }
@@ -21,6 +21,6 @@ namespace BusinessLayer
         bool EmailPresent(string email);
         void tearDown();
         System.Collections.ArrayList UserList { get; }
-        System.Collections.ArrayList AdvertList { get; }
+        System.Collections.ArrayList AdvertList { get; set; }
     }
 }

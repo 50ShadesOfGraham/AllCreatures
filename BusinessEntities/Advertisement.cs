@@ -54,12 +54,12 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public Advertisement(string advertid, string title, string description, string price, string quantity, string selleremail)
+        public Advertisement(string advertid, string title,  string price, string description, string quantity, string selleremail)
         {
             this.advertid = advertid;
             this.title = title;
-            this.description = description;
             this.price = price;
+            this.description = description;
             this.quantity = quantity;
             this.selleremail = selleremail; 
         }
