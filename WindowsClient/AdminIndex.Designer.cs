@@ -116,6 +116,7 @@
             this.verifyAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verifyUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.DisplayUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.SidePanel.SuspendLayout();
             this.ReportPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1303,7 +1304,7 @@
             this.editAccountToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.editAccountToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
-            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editAccountToolStripMenuItem.Text = "Edit Account";
             // 
             // signOutToolStripMenuItem
@@ -1311,7 +1312,7 @@
             this.signOutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.signOutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -1321,7 +1322,8 @@
             this.verificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verifyAdvertisementsToolStripMenuItem,
             this.verifyUsersToolStripMenuItem,
-            this.CreateAdmin});
+            this.CreateAdmin,
+            this.DisplayUsers});
             this.verificationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.verificationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
@@ -1354,6 +1356,15 @@
             this.CreateAdmin.Name = "CreateAdmin";
             this.CreateAdmin.Size = new System.Drawing.Size(199, 22);
             this.CreateAdmin.Text = "CreateAdmin";
+            // 
+            // DisplayUsers
+            // 
+            this.DisplayUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.DisplayUsers.ForeColor = System.Drawing.Color.White;
+            this.DisplayUsers.Name = "DisplayUsers";
+            this.DisplayUsers.Size = new System.Drawing.Size(248, 26);
+            this.DisplayUsers.Text = "Display Users";
+            this.DisplayUsers.Click += new System.EventHandler(this.DisplayUsers_Click);
             // 
             // AdminIndex
             // 
@@ -1484,5 +1495,6 @@
         private Button AquariumBttn;
         private Button ClothingBttn;
         private ToolStripMenuItem CreateAdmin;
+        private ToolStripMenuItem DisplayUsers;
     }
 }

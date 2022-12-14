@@ -31,7 +31,7 @@ namespace WindowsClient
             string userEmail = Model.CurrentUser.Email.Trim();
             
             
-          /*  if (Model.addNewAdvertToDB(advertID, TitleTextBx.Text, DescriptionTextBx.Text, PriceTextBx.Text,QuantityTextBx.Text , userEmail))
+         /*   if (Model.addNewAdvert(advertID, TitleTextBx.Text, DescriptionTextBx.Text, PriceTextBx.Text,QuantityTextBx.Text , userEmail))
             { 
                 MessageBox.Show("Advertisement Successful");
                 Hide();
@@ -39,8 +39,7 @@ namespace WindowsClient
             else
             {
                 MessageBox.Show("Error");
-            }
-            */
+            }*/
         }
 
 

@@ -9,7 +9,8 @@ namespace DataAccessLayer
 {
     public interface IDataLayer
     {
-        void addNewUserToDB(string email, string password, string firstname, string lastname, bool verified, string usertype);
+        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1, string address2, string address3,
+            string county, string eircode);
         public void addNewBundleToDB(string bundleID, string advertid, double bundleprice,int bundlesize);
         public void addNewAdvertToDB(string advertid, string selleremail, double price, string description, bool verified,string status, string adverttype, string title);
         public void addNewAccessoriesToDB(string accessid, string animaltype, string advertid, string accesscategory, string accesssubcat);
@@ -20,12 +21,20 @@ namespace DataAccessLayer
         public void addNewFarmAnimalToDB(string farmid, string animalid, string purpose);
         public void addNewGenericAnimalToDB(string gaID, string animalID, string detailone, string detailtwo, string detailthree);
         public void addNewLitterToDB(string litterid, int littersize, string animalid);
-        public void verifyUser(string email);
-
+        //New Insert Functions
+        public void insertDogAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo);
+        public void insertGenericAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string detailone, string detailtwo, string detailthree);
+        public void insertLitterAdvertisement();
+        public void insertHorseAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose);
+        public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose);
+        public void insertFoodAdvertisement();
+        public void insertAccessoriesAdvertisement();
+        public bool banUserInDB(BusinessEntities.User user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
-        System.Collections.ArrayList getAllUsers();
-        System.Collections.ArrayList getAllAdvertisements();
+        List<User> getAllUsers();
+       // List<Advertisement> getAllAdvertisements();
         void openConnection();
+        
     }
 }

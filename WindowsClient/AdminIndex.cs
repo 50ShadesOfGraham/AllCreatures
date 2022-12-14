@@ -162,15 +162,10 @@ namespace WindowsClient
             verifiyAdvertisements.Show();
         }
 
-        private void verificationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DisplayUsers_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void verifyUsersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            verifyUser verifyUser = new verifyUser(Model);
-            verifyUser.Show();
+            DisplayUsers displayUsers = new DisplayUsers(Model);
+            displayUsers.Show();
         }
     }
 }

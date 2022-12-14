@@ -236,7 +236,7 @@ namespace WindowsClient
 
         }
 
-        private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

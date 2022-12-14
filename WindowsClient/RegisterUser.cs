@@ -31,9 +31,9 @@ namespace WindowsClient
             }
             else
             {
-                if (Passwordtxt.Text.Trim() == PasswordTwotxt.Text.Trim())
+                if (Passwordtxt.Text.Trim() == PasswordTwotxt.Text.Trim()) 
                 {
-                    if(Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,false,"User"))
+                    if(Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,false,"User",txtAdd1.Text,txtAdd2.Text,txtAdd3.Text,txtCounty.Text,txtEircode.Text))
                     {
                         MessageBox.Show("Registration Successful");
                         Model.login(Emailtxt.Text.Trim(), Passwordtxt.Text.Trim());

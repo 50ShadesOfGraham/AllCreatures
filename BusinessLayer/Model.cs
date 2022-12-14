@@ -22,8 +22,8 @@ namespace BusinessLayer
         #region Instance Attribures
         private IDataLayer dataLayer;
         private User currentUser;
-        private ArrayList userList;
-        private ArrayList advertList;
+        private List<User> userList;
+        private List<Advertisement> advertList;
         #endregion
         #region Instance Properties
         public IDataLayer DataLayer
@@ -44,18 +44,19 @@ namespace BusinessLayer
         }
 
 
-        public ArrayList UserList
+        public List<User> UserList
         {
             get
             {
                 return userList;
             }
-            //set
-            //{
-            //}
+            set
+            {
+                userList = value;
+            }
         }
 
-        public ArrayList AdvertList
+        public List<Advertisement> AdvertList
         {
             get
             {
@@ -64,12 +65,16 @@ namespace BusinessLayer
             set { advertList = value; }
         }
 
+        /*public ArrayList UserAddressList
+        {
+            get
+            {
+                return UserAddressList;
+            }
+            set { UserAddressList = value; }
+        }*/
       //  ArrayList IModel.AdvertList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         #endregion
-        //Eddies Class Comment
-        //Graham's First Comment
-        //Darragh's First Comment
-        //Anna's First Comment
         #region Constructors/Destructors
         public static IModel GetInstance(IDataLayer _DataLayer) // With Singleton pattern this method is used rather than constructor
         {
@@ -84,13 +89,18 @@ namespace BusinessLayer
         }
         private Model(IDataLayer _DataLayer)  // The constructor is private as its a singleton and I only allow one instance which is created with the GetInstance() method
         {
-            userList = new ArrayList();
+            userList = new List<User>();
             dataLayer = _DataLayer;
             userList = dataLayer.getAllUsers(); // setup Models userList so we can login
 
-            advertList = new ArrayList();
+            /*advertList = new List<Advertisement>();
             dataLayer.getAllAdvertisements();
-            advertList = dataLayer.getAllAdvertisements();
+            advertList = dataLayer.getAllAdvertisements();*/
+
+            /*UserAddressList = new ArrayList();
+            dataLayer.GetUserAddress();
+            UserAddressList = dataLayer.GetUserAddress();*/
+
         }
 
         ~Model()
@@ -116,13 +126,14 @@ namespace BusinessLayer
             return false;
         }
 
-        public Boolean addNewUser(string email, string password, string firstname, string lastname, bool verified, string userType)
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
+            string userType,string address1,string address2,string address3,string county,string eircode)
         {
             try
             {
-                IUser user = UserCreator.GetUser(email, password, firstname, lastname, verified, userType);
+                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 UserList.Add(user);
-                DataLayer.addNewUserToDB(email, password, firstname, lastname, verified, userType);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 return true;
             }
             catch (System.Exception excep)
@@ -273,7 +284,17 @@ namespace BusinessLayer
             DataLayer.closeConnection();
         }
 
-        public bool addNewUser(string email, string firstname, string lastname, string password, string userType)
+/*
+        private bool verified;
+        private string userType;
+        private string email;
+        private string address1;
+        private string address2;
+        private string address3;
+        private string county;
+        private string eircode;*/
+
+        public bool addNewUser(string email, string firstname, string lastname, string password,string verified, string userType,string address1,string address2,string address3,string county,string eircode)
         {
             throw new NotImplementedException();
         }
@@ -290,7 +311,11 @@ namespace BusinessLayer
             */
         }
 
-
+        public bool banUserInDB(User user)
+        {
+            DataLayer.banUserInDB(user);
+            return true;
+        }
     }
 }
 

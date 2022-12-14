@@ -66,9 +66,9 @@ namespace DataAccessLayer
         {
             return con;
         }
-        public ArrayList getAllUsers()
+        public List<User> getAllUsers()
         {
-            ArrayList UserList = new ArrayList();
+            List<User> UserList = new List<User>();
             try
             {
                 ds = new DataSet();
@@ -80,12 +80,17 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    IUser user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
                                                         Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
-                                                        dRow.ItemArray.GetValue(5).ToString());
+                                                        dRow.ItemArray.GetValue(5).ToString(),
+                                                        dRow.ItemArray.GetValue(6).ToString(),
+                                                        dRow.ItemArray.GetValue(7).ToString(),
+                                                        dRow.ItemArray.GetValue(8).ToString(),
+                                                        dRow.ItemArray.GetValue(9).ToString(),
+                                                        dRow.ItemArray.GetValue(10).ToString());
                     UserList.Add(user);
                 }
 
@@ -101,9 +106,9 @@ namespace DataAccessLayer
             }
             return UserList;
         }
-        public ArrayList getAllAdvertisements()
+        /*public List<Advertisement> getAllAdvertisements()
         {
-            ArrayList AdvertList = new ArrayList();
+            List<Advertisement> AdvertList = new List<Advertisement>();
             try
             {
                 ds = new DataSet();
@@ -115,7 +120,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxAdverts; i++)
                 {
                     DataRow dRow = ds.Tables["AdvertData"].Rows[i];
-                    IAdvertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
+                    Advertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
@@ -135,8 +140,9 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
             return AdvertList;
-        }
-        public void addNewUserToDB(string email, string password, string firstname, string lastname, string usertype)
+        }*/
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
+            string county, string eircode)
         {
             try
             {
@@ -152,7 +158,12 @@ namespace DataAccessLayer
                 dRow[2] = lastname;
                 dRow[3] = password;
                 dRow[4] = usertype;
-
+                dRow[5] = address1;
+                dRow[6] = address2;
+                dRow[7] = address3;
+                dRow[8] = county;
+                dRow[9] = eircode;
+              
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
             }
@@ -436,7 +447,77 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewUserToDB(string email, string password, string firstname, string lastname, bool verified, string usertype)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1,string address2,string address3,string county,string eircode)
+        {
+            throw new NotImplementedException();
+        }
+
+        
+        public bool banUserInDB(User user)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                if (findRow != null)
+                {
+                    findRow[5] = user.UserType;
+                  
+                }
+                da.Update(ds, "UsersData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                Application.Exit();
+            }
+            return true;
+
+        }
+
+        public void insertDogAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertGenericAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string detailone, string detailtwo, string detailthree)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertLitterAdvertisement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertHorseAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertFoodAdvertisement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertAccessoriesAdvertisement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Advertisement> getAllAdvertisements()
         {
             throw new NotImplementedException();
         }
