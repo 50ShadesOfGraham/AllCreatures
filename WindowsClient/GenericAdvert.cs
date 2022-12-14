@@ -26,7 +26,7 @@ namespace WindowsClient
 
         private void GenericAdvert_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             lblTitle.Text = Advertisement.Title;
             txtName.Text = Advertisement.AnimalName;
             txtGender.Text = Advertisement.Gender;
@@ -38,10 +38,6 @@ namespace WindowsClient
             txtExtra3.Text = Advertisement.DetailThree;
            
 
-
-=======
-        //    txtName.Text = Advertisement.animalname;
->>>>>>> 04dba57d31174e4185f63628dcf4e288d321b9fd
         }
     }
 }
