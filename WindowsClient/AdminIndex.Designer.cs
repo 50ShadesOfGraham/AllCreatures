@@ -1329,7 +1329,7 @@
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
             this.verificationToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.verificationToolStripMenuItem.Text = "Verification";
-            this.verificationToolStripMenuItem.Click += new System.EventHandler(this.verificationToolStripMenuItem_Click);
+          //  this.verificationToolStripMenuItem.Click += new System.EventHandler(this.verificationToolStripMenuItem_Click);
             // 
             // verifyAdvertisementsToolStripMenuItem
             // 
@@ -1347,7 +1347,7 @@
             this.verifyUsersToolStripMenuItem.Name = "verifyUsersToolStripMenuItem";
             this.verifyUsersToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.verifyUsersToolStripMenuItem.Text = "Verify Users";
-            this.verifyUsersToolStripMenuItem.Click += new System.EventHandler(this.verifyUsersToolStripMenuItem_Click);
+          //  this.verifyUsersToolStripMenuItem.Click += new System.EventHandler(this.verifyUsersToolStripMenuItem_Click);
             // 
             // CreateAdmin
             // 

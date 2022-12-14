@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Diagnostics.Metrics;
+using Microsoft.VisualBasic.Logging;
 
 namespace BusinessLayer
 {
@@ -279,6 +281,97 @@ namespace BusinessLayer
             return false;
         }
 
+        public Boolean addNewDogAdvertisement(Dog dog)
+        {
+            try
+            {
+                AdvertList.Add(dog);
+                DataLayer.insertDogAdvertisement(dog);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewHorseAdvertisement(Horse horse)
+        {
+            try
+            {
+                AdvertList.Add(horse);
+                DataLayer.insertHorseAdvertisement(horse);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewLitterAdvertisement(Litter litter)
+        {
+            try
+            {
+                AdvertList.Add(litter);
+                DataLayer.insertLitterAdvertisement(litter);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFarmAnimalAdvertisement(FarmAnimal farmanimal)
+        {
+            try
+            {
+                AdvertList.Add(farmanimal);
+                DataLayer.insertFarmAnimalAdvertisement(farmanimal);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewGenericAnimalAdvertisement(GenericAnimal genericanimal)
+        {
+            try
+            {
+                AdvertList.Add(genericanimal);
+                DataLayer.insertGenericAnimalAdvertisement(genericanimal);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFoodAdvertisement(Food food)
+        {
+            try
+            {
+                AdvertList.Add(food);
+                DataLayer.insertFoodAdvertisement(food);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewAccessoriesAdvertisement(Accessories access)
+        {
+            try
+            {
+                AdvertList.Add(access);
+                DataLayer.insertAccessoriesAdvertisement(access);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
         public void tearDown()
         {
             DataLayer.closeConnection();
@@ -302,7 +395,7 @@ namespace BusinessLayer
         {
             //try
             //{
-                DataLayer.verifyUser(email);
+                //DataLayer.verifyUser(email);
             //}
             /*catch (System.Exception excep)
             {
