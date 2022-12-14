@@ -23,8 +23,8 @@ namespace DataAccessLayer
 
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
-        System.Collections.ArrayList getAllUsers();
-        System.Collections.ArrayList getAllAdvertisements();
+        List<User> getAllUsers();
+        List<Advertisement> getAllAdvertisements();
         void openConnection();
     }
 }

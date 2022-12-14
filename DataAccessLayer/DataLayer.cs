@@ -64,9 +64,9 @@ namespace DataAccessLayer
         {
             return con;
         }
-        public ArrayList getAllUsers()
+        public List<User> getAllUsers()
         {
-            ArrayList UserList = new ArrayList();
+            List<User> UserList = new List<User>();
             try
             {
                 ds = new DataSet();
@@ -99,9 +99,9 @@ namespace DataAccessLayer
             }
             return UserList;
         }
-        public ArrayList getAllAdvertisements()
+        public List<Advertisement> getAllAdvertisements()
         {
-            ArrayList AdvertList = new ArrayList();
+            List<Advertisement> AdvertList = new List<Advertisement>();
             try
             {
                 ds = new DataSet();
@@ -113,7 +113,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxAdverts; i++)
                 {
                     DataRow dRow = ds.Tables["AdvertData"].Rows[i];
-                    IAdvertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
+                    Advertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
