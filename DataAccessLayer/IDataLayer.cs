@@ -21,6 +21,8 @@ namespace DataAccessLayer
         public void addNewGenericAnimalToDB(string gaID, string animalID, string detailone, string detailtwo, string detailthree);
         public void addNewLitterToDB(string litterid, int littersize, string animalid);
 
+        public void createDogAdvertisement();
+
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();
