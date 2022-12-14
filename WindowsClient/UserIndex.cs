@@ -235,5 +235,10 @@ namespace WindowsClient
         {
 
         }
+
+        private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

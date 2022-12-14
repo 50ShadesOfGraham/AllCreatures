@@ -21,7 +21,7 @@ namespace BusinessEntities
                 return new User(email, firstname, lastname, password,verified, userType,address1,address2,address3,county,eircode);
             }
         }
-        public static void SetUser(IUser aUser)  
+        public static void SetUser(User aUser)  
         {
             user = aUser;
         }

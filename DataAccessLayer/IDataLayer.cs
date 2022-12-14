@@ -21,12 +21,14 @@ namespace DataAccessLayer
         public void addNewFarmAnimalToDB(string farmid, string animalid, string purpose);
         public void addNewGenericAnimalToDB(string gaID, string animalID, string detailone, string detailtwo, string detailthree);
         public void addNewLitterToDB(string litterid, int littersize, string animalid);
+
+        public void createDogAdvertisement();
+
         public bool banUserInDB(BusinessEntities.IUser user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         System.Collections.ArrayList getAllUsers();
         System.Collections.ArrayList getAllAdvertisements();
-        //System.Collections.ArrayList GetUserAddress();
         void openConnection();
         
     }

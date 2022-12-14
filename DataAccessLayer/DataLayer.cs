@@ -64,9 +64,9 @@ namespace DataAccessLayer
         {
             return con;
         }
-        public ArrayList getAllUsers()
+        public List<User> getAllUsers()
         {
-            ArrayList UserList = new ArrayList();
+            List<User> UserList = new List<User>();
             try
             {
                 ds = new DataSet();
@@ -78,7 +78,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    IUser user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
@@ -104,48 +104,9 @@ namespace DataAccessLayer
             }
             return UserList;
         }
-
-      /*  public ArrayList getAllUsersAddress()
+        public List<Advertisement> getAllAdvertisements()
         {
-            ArrayList userAddressList = new ArrayList();
-            try
-            {
-                ds = new DataSet();
-                string sql = "SELECT * From Users";
-                da = new SqlDataAdapter(sql, con);
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "UsersData");
-                maxUsers = ds.Tables["UsersData"].Rows.Count;
-                for (int i = 0; i < maxUsers; i++)
-                {
-                    DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    IUser user = UserAddressCreator.GetUserAddress(dRow.ItemArray.GetValue(0).ToString(),
-                                                        dRow.ItemArray.GetValue(1).ToString(),
-                                                        dRow.ItemArray.GetValue(2).ToString(),
-                                                        dRow.ItemArray.GetValue(3).ToString(),
-                                                        dRow.ItemArray.GetValue(4).ToString(),
-                                                        dRow.ItemArray.GetValue(5).ToString());
-                                                        
-                    userAddressList.Add(user);
-                }
-
-
-            }
-            catch (System.Exception excep)
-            {
-                MessageBox.Show(excep.Message);
-                if (con.State.ToString() == "Open")
-                    con.Close();
-                Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-            }
-            return userAddressList;
-        }*/
-
-
-        public ArrayList getAllAdvertisements()
-        {
-            ArrayList AdvertList = new ArrayList();
+            List<Advertisement> AdvertList = new List<Advertisement>();
             try
             {
                 ds = new DataSet();
@@ -157,7 +118,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxAdverts; i++)
                 {
                     DataRow dRow = ds.Tables["AdvertData"].Rows[i];
-                    IAdvertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
+                    Advertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),

@@ -22,8 +22,8 @@ namespace BusinessLayer
         #region Instance Attribures
         private IDataLayer dataLayer;
         private User currentUser;
-        private ArrayList userList;
-        private ArrayList advertList;
+        private List<User> userList;
+        private List<Advertisement> advertList;
         #endregion
         #region Instance Properties
         public IDataLayer DataLayer
@@ -44,18 +44,19 @@ namespace BusinessLayer
         }
 
 
-        public ArrayList UserList
+        public List<User> UserList
         {
             get
             {
                 return userList;
             }
-            //set
-            //{
-            //}
+            set
+            {
+                userList = value;
+            }
         }
 
-        public ArrayList AdvertList
+        public List<Advertisement> AdvertList
         {
             get
             {
@@ -74,10 +75,6 @@ namespace BusinessLayer
         }*/
       //  ArrayList IModel.AdvertList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         #endregion
-        //Eddies Class Comment
-        //Graham's First Comment
-        //Darragh's First Comment
-        //Anna's First Comment
         #region Constructors/Destructors
         public static IModel GetInstance(IDataLayer _DataLayer) // With Singleton pattern this method is used rather than constructor
         {
@@ -92,11 +89,11 @@ namespace BusinessLayer
         }
         private Model(IDataLayer _DataLayer)  // The constructor is private as its a singleton and I only allow one instance which is created with the GetInstance() method
         {
-            userList = new ArrayList();
+            userList = new List<User>();
             dataLayer = _DataLayer;
             userList = dataLayer.getAllUsers(); // setup Models userList so we can login
 
-            advertList = new ArrayList();
+            advertList = new List<Advertisement>();
             dataLayer.getAllAdvertisements();
             advertList = dataLayer.getAllAdvertisements();
 

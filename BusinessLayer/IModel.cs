@@ -30,6 +30,5 @@ namespace BusinessLayer
         void tearDown();
         System.Collections.ArrayList UserList { get; }
         System.Collections.ArrayList AdvertList { get; set; }
-        bool banUserInDB(BusinessEntities.IUser user);
     }
 }
