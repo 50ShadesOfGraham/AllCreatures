@@ -25,10 +25,10 @@ namespace DataAccessLayer
         public void insertDogAdvertisement(Dog dog);
         public void insertGenericAnimalAdvertisement(GenericAnimal generic_animal);
         public void insertLitterAdvertisement(Litter litter);
-        public void insertHorseAdvertisement(Horse );
-        public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose);
-        public void insertFoodAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animaltype, string fooddetails);
-        public void insertAccessoriesAdvertisement();
+        public void insertHorseAdvertisement(Horse horse);
+        public void insertFarmAnimalAdvertisement(FarmAnimal farmanimal);
+        public void insertFoodAdvertisement(Food food);
+        public void insertAccessoriesAdvertisement(Accessories access);
         public bool banUserInDB(BusinessEntities.User user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
