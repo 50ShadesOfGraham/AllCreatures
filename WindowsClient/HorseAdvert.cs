@@ -12,6 +12,7 @@ namespace WindowsClient
 {
     public partial class HorseAdvert : Form
     {
+        
         public HorseAdvert()
         {
             InitializeComponent();
