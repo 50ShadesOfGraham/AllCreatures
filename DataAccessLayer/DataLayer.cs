@@ -83,7 +83,12 @@ namespace DataAccessLayer
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
                                                         Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
-                                                        dRow.ItemArray.GetValue(5).ToString());
+                                                        dRow.ItemArray.GetValue(5).ToString(),
+                                                        dRow.ItemArray.GetValue(6).ToString(),
+                                                        dRow.ItemArray.GetValue(7).ToString(),
+                                                        dRow.ItemArray.GetValue(8).ToString(),
+                                                        dRow.ItemArray.GetValue(9).ToString(),
+                                                        dRow.ItemArray.GetValue(10).ToString());
                     UserList.Add(user);
                 }
 
@@ -99,6 +104,45 @@ namespace DataAccessLayer
             }
             return UserList;
         }
+
+      /*  public ArrayList getAllUsersAddress()
+        {
+            ArrayList userAddressList = new ArrayList();
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                maxUsers = ds.Tables["UsersData"].Rows.Count;
+                for (int i = 0; i < maxUsers; i++)
+                {
+                    DataRow dRow = ds.Tables["UsersData"].Rows[i];
+                    IUser user = UserAddressCreator.GetUserAddress(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        dRow.ItemArray.GetValue(2).ToString(),
+                                                        dRow.ItemArray.GetValue(3).ToString(),
+                                                        dRow.ItemArray.GetValue(4).ToString(),
+                                                        dRow.ItemArray.GetValue(5).ToString());
+                                                        
+                    userAddressList.Add(user);
+                }
+
+
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+            return userAddressList;
+        }*/
+
+
         public ArrayList getAllAdvertisements()
         {
             ArrayList AdvertList = new ArrayList();
@@ -134,7 +178,8 @@ namespace DataAccessLayer
             }
             return AdvertList;
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
+            string county, string eircode)
         {
             try
             {
@@ -150,7 +195,12 @@ namespace DataAccessLayer
                 dRow[2] = lastname;
                 dRow[3] = password;
                 dRow[4] = usertype;
-
+                dRow[5] = address1;
+                dRow[6] = address2;
+                dRow[7] = address3;
+                dRow[8] = county;
+                dRow[9] = eircode;
+              
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
             }
@@ -434,9 +484,41 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1,string address2,string address3,string county,string eircode)
         {
             throw new NotImplementedException();
         }
+
+        
+        public bool banUserInDB(IUser user)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                if (findRow != null)
+                {
+                    findRow[5] = user.UserType;
+                  
+                }
+                da.Update(ds, "UsersData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                Application.Exit();
+            }
+            return true;
+
+        }
+
+
     }
 }

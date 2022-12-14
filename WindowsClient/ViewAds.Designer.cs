@@ -105,6 +105,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewAds";
             this.Size = new System.Drawing.Size(572, 205);
+            this.Load += new System.EventHandler(this.ViewAds_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

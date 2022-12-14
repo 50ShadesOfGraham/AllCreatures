@@ -13,5 +13,10 @@ namespace BusinessEntities
         string LastName { get; set; }
         string Password { get; set; }
         string UserType { get; set; }
+        string Address1 { get; set; }
+        string Address2 { get; set; }
+        string Address3 { get; set; }
+        string County { get; set; }
+        string Eircode { get; set; }
     }
 }

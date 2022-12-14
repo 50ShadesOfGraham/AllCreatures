@@ -27,8 +27,12 @@ namespace WindowsClient
            label3.Text = Email;
            label4.Text = Password;
            label5.Text = UserType;
+            
         }
 
+        private void ViewAds_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

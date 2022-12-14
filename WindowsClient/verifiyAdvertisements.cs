@@ -23,7 +23,7 @@ namespace WindowsClient
 
         private void verifiyAdvertisements_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Hello");
+           
            
             foreach (Advertisement advertisement in model.AdvertList)
             {
