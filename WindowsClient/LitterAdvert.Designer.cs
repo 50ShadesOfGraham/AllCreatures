@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlLitterAdvert = new System.Windows.Forms.Panel();
+            this.txtSize = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtBreedTwo = new System.Windows.Forms.TextBox();
             this.txtBreedOne = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -142,6 +144,8 @@
             // 
             // pnlLitterAdvert
             // 
+            this.pnlLitterAdvert.Controls.Add(this.txtSize);
+            this.pnlLitterAdvert.Controls.Add(this.label1);
             this.pnlLitterAdvert.Controls.Add(this.txtBreedTwo);
             this.pnlLitterAdvert.Controls.Add(this.txtBreedOne);
             this.pnlLitterAdvert.Controls.Add(this.label4);
@@ -159,6 +163,22 @@
             this.pnlLitterAdvert.Name = "pnlLitterAdvert";
             this.pnlLitterAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlLitterAdvert.TabIndex = 13;
+            // 
+            // txtSize
+            // 
+            this.txtSize.Location = new System.Drawing.Point(478, 240);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(75, 23);
+            this.txtSize.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(401, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 15);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Size of Litter";
             // 
             // txtBreedTwo
             // 
@@ -1344,6 +1364,7 @@
             this.Controls.Add(this.TopNavBar);
             this.Name = "LitterAdvert";
             this.Text = "LitterAdvert";
+            this.Load += new System.EventHandler(this.LitterAdvert_Load);
             this.pnlLitterAdvert.ResumeLayout(false);
             this.pnlLitterAdvert.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1463,5 +1484,7 @@
         private ToolStripMenuItem myAdvertisementsToolStripMenuItem;
         private ToolStripMenuItem signOutToolStripMenuItem;
         private ToolStripMenuItem placeAdvertisementToolStripMenuItem;
+        private TextBox txtSize;
+        private Label label1;
     }
 }

@@ -46,6 +46,20 @@ D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.dll
 D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\refint\BusinessEntities.dll
 D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
 D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
+<<<<<<< HEAD
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.deps.json
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.dll
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.pdb
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.AssemblyReference.cache
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfoInputs.cache
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfo.cs
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.dll
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\refint\BusinessEntities.dll
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
+=======
 C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.deps.json
 C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.dll
 C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.pdb
@@ -58,3 +72,4 @@ C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windo
 C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\refint\BusinessEntities.dll
 C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
 C:\Users\eddie\source\repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
+>>>>>>> 04dba57d31174e4185f63628dcf4e288d321b9fd

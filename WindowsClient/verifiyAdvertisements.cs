@@ -42,7 +42,7 @@ namespace WindowsClient
         {
             foreach (Advertisement advertisement in model.AdvertList)
             {
-                listAdverts.Items.Add(advertisement.SellerEmail);
+                listAdverts.Items.Add(advertisement.AdvertID);
             }
         }
 

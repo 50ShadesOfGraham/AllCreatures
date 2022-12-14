@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlHorseAdvert = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPurpose = new System.Windows.Forms.TextBox();
+            this.txtBroken = new System.Windows.Forms.TextBox();
+            this.txtBreed = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -122,11 +127,6 @@
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtBreed = new System.Windows.Forms.TextBox();
-            this.txtBroken = new System.Windows.Forms.TextBox();
-            this.txtPurpose = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.pnlHorseAdvert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SidePanel.SuspendLayout();
@@ -173,6 +173,45 @@
             this.pnlHorseAdvert.Name = "pnlHorseAdvert";
             this.pnlHorseAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlHorseAdvert.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(389, 346);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 15);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Purpose";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(389, 309);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 15);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Broken";
+            // 
+            // txtPurpose
+            // 
+            this.txtPurpose.Location = new System.Drawing.Point(477, 343);
+            this.txtPurpose.Name = "txtPurpose";
+            this.txtPurpose.Size = new System.Drawing.Size(100, 23);
+            this.txtPurpose.TabIndex = 36;
+            // 
+            // txtBroken
+            // 
+            this.txtBroken.Location = new System.Drawing.Point(477, 306);
+            this.txtBroken.Name = "txtBroken";
+            this.txtBroken.Size = new System.Drawing.Size(100, 23);
+            this.txtBroken.TabIndex = 35;
+            // 
+            // txtBreed
+            // 
+            this.txtBreed.Location = new System.Drawing.Point(477, 277);
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.Size = new System.Drawing.Size(100, 23);
+            this.txtBreed.TabIndex = 34;
             // 
             // label4
             // 
@@ -1366,45 +1405,6 @@
             this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             // 
-            // txtBreed
-            // 
-            this.txtBreed.Location = new System.Drawing.Point(477, 277);
-            this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(100, 23);
-            this.txtBreed.TabIndex = 34;
-            // 
-            // txtBroken
-            // 
-            this.txtBroken.Location = new System.Drawing.Point(477, 306);
-            this.txtBroken.Name = "txtBroken";
-            this.txtBroken.Size = new System.Drawing.Size(100, 23);
-            this.txtBroken.TabIndex = 35;
-            // 
-            // txtPurpose
-            // 
-            this.txtPurpose.Location = new System.Drawing.Point(477, 343);
-            this.txtPurpose.Name = "txtPurpose";
-            this.txtPurpose.Size = new System.Drawing.Size(100, 23);
-            this.txtPurpose.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(389, 309);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 15);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Broken";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(389, 346);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 15);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Purpose";
-            // 
             // HorseAdvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1415,6 +1415,7 @@
             this.Controls.Add(this.TopNavBar);
             this.Name = "HorseAdvert";
             this.Text = "HorseAdvert";
+            this.Load += new System.EventHandler(this.HorseAdvert_Load);
             this.pnlHorseAdvert.ResumeLayout(false);
             this.pnlHorseAdvert.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -1355,6 +1355,7 @@
             this.Controls.Add(this.TopNavBar);
             this.Name = "FarmAdvert";
             this.Text = "FarmAdvert";
+            this.Load += new System.EventHandler(this.FarmAdvert_Load);
             this.pnlFarmAdvert.ResumeLayout(false);
             this.pnlFarmAdvert.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

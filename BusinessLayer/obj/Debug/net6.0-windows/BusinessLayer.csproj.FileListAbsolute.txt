@@ -66,6 +66,16 @@ D:\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.dll
 D:\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\refint\BusinessLayer.dll
 D:\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.pdb
 D:\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\ref\BusinessLayer.dll
+<<<<<<< HEAD
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfo.cs
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.dll
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\refint\BusinessLayer.dll
+C:\Users\Eoghan\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.pdb
+=======
 C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.csproj.AssemblyReference.cache
 C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfoInputs.cache
@@ -83,3 +93,4 @@ C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\
 C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\refint\BusinessLayer.dll
 C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.pdb
 C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\ref\BusinessLayer.dll
+>>>>>>> 04dba57d31174e4185f63628dcf4e288d321b9fd

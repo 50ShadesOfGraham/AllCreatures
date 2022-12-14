@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlDogAdvert = new System.Windows.Forms.Panel();
+            this.txtBreedTwo = new System.Windows.Forms.TextBox();
+            this.txtBreedOne = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPurebreed = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -119,11 +124,6 @@
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPurebreed = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBreedOne = new System.Windows.Forms.TextBox();
-            this.txtBreedTwo = new System.Windows.Forms.TextBox();
             this.pnlDogAdvert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SidePanel.SuspendLayout();
@@ -167,6 +167,45 @@
             this.pnlDogAdvert.Name = "pnlDogAdvert";
             this.pnlDogAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlDogAdvert.TabIndex = 10;
+            // 
+            // txtBreedTwo
+            // 
+            this.txtBreedTwo.Location = new System.Drawing.Point(389, 340);
+            this.txtBreedTwo.Name = "txtBreedTwo";
+            this.txtBreedTwo.Size = new System.Drawing.Size(188, 23);
+            this.txtBreedTwo.TabIndex = 35;
+            // 
+            // txtBreedOne
+            // 
+            this.txtBreedOne.Location = new System.Drawing.Point(389, 304);
+            this.txtBreedOne.Name = "txtBreedOne";
+            this.txtBreedOne.Size = new System.Drawing.Size(188, 23);
+            this.txtBreedOne.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(464, 286);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Breed";
+            // 
+            // txtPurebreed
+            // 
+            this.txtPurebreed.Location = new System.Drawing.Point(477, 240);
+            this.txtPurebreed.Name = "txtPurebreed";
+            this.txtPurebreed.Size = new System.Drawing.Size(100, 23);
+            this.txtPurebreed.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(389, 244);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Purebreed";
             // 
             // lblTitle
             // 
@@ -1335,45 +1374,6 @@
             this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(389, 244);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 15);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Purebreed";
-            // 
-            // txtPurebreed
-            // 
-            this.txtPurebreed.Location = new System.Drawing.Point(477, 240);
-            this.txtPurebreed.Name = "txtPurebreed";
-            this.txtPurebreed.Size = new System.Drawing.Size(100, 23);
-            this.txtPurebreed.TabIndex = 32;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(464, 286);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Breed";
-            // 
-            // txtBreedOne
-            // 
-            this.txtBreedOne.Location = new System.Drawing.Point(389, 304);
-            this.txtBreedOne.Name = "txtBreedOne";
-            this.txtBreedOne.Size = new System.Drawing.Size(188, 23);
-            this.txtBreedOne.TabIndex = 34;
-            // 
-            // txtBreedTwo
-            // 
-            this.txtBreedTwo.Location = new System.Drawing.Point(389, 340);
-            this.txtBreedTwo.Name = "txtBreedTwo";
-            this.txtBreedTwo.Size = new System.Drawing.Size(188, 23);
-            this.txtBreedTwo.TabIndex = 35;
-            // 
             // DogAdvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1384,6 +1384,7 @@
             this.Controls.Add(this.TopNavBar);
             this.Name = "DogAdvert";
             this.Text = "DogAdvert";
+            this.Load += new System.EventHandler(this.DogAdvert_Load);
             this.pnlDogAdvert.ResumeLayout(false);
             this.pnlDogAdvert.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

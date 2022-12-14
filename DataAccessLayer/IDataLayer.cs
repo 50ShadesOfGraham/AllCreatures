@@ -33,7 +33,7 @@ namespace DataAccessLayer
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();
-       // List<Advertisement> getAllAdvertisements();
+        List<Advertisement> getAllAdvertisements();
         void openConnection();
         
     }
