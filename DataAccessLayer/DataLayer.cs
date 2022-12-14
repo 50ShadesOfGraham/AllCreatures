@@ -78,7 +78,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    IUser user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
