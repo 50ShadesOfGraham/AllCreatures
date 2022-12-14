@@ -8,9 +8,9 @@ namespace BusinessEntities
 {
     public static class UserCreator
     {
-        private static User user = null;
+        private static IUser user = null;
 
-        public static User GetUser(string email, string firstname, string lastname, string password,bool verified, string userType)
+        public static IUser GetUser(string email, string firstname, string lastname, string password,bool verified, string userType,string address1,string address2,string address3,string county,string eircode)
         {
             if (user != null)
             {
@@ -18,7 +18,7 @@ namespace BusinessEntities
             }
             else
             {
-                return new User(email, firstname, lastname, password,verified, userType);
+                return new User(email, firstname, lastname, password,verified, userType,address1,address2,address3,county,eircode);
             }
         }
         public static void SetUser(User aUser)  

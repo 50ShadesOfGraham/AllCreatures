@@ -10,8 +10,8 @@ namespace BusinessLayer
 {
     public interface IModel
     {
-        bool addNewUser(string email, string firstname, string lastname, string password,bool verified, string userType);
-
+        bool addNewUser(string email, string firstname, string lastname, string password,bool verified, string userType,string address1, string address2, string address3,
+            string county, string eircode);
         //bool addNewAdvert(string advertid, string title, string description, string price, string quantity, string selleremail);
         bool addNewAccessoriesAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string accessid, string animaltype,string accesscategory, string accesssubcat);
         bool addNewFoodAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string foodID, string animaltype,string details);
@@ -28,7 +28,7 @@ namespace BusinessLayer
         bool login(string email, string password);
         bool EmailPresent(string email);
         void tearDown();
-        List<User> UserList { get; set; }
-        List<Advertisement> AdvertList { get; set; }
+        System.Collections.ArrayList UserList { get; }
+        System.Collections.ArrayList AdvertList { get; set; }
     }
 }

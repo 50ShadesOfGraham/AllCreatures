@@ -161,5 +161,11 @@ namespace WindowsClient
            verifiyAdvertisements verifiyAdvertisements = new verifiyAdvertisements(Model);
             verifiyAdvertisements.Show();
         }
+
+        private void DisplayUsers_Click(object sender, EventArgs e)
+        {
+            DisplayUsers displayUsers = new DisplayUsers(Model);
+            displayUsers.Show();
+        }
     }
 }

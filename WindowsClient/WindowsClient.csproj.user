@@ -4,6 +4,15 @@
     <Compile Update="AdminIndex.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DisplaySingleUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DisplayUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DisplayUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PlaceAdvertisement.cs">
       <SubType>Form</SubType>
     </Compile>

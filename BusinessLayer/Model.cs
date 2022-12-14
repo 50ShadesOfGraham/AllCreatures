@@ -65,6 +65,14 @@ namespace BusinessLayer
             set { advertList = value; }
         }
 
+        /*public ArrayList UserAddressList
+        {
+            get
+            {
+                return UserAddressList;
+            }
+            set { UserAddressList = value; }
+        }*/
       //  ArrayList IModel.AdvertList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         #endregion
         #region Constructors/Destructors
@@ -88,6 +96,11 @@ namespace BusinessLayer
             advertList = new List<Advertisement>();
             dataLayer.getAllAdvertisements();
             advertList = dataLayer.getAllAdvertisements();
+
+            /*UserAddressList = new ArrayList();
+            dataLayer.GetUserAddress();
+            UserAddressList = dataLayer.GetUserAddress();*/
+
         }
 
         ~Model()
@@ -112,13 +125,14 @@ namespace BusinessLayer
             return false;
         }
 
-        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified, string userType)
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
+            string userType,string address1,string address2,string address3,string county,string eircode)
         {
             try
             {
-                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType);
+                IUser user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 UserList.Add(user);
-                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 return true;
             }
             catch (System.Exception excep)
@@ -269,12 +283,26 @@ namespace BusinessLayer
             DataLayer.closeConnection();
         }
 
-        public bool addNewUser(string email, string firstname, string lastname, string password, string userType)
+/*
+        private bool verified;
+        private string userType;
+        private string email;
+        private string address1;
+        private string address2;
+        private string address3;
+        private string county;
+        private string eircode;*/
+
+        public bool addNewUser(string email, string firstname, string lastname, string password,string verified, string userType,string address1,string address2,string address3,string county,string eircode)
         {
             throw new NotImplementedException();
         }
 
-       
+        public bool banUserInDB(IUser user)
+        {
+            DataLayer.banUserInDB(user);
+            return true;
+        }
     }
 }
 

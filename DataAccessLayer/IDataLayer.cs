@@ -9,7 +9,8 @@ namespace DataAccessLayer
 {
     public interface IDataLayer
     {
-        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype);
+        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1, string address2, string address3,
+            string county, string eircode);
         public void addNewBundleToDB(string bundleID, string advertid, double bundleprice,int bundlesize);
         public void addNewAdvertToDB(string advertid, string selleremail, double price, string description, bool verified,string status, string adverttype, string title);
         public void addNewAccessoriesToDB(string accessid, string animaltype, string advertid, string accesscategory, string accesssubcat);
@@ -29,10 +30,12 @@ namespace DataAccessLayer
         public void insertFoodAdvertisement();
         public void insertAccessoriesAdvertisement();
 
+        public bool banUserInDB(BusinessEntities.IUser user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
-        List<User> getAllUsers();
+       List<User> getAllUsers();
         List<Advertisement> getAllAdvertisements();
         void openConnection();
+        
     }
 }
