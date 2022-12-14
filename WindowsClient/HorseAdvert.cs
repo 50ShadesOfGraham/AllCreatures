@@ -16,5 +16,10 @@ namespace WindowsClient
         {
             InitializeComponent();
         }
+
+        private void HorseAdvert_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

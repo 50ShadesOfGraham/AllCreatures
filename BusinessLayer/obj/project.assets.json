@@ -616,9 +616,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
@@ -642,11 +642,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-              "projectPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+            "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+              "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
             },
-            "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }
