@@ -727,11 +727,7 @@ namespace DataAccessLayer
             }
         }
 
-        public List<Advertisement> getAllAdvertisements()
-        {
-            throw new NotImplementedException();
-        }
-
+      
         public void verifyUser(string email)
         {
             try
