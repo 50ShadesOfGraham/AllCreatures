@@ -235,5 +235,10 @@ namespace WindowsClient
         {
 
         }
+
+        private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

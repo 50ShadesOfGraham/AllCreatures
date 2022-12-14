@@ -10,7 +10,7 @@ namespace BusinessEntities
     {
         private static IUser user = null;
 
-        public static IUser GetUser(string email, string firstname, string lastname, string password,bool verified, string userType)
+        public static IUser GetUser(string email, string password, string firstname, string lastname,bool verified, string userType)
         {
             if (user != null)
             {
@@ -18,7 +18,7 @@ namespace BusinessEntities
             }
             else
             {
-                return new User(email, firstname, lastname, password,verified, userType);
+                return new User(email, password, firstname, lastname,verified, userType);
             }
         }
         public static void SetUser(IUser aUser)  

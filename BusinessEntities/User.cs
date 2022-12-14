@@ -89,7 +89,7 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public User(string email, string firstname, string lastname, string password,bool verified, string userType)
+        public User(string email, string password, string firstname, string lastname,bool verified, string userType)
         {
             this.email = email;
             this.firstname = firstname;

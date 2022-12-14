@@ -105,6 +105,7 @@ namespace BusinessLayer
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
                 MessageBox.Show("DBUserEmail: " + DBUserEmail);
+                MessageBox.Show("DBUserPassword: " + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
@@ -115,13 +116,13 @@ namespace BusinessLayer
             return false;
         }
 
-        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified, string userType)
+        public Boolean addNewUser(string email, string password, string firstname, string lastname, bool verified, string userType)
         {
             try
             {
-                IUser user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType);
+                IUser user = UserCreator.GetUser(email, password, firstname, lastname, verified, userType);
                 UserList.Add(user);
-                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType);
+                DataLayer.addNewUserToDB(email, password, firstname, lastname, verified, userType);
                 return true;
             }
             catch (System.Exception excep)
@@ -276,8 +277,20 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
+        public void verifyUser(string email)
+        {
+            //try
+            //{
+                DataLayer.verifyUser(email);
+            //}
+            /*catch (System.Exception excep)
+            {
+                return false;
+            }
+            */
+        }
 
-       
+
     }
 }
 
