@@ -91,6 +91,7 @@ namespace BusinessEntities
             this.imagetwo = ImageTwo;
             this.imagethree = ImageThree;
         }
+        //Without Images
         public Advertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status)
         {
             this.advertid = AdvertID;
