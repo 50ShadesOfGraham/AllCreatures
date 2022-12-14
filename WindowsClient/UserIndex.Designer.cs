@@ -34,6 +34,7 @@
             this.myPurchasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.AccessPanel = new System.Windows.Forms.Panel();
@@ -107,7 +108,6 @@
             this.AnimalBttn = new System.Windows.Forms.Button();
             this.LogoBox = new System.Windows.Forms.PictureBox();
             this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TopNavBar.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.AccessPanel.SuspendLayout();
@@ -188,6 +188,16 @@
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
+            // 
+            // notificationsToolStripMenuItem
+            // 
+            this.notificationsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.notificationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.notificationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.notificationsToolStripMenuItem.Name = "notificationsToolStripMenuItem";
+            this.notificationsToolStripMenuItem.Size = new System.Drawing.Size(152, 41);
+            this.notificationsToolStripMenuItem.Text = "Notifications";
+            this.notificationsToolStripMenuItem.Click += new System.EventHandler(this.notificationsToolStripMenuItem_Click);
             // 
             // placeAdvertisementToolStripMenuItem
             // 
@@ -1225,15 +1235,6 @@
             this.FlowLayout.Size = new System.Drawing.Size(770, 687);
             this.FlowLayout.TabIndex = 10;
             this.FlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayout_Paint);
-            // 
-            // notificationsToolStripMenuItem
-            // 
-            this.notificationsToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.notificationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.notificationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.notificationsToolStripMenuItem.Name = "notificationsToolStripMenuItem";
-            this.notificationsToolStripMenuItem.Size = new System.Drawing.Size(152, 41);
-            this.notificationsToolStripMenuItem.Text = "Notifications";
             // 
             // UserIndex
             // 

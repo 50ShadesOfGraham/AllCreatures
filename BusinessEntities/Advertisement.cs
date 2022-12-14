@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Advertisement : IAdvertisement
+    public class Advertisement
     {
         #region Instance Properties
-        private string advertid;
+        private int advertid;
+        private string selleremail;
         private string title;
         private string description;
-        private string price;
-        private string quantity;
-        private string selleremail;
+        private double price;
+        private bool verified;
+        private string status;
+        private byte[] imageone;
+        private byte[] imagetwo;
+        private byte[] imagethree;
         #endregion
         #region Instance Properties
-        public string AdvertID
+        public int AdvertID
         {
             get { return advertid; }
             set { advertid = value; }
+        }
+        public string SellerEmail
+        {
+            get { return selleremail; }
+            set { selleremail = value; }
         }
         public string Title
         {
@@ -32,20 +41,35 @@ namespace BusinessEntities
             get { return description; }
             set { description = value; }
         }
-        public string Price
+        public double Price
         {
             get { return price; }
             set { price = value; }
         }
-        public string Quantity
+        public bool Verified
         {
-            get { return quantity; }
-            set { quantity = value; }
+            get { return verified; }
+            set { verified = value; }
         }
-        public string SellerEmail
+        public string Status
         {
-            get { return selleremail; }
-            set { selleremail = value; }
+            get { return status; }
+            set { status = value; }
+        }
+        public byte[] ImageOne
+        {
+            get { return imageone; }
+            set { imageone = value; }
+        }
+        public byte[] ImageTwo
+        {
+            get { return imageone; }
+            set { imageone = value; }
+        }
+        public byte[] ImageThree
+        {
+            get { return imageone; }
+            set { imageone = value; }
         }
         #endregion
         #region Constructors
@@ -54,14 +78,38 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public Advertisement(string advertid, string title,  string price, string description, string quantity, string selleremail)
+        public Advertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree)
         {
-            this.advertid = advertid;
-            this.title = title;
-            this.price = price;
-            this.description = description;
-            this.quantity = quantity;
-            this.selleremail = selleremail; 
+            this.advertid = AdvertID;
+            this.title = Title;
+            this.description = Description;
+            this.price = Price;
+            this.selleremail = SellerEmail;
+            this.verified = Verified;
+            this.status = Status;
+            this.imageone = ImageOne;
+            this.imagetwo = ImageTwo;
+            this.imagethree = ImageThree;
+        }
+        public Advertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status)
+        {
+            this.advertid = AdvertID;
+            this.title = Title;
+            this.description = Description;
+            this.price = Price;
+            this.selleremail = SellerEmail;
+            this.verified = Verified;
+            this.status = Status;
+        }
+        public Advertisement(Advertisement advert)
+        {
+            this.advertid = advert.AdvertID;
+            this.title = advert.Title;
+            this.description = advert.Description;
+            this.price = advert.Price;
+            this.selleremail = advert.SellerEmail;
+            this.verified = advert.Verified;
+            this.status = advert.Status;
         }
         #endregion
     }
