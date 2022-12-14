@@ -8,9 +8,9 @@ namespace BusinessEntities
 {
     public static class UserCreator
     {
-        private static IUser user = null;
+        private static User user = null;
 
-        public static IUser GetUser(string email, string firstname, string lastname, string password,bool verified, string userType,string address1,string address2,string address3,string county,string eircode)
+        public static User GetUser(string email, string firstname, string lastname, string password,bool verified, string userType,string address1,string address2,string address3,string county,string eircode)
         {
             if (user != null)
             {
