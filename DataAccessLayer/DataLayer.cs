@@ -2,9 +2,11 @@
 using System;
 using System.Collections;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing.Drawing2D;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
@@ -518,6 +520,39 @@ namespace DataAccessLayer
         public List<Advertisement> getAllAdvertisements()
         {
             throw new NotImplementedException();
+        }
+
+        public void verifyUser(string email)
+        {
+            try
+            {
+                
+                DataSet ds = new DataSet();
+                string sql = "SELECT UserEmail,Verified FROM Users";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlDataAdapter.UpdateCommand = new SqlCommand("UPDATE Users SET Verified = 1 WHERE UserEmail = @UserEmail", con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UserData");
+                foreach (DataRow dr in ds.Tables) // search whole table
+                {
+                    
+                    if (dr[0] == email) // if email matches
+                    {
+                        dr[4] = 1; //change the status
+                    }
+                }
+                
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show("Error with verifying user on DB");
+                /*
+                   if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                */
+            }
         }
     }
 }

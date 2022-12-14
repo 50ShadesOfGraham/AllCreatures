@@ -48,7 +48,13 @@ namespace BusinessEntities
             this.detailtwo = DetailTwo;
             this.detailthree = DetailThree;
         }
-
+        public GenericAnimal(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string animalname, string animaltype, int age, string gender, string detailone, string detailtwo, string detailthree)
+        : base(advertid, selleremail, title, description, price, verified, status,animalname, animaltype, age, gender)
+        {
+            this.detailone = DetailOne;
+            this.detailtwo = DetailTwo;
+            this.detailthree = DetailThree;
+        }
         #endregion
     }
 }

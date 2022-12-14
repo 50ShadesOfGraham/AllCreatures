@@ -46,3 +46,15 @@ C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.AssemblyReference.cache
+D:\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.deps.json
+D:\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.dll
+D:\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.pdb
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.AssemblyReference.cache
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfoInputs.cache
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfo.cs
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.CoreCompileInputs.cache
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.dll
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\refint\BusinessEntities.dll
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
+D:\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll

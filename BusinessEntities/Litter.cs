@@ -56,6 +56,14 @@ namespace BusinessEntities
             this.breedone = BreedOne;
             this.breedtwo = BreedTwo;
         }
+        public Litter(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo,byte[] imagethree, string animalname, string animaltype, int age, string gender, int littersize, bool purebreed, string breedone, string breedtwo)
+            : base(advertid, selleremail, title, description, price, verified, status,imageone,imagetwo,imagethree, animalname, animaltype, age, gender)
+        {
+            this.littersize = LitterSize;
+            this.purebreed = Purebreed;
+            this.breedone = BreedOne;
+            this.breedtwo = BreedTwo;
+        }
         #endregion
     }
 }

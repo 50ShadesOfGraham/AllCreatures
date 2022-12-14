@@ -42,6 +42,7 @@ namespace WindowsClient
             }*/
         }
 
+
         private void CancelBttn_Click(object sender, EventArgs e)
         {
             Close();
