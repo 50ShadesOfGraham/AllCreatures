@@ -302,7 +302,7 @@ namespace BusinessLayer
         {
             //try
             //{
-                DataLayer.verifyUser(email);
+                //DataLayer.verifyUser(email);
             //}
             /*catch (System.Exception excep)
             {

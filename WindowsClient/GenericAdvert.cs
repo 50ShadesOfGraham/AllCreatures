@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BusinessEntities;
 namespace WindowsClient
 {
     public partial class GenericAdvert : Form
     {
         private GenericAnimal Advertisement;
-        public GenericAdvert(GenericAnmal advert)
+        public GenericAdvert(GenericAnimal advert)
         {
             InitializeComponent();
             this.Advertisement = advert;
@@ -22,7 +22,7 @@ namespace WindowsClient
 
         private void GenericAdvert_Load(object sender, EventArgs e)
         {
-            txtName.Text = Advertisement.animalname;
+        //    txtName.Text = Advertisement.animalname;
         }
     }
 }

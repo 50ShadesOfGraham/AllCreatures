@@ -220,3 +220,13 @@ D:\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.csproj.Copy
 D:\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 D:\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
 D:\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.UserRejectReason.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.BundleAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.DogAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.FarmAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.FoodAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.GenericAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.HorseAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.IndividualAnimalAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.LitterAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.UserRejectReason.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.verifyUser.resources

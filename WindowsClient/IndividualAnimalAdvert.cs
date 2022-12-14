@@ -49,7 +49,7 @@ namespace WindowsClient
                 MessageBox.Show("No Records");
         }
 
-        private void ViewBtn_Click(object sender, EventArgs e)
+       /* private void ViewBtn_Click(object sender, EventArgs e)
         {
             Advertisement advert;
 
@@ -94,7 +94,7 @@ namespace WindowsClient
 
 
             }
-        }
+        }*/
 
 
 

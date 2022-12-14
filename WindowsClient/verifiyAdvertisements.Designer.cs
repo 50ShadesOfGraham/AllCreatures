@@ -28,60 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.typeList = new System.Windows.Forms.ListBox();
             this.exitBtn = new System.Windows.Forms.Button();
             this.flagBtn = new System.Windows.Forms.Button();
             this.verifyBtn = new System.Windows.Forms.Button();
-            this.checkBoxMedicalNo = new System.Windows.Forms.CheckBox();
-            this.checkBoxMedicalYes = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.breedTxt = new System.Windows.Forms.TextBox();
-            this.nameTxt = new System.Windows.Forms.TextBox();
-            this.animalTxt = new System.Windows.Forms.TextBox();
-            this.categoryTxt = new System.Windows.Forms.TextBox();
-            this.quantityTxt = new System.Windows.Forms.TextBox();
-            this.priceTxt = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtDetail3 = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtDetail2 = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBoxChippedNo = new System.Windows.Forms.CheckBox();
-            this.checkBoxChippedYes = new System.Windows.Forms.CheckBox();
+            this.txtDetail1 = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.checkBoxPureNo = new System.Windows.Forms.CheckBox();
-            this.checkBoxPureYes = new System.Windows.Forms.CheckBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblType = new System.Windows.Forms.Label();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.listAdverts = new System.Windows.Forms.ListBox();
+            this.btnDisplay = new System.Windows.Forms.Button();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Usernamelbl = new System.Windows.Forms.Label();
+            this.lblVerified = new System.Windows.Forms.Label();
             this.ttlLabel = new System.Windows.Forms.Label();
-            this.descriptionTxt = new System.Windows.Forms.RichTextBox();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(383, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(226, 237);
-            this.pictureBox1.TabIndex = 64;
-            this.pictureBox1.TabStop = false;
-            // 
-            // typeList
-            // 
-            this.typeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.typeList.FormattingEnabled = true;
-            this.typeList.ItemHeight = 15;
-            this.typeList.Items.AddRange(new object[] {
-            "Animal",
-            "Product"});
-            this.typeList.Location = new System.Drawing.Point(182, 206);
-            this.typeList.Name = "typeList";
-            this.typeList.Size = new System.Drawing.Size(109, 15);
-            this.typeList.TabIndex = 63;
             // 
             // exitBtn
             // 
@@ -91,10 +72,10 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.exitBtn.Location = new System.Drawing.Point(440, 523);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitBtn.Location = new System.Drawing.Point(503, 697);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(124, 34);
+            this.exitBtn.Size = new System.Drawing.Size(142, 45);
             this.exitBtn.TabIndex = 62;
             this.exitBtn.Text = "&Exit";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -108,10 +89,10 @@
             this.flagBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flagBtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.flagBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.flagBtn.Location = new System.Drawing.Point(267, 523);
-            this.flagBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flagBtn.Location = new System.Drawing.Point(305, 697);
+            this.flagBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.flagBtn.Name = "flagBtn";
-            this.flagBtn.Size = new System.Drawing.Size(124, 34);
+            this.flagBtn.Size = new System.Drawing.Size(142, 45);
             this.flagBtn.TabIndex = 61;
             this.flagBtn.Text = "Flag";
             this.flagBtn.UseVisualStyleBackColor = false;
@@ -124,254 +105,335 @@
             this.verifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.verifyBtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.verifyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.verifyBtn.Location = new System.Drawing.Point(84, 523);
-            this.verifyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.verifyBtn.Location = new System.Drawing.Point(96, 697);
+            this.verifyBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.verifyBtn.Name = "verifyBtn";
-            this.verifyBtn.Size = new System.Drawing.Size(124, 34);
+            this.verifyBtn.Size = new System.Drawing.Size(142, 45);
             this.verifyBtn.TabIndex = 60;
             this.verifyBtn.Text = "Verify";
             this.verifyBtn.UseVisualStyleBackColor = false;
             // 
-            // checkBoxMedicalNo
+            // txtEmail
             // 
-            this.checkBoxMedicalNo.AutoSize = true;
-            this.checkBoxMedicalNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxMedicalNo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxMedicalNo.Location = new System.Drawing.Point(283, 425);
-            this.checkBoxMedicalNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxMedicalNo.Name = "checkBoxMedicalNo";
-            this.checkBoxMedicalNo.Size = new System.Drawing.Size(52, 25);
-            this.checkBoxMedicalNo.TabIndex = 58;
-            this.checkBoxMedicalNo.Text = "No";
-            this.checkBoxMedicalNo.UseVisualStyleBackColor = true;
+            this.txtEmail.Location = new System.Drawing.Point(192, 60);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(163, 24);
+            this.txtEmail.TabIndex = 117;
             // 
-            // checkBoxMedicalYes
+            // lblEmail
             // 
-            this.checkBoxMedicalYes.AutoSize = true;
-            this.checkBoxMedicalYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxMedicalYes.ForeColor = System.Drawing.Color.White;
-            this.checkBoxMedicalYes.Location = new System.Drawing.Point(212, 425);
-            this.checkBoxMedicalYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxMedicalYes.Name = "checkBoxMedicalYes";
-            this.checkBoxMedicalYes.Size = new System.Drawing.Size(54, 25);
-            this.checkBoxMedicalYes.TabIndex = 57;
-            this.checkBoxMedicalYes.Text = "Yes";
-            this.checkBoxMedicalYes.UseVisualStyleBackColor = true;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(192, 9);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(64, 28);
+            this.lblEmail.TabIndex = 116;
+            this.lblEmail.Text = "Email";
             // 
-            // label10
+            // txtDetail3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(48, 430);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 21);
-            this.label10.TabIndex = 56;
-            this.label10.Text = "Medical Records";
-            // 
-            // breedTxt
-            // 
-            this.breedTxt.Location = new System.Drawing.Point(441, 386);
-            this.breedTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.breedTxt.Multiline = true;
-            this.breedTxt.Name = "breedTxt";
-            this.breedTxt.Size = new System.Drawing.Size(116, 19);
-            this.breedTxt.TabIndex = 55;
-            // 
-            // nameTxt
-            // 
-            this.nameTxt.Location = new System.Drawing.Point(127, 346);
-            this.nameTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.nameTxt.Multiline = true;
-            this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(116, 19);
-            this.nameTxt.TabIndex = 54;
-            // 
-            // animalTxt
-            // 
-            this.animalTxt.Location = new System.Drawing.Point(209, 297);
-            this.animalTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.animalTxt.Multiline = true;
-            this.animalTxt.Name = "animalTxt";
-            this.animalTxt.Size = new System.Drawing.Size(116, 19);
-            this.animalTxt.TabIndex = 53;
-            // 
-            // categoryTxt
-            // 
-            this.categoryTxt.Location = new System.Drawing.Point(209, 255);
-            this.categoryTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.categoryTxt.Multiline = true;
-            this.categoryTxt.Name = "categoryTxt";
-            this.categoryTxt.Size = new System.Drawing.Size(116, 19);
-            this.categoryTxt.TabIndex = 52;
-            // 
-            // quantityTxt
-            // 
-            this.quantityTxt.Location = new System.Drawing.Point(182, 165);
-            this.quantityTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.quantityTxt.Multiline = true;
-            this.quantityTxt.Name = "quantityTxt";
-            this.quantityTxt.ReadOnly = true;
-            this.quantityTxt.Size = new System.Drawing.Size(86, 19);
-            this.quantityTxt.TabIndex = 51;
-            // 
-            // priceTxt
-            // 
-            this.priceTxt.Location = new System.Drawing.Point(182, 129);
-            this.priceTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.priceTxt.Multiline = true;
-            this.priceTxt.Name = "priceTxt";
-            this.priceTxt.ReadOnly = true;
-            this.priceTxt.Size = new System.Drawing.Size(143, 19);
-            this.priceTxt.TabIndex = 50;
+            this.txtDetail3.Location = new System.Drawing.Point(563, 547);
+            this.txtDetail3.Name = "txtDetail3";
+            this.txtDetail3.ReadOnly = true;
+            this.txtDetail3.Size = new System.Drawing.Size(228, 62);
+            this.txtDetail3.TabIndex = 115;
+            this.txtDetail3.Text = "";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(348, 386);
+            this.label9.Location = new System.Drawing.Point(420, 543);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 21);
-            this.label9.TabIndex = 48;
-            this.label9.Text = "Breed";
+            this.label9.Size = new System.Drawing.Size(138, 28);
+            this.label9.TabIndex = 114;
+            this.label9.Text = "Details Three";
+            // 
+            // txtDetail2
+            // 
+            this.txtDetail2.Location = new System.Drawing.Point(189, 613);
+            this.txtDetail2.Name = "txtDetail2";
+            this.txtDetail2.ReadOnly = true;
+            this.txtDetail2.Size = new System.Drawing.Size(214, 52);
+            this.txtDetail2.TabIndex = 113;
+            this.txtDetail2.Text = "";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(46, 382);
+            this.label8.Location = new System.Drawing.Point(29, 613);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 21);
-            this.label8.TabIndex = 47;
-            this.label8.Text = "Chipped";
+            this.label8.Size = new System.Drawing.Size(123, 28);
+            this.label8.TabIndex = 112;
+            this.label8.Text = "Details Two";
             // 
-            // checkBoxChippedNo
+            // txtDetail1
             // 
-            this.checkBoxChippedNo.AutoSize = true;
-            this.checkBoxChippedNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxChippedNo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxChippedNo.Location = new System.Drawing.Point(283, 385);
-            this.checkBoxChippedNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxChippedNo.Name = "checkBoxChippedNo";
-            this.checkBoxChippedNo.Size = new System.Drawing.Size(52, 25);
-            this.checkBoxChippedNo.TabIndex = 46;
-            this.checkBoxChippedNo.Text = "No";
-            this.checkBoxChippedNo.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxChippedYes
-            // 
-            this.checkBoxChippedYes.AutoSize = true;
-            this.checkBoxChippedYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxChippedYes.ForeColor = System.Drawing.Color.White;
-            this.checkBoxChippedYes.Location = new System.Drawing.Point(212, 385);
-            this.checkBoxChippedYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxChippedYes.Name = "checkBoxChippedYes";
-            this.checkBoxChippedYes.Size = new System.Drawing.Size(54, 25);
-            this.checkBoxChippedYes.TabIndex = 45;
-            this.checkBoxChippedYes.Text = "Yes";
-            this.checkBoxChippedYes.UseVisualStyleBackColor = true;
+            this.txtDetail1.Location = new System.Drawing.Point(189, 541);
+            this.txtDetail1.Name = "txtDetail1";
+            this.txtDetail1.ReadOnly = true;
+            this.txtDetail1.Size = new System.Drawing.Size(218, 52);
+            this.txtDetail1.TabIndex = 111;
+            this.txtDetail1.Text = "";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(48, 473);
+            this.label7.Location = new System.Drawing.Point(26, 541);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 21);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Purebred";
+            this.label7.Size = new System.Drawing.Size(122, 28);
+            this.label7.TabIndex = 110;
+            this.label7.Text = "Details One";
             // 
-            // checkBoxPureNo
+            // txtGender
             // 
-            this.checkBoxPureNo.AutoSize = true;
-            this.checkBoxPureNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPureNo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxPureNo.Location = new System.Drawing.Point(283, 473);
-            this.checkBoxPureNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxPureNo.Name = "checkBoxPureNo";
-            this.checkBoxPureNo.Size = new System.Drawing.Size(52, 25);
-            this.checkBoxPureNo.TabIndex = 43;
-            this.checkBoxPureNo.Text = "No";
-            this.checkBoxPureNo.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxPureYes
-            // 
-            this.checkBoxPureYes.AutoSize = true;
-            this.checkBoxPureYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPureYes.ForeColor = System.Drawing.Color.White;
-            this.checkBoxPureYes.Location = new System.Drawing.Point(212, 473);
-            this.checkBoxPureYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBoxPureYes.Name = "checkBoxPureYes";
-            this.checkBoxPureYes.Size = new System.Drawing.Size(54, 25);
-            this.checkBoxPureYes.TabIndex = 42;
-            this.checkBoxPureYes.Text = "Yes";
-            this.checkBoxPureYes.UseVisualStyleBackColor = true;
+            this.txtGender.Location = new System.Drawing.Point(189, 498);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtGender.Multiline = true;
+            this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
+            this.txtGender.Size = new System.Drawing.Size(163, 24);
+            this.txtGender.TabIndex = 109;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(46, 343);
+            this.label6.Location = new System.Drawing.Point(24, 500);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 21);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Name";
+            this.label6.Size = new System.Drawing.Size(80, 28);
+            this.label6.TabIndex = 108;
+            this.label6.Text = "Gender";
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(189, 455);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAge.Multiline = true;
+            this.txtAge.Name = "txtAge";
+            this.txtAge.ReadOnly = true;
+            this.txtAge.Size = new System.Drawing.Size(50, 24);
+            this.txtAge.TabIndex = 107;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(46, 294);
+            this.label5.Location = new System.Drawing.Point(24, 457);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 21);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Type of Animal";
+            this.label5.Size = new System.Drawing.Size(49, 28);
+            this.label5.TabIndex = 106;
+            this.label5.Text = "Age";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(189, 415);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(163, 24);
+            this.txtName.TabIndex = 105;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(46, 252);
+            this.label4.Location = new System.Drawing.Point(24, 417);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 21);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "Animal Category";
+            this.label4.Size = new System.Drawing.Size(68, 28);
+            this.label4.TabIndex = 104;
+            this.label4.Text = "Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(189, 373);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(163, 24);
+            this.textBox1.TabIndex = 103;
+            // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblType.ForeColor = System.Drawing.Color.White;
+            this.lblType.Location = new System.Drawing.Point(24, 375);
+            this.lblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(124, 28);
+            this.lblType.TabIndex = 102;
+            this.lblType.Text = "AnimalType";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(189, 330);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtStatus.Multiline = true;
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(163, 24);
+            this.txtStatus.TabIndex = 101;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblStatus.ForeColor = System.Drawing.Color.White;
+            this.lblStatus.Location = new System.Drawing.Point(24, 332);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(59, 28);
+            this.lblStatus.TabIndex = 100;
+            this.lblStatus.Text = "Price";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 206);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(182, 286);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Type";
+            this.label3.Size = new System.Drawing.Size(111, 28);
+            this.label3.TabIndex = 99;
+            this.label3.Text = "Unverified";
+            // 
+            // listAdverts
+            // 
+            this.listAdverts.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.listAdverts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.listAdverts.FormattingEnabled = true;
+            this.listAdverts.ItemHeight = 20;
+            this.listAdverts.Location = new System.Drawing.Point(29, 60);
+            this.listAdverts.Name = "listAdverts";
+            this.listAdverts.Size = new System.Drawing.Size(156, 24);
+            this.listAdverts.TabIndex = 98;
+            this.listAdverts.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listAdverts_MouseDoubleClick);
+            // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.White;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisplay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.btnDisplay.Location = new System.Drawing.Point(29, 11);
+            this.btnDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(156, 44);
+            this.btnDisplay.TabIndex = 97;
+            this.btnDisplay.Text = "Display";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(192, 103);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.ReadOnly = true;
+            this.txtTitle.Size = new System.Drawing.Size(163, 24);
+            this.txtTitle.TabIndex = 96;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button1.Location = new System.Drawing.Point(521, 697);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 45);
+            this.button1.TabIndex = 95;
+            this.button1.Text = "&Exit";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button2.Location = new System.Drawing.Point(323, 697);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 45);
+            this.button2.TabIndex = 94;
+            this.button2.Text = "Flag";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button3.Location = new System.Drawing.Point(114, 697);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 45);
+            this.button3.TabIndex = 93;
+            this.button3.Text = "Verify";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(189, 167);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
+            this.txtDescription.Size = new System.Drawing.Size(211, 52);
+            this.txtDescription.TabIndex = 92;
+            this.txtDescription.Text = "";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.Location = new System.Drawing.Point(189, 242);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPrice.Multiline = true;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(163, 24);
+            this.txtPrice.TabIndex = 91;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 70);
+            this.label2.Location = new System.Drawing.Point(29, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 21);
-            this.label2.TabIndex = 37;
+            this.label2.Size = new System.Drawing.Size(121, 28);
+            this.label2.TabIndex = 90;
             this.label2.Text = "Description";
             // 
             // label1
@@ -379,137 +441,119 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 129);
+            this.label1.Location = new System.Drawing.Point(24, 242);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 21);
-            this.label1.TabIndex = 36;
+            this.label1.Size = new System.Drawing.Size(59, 28);
+            this.label1.TabIndex = 89;
             this.label1.Text = "Price";
             // 
-            // Usernamelbl
+            // lblVerified
             // 
-            this.Usernamelbl.AutoSize = true;
-            this.Usernamelbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Usernamelbl.ForeColor = System.Drawing.Color.White;
-            this.Usernamelbl.Location = new System.Drawing.Point(46, 162);
-            this.Usernamelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Usernamelbl.Name = "Usernamelbl";
-            this.Usernamelbl.Size = new System.Drawing.Size(77, 21);
-            this.Usernamelbl.TabIndex = 35;
-            this.Usernamelbl.Text = "Quantity";
+            this.lblVerified.AutoSize = true;
+            this.lblVerified.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVerified.ForeColor = System.Drawing.Color.White;
+            this.lblVerified.Location = new System.Drawing.Point(27, 286);
+            this.lblVerified.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVerified.Name = "lblVerified";
+            this.lblVerified.Size = new System.Drawing.Size(86, 28);
+            this.lblVerified.TabIndex = 88;
+            this.lblVerified.Text = "Verified";
             // 
             // ttlLabel
             // 
             this.ttlLabel.AutoSize = true;
             this.ttlLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ttlLabel.ForeColor = System.Drawing.Color.White;
-            this.ttlLabel.Location = new System.Drawing.Point(48, 22);
+            this.ttlLabel.Location = new System.Drawing.Point(29, 99);
             this.ttlLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ttlLabel.Name = "ttlLabel";
-            this.ttlLabel.Size = new System.Drawing.Size(44, 21);
-            this.ttlLabel.TabIndex = 34;
+            this.ttlLabel.Size = new System.Drawing.Size(55, 28);
+            this.ttlLabel.TabIndex = 87;
             this.ttlLabel.Text = "Title";
-            // 
-            // descriptionTxt
-            // 
-            this.descriptionTxt.Location = new System.Drawing.Point(185, 71);
-            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.descriptionTxt.Name = "descriptionTxt";
-            this.descriptionTxt.ReadOnly = true;
-            this.descriptionTxt.Size = new System.Drawing.Size(185, 40);
-            this.descriptionTxt.TabIndex = 59;
-            this.descriptionTxt.Text = "";
-            this.descriptionTxt.TextChanged += new System.EventHandler(this.descriptionTxt_TextChanged);
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(185, 25);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtTitle.Multiline = true;
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.ReadOnly = true;
-            this.txtTitle.Size = new System.Drawing.Size(143, 19);
-            this.txtTitle.TabIndex = 65;
             // 
             // verifiyAdvertisements
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(858, 588);
+            this.ClientSize = new System.Drawing.Size(981, 784);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.txtDetail3);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtDetail2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtDetail1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.listAdverts);
+            this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.typeList);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblVerified);
+            this.Controls.Add(this.ttlLabel);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.flagBtn);
             this.Controls.Add(this.verifyBtn);
-            this.Controls.Add(this.descriptionTxt);
-            this.Controls.Add(this.checkBoxMedicalNo);
-            this.Controls.Add(this.checkBoxMedicalYes);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.breedTxt);
-            this.Controls.Add(this.nameTxt);
-            this.Controls.Add(this.animalTxt);
-            this.Controls.Add(this.categoryTxt);
-            this.Controls.Add(this.quantityTxt);
-            this.Controls.Add(this.priceTxt);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.checkBoxChippedNo);
-            this.Controls.Add(this.checkBoxChippedYes);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.checkBoxPureNo);
-            this.Controls.Add(this.checkBoxPureYes);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Usernamelbl);
-            this.Controls.Add(this.ttlLabel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "verifiyAdvertisements";
             this.Text = "verifiyAdvertisements";
             this.Load += new System.EventHandler(this.verifiyAdvertisements_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
-        private ListBox typeList;
         private Button exitBtn;
         private Button flagBtn;
         private Button verifyBtn;
-        private CheckBox checkBoxMedicalNo;
-        private CheckBox checkBoxMedicalYes;
-        private Label label10;
-        private TextBox breedTxt;
-        private TextBox nameTxt;
-        private TextBox animalTxt;
-        private TextBox categoryTxt;
-        private TextBox quantityTxt;
-        private TextBox priceTxt;
+        private TextBox txtEmail;
+        private Label lblEmail;
+        private RichTextBox txtDetail3;
         private Label label9;
+        private RichTextBox txtDetail2;
         private Label label8;
-        private CheckBox checkBoxChippedNo;
-        private CheckBox checkBoxChippedYes;
+        private RichTextBox txtDetail1;
         private Label label7;
-        private CheckBox checkBoxPureNo;
-        private CheckBox checkBoxPureYes;
+        private TextBox txtGender;
         private Label label6;
+        private TextBox txtAge;
         private Label label5;
+        private TextBox txtName;
         private Label label4;
+        private TextBox textBox1;
+        private Label lblType;
+        private TextBox txtStatus;
+        private Label lblStatus;
         private Label label3;
+        private ListBox listAdverts;
+        private Button btnDisplay;
+        private TextBox txtTitle;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private RichTextBox txtDescription;
+        private TextBox txtPrice;
         private Label label2;
         private Label label1;
-        private Label Usernamelbl;
+        private Label lblVerified;
         private Label ttlLabel;
-        private RichTextBox descriptionTxt;
-        private TextBox txtTitle;
     }
 }
