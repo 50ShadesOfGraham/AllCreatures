@@ -2,9 +2,11 @@
 using System;
 using System.Collections;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing.Drawing2D;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
@@ -104,7 +106,7 @@ namespace DataAccessLayer
             }
             return UserList;
         }
-        public List<Advertisement> getAllAdvertisements()
+        /*public List<Advertisement> getAllAdvertisements()
         {
             List<Advertisement> AdvertList = new List<Advertisement>();
             try
@@ -138,7 +140,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
             return AdvertList;
-        }
+        }*/
         public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
             string county, string eircode)
         {
@@ -451,7 +453,7 @@ namespace DataAccessLayer
         }
 
         
-        public bool banUserInDB(IUser user)
+        public bool banUserInDB(User user)
         {
             try
             {
@@ -480,6 +482,77 @@ namespace DataAccessLayer
 
         }
 
+        public void insertDogAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void insertGenericAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string detailone, string detailtwo, string detailthree)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertLitterAdvertisement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertHorseAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertFoodAdvertisement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void insertAccessoriesAdvertisement()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Advertisement> getAllAdvertisements()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void verifyUser(string email)
+        {
+            try
+            {
+                
+                DataSet ds = new DataSet();
+                string sql = "SELECT UserEmail,Verified FROM Users";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlDataAdapter.UpdateCommand = new SqlCommand("UPDATE Users SET Verified = 1 WHERE UserEmail = @UserEmail", con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UserData");
+                foreach (DataRow dr in ds.Tables) // search whole table
+                {
+                    
+                    if (dr[0] == email) // if email matches
+                    {
+                        dr[4] = 1; //change the status
+                    }
+                }
+                
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show("Error with verifying user on DB");
+                /*
+                   if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                */
+            }
+        }
     }
 }

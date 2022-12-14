@@ -93,9 +93,9 @@ namespace BusinessLayer
             dataLayer = _DataLayer;
             userList = dataLayer.getAllUsers(); // setup Models userList so we can login
 
-            advertList = new List<Advertisement>();
+            /*advertList = new List<Advertisement>();
             dataLayer.getAllAdvertisements();
-            advertList = dataLayer.getAllAdvertisements();
+            advertList = dataLayer.getAllAdvertisements();*/
 
             /*UserAddressList = new ArrayList();
             dataLayer.GetUserAddress();
@@ -115,6 +115,7 @@ namespace BusinessLayer
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
                 MessageBox.Show("DBUserEmail: " + DBUserEmail);
+                MessageBox.Show("DBUserPassword: " + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
@@ -296,6 +297,18 @@ namespace BusinessLayer
         public bool addNewUser(string email, string firstname, string lastname, string password,string verified, string userType,string address1,string address2,string address3,string county,string eircode)
         {
             throw new NotImplementedException();
+        }
+        public void verifyUser(string email)
+        {
+            //try
+            //{
+                DataLayer.verifyUser(email);
+            //}
+            /*catch (System.Exception excep)
+            {
+                return false;
+            }
+            */
         }
 
         public bool banUserInDB(User user)

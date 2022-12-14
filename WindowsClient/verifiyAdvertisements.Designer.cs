@@ -64,10 +64,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(438, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(383, 22);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 316);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 237);
             this.pictureBox1.TabIndex = 64;
             this.pictureBox1.TabStop = false;
             // 
@@ -75,14 +74,13 @@
             // 
             this.typeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.typeList.FormattingEnabled = true;
-            this.typeList.ItemHeight = 20;
+            this.typeList.ItemHeight = 15;
             this.typeList.Items.AddRange(new object[] {
             "Animal",
             "Product"});
-            this.typeList.Location = new System.Drawing.Point(208, 274);
-            this.typeList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.typeList.Location = new System.Drawing.Point(182, 206);
             this.typeList.Name = "typeList";
-            this.typeList.Size = new System.Drawing.Size(125, 20);
+            this.typeList.Size = new System.Drawing.Size(109, 15);
             this.typeList.TabIndex = 63;
             // 
             // exitBtn
@@ -93,10 +91,10 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.exitBtn.Location = new System.Drawing.Point(503, 697);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.exitBtn.Location = new System.Drawing.Point(440, 523);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(142, 45);
+            this.exitBtn.Size = new System.Drawing.Size(124, 34);
             this.exitBtn.TabIndex = 62;
             this.exitBtn.Text = "&Exit";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -110,10 +108,10 @@
             this.flagBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flagBtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.flagBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.flagBtn.Location = new System.Drawing.Point(305, 697);
-            this.flagBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.flagBtn.Location = new System.Drawing.Point(267, 523);
+            this.flagBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flagBtn.Name = "flagBtn";
-            this.flagBtn.Size = new System.Drawing.Size(142, 45);
+            this.flagBtn.Size = new System.Drawing.Size(124, 34);
             this.flagBtn.TabIndex = 61;
             this.flagBtn.Text = "Flag";
             this.flagBtn.UseVisualStyleBackColor = false;
@@ -126,10 +124,10 @@
             this.verifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.verifyBtn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.verifyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.verifyBtn.Location = new System.Drawing.Point(96, 697);
-            this.verifyBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.verifyBtn.Location = new System.Drawing.Point(84, 523);
+            this.verifyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.verifyBtn.Name = "verifyBtn";
-            this.verifyBtn.Size = new System.Drawing.Size(142, 45);
+            this.verifyBtn.Size = new System.Drawing.Size(124, 34);
             this.verifyBtn.TabIndex = 60;
             this.verifyBtn.Text = "Verify";
             this.verifyBtn.UseVisualStyleBackColor = false;
@@ -139,9 +137,10 @@
             this.checkBoxMedicalNo.AutoSize = true;
             this.checkBoxMedicalNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxMedicalNo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxMedicalNo.Location = new System.Drawing.Point(323, 567);
+            this.checkBoxMedicalNo.Location = new System.Drawing.Point(283, 425);
+            this.checkBoxMedicalNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxMedicalNo.Name = "checkBoxMedicalNo";
-            this.checkBoxMedicalNo.Size = new System.Drawing.Size(62, 32);
+            this.checkBoxMedicalNo.Size = new System.Drawing.Size(52, 25);
             this.checkBoxMedicalNo.TabIndex = 58;
             this.checkBoxMedicalNo.Text = "No";
             this.checkBoxMedicalNo.UseVisualStyleBackColor = true;
@@ -151,9 +150,10 @@
             this.checkBoxMedicalYes.AutoSize = true;
             this.checkBoxMedicalYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxMedicalYes.ForeColor = System.Drawing.Color.White;
-            this.checkBoxMedicalYes.Location = new System.Drawing.Point(242, 567);
+            this.checkBoxMedicalYes.Location = new System.Drawing.Point(212, 425);
+            this.checkBoxMedicalYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxMedicalYes.Name = "checkBoxMedicalYes";
-            this.checkBoxMedicalYes.Size = new System.Drawing.Size(64, 32);
+            this.checkBoxMedicalYes.Size = new System.Drawing.Size(54, 25);
             this.checkBoxMedicalYes.TabIndex = 57;
             this.checkBoxMedicalYes.Text = "Yes";
             this.checkBoxMedicalYes.UseVisualStyleBackColor = true;
@@ -163,67 +163,67 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(55, 573);
+            this.label10.Location = new System.Drawing.Point(48, 430);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 28);
+            this.label10.Size = new System.Drawing.Size(135, 21);
             this.label10.TabIndex = 56;
             this.label10.Text = "Medical Records";
             // 
             // breedTxt
             // 
-            this.breedTxt.Location = new System.Drawing.Point(504, 514);
-            this.breedTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.breedTxt.Location = new System.Drawing.Point(441, 386);
+            this.breedTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.breedTxt.Multiline = true;
             this.breedTxt.Name = "breedTxt";
-            this.breedTxt.Size = new System.Drawing.Size(132, 24);
+            this.breedTxt.Size = new System.Drawing.Size(116, 19);
             this.breedTxt.TabIndex = 55;
             // 
             // nameTxt
             // 
-            this.nameTxt.Location = new System.Drawing.Point(145, 461);
-            this.nameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.nameTxt.Location = new System.Drawing.Point(127, 346);
+            this.nameTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameTxt.Multiline = true;
             this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(132, 24);
+            this.nameTxt.Size = new System.Drawing.Size(116, 19);
             this.nameTxt.TabIndex = 54;
             // 
             // animalTxt
             // 
-            this.animalTxt.Location = new System.Drawing.Point(239, 396);
-            this.animalTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.animalTxt.Location = new System.Drawing.Point(209, 297);
+            this.animalTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animalTxt.Multiline = true;
             this.animalTxt.Name = "animalTxt";
-            this.animalTxt.Size = new System.Drawing.Size(132, 24);
+            this.animalTxt.Size = new System.Drawing.Size(116, 19);
             this.animalTxt.TabIndex = 53;
             // 
             // categoryTxt
             // 
-            this.categoryTxt.Location = new System.Drawing.Point(239, 340);
-            this.categoryTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.categoryTxt.Location = new System.Drawing.Point(209, 255);
+            this.categoryTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryTxt.Multiline = true;
             this.categoryTxt.Name = "categoryTxt";
-            this.categoryTxt.Size = new System.Drawing.Size(132, 24);
+            this.categoryTxt.Size = new System.Drawing.Size(116, 19);
             this.categoryTxt.TabIndex = 52;
             // 
             // quantityTxt
             // 
-            this.quantityTxt.Location = new System.Drawing.Point(208, 220);
-            this.quantityTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.quantityTxt.Location = new System.Drawing.Point(182, 165);
+            this.quantityTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.quantityTxt.Multiline = true;
             this.quantityTxt.Name = "quantityTxt";
             this.quantityTxt.ReadOnly = true;
-            this.quantityTxt.Size = new System.Drawing.Size(98, 24);
+            this.quantityTxt.Size = new System.Drawing.Size(86, 19);
             this.quantityTxt.TabIndex = 51;
             // 
             // priceTxt
             // 
-            this.priceTxt.Location = new System.Drawing.Point(208, 172);
-            this.priceTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.priceTxt.Location = new System.Drawing.Point(182, 129);
+            this.priceTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceTxt.Multiline = true;
             this.priceTxt.Name = "priceTxt";
             this.priceTxt.ReadOnly = true;
-            this.priceTxt.Size = new System.Drawing.Size(163, 24);
+            this.priceTxt.Size = new System.Drawing.Size(143, 19);
             this.priceTxt.TabIndex = 50;
             // 
             // label9
@@ -231,10 +231,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(398, 514);
+            this.label9.Location = new System.Drawing.Point(348, 386);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 28);
+            this.label9.Size = new System.Drawing.Size(54, 21);
             this.label9.TabIndex = 48;
             this.label9.Text = "Breed";
             // 
@@ -243,10 +243,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(52, 510);
+            this.label8.Location = new System.Drawing.Point(46, 382);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 28);
+            this.label8.Size = new System.Drawing.Size(74, 21);
             this.label8.TabIndex = 47;
             this.label8.Text = "Chipped";
             // 
@@ -255,9 +255,10 @@
             this.checkBoxChippedNo.AutoSize = true;
             this.checkBoxChippedNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxChippedNo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxChippedNo.Location = new System.Drawing.Point(323, 513);
+            this.checkBoxChippedNo.Location = new System.Drawing.Point(283, 385);
+            this.checkBoxChippedNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxChippedNo.Name = "checkBoxChippedNo";
-            this.checkBoxChippedNo.Size = new System.Drawing.Size(62, 32);
+            this.checkBoxChippedNo.Size = new System.Drawing.Size(52, 25);
             this.checkBoxChippedNo.TabIndex = 46;
             this.checkBoxChippedNo.Text = "No";
             this.checkBoxChippedNo.UseVisualStyleBackColor = true;
@@ -267,9 +268,10 @@
             this.checkBoxChippedYes.AutoSize = true;
             this.checkBoxChippedYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxChippedYes.ForeColor = System.Drawing.Color.White;
-            this.checkBoxChippedYes.Location = new System.Drawing.Point(242, 513);
+            this.checkBoxChippedYes.Location = new System.Drawing.Point(212, 385);
+            this.checkBoxChippedYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxChippedYes.Name = "checkBoxChippedYes";
-            this.checkBoxChippedYes.Size = new System.Drawing.Size(64, 32);
+            this.checkBoxChippedYes.Size = new System.Drawing.Size(54, 25);
             this.checkBoxChippedYes.TabIndex = 45;
             this.checkBoxChippedYes.Text = "Yes";
             this.checkBoxChippedYes.UseVisualStyleBackColor = true;
@@ -279,10 +281,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(55, 631);
+            this.label7.Location = new System.Drawing.Point(48, 473);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 28);
+            this.label7.Size = new System.Drawing.Size(80, 21);
             this.label7.TabIndex = 44;
             this.label7.Text = "Purebred";
             // 
@@ -291,9 +293,10 @@
             this.checkBoxPureNo.AutoSize = true;
             this.checkBoxPureNo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxPureNo.ForeColor = System.Drawing.Color.White;
-            this.checkBoxPureNo.Location = new System.Drawing.Point(323, 631);
+            this.checkBoxPureNo.Location = new System.Drawing.Point(283, 473);
+            this.checkBoxPureNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxPureNo.Name = "checkBoxPureNo";
-            this.checkBoxPureNo.Size = new System.Drawing.Size(62, 32);
+            this.checkBoxPureNo.Size = new System.Drawing.Size(52, 25);
             this.checkBoxPureNo.TabIndex = 43;
             this.checkBoxPureNo.Text = "No";
             this.checkBoxPureNo.UseVisualStyleBackColor = true;
@@ -303,9 +306,10 @@
             this.checkBoxPureYes.AutoSize = true;
             this.checkBoxPureYes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.checkBoxPureYes.ForeColor = System.Drawing.Color.White;
-            this.checkBoxPureYes.Location = new System.Drawing.Point(242, 631);
+            this.checkBoxPureYes.Location = new System.Drawing.Point(212, 473);
+            this.checkBoxPureYes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxPureYes.Name = "checkBoxPureYes";
-            this.checkBoxPureYes.Size = new System.Drawing.Size(64, 32);
+            this.checkBoxPureYes.Size = new System.Drawing.Size(54, 25);
             this.checkBoxPureYes.TabIndex = 42;
             this.checkBoxPureYes.Text = "Yes";
             this.checkBoxPureYes.UseVisualStyleBackColor = true;
@@ -315,10 +319,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(52, 457);
+            this.label6.Location = new System.Drawing.Point(46, 343);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 28);
+            this.label6.Size = new System.Drawing.Size(56, 21);
             this.label6.TabIndex = 41;
             this.label6.Text = "Name";
             // 
@@ -327,10 +331,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(52, 392);
+            this.label5.Location = new System.Drawing.Point(46, 294);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 28);
+            this.label5.Size = new System.Drawing.Size(125, 21);
             this.label5.TabIndex = 40;
             this.label5.Text = "Type of Animal";
             // 
@@ -339,10 +343,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(52, 336);
+            this.label4.Location = new System.Drawing.Point(46, 252);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 28);
+            this.label4.Size = new System.Drawing.Size(139, 21);
             this.label4.TabIndex = 39;
             this.label4.Text = "Animal Category";
             // 
@@ -351,10 +355,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(52, 274);
+            this.label3.Location = new System.Drawing.Point(46, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 28);
+            this.label3.Size = new System.Drawing.Size(46, 21);
             this.label3.TabIndex = 38;
             this.label3.Text = "Type";
             // 
@@ -363,10 +367,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 93);
+            this.label2.Location = new System.Drawing.Point(48, 70);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 28);
+            this.label2.Size = new System.Drawing.Size(98, 21);
             this.label2.TabIndex = 37;
             this.label2.Text = "Description";
             // 
@@ -375,10 +379,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(50, 172);
+            this.label1.Location = new System.Drawing.Point(44, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 28);
+            this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 36;
             this.label1.Text = "Price";
             // 
@@ -387,10 +391,10 @@
             this.Usernamelbl.AutoSize = true;
             this.Usernamelbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Usernamelbl.ForeColor = System.Drawing.Color.White;
-            this.Usernamelbl.Location = new System.Drawing.Point(52, 216);
+            this.Usernamelbl.Location = new System.Drawing.Point(46, 162);
             this.Usernamelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Usernamelbl.Name = "Usernamelbl";
-            this.Usernamelbl.Size = new System.Drawing.Size(95, 28);
+            this.Usernamelbl.Size = new System.Drawing.Size(77, 21);
             this.Usernamelbl.TabIndex = 35;
             this.Usernamelbl.Text = "Quantity";
             // 
@@ -399,39 +403,40 @@
             this.ttlLabel.AutoSize = true;
             this.ttlLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ttlLabel.ForeColor = System.Drawing.Color.White;
-            this.ttlLabel.Location = new System.Drawing.Point(55, 29);
+            this.ttlLabel.Location = new System.Drawing.Point(48, 22);
             this.ttlLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ttlLabel.Name = "ttlLabel";
-            this.ttlLabel.Size = new System.Drawing.Size(55, 28);
+            this.ttlLabel.Size = new System.Drawing.Size(44, 21);
             this.ttlLabel.TabIndex = 34;
             this.ttlLabel.Text = "Title";
             // 
             // descriptionTxt
             // 
-            this.descriptionTxt.Location = new System.Drawing.Point(211, 95);
+            this.descriptionTxt.Location = new System.Drawing.Point(185, 71);
+            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.descriptionTxt.Name = "descriptionTxt";
             this.descriptionTxt.ReadOnly = true;
-            this.descriptionTxt.Size = new System.Drawing.Size(211, 52);
+            this.descriptionTxt.Size = new System.Drawing.Size(185, 40);
             this.descriptionTxt.TabIndex = 59;
             this.descriptionTxt.Text = "";
             this.descriptionTxt.TextChanged += new System.EventHandler(this.descriptionTxt_TextChanged);
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(211, 33);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTitle.Location = new System.Drawing.Point(185, 25);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.ReadOnly = true;
-            this.txtTitle.Size = new System.Drawing.Size(163, 24);
+            this.txtTitle.Size = new System.Drawing.Size(143, 19);
             this.txtTitle.TabIndex = 65;
             // 
             // verifiyAdvertisements
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(980, 784);
+            this.ClientSize = new System.Drawing.Size(858, 588);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.typeList);
@@ -463,6 +468,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Usernamelbl);
             this.Controls.Add(this.ttlLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "verifiyAdvertisements";
             this.Text = "verifiyAdvertisements";
             this.Load += new System.EventHandler(this.verifiyAdvertisements_Load);

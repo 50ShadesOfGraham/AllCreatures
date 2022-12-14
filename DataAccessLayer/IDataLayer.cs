@@ -29,11 +29,11 @@ namespace DataAccessLayer
         public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose);
         public void insertFoodAdvertisement();
         public void insertAccessoriesAdvertisement();
-        public bool banUserInDB(BusinessEntities.IUser user);
+        public bool banUserInDB(BusinessEntities.User user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();
-        List<Advertisement> getAllAdvertisements();
+       // List<Advertisement> getAllAdvertisements();
         void openConnection();
         
     }
