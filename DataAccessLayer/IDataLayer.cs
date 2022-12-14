@@ -21,10 +21,10 @@ namespace DataAccessLayer
         public void addNewGenericAnimalToDB(string gaID, string animalID, string detailone, string detailtwo, string detailthree);
         public void addNewLitterToDB(string litterid, int littersize, string animalid);
         //New Insert Functions
-        public void insertDogAdvertisement();
+        public void insertDogAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo);
         public void insertGenericAnimalAdvertisement();
         public void insertLitterAdvertisement();
-        public void insertHorseAdvertisement();
+        public void insertHorseAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose);
         public void insertFarmAnimalAdvertisement();
         public void insertFoodAdvertisement();
         public void insertAccessoriesAdvertisement();
