@@ -28,7 +28,7 @@ namespace BusinessLayer
         bool login(string email, string password);
         bool EmailPresent(string email);
         void tearDown();
-        System.Collections.ArrayList UserList { get; }
-        System.Collections.ArrayList AdvertList { get; set; }
+        List<User> UserList { get; }
+        List<Advertisement> AdvertList { get; }
     }
 }
