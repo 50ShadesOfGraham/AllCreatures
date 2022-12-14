@@ -22,13 +22,13 @@ namespace DataAccessLayer
         public void addNewGenericAnimalToDB(string gaID, string animalID, string detailone, string detailtwo, string detailthree);
         public void addNewLitterToDB(string litterid, int littersize, string animalid);
         //New Insert Functions
-        public void insertDogAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo);
-        public void insertGenericAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string detailone, string detailtwo, string detailthree);
-        public void insertLitterAdvertisement();
-        public void insertHorseAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose);
-        public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose);
-        public void insertFoodAdvertisement();
-        public void insertAccessoriesAdvertisement();
+        public void insertDogAdvertisement(Dog dog);
+        public void insertGenericAnimalAdvertisement(GenericAnimal generic_animal);
+        public void insertLitterAdvertisement(Litter litter);
+        public void insertHorseAdvertisement(Horse horse);
+        public void insertFarmAnimalAdvertisement(FarmAnimal farmanimal);
+        public void insertFoodAdvertisement(Food food);
+        public void insertAccessoriesAdvertisement(Accessories access);
         public bool banUserInDB(BusinessEntities.User user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();

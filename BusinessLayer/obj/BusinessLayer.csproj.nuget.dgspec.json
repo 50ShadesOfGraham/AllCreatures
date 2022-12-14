@@ -11,7 +11,7 @@
         "projectName": "BusinessEntities",
         "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
+        "outputPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,7 +71,7 @@
         "projectName": "BusinessLayer",
         "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -141,7 +141,7 @@
         "projectName": "DataAccessLayer",
         "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -181,7 +181,7 @@
           "dependencies": {
             "Extended.Wpf.Toolkit": {
               "target": "Package",
-              "version": "[4.4.0, )"
+              "version": "[4.5.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

@@ -8,25 +8,28 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Eoghan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\eddie\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectUniqueName": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "projectName": "BusinessEntities",
-      "projectPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-      "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
+      "projectPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "packagesPath": "C:\\Users\\eddie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eddie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
@@ -67,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

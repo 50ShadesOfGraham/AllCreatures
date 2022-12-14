@@ -11,7 +11,7 @@
         "projectName": "BusinessEntities",
         "projectPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eoghan\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
+        "outputPath": "C:\\Users\\Eoghan\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
