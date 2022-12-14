@@ -107,29 +107,182 @@ namespace DataAccessLayer
             }
             return UserList;
         }
-        /*public List<Advertisement> getAllAdvertisements()
+        public List<Advertisement> getAllAdvertisements()
         {
             List<Advertisement> AdvertList = new List<Advertisement>();
+            string sql = "";
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From Advertisement";
+                sql = "SELECT * From DogAdvertisement";
                 da = new SqlDataAdapter(sql, con);
                 cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "AdvertData");
-                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                da.Fill(ds, "DogAdvert");
+                maxAdverts = ds.Tables["DogAdvert"].Rows.Count;
                 for (int i = 0; i < maxAdverts; i++)
                 {
-                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
-                    Advertisement advert = AdvertisementCreator.GetAdvert(dRow.ItemArray.GetValue(0).ToString(),
-                                                        dRow.ItemArray.GetValue(1).ToString(),
-                                                        dRow.ItemArray.GetValue(2).ToString(),
-                                                        dRow.ItemArray.GetValue(3).ToString(),
-                                                        dRow.ItemArray.GetValue(4).ToString(),
-                                                        dRow.ItemArray.GetValue(5).ToString());
+                    DataRow dRow = ds.Tables["DogAdvert"].Rows[i];
+                    Dog advert = AdvertisementCreator.GetDog(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                dRow.ItemArray.GetValue(10).ToString(),
+                                                                "Dog",
+                                                                Convert.ToInt32(dRow.ItemArray.GetValue(11)),
+                                                                dRow.ItemArray.GetValue(12).ToString(),
+                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
+                                                                dRow.ItemArray.GetValue(14).ToString(),
+                                                                dRow.ItemArray.GetValue(15).ToString());
+                        AdvertList.Add(advert);
+                }
+                ds = new DataSet();
+                sql = "SELECT * From HorseAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "HorseAdvert");
+                maxAdverts = ds.Tables["HorseAdvert"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["HorseAdvert"].Rows[i];
+                    Horse advert = AdvertisementCreator.GetHorse(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                dRow.ItemArray.GetValue(10).ToString(),
+                                                                "Horse",
+                                                                Convert.ToInt32(dRow.ItemArray.GetValue(11)),
+                                                                dRow.ItemArray.GetValue(12).ToString(),
+                                                                dRow.ItemArray.GetValue(13).ToString(),
+                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(14)),
+                                                                dRow.ItemArray.GetValue(15).ToString(),
+                                                                dRow.ItemArray.GetValue(16).ToString());
                     AdvertList.Add(advert);
                 }
+                ds = new DataSet();
+                sql = "SELECT * From FarmAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "FarmAdvert");
+                maxAdverts = ds.Tables["FarmAdvert"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["FarmAdvert"].Rows[i];
+                    FarmAnimal advert = AdvertisementCreator.GetFarmAnimal(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                dRow.ItemArray.GetValue(10).ToString(),
+                                                                dRow.ItemArray.GetValue(11).ToString(),
+                                                                Convert.ToInt32(dRow.ItemArray.GetValue(12)),
+                                                                dRow.ItemArray.GetValue(13).ToString(),
+                                                                dRow.ItemArray.GetValue(14).ToString());
+                  
+                    AdvertList.Add(advert);
+                }
+                ds = new DataSet();
+                sql = "SELECT * From GenericAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "GAAdvert");
+                maxAdverts = ds.Tables["GAAdvert"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["GAAdvert"].Rows[i];
+                    GenericAnimal advert = AdvertisementCreator.GetGenericAnimal(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                                dRow.ItemArray.GetValue(10).ToString(),
+                                                                                dRow.ItemArray.GetValue(11).ToString(),
+                                                                                Convert.ToInt32(dRow.ItemArray.GetValue(12)),
+                                                                                dRow.ItemArray.GetValue(13).ToString(),
+                                                                                dRow.ItemArray.GetValue(14).ToString(),
+                                                                                dRow.ItemArray.GetValue(15).ToString(),
+                                                                                dRow.ItemArray.GetValue(16).ToString());
 
+                    AdvertList.Add(advert);
+                }
+                ds = new DataSet();
+                sql = "SELECT * From LitterAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "LitterAdvert");
+                maxAdverts = ds.Tables["LitterAdvert"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["LitterAdvert"].Rows[i];
+                    Litter advert = AdvertisementCreator.GetLitter(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                                "NoName",
+                                                                                 dRow.ItemArray.GetValue(10).ToString(),
+                                                                                Convert.ToInt32(dRow.ItemArray.GetValue(11)),
+                                                                                "MULTI",
+                                                                                Convert.ToInt32(dRow.ItemArray.GetValue(12)),
+                                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
+                                                                                dRow.ItemArray.GetValue(14).ToString(),
+                                                                                dRow.ItemArray.GetValue(15).ToString());
+
+                    AdvertList.Add(advert);
+                }
+                ds = new DataSet();
+                sql = "SELECT * From FoodAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "FoodAdvert");
+                maxAdverts = ds.Tables["FoodAdvert"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["FoodAdvert"].Rows[i];
+                    Food advert = AdvertisementCreator.GetFood(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                                dRow.ItemArray.GetValue(10).ToString(),
+                                                                                dRow.ItemArray.GetValue(11).ToString());
+
+                    AdvertList.Add(advert);
+                }
+                ds = new DataSet();
+                sql = "SELECT * From AccessoriesAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AccessAdvert");
+                maxAdverts = ds.Tables["AccessAdvert"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AccessAdvert"].Rows[i];
+                    Accessories advert = AdvertisementCreator.GetAccessories(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                                dRow.ItemArray.GetValue(1).ToString(),
+                                                                                dRow.ItemArray.GetValue(2).ToString(),
+                                                                                dRow.ItemArray.GetValue(3).ToString(),
+                                                                                Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                                Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                                dRow.ItemArray.GetValue(6).ToString(),
+                                                                                dRow.ItemArray.GetValue(10).ToString(),
+                                                                                dRow.ItemArray.GetValue(11).ToString());
+
+                    AdvertList.Add(advert);
+                }
 
             }
             catch (System.Exception excep)
@@ -141,7 +294,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
             return AdvertList;
-        }*/
+        }
         public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
             string county, string eircode)
         {
