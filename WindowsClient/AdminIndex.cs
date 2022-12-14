@@ -154,5 +154,10 @@ namespace WindowsClient
                 MessageBox.Show("Cancel signout");
             }
         }
+
+        private void CreateAdmin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Testing create admin");
+        }
     }
 }

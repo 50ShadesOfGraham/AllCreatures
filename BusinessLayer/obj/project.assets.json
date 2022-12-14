@@ -619,11 +619,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -644,11 +644,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-              "projectPath": "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+            "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+              "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
             },
-            "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\Annayap\\Source\\Repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

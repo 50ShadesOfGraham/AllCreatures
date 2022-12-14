@@ -154,7 +154,7 @@
             this.SidePanel.Controls.Add(this.LogoBox);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 40);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(179, 530);
             this.SidePanel.TabIndex = 0;
@@ -165,7 +165,7 @@
             this.ReportPanel.Controls.Add(this.ReportAdsBttn);
             this.ReportPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ReportPanel.Location = new System.Drawing.Point(0, 2118);
-            this.ReportPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReportPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ReportPanel.Name = "ReportPanel";
             this.ReportPanel.Size = new System.Drawing.Size(158, 82);
             this.ReportPanel.TabIndex = 11;
@@ -175,7 +175,7 @@
             this.panel1.Controls.Add(this.ReportedUsersBttn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(158, 197);
             this.panel1.TabIndex = 12;
@@ -187,7 +187,7 @@
             this.ReportedUsersBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.ReportedUsersBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportedUsersBttn.Location = new System.Drawing.Point(0, 0);
-            this.ReportedUsersBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReportedUsersBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReportedUsersBttn.Name = "ReportedUsersBttn";
             this.ReportedUsersBttn.Size = new System.Drawing.Size(158, 41);
             this.ReportedUsersBttn.TabIndex = 1;
@@ -201,7 +201,7 @@
             this.ReportAdsBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.ReportAdsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportAdsBttn.Location = new System.Drawing.Point(0, 0);
-            this.ReportAdsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReportAdsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReportAdsBttn.Name = "ReportAdsBttn";
             this.ReportAdsBttn.Size = new System.Drawing.Size(158, 41);
             this.ReportAdsBttn.TabIndex = 1;
@@ -216,7 +216,7 @@
             this.ReportsBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ReportsBttn.ForeColor = System.Drawing.Color.White;
             this.ReportsBttn.Location = new System.Drawing.Point(0, 2062);
-            this.ReportsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReportsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReportsBttn.Name = "ReportsBttn";
             this.ReportsBttn.Size = new System.Drawing.Size(158, 56);
             this.ReportsBttn.TabIndex = 10;
@@ -230,7 +230,7 @@
             this.UserPanel.Controls.Add(this.VUsersBttn);
             this.UserPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.UserPanel.Location = new System.Drawing.Point(0, 1980);
-            this.UserPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserPanel.Margin = new System.Windows.Forms.Padding(2);
             this.UserPanel.Name = "UserPanel";
             this.UserPanel.Size = new System.Drawing.Size(158, 82);
             this.UserPanel.TabIndex = 9;
@@ -242,7 +242,7 @@
             this.BUsersBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.BUsersBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BUsersBttn.Location = new System.Drawing.Point(0, 41);
-            this.BUsersBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BUsersBttn.Margin = new System.Windows.Forms.Padding(2);
             this.BUsersBttn.Name = "BUsersBttn";
             this.BUsersBttn.Size = new System.Drawing.Size(158, 41);
             this.BUsersBttn.TabIndex = 3;
@@ -256,7 +256,7 @@
             this.VUsersBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.VUsersBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VUsersBttn.Location = new System.Drawing.Point(0, 0);
-            this.VUsersBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VUsersBttn.Margin = new System.Windows.Forms.Padding(2);
             this.VUsersBttn.Name = "VUsersBttn";
             this.VUsersBttn.Size = new System.Drawing.Size(158, 41);
             this.VUsersBttn.TabIndex = 2;
@@ -271,7 +271,7 @@
             this.UsersBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UsersBttn.ForeColor = System.Drawing.Color.White;
             this.UsersBttn.Location = new System.Drawing.Point(0, 1924);
-            this.UsersBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsersBttn.Margin = new System.Windows.Forms.Padding(2);
             this.UsersBttn.Name = "UsersBttn";
             this.UsersBttn.Size = new System.Drawing.Size(158, 56);
             this.UsersBttn.TabIndex = 8;
@@ -291,7 +291,7 @@
             this.AccessPanel.Controls.Add(this.HealthBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AccessPanel.Location = new System.Drawing.Point(0, 1400);
-            this.AccessPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccessPanel.Margin = new System.Windows.Forms.Padding(2);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(158, 524);
             this.AccessPanel.TabIndex = 7;
@@ -303,7 +303,7 @@
             this.OtherAccessPanel.Controls.Add(this.HorseRidingBttn);
             this.OtherAccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.OtherAccessPanel.Location = new System.Drawing.Point(0, 438);
-            this.OtherAccessPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherAccessPanel.Margin = new System.Windows.Forms.Padding(2);
             this.OtherAccessPanel.Name = "OtherAccessPanel";
             this.OtherAccessPanel.Size = new System.Drawing.Size(158, 86);
             this.OtherAccessPanel.TabIndex = 10;
@@ -315,7 +315,7 @@
             this.AquariumBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.AquariumBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AquariumBttn.Location = new System.Drawing.Point(0, 54);
-            this.AquariumBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AquariumBttn.Margin = new System.Windows.Forms.Padding(2);
             this.AquariumBttn.Name = "AquariumBttn";
             this.AquariumBttn.Size = new System.Drawing.Size(158, 27);
             this.AquariumBttn.TabIndex = 30;
@@ -329,7 +329,7 @@
             this.ClothingBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ClothingBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClothingBttn.Location = new System.Drawing.Point(0, 27);
-            this.ClothingBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClothingBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ClothingBttn.Name = "ClothingBttn";
             this.ClothingBttn.Size = new System.Drawing.Size(158, 27);
             this.ClothingBttn.TabIndex = 29;
@@ -343,7 +343,7 @@
             this.HorseRidingBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.HorseRidingBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HorseRidingBttn.Location = new System.Drawing.Point(0, 0);
-            this.HorseRidingBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorseRidingBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HorseRidingBttn.Name = "HorseRidingBttn";
             this.HorseRidingBttn.Size = new System.Drawing.Size(158, 27);
             this.HorseRidingBttn.TabIndex = 28;
@@ -357,7 +357,7 @@
             this.OtherAccessBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.OtherAccessBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OtherAccessBttn.Location = new System.Drawing.Point(0, 397);
-            this.OtherAccessBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherAccessBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherAccessBttn.Name = "OtherAccessBttn";
             this.OtherAccessBttn.Size = new System.Drawing.Size(158, 41);
             this.OtherAccessBttn.TabIndex = 9;
@@ -372,7 +372,7 @@
             this.CleaningPanel.Controls.Add(this.TankCleaningBttn);
             this.CleaningPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.CleaningPanel.Location = new System.Drawing.Point(0, 315);
-            this.CleaningPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CleaningPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CleaningPanel.Name = "CleaningPanel";
             this.CleaningPanel.Size = new System.Drawing.Size(158, 82);
             this.CleaningPanel.TabIndex = 8;
@@ -384,7 +384,7 @@
             this.OtherCleaningBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.OtherCleaningBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OtherCleaningBttn.Location = new System.Drawing.Point(0, 54);
-            this.OtherCleaningBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherCleaningBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherCleaningBttn.Name = "OtherCleaningBttn";
             this.OtherCleaningBttn.Size = new System.Drawing.Size(158, 27);
             this.OtherCleaningBttn.TabIndex = 27;
@@ -398,7 +398,7 @@
             this.ShampooBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ShampooBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShampooBttn.Location = new System.Drawing.Point(0, 27);
-            this.ShampooBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShampooBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ShampooBttn.Name = "ShampooBttn";
             this.ShampooBttn.Size = new System.Drawing.Size(158, 27);
             this.ShampooBttn.TabIndex = 26;
@@ -412,7 +412,7 @@
             this.TankCleaningBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.TankCleaningBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TankCleaningBttn.Location = new System.Drawing.Point(0, 0);
-            this.TankCleaningBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TankCleaningBttn.Margin = new System.Windows.Forms.Padding(2);
             this.TankCleaningBttn.Name = "TankCleaningBttn";
             this.TankCleaningBttn.Size = new System.Drawing.Size(158, 27);
             this.TankCleaningBttn.TabIndex = 25;
@@ -426,7 +426,7 @@
             this.CleaningBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.CleaningBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CleaningBttn.Location = new System.Drawing.Point(0, 274);
-            this.CleaningBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CleaningBttn.Margin = new System.Windows.Forms.Padding(2);
             this.CleaningBttn.Name = "CleaningBttn";
             this.CleaningBttn.Size = new System.Drawing.Size(158, 41);
             this.CleaningBttn.TabIndex = 7;
@@ -442,7 +442,7 @@
             this.BeddingPanel.Controls.Add(this.TanksBttn);
             this.BeddingPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.BeddingPanel.Location = new System.Drawing.Point(0, 164);
-            this.BeddingPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BeddingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.BeddingPanel.Name = "BeddingPanel";
             this.BeddingPanel.Size = new System.Drawing.Size(158, 110);
             this.BeddingPanel.TabIndex = 6;
@@ -454,7 +454,7 @@
             this.OtherBeddingBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.OtherBeddingBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OtherBeddingBttn.Location = new System.Drawing.Point(0, 81);
-            this.OtherBeddingBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherBeddingBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherBeddingBttn.Name = "OtherBeddingBttn";
             this.OtherBeddingBttn.Size = new System.Drawing.Size(158, 27);
             this.OtherBeddingBttn.TabIndex = 26;
@@ -468,7 +468,7 @@
             this.SACageBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SACageBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SACageBttn.Location = new System.Drawing.Point(0, 54);
-            this.SACageBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SACageBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SACageBttn.Name = "SACageBttn";
             this.SACageBttn.Size = new System.Drawing.Size(158, 27);
             this.SACageBttn.TabIndex = 25;
@@ -482,7 +482,7 @@
             this.KennelBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.KennelBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KennelBttn.Location = new System.Drawing.Point(0, 27);
-            this.KennelBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KennelBttn.Margin = new System.Windows.Forms.Padding(2);
             this.KennelBttn.Name = "KennelBttn";
             this.KennelBttn.Size = new System.Drawing.Size(158, 27);
             this.KennelBttn.TabIndex = 24;
@@ -496,7 +496,7 @@
             this.TanksBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.TanksBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TanksBttn.Location = new System.Drawing.Point(0, 0);
-            this.TanksBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TanksBttn.Margin = new System.Windows.Forms.Padding(2);
             this.TanksBttn.Name = "TanksBttn";
             this.TanksBttn.Size = new System.Drawing.Size(158, 27);
             this.TanksBttn.TabIndex = 23;
@@ -510,7 +510,7 @@
             this.BeddingBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.BeddingBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BeddingBttn.Location = new System.Drawing.Point(0, 123);
-            this.BeddingBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BeddingBttn.Margin = new System.Windows.Forms.Padding(2);
             this.BeddingBttn.Name = "BeddingBttn";
             this.BeddingBttn.Size = new System.Drawing.Size(158, 41);
             this.BeddingBttn.TabIndex = 5;
@@ -525,7 +525,7 @@
             this.HealthPanel.Controls.Add(this.SupplementBttn);
             this.HealthPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HealthPanel.Location = new System.Drawing.Point(0, 41);
-            this.HealthPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HealthPanel.Margin = new System.Windows.Forms.Padding(2);
             this.HealthPanel.Name = "HealthPanel";
             this.HealthPanel.Size = new System.Drawing.Size(158, 82);
             this.HealthPanel.TabIndex = 4;
@@ -537,7 +537,7 @@
             this.OtherHealthBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.OtherHealthBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OtherHealthBttn.Location = new System.Drawing.Point(0, 54);
-            this.OtherHealthBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherHealthBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherHealthBttn.Name = "OtherHealthBttn";
             this.OtherHealthBttn.Size = new System.Drawing.Size(158, 27);
             this.OtherHealthBttn.TabIndex = 22;
@@ -551,7 +551,7 @@
             this.MedicationBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.MedicationBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MedicationBttn.Location = new System.Drawing.Point(0, 27);
-            this.MedicationBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MedicationBttn.Margin = new System.Windows.Forms.Padding(2);
             this.MedicationBttn.Name = "MedicationBttn";
             this.MedicationBttn.Size = new System.Drawing.Size(158, 27);
             this.MedicationBttn.TabIndex = 21;
@@ -565,7 +565,7 @@
             this.SupplementBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SupplementBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SupplementBttn.Location = new System.Drawing.Point(0, 0);
-            this.SupplementBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SupplementBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SupplementBttn.Name = "SupplementBttn";
             this.SupplementBttn.Size = new System.Drawing.Size(158, 27);
             this.SupplementBttn.TabIndex = 20;
@@ -579,7 +579,7 @@
             this.HealthBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.HealthBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HealthBttn.Location = new System.Drawing.Point(0, 0);
-            this.HealthBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HealthBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HealthBttn.Name = "HealthBttn";
             this.HealthBttn.Size = new System.Drawing.Size(158, 41);
             this.HealthBttn.TabIndex = 3;
@@ -595,7 +595,7 @@
             this.AccessBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AccessBttn.ForeColor = System.Drawing.Color.White;
             this.AccessBttn.Location = new System.Drawing.Point(0, 1344);
-            this.AccessBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccessBttn.Margin = new System.Windows.Forms.Padding(2);
             this.AccessBttn.Name = "AccessBttn";
             this.AccessBttn.Size = new System.Drawing.Size(158, 56);
             this.AccessBttn.TabIndex = 6;
@@ -614,7 +614,7 @@
             this.FoodPanel.Controls.Add(this.HousePetFoodBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FoodPanel.Location = new System.Drawing.Point(0, 790);
-            this.FoodPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FoodPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(158, 554);
             this.FoodPanel.TabIndex = 5;
@@ -626,7 +626,7 @@
             this.OtherFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.OtherFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OtherFoodBttn.Location = new System.Drawing.Point(0, 510);
-            this.OtherFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherFoodBttn.Name = "OtherFoodBttn";
             this.OtherFoodBttn.Size = new System.Drawing.Size(158, 41);
             this.OtherFoodBttn.TabIndex = 10;
@@ -640,7 +640,7 @@
             this.ReptileFoodPanel.Controls.Add(this.DryFoodBttn);
             this.ReptileFoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ReptileFoodPanel.Location = new System.Drawing.Point(0, 427);
-            this.ReptileFoodPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReptileFoodPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ReptileFoodPanel.Name = "ReptileFoodPanel";
             this.ReptileFoodPanel.Size = new System.Drawing.Size(158, 83);
             this.ReptileFoodPanel.TabIndex = 9;
@@ -652,7 +652,7 @@
             this.FrozenFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.FrozenFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FrozenFoodBttn.Location = new System.Drawing.Point(0, 54);
-            this.FrozenFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FrozenFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.FrozenFoodBttn.Name = "FrozenFoodBttn";
             this.FrozenFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.FrozenFoodBttn.TabIndex = 21;
@@ -666,7 +666,7 @@
             this.LiveFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LiveFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LiveFoodBttn.Location = new System.Drawing.Point(0, 27);
-            this.LiveFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LiveFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.LiveFoodBttn.Name = "LiveFoodBttn";
             this.LiveFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.LiveFoodBttn.TabIndex = 20;
@@ -680,7 +680,7 @@
             this.DryFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.DryFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DryFoodBttn.Location = new System.Drawing.Point(0, 0);
-            this.DryFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DryFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.DryFoodBttn.Name = "DryFoodBttn";
             this.DryFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.DryFoodBttn.TabIndex = 19;
@@ -694,7 +694,7 @@
             this.ReptileFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.ReptileFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReptileFoodBttn.Location = new System.Drawing.Point(0, 386);
-            this.ReptileFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReptileFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReptileFoodBttn.Name = "ReptileFoodBttn";
             this.ReptileFoodBttn.Size = new System.Drawing.Size(158, 41);
             this.ReptileFoodBttn.TabIndex = 8;
@@ -711,7 +711,7 @@
             this.FarmFoodPanel.Controls.Add(this.HorseFoodBttn);
             this.FarmFoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FarmFoodPanel.Location = new System.Drawing.Point(0, 247);
-            this.FarmFoodPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FarmFoodPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FarmFoodPanel.Name = "FarmFoodPanel";
             this.FarmFoodPanel.Size = new System.Drawing.Size(158, 139);
             this.FarmFoodPanel.TabIndex = 7;
@@ -723,7 +723,7 @@
             this.ChickenFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ChickenFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChickenFoodBttn.Location = new System.Drawing.Point(0, 108);
-            this.ChickenFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChickenFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ChickenFoodBttn.Name = "ChickenFoodBttn";
             this.ChickenFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.ChickenFoodBttn.TabIndex = 22;
@@ -737,7 +737,7 @@
             this.SheepFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SheepFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SheepFoodBttn.Location = new System.Drawing.Point(0, 81);
-            this.SheepFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SheepFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SheepFoodBttn.Name = "SheepFoodBttn";
             this.SheepFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.SheepFoodBttn.TabIndex = 21;
@@ -751,7 +751,7 @@
             this.PigFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.PigFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PigFoodBttn.Location = new System.Drawing.Point(0, 54);
-            this.PigFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PigFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.PigFoodBttn.Name = "PigFoodBttn";
             this.PigFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.PigFoodBttn.TabIndex = 20;
@@ -765,7 +765,7 @@
             this.CowFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.CowFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CowFoodBttn.Location = new System.Drawing.Point(0, 27);
-            this.CowFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CowFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.CowFoodBttn.Name = "CowFoodBttn";
             this.CowFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.CowFoodBttn.TabIndex = 19;
@@ -779,7 +779,7 @@
             this.HorseFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.HorseFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HorseFoodBttn.Location = new System.Drawing.Point(0, 0);
-            this.HorseFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorseFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HorseFoodBttn.Name = "HorseFoodBttn";
             this.HorseFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.HorseFoodBttn.TabIndex = 18;
@@ -793,7 +793,7 @@
             this.FarmFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.FarmFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FarmFoodBttn.Location = new System.Drawing.Point(0, 206);
-            this.FarmFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FarmFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.FarmFoodBttn.Name = "FarmFoodBttn";
             this.FarmFoodBttn.Size = new System.Drawing.Size(158, 41);
             this.FarmFoodBttn.TabIndex = 6;
@@ -811,7 +811,7 @@
             this.HousePetFoodPanel.Controls.Add(this.DogFoodBttn);
             this.HousePetFoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HousePetFoodPanel.Location = new System.Drawing.Point(0, 41);
-            this.HousePetFoodPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HousePetFoodPanel.Margin = new System.Windows.Forms.Padding(2);
             this.HousePetFoodPanel.Name = "HousePetFoodPanel";
             this.HousePetFoodPanel.Size = new System.Drawing.Size(158, 165);
             this.HousePetFoodPanel.TabIndex = 5;
@@ -823,7 +823,7 @@
             this.RabbitFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.RabbitFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RabbitFoodBttn.Location = new System.Drawing.Point(0, 135);
-            this.RabbitFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RabbitFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.RabbitFoodBttn.Name = "RabbitFoodBttn";
             this.RabbitFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.RabbitFoodBttn.TabIndex = 17;
@@ -837,7 +837,7 @@
             this.BirdFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BirdFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BirdFoodBttn.Location = new System.Drawing.Point(0, 108);
-            this.BirdFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BirdFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.BirdFoodBttn.Name = "BirdFoodBttn";
             this.BirdFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.BirdFoodBttn.TabIndex = 16;
@@ -851,7 +851,7 @@
             this.SmallAnimalFood.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SmallAnimalFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SmallAnimalFood.Location = new System.Drawing.Point(0, 81);
-            this.SmallAnimalFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SmallAnimalFood.Margin = new System.Windows.Forms.Padding(2);
             this.SmallAnimalFood.Name = "SmallAnimalFood";
             this.SmallAnimalFood.Size = new System.Drawing.Size(158, 27);
             this.SmallAnimalFood.TabIndex = 15;
@@ -865,7 +865,7 @@
             this.FishFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.FishFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FishFoodBttn.Location = new System.Drawing.Point(0, 54);
-            this.FishFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FishFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.FishFoodBttn.Name = "FishFoodBttn";
             this.FishFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.FishFoodBttn.TabIndex = 14;
@@ -879,7 +879,7 @@
             this.CatFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.CatFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CatFoodBttn.Location = new System.Drawing.Point(0, 27);
-            this.CatFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CatFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.CatFoodBttn.Name = "CatFoodBttn";
             this.CatFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.CatFoodBttn.TabIndex = 13;
@@ -893,7 +893,7 @@
             this.DogFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.DogFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DogFoodBttn.Location = new System.Drawing.Point(0, 0);
-            this.DogFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DogFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.DogFoodBttn.Name = "DogFoodBttn";
             this.DogFoodBttn.Size = new System.Drawing.Size(158, 27);
             this.DogFoodBttn.TabIndex = 12;
@@ -907,7 +907,7 @@
             this.HousePetFoodBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.HousePetFoodBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HousePetFoodBttn.Location = new System.Drawing.Point(0, 0);
-            this.HousePetFoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HousePetFoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HousePetFoodBttn.Name = "HousePetFoodBttn";
             this.HousePetFoodBttn.Size = new System.Drawing.Size(158, 41);
             this.HousePetFoodBttn.TabIndex = 4;
@@ -923,7 +923,7 @@
             this.FoodBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FoodBttn.ForeColor = System.Drawing.Color.White;
             this.FoodBttn.Location = new System.Drawing.Point(0, 734);
-            this.FoodBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FoodBttn.Margin = new System.Windows.Forms.Padding(2);
             this.FoodBttn.Name = "FoodBttn";
             this.FoodBttn.Size = new System.Drawing.Size(158, 56);
             this.FoodBttn.TabIndex = 4;
@@ -942,7 +942,7 @@
             this.AnimalPanel.Controls.Add(this.HousePetBttn);
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 182);
-            this.AnimalPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalPanel.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalPanel.Name = "AnimalPanel";
             this.AnimalPanel.Size = new System.Drawing.Size(158, 552);
             this.AnimalPanel.TabIndex = 3;
@@ -954,7 +954,7 @@
             this.OtherBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.OtherBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OtherBttn.Location = new System.Drawing.Point(0, 510);
-            this.OtherBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherBttn.Name = "OtherBttn";
             this.OtherBttn.Size = new System.Drawing.Size(158, 41);
             this.OtherBttn.TabIndex = 15;
@@ -968,7 +968,7 @@
             this.ReptilePanel.Controls.Add(this.SnakeBttn);
             this.ReptilePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ReptilePanel.Location = new System.Drawing.Point(0, 424);
-            this.ReptilePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReptilePanel.Margin = new System.Windows.Forms.Padding(2);
             this.ReptilePanel.Name = "ReptilePanel";
             this.ReptilePanel.Size = new System.Drawing.Size(158, 86);
             this.ReptilePanel.TabIndex = 14;
@@ -980,7 +980,7 @@
             this.TurtleBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.TurtleBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TurtleBttn.Location = new System.Drawing.Point(0, 54);
-            this.TurtleBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TurtleBttn.Margin = new System.Windows.Forms.Padding(2);
             this.TurtleBttn.Name = "TurtleBttn";
             this.TurtleBttn.Size = new System.Drawing.Size(158, 27);
             this.TurtleBttn.TabIndex = 24;
@@ -994,7 +994,7 @@
             this.LizardsBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LizardsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LizardsBttn.Location = new System.Drawing.Point(0, 27);
-            this.LizardsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LizardsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.LizardsBttn.Name = "LizardsBttn";
             this.LizardsBttn.Size = new System.Drawing.Size(158, 27);
             this.LizardsBttn.TabIndex = 23;
@@ -1008,7 +1008,7 @@
             this.SnakeBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SnakeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SnakeBttn.Location = new System.Drawing.Point(0, 0);
-            this.SnakeBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SnakeBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SnakeBttn.Name = "SnakeBttn";
             this.SnakeBttn.Size = new System.Drawing.Size(158, 27);
             this.SnakeBttn.TabIndex = 22;
@@ -1022,7 +1022,7 @@
             this.ReptileBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.ReptileBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReptileBttn.Location = new System.Drawing.Point(0, 383);
-            this.ReptileBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReptileBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReptileBttn.Name = "ReptileBttn";
             this.ReptileBttn.Size = new System.Drawing.Size(158, 41);
             this.ReptileBttn.TabIndex = 13;
@@ -1039,7 +1039,7 @@
             this.FarmPanel.Controls.Add(this.HorseBttn);
             this.FarmPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FarmPanel.Location = new System.Drawing.Point(0, 245);
-            this.FarmPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FarmPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FarmPanel.Name = "FarmPanel";
             this.FarmPanel.Size = new System.Drawing.Size(158, 138);
             this.FarmPanel.TabIndex = 12;
@@ -1051,7 +1051,7 @@
             this.ChickenBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ChickenBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChickenBttn.Location = new System.Drawing.Point(0, 108);
-            this.ChickenBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChickenBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ChickenBttn.Name = "ChickenBttn";
             this.ChickenBttn.Size = new System.Drawing.Size(158, 27);
             this.ChickenBttn.TabIndex = 21;
@@ -1065,7 +1065,7 @@
             this.SheepBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SheepBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SheepBttn.Location = new System.Drawing.Point(0, 81);
-            this.SheepBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SheepBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SheepBttn.Name = "SheepBttn";
             this.SheepBttn.Size = new System.Drawing.Size(158, 27);
             this.SheepBttn.TabIndex = 20;
@@ -1079,7 +1079,7 @@
             this.PigsBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.PigsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PigsBttn.Location = new System.Drawing.Point(0, 54);
-            this.PigsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PigsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.PigsBttn.Name = "PigsBttn";
             this.PigsBttn.Size = new System.Drawing.Size(158, 27);
             this.PigsBttn.TabIndex = 19;
@@ -1093,7 +1093,7 @@
             this.CowBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.CowBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CowBttn.Location = new System.Drawing.Point(0, 27);
-            this.CowBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CowBttn.Margin = new System.Windows.Forms.Padding(2);
             this.CowBttn.Name = "CowBttn";
             this.CowBttn.Size = new System.Drawing.Size(158, 27);
             this.CowBttn.TabIndex = 18;
@@ -1107,7 +1107,7 @@
             this.HorseBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.HorseBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HorseBttn.Location = new System.Drawing.Point(0, 0);
-            this.HorseBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorseBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HorseBttn.Name = "HorseBttn";
             this.HorseBttn.Size = new System.Drawing.Size(158, 27);
             this.HorseBttn.TabIndex = 17;
@@ -1121,7 +1121,7 @@
             this.FarmBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.FarmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FarmBttn.Location = new System.Drawing.Point(0, 204);
-            this.FarmBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FarmBttn.Margin = new System.Windows.Forms.Padding(2);
             this.FarmBttn.Name = "FarmBttn";
             this.FarmBttn.Size = new System.Drawing.Size(158, 41);
             this.FarmBttn.TabIndex = 11;
@@ -1139,7 +1139,7 @@
             this.HousePetPanel.Controls.Add(this.DogsBttn);
             this.HousePetPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HousePetPanel.Location = new System.Drawing.Point(0, 41);
-            this.HousePetPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HousePetPanel.Margin = new System.Windows.Forms.Padding(2);
             this.HousePetPanel.Name = "HousePetPanel";
             this.HousePetPanel.Size = new System.Drawing.Size(158, 163);
             this.HousePetPanel.TabIndex = 10;
@@ -1151,7 +1151,7 @@
             this.RabbitsBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.RabbitsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RabbitsBttn.Location = new System.Drawing.Point(0, 135);
-            this.RabbitsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RabbitsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.RabbitsBttn.Name = "RabbitsBttn";
             this.RabbitsBttn.Size = new System.Drawing.Size(158, 27);
             this.RabbitsBttn.TabIndex = 16;
@@ -1165,7 +1165,7 @@
             this.BirdsBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BirdsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BirdsBttn.Location = new System.Drawing.Point(0, 108);
-            this.BirdsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BirdsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.BirdsBttn.Name = "BirdsBttn";
             this.BirdsBttn.Size = new System.Drawing.Size(158, 27);
             this.BirdsBttn.TabIndex = 15;
@@ -1179,7 +1179,7 @@
             this.SmallAnimalBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.SmallAnimalBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SmallAnimalBttn.Location = new System.Drawing.Point(0, 81);
-            this.SmallAnimalBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SmallAnimalBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SmallAnimalBttn.Name = "SmallAnimalBttn";
             this.SmallAnimalBttn.Size = new System.Drawing.Size(158, 27);
             this.SmallAnimalBttn.TabIndex = 14;
@@ -1193,7 +1193,7 @@
             this.FishBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.FishBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FishBttn.Location = new System.Drawing.Point(0, 54);
-            this.FishBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FishBttn.Margin = new System.Windows.Forms.Padding(2);
             this.FishBttn.Name = "FishBttn";
             this.FishBttn.Size = new System.Drawing.Size(158, 27);
             this.FishBttn.TabIndex = 13;
@@ -1207,7 +1207,7 @@
             this.CatsBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.CatsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CatsBttn.Location = new System.Drawing.Point(0, 27);
-            this.CatsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CatsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.CatsBttn.Name = "CatsBttn";
             this.CatsBttn.Size = new System.Drawing.Size(158, 27);
             this.CatsBttn.TabIndex = 12;
@@ -1221,7 +1221,7 @@
             this.DogsBttn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.DogsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DogsBttn.Location = new System.Drawing.Point(0, 0);
-            this.DogsBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DogsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.DogsBttn.Name = "DogsBttn";
             this.DogsBttn.Size = new System.Drawing.Size(158, 27);
             this.DogsBttn.TabIndex = 11;
@@ -1235,7 +1235,7 @@
             this.HousePetBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.HousePetBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HousePetBttn.Location = new System.Drawing.Point(0, 0);
-            this.HousePetBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HousePetBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HousePetBttn.Name = "HousePetBttn";
             this.HousePetBttn.Size = new System.Drawing.Size(158, 41);
             this.HousePetBttn.TabIndex = 9;
@@ -1251,7 +1251,7 @@
             this.AnimalBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AnimalBttn.ForeColor = System.Drawing.Color.White;
             this.AnimalBttn.Location = new System.Drawing.Point(0, 126);
-            this.AnimalBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalBttn.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalBttn.Name = "AnimalBttn";
             this.AnimalBttn.Size = new System.Drawing.Size(158, 56);
             this.AnimalBttn.TabIndex = 2;
@@ -1264,7 +1264,7 @@
             this.LogoBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.LogoBox.Image = global::WindowsClient.Properties.Resources.LogoWhiteThumbnail;
             this.LogoBox.Location = new System.Drawing.Point(0, 0);
-            this.LogoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogoBox.Margin = new System.Windows.Forms.Padding(2);
             this.LogoBox.Name = "LogoBox";
             this.LogoBox.Size = new System.Drawing.Size(158, 126);
             this.LogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1351,6 +1351,7 @@
             this.CreateAdmin.Name = "CreateAdmin";
             this.CreateAdmin.Size = new System.Drawing.Size(248, 26);
             this.CreateAdmin.Text = "CreateAdmin";
+            this.CreateAdmin.Click += new System.EventHandler(this.CreateAdmin_Click);
             // 
             // AdminIndex
             // 
@@ -1360,7 +1361,7 @@
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.NavBar);
             this.MainMenuStrip = this.NavBar;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(804, 597);
             this.Name = "AdminIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

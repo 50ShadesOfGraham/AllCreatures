@@ -210,6 +210,7 @@ namespace WindowsClient
 
         private void DogBttn_Click(object sender, EventArgs e)
         {
+            //need to add side bar
             FlowLayout.Controls.Clear();
             foreach (User u in Model.UserList)
             {
