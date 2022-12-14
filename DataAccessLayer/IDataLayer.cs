@@ -23,17 +23,16 @@ namespace DataAccessLayer
         public void addNewLitterToDB(string litterid, int littersize, string animalid);
         //New Insert Functions
         public void insertDogAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo);
-        public void insertGenericAnimalAdvertisement();
+        public void insertGenericAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string detailone, string detailtwo, string detailthree);
         public void insertLitterAdvertisement();
         public void insertHorseAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose);
-        public void insertFarmAnimalAdvertisement();
+        public void insertFarmAnimalAdvertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose);
         public void insertFoodAdvertisement();
         public void insertAccessoriesAdvertisement();
-
         public bool banUserInDB(BusinessEntities.IUser user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
-       List<User> getAllUsers();
+        List<User> getAllUsers();
         List<Advertisement> getAllAdvertisements();
         void openConnection();
         
