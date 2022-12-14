@@ -21,6 +21,14 @@ namespace BusinessLayer
         bool addNewGenericAnimalAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string gaID, string animalID, string detailone, string detailtwo, string detailthree);
         bool addNewLitterAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string litterid, int littersize);
         bool addNewBundle(string bundleID, string advertid, double bundleprice, int bundlesize);
+        bool addNewDogAdvertisement(Dog dog);
+        bool addNewHorseAdvertisement(Horse horse);
+        bool addNewLitterAdvertisement(Litter litter);
+        bool addNewFarmAnimalAdvertisement(FarmAnimal farmanimal);
+        bool addNewGenericAnimalAdvertisement(GenericAnimal genericanimal);
+        bool addNewFoodAdvertisement(Food food);
+        bool addNewAccessoriesAdvertisement(Accessories access);
+
         BusinessEntities.User CurrentUser { get; set; }
         DataAccessLayer.IDataLayer DataLayer { get; set; }
         string getUserTypeForCurrentuser();
