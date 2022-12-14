@@ -130,7 +130,7 @@ namespace BusinessLayer
         {
             try
             {
-                IUser user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
+                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 UserList.Add(user);
                 DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 return true;
@@ -298,7 +298,7 @@ namespace BusinessLayer
             throw new NotImplementedException();
         }
 
-        public bool banUserInDB(IUser user)
+        public bool banUserInDB(User user)
         {
             DataLayer.banUserInDB(user);
             return true;
