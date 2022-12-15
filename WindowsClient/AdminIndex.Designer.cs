@@ -1304,7 +1304,7 @@
             this.editAccountToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.editAccountToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
-            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editAccountToolStripMenuItem.Text = "Edit Account";
             // 
             // signOutToolStripMenuItem
@@ -1312,7 +1312,7 @@
             this.signOutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.signOutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -1329,6 +1329,7 @@
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
             this.verificationToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.verificationToolStripMenuItem.Text = "Verification";
+            this.verificationToolStripMenuItem.Click += new System.EventHandler(this.verificationToolStripMenuItem_Click);
             // 
             // verifyAdvertisementsToolStripMenuItem
             // 
@@ -1361,7 +1362,7 @@
             this.DisplayUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.DisplayUsers.ForeColor = System.Drawing.Color.White;
             this.DisplayUsers.Name = "DisplayUsers";
-            this.DisplayUsers.Size = new System.Drawing.Size(199, 22);
+            this.DisplayUsers.Size = new System.Drawing.Size(248, 26);
             this.DisplayUsers.Text = "Display Users";
             this.DisplayUsers.Click += new System.EventHandler(this.DisplayUsers_Click);
             // 
