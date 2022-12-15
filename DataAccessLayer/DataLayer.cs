@@ -1,5 +1,9 @@
 ﻿using BusinessEntities;
+<<<<<<< HEAD
 using Microsoft.VisualBasic.Logging;
+=======
+using Microsoft.VisualBasic.ApplicationServices;
+>>>>>>> parent of 2ebb2c0 (Revert "User Verification")
 using System;
 using System.Collections;
 using System.Data;
@@ -9,7 +13,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using User = BusinessEntities.User;
 
 namespace DataAccessLayer
 {
@@ -880,6 +884,7 @@ namespace DataAccessLayer
             }
         }
 
+<<<<<<< HEAD
       
         public void verifyUser(string email)
         {
@@ -893,14 +898,27 @@ namespace DataAccessLayer
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "UserData");
                 foreach (DataRow dr in ds.Tables) // search whole table
+=======
+        public void verifyUser(User user)
+        {
+            try
+            {
+                ds = new DataSet();
+                string userEmail = user.Email;
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                if (findRow != null)
+>>>>>>> parent of 2ebb2c0 (Revert "User Verification")
                 {
-                    
-                    if (dr[0] == email) // if email matches
-                    {
-                        dr[4] = 1; //change the status
-                    }
+                    findRow[4] = 1;
+
                 }
-                
+                da.Update(ds, "UsersData"); //adjust Verified from 0 to 1 in DB
+                MessageBox.Show("Success");
             }
             catch (System.Exception excep)
             {
