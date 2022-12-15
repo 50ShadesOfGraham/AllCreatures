@@ -108,7 +108,7 @@
             this.listUsers.ItemHeight = 20;
             this.listUsers.Location = new System.Drawing.Point(40, 133);
             this.listUsers.Name = "listUsers";
-            this.listUsers.Size = new System.Drawing.Size(150, 104);
+            this.listUsers.Size = new System.Drawing.Size(156, 24);
             this.listUsers.TabIndex = 9;
             this.listUsers.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listUsers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listUsers_MouseDoubleClick);

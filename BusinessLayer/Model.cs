@@ -95,9 +95,9 @@ namespace BusinessLayer
             dataLayer = _DataLayer;
             userList = dataLayer.getAllUsers(); // setup Models userList so we can login
 
-            /*advertList = new List<Advertisement>();
+            advertList = new List<Advertisement>();
             dataLayer.getAllAdvertisements();
-            advertList = dataLayer.getAllAdvertisements();*/
+            advertList = dataLayer.getAllAdvertisements();
 
             /*UserAddressList = new ArrayList();
             dataLayer.GetUserAddress();
