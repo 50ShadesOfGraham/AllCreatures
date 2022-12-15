@@ -2,7 +2,12 @@ BusinessEntities/bin/
 BusinessLayer/bin/
 DataAccessLayer/bin/
 WindowsClient/bin/
+BusinessEntities/obj/
+BusinessLayer/obj/
+DataAccessLayer/obj/
+WindowsClient/obj/
 bin/
+obj/
 .vs/ACGS/FileContentIndex/read.lock
 .vs/ACGS/FileContentIndex/46695850-0525-46c5-adcf-f9c80a347220.vsidx
 *.json
