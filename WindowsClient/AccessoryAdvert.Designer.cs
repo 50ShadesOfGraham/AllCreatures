@@ -1,6 +1,6 @@
 ﻿namespace WindowsClient
 {
-    partial class DogAdvert
+    partial class AccessoryAdvert
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlDogAdvert = new System.Windows.Forms.Panel();
-            this.txtBreedTwo = new System.Windows.Forms.TextBox();
-            this.txtBreedOne = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtPurebreed = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pnlAccessoryAdvert = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtAge = new System.Windows.Forms.TextBox();
-            this.txtGender = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.AccessPanel = new System.Windows.Forms.Panel();
@@ -124,7 +113,7 @@
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlDogAdvert.SuspendLayout();
+            this.pnlAccessoryAdvert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SidePanel.SuspendLayout();
             this.AccessPanel.SuspendLayout();
@@ -144,68 +133,18 @@
             this.TopNavBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlDogAdvert
+            // pnlAccessoryAdvert
             // 
-            this.pnlDogAdvert.Controls.Add(this.txtBreedTwo);
-            this.pnlDogAdvert.Controls.Add(this.txtBreedOne);
-            this.pnlDogAdvert.Controls.Add(this.label4);
-            this.pnlDogAdvert.Controls.Add(this.txtPurebreed);
-            this.pnlDogAdvert.Controls.Add(this.label3);
-            this.pnlDogAdvert.Controls.Add(this.lblTitle);
-            this.pnlDogAdvert.Controls.Add(this.lblAge);
-            this.pnlDogAdvert.Controls.Add(this.lblDescription);
-            this.pnlDogAdvert.Controls.Add(this.label1);
-            this.pnlDogAdvert.Controls.Add(this.label2);
-            this.pnlDogAdvert.Controls.Add(this.lblPrice);
-            this.pnlDogAdvert.Controls.Add(this.txtDescription);
-            this.pnlDogAdvert.Controls.Add(this.txtPrice);
-            this.pnlDogAdvert.Controls.Add(this.txtAge);
-            this.pnlDogAdvert.Controls.Add(this.txtGender);
-            this.pnlDogAdvert.Controls.Add(this.txtName);
-            this.pnlDogAdvert.Controls.Add(this.pictureBox1);
-            this.pnlDogAdvert.Location = new System.Drawing.Point(164, 52);
-            this.pnlDogAdvert.Name = "pnlDogAdvert";
-            this.pnlDogAdvert.Size = new System.Drawing.Size(617, 386);
-            this.pnlDogAdvert.TabIndex = 10;
-            // 
-            // txtBreedTwo
-            // 
-            this.txtBreedTwo.Location = new System.Drawing.Point(389, 340);
-            this.txtBreedTwo.Name = "txtBreedTwo";
-            this.txtBreedTwo.Size = new System.Drawing.Size(188, 23);
-            this.txtBreedTwo.TabIndex = 35;
-            // 
-            // txtBreedOne
-            // 
-            this.txtBreedOne.Location = new System.Drawing.Point(389, 304);
-            this.txtBreedOne.Name = "txtBreedOne";
-            this.txtBreedOne.Size = new System.Drawing.Size(188, 23);
-            this.txtBreedOne.TabIndex = 34;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(464, 286);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Breed";
-            // 
-            // txtPurebreed
-            // 
-            this.txtPurebreed.Location = new System.Drawing.Point(477, 240);
-            this.txtPurebreed.Name = "txtPurebreed";
-            this.txtPurebreed.Size = new System.Drawing.Size(100, 23);
-            this.txtPurebreed.TabIndex = 32;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(389, 244);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 15);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Purebreed";
+            this.pnlAccessoryAdvert.Controls.Add(this.lblTitle);
+            this.pnlAccessoryAdvert.Controls.Add(this.lblDescription);
+            this.pnlAccessoryAdvert.Controls.Add(this.lblPrice);
+            this.pnlAccessoryAdvert.Controls.Add(this.txtDescription);
+            this.pnlAccessoryAdvert.Controls.Add(this.txtPrice);
+            this.pnlAccessoryAdvert.Controls.Add(this.pictureBox1);
+            this.pnlAccessoryAdvert.Location = new System.Drawing.Point(171, 52);
+            this.pnlAccessoryAdvert.Name = "pnlAccessoryAdvert";
+            this.pnlAccessoryAdvert.Size = new System.Drawing.Size(617, 386);
+            this.pnlAccessoryAdvert.TabIndex = 19;
             // 
             // lblTitle
             // 
@@ -216,46 +155,19 @@
             this.lblTitle.TabIndex = 30;
             this.lblTitle.Text = "Title";
             // 
-            // lblAge
-            // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(20, 200);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(28, 15);
-            this.lblAge.TabIndex = 28;
-            this.lblAge.Text = "Age";
-            // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(20, 283);
+            this.lblDescription.Location = new System.Drawing.Point(19, 157);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(67, 15);
             this.lblDescription.TabIndex = 27;
             this.lblDescription.Text = "Description";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 15);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Gender";
-            // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(20, 243);
+            this.lblPrice.Location = new System.Drawing.Point(19, 117);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(33, 15);
             this.lblPrice.TabIndex = 24;
@@ -263,7 +175,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(121, 283);
+            this.txtDescription.Location = new System.Drawing.Point(120, 157);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(236, 88);
@@ -271,31 +183,10 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(121, 240);
+            this.txtPrice.Location = new System.Drawing.Point(120, 114);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(236, 23);
             this.txtPrice.TabIndex = 22;
-            // 
-            // txtAge
-            // 
-            this.txtAge.Location = new System.Drawing.Point(121, 197);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(236, 23);
-            this.txtAge.TabIndex = 21;
-            // 
-            // txtGender
-            // 
-            this.txtGender.Location = new System.Drawing.Point(121, 146);
-            this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(236, 23);
-            this.txtGender.TabIndex = 20;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(121, 97);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(236, 23);
-            this.txtName.TabIndex = 19;
             // 
             // pictureBox1
             // 
@@ -322,7 +213,7 @@
             this.SidePanel.MinimumSize = new System.Drawing.Size(159, 540);
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(159, 540);
-            this.SidePanel.TabIndex = 9;
+            this.SidePanel.TabIndex = 18;
             // 
             // AccessPanel
             // 
@@ -1314,7 +1205,7 @@
             this.TopNavBar.Name = "TopNavBar";
             this.TopNavBar.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.TopNavBar.Size = new System.Drawing.Size(800, 35);
-            this.TopNavBar.TabIndex = 8;
+            this.TopNavBar.TabIndex = 17;
             this.TopNavBar.Text = "menuStrip1";
             // 
             // myAccountToolStripMenuItem
@@ -1374,19 +1265,19 @@
             this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             // 
-            // DogAdvert
+            // AccessoryAdvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlDogAdvert);
+            this.Controls.Add(this.pnlAccessoryAdvert);
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.TopNavBar);
-            this.Name = "DogAdvert";
-            this.Text = "DogAdvert";
-            this.Load += new System.EventHandler(this.DogAdvert_Load);
-            this.pnlDogAdvert.ResumeLayout(false);
-            this.pnlDogAdvert.PerformLayout();
+            this.Name = "AccessoryAdvert";
+            this.Text = "AccessoryAdvert";
+            this.Load += new System.EventHandler(this.AccessoryAdvert_Load);
+            this.pnlAccessoryAdvert.ResumeLayout(false);
+            this.pnlAccessoryAdvert.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SidePanel.ResumeLayout(false);
             this.AccessPanel.ResumeLayout(false);
@@ -1412,23 +1303,12 @@
 
         #endregion
 
-        private Panel pnlDogAdvert;
-        private TextBox txtBreedTwo;
-        private TextBox txtBreedOne;
-        private Label label4;
-        private TextBox txtPurebreed;
-        private Label label3;
+        private Panel pnlAccessoryAdvert;
         private Label lblTitle;
-        private Label lblAge;
         private Label lblDescription;
-        private Label label1;
-        private Label label2;
         private Label lblPrice;
         private TextBox txtDescription;
         private TextBox txtPrice;
-        private TextBox txtAge;
-        private TextBox txtGender;
-        private TextBox txtName;
         private PictureBox pictureBox1;
         private Panel SidePanel;
         private Panel AccessPanel;

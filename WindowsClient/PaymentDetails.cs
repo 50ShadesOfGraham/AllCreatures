@@ -10,15 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsClient
 {
-    public partial class HorseAdvert : Form
+    public partial class PaymentDetails : Form
     {
-        
-        public HorseAdvert()
+        public PaymentDetails()
         {
             InitializeComponent();
         }
 
-        private void HorseAdvert_Load(object sender, EventArgs e)
+        private void PaymentDetails_Load(object sender, EventArgs e)
         {
 
         }
