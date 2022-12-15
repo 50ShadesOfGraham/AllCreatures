@@ -7,6 +7,9 @@
     <Compile Update="BundleAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateAdvertisementStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="DisplaySingleUser.cs">
       <SubType>Form</SubType>
     </Compile>
