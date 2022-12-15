@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.buttonApprove = new System.Windows.Forms.Button();
             this.buttonReject = new System.Windows.Forms.Button();
+            this.buttonNextUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,12 +171,23 @@
             this.buttonReject.UseVisualStyleBackColor = false;
             this.buttonReject.Click += new System.EventHandler(this.button2_Click);
             // 
+            // buttonNextUser
+            // 
+            this.buttonNextUser.Location = new System.Drawing.Point(213, 219);
+            this.buttonNextUser.Name = "buttonNextUser";
+            this.buttonNextUser.Size = new System.Drawing.Size(96, 23);
+            this.buttonNextUser.TabIndex = 77;
+            this.buttonNextUser.Text = "Next User >>";
+            this.buttonNextUser.UseVisualStyleBackColor = true;
+            this.buttonNextUser.Click += new System.EventHandler(this.buttonNextUser_Click);
+            // 
             // verifyUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonNextUser);
             this.Controls.Add(this.buttonReject);
             this.Controls.Add(this.buttonApprove);
             this.Controls.Add(this.label4);
@@ -211,5 +223,6 @@
         private Label label4;
         private Button buttonApprove;
         private Button buttonReject;
+        private Button buttonNextUser;
     }
 }

@@ -23,6 +23,11 @@ namespace WindowsClient
     {
         private IModel Model;
         bool userAccepted = false;
+        private bool buttonApproveWasClicked = false;
+        private bool buttonNextWasClicked = false;
+        public int i = 0;
+        public User currentUser;
+        
 
         public verifyUser(IModel model)
         {
@@ -30,31 +35,52 @@ namespace WindowsClient
             this.Model = model;
             //ArrayList unverifiedUsers = new ArrayList();
             bool pendingVerify = true;
-            //while (pendingVerify == true)
-            //{
-                foreach (User user in Model.UserList)
+            bool unverifiedFound = false;
+            
+                for (int i = 0; i < Model.UserList.Count; i++)
             {
+                User user = Model.UserList[i];
+                    
                 if (user.Verified == false)
                 {
                         txtFirstName.Text = user.FirstName;
                         txtLastName.Text = user.LastName;
                         txtEmail.Text = user.Email;
-                    
+                        unverifiedFound = true;
+                        currentUser = user;
+                        break;
+                        //waitForDecision(i);
                 }
-            }
-            
-                if (userAccepted == true)
-                    {
-                //change the verified to 1
-                Model.verifyUser(txtEmail.Text);
-                        //pendingVerify = false;
-                        MessageBox.Show("User Verified");
-                    }
+                
+                
+                
+
             
 
-            //}
+            
+            
         }
 
+                
+
+            }
+            private void waitForDecision(int i)
+                {
+            
+            if (buttonApproveWasClicked == true)
+            {
+                MessageBox.Show("buttonApproveWasClicked");
+                Model.verifyUser(Model.UserList[i]);
+                    buttonApproveWasClicked = false;
+            }
+                if (buttonNextWasClicked == true)
+                {
+                    i++;
+
+                    buttonNextWasClicked = false;
+                }
+
+            }
         private void verifyUser_Load(object sender, EventArgs e)
         {
         }
@@ -127,10 +153,27 @@ namespace WindowsClient
 
         private void buttonApprove_Click(object sender, EventArgs e)
         {
-                    //userAccepted = true;
-                    Model.verifyUser(txtEmail.Text);
-                    //pendingVerify = false;
-                    //MessageBox.Show("User Verified");
+                    MessageBox.Show("Verifying...");
+            buttonApproveWasClicked = true;
+            ButtonApproveClicked();
+        }
+        private void ButtonApproveClicked()
+        {
+            Model.verifyUser(Model.UserList[i]);
+        }
+
+        private int nextUserClicked(int i)
+        {
+            i++;
+            return i;
+        }
+
+        private void buttonNextUser_Click(object sender, EventArgs e)
+        {
+            buttonNextWasClicked = true;
+            i++;
         }
     }
-}
+        }
+    
+
