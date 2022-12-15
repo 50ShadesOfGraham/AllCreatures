@@ -4,6 +4,12 @@
     <Compile Update="AdminIndex.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BundleAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CreateAdvertisementStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="DisplaySingleUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +17,30 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="DisplayUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DogAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FarmAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FoodAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GenericAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HorseAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IndividualAnimalAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LitterAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PaymentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PlaceAdvertisement.cs">

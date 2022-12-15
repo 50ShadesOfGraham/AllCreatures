@@ -1,29 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+    "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectUniqueName": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "projectName": "BusinessEntities",
-        "projectPath": "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "D:\\AllCreatures\\BusinessEntities\\obj\\",
+        "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Darragh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -50,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,30 +58,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "D:\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "D:\\AllCreatures\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Darragh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -93,11 +90,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
               },
-              "D:\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "D:\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -117,8 +114,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -130,30 +126,29 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "D:\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "D:\\AllCreatures\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Darragh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -163,8 +158,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "D:\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
               }
             }
           }
@@ -181,7 +176,11 @@
           "dependencies": {
             "Extended.Wpf.Toolkit": {
               "target": "Package",
-              "version": "[4.4.0, )"
+              "version": "[4.5.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -194,8 +193,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -207,7 +205,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
