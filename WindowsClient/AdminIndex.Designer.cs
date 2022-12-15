@@ -1329,10 +1329,9 @@
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
             this.verificationToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.verificationToolStripMenuItem.Text = "Verification";
-<<<<<<< HEAD
+
           //  this.verificationToolStripMenuItem.Click += new System.EventHandler(this.verificationToolStripMenuItem_Click);
-=======
->>>>>>> parent of 2ebb2c0 (Revert "User Verification")
+
             // 
             // verifyAdvertisementsToolStripMenuItem
             // 
