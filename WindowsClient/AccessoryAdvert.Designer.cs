@@ -178,6 +178,7 @@
             this.txtDescription.Location = new System.Drawing.Point(120, 157);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(236, 88);
             this.txtDescription.TabIndex = 23;
             // 
@@ -185,6 +186,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(120, 114);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(236, 23);
             this.txtPrice.TabIndex = 22;
             // 

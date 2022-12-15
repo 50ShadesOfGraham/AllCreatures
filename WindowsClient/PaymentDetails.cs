@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,20 @@ namespace WindowsClient
 {
     public partial class PaymentDetails : Form
     {
-        private PaymentDetails PaymentDetails;
-        public PaymentDetails()
+        //private PaymentDetails PaymentDetails;
+        private IModel Model;
+        public PaymentDetails(IModel _model)
         {
             InitializeComponent();
-            
+            this.Model = _model;
         }
 
         private void PaymentDetails_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
         {
 
         }

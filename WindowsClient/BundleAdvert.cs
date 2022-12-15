@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,23 @@ namespace WindowsClient
 {
     public partial class BundleAdvert : Form
     {
+        private BundleAdvert Advertisement;
+        private IModel Model;
+        public BundleAdvert(IModel _model)
+        {
+            InitializeComponent();  
+            Model = _model;
+        }
         public BundleAdvert()
         {
             InitializeComponent();
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            PaymentDetails paymentDetails = new PaymentDetails(Model);
+            Hide();
+            paymentDetails.Show();
         }
     }
 }
