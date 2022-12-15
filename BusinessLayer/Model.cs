@@ -391,11 +391,15 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
-        public void verifyUser(string email)
+        public void verifyUser(User user)
         {
             //try
             //{
+<<<<<<< HEAD
                 //DataLayer.verifyUser(email);
+=======
+                DataLayer.verifyUser(user);
+>>>>>>> parent of 2ebb2c0 (Revert "User Verification")
             //}
             /*catch (System.Exception excep)
             {

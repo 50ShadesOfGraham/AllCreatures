@@ -35,7 +35,7 @@ namespace BusinessLayer
         string getUserNameCurrentuser();
         bool login(string email, string password);
         bool EmailPresent(string email);
-        public void verifyUser(string email);
+        public void verifyUser(User user);
         void tearDown();
         List<User> UserList { get; }
         List<Advertisement> AdvertList { get; set; }
