@@ -12,9 +12,11 @@ namespace WindowsClient
 {
     public partial class PaymentDetails : Form
     {
+        private PaymentDetails PaymentDetails;
         public PaymentDetails()
         {
             InitializeComponent();
+            
         }
 
         private void PaymentDetails_Load(object sender, EventArgs e)

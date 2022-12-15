@@ -92,3 +92,4 @@ C:\Users\Eoghan\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Deb
 C:\Users\Eoghan\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\Eoghan\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
 C:\Users\Eoghan\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.PaymentDetails.resources
+C:\Users\Eoghan\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateAdvertisement.resources
