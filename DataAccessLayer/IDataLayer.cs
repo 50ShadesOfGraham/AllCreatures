@@ -30,6 +30,7 @@ namespace DataAccessLayer
         public void insertFoodAdvertisement();
         public void insertAccessoriesAdvertisement();
         public bool banUserInDB(BusinessEntities.User user);
+        public void verifyUser(User user);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();

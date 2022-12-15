@@ -298,11 +298,11 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
-        public void verifyUser(string email)
+        public void verifyUser(User user)
         {
             //try
             //{
-                DataLayer.verifyUser(email);
+                DataLayer.verifyUser(user);
             //}
             /*catch (System.Exception excep)
             {
