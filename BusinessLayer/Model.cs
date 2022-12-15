@@ -395,11 +395,11 @@ namespace BusinessLayer
         {
             //try
             //{
-<<<<<<< HEAD
+//<<<<<<< HEAD
                 //DataLayer.verifyUser(email);
-=======
+//=======
                 DataLayer.verifyUser(user);
->>>>>>> parent of 2ebb2c0 (Revert "User Verification")
+//parent of 2ebb2c0 (Revert "User Verification")
             //}
             /*catch (System.Exception excep)
             {
