@@ -42,13 +42,14 @@ namespace WindowsClient
         {
             foreach(Advertisement advertisement1 in model.AdvertList)
             {
-                
-                
-                    foreach (GenericAnimal advertisement in model.AdvertList)
-                    {
-                        listAdverts.Items.Add(advertisement1.AdvertID);
-                    }
-               
+
+                /* listAdverts.Items.Add(advertisement1.Price);*/
+
+                foreach (GenericAnimal advertisement in model.AdvertList)
+                {
+                    listAdverts.Items.Add(advertisement.AnimalName);
+                }
+
             }
             
         }
@@ -58,14 +59,26 @@ namespace WindowsClient
             txtEmail.Text = listAdverts.SelectedItem.ToString();
             foreach (Advertisement genericAnimal in model.AdvertList)
             {
-                foreach (GenericAnimal genericAdvert in model.AdvertList)
+                   // txtEmail.Text = genericAnimal.SellerEmail;
+                    txtTitle.Text = genericAnimal.Title;
+                    txtDescription.Text = genericAnimal.Description;
+
+                    MessageBox.Show(genericAnimal.Title,genericAnimal.Description);
+                    
+                    txtPrice.Text = Convert.ToString(genericAnimal.Price);
+               
+                    foreach (GenericAnimal genericAdvert in model.AdvertList)
                 {
-                    if (genericAnimal.SellerEmail == txtEmail.Text)
-                       /* txtDescription.Text = genericAdvert.Description;
+                    if (genericAdvert.AnimalName == txtEmail.Text)
+                    {
                         txtAge.Text = Convert.ToString(genericAdvert.Age);
+                        // txtGender.Text = genericAdvert.Gender;
+                        txtAnimalType.Text = genericAdvert.AnimalName;
                         txtDetail1.Text = genericAdvert.DetailOne;
-                        txtPrice.Text = Convert.ToString((double)genericAdvert.Price);*/
-                       txtGender.Text = genericAnimal.SellerEmail;
+                        txtDetail2.Text = genericAdvert.DetailTwo;
+                        txtDetail3.Text = genericAdvert.DetailThree;
+                        
+                    }
                 }
                 
                     
@@ -76,6 +89,11 @@ namespace WindowsClient
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

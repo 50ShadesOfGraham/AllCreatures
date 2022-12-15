@@ -344,8 +344,10 @@ C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\Windows
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\bin\Debug\net6.0-windows\BusinessEntities.pdb
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\bin\Debug\net6.0-windows\DataAccessLayer.pdb
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.csproj.AssemblyReference.cache
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.AccessoryAdvert.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.AdminIndex.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.BundleAdvert.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateAdvertisement.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateAdvertisementStart.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.DisplaySingleUser.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.DisplayUserControl1.resources
@@ -357,6 +359,7 @@ C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\Windows
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.HorseAdvert.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.IndividualAnimalAdvert.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.LitterAdvert.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.PaymentDetails.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.PlaceAdvertisement.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Product.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Properties.Resources.resources

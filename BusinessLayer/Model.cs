@@ -116,8 +116,8 @@ namespace BusinessLayer
             {
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
-                MessageBox.Show("DBUserEmail: " + DBUserEmail);
-                MessageBox.Show("DBUserPassword: " + DBUserPassword);
+              // MessageBox.Show("DBUserEmail: " + DBUserEmail);
+                //MessageBox.Show("DBUserPassword: " + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {

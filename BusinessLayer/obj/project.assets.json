@@ -2786,11 +2786,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2811,11 +2811,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-              "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+            "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+              "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
             },
-            "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }
