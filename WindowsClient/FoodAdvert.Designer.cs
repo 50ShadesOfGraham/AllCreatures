@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlFoodAdvert = new System.Windows.Forms.Panel();
+            this.txtDetails = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -113,8 +115,6 @@
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDetails = new System.Windows.Forms.TextBox();
             this.pnlFoodAdvert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SidePanel.SuspendLayout();
@@ -149,6 +149,23 @@
             this.pnlFoodAdvert.Name = "pnlFoodAdvert";
             this.pnlFoodAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlFoodAdvert.TabIndex = 22;
+            // 
+            // txtDetails
+            // 
+            this.txtDetails.Location = new System.Drawing.Point(120, 269);
+            this.txtDetails.Multiline = true;
+            this.txtDetails.Name = "txtDetails";
+            this.txtDetails.Size = new System.Drawing.Size(236, 74);
+            this.txtDetails.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 272);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Details";
             // 
             // lblTitle
             // 
@@ -1269,23 +1286,6 @@
             this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 272);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Details";
-            // 
-            // txtDetails
-            // 
-            this.txtDetails.Location = new System.Drawing.Point(120, 269);
-            this.txtDetails.Multiline = true;
-            this.txtDetails.Name = "txtDetails";
-            this.txtDetails.Size = new System.Drawing.Size(236, 74);
-            this.txtDetails.TabIndex = 32;
-            // 
             // FoodAdvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1296,6 +1296,7 @@
             this.Controls.Add(this.TopNavBar);
             this.Name = "FoodAdvert";
             this.Text = "FoodAdvert";
+            this.Load += new System.EventHandler(this.FoodAdvert_Load);
             this.pnlFoodAdvert.ResumeLayout(false);
             this.pnlFoodAdvert.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

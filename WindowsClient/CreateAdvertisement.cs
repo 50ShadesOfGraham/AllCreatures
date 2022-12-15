@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsClient
 {
-    public partial class HorseAdvert : Form
+    public partial class CreateAdvertisement : Form
     {
-        
-        public HorseAdvert()
+        public CreateAdvertisement()
         {
             InitializeComponent();
-        }
-
-        private void HorseAdvert_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlGenericAdvert = new System.Windows.Forms.Panel();
+            this.txtExtra3 = new System.Windows.Forms.TextBox();
+            this.txtExtra2 = new System.Windows.Forms.TextBox();
+            this.txtExtra1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -119,10 +123,6 @@
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pnlGenericAdvert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SidePanel.SuspendLayout();
@@ -145,9 +145,9 @@
             // 
             // pnlGenericAdvert
             // 
-            this.pnlGenericAdvert.Controls.Add(this.textBox3);
-            this.pnlGenericAdvert.Controls.Add(this.textBox2);
-            this.pnlGenericAdvert.Controls.Add(this.textBox1);
+            this.pnlGenericAdvert.Controls.Add(this.txtExtra3);
+            this.pnlGenericAdvert.Controls.Add(this.txtExtra2);
+            this.pnlGenericAdvert.Controls.Add(this.txtExtra1);
             this.pnlGenericAdvert.Controls.Add(this.label3);
             this.pnlGenericAdvert.Controls.Add(this.lblTitle);
             this.pnlGenericAdvert.Controls.Add(this.lblAge);
@@ -165,6 +165,39 @@
             this.pnlGenericAdvert.Name = "pnlGenericAdvert";
             this.pnlGenericAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlGenericAdvert.TabIndex = 7;
+            // 
+            // txtExtra3
+            // 
+            this.txtExtra3.Location = new System.Drawing.Point(413, 332);
+            this.txtExtra3.Multiline = true;
+            this.txtExtra3.Name = "txtExtra3";
+            this.txtExtra3.Size = new System.Drawing.Size(183, 36);
+            this.txtExtra3.TabIndex = 34;
+            // 
+            // txtExtra2
+            // 
+            this.txtExtra2.Location = new System.Drawing.Point(413, 290);
+            this.txtExtra2.Multiline = true;
+            this.txtExtra2.Name = "txtExtra2";
+            this.txtExtra2.Size = new System.Drawing.Size(183, 36);
+            this.txtExtra2.TabIndex = 33;
+            // 
+            // txtExtra1
+            // 
+            this.txtExtra1.Location = new System.Drawing.Point(413, 244);
+            this.txtExtra1.Multiline = true;
+            this.txtExtra1.Name = "txtExtra1";
+            this.txtExtra1.Size = new System.Drawing.Size(183, 36);
+            this.txtExtra1.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(470, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "ExtraDetails";
             // 
             // lblTitle
             // 
@@ -1333,39 +1366,6 @@
             this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(470, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "ExtraDetails";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(413, 244);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 36);
-            this.textBox1.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(413, 290);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 36);
-            this.textBox2.TabIndex = 33;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(413, 332);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 36);
-            this.textBox3.TabIndex = 34;
-            // 
             // GenericAdvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1495,9 +1495,9 @@
         private ToolStripMenuItem myAdvertisementsToolStripMenuItem;
         private ToolStripMenuItem signOutToolStripMenuItem;
         private ToolStripMenuItem placeAdvertisementToolStripMenuItem;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtExtra3;
+        private TextBox txtExtra2;
+        private TextBox txtExtra1;
         private Label label3;
     }
 }

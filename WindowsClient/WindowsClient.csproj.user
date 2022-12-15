@@ -40,6 +40,9 @@
     <Compile Update="LitterAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PaymentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PlaceAdvertisement.cs">
       <SubType>Form</SubType>
     </Compile>

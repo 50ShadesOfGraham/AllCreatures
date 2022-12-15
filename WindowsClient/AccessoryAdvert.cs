@@ -8,29 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsClient
 {
-    public partial class DogAdvert : Form
+    public partial class AccessoryAdvert : Form
     {
-        private Dog Advertisement;
-        public DogAdvert(Dog advert)
+        private Accessories Advertisement;
+        public AccessoryAdvert(Accessories advert)
         {
             InitializeComponent();
             this.Advertisement = advert;
         }
 
-        private void DogAdvert_Load(object sender, EventArgs e)
+        private void AccessoryAdvert_Load(object sender, EventArgs e)
         {
             lblTitle.Text = Advertisement.Title;
-            txtName.Text = Advertisement.AnimalName;
-            txtGender.Text = Advertisement.Gender;
-            txtAge.Text = Advertisement.Age.ToString();
             txtPrice.Text = Advertisement.Price.ToString();
             txtDescription.Text = Advertisement.Description;
-            txtPurebreed.Text = Advertisement.Purebreed.ToString();
-            txtBreedOne.Text = Advertisement.BreedOne;
-            txtBreedTwo.Text = Advertisement.BreedTwo;
+            
         }
     }
 }
