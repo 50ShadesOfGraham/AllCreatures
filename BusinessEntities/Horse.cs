@@ -41,23 +41,7 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Horse(string size, bool broken, string breed, string purpose)
-        {
-            this.size = Size;
-            this.broken = Broken;
-            this.breed = Breed;
-            this.purpose = Purpose;
-        }
-        public Horse(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose)
-        : base(advertid, selleremail,title,description, price,verified,status,imageone,imagetwo,imagethree, animalname, animaltype,age, gender)
-        {
-            this.size = Size;
-            this.broken = Broken;
-            this.breed = Breed;
-            this.purpose = Purpose;
-        }
-        public Horse(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string size, bool broken, string breed, string purpose)
-        : base(advertid, selleremail, title, description, price, verified, status, animalname, animaltype, age, gender)
+        public Horse(string size,bool broken,string breed,string purpose)
         {
             this.size = Size;
             this.broken = Broken;

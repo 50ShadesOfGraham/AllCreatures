@@ -10,35 +10,27 @@ namespace BusinessLayer
 {
     public interface IModel
     {
-        bool addNewUser(string email, string firstname, string lastname, string password,bool verified, string userType,string address1, string address2, string address3,
-            string county, string eircode);
+        bool addNewUser(string email, string firstname, string lastname, string password, string userType);
         //bool addNewAdvert(string advertid, string title, string description, string price, string quantity, string selleremail);
-        bool addNewAccessoriesAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string accessid, string animaltype,string accesscategory, string accesssubcat);
-        bool addNewFoodAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string foodID, string animaltype,string details);
-        bool addNewDogAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string dogid,bool purebreed, string breedone, string breedtwo);
-        bool addNewHorseAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string horseid,string purpose, string size, bool broken, string breed);
-        bool addNewFarmAnimalAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string farmid,string purpose);
-        bool addNewGenericAnimalAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string gaID, string animalID, string detailone, string detailtwo, string detailthree);
-        bool addNewLitterAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string litterid, int littersize);
-        bool addNewBundle(string bundleID, string advertid, double bundleprice, int bundlesize);
-        bool addNewDogAdvertisement(Dog dog);
-        bool addNewHorseAdvertisement(Horse horse);
-        bool addNewLitterAdvertisement(Litter litter);
-        bool addNewFarmAnimalAdvertisement(FarmAnimal farmanimal);
-        bool addNewGenericAnimalAdvertisement(GenericAnimal genericanimal);
-        bool addNewFoodAdvertisement(Food food);
-        bool addNewAccessoriesAdvertisement(Accessories access);
-
+        bool addNewAccessoriesAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title,byte[] newimage, int accessid, string animaltype,string accesscategory, string accesssubcat);
+        bool addNewFoodAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int foodID, string animaltype,string details);
+        bool addNewDogAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int animalid, string animalname, string animaltype, int age, bool islitter, int dogid,bool purebreed, string breedone, string breedtwo);
+        bool addNewHorseAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int animalid, string animalname, string animaltype, int age, bool islitter, int horseid,string purpose, string size, bool broken, string breed);
+        bool addNewFarmAnimalAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int animalid, string animalname, string animaltype, int age, bool islitter, int farmid,string purpose);
+        bool addNewGenericAnimalAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int animalid, string animalname, string animaltype, int age, bool islitter, int gaID, int animalID, string detailone, string detailtwo, string detailthree);
+        bool addNewLitterAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int animalid, string animalname, string animaltype, int age, bool islitter, int litterid, int littersize);
+        bool addNewBundle(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
+        bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
+        bool addNewImageToDB(byte[] image);
         BusinessEntities.User CurrentUser { get; set; }
         DataAccessLayer.IDataLayer DataLayer { get; set; }
         string getUserTypeForCurrentuser();
         string getUserNameCurrentuser();
         bool login(string email, string password);
         bool EmailPresent(string email);
-        public void verifyUser(User user);
         void tearDown();
         List<User> UserList { get; }
-        List<Advertisement> AdvertList { get; set; }
-        bool banUserInDB(BusinessEntities.User user);
+        List<Advertisement> AdvertList { get; }
+        List<Notifications> NotificationList { get; }
     }
 }

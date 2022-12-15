@@ -24,16 +24,16 @@ namespace WindowsClient
 
         private void RegisterBttn_Click(object sender, EventArgs e)
         {
-            if (Model.EmailPresent(Emailtxt.Text.Trim()))
+            if(Model.EmailPresent(Emailtxt.Text.Trim()))
             {
                 MessageBox.Show("Email Already Exists\nPlease Try Again");
                 Emailtxt.Text = "";
             }
             else
             {
-                if (Passwordtxt.Text.Trim() == PasswordTwotxt.Text.Trim()) 
+                if(Passwordtxt.Text.Trim() == PasswordTwotxt.Text.Trim())
                 {
-                    if(Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,false,"User",txtAdd1.Text,txtAdd2.Text,txtAdd3.Text,txtCounty.Text,txtEircode.Text))
+                    if(Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,"User"))
                     {
                         MessageBox.Show("Registration Successful");
                         Model.login(Emailtxt.Text.Trim(), Passwordtxt.Text.Trim());

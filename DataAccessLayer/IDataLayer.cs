@@ -9,32 +9,26 @@ namespace DataAccessLayer
 {
     public interface IDataLayer
     {
-        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1, string address2, string address3,
-            string county, string eircode);
-        public void addNewBundleToDB(string bundleID, string advertid, double bundleprice,int bundlesize);
-        public void addNewAdvertToDB(string advertid, string selleremail, double price, string description, bool verified,string status, string adverttype, string title);
-        public void addNewAccessoriesToDB(string accessid, string animaltype, string advertid, string accesscategory, string accesssubcat);
-        public void addNewFoodToDB(string foodID,string animaltype, string advertid,string details);
-        public void addNewAnimalToDB(string animalid,string advertid,string animalname,string animaltype,int age,bool islitter);
-        public void addNewDogToDB(string dogid, string animalid, bool purebreed, string breedone, string breedtwo);
-        public void addNewHorseToDB(string horseid, string animalid, string purpose, string size, bool broken, string breed);
-        public void addNewFarmAnimalToDB(string farmid, string animalid, string purpose);
-        public void addNewGenericAnimalToDB(string gaID, string animalID, string detailone, string detailtwo, string detailthree);
-        public void addNewLitterToDB(string litterid, int littersize, string animalid);
-        //New Insert Functions
-        public void insertDogAdvertisement(Dog dog);
-        public void insertGenericAnimalAdvertisement(GenericAnimal generic_animal);
-        public void insertLitterAdvertisement(Litter litter);
-        public void insertHorseAdvertisement(Horse horse);
-        public void insertFarmAnimalAdvertisement(FarmAnimal farmanimal);
-        public void insertFoodAdvertisement(Food food);
-        public void insertAccessoriesAdvertisement(Accessories access);
-        public bool banUserInDB(BusinessEntities.User user);
-        public void verifyUser(User user);
+        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype);
+        //Advertisements being added to the DB 
+        public void addNewBundleToDB(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
+        public void addNewAdvertToDB(int advertid, string selleremail, double price, string description, bool verified,string status, string adverttype, string title, byte[] newimage);
+        public void addNewAccessoriesToDB(int accessid, string animaltype, int advertid, string accesscategory, string accesssubcat);
+        public void addNewFoodToDB(int foodID,string animaltype, int advertid,string details);
+        public void addNewAnimalToDB(int animalid,int advertid,string animalname,string animaltype,int age,bool islitter);
+        public void addNewDogToDB(int dogid, int animalid, bool purebreed, string breedone, string breedtwo);
+        public void addNewHorseToDB(int horseid, int animalid, string purpose, string size, bool broken, string breed);
+        public void addNewFarmAnimalToDB(int farmid, int animalid, string purpose);
+        public void addNewGenericAnimalToDB(int gaID, int animalID, string detailone, string detailtwo, string detailthree);
+        public void addNewLitterToDB(int litterid, int littersize, int animalid);
+        public void InsertImageToDB(byte[] image);
+        public void addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
+        public void InsertDogAdvertisement(Dog dog);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();
         List<Advertisement> getAllAdvertisements();
+        List<Notifications> getAllNotifications();
         void openConnection();
         
     }

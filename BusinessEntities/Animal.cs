@@ -17,7 +17,7 @@ namespace BusinessEntities
         #region Instance Properties
         public string AnimalName
         {
-            get { return animalname; }
+            get { return animalname; }  
             set { animalname = value; }
         }
         public string AnimalType
@@ -41,14 +41,14 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Animal(string animalname, string animaltype, int age, string gender)
+        public Animal(string animalname,string animaltype,int age, string gender)
         {
             this.animalname = animalname;
             this.animaltype = animaltype;
             this.age = age;
             this.gender = gender;
         }
-        public Animal(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender) : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree)
+        public Animal(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string animalname, string animaltype, int age, string gender) : base(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree)
         {
             this.animalname = animalname;
             this.animaltype = animaltype;
@@ -62,14 +62,13 @@ namespace BusinessEntities
             this.age = age;
             this.gender = gender;
         }
-        public Animal(Animal animal, Advertisement advert) : base(advert)
+        public Animal(Animal animal,Advertisement advert) : base(advert)
         {
-            this.animaltype = animal.AnimalType;
-            this.animalname = animal.AnimalName;
+            this.animaltype=animal.AnimalType;
+            this.animalname=animal.AnimalName;
             this.age = animal.Age;
             this.gender = animal.Gender;
         }
         #endregion
-
     }
 }

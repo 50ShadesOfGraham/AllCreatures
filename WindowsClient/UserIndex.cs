@@ -28,6 +28,14 @@ namespace WindowsClient
 
         private void UserIndex_Load(object sender, EventArgs e)
         {
+            int counter = 0;
+            foreach(Dog dog in Model.AdvertList)
+            {
+                counter++;
+            }
+
+            MessageBox.Show("Number of Ads: " + counter);
+
             //Animal Panel
             AnimalPanel.Visible = false;
             HousePetPanel.Visible = false;
@@ -51,7 +59,7 @@ namespace WindowsClient
             {
                 Product product = new Product();
                 product.SetLabel(u.FirstName);
-                FlowLayout.Controls.Add(product);
+                //FlowLayout.Controls.Add(product);
                 product = new Product();
             }
         }
@@ -204,41 +212,40 @@ namespace WindowsClient
 
         private void placeAdvertisementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PlaceAdvertisement placeAd = new PlaceAdvertisement(Model);
-            placeAd.Show();
+            //PlaceAdvertisement placeAd = new PlaceAdvertisement(Model);
+            //placeAd.Show();
+            CreateAdvertStart createAd = new CreateAdvertStart(Model);
+            createAd.Show();
         }
 
         private void DogBttn_Click(object sender, EventArgs e)
         {
             FlowLayout.Controls.Clear();
-            foreach (User u in Model.UserList)
+            foreach (Dog u in Model.AdvertList)
             {
-                ViewAds ads = new ViewAds();
-                ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+                MessageBox.Show("Advertisement:" + u.AdvertID);
+                ViewAds ads = new ViewAds(Model,u);
+                ads.SetLabel(u.AnimalName, u.SellerEmail, u.Title, u.BreedOne, u.Age.ToString()); //function
                 FlowLayout.Controls.Add(ads);
             }
         }
 
         private void CatBttn_Click(object sender, EventArgs e)
         {
-            FlowLayout.Controls.Clear();  //testing git changes
+            //FlowLayout.Controls.Clear();  //testing git changes
 
             foreach (User u in Model.UserList)
             {
-                ViewAds ads = new ViewAds();
-                ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
-                FlowLayout.Controls.Add(ads);
+                //ViewAds ads = new ViewAds();
+                //ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+                //FlowLayout.Controls.Add(ads);
             }
-        }
-
-        private void FlowLayout_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            UserNotifications userNotifications = new UserNotifications(Model);
+            userNotifications.Show();
         }
     }
 }

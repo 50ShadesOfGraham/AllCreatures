@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLayer;
 
 namespace WindowsClient
 {
@@ -154,24 +153,6 @@ namespace WindowsClient
             {
                 MessageBox.Show("Cancel signout");
             }
-        }
-
-        private void verifyAdvertisementsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           verifiyAdvertisements verifiyAdvertisements = new verifiyAdvertisements(Model);
-            verifiyAdvertisements.Show();
-        }
-
-        private void DisplayUsers_Click(object sender, EventArgs e)
-        {
-            DisplayUsers displayUsers = new DisplayUsers(Model);
-            displayUsers.Show();
-        }
-
-        private void verifyUsersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            verifyUser verifyUser = new verifyUser(Model);
-            verifyUser.Show();
         }
     }
 }

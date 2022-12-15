@@ -31,17 +31,8 @@ namespace WindowsClient
             string userEmail = Model.CurrentUser.Email.Trim();
             
             
-         /*   if (Model.addNewAdvert(advertID, TitleTextBx.Text, DescriptionTextBx.Text, PriceTextBx.Text,QuantityTextBx.Text , userEmail))
-            { 
-                MessageBox.Show("Advertisement Successful");
-                Hide();
-            }
-            else
-            {
-                MessageBox.Show("Error");
-            }*/
+            
         }
-
 
         private void CancelBttn_Click(object sender, EventArgs e)
         {
