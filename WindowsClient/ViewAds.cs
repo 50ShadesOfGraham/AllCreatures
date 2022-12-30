@@ -26,19 +26,23 @@ namespace WindowsClient
         }
 
 
-        public void SetLabel(String FirstName, String LastName,String Email, String Password, String UserType)
+        public void SetLabel(String FirstName, String LastName,String Email)
         {
            label1.Text = FirstName;
            label2.Text = LastName;
            label3.Text = Email;
-           label4.Text = Password;
-           label5.Text = UserType;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ViewAdForm viewAd = new ViewAdForm(Model,Dog);
             viewAd.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

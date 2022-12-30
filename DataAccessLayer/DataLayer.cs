@@ -106,6 +106,7 @@ namespace DataAccessLayer
         public List<Advertisement> getAllAdvertisements()
         {
             List<Advertisement> AdvertList = new List<Advertisement>();
+            
             try
             {
                 ds = new DataSet();
@@ -118,26 +119,26 @@ namespace DataAccessLayer
                 {
                     DataRow dRow = ds.Tables["AdvertData"].Rows[i];
                     Dog newDog = AdvertisementCreator.GetDog(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
-                                                             dRow.ItemArray.GetValue(1).ToString(),
-                                                             dRow.ItemArray.GetValue(2).ToString(),
-                                                             dRow.ItemArray.GetValue(3).ToString(),
-                                                             Convert.ToDouble(dRow.ItemArray.GetValue(4).ToString()),
-                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(5).ToString()),
-                                                             dRow.ItemArray.GetValue(6).ToString(),
-                                                            //dRow.ItemArray.GetValue(7),
-                                                            //dRow.ItemArray.GetValue(8),
-                                                            //dRow.ItemArray.GetValue(9),
-                                                            //dRow.ItemArray.GetValue(10).ToString(),
-                                                            dRow.ItemArray.GetValue(6).ToString(),
-                                                            "dog",
-                                                             Convert.ToInt32(dRow.ItemArray.GetValue(11)),
-                                                             dRow.ItemArray.GetValue(12).ToString(),
-                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
-                                                             dRow.ItemArray.GetValue(14).ToString(),
-                                                             dRow.ItemArray.GetValue(15).ToString());
+                                                                             dRow.ItemArray.GetValue(1).ToString(),
+                                                                             dRow.ItemArray.GetValue(2).ToString(),
+                                                                             dRow.ItemArray.GetValue(3).ToString(),
+                                                                             Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                             dRow.ItemArray.GetValue(6).ToString(),
+                                                                             (byte[])dRow.ItemArray.GetValue(7),
+                                                                             (byte[])dRow.ItemArray.GetValue(8),
+                                                                             (byte[])dRow.ItemArray.GetValue(9),
+                                                                             dRow.ItemArray.GetValue(10).ToString(),
+                                                                             "Dog",
+                                                                             Convert.ToInt32(dRow.ItemArray.GetValue(11)),
+                                                                             dRow.ItemArray.GetValue(12).ToString(),
+                                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
+                                                                             dRow.ItemArray.GetValue(14).ToString(),
+                                                                             dRow.ItemArray.GetValue(15).ToString()
+                                                                             );                                                   
                                                              
                     AdvertList.Add(newDog);
-                    MessageBox.Show("Dog: " + newDog.AnimalName + " successfully added");
+                    MessageBox.Show("Dog: " + newDog.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -516,7 +517,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewBundleToDB(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice)
+        public void InsertThreeBundle(Bundle bundle)
         {
             try
             {
@@ -527,11 +528,37 @@ namespace DataAccessLayer
                 da.Fill(ds, "BundleData");
                 maxAdverts = ds.Tables["BundleData"].Rows.Count;
                 DataRow dRow = ds.Tables["BundleData"].NewRow();
-                dRow[0] = bundleID;
-                dRow[1] = ItemOne_advertid;
-                dRow[2] = ItemTwo_advertid;
-                dRow[3] = ItemThree_advertid;
-                dRow[4] = bundleprice;
+                dRow[0] = bundle.BundleID;
+                dRow[1] = bundle.ItemNoOne;
+                dRow[2] = bundle.ItemNoTwo;
+                dRow[3] = bundle.ItemNoThree;
+                dRow[4] = bundle.Price;
+                ds.Tables["BundleData"].Rows.Add(dRow);
+                da.Update(ds, "BundleData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void InsertTwoBundle(Bundle bundle) 
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Bundle";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "BundleData");
+                maxAdverts = ds.Tables["BundleData"].Rows.Count;
+                DataRow dRow = ds.Tables["BundleData"].NewRow();
+                dRow[0] = bundle.BundleID;
+                dRow[1] = bundle.ItemNoOne;
+                dRow[2] = bundle.ItemNoTwo;
+                dRow[4] = bundle.Price;
                 ds.Tables["BundleData"].Rows.Add(dRow);
                 da.Update(ds, "BundleData");
             }

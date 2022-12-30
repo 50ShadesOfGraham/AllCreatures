@@ -30,7 +30,7 @@ namespace WindowsClient
 
         private void ViewAdForm_Load(object sender, EventArgs e)
         {
-            label1.Text = advert.Age.ToString();
+            label1.Text = advert.AnimalName;
         }
     }
 }

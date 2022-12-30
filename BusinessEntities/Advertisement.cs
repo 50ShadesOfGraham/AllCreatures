@@ -93,13 +93,13 @@ namespace BusinessEntities
         }
         public Advertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status)
         {
-            this.advertid = AdvertID;
-            this.title = Title;
-            this.description = Description;
-            this.price = Price;
-            this.selleremail = SellerEmail;
-            this.verified = Verified;
-            this.status = Status;
+            this.advertid = advertid;
+            this.title = title;
+            this.description = description;
+            this.price = price;
+            this.selleremail = selleremail;
+            this.verified = verified;
+            this.status = status;
         }
         public Advertisement(Advertisement advert)
         {

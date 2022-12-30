@@ -225,7 +225,7 @@ namespace WindowsClient
             {
                 MessageBox.Show("Advertisement:" + u.AdvertID);
                 ViewAds ads = new ViewAds(Model,u);
-                ads.SetLabel(u.AnimalName, u.SellerEmail, u.Title, u.BreedOne, u.Age.ToString()); //function
+                ads.SetLabel(u.Title, u.SellerEmail, u.Price.ToString()); //function
                 FlowLayout.Controls.Add(ads);
             }
         }

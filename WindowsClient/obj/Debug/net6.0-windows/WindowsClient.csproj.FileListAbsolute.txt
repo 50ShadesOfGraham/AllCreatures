@@ -278,3 +278,4 @@ C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\Windo
 C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
 C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources

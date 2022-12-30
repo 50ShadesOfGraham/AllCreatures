@@ -11,7 +11,6 @@ namespace DataAccessLayer
     {
         void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype);
         //Advertisements being added to the DB 
-        public void addNewBundleToDB(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
         public void addNewAdvertToDB(int advertid, string selleremail, double price, string description, bool verified,string status, string adverttype, string title, byte[] newimage);
         public void addNewAccessoriesToDB(int accessid, string animaltype, int advertid, string accesscategory, string accesssubcat);
         public void addNewFoodToDB(int foodID,string animaltype, int advertid,string details);
@@ -24,6 +23,10 @@ namespace DataAccessLayer
         public void InsertImageToDB(byte[] image);
         public void addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
         public void InsertDogAdvertisement(Dog dog);
+        public void InsertHorseAdvertisement(Horse dog);
+        public void InsertAdvertisement(Dog dog);
+        public void InsertThreeBundle(Bundle bundle);
+        public void InsertTwoBundle(Bundle bundle);
         void closeConnection();
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();

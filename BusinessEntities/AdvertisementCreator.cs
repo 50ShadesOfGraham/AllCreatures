@@ -43,7 +43,7 @@ namespace BusinessEntities
         }
 
        
-        public static Dog GetDog(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string animalname, string animaltype, int age, string gender,bool purebreed, string breedone, string breedtwo)
+        public static Dog GetDog(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo,byte[] imagethree,string animalname, string animaltype, int age, string gender,bool purebreed, string breedone, string breedtwo)
         {
             if (dog != null)
             {
@@ -51,7 +51,7 @@ namespace BusinessEntities
             }
             else
             {
-                return new Dog(advertid,selleremail,title,description,price,verified,status,animalname,animaltype,age,gender, purebreed,breedone,breedtwo);
+                return new Dog(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animalname,animaltype,age,gender, purebreed,breedone,breedtwo);
             }
         }
     }
