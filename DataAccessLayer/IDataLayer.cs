@@ -24,6 +24,7 @@ namespace DataAccessLayer
         public void addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
         public void InsertDogAdvertisement(Dog dog);
         public void InsertHorseAdvertisement(Horse dog);
+        public void InsertGenericAnimalAdvertisement();
         public void InsertAdvertisement(Dog dog);
         public void InsertThreeBundle(Bundle bundle);
         public void InsertTwoBundle(Bundle bundle);
