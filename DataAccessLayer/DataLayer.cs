@@ -254,24 +254,259 @@ namespace DataAccessLayer
                 //eddie
             }
         }
-        public void InsertImageToDB(byte[] image)
+        public void InsertHorseAdvertisement(Horse horse)
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("Insert into Advertisement(ImageOne) values(@image)"))
-                {
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@image", image);
-                    cmd.ExecuteNonQuery();
-                }
-            }catch(System.Exception excep)
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From HorseAdvertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "HorseAdData");
+                maxAdverts = ds.Tables["HorseAdData"].Rows.Count;
+                DataRow dRow = ds.Tables["HorseAdData"].NewRow();
+                dRow[0] = horse.AdvertID;
+                dRow[1] = horse.SellerEmail;
+                dRow[2] = horse.Title;
+                dRow[3] = horse.Description;
+                dRow[4] = horse.Price;
+                dRow[5] = horse.Verified;
+                dRow[6] = horse.Status;
+                dRow[7] = horse.ImageOne;
+                dRow[8] = horse.ImageTwo;
+                dRow[9] = horse.ImageThree;
+                dRow[10] = horse.AnimalName;
+                dRow[11] = horse.Age;
+                dRow[12] = horse.Gender;
+                dRow[13] = horse.Size;
+                dRow[13] = horse.Broken;
+                dRow[14] = horse.Breed;
+                dRow[15] = horse.Purpose;
+                ds.Tables["HorseAdData"].Rows.Add(dRow);
+                da.Update(ds, "HorseAdData");
+            }
+            catch (System.Exception excep)
             {
                 if (con.State.ToString() == "Open")
                     con.Close();
                 Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
             }
         }
-
+        public void InsertGenericAnimalAdvertisement(GenericAnimal genericAnimal)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From GenericAnimalAdvertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "GAAdData");
+                maxAdverts = ds.Tables["GAAdData"].Rows.Count;
+                DataRow dRow = ds.Tables["GAAdData"].NewRow();
+                dRow[0] = genericAnimal.AdvertID;
+                dRow[1] = genericAnimal.SellerEmail;
+                dRow[2] = genericAnimal.Title;
+                dRow[3] = genericAnimal.Description;
+                dRow[4] = genericAnimal.Price;
+                dRow[5] = genericAnimal.Verified;
+                dRow[6] = genericAnimal.Status;
+                dRow[7] = genericAnimal.ImageOne;
+                dRow[8] = genericAnimal.ImageTwo;
+                dRow[9] = genericAnimal.ImageThree;
+                dRow[10] = genericAnimal.AnimalType;
+                dRow[11] = genericAnimal.AnimalName;
+                dRow[12] = genericAnimal.Age;
+                dRow[13] = genericAnimal.Gender;
+                dRow[13] = genericAnimal.DetailOne;
+                dRow[14] = genericAnimal.DetailTwo;
+                dRow[15] = genericAnimal.DetailThree;
+                ds.Tables["GAAdData"].Rows.Add(dRow);
+                da.Update(ds, "GAAdData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
+        public void InsertFarmAnimalAdvertisement(FarmAnimal farmAnimal)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From FarmAnimalAdvertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "FAAdData");
+                maxAdverts = ds.Tables["FAAdData"].Rows.Count;
+                DataRow dRow = ds.Tables["FAAdData"].NewRow();
+                dRow[0] = farmAnimal.AdvertID;
+                dRow[1] = farmAnimal.SellerEmail;
+                dRow[2] = farmAnimal.Title;
+                dRow[3] = farmAnimal.Description;
+                dRow[4] = farmAnimal.Price;
+                dRow[5] = farmAnimal.Verified;
+                dRow[6] = farmAnimal.Status;
+                dRow[7] = farmAnimal.ImageOne;
+                dRow[8] = farmAnimal.ImageTwo;
+                dRow[9] = farmAnimal.ImageThree;
+                dRow[10] = farmAnimal.AnimalType;
+                dRow[11] = farmAnimal.AnimalName;
+                dRow[12] = farmAnimal.Age;
+                dRow[13] = farmAnimal.Gender;
+                dRow[13] = farmAnimal.Purpose;
+                ds.Tables["FAAdData"].Rows.Add(dRow);
+                da.Update(ds, "FAAdData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
+        public void InsertLitterAdvertisement(Litter litter)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From LitterAdvertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "LitterData");
+                maxAdverts = ds.Tables["LitterData"].Rows.Count;
+                DataRow dRow = ds.Tables["LitterData"].NewRow();
+                dRow[0] = litter.AdvertID;
+                dRow[1] = litter.SellerEmail;
+                dRow[2] = litter.Title;
+                dRow[3] = litter.Description;
+                dRow[4] = litter.Price;
+                dRow[5] = litter.Verified;
+                dRow[6] = litter.Status;
+                dRow[7] = litter.ImageOne;
+                dRow[8] = litter.ImageTwo;
+                dRow[9] = litter.ImageThree;
+                dRow[10] = litter.AnimalType;
+                dRow[11] = litter.LitterSize;
+                dRow[12] = litter.Age;
+                dRow[13] = litter.Purebreed;
+                ds.Tables["LitterData"].Rows.Add(dRow);
+                da.Update(ds, "LitterData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
+        public void InsertAccessoriesAdvertisement(Accessories accessory)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From AccessoriesAdvertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AccessData");
+                maxAdverts = ds.Tables["AccessData"].Rows.Count;
+                DataRow dRow = ds.Tables["AccessData"].NewRow();
+                dRow[0] = accessory.AdvertID;
+                dRow[1] = accessory.SellerEmail;
+                dRow[2] = accessory.Title;
+                dRow[3] = accessory.Description;
+                dRow[4] = accessory.Price;
+                dRow[5] = accessory.Verified;
+                dRow[6] = accessory.Status;
+                dRow[7] = accessory.ImageOne;
+                dRow[8] = accessory.ImageTwo;
+                dRow[9] = accessory.ImageThree;
+                dRow[10] = accessory.AccessCategory;
+                dRow[11] = accessory.SubAccessCategory;
+                ds.Tables["AccessData"].Rows.Add(dRow);
+                da.Update(ds, "AccessData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
+        public void InsertFoodAdvertisement(Food food)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From FoodAdvertisement";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "FoodData");
+                maxAdverts = ds.Tables["FoodData"].Rows.Count;
+                DataRow dRow = ds.Tables["FoodData"].NewRow();
+                dRow[0] = food.AdvertID;
+                dRow[1] = food.SellerEmail;
+                dRow[2] = food.Title;
+                dRow[3] = food.Description;
+                dRow[4] = food.Price;
+                dRow[5] = food.Verified;
+                dRow[6] = food.Status;
+                dRow[7] = food.ImageOne;
+                dRow[8] = food.ImageTwo;
+                dRow[9] = food.ImageThree;
+                dRow[10] = food.AnimalType;
+                dRow[11] = food.Details;
+                ds.Tables["FoodData"].Rows.Add(dRow);
+                da.Update(ds, "FoodData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
+        public void InsertBundle(Bundle bundle) 
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Bundle";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "BundleData");
+                maxAdverts = ds.Tables["BundleData"].Rows.Count;
+                DataRow dRow = ds.Tables["BundleData"].NewRow();
+                dRow[0] = bundle.BundleID;
+                dRow[1] = bundle.ItemNoOne;
+                dRow[2] = bundle.ItemNoTwo;
+                dRow[3] = bundle.ItemNoThree;
+                dRow[4] = bundle.Price;
+                ds.Tables["BundleData"].Rows.Add(dRow);
+                da.Update(ds, "BundleData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
         public void addNewAdvertToDB(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage)
         {
             try
@@ -412,34 +647,7 @@ namespace DataAccessLayer
             }
         }
 
-        public void addNewHorseToDB(int horseid, int animalid, string purpose, string size, bool broken, string breed)
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                string sql = "SELECT * From Horse";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "HorseData");
-                maxAdverts = ds.Tables["HorseData"].Rows.Count;
-                DataRow dRow = ds.Tables["HorseData"].NewRow();
-                dRow[0] = horseid;
-                dRow[1] = animalid;
-                dRow[2] = purpose;
-                dRow[3] = size;
-                dRow[4] = broken;
-                dRow[5] = breed;
-                ds.Tables["HorseData"].Rows.Add(dRow);
-                da.Update(ds, "HorseData");
-            }
-            catch (System.Exception excep)
-            {
-                if (con.State.ToString() == "Open")
-                    con.Close();
-                Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-            }
-        }
+        
         public void addNewFarmAnimalToDB(int farmid, int animalid, string purpose)
         {
             try
