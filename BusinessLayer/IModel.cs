@@ -30,6 +30,7 @@ namespace BusinessLayer
         bool addNewLitter(Litter litter);
         bool addNewAccessories(Accessories accessory);
         bool addNewFood(Food food);
+        bool addNewBundle(Bundle bundle);
 
         
         BusinessEntities.User CurrentUser { get; set; }

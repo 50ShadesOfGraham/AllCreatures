@@ -356,6 +356,18 @@ namespace BusinessLayer
                 return false;
             }
         }
+        public Boolean addNewBundle(Bundle bundle)
+        {
+            try
+            {
+                DataLayer.InsertBundle(bundle);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
         public Boolean addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail)
         {
             try
