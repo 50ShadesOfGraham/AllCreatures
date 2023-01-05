@@ -21,12 +21,13 @@ namespace BusinessLayer
         bool addNewLitterAdvert(int advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, byte[] newimage, int animalid, string animalname, string animaltype, int age, bool islitter, int litterid, int littersize);
         bool addNewBundle(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
         bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
-        bool addNewImageToDB(byte[] image);
+       // bool addNewImageToDB(byte[] image);
 
         bool addNewDog(Dog dog);
         bool addNewHorse(Horse horse);
         bool addNewGenericAnimal(GenericAnimal gnericAnimal);
         bool addNewFarmAnimal(FarmAnimal farmAnimal);
+        bool addNewLitter(Litter litter);
         bool addNewAccessories(Accessories accessory);
         bool addNewFood(Food food);
 

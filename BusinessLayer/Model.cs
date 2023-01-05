@@ -131,7 +131,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.InsertImageToDB(image);
+               // DataLayer.InsertImageToDB(image);
                 return true;
 
             }catch(System.Exception excep)
@@ -159,8 +159,8 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
-                DataLayer.addNewAccessoriesToDB(accessid, animaltype, advertid, accesscategory, accesssubcat);
+                //DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
+                //DataLayer.addNewAccessoriesToDB(accessid, animaltype, advertid, accesscategory, accesssubcat);
                 return true;
             }
             catch (System.Exception excep)
@@ -173,9 +173,9 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title,newimage);
+               // DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title,newimage);
                 //DataLayer.InsertImageToDB(newimage);
-                DataLayer.addNewFoodToDB(foodID, animaltype, advertid, details);
+                //DataLayer.addNewFoodToDB(foodID, animaltype, advertid, details);
                 return true;
             }
             catch (System.Exception excep)
@@ -188,9 +188,9 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
-                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
-                DataLayer.addNewDogToDB(dogid, animalid, purebreed, breedone, breedtwo);
+                //DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
+               // DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+               // DataLayer.addNewDogToDB(dogid, animalid, purebreed, breedone, breedtwo);
                 return true;
             }
             catch (System.Exception excep)
@@ -203,9 +203,9 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
-                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
-                DataLayer.addNewHorseToDB(horseid,animalid,purpose,size,broken, breed);
+                //DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
+               // DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+               // DataLayer.addNewHorseToDB(horseid,animalid,purpose,size,broken, breed);
                 return true;
             }
             catch (System.Exception excep)
@@ -218,9 +218,9 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
-                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
-                DataLayer.addNewFarmAnimalToDB(farmid, animalid, purpose);
+               // DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
+               // DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+               // DataLayer.addNewFarmAnimalToDB(farmid, animalid, purpose);
                 return true;
             }
             catch (System.Exception excep)
@@ -233,9 +233,9 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
-                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
-                DataLayer.addNewGenericAnimalToDB(gaID,animalID,detailone, detailtwo, detailthree);
+                //DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
+                //DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+                //DataLayer.addNewGenericAnimalToDB(gaID,animalID,detailone, detailtwo, detailthree);
                 return true;
             }
             catch (System.Exception excep)
@@ -248,9 +248,9 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
-                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
-                DataLayer.addNewLitterToDB(litterid, littersize, animalid);
+                //DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
+               // DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+               // DataLayer.addNewLitterToDB(litterid, littersize, animalid);
                 return true;
             }
             catch (System.Exception excep)
@@ -263,7 +263,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid,ItemTwo_advertid, ItemThree_advertid,bundleprice);
+                //DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid,ItemTwo_advertid, ItemThree_advertid,bundleprice);
                 return true;
             }
             catch (System.Exception excep)
@@ -272,6 +272,90 @@ namespace BusinessLayer
             }
         }
 
+        public Boolean addNewDog(Dog dog)
+        {
+            try
+            {
+                DataLayer.InsertDogAdvertisement(dog);
+                return true;
+            }
+            catch(System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewHorse(Horse horse)
+        {
+            try
+            {
+                DataLayer.InsertHorseAdvertisement(horse);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewGenericAnimal(GenericAnimal genericAnimal)
+        {
+            try
+            {
+                DataLayer.InsertGenericAnimalAdvertisement(genericAnimal);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFarmAnimal(FarmAnimal farmAnimal)
+        {
+            try
+            {
+                DataLayer.InsertFarmAnimalAdvertisement(farmAnimal);
+                return true;
+            }
+            catch(System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewLitter(Litter litter)
+        {
+            try
+            {
+                DataLayer.InsertLitterAdvertisement(litter);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFood(Food food)
+        {
+            try
+            {
+                DataLayer.InsertFoodAdvertisement(food);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewAccessories(Accessories accessory)
+        {
+            try
+            {
+                DataLayer.InsertAccessoriesAdvertisement(accessory);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
         public Boolean addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail)
         {
             try
