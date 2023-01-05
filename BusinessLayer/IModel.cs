@@ -22,6 +22,15 @@ namespace BusinessLayer
         bool addNewBundle(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
         bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
         bool addNewImageToDB(byte[] image);
+
+        bool addNewDog(Dog dog);
+        bool addNewHorse(Horse horse);
+        bool addNewGenericAnimal(GenericAnimal gnericAnimal);
+        bool addNewFarmAnimal(FarmAnimal farmAnimal);
+        bool addNewAccessories(Accessories accessory);
+        bool addNewFood(Food food);
+
+        
         BusinessEntities.User CurrentUser { get; set; }
         DataAccessLayer.IDataLayer DataLayer { get; set; }
         string getUserTypeForCurrentuser();
