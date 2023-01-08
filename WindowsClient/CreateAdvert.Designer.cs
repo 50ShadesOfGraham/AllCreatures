@@ -111,6 +111,10 @@
             this.SubmitPanel = new System.Windows.Forms.Panel();
             this.CancelBttn = new System.Windows.Forms.Button();
             this.SubmitBttn = new System.Windows.Forms.Button();
+            this.UploadImageTwoBttne = new System.Windows.Forms.Button();
+            this.ImageTwoPictureBox = new System.Windows.Forms.PictureBox();
+            this.UploadImageThreeBttne = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.WAISPanel.SuspendLayout();
             this.AnimalCategoryPanel.SuspendLayout();
@@ -135,6 +139,8 @@
             this.ImageUploadPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageOnePictureBox)).BeginInit();
             this.SubmitPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageTwoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LogoBox
@@ -993,8 +999,12 @@
             // 
             // ImageUploadPanel
             // 
-            this.ImageUploadPanel.Controls.Add(this.ImageOnePictureBox);
+            this.ImageUploadPanel.Controls.Add(this.pictureBox1);
+            this.ImageUploadPanel.Controls.Add(this.UploadImageThreeBttne);
             this.ImageUploadPanel.Controls.Add(this.UploadImageOnBttne);
+            this.ImageUploadPanel.Controls.Add(this.UploadImageTwoBttne);
+            this.ImageUploadPanel.Controls.Add(this.ImageOnePictureBox);
+            this.ImageUploadPanel.Controls.Add(this.ImageTwoPictureBox);
             this.ImageUploadPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ImageUploadPanel.Location = new System.Drawing.Point(0, 2069);
             this.ImageUploadPanel.Name = "ImageUploadPanel";
@@ -1003,9 +1013,9 @@
             // 
             // ImageOnePictureBox
             // 
-            this.ImageOnePictureBox.Location = new System.Drawing.Point(47, 37);
+            this.ImageOnePictureBox.Location = new System.Drawing.Point(540, 39);
             this.ImageOnePictureBox.Name = "ImageOnePictureBox";
-            this.ImageOnePictureBox.Size = new System.Drawing.Size(475, 307);
+            this.ImageOnePictureBox.Size = new System.Drawing.Size(131, 56);
             this.ImageOnePictureBox.TabIndex = 1;
             this.ImageOnePictureBox.TabStop = false;
             // 
@@ -1015,7 +1025,7 @@
             this.UploadImageOnBttne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadImageOnBttne.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadImageOnBttne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.UploadImageOnBttne.Location = new System.Drawing.Point(558, 37);
+            this.UploadImageOnBttne.Location = new System.Drawing.Point(530, 30);
             this.UploadImageOnBttne.Name = "UploadImageOnBttne";
             this.UploadImageOnBttne.Size = new System.Drawing.Size(161, 74);
             this.UploadImageOnBttne.TabIndex = 0;
@@ -1061,13 +1071,55 @@
             this.SubmitBttn.UseVisualStyleBackColor = false;
             this.SubmitBttn.Click += new System.EventHandler(this.SubmitBttn_Click);
             // 
+            // UploadImageTwoBttne
+            // 
+            this.UploadImageTwoBttne.BackColor = System.Drawing.Color.White;
+            this.UploadImageTwoBttne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadImageTwoBttne.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UploadImageTwoBttne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.UploadImageTwoBttne.Location = new System.Drawing.Point(466, 178);
+            this.UploadImageTwoBttne.Name = "UploadImageTwoBttne";
+            this.UploadImageTwoBttne.Size = new System.Drawing.Size(161, 74);
+            this.UploadImageTwoBttne.TabIndex = 2;
+            this.UploadImageTwoBttne.Text = "Upload";
+            this.UploadImageTwoBttne.UseVisualStyleBackColor = false;
+            // 
+            // ImageTwoPictureBox
+            // 
+            this.ImageTwoPictureBox.Location = new System.Drawing.Point(540, 178);
+            this.ImageTwoPictureBox.Name = "ImageTwoPictureBox";
+            this.ImageTwoPictureBox.Size = new System.Drawing.Size(131, 56);
+            this.ImageTwoPictureBox.TabIndex = 3;
+            this.ImageTwoPictureBox.TabStop = false;
+            // 
+            // UploadImageThreeBttne
+            // 
+            this.UploadImageThreeBttne.BackColor = System.Drawing.Color.White;
+            this.UploadImageThreeBttne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UploadImageThreeBttne.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UploadImageThreeBttne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.UploadImageThreeBttne.Location = new System.Drawing.Point(530, 324);
+            this.UploadImageThreeBttne.Name = "UploadImageThreeBttne";
+            this.UploadImageThreeBttne.Size = new System.Drawing.Size(161, 74);
+            this.UploadImageThreeBttne.TabIndex = 4;
+            this.UploadImageThreeBttne.Text = "Upload";
+            this.UploadImageThreeBttne.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(399, 277);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 56);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // CreateAdvert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(800, 1050);
+            this.ClientSize = new System.Drawing.Size(800, 582);
             this.Controls.Add(this.SubmitPanel);
             this.Controls.Add(this.ImageUploadPanel);
             this.Controls.Add(this.LitterPanel);
@@ -1126,6 +1178,8 @@
             this.ImageUploadPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImageOnePictureBox)).EndInit();
             this.SubmitPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageTwoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1215,5 +1269,9 @@
         private Panel AnimalTypeSubPanel;
         private Button UploadImageOnBttne;
         private PictureBox ImageOnePictureBox;
+        private PictureBox pictureBox1;
+        private Button UploadImageThreeBttne;
+        private Button UploadImageTwoBttne;
+        private PictureBox ImageTwoPictureBox;
     }
 }

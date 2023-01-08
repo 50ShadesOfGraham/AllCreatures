@@ -8,7 +8,9 @@ using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-
+using System.IO;
+using System.Drawing;
+using System.Text;
 
 namespace DataAccessLayer
 {
@@ -56,6 +58,14 @@ namespace DataAccessLayer
             {
                 MessageBox.Show(excep.Message);
                 Environment.Exit(0); //Force the application to close
+            }
+        }
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
             }
         }
         public void closeConnection()
@@ -125,11 +135,10 @@ namespace DataAccessLayer
                                                                              Convert.ToDouble(dRow.ItemArray.GetValue(4)),
                                                                              Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
                                                                              dRow.ItemArray.GetValue(6).ToString(),
-                                                                             (byte[])dRow.ItemArray.GetValue(7),
-                                                                             (byte[])dRow.ItemArray.GetValue(8),
-                                                                             (byte[])dRow.ItemArray.GetValue(9),
+                                                                             System.Text.UTF8Encoding.ASCII.GetBytes(dRow.ItemArray.GetValue(6).ToString()),
+                                                                             System.Text.UTF8Encoding.ASCII.GetBytes(dRow.ItemArray.GetValue(7).ToString()),
+                                                                             System.Text.UTF8Encoding.ASCII.GetBytes(dRow.ItemArray.GetValue(8).ToString()),
                                                                              dRow.ItemArray.GetValue(10).ToString(),
-                                                                             "Dog",
                                                                              Convert.ToInt32(dRow.ItemArray.GetValue(11)),
                                                                              dRow.ItemArray.GetValue(12).ToString(),
                                                                              Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
