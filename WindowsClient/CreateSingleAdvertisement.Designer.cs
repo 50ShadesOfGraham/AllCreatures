@@ -36,7 +36,7 @@
             this.PriceTxt = new System.Windows.Forms.TextBox();
             this.DescriptionTxt = new System.Windows.Forms.TextBox();
             this.GeneralAdvertPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.AdvertComboBox = new System.Windows.Forms.ComboBox();
             this.TypeAdvertLbl = new System.Windows.Forms.Label();
             this.ImageUploadGroupBox = new System.Windows.Forms.GroupBox();
             this.UploadThreeBttn = new System.Windows.Forms.Button();
@@ -70,7 +70,9 @@
             this.AnimalCatComboBox = new System.Windows.Forms.ComboBox();
             this.AnimalCatPanel = new System.Windows.Forms.Panel();
             this.FoodPanel = new System.Windows.Forms.Panel();
+            this.FoodConfirmBttn = new System.Windows.Forms.Button();
             this.AccessPanel = new System.Windows.Forms.Panel();
+            this.AccessConfirmBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.GeneralAdvertPanel.SuspendLayout();
             this.ImageUploadGroupBox.SuspendLayout();
@@ -89,6 +91,8 @@
             this.TypeAnimalPanel.SuspendLayout();
             this.SpecifyPanel.SuspendLayout();
             this.AnimalTypePanel.SuspendLayout();
+            this.FoodPanel.SuspendLayout();
+            this.AccessPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LogoPictureBox
@@ -158,7 +162,7 @@
             // 
             // GeneralAdvertPanel
             // 
-            this.GeneralAdvertPanel.Controls.Add(this.comboBox1);
+            this.GeneralAdvertPanel.Controls.Add(this.AdvertComboBox);
             this.GeneralAdvertPanel.Controls.Add(this.TypeAdvertLbl);
             this.GeneralAdvertPanel.Controls.Add(this.DescriptionTxt);
             this.GeneralAdvertPanel.Controls.Add(this.LogoPictureBox);
@@ -169,17 +173,18 @@
             this.GeneralAdvertPanel.Size = new System.Drawing.Size(774, 1208);
             this.GeneralAdvertPanel.TabIndex = 7;
             // 
-            // comboBox1
+            // AdvertComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.AdvertComboBox.FormattingEnabled = true;
+            this.AdvertComboBox.Items.AddRange(new object[] {
             "    Animal",
             "    Food",
             "    Accessories"});
-            this.comboBox1.Location = new System.Drawing.Point(286, 171);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(247, 33);
-            this.comboBox1.TabIndex = 8;
+            this.AdvertComboBox.Location = new System.Drawing.Point(286, 171);
+            this.AdvertComboBox.Name = "AdvertComboBox";
+            this.AdvertComboBox.Size = new System.Drawing.Size(247, 33);
+            this.AdvertComboBox.TabIndex = 8;
+            this.AdvertComboBox.SelectedIndexChanged += new System.EventHandler(this.AdvertComboBox_SelectedIndexChanged);
             // 
             // TypeAdvertLbl
             // 
@@ -225,6 +230,7 @@
             this.UploadThreeBttn.TabIndex = 6;
             this.UploadThreeBttn.Text = "Upload";
             this.UploadThreeBttn.UseVisualStyleBackColor = false;
+            this.UploadThreeBttn.Click += new System.EventHandler(this.UploadThreeBttn_Click);
             // 
             // ImageThreePictureBx
             // 
@@ -236,9 +242,11 @@
             // 
             // ConfirmationThreePictureBx
             // 
+            this.ConfirmationThreePictureBx.Image = global::WindowsClient.Properties.Resources.ImageUploadWait;
             this.ConfirmationThreePictureBx.Location = new System.Drawing.Point(175, 487);
             this.ConfirmationThreePictureBx.Name = "ConfirmationThreePictureBx";
             this.ConfirmationThreePictureBx.Size = new System.Drawing.Size(267, 151);
+            this.ConfirmationThreePictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ConfirmationThreePictureBx.TabIndex = 5;
             this.ConfirmationThreePictureBx.TabStop = false;
             // 
@@ -255,6 +263,7 @@
             this.UploadOneBttn.TabIndex = 1;
             this.UploadOneBttn.Text = "Upload";
             this.UploadOneBttn.UseVisualStyleBackColor = false;
+            this.UploadOneBttn.Click += new System.EventHandler(this.UploadOneBttn_Click);
             // 
             // UploadTwoBttn
             // 
@@ -269,6 +278,7 @@
             this.UploadTwoBttn.TabIndex = 2;
             this.UploadTwoBttn.Text = "Upload";
             this.UploadTwoBttn.UseVisualStyleBackColor = false;
+            this.UploadTwoBttn.Click += new System.EventHandler(this.UploadTwoBttn_Click);
             // 
             // ImageTwoPictureBx
             // 
@@ -288,17 +298,21 @@
             // 
             // ConfirmationTwoPictureBx
             // 
+            this.ConfirmationTwoPictureBx.Image = global::WindowsClient.Properties.Resources.ImageUploadWait;
             this.ConfirmationTwoPictureBx.Location = new System.Drawing.Point(175, 273);
             this.ConfirmationTwoPictureBx.Name = "ConfirmationTwoPictureBx";
             this.ConfirmationTwoPictureBx.Size = new System.Drawing.Size(267, 151);
+            this.ConfirmationTwoPictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ConfirmationTwoPictureBx.TabIndex = 3;
             this.ConfirmationTwoPictureBx.TabStop = false;
             // 
             // ConfirmationOnePictureBx
             // 
+            this.ConfirmationOnePictureBx.Image = global::WindowsClient.Properties.Resources.ImageUploadWait;
             this.ConfirmationOnePictureBx.Location = new System.Drawing.Point(175, 62);
             this.ConfirmationOnePictureBx.Name = "ConfirmationOnePictureBx";
             this.ConfirmationOnePictureBx.Size = new System.Drawing.Size(267, 151);
+            this.ConfirmationOnePictureBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ConfirmationOnePictureBx.TabIndex = 3;
             this.ConfirmationOnePictureBx.TabStop = false;
             // 
@@ -495,6 +509,7 @@
             this.AnimalTypeComboBox.Name = "AnimalTypeComboBox";
             this.AnimalTypeComboBox.Size = new System.Drawing.Size(310, 33);
             this.AnimalTypeComboBox.TabIndex = 7;
+            this.AnimalTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.AnimalTypeComboBox_SelectedIndexChanged);
             // 
             // AnimalCatLbl
             // 
@@ -514,6 +529,7 @@
             " House Pets",
             " Farm Animals",
             " Reptiles",
+            " Litter",
             " Other"});
             this.AnimalCatComboBox.Location = new System.Drawing.Point(279, 30);
             this.AnimalCatComboBox.Name = "AnimalCatComboBox";
@@ -531,6 +547,7 @@
             // 
             // FoodPanel
             // 
+            this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FoodPanel.Location = new System.Drawing.Point(0, 2020);
             this.FoodPanel.Name = "FoodPanel";
@@ -538,13 +555,40 @@
             this.FoodPanel.TabIndex = 9;
             this.FoodPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FoodPanel_Paint);
             // 
+            // FoodConfirmBttn
+            // 
+            this.FoodConfirmBttn.BackColor = System.Drawing.Color.White;
+            this.FoodConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FoodConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FoodConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.FoodConfirmBttn.Location = new System.Drawing.Point(583, 36);
+            this.FoodConfirmBttn.Name = "FoodConfirmBttn";
+            this.FoodConfirmBttn.Size = new System.Drawing.Size(139, 71);
+            this.FoodConfirmBttn.TabIndex = 5;
+            this.FoodConfirmBttn.Text = "Food";
+            this.FoodConfirmBttn.UseVisualStyleBackColor = false;
+            // 
             // AccessPanel
             // 
+            this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AccessPanel.Location = new System.Drawing.Point(0, 2150);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(774, 114);
             this.AccessPanel.TabIndex = 10;
+            // 
+            // AccessConfirmBttn
+            // 
+            this.AccessConfirmBttn.BackColor = System.Drawing.Color.White;
+            this.AccessConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccessConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AccessConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.AccessConfirmBttn.Location = new System.Drawing.Point(583, 31);
+            this.AccessConfirmBttn.Name = "AccessConfirmBttn";
+            this.AccessConfirmBttn.Size = new System.Drawing.Size(139, 71);
+            this.AccessConfirmBttn.TabIndex = 6;
+            this.AccessConfirmBttn.Text = "Accessories";
+            this.AccessConfirmBttn.UseVisualStyleBackColor = false;
             // 
             // CreateSingleAdvertisement
             // 
@@ -587,6 +631,8 @@
             this.SpecifyPanel.PerformLayout();
             this.AnimalTypePanel.ResumeLayout(false);
             this.AnimalTypePanel.PerformLayout();
+            this.FoodPanel.ResumeLayout(false);
+            this.AccessPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,7 +651,7 @@
         private PictureBox ConfirmationOnePictureBx;
         private Button UploadOneBttn;
         private PictureBox ImageOnePictureBx;
-        private ComboBox comboBox1;
+        private ComboBox AdvertComboBox;
         private Label TypeAdvertLbl;
         private GroupBox ImageUploadGroupBox;
         private Button UploadThreeBttn;
@@ -637,5 +683,7 @@
         private Button DogConfirmBttn;
         private Panel HorsePanel;
         private Button HorseConfirmBttn;
+        private Button FoodConfirmBttn;
+        private Button AccessConfirmBttn;
     }
 }
