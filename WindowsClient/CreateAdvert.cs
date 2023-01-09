@@ -238,5 +238,10 @@ namespace WindowsClient
                 return ms.ToArray();
             }
         }
+
+        private void ImageOnePictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

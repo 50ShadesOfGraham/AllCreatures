@@ -16,5 +16,31 @@ namespace WindowsClient
         {
             InitializeComponent();
         }
+
+        private void FoodPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AnimalCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(AnimalCatComboBox.SelectedItem.Equals("Other"))
+            {
+                AnimalTypePanel.Visible = false;
+                SpecifyPanel.Visible = true;
+                GenericAnimalPanel.Visible = true;
+            }
+            else
+            {
+                AnimalTypePanel.Visible = true;
+                SpecifyPanel.Visible = false;
+                GenericAnimalPanel.Visible = false;
+            }
+        }
     }
 }

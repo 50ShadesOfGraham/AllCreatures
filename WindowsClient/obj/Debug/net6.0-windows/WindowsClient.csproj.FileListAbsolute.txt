@@ -162,7 +162,6 @@ C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\De
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.csproj.AssemblyReference.cache
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.AdminIndex.resources
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Notification.resources
-C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.PlaceAdvertisement.resources
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Product.resources
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Properties.Resources.resources
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.RegisterUser.resources
@@ -279,3 +278,4 @@ C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\Windo
 C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
 C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateSingleAdvertisement.resources
