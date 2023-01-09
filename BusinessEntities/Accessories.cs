@@ -29,13 +29,13 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree)
+        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string subaccesscategory)
             : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree)
         {
             this.accesscategory = accesscategory;
             this.subaccesscategory = subaccesscategory;
         }
-        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status)
+        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string accesscategory,string subaccesscategory)
            : base(advertid, selleremail, title, description, price, verified, status)
         {
             this.accesscategory = accesscategory;

@@ -392,7 +392,6 @@ namespace BusinessLayer
         {
             return currentUser.FirstName;
         }
-
         public Boolean EmailPresent(string Email)
         {
             string EmailTrim = Email.Trim();
@@ -405,6 +404,26 @@ namespace BusinessLayer
             }
             return false;
         }
+
+        public Boolean AdvertIDPresent(int number)
+        {
+            foreach(Advertisement advert in advertList)
+            {
+                if(advert.AdvertID.Equals(number)) { return true; }
+            }
+
+            return false;
+        }
+        public Boolean NotifIDPresent(int number)
+        {
+            foreach (Notifications notif in notificationList)
+            {
+                if (notif.NotificationID.Equals(number)) { return true; }
+            }
+
+            return false;
+        }
+
 
         public void tearDown()
         {

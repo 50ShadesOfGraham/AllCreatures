@@ -39,6 +39,8 @@ namespace BusinessLayer
         string getUserNameCurrentuser();
         bool login(string email, string password);
         bool EmailPresent(string email);
+        bool AdvertIDPresent(int number);
+        bool NotifIDPresent(int number);
         void tearDown();
         List<User> UserList { get; }
         List<Advertisement> AdvertList { get; }

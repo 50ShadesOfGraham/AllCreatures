@@ -72,6 +72,10 @@
             this.FoodPanel = new System.Windows.Forms.Panel();
             this.FoodConfirmBttn = new System.Windows.Forms.Button();
             this.AccessPanel = new System.Windows.Forms.Panel();
+            this.AccessTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.AccessCatComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.AccessCatLbl = new System.Windows.Forms.Label();
             this.AccessConfirmBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.GeneralAdvertPanel.SuspendLayout();
@@ -257,7 +261,7 @@
             this.UploadOneBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadOneBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadOneBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.UploadOneBttn.Location = new System.Drawing.Point(549, 62);
+            this.UploadOneBttn.Location = new System.Drawing.Point(561, 62);
             this.UploadOneBttn.Name = "UploadOneBttn";
             this.UploadOneBttn.Size = new System.Drawing.Size(149, 67);
             this.UploadOneBttn.TabIndex = 1;
@@ -433,7 +437,7 @@
             this.HorseConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HorseConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HorseConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.HorseConfirmBttn.Location = new System.Drawing.Point(583, 19);
+            this.HorseConfirmBttn.Location = new System.Drawing.Point(583, 37);
             this.HorseConfirmBttn.Name = "HorseConfirmBttn";
             this.HorseConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.HorseConfirmBttn.TabIndex = 0;
@@ -551,7 +555,7 @@
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FoodPanel.Location = new System.Drawing.Point(0, 2020);
             this.FoodPanel.Name = "FoodPanel";
-            this.FoodPanel.Size = new System.Drawing.Size(774, 130);
+            this.FoodPanel.Size = new System.Drawing.Size(774, 245);
             this.FoodPanel.TabIndex = 9;
             this.FoodPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FoodPanel_Paint);
             // 
@@ -561,7 +565,7 @@
             this.FoodConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FoodConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FoodConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.FoodConfirmBttn.Location = new System.Drawing.Point(583, 36);
+            this.FoodConfirmBttn.Location = new System.Drawing.Point(583, 158);
             this.FoodConfirmBttn.Name = "FoodConfirmBttn";
             this.FoodConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.FoodConfirmBttn.TabIndex = 5;
@@ -570,12 +574,60 @@
             // 
             // AccessPanel
             // 
+            this.AccessPanel.Controls.Add(this.AccessTypeComboBox);
+            this.AccessPanel.Controls.Add(this.AccessCatComboBox);
+            this.AccessPanel.Controls.Add(this.label2);
+            this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 2150);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 2265);
             this.AccessPanel.Name = "AccessPanel";
-            this.AccessPanel.Size = new System.Drawing.Size(774, 114);
+            this.AccessPanel.Size = new System.Drawing.Size(774, 295);
             this.AccessPanel.TabIndex = 10;
+            // 
+            // AccessTypeComboBox
+            // 
+            this.AccessTypeComboBox.FormattingEnabled = true;
+            this.AccessTypeComboBox.Location = new System.Drawing.Point(298, 118);
+            this.AccessTypeComboBox.Name = "AccessTypeComboBox";
+            this.AccessTypeComboBox.Size = new System.Drawing.Size(291, 33);
+            this.AccessTypeComboBox.TabIndex = 12;
+            // 
+            // AccessCatComboBox
+            // 
+            this.AccessCatComboBox.FormattingEnabled = true;
+            this.AccessCatComboBox.Items.AddRange(new object[] {
+            " Health ",
+            " Bedding",
+            " Cleaning",
+            " Other"});
+            this.AccessCatComboBox.Location = new System.Drawing.Point(298, 36);
+            this.AccessCatComboBox.Name = "AccessCatComboBox";
+            this.AccessCatComboBox.Size = new System.Drawing.Size(291, 33);
+            this.AccessCatComboBox.TabIndex = 11;
+            this.AccessCatComboBox.SelectedIndexChanged += new System.EventHandler(this.AccessCatComboBox_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(73, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(212, 30);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Type of Accessory :";
+            // 
+            // AccessCatLbl
+            // 
+            this.AccessCatLbl.AutoSize = true;
+            this.AccessCatLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AccessCatLbl.ForeColor = System.Drawing.Color.White;
+            this.AccessCatLbl.Location = new System.Drawing.Point(54, 35);
+            this.AccessCatLbl.Name = "AccessCatLbl";
+            this.AccessCatLbl.Size = new System.Drawing.Size(231, 30);
+            this.AccessCatLbl.TabIndex = 9;
+            this.AccessCatLbl.Text = "Accessory Category :";
             // 
             // AccessConfirmBttn
             // 
@@ -583,12 +635,13 @@
             this.AccessConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AccessConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AccessConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.AccessConfirmBttn.Location = new System.Drawing.Point(583, 31);
+            this.AccessConfirmBttn.Location = new System.Drawing.Point(583, 212);
             this.AccessConfirmBttn.Name = "AccessConfirmBttn";
             this.AccessConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.AccessConfirmBttn.TabIndex = 6;
             this.AccessConfirmBttn.Text = "Accessories";
             this.AccessConfirmBttn.UseVisualStyleBackColor = false;
+            this.AccessConfirmBttn.Click += new System.EventHandler(this.AccessConfirmBttn_Click);
             // 
             // CreateSingleAdvertisement
             // 
@@ -633,6 +686,7 @@
             this.AnimalTypePanel.PerformLayout();
             this.FoodPanel.ResumeLayout(false);
             this.AccessPanel.ResumeLayout(false);
+            this.AccessPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,5 +739,9 @@
         private Button HorseConfirmBttn;
         private Button FoodConfirmBttn;
         private Button AccessConfirmBttn;
+        private ComboBox AccessTypeComboBox;
+        private ComboBox AccessCatComboBox;
+        private Label label2;
+        private Label AccessCatLbl;
     }
 }

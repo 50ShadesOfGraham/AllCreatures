@@ -1,4 +1,5 @@
-﻿using BusinessLayer;
+﻿using BusinessEntities;
+using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -209,6 +210,63 @@ namespace WindowsClient
                     ConfirmationThreePictureBx.Refresh();
                     ConfirmationThreePictureBx.Visible = true;
                 }
+            }
+        }
+
+        private void AccessCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(AccessCatComboBox.SelectedItem.Equals(" Health"))
+            {
+                AccessTypeComboBox.Items.Clear();
+                AccessTypeComboBox.Items.Add("Supplements");
+                AccessTypeComboBox.Items.Add("Medication");
+                AccessTypeComboBox.Items.Add("Other");
+            }
+            else if(AccessCatComboBox.SelectedItem.Equals(" Bedding"))
+            {
+                AccessTypeComboBox.Items.Clear();
+                AccessTypeComboBox.Items.Add("Tanks and Enclosures");
+                AccessTypeComboBox.Items.Add("Kennels");
+                AccessTypeComboBox.Items.Add("Small Animals");
+                AccessTypeComboBox.Items.Add("Other");
+            }
+            else if(AccessCatComboBox.SelectedItem.Equals(" Cleaning"))
+            {
+                AccessTypeComboBox.Items.Clear();
+                AccessTypeComboBox.Items.Add("Tanks and Enclosures");
+                AccessTypeComboBox.Items.Add("Shampoos");
+                AccessTypeComboBox.Items.Add("Other");
+            }
+            else if(AccessCatComboBox.SelectedItem.Equals(" Other"))
+            {
+                AccessTypeComboBox.Items.Clear();
+                AccessTypeComboBox.Items.Add("Horse Riding");
+                AccessTypeComboBox.Items.Add("Aquariums");
+                AccessTypeComboBox.Items.Add("Clothing");
+            }
+        }
+
+        private void AccessConfirmBttn_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            int AdvertID = 0;
+            do { AdvertID = rnd.Next(0, 99999); } while(Model.AdvertIDPresent(AdvertID));
+
+            byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+            byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+            byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+
+            Accessories access = new Accessories(AdvertID,Model.CurrentUser.Email.Trim(),TitleTxt.Text,DescriptionTxt.Text,Convert.ToDouble(PriceTxt.Text),false,"AVAILABLE",
+                ImageOne,ImageTwo,ImageThree,AccessCatComboBox.SelectedItem.ToString(),AccessTypeComboBox.SelectedItem.ToString());
+
+            if(Model.addNewAccessories(access)) 
+            {
+                string message = "Item #" + AdvertID + " has been added to our system. " +
+                    "Admin must verify item before advertisement is made public";
+                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                int notifID = 0;
+                do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (Model.addNewNotification(notifID.ToString(),message,notificationtitle,DateTime.Now,false,Model.CurrentUser.Email)) { }
             }
         }
     }
