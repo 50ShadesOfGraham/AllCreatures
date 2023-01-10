@@ -68,12 +68,47 @@
             this.PurebreedLbl = new System.Windows.Forms.Label();
             this.LitterConfirmBttn = new System.Windows.Forms.Button();
             this.FarmAnimalPanel = new System.Windows.Forms.Panel();
+            this.FAGenderComboBox = new System.Windows.Forms.ComboBox();
+            this.FAPurposeTxt = new System.Windows.Forms.TextBox();
+            this.FAAgeTxt = new System.Windows.Forms.TextBox();
+            this.FANameTxt = new System.Windows.Forms.TextBox();
+            this.FAPurposeLbl = new System.Windows.Forms.Label();
+            this.FAGenderLbl = new System.Windows.Forms.Label();
+            this.FAAgeLbl = new System.Windows.Forms.Label();
+            this.FANameLbl = new System.Windows.Forms.Label();
             this.FarmAnimalConfirmBttn = new System.Windows.Forms.Button();
             this.GenericAnimalPanel = new System.Windows.Forms.Panel();
+            this.DetailThreeTxt = new System.Windows.Forms.TextBox();
+            this.DetailTwoTxt = new System.Windows.Forms.TextBox();
+            this.DetailOneTxt = new System.Windows.Forms.TextBox();
+            this.GAGenderComboBox = new System.Windows.Forms.ComboBox();
+            this.GAAgeTxt = new System.Windows.Forms.TextBox();
+            this.GANameTxt = new System.Windows.Forms.TextBox();
+            this.DetailThreeLbl = new System.Windows.Forms.Label();
+            this.DetailTwoLbl = new System.Windows.Forms.Label();
+            this.DetailOneLbl = new System.Windows.Forms.Label();
+            this.GAGenderLbl = new System.Windows.Forms.Label();
+            this.GAAgeLbl = new System.Windows.Forms.Label();
+            this.GANameLbl = new System.Windows.Forms.Label();
             this.GenericAnimalConfirmBttn = new System.Windows.Forms.Button();
             this.DogPanel = new System.Windows.Forms.Panel();
             this.DogConfirmBttn = new System.Windows.Forms.Button();
             this.HorsePanel = new System.Windows.Forms.Panel();
+            this.HorsePurposeTxt = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BrokenNoRadBttn = new System.Windows.Forms.RadioButton();
+            this.BrokenYesRadBttn = new System.Windows.Forms.RadioButton();
+            this.HorseSizeTxt = new System.Windows.Forms.TextBox();
+            this.HorseGenderComboBox = new System.Windows.Forms.ComboBox();
+            this.HorseAgeTxt = new System.Windows.Forms.TextBox();
+            this.HorseNameTxt = new System.Windows.Forms.TextBox();
+            this.HorsePurposeLbl = new System.Windows.Forms.Label();
+            this.HorseBreedLbl = new System.Windows.Forms.Label();
+            this.BrokenLbl = new System.Windows.Forms.Label();
+            this.HorseSizeLbl = new System.Windows.Forms.Label();
+            this.HorseGenderLbl = new System.Windows.Forms.Label();
+            this.HorseAgeLbl = new System.Windows.Forms.Label();
+            this.HorseNameLbl = new System.Windows.Forms.Label();
             this.HorseConfirmBttn = new System.Windows.Forms.Button();
             this.TypeAnimalPanel = new System.Windows.Forms.Panel();
             this.SpecifyPanel = new System.Windows.Forms.Panel();
@@ -97,14 +132,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.AccessCatLbl = new System.Windows.Forms.Label();
             this.AccessConfirmBttn = new System.Windows.Forms.Button();
-            this.FANameLbl = new System.Windows.Forms.Label();
-            this.FAAgeLbl = new System.Windows.Forms.Label();
-            this.FAGenderLbl = new System.Windows.Forms.Label();
-            this.FAPurposeLbl = new System.Windows.Forms.Label();
-            this.FANameTxt = new System.Windows.Forms.TextBox();
-            this.FAAgeTxt = new System.Windows.Forms.TextBox();
-            this.FAPurposeTxt = new System.Windows.Forms.TextBox();
-            this.FAGenderComboBox = new System.Windows.Forms.ComboBox();
+            this.DogNameLbl = new System.Windows.Forms.Label();
+            this.DogAgeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.GeneralAdvertPanel.SuspendLayout();
             this.ImageUploadGroupBox.SuspendLayout();
@@ -205,7 +234,7 @@
             this.GeneralAdvertPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GeneralAdvertPanel.Location = new System.Drawing.Point(0, 0);
             this.GeneralAdvertPanel.Name = "GeneralAdvertPanel";
-            this.GeneralAdvertPanel.Size = new System.Drawing.Size(774, 1208);
+            this.GeneralAdvertPanel.Size = new System.Drawing.Size(822, 1208);
             this.GeneralAdvertPanel.TabIndex = 7;
             // 
             // AdvertComboBox
@@ -362,7 +391,7 @@
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 1208);
             this.AnimalPanel.Name = "AnimalPanel";
-            this.AnimalPanel.Size = new System.Drawing.Size(774, 1246);
+            this.AnimalPanel.Size = new System.Drawing.Size(822, 2917);
             this.AnimalPanel.TabIndex = 8;
             // 
             // LitterPanel
@@ -372,9 +401,9 @@
             this.LitterPanel.Controls.Add(this.LitterHeaderPanel);
             this.LitterPanel.Controls.Add(this.LitterConfirmBttn);
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LitterPanel.Location = new System.Drawing.Point(0, 1005);
+            this.LitterPanel.Location = new System.Drawing.Point(0, 2346);
             this.LitterPanel.Name = "LitterPanel";
-            this.LitterPanel.Size = new System.Drawing.Size(774, 566);
+            this.LitterPanel.Size = new System.Drawing.Size(822, 566);
             this.LitterPanel.TabIndex = 11;
             // 
             // NotPurebreedPanel
@@ -384,9 +413,9 @@
             this.NotPurebreedPanel.Controls.Add(this.BreedTwoLbl);
             this.NotPurebreedPanel.Controls.Add(this.BreedOneLbl);
             this.NotPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NotPurebreedPanel.Location = new System.Drawing.Point(0, 317);
+            this.NotPurebreedPanel.Location = new System.Drawing.Point(0, 330);
             this.NotPurebreedPanel.Name = "NotPurebreedPanel";
-            this.NotPurebreedPanel.Size = new System.Drawing.Size(774, 149);
+            this.NotPurebreedPanel.Size = new System.Drawing.Size(822, 149);
             this.NotPurebreedPanel.TabIndex = 18;
             // 
             // BreedTwoComboBox
@@ -432,9 +461,9 @@
             this.IsPurebreedPanel.Controls.Add(this.BreedComboBox);
             this.IsPurebreedPanel.Controls.Add(this.BreedLbl);
             this.IsPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.IsPurebreedPanel.Location = new System.Drawing.Point(0, 228);
+            this.IsPurebreedPanel.Location = new System.Drawing.Point(0, 241);
             this.IsPurebreedPanel.Name = "IsPurebreedPanel";
-            this.IsPurebreedPanel.Size = new System.Drawing.Size(774, 89);
+            this.IsPurebreedPanel.Size = new System.Drawing.Size(822, 89);
             this.IsPurebreedPanel.TabIndex = 17;
             // 
             // BreedComboBox
@@ -469,7 +498,7 @@
             this.LitterHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LitterHeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.LitterHeaderPanel.Name = "LitterHeaderPanel";
-            this.LitterHeaderPanel.Size = new System.Drawing.Size(774, 228);
+            this.LitterHeaderPanel.Size = new System.Drawing.Size(822, 241);
             this.LitterHeaderPanel.TabIndex = 16;
             // 
             // LitterAgeTxt
@@ -553,7 +582,7 @@
             this.LitterConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LitterConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LitterConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.LitterConfirmBttn.Location = new System.Drawing.Point(583, 478);
+            this.LitterConfirmBttn.Location = new System.Drawing.Point(583, 485);
             this.LitterConfirmBttn.Name = "LitterConfirmBttn";
             this.LitterConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.LitterConfirmBttn.TabIndex = 4;
@@ -573,10 +602,86 @@
             this.FarmAnimalPanel.Controls.Add(this.FANameLbl);
             this.FarmAnimalPanel.Controls.Add(this.FarmAnimalConfirmBttn);
             this.FarmAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 562);
+            this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 1903);
             this.FarmAnimalPanel.Name = "FarmAnimalPanel";
-            this.FarmAnimalPanel.Size = new System.Drawing.Size(774, 443);
+            this.FarmAnimalPanel.Size = new System.Drawing.Size(822, 443);
             this.FarmAnimalPanel.TabIndex = 10;
+            // 
+            // FAGenderComboBox
+            // 
+            this.FAGenderComboBox.FormattingEnabled = true;
+            this.FAGenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.FAGenderComboBox.Location = new System.Drawing.Point(226, 191);
+            this.FAGenderComboBox.Name = "FAGenderComboBox";
+            this.FAGenderComboBox.Size = new System.Drawing.Size(182, 33);
+            this.FAGenderComboBox.TabIndex = 19;
+            // 
+            // FAPurposeTxt
+            // 
+            this.FAPurposeTxt.Location = new System.Drawing.Point(222, 268);
+            this.FAPurposeTxt.Name = "FAPurposeTxt";
+            this.FAPurposeTxt.Size = new System.Drawing.Size(355, 31);
+            this.FAPurposeTxt.TabIndex = 18;
+            // 
+            // FAAgeTxt
+            // 
+            this.FAAgeTxt.Location = new System.Drawing.Point(226, 115);
+            this.FAAgeTxt.Name = "FAAgeTxt";
+            this.FAAgeTxt.Size = new System.Drawing.Size(150, 31);
+            this.FAAgeTxt.TabIndex = 17;
+            // 
+            // FANameTxt
+            // 
+            this.FANameTxt.Location = new System.Drawing.Point(226, 43);
+            this.FANameTxt.Name = "FANameTxt";
+            this.FANameTxt.Size = new System.Drawing.Size(351, 31);
+            this.FANameTxt.TabIndex = 16;
+            // 
+            // FAPurposeLbl
+            // 
+            this.FAPurposeLbl.AutoSize = true;
+            this.FAPurposeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FAPurposeLbl.ForeColor = System.Drawing.Color.White;
+            this.FAPurposeLbl.Location = new System.Drawing.Point(106, 269);
+            this.FAPurposeLbl.Name = "FAPurposeLbl";
+            this.FAPurposeLbl.Size = new System.Drawing.Size(110, 30);
+            this.FAPurposeLbl.TabIndex = 15;
+            this.FAPurposeLbl.Text = "Purpose :";
+            // 
+            // FAGenderLbl
+            // 
+            this.FAGenderLbl.AutoSize = true;
+            this.FAGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FAGenderLbl.ForeColor = System.Drawing.Color.White;
+            this.FAGenderLbl.Location = new System.Drawing.Point(115, 190);
+            this.FAGenderLbl.Name = "FAGenderLbl";
+            this.FAGenderLbl.Size = new System.Drawing.Size(101, 30);
+            this.FAGenderLbl.TabIndex = 14;
+            this.FAGenderLbl.Text = "Gender :";
+            // 
+            // FAAgeLbl
+            // 
+            this.FAAgeLbl.AutoSize = true;
+            this.FAAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FAAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.FAAgeLbl.Location = new System.Drawing.Point(150, 114);
+            this.FAAgeLbl.Name = "FAAgeLbl";
+            this.FAAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.FAAgeLbl.TabIndex = 13;
+            this.FAAgeLbl.Text = "Age :";
+            // 
+            // FANameLbl
+            // 
+            this.FANameLbl.AutoSize = true;
+            this.FANameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FANameLbl.ForeColor = System.Drawing.Color.White;
+            this.FANameLbl.Location = new System.Drawing.Point(134, 42);
+            this.FANameLbl.Name = "FANameLbl";
+            this.FANameLbl.Size = new System.Drawing.Size(86, 30);
+            this.FANameLbl.TabIndex = 12;
+            this.FANameLbl.Text = "Name :";
             // 
             // FarmAnimalConfirmBttn
             // 
@@ -594,12 +699,133 @@
             // 
             // GenericAnimalPanel
             // 
+            this.GenericAnimalPanel.Controls.Add(this.DetailThreeTxt);
+            this.GenericAnimalPanel.Controls.Add(this.DetailTwoTxt);
+            this.GenericAnimalPanel.Controls.Add(this.DetailOneTxt);
+            this.GenericAnimalPanel.Controls.Add(this.GAGenderComboBox);
+            this.GenericAnimalPanel.Controls.Add(this.GAAgeTxt);
+            this.GenericAnimalPanel.Controls.Add(this.GANameTxt);
+            this.GenericAnimalPanel.Controls.Add(this.DetailThreeLbl);
+            this.GenericAnimalPanel.Controls.Add(this.DetailTwoLbl);
+            this.GenericAnimalPanel.Controls.Add(this.DetailOneLbl);
+            this.GenericAnimalPanel.Controls.Add(this.GAGenderLbl);
+            this.GenericAnimalPanel.Controls.Add(this.GAAgeLbl);
+            this.GenericAnimalPanel.Controls.Add(this.GANameLbl);
             this.GenericAnimalPanel.Controls.Add(this.GenericAnimalConfirmBttn);
             this.GenericAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GenericAnimalPanel.Location = new System.Drawing.Point(0, 462);
+            this.GenericAnimalPanel.Location = new System.Drawing.Point(0, 1340);
             this.GenericAnimalPanel.Name = "GenericAnimalPanel";
-            this.GenericAnimalPanel.Size = new System.Drawing.Size(774, 100);
+            this.GenericAnimalPanel.Size = new System.Drawing.Size(822, 563);
             this.GenericAnimalPanel.TabIndex = 9;
+            // 
+            // DetailThreeTxt
+            // 
+            this.DetailThreeTxt.Location = new System.Drawing.Point(232, 388);
+            this.DetailThreeTxt.Name = "DetailThreeTxt";
+            this.DetailThreeTxt.Size = new System.Drawing.Size(355, 31);
+            this.DetailThreeTxt.TabIndex = 24;
+            // 
+            // DetailTwoTxt
+            // 
+            this.DetailTwoTxt.Location = new System.Drawing.Point(232, 316);
+            this.DetailTwoTxt.Name = "DetailTwoTxt";
+            this.DetailTwoTxt.Size = new System.Drawing.Size(355, 31);
+            this.DetailTwoTxt.TabIndex = 23;
+            // 
+            // DetailOneTxt
+            // 
+            this.DetailOneTxt.Location = new System.Drawing.Point(232, 239);
+            this.DetailOneTxt.Name = "DetailOneTxt";
+            this.DetailOneTxt.Size = new System.Drawing.Size(355, 31);
+            this.DetailOneTxt.TabIndex = 22;
+            // 
+            // GAGenderComboBox
+            // 
+            this.GAGenderComboBox.FormattingEnabled = true;
+            this.GAGenderComboBox.Location = new System.Drawing.Point(232, 165);
+            this.GAGenderComboBox.Name = "GAGenderComboBox";
+            this.GAGenderComboBox.Size = new System.Drawing.Size(182, 33);
+            this.GAGenderComboBox.TabIndex = 21;
+            // 
+            // GAAgeTxt
+            // 
+            this.GAAgeTxt.Location = new System.Drawing.Point(232, 93);
+            this.GAAgeTxt.Name = "GAAgeTxt";
+            this.GAAgeTxt.Size = new System.Drawing.Size(177, 31);
+            this.GAAgeTxt.TabIndex = 20;
+            // 
+            // GANameTxt
+            // 
+            this.GANameTxt.Location = new System.Drawing.Point(228, 26);
+            this.GANameTxt.Name = "GANameTxt";
+            this.GANameTxt.Size = new System.Drawing.Size(355, 31);
+            this.GANameTxt.TabIndex = 19;
+            // 
+            // DetailThreeLbl
+            // 
+            this.DetailThreeLbl.AutoSize = true;
+            this.DetailThreeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DetailThreeLbl.ForeColor = System.Drawing.Color.White;
+            this.DetailThreeLbl.Location = new System.Drawing.Point(64, 387);
+            this.DetailThreeLbl.Name = "DetailThreeLbl";
+            this.DetailThreeLbl.Size = new System.Drawing.Size(151, 30);
+            this.DetailThreeLbl.TabIndex = 18;
+            this.DetailThreeLbl.Text = "Detail Three :";
+            // 
+            // DetailTwoLbl
+            // 
+            this.DetailTwoLbl.AutoSize = true;
+            this.DetailTwoLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DetailTwoLbl.ForeColor = System.Drawing.Color.White;
+            this.DetailTwoLbl.Location = new System.Drawing.Point(78, 315);
+            this.DetailTwoLbl.Name = "DetailTwoLbl";
+            this.DetailTwoLbl.Size = new System.Drawing.Size(135, 30);
+            this.DetailTwoLbl.TabIndex = 17;
+            this.DetailTwoLbl.Text = "Detail Two :";
+            // 
+            // DetailOneLbl
+            // 
+            this.DetailOneLbl.AutoSize = true;
+            this.DetailOneLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DetailOneLbl.ForeColor = System.Drawing.Color.White;
+            this.DetailOneLbl.Location = new System.Drawing.Point(78, 240);
+            this.DetailOneLbl.Name = "DetailOneLbl";
+            this.DetailOneLbl.Size = new System.Drawing.Size(134, 30);
+            this.DetailOneLbl.TabIndex = 16;
+            this.DetailOneLbl.Text = "Detail One :";
+            // 
+            // GAGenderLbl
+            // 
+            this.GAGenderLbl.AutoSize = true;
+            this.GAGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GAGenderLbl.ForeColor = System.Drawing.Color.White;
+            this.GAGenderLbl.Location = new System.Drawing.Point(112, 164);
+            this.GAGenderLbl.Name = "GAGenderLbl";
+            this.GAGenderLbl.Size = new System.Drawing.Size(101, 30);
+            this.GAGenderLbl.TabIndex = 15;
+            this.GAGenderLbl.Text = "Gender :";
+            // 
+            // GAAgeLbl
+            // 
+            this.GAAgeLbl.AutoSize = true;
+            this.GAAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GAAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.GAAgeLbl.Location = new System.Drawing.Point(144, 93);
+            this.GAAgeLbl.Name = "GAAgeLbl";
+            this.GAAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.GAAgeLbl.TabIndex = 14;
+            this.GAAgeLbl.Text = "Age :";
+            // 
+            // GANameLbl
+            // 
+            this.GANameLbl.AutoSize = true;
+            this.GANameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GANameLbl.ForeColor = System.Drawing.Color.White;
+            this.GANameLbl.Location = new System.Drawing.Point(124, 24);
+            this.GANameLbl.Name = "GANameLbl";
+            this.GANameLbl.Size = new System.Drawing.Size(86, 30);
+            this.GANameLbl.TabIndex = 13;
+            this.GANameLbl.Text = "Name :";
             // 
             // GenericAnimalConfirmBttn
             // 
@@ -607,20 +833,23 @@
             this.GenericAnimalConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GenericAnimalConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.GenericAnimalConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.GenericAnimalConfirmBttn.Location = new System.Drawing.Point(583, 15);
+            this.GenericAnimalConfirmBttn.Location = new System.Drawing.Point(583, 473);
             this.GenericAnimalConfirmBttn.Name = "GenericAnimalConfirmBttn";
             this.GenericAnimalConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.GenericAnimalConfirmBttn.TabIndex = 2;
             this.GenericAnimalConfirmBttn.Text = "Generic Animal";
             this.GenericAnimalConfirmBttn.UseVisualStyleBackColor = false;
+            this.GenericAnimalConfirmBttn.Click += new System.EventHandler(this.GenericAnimalConfirmBttn_Click);
             // 
             // DogPanel
             // 
+            this.DogPanel.Controls.Add(this.DogAgeLbl);
+            this.DogPanel.Controls.Add(this.DogNameLbl);
             this.DogPanel.Controls.Add(this.DogConfirmBttn);
             this.DogPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DogPanel.Location = new System.Drawing.Point(0, 346);
+            this.DogPanel.Location = new System.Drawing.Point(0, 826);
             this.DogPanel.Name = "DogPanel";
-            this.DogPanel.Size = new System.Drawing.Size(774, 116);
+            this.DogPanel.Size = new System.Drawing.Size(822, 514);
             this.DogPanel.TabIndex = 7;
             // 
             // DogConfirmBttn
@@ -629,7 +858,7 @@
             this.DogConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DogConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DogConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.DogConfirmBttn.Location = new System.Drawing.Point(583, 30);
+            this.DogConfirmBttn.Location = new System.Drawing.Point(583, 431);
             this.DogConfirmBttn.Name = "DogConfirmBttn";
             this.DogConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.DogConfirmBttn.TabIndex = 1;
@@ -638,12 +867,277 @@
             // 
             // HorsePanel
             // 
+            this.HorsePanel.Controls.Add(this.HorsePurposeTxt);
+            this.HorsePanel.Controls.Add(this.comboBox1);
+            this.HorsePanel.Controls.Add(this.BrokenNoRadBttn);
+            this.HorsePanel.Controls.Add(this.BrokenYesRadBttn);
+            this.HorsePanel.Controls.Add(this.HorseSizeTxt);
+            this.HorsePanel.Controls.Add(this.HorseGenderComboBox);
+            this.HorsePanel.Controls.Add(this.HorseAgeTxt);
+            this.HorsePanel.Controls.Add(this.HorseNameTxt);
+            this.HorsePanel.Controls.Add(this.HorsePurposeLbl);
+            this.HorsePanel.Controls.Add(this.HorseBreedLbl);
+            this.HorsePanel.Controls.Add(this.BrokenLbl);
+            this.HorsePanel.Controls.Add(this.HorseSizeLbl);
+            this.HorsePanel.Controls.Add(this.HorseGenderLbl);
+            this.HorsePanel.Controls.Add(this.HorseAgeLbl);
+            this.HorsePanel.Controls.Add(this.HorseNameLbl);
             this.HorsePanel.Controls.Add(this.HorseConfirmBttn);
             this.HorsePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HorsePanel.Location = new System.Drawing.Point(0, 217);
             this.HorsePanel.Name = "HorsePanel";
-            this.HorsePanel.Size = new System.Drawing.Size(774, 129);
+            this.HorsePanel.Size = new System.Drawing.Size(822, 609);
             this.HorsePanel.TabIndex = 6;
+            // 
+            // HorsePurposeTxt
+            // 
+            this.HorsePurposeTxt.Location = new System.Drawing.Point(206, 440);
+            this.HorsePurposeTxt.Name = "HorsePurposeTxt";
+            this.HorsePurposeTxt.Size = new System.Drawing.Size(312, 31);
+            this.HorsePurposeTxt.TabIndex = 23;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Abtenauer",
+            "Abyssinian, see Ethiopian horses",
+            "Aegidienberger",
+            "Akhal-Teke",
+            "Albanian horse",
+            "Altai horse",
+            "Altèr Real, see Lusitano",
+            "American Belgian Draft",
+            "American Cream Draft",
+            "American Indian Horse",
+            "American Paint Horse",
+            "American Quarter Horse",
+            "American Saddlebred",
+            "American Warmblood",
+            "Andalusian horse",
+            "Andravida horse",
+            "Anglo-Arabian",
+            "Anglo-Arabo Sardo, see Sardinian Anglo-Arab",
+            "Anglo-Kabarda",
+            "Appaloosa",
+            "Arabian horse",
+            "Ardennes horse",
+            "Arenberg-Nordkirchen",
+            "Argentine Criollo, see Criollo horse",
+            "Asturcón",
+            "Augeron horse",
+            "Asian wild horse, see Przewalski\'s horse",
+            "Assateague horse, see Chincoteague pony",
+            "Australian Brumby, see Brumby",
+            "Australian Draught Horse",
+            "Australian Stock Horse",
+            "Austrian Warmblood",
+            "Auvergne horse",
+            "Auxois",
+            "Azerbaijan horse",
+            "Azteca horse",
+            "Baise horse,",
+            "Bale, see Ethiopian horses",
+            "Balearic horse, see Mallorquín and Menorquín",
+            "Balikun horse",
+            "Baluchi horse",
+            "Banker horse",
+            "Barb horse",
+            "Bardigiano",
+            "Bashkir horse",
+            "Bashkir Curly, see Curly horse",
+            "Basque Mountain Horse",
+            "Bavarian Warmblood",
+            "Belgian Draught",
+            "Belgian Sport Horse",
+            "Belgian Trotter",
+            "Belgian Warmblood (includes Belgian Half-blood)",
+            "Bhutia Horse, also Bhotia, Bhote ghoda, Bhutan, Bhutani, Bhutua",
+            "Black Forest Horse or Black Forest Coldblood",
+            "Blazer horse",
+            "Boerperd",
+            "Borana, see Ethiopian horses",
+            "Bosnian Mountain Horse",
+            "Boulonnais horse",
+            "Brabant, see Belgian Draught",
+            "Brandenburger",
+            "Brazilian Sport Horse (Brasileiro de Hipismo)",
+            "Breton horse, or Trait Breton",
+            "Brumby",
+            "Budyonny horse or Budenny",
+            "Burguete horse",
+            "Burmese Horse",
+            "Byelorussian Harness Horse",
+            "Calabrese horse",
+            "Camargue horse",
+            "Camarillo White Horse",
+            "Campeiro",
+            "Campolina",
+            "Canadian horse",
+            "Canadian Pacer",
+            "Carolina Marsh Tacky",
+            "Carthusian, see Andalusian",
+            "Caspian horse",
+            "Castilian, see Andalusian",
+            "Castillonnais",
+            "Catria horse",
+            "Cavallo Romano della Maremma Laziale",
+            "Cerbat Mustang",
+            "Chickasaw Horse, see Florida Cracker Horse",
+            "Chilean horse or Chilean Corralero",
+            "Choctaw horse",
+            "Cleveland Bay",
+            "Clydesdale horse",
+            "Cob, see Types of Horse, below",
+            "Colonial Spanish Horse, see Types of Horse, below",
+            "Colorado Ranger",
+            "Coldblood trotter",
+            "Comtois horse",
+            "Corsican horse",
+            "Costa Rican Saddle Horse",
+            "Cretan horse, see Messara",
+            "Criollo horse, also spelled Crioulo",
+            "Croatian Coldblood",
+            "Cuban Criollo",
+            "Cumberland Island horse",
+            "Curly Horse",
+            "Czech Warmblood"});
+            this.comboBox1.Location = new System.Drawing.Point(206, 370);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(286, 33);
+            this.comboBox1.TabIndex = 22;
+            // 
+            // BrokenNoRadBttn
+            // 
+            this.BrokenNoRadBttn.AutoSize = true;
+            this.BrokenNoRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BrokenNoRadBttn.ForeColor = System.Drawing.Color.White;
+            this.BrokenNoRadBttn.Location = new System.Drawing.Point(298, 309);
+            this.BrokenNoRadBttn.Name = "BrokenNoRadBttn";
+            this.BrokenNoRadBttn.Size = new System.Drawing.Size(65, 32);
+            this.BrokenNoRadBttn.TabIndex = 21;
+            this.BrokenNoRadBttn.TabStop = true;
+            this.BrokenNoRadBttn.Text = "No";
+            this.BrokenNoRadBttn.UseVisualStyleBackColor = true;
+            // 
+            // BrokenYesRadBttn
+            // 
+            this.BrokenYesRadBttn.AutoSize = true;
+            this.BrokenYesRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BrokenYesRadBttn.ForeColor = System.Drawing.Color.White;
+            this.BrokenYesRadBttn.Location = new System.Drawing.Point(206, 309);
+            this.BrokenYesRadBttn.Name = "BrokenYesRadBttn";
+            this.BrokenYesRadBttn.Size = new System.Drawing.Size(67, 32);
+            this.BrokenYesRadBttn.TabIndex = 20;
+            this.BrokenYesRadBttn.TabStop = true;
+            this.BrokenYesRadBttn.Text = "Yes";
+            this.BrokenYesRadBttn.UseVisualStyleBackColor = true;
+            // 
+            // HorseSizeTxt
+            // 
+            this.HorseSizeTxt.Location = new System.Drawing.Point(206, 244);
+            this.HorseSizeTxt.Name = "HorseSizeTxt";
+            this.HorseSizeTxt.Size = new System.Drawing.Size(178, 31);
+            this.HorseSizeTxt.TabIndex = 19;
+            // 
+            // HorseGenderComboBox
+            // 
+            this.HorseGenderComboBox.FormattingEnabled = true;
+            this.HorseGenderComboBox.Location = new System.Drawing.Point(206, 179);
+            this.HorseGenderComboBox.Name = "HorseGenderComboBox";
+            this.HorseGenderComboBox.Size = new System.Drawing.Size(222, 33);
+            this.HorseGenderComboBox.TabIndex = 18;
+            // 
+            // HorseAgeTxt
+            // 
+            this.HorseAgeTxt.Location = new System.Drawing.Point(206, 106);
+            this.HorseAgeTxt.Name = "HorseAgeTxt";
+            this.HorseAgeTxt.Size = new System.Drawing.Size(178, 31);
+            this.HorseAgeTxt.TabIndex = 17;
+            // 
+            // HorseNameTxt
+            // 
+            this.HorseNameTxt.Location = new System.Drawing.Point(206, 38);
+            this.HorseNameTxt.Name = "HorseNameTxt";
+            this.HorseNameTxt.Size = new System.Drawing.Size(407, 31);
+            this.HorseNameTxt.TabIndex = 16;
+            // 
+            // HorsePurposeLbl
+            // 
+            this.HorsePurposeLbl.AutoSize = true;
+            this.HorsePurposeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HorsePurposeLbl.ForeColor = System.Drawing.Color.White;
+            this.HorsePurposeLbl.Location = new System.Drawing.Point(90, 439);
+            this.HorsePurposeLbl.Name = "HorsePurposeLbl";
+            this.HorsePurposeLbl.Size = new System.Drawing.Size(110, 30);
+            this.HorsePurposeLbl.TabIndex = 15;
+            this.HorsePurposeLbl.Text = "Purpose :";
+            // 
+            // HorseBreedLbl
+            // 
+            this.HorseBreedLbl.AutoSize = true;
+            this.HorseBreedLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HorseBreedLbl.ForeColor = System.Drawing.Color.White;
+            this.HorseBreedLbl.Location = new System.Drawing.Point(90, 370);
+            this.HorseBreedLbl.Name = "HorseBreedLbl";
+            this.HorseBreedLbl.Size = new System.Drawing.Size(86, 30);
+            this.HorseBreedLbl.TabIndex = 14;
+            this.HorseBreedLbl.Text = "Breed :";
+            // 
+            // BrokenLbl
+            // 
+            this.BrokenLbl.AutoSize = true;
+            this.BrokenLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BrokenLbl.ForeColor = System.Drawing.Color.White;
+            this.BrokenLbl.Location = new System.Drawing.Point(90, 307);
+            this.BrokenLbl.Name = "BrokenLbl";
+            this.BrokenLbl.Size = new System.Drawing.Size(98, 30);
+            this.BrokenLbl.TabIndex = 13;
+            this.BrokenLbl.Text = "Broken :";
+            // 
+            // HorseSizeLbl
+            // 
+            this.HorseSizeLbl.AutoSize = true;
+            this.HorseSizeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HorseSizeLbl.ForeColor = System.Drawing.Color.White;
+            this.HorseSizeLbl.Location = new System.Drawing.Point(124, 245);
+            this.HorseSizeLbl.Name = "HorseSizeLbl";
+            this.HorseSizeLbl.Size = new System.Drawing.Size(66, 30);
+            this.HorseSizeLbl.TabIndex = 12;
+            this.HorseSizeLbl.Text = "Size :";
+            // 
+            // HorseGenderLbl
+            // 
+            this.HorseGenderLbl.AutoSize = true;
+            this.HorseGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HorseGenderLbl.ForeColor = System.Drawing.Color.White;
+            this.HorseGenderLbl.Location = new System.Drawing.Point(94, 178);
+            this.HorseGenderLbl.Name = "HorseGenderLbl";
+            this.HorseGenderLbl.Size = new System.Drawing.Size(101, 30);
+            this.HorseGenderLbl.TabIndex = 11;
+            this.HorseGenderLbl.Text = "Gender :";
+            // 
+            // HorseAgeLbl
+            // 
+            this.HorseAgeLbl.AutoSize = true;
+            this.HorseAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HorseAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.HorseAgeLbl.Location = new System.Drawing.Point(115, 105);
+            this.HorseAgeLbl.Name = "HorseAgeLbl";
+            this.HorseAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.HorseAgeLbl.TabIndex = 10;
+            this.HorseAgeLbl.Text = "Age :";
+            // 
+            // HorseNameLbl
+            // 
+            this.HorseNameLbl.AutoSize = true;
+            this.HorseNameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HorseNameLbl.ForeColor = System.Drawing.Color.White;
+            this.HorseNameLbl.Location = new System.Drawing.Point(96, 37);
+            this.HorseNameLbl.Name = "HorseNameLbl";
+            this.HorseNameLbl.Size = new System.Drawing.Size(86, 30);
+            this.HorseNameLbl.TabIndex = 9;
+            this.HorseNameLbl.Text = "Name :";
             // 
             // HorseConfirmBttn
             // 
@@ -651,12 +1145,13 @@
             this.HorseConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HorseConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HorseConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.HorseConfirmBttn.Location = new System.Drawing.Point(583, 37);
+            this.HorseConfirmBttn.Location = new System.Drawing.Point(583, 524);
             this.HorseConfirmBttn.Name = "HorseConfirmBttn";
             this.HorseConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.HorseConfirmBttn.TabIndex = 0;
             this.HorseConfirmBttn.Text = "Horse";
             this.HorseConfirmBttn.UseVisualStyleBackColor = false;
+            this.HorseConfirmBttn.Click += new System.EventHandler(this.HorseConfirmBttn_Click);
             // 
             // TypeAnimalPanel
             // 
@@ -668,7 +1163,7 @@
             this.TypeAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TypeAnimalPanel.Location = new System.Drawing.Point(0, 0);
             this.TypeAnimalPanel.Name = "TypeAnimalPanel";
-            this.TypeAnimalPanel.Size = new System.Drawing.Size(774, 217);
+            this.TypeAnimalPanel.Size = new System.Drawing.Size(822, 217);
             this.TypeAnimalPanel.TabIndex = 5;
             // 
             // SpecifyPanel
@@ -678,7 +1173,7 @@
             this.SpecifyPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SpecifyPanel.Location = new System.Drawing.Point(0, 147);
             this.SpecifyPanel.Name = "SpecifyPanel";
-            this.SpecifyPanel.Size = new System.Drawing.Size(774, 69);
+            this.SpecifyPanel.Size = new System.Drawing.Size(822, 69);
             this.SpecifyPanel.TabIndex = 12;
             // 
             // SpecifyLbl
@@ -706,7 +1201,7 @@
             this.AnimalTypePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalTypePanel.Location = new System.Drawing.Point(0, 89);
             this.AnimalTypePanel.Name = "AnimalTypePanel";
-            this.AnimalTypePanel.Size = new System.Drawing.Size(774, 58);
+            this.AnimalTypePanel.Size = new System.Drawing.Size(822, 58);
             this.AnimalTypePanel.TabIndex = 11;
             // 
             // TypeOfAnimallbl
@@ -760,7 +1255,7 @@
             this.AnimalCatPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalCatPanel.Location = new System.Drawing.Point(0, 0);
             this.AnimalCatPanel.Name = "AnimalCatPanel";
-            this.AnimalCatPanel.Size = new System.Drawing.Size(774, 89);
+            this.AnimalCatPanel.Size = new System.Drawing.Size(822, 89);
             this.AnimalCatPanel.TabIndex = 10;
             // 
             // FoodPanel
@@ -771,9 +1266,9 @@
             this.FoodPanel.Controls.Add(this.FodForLbl);
             this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FoodPanel.Location = new System.Drawing.Point(0, 2454);
+            this.FoodPanel.Location = new System.Drawing.Point(0, 4125);
             this.FoodPanel.Name = "FoodPanel";
-            this.FoodPanel.Size = new System.Drawing.Size(774, 343);
+            this.FoodPanel.Size = new System.Drawing.Size(822, 343);
             this.FoodPanel.TabIndex = 9;
             this.FoodPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FoodPanel_Paint);
             // 
@@ -788,6 +1283,22 @@
             // AnimalFoodTypeComboBox
             // 
             this.AnimalFoodTypeComboBox.FormattingEnabled = true;
+            this.AnimalFoodTypeComboBox.Items.AddRange(new object[] {
+            "Dog",
+            "Cat",
+            "Fish",
+            "Bird",
+            "Rabbit",
+            "Hamster",
+            "Horse",
+            "Chicken",
+            "Pig",
+            "Sheep",
+            "Goat",
+            "Snake",
+            "Turtle",
+            "Turtoise",
+            "Other"});
             this.AnimalFoodTypeComboBox.Location = new System.Drawing.Point(232, 30);
             this.AnimalFoodTypeComboBox.Name = "AnimalFoodTypeComboBox";
             this.AnimalFoodTypeComboBox.Size = new System.Drawing.Size(270, 33);
@@ -837,9 +1348,9 @@
             this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 2797);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 4468);
             this.AccessPanel.Name = "AccessPanel";
-            this.AccessPanel.Size = new System.Drawing.Size(774, 295);
+            this.AccessPanel.Size = new System.Drawing.Size(822, 295);
             this.AccessPanel.TabIndex = 10;
             // 
             // AccessTypeComboBox
@@ -900,81 +1411,27 @@
             this.AccessConfirmBttn.UseVisualStyleBackColor = false;
             this.AccessConfirmBttn.Click += new System.EventHandler(this.AccessConfirmBttn_Click);
             // 
-            // FANameLbl
+            // DogNameLbl
             // 
-            this.FANameLbl.AutoSize = true;
-            this.FANameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FANameLbl.ForeColor = System.Drawing.Color.White;
-            this.FANameLbl.Location = new System.Drawing.Point(134, 42);
-            this.FANameLbl.Name = "FANameLbl";
-            this.FANameLbl.Size = new System.Drawing.Size(86, 30);
-            this.FANameLbl.TabIndex = 12;
-            this.FANameLbl.Text = "Name :";
+            this.DogNameLbl.AutoSize = true;
+            this.DogNameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogNameLbl.ForeColor = System.Drawing.Color.White;
+            this.DogNameLbl.Location = new System.Drawing.Point(106, 49);
+            this.DogNameLbl.Name = "DogNameLbl";
+            this.DogNameLbl.Size = new System.Drawing.Size(86, 30);
+            this.DogNameLbl.TabIndex = 14;
+            this.DogNameLbl.Text = "Name :";
             // 
-            // FAAgeLbl
+            // DogAgeLbl
             // 
-            this.FAAgeLbl.AutoSize = true;
-            this.FAAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FAAgeLbl.ForeColor = System.Drawing.Color.White;
-            this.FAAgeLbl.Location = new System.Drawing.Point(150, 114);
-            this.FAAgeLbl.Name = "FAAgeLbl";
-            this.FAAgeLbl.Size = new System.Drawing.Size(66, 30);
-            this.FAAgeLbl.TabIndex = 13;
-            this.FAAgeLbl.Text = "Age :";
-            // 
-            // FAGenderLbl
-            // 
-            this.FAGenderLbl.AutoSize = true;
-            this.FAGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FAGenderLbl.ForeColor = System.Drawing.Color.White;
-            this.FAGenderLbl.Location = new System.Drawing.Point(115, 190);
-            this.FAGenderLbl.Name = "FAGenderLbl";
-            this.FAGenderLbl.Size = new System.Drawing.Size(101, 30);
-            this.FAGenderLbl.TabIndex = 14;
-            this.FAGenderLbl.Text = "Gender :";
-            // 
-            // FAPurposeLbl
-            // 
-            this.FAPurposeLbl.AutoSize = true;
-            this.FAPurposeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FAPurposeLbl.ForeColor = System.Drawing.Color.White;
-            this.FAPurposeLbl.Location = new System.Drawing.Point(106, 269);
-            this.FAPurposeLbl.Name = "FAPurposeLbl";
-            this.FAPurposeLbl.Size = new System.Drawing.Size(110, 30);
-            this.FAPurposeLbl.TabIndex = 15;
-            this.FAPurposeLbl.Text = "Purpose :";
-            // 
-            // FANameTxt
-            // 
-            this.FANameTxt.Location = new System.Drawing.Point(226, 43);
-            this.FANameTxt.Name = "FANameTxt";
-            this.FANameTxt.Size = new System.Drawing.Size(351, 31);
-            this.FANameTxt.TabIndex = 16;
-            // 
-            // FAAgeTxt
-            // 
-            this.FAAgeTxt.Location = new System.Drawing.Point(226, 115);
-            this.FAAgeTxt.Name = "FAAgeTxt";
-            this.FAAgeTxt.Size = new System.Drawing.Size(150, 31);
-            this.FAAgeTxt.TabIndex = 17;
-            // 
-            // FAPurposeTxt
-            // 
-            this.FAPurposeTxt.Location = new System.Drawing.Point(222, 268);
-            this.FAPurposeTxt.Name = "FAPurposeTxt";
-            this.FAPurposeTxt.Size = new System.Drawing.Size(355, 31);
-            this.FAPurposeTxt.TabIndex = 18;
-            // 
-            // FAGenderComboBox
-            // 
-            this.FAGenderComboBox.FormattingEnabled = true;
-            this.FAGenderComboBox.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.FAGenderComboBox.Location = new System.Drawing.Point(226, 191);
-            this.FAGenderComboBox.Name = "FAGenderComboBox";
-            this.FAGenderComboBox.Size = new System.Drawing.Size(182, 33);
-            this.FAGenderComboBox.TabIndex = 19;
+            this.DogAgeLbl.AutoSize = true;
+            this.DogAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.DogAgeLbl.Location = new System.Drawing.Point(124, 119);
+            this.DogAgeLbl.Name = "DogAgeLbl";
+            this.DogAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.DogAgeLbl.TabIndex = 15;
+            this.DogAgeLbl.Text = "Age :";
             // 
             // CreateSingleAdvertisement
             // 
@@ -982,7 +1439,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.ClientSize = new System.Drawing.Size(848, 449);
             this.Controls.Add(this.AccessPanel);
             this.Controls.Add(this.FoodPanel);
             this.Controls.Add(this.AnimalPanel);
@@ -1016,8 +1473,11 @@
             this.FarmAnimalPanel.ResumeLayout(false);
             this.FarmAnimalPanel.PerformLayout();
             this.GenericAnimalPanel.ResumeLayout(false);
+            this.GenericAnimalPanel.PerformLayout();
             this.DogPanel.ResumeLayout(false);
+            this.DogPanel.PerformLayout();
             this.HorsePanel.ResumeLayout(false);
+            this.HorsePanel.PerformLayout();
             this.TypeAnimalPanel.ResumeLayout(false);
             this.TypeAnimalPanel.PerformLayout();
             this.SpecifyPanel.ResumeLayout(false);
@@ -1112,5 +1572,34 @@
         private Label FAGenderLbl;
         private Label FAAgeLbl;
         private Label FANameLbl;
+        private TextBox DetailThreeTxt;
+        private TextBox DetailTwoTxt;
+        private TextBox DetailOneTxt;
+        private ComboBox GAGenderComboBox;
+        private TextBox GAAgeTxt;
+        private TextBox GANameTxt;
+        private Label DetailThreeLbl;
+        private Label DetailTwoLbl;
+        private Label DetailOneLbl;
+        private Label GAGenderLbl;
+        private Label GAAgeLbl;
+        private Label GANameLbl;
+        private TextBox HorsePurposeTxt;
+        private ComboBox comboBox1;
+        private RadioButton BrokenNoRadBttn;
+        private RadioButton BrokenYesRadBttn;
+        private TextBox HorseSizeTxt;
+        private ComboBox HorseGenderComboBox;
+        private TextBox HorseAgeTxt;
+        private TextBox HorseNameTxt;
+        private Label HorsePurposeLbl;
+        private Label HorseBreedLbl;
+        private Label BrokenLbl;
+        private Label HorseSizeLbl;
+        private Label HorseGenderLbl;
+        private Label HorseAgeLbl;
+        private Label HorseNameLbl;
+        private Label DogAgeLbl;
+        private Label DogNameLbl;
     }
 }
