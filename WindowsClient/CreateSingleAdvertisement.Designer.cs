@@ -50,6 +50,22 @@
             this.ConfirmationOnePictureBx = new System.Windows.Forms.PictureBox();
             this.AnimalPanel = new System.Windows.Forms.Panel();
             this.LitterPanel = new System.Windows.Forms.Panel();
+            this.NotPurebreedPanel = new System.Windows.Forms.Panel();
+            this.BreedTwoComboBox = new System.Windows.Forms.ComboBox();
+            this.BreedOneComboBox = new System.Windows.Forms.ComboBox();
+            this.BreedTwoLbl = new System.Windows.Forms.Label();
+            this.BreedOneLbl = new System.Windows.Forms.Label();
+            this.IsPurebreedPanel = new System.Windows.Forms.Panel();
+            this.BreedComboBox = new System.Windows.Forms.ComboBox();
+            this.BreedLbl = new System.Windows.Forms.Label();
+            this.LitterHeaderPanel = new System.Windows.Forms.Panel();
+            this.LitterAgeTxt = new System.Windows.Forms.TextBox();
+            this.LitterAgeLbl = new System.Windows.Forms.Label();
+            this.NoLitterLbl = new System.Windows.Forms.Label();
+            this.LitterNoRadBttn = new System.Windows.Forms.RadioButton();
+            this.LitterSizeTxt = new System.Windows.Forms.TextBox();
+            this.LitterYesRadBttn = new System.Windows.Forms.RadioButton();
+            this.PurebreedLbl = new System.Windows.Forms.Label();
             this.LitterConfirmBttn = new System.Windows.Forms.Button();
             this.FarmAnimalPanel = new System.Windows.Forms.Panel();
             this.FarmAnimalConfirmBttn = new System.Windows.Forms.Button();
@@ -92,6 +108,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmationOnePictureBx)).BeginInit();
             this.AnimalPanel.SuspendLayout();
             this.LitterPanel.SuspendLayout();
+            this.NotPurebreedPanel.SuspendLayout();
+            this.IsPurebreedPanel.SuspendLayout();
+            this.LitterHeaderPanel.SuspendLayout();
             this.FarmAnimalPanel.SuspendLayout();
             this.GenericAnimalPanel.SuspendLayout();
             this.DogPanel.SuspendLayout();
@@ -335,17 +354,190 @@
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 1208);
             this.AnimalPanel.Name = "AnimalPanel";
-            this.AnimalPanel.Size = new System.Drawing.Size(774, 812);
+            this.AnimalPanel.Size = new System.Drawing.Size(774, 1226);
             this.AnimalPanel.TabIndex = 8;
             // 
             // LitterPanel
             // 
+            this.LitterPanel.Controls.Add(this.NotPurebreedPanel);
+            this.LitterPanel.Controls.Add(this.IsPurebreedPanel);
+            this.LitterPanel.Controls.Add(this.LitterHeaderPanel);
             this.LitterPanel.Controls.Add(this.LitterConfirmBttn);
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LitterPanel.Location = new System.Drawing.Point(0, 678);
             this.LitterPanel.Name = "LitterPanel";
-            this.LitterPanel.Size = new System.Drawing.Size(774, 132);
+            this.LitterPanel.Size = new System.Drawing.Size(774, 548);
             this.LitterPanel.TabIndex = 11;
+            // 
+            // NotPurebreedPanel
+            // 
+            this.NotPurebreedPanel.Controls.Add(this.BreedTwoComboBox);
+            this.NotPurebreedPanel.Controls.Add(this.BreedOneComboBox);
+            this.NotPurebreedPanel.Controls.Add(this.BreedTwoLbl);
+            this.NotPurebreedPanel.Controls.Add(this.BreedOneLbl);
+            this.NotPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NotPurebreedPanel.Location = new System.Drawing.Point(0, 317);
+            this.NotPurebreedPanel.Name = "NotPurebreedPanel";
+            this.NotPurebreedPanel.Size = new System.Drawing.Size(774, 190);
+            this.NotPurebreedPanel.TabIndex = 18;
+            // 
+            // BreedTwoComboBox
+            // 
+            this.BreedTwoComboBox.FormattingEnabled = true;
+            this.BreedTwoComboBox.Location = new System.Drawing.Point(242, 108);
+            this.BreedTwoComboBox.Name = "BreedTwoComboBox";
+            this.BreedTwoComboBox.Size = new System.Drawing.Size(310, 33);
+            this.BreedTwoComboBox.TabIndex = 18;
+            // 
+            // BreedOneComboBox
+            // 
+            this.BreedOneComboBox.FormattingEnabled = true;
+            this.BreedOneComboBox.Location = new System.Drawing.Point(240, 28);
+            this.BreedOneComboBox.Name = "BreedOneComboBox";
+            this.BreedOneComboBox.Size = new System.Drawing.Size(310, 33);
+            this.BreedOneComboBox.TabIndex = 17;
+            // 
+            // BreedTwoLbl
+            // 
+            this.BreedTwoLbl.AutoSize = true;
+            this.BreedTwoLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BreedTwoLbl.ForeColor = System.Drawing.Color.White;
+            this.BreedTwoLbl.Location = new System.Drawing.Point(101, 111);
+            this.BreedTwoLbl.Name = "BreedTwoLbl";
+            this.BreedTwoLbl.Size = new System.Drawing.Size(135, 30);
+            this.BreedTwoLbl.TabIndex = 16;
+            this.BreedTwoLbl.Text = "Breed Two :";
+            // 
+            // BreedOneLbl
+            // 
+            this.BreedOneLbl.AutoSize = true;
+            this.BreedOneLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BreedOneLbl.ForeColor = System.Drawing.Color.White;
+            this.BreedOneLbl.Location = new System.Drawing.Point(100, 27);
+            this.BreedOneLbl.Name = "BreedOneLbl";
+            this.BreedOneLbl.Size = new System.Drawing.Size(134, 30);
+            this.BreedOneLbl.TabIndex = 15;
+            this.BreedOneLbl.Text = "Breed One :";
+            // 
+            // IsPurebreedPanel
+            // 
+            this.IsPurebreedPanel.Controls.Add(this.BreedComboBox);
+            this.IsPurebreedPanel.Controls.Add(this.BreedLbl);
+            this.IsPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IsPurebreedPanel.Location = new System.Drawing.Point(0, 228);
+            this.IsPurebreedPanel.Name = "IsPurebreedPanel";
+            this.IsPurebreedPanel.Size = new System.Drawing.Size(774, 89);
+            this.IsPurebreedPanel.TabIndex = 17;
+            // 
+            // BreedComboBox
+            // 
+            this.BreedComboBox.FormattingEnabled = true;
+            this.BreedComboBox.Location = new System.Drawing.Point(192, 30);
+            this.BreedComboBox.Name = "BreedComboBox";
+            this.BreedComboBox.Size = new System.Drawing.Size(310, 33);
+            this.BreedComboBox.TabIndex = 15;
+            this.BreedComboBox.SelectedIndexChanged += new System.EventHandler(this.BreedComboBox_SelectedIndexChanged);
+            // 
+            // BreedLbl
+            // 
+            this.BreedLbl.AutoSize = true;
+            this.BreedLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BreedLbl.ForeColor = System.Drawing.Color.White;
+            this.BreedLbl.Location = new System.Drawing.Point(100, 29);
+            this.BreedLbl.Name = "BreedLbl";
+            this.BreedLbl.Size = new System.Drawing.Size(86, 30);
+            this.BreedLbl.TabIndex = 14;
+            this.BreedLbl.Text = "Breed :";
+            // 
+            // LitterHeaderPanel
+            // 
+            this.LitterHeaderPanel.Controls.Add(this.LitterAgeTxt);
+            this.LitterHeaderPanel.Controls.Add(this.LitterAgeLbl);
+            this.LitterHeaderPanel.Controls.Add(this.NoLitterLbl);
+            this.LitterHeaderPanel.Controls.Add(this.LitterNoRadBttn);
+            this.LitterHeaderPanel.Controls.Add(this.LitterSizeTxt);
+            this.LitterHeaderPanel.Controls.Add(this.LitterYesRadBttn);
+            this.LitterHeaderPanel.Controls.Add(this.PurebreedLbl);
+            this.LitterHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LitterHeaderPanel.Location = new System.Drawing.Point(0, 0);
+            this.LitterHeaderPanel.Name = "LitterHeaderPanel";
+            this.LitterHeaderPanel.Size = new System.Drawing.Size(774, 228);
+            this.LitterHeaderPanel.TabIndex = 16;
+            // 
+            // LitterAgeTxt
+            // 
+            this.LitterAgeTxt.Location = new System.Drawing.Point(242, 174);
+            this.LitterAgeTxt.Name = "LitterAgeTxt";
+            this.LitterAgeTxt.Size = new System.Drawing.Size(187, 31);
+            this.LitterAgeTxt.TabIndex = 17;
+            // 
+            // LitterAgeLbl
+            // 
+            this.LitterAgeLbl.AutoSize = true;
+            this.LitterAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LitterAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.LitterAgeLbl.Location = new System.Drawing.Point(160, 173);
+            this.LitterAgeLbl.Name = "LitterAgeLbl";
+            this.LitterAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.LitterAgeLbl.TabIndex = 16;
+            this.LitterAgeLbl.Text = "Age :";
+            // 
+            // NoLitterLbl
+            // 
+            this.NoLitterLbl.AutoSize = true;
+            this.NoLitterLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NoLitterLbl.ForeColor = System.Drawing.Color.White;
+            this.NoLitterLbl.Location = new System.Drawing.Point(73, 51);
+            this.NoLitterLbl.Name = "NoLitterLbl";
+            this.NoLitterLbl.Size = new System.Drawing.Size(162, 30);
+            this.NoLitterLbl.TabIndex = 11;
+            this.NoLitterLbl.Text = "No. Available :";
+            // 
+            // LitterNoRadBttn
+            // 
+            this.LitterNoRadBttn.AutoSize = true;
+            this.LitterNoRadBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LitterNoRadBttn.ForeColor = System.Drawing.Color.White;
+            this.LitterNoRadBttn.Location = new System.Drawing.Point(347, 118);
+            this.LitterNoRadBttn.Name = "LitterNoRadBttn";
+            this.LitterNoRadBttn.Size = new System.Drawing.Size(62, 29);
+            this.LitterNoRadBttn.TabIndex = 15;
+            this.LitterNoRadBttn.TabStop = true;
+            this.LitterNoRadBttn.Text = "No";
+            this.LitterNoRadBttn.UseVisualStyleBackColor = true;
+            this.LitterNoRadBttn.CheckedChanged += new System.EventHandler(this.LitterNoRadBttn_CheckedChanged);
+            // 
+            // LitterSizeTxt
+            // 
+            this.LitterSizeTxt.Location = new System.Drawing.Point(241, 52);
+            this.LitterSizeTxt.Name = "LitterSizeTxt";
+            this.LitterSizeTxt.Size = new System.Drawing.Size(187, 31);
+            this.LitterSizeTxt.TabIndex = 12;
+            // 
+            // LitterYesRadBttn
+            // 
+            this.LitterYesRadBttn.AutoSize = true;
+            this.LitterYesRadBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LitterYesRadBttn.ForeColor = System.Drawing.Color.White;
+            this.LitterYesRadBttn.Location = new System.Drawing.Point(260, 117);
+            this.LitterYesRadBttn.Name = "LitterYesRadBttn";
+            this.LitterYesRadBttn.Size = new System.Drawing.Size(64, 29);
+            this.LitterYesRadBttn.TabIndex = 14;
+            this.LitterYesRadBttn.TabStop = true;
+            this.LitterYesRadBttn.Text = "Yes";
+            this.LitterYesRadBttn.UseVisualStyleBackColor = true;
+            this.LitterYesRadBttn.CheckedChanged += new System.EventHandler(this.LitterYesRadBttn_CheckedChanged);
+            // 
+            // PurebreedLbl
+            // 
+            this.PurebreedLbl.AutoSize = true;
+            this.PurebreedLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PurebreedLbl.ForeColor = System.Drawing.Color.White;
+            this.PurebreedLbl.Location = new System.Drawing.Point(100, 114);
+            this.PurebreedLbl.Name = "PurebreedLbl";
+            this.PurebreedLbl.Size = new System.Drawing.Size(134, 30);
+            this.PurebreedLbl.TabIndex = 13;
+            this.PurebreedLbl.Text = "Purebreed :";
             // 
             // LitterConfirmBttn
             // 
@@ -353,12 +545,13 @@
             this.LitterConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LitterConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LitterConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.LitterConfirmBttn.Location = new System.Drawing.Point(583, 29);
+            this.LitterConfirmBttn.Location = new System.Drawing.Point(583, 447);
             this.LitterConfirmBttn.Name = "LitterConfirmBttn";
             this.LitterConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.LitterConfirmBttn.TabIndex = 4;
             this.LitterConfirmBttn.Text = "Litter";
             this.LitterConfirmBttn.UseVisualStyleBackColor = false;
+            this.LitterConfirmBttn.Click += new System.EventHandler(this.LitterConfirmBttn_Click);
             // 
             // FarmAnimalPanel
             // 
@@ -561,7 +754,7 @@
             this.FoodPanel.Controls.Add(this.FodForLbl);
             this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FoodPanel.Location = new System.Drawing.Point(0, 2020);
+            this.FoodPanel.Location = new System.Drawing.Point(0, 2434);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(774, 343);
             this.FoodPanel.TabIndex = 9;
@@ -627,7 +820,7 @@
             this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 2363);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 2777);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(774, 295);
             this.AccessPanel.TabIndex = 10;
@@ -721,6 +914,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmationOnePictureBx)).EndInit();
             this.AnimalPanel.ResumeLayout(false);
             this.LitterPanel.ResumeLayout(false);
+            this.NotPurebreedPanel.ResumeLayout(false);
+            this.NotPurebreedPanel.PerformLayout();
+            this.IsPurebreedPanel.ResumeLayout(false);
+            this.IsPurebreedPanel.PerformLayout();
+            this.LitterHeaderPanel.ResumeLayout(false);
+            this.LitterHeaderPanel.PerformLayout();
             this.FarmAnimalPanel.ResumeLayout(false);
             this.GenericAnimalPanel.ResumeLayout(false);
             this.DogPanel.ResumeLayout(false);
@@ -795,5 +994,21 @@
         private ComboBox AnimalFoodTypeComboBox;
         private Label MoreDetailLbl;
         private Label FodForLbl;
+        private Panel NotPurebreedPanel;
+        private ComboBox BreedTwoComboBox;
+        private ComboBox BreedOneComboBox;
+        private Label BreedTwoLbl;
+        private Label BreedOneLbl;
+        private Panel IsPurebreedPanel;
+        private ComboBox BreedComboBox;
+        private Label BreedLbl;
+        private Panel LitterHeaderPanel;
+        private Label NoLitterLbl;
+        private RadioButton LitterNoRadBttn;
+        private TextBox LitterSizeTxt;
+        private RadioButton LitterYesRadBttn;
+        private Label PurebreedLbl;
+        private TextBox LitterAgeTxt;
+        private Label LitterAgeLbl;
     }
 }

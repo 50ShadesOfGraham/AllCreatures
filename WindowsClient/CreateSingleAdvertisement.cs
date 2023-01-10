@@ -293,5 +293,138 @@ namespace WindowsClient
                 if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
             }
         }
+
+        private void BreedComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(AnimalTypeComboBox.SelectedItem.Equals("Cat"))
+            {
+                BreedComboBox.Items.Clear();
+                BreedOneComboBox.Items.Clear();
+                BreedTwoComboBox.Items.Clear();
+
+                BreedComboBox.Items.Add("Devon Rex");
+                BreedOneComboBox.Items.Add("Devon Rex");
+                BreedTwoComboBox.Items.Add("Devon Rex");
+                BreedComboBox.Items.Add("Abyssinian");
+                BreedOneComboBox.Items.Add("Abyssinian");
+                BreedTwoComboBox.Items.Add("Abyssinian");
+                BreedComboBox.Items.Add("Sphynx");
+                BreedOneComboBox.Items.Add("Sphynx");
+                BreedTwoComboBox.Items.Add("Sphynx");
+                BreedComboBox.Items.Add("Scottish Fold");
+                BreedOneComboBox.Items.Add("Scottish Fold");
+                BreedTwoComboBox.Items.Add("Scottish Fold");
+
+                BreedComboBox.Items.Add("American Shorthair");
+                BreedOneComboBox.Items.Add("American Shorthair");
+                BreedTwoComboBox.Items.Add("American Shorthair");
+                BreedComboBox.Items.Add("Maine Coon");
+                BreedOneComboBox.Items.Add("Maine Coon");
+                BreedTwoComboBox.Items.Add("Maine Coon");
+                BreedComboBox.Items.Add("Persian");
+                BreedOneComboBox.Items.Add("Persian");
+                BreedTwoComboBox.Items.Add("Persian");
+                BreedComboBox.Items.Add("British Shorthair");
+                BreedOneComboBox.Items.Add("British Shorthair");
+                BreedTwoComboBox.Items.Add("British Shorthair");
+
+                BreedComboBox.Items.Add("Other");
+                BreedOneComboBox.Items.Add("Other");
+                BreedTwoComboBox.Items.Add("Other");
+
+            }
+            else if(AnimalTypeComboBox.SelectedItem.Equals("Dog"))
+            {
+                BreedComboBox.Items.Clear();
+                BreedOneComboBox.Items.Clear();
+                BreedTwoComboBox.Items.Clear();
+
+                BreedComboBox.Items.Add("Golden Retriever");
+                BreedOneComboBox.Items.Add("Golden Retriever");
+                BreedTwoComboBox.Items.Add("Golden Retriever");
+                BreedComboBox.Items.Add("Labrador");
+                BreedOneComboBox.Items.Add("Labrador");
+                BreedTwoComboBox.Items.Add("Labrador");
+                BreedComboBox.Items.Add("French Bulldog");
+                BreedOneComboBox.Items.Add("French Bulldog");
+                BreedTwoComboBox.Items.Add("French Bulldog");
+                BreedComboBox.Items.Add("German Shepherd");
+                BreedOneComboBox.Items.Add("German Shepherd");
+                BreedTwoComboBox.Items.Add("German Shepherd");
+
+                BreedComboBox.Items.Add("Dachshund");
+                BreedOneComboBox.Items.Add("Dachshund");
+                BreedTwoComboBox.Items.Add("Dachshund");
+                BreedComboBox.Items.Add("Newfoundland");
+                BreedOneComboBox.Items.Add("Newfoundland");
+                BreedTwoComboBox.Items.Add("Newfoundland");
+                BreedComboBox.Items.Add("Boxer");
+                BreedOneComboBox.Items.Add("Boxer");
+                BreedTwoComboBox.Items.Add("Boxer");
+                BreedComboBox.Items.Add("Terrier");
+                BreedOneComboBox.Items.Add("Terrier");
+                BreedTwoComboBox.Items.Add("Terrier");
+
+                BreedComboBox.Items.Add("Other");
+                BreedOneComboBox.Items.Add("Other");
+                BreedTwoComboBox.Items.Add("Other");
+            }
+        }
+
+        private void LitterYesRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            IsPurebreedPanel.Visible = true;
+            NotPurebreedPanel.Visible = false;
+        }
+
+        private void LitterNoRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            IsPurebreedPanel.Visible = false;
+            NotPurebreedPanel.Visible = true;
+        }
+
+        private void LitterConfirmBttn_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            int AdvertID = 0;
+            do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+
+            byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+            byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+            byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+
+            if (LitterYesRadBttn.Checked)
+            {
+                Litter litter = new Litter(AdvertID, Model.CurrentUser.Email.Trim(), TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text),
+                    false, "AVAILABLE", "MULTI", AnimalTypeComboBox.SelectedItem.ToString(), Convert.ToInt32(LitterAgeTxt.Text),"MULTI",Convert.ToInt32(LitterSizeTxt.Text),
+                    true,BreedComboBox.SelectedItem.ToString(),"");
+
+                if(Model.addNewLitter(litter))
+                {
+                    string message = "Item #" + AdvertID + " has been added to our system. " +
+                   "Admin must verify item before advertisement is made public";
+                    string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                    int notifID = 0;
+                    do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                }
+            }
+            else if(LitterNoRadBttn.Checked)
+            {
+                Litter litter = new Litter(AdvertID, Model.CurrentUser.Email.Trim(), TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text),
+                    false, "AVAILABLE", "MULTI", AnimalTypeComboBox.SelectedItem.ToString(), Convert.ToInt32(LitterAgeTxt.Text), "MULTI", Convert.ToInt32(LitterSizeTxt.Text),
+                    false, BreedOneComboBox.SelectedItem.ToString(), BreedTwoComboBox.SelectedItem.ToString());
+
+                if (Model.addNewLitter(litter))
+                {
+                    string message = "Item #" + AdvertID + " has been added to our system. " +
+                   "Admin must verify item before advertisement is made public";
+                    string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                    int notifID = 0;
+                    do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                }
+            }
+        }
     }
 }
