@@ -70,6 +70,10 @@
             this.AnimalCatComboBox = new System.Windows.Forms.ComboBox();
             this.AnimalCatPanel = new System.Windows.Forms.Panel();
             this.FoodPanel = new System.Windows.Forms.Panel();
+            this.DetailTxt = new System.Windows.Forms.TextBox();
+            this.AnimalFoodTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.MoreDetailLbl = new System.Windows.Forms.Label();
+            this.FodForLbl = new System.Windows.Forms.Label();
             this.FoodConfirmBttn = new System.Windows.Forms.Button();
             this.AccessPanel = new System.Windows.Forms.Panel();
             this.AccessTypeComboBox = new System.Windows.Forms.ComboBox();
@@ -551,13 +555,55 @@
             // 
             // FoodPanel
             // 
+            this.FoodPanel.Controls.Add(this.DetailTxt);
+            this.FoodPanel.Controls.Add(this.AnimalFoodTypeComboBox);
+            this.FoodPanel.Controls.Add(this.MoreDetailLbl);
+            this.FoodPanel.Controls.Add(this.FodForLbl);
             this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FoodPanel.Location = new System.Drawing.Point(0, 2020);
             this.FoodPanel.Name = "FoodPanel";
-            this.FoodPanel.Size = new System.Drawing.Size(774, 245);
+            this.FoodPanel.Size = new System.Drawing.Size(774, 343);
             this.FoodPanel.TabIndex = 9;
             this.FoodPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FoodPanel_Paint);
+            // 
+            // DetailTxt
+            // 
+            this.DetailTxt.Location = new System.Drawing.Point(232, 100);
+            this.DetailTxt.Multiline = true;
+            this.DetailTxt.Name = "DetailTxt";
+            this.DetailTxt.Size = new System.Drawing.Size(381, 88);
+            this.DetailTxt.TabIndex = 13;
+            // 
+            // AnimalFoodTypeComboBox
+            // 
+            this.AnimalFoodTypeComboBox.FormattingEnabled = true;
+            this.AnimalFoodTypeComboBox.Location = new System.Drawing.Point(232, 30);
+            this.AnimalFoodTypeComboBox.Name = "AnimalFoodTypeComboBox";
+            this.AnimalFoodTypeComboBox.Size = new System.Drawing.Size(270, 33);
+            this.AnimalFoodTypeComboBox.TabIndex = 12;
+            // 
+            // MoreDetailLbl
+            // 
+            this.MoreDetailLbl.AutoSize = true;
+            this.MoreDetailLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MoreDetailLbl.ForeColor = System.Drawing.Color.White;
+            this.MoreDetailLbl.Location = new System.Drawing.Point(73, 99);
+            this.MoreDetailLbl.Name = "MoreDetailLbl";
+            this.MoreDetailLbl.Size = new System.Drawing.Size(147, 30);
+            this.MoreDetailLbl.TabIndex = 11;
+            this.MoreDetailLbl.Text = "More Detail :";
+            // 
+            // FodForLbl
+            // 
+            this.FodForLbl.AutoSize = true;
+            this.FodForLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FodForLbl.ForeColor = System.Drawing.Color.White;
+            this.FodForLbl.Location = new System.Drawing.Point(73, 29);
+            this.FodForLbl.Name = "FodForLbl";
+            this.FodForLbl.Size = new System.Drawing.Size(153, 30);
+            this.FodForLbl.TabIndex = 10;
+            this.FodForLbl.Text = "Animal Type :";
             // 
             // FoodConfirmBttn
             // 
@@ -565,12 +611,13 @@
             this.FoodConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FoodConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FoodConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.FoodConfirmBttn.Location = new System.Drawing.Point(583, 158);
+            this.FoodConfirmBttn.Location = new System.Drawing.Point(583, 251);
             this.FoodConfirmBttn.Name = "FoodConfirmBttn";
             this.FoodConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.FoodConfirmBttn.TabIndex = 5;
             this.FoodConfirmBttn.Text = "Food";
             this.FoodConfirmBttn.UseVisualStyleBackColor = false;
+            this.FoodConfirmBttn.Click += new System.EventHandler(this.FoodConfirmBttn_Click);
             // 
             // AccessPanel
             // 
@@ -580,7 +627,7 @@
             this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 2265);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 2363);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(774, 295);
             this.AccessPanel.TabIndex = 10;
@@ -685,6 +732,7 @@
             this.AnimalTypePanel.ResumeLayout(false);
             this.AnimalTypePanel.PerformLayout();
             this.FoodPanel.ResumeLayout(false);
+            this.FoodPanel.PerformLayout();
             this.AccessPanel.ResumeLayout(false);
             this.AccessPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -743,5 +791,9 @@
         private ComboBox AccessCatComboBox;
         private Label label2;
         private Label AccessCatLbl;
+        private TextBox DetailTxt;
+        private ComboBox AnimalFoodTypeComboBox;
+        private Label MoreDetailLbl;
+        private Label FodForLbl;
     }
 }

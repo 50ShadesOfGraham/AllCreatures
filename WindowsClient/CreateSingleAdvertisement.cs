@@ -269,5 +269,29 @@ namespace WindowsClient
                 if (Model.addNewNotification(notifID.ToString(),message,notificationtitle,DateTime.Now,false,Model.CurrentUser.Email)) { }
             }
         }
+
+        private void FoodConfirmBttn_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            int AdvertID = 0;
+            do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+
+            byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+            byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+            byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+
+            Food food = new Food(AdvertID, Model.CurrentUser.Email.Trim(), TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "AVAILABLE",
+                ImageOne, ImageTwo, ImageThree, AnimalFoodTypeComboBox.SelectedItem.ToString(), DetailTxt.Text);
+
+            if (Model.addNewFood(food))
+            {
+                string message = "Item #" + AdvertID + " has been added to our system. " +
+                    "Admin must verify item before advertisement is made public";
+                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                int notifID = 0;
+                do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+            }
+        }
     }
 }
