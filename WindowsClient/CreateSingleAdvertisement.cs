@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace WindowsClient
@@ -425,6 +426,32 @@ namespace WindowsClient
                     if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
                 }
             }
+        }
+
+        private void FarmAnimalConfirmBttn_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            int AdvertID = 0;
+            do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+
+            byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+            byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+            byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+
+            FarmAnimal farmAnimal = new FarmAnimal(AdvertID,Model.CurrentUser.Email.Trim(),TitleTxt.Text,DescriptionTxt.Text,
+                Convert.ToDouble(PriceTxt.Text),false,"AVAILABLE",FANameTxt.Text,AnimalTypeComboBox.SelectedItem.ToString(),
+                Convert.ToInt32(FAAgeTxt.Text),FAGenderComboBox.SelectedItem.ToString(),FAPurposeTxt.Text);
+
+            if (Model.addNewFarmAnimal(farmAnimal))
+            {
+                string message = "Item #" + AdvertID + " has been added to our system. " +
+               "Admin must verify item before advertisement is made public";
+                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                int notifID = 0;
+                do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+            }
+
         }
     }
 }

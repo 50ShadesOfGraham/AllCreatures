@@ -97,6 +97,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.AccessCatLbl = new System.Windows.Forms.Label();
             this.AccessConfirmBttn = new System.Windows.Forms.Button();
+            this.FANameLbl = new System.Windows.Forms.Label();
+            this.FAAgeLbl = new System.Windows.Forms.Label();
+            this.FAGenderLbl = new System.Windows.Forms.Label();
+            this.FAPurposeLbl = new System.Windows.Forms.Label();
+            this.FANameTxt = new System.Windows.Forms.TextBox();
+            this.FAAgeTxt = new System.Windows.Forms.TextBox();
+            this.FAPurposeTxt = new System.Windows.Forms.TextBox();
+            this.FAGenderComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.GeneralAdvertPanel.SuspendLayout();
             this.ImageUploadGroupBox.SuspendLayout();
@@ -354,7 +362,7 @@
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 1208);
             this.AnimalPanel.Name = "AnimalPanel";
-            this.AnimalPanel.Size = new System.Drawing.Size(774, 1226);
+            this.AnimalPanel.Size = new System.Drawing.Size(774, 1246);
             this.AnimalPanel.TabIndex = 8;
             // 
             // LitterPanel
@@ -364,9 +372,9 @@
             this.LitterPanel.Controls.Add(this.LitterHeaderPanel);
             this.LitterPanel.Controls.Add(this.LitterConfirmBttn);
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LitterPanel.Location = new System.Drawing.Point(0, 678);
+            this.LitterPanel.Location = new System.Drawing.Point(0, 1005);
             this.LitterPanel.Name = "LitterPanel";
-            this.LitterPanel.Size = new System.Drawing.Size(774, 548);
+            this.LitterPanel.Size = new System.Drawing.Size(774, 566);
             this.LitterPanel.TabIndex = 11;
             // 
             // NotPurebreedPanel
@@ -378,7 +386,7 @@
             this.NotPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.NotPurebreedPanel.Location = new System.Drawing.Point(0, 317);
             this.NotPurebreedPanel.Name = "NotPurebreedPanel";
-            this.NotPurebreedPanel.Size = new System.Drawing.Size(774, 190);
+            this.NotPurebreedPanel.Size = new System.Drawing.Size(774, 149);
             this.NotPurebreedPanel.TabIndex = 18;
             // 
             // BreedTwoComboBox
@@ -545,7 +553,7 @@
             this.LitterConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LitterConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LitterConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.LitterConfirmBttn.Location = new System.Drawing.Point(583, 447);
+            this.LitterConfirmBttn.Location = new System.Drawing.Point(583, 478);
             this.LitterConfirmBttn.Name = "LitterConfirmBttn";
             this.LitterConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.LitterConfirmBttn.TabIndex = 4;
@@ -555,11 +563,19 @@
             // 
             // FarmAnimalPanel
             // 
+            this.FarmAnimalPanel.Controls.Add(this.FAGenderComboBox);
+            this.FarmAnimalPanel.Controls.Add(this.FAPurposeTxt);
+            this.FarmAnimalPanel.Controls.Add(this.FAAgeTxt);
+            this.FarmAnimalPanel.Controls.Add(this.FANameTxt);
+            this.FarmAnimalPanel.Controls.Add(this.FAPurposeLbl);
+            this.FarmAnimalPanel.Controls.Add(this.FAGenderLbl);
+            this.FarmAnimalPanel.Controls.Add(this.FAAgeLbl);
+            this.FarmAnimalPanel.Controls.Add(this.FANameLbl);
             this.FarmAnimalPanel.Controls.Add(this.FarmAnimalConfirmBttn);
             this.FarmAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 562);
             this.FarmAnimalPanel.Name = "FarmAnimalPanel";
-            this.FarmAnimalPanel.Size = new System.Drawing.Size(774, 116);
+            this.FarmAnimalPanel.Size = new System.Drawing.Size(774, 443);
             this.FarmAnimalPanel.TabIndex = 10;
             // 
             // FarmAnimalConfirmBttn
@@ -568,12 +584,13 @@
             this.FarmAnimalConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FarmAnimalConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FarmAnimalConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.FarmAnimalConfirmBttn.Location = new System.Drawing.Point(583, 32);
+            this.FarmAnimalConfirmBttn.Location = new System.Drawing.Point(583, 344);
             this.FarmAnimalConfirmBttn.Name = "FarmAnimalConfirmBttn";
             this.FarmAnimalConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.FarmAnimalConfirmBttn.TabIndex = 3;
             this.FarmAnimalConfirmBttn.Text = "Farm Animal";
             this.FarmAnimalConfirmBttn.UseVisualStyleBackColor = false;
+            this.FarmAnimalConfirmBttn.Click += new System.EventHandler(this.FarmAnimalConfirmBttn_Click);
             // 
             // GenericAnimalPanel
             // 
@@ -754,7 +771,7 @@
             this.FoodPanel.Controls.Add(this.FodForLbl);
             this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FoodPanel.Location = new System.Drawing.Point(0, 2434);
+            this.FoodPanel.Location = new System.Drawing.Point(0, 2454);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(774, 343);
             this.FoodPanel.TabIndex = 9;
@@ -820,7 +837,7 @@
             this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 2777);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 2797);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(774, 295);
             this.AccessPanel.TabIndex = 10;
@@ -883,6 +900,82 @@
             this.AccessConfirmBttn.UseVisualStyleBackColor = false;
             this.AccessConfirmBttn.Click += new System.EventHandler(this.AccessConfirmBttn_Click);
             // 
+            // FANameLbl
+            // 
+            this.FANameLbl.AutoSize = true;
+            this.FANameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FANameLbl.ForeColor = System.Drawing.Color.White;
+            this.FANameLbl.Location = new System.Drawing.Point(134, 42);
+            this.FANameLbl.Name = "FANameLbl";
+            this.FANameLbl.Size = new System.Drawing.Size(86, 30);
+            this.FANameLbl.TabIndex = 12;
+            this.FANameLbl.Text = "Name :";
+            // 
+            // FAAgeLbl
+            // 
+            this.FAAgeLbl.AutoSize = true;
+            this.FAAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FAAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.FAAgeLbl.Location = new System.Drawing.Point(150, 114);
+            this.FAAgeLbl.Name = "FAAgeLbl";
+            this.FAAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.FAAgeLbl.TabIndex = 13;
+            this.FAAgeLbl.Text = "Age :";
+            // 
+            // FAGenderLbl
+            // 
+            this.FAGenderLbl.AutoSize = true;
+            this.FAGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FAGenderLbl.ForeColor = System.Drawing.Color.White;
+            this.FAGenderLbl.Location = new System.Drawing.Point(115, 190);
+            this.FAGenderLbl.Name = "FAGenderLbl";
+            this.FAGenderLbl.Size = new System.Drawing.Size(101, 30);
+            this.FAGenderLbl.TabIndex = 14;
+            this.FAGenderLbl.Text = "Gender :";
+            // 
+            // FAPurposeLbl
+            // 
+            this.FAPurposeLbl.AutoSize = true;
+            this.FAPurposeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FAPurposeLbl.ForeColor = System.Drawing.Color.White;
+            this.FAPurposeLbl.Location = new System.Drawing.Point(106, 269);
+            this.FAPurposeLbl.Name = "FAPurposeLbl";
+            this.FAPurposeLbl.Size = new System.Drawing.Size(110, 30);
+            this.FAPurposeLbl.TabIndex = 15;
+            this.FAPurposeLbl.Text = "Purpose :";
+            // 
+            // FANameTxt
+            // 
+            this.FANameTxt.Location = new System.Drawing.Point(226, 43);
+            this.FANameTxt.Name = "FANameTxt";
+            this.FANameTxt.Size = new System.Drawing.Size(351, 31);
+            this.FANameTxt.TabIndex = 16;
+            // 
+            // FAAgeTxt
+            // 
+            this.FAAgeTxt.Location = new System.Drawing.Point(226, 115);
+            this.FAAgeTxt.Name = "FAAgeTxt";
+            this.FAAgeTxt.Size = new System.Drawing.Size(150, 31);
+            this.FAAgeTxt.TabIndex = 17;
+            // 
+            // FAPurposeTxt
+            // 
+            this.FAPurposeTxt.Location = new System.Drawing.Point(222, 268);
+            this.FAPurposeTxt.Name = "FAPurposeTxt";
+            this.FAPurposeTxt.Size = new System.Drawing.Size(355, 31);
+            this.FAPurposeTxt.TabIndex = 18;
+            // 
+            // FAGenderComboBox
+            // 
+            this.FAGenderComboBox.FormattingEnabled = true;
+            this.FAGenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.FAGenderComboBox.Location = new System.Drawing.Point(226, 191);
+            this.FAGenderComboBox.Name = "FAGenderComboBox";
+            this.FAGenderComboBox.Size = new System.Drawing.Size(182, 33);
+            this.FAGenderComboBox.TabIndex = 19;
+            // 
             // CreateSingleAdvertisement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -921,6 +1014,7 @@
             this.LitterHeaderPanel.ResumeLayout(false);
             this.LitterHeaderPanel.PerformLayout();
             this.FarmAnimalPanel.ResumeLayout(false);
+            this.FarmAnimalPanel.PerformLayout();
             this.GenericAnimalPanel.ResumeLayout(false);
             this.DogPanel.ResumeLayout(false);
             this.HorsePanel.ResumeLayout(false);
@@ -1010,5 +1104,13 @@
         private Label PurebreedLbl;
         private TextBox LitterAgeTxt;
         private Label LitterAgeLbl;
+        private ComboBox FAGenderComboBox;
+        private TextBox FAPurposeTxt;
+        private TextBox FAAgeTxt;
+        private TextBox FANameTxt;
+        private Label FAPurposeLbl;
+        private Label FAGenderLbl;
+        private Label FAAgeLbl;
+        private Label FANameLbl;
     }
 }
