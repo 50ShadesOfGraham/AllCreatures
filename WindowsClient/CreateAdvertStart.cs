@@ -42,7 +42,7 @@ namespace WindowsClient
 
         private void AdvertBttn_Click(object sender, EventArgs e)
         {
-            CreateAdvert advertisement = new CreateAdvert(Model);
+            CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model);
             advertisement.Show();
         }
 

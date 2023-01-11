@@ -28,57 +28,45 @@ namespace WindowsClient
         }
         private void AnimalCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(AnimalCatComboBox.SelectedItem.Equals("Other"))
+            if (AnimalCatComboBox.SelectedIndex.Equals(0))
             {
-                AnimalTypePanel.Visible = false;
-                SpecifyPanel.Visible = true;
-                GenericAnimalPanel.Visible = true;
+                AnimalTypeComboBox.Items.Clear();
+                AnimalTypeComboBox.Items.Add("Dog");
+                AnimalTypeComboBox.Items.Add("Cat");
+                AnimalTypeComboBox.Items.Add("Fish");
+                AnimalTypeComboBox.Items.Add("Hamster");
+                AnimalTypeComboBox.Items.Add("Rabbit");
             }
-            else
+            else if (AnimalCatComboBox.SelectedIndex.Equals(1))
             {
-                AnimalTypePanel.Visible = true;
-                SpecifyPanel.Visible = false;
+                AnimalTypeComboBox.Items.Clear();
+                AnimalTypeComboBox.Items.Add("Horse");
+                AnimalTypeComboBox.Items.Add("Chicken");
+                AnimalTypeComboBox.Items.Add("Cow");
+                AnimalTypeComboBox.Items.Add("Pig");
+                AnimalTypeComboBox.Items.Add("Sheep");
+                AnimalTypeComboBox.Items.Add("Goat");
+            }
+            else if (AnimalCatComboBox.SelectedIndex.Equals(2))
+            {
+                AnimalTypeComboBox.Items.Clear();
+                AnimalTypeComboBox.Items.Add("Snake");
+                AnimalTypeComboBox.Items.Add("Lizard");
+                AnimalTypeComboBox.Items.Add("Turtle");
+                AnimalTypeComboBox.Items.Add("Turtoise");
+            }
+            else if (AnimalCatComboBox.SelectedIndex.Equals(3))
+            {
+                AnimalTypeComboBox.Items.Clear();
+                AnimalTypeComboBox.Items.Add("Dogs");
+                AnimalTypeComboBox.Items.Add("Cats");
+                LitterPanel.Visible = true;
+                DogPanel.Visible = false;
+                HorsePanel.Visible = false;
                 GenericAnimalPanel.Visible = false;
-                if(AnimalCatComboBox.SelectedItem.Equals("House Pet"))
-                {
-                    AnimalTypeComboBox.Items.Clear();
-                    AnimalTypeComboBox.Items.Add("Dog");
-                    AnimalTypeComboBox.Items.Add("Cat");
-                    AnimalTypeComboBox.Items.Add("Fish");
-                    AnimalTypeComboBox.Items.Add("Hamster");
-                    AnimalTypeComboBox.Items.Add("Rabbit");
-                }
-                else if(AnimalCatComboBox.SelectedItem.Equals("Farm Animal"))
-                {
-                    AnimalTypeComboBox.Items.Clear();
-                    AnimalTypeComboBox.Items.Add("Horse");
-                    AnimalTypeComboBox.Items.Add("Chicken");
-                    AnimalTypeComboBox.Items.Add("Cow");
-                    AnimalTypeComboBox.Items.Add("Pig");
-                    AnimalTypeComboBox.Items.Add("Sheep");
-                    AnimalTypeComboBox.Items.Add("Goat");
-                }
-                else if(AnimalCatComboBox.SelectedItem.Equals("Reptiles"))
-                {
-                    AnimalTypeComboBox.Items.Clear();
-                    AnimalTypeComboBox.Items.Add("Snake");
-                    AnimalTypeComboBox.Items.Add("Lizard");
-                    AnimalTypeComboBox.Items.Add("Turtle");
-                    AnimalTypeComboBox.Items.Add("Turtoise");
-                }
-                else if(AnimalCatComboBox.SelectedItem.Equals("Litter"))
-                {
-                    AnimalTypeComboBox.Items.Clear();
-                    AnimalTypeComboBox.Items.Add("Dogs");
-                    AnimalTypeComboBox.Items.Add("Cats");
-                    LitterPanel.Visible = true;
-                    DogPanel.Visible = false;
-                    HorsePanel.Visible = false;
-                    GenericAnimalPanel.Visible = false;
-                    FarmAnimalPanel.Visible = false;
-                    AccessPanel.Visible = false;
-                    FoodPanel.Visible = false;
-                }
+                FarmAnimalPanel.Visible = false;
+                AccessPanel.Visible = false;
+                FoodPanel.Visible = false;
             }
         }
 
@@ -122,48 +110,6 @@ namespace WindowsClient
                 AnimalPanel.Visible = false;
                 AccessPanel.Visible = true;
                 FoodPanel.Visible = false;
-            }
-        }
-
-        private void AnimalTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(AnimalTypeComboBox.SelectedItem.Equals("Dog"))
-            {
-                DogPanel.Visible = true;
-                HorsePanel.Visible = false;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible= false;
-                LitterPanel.Visible= false;
-                FoodPanel.Visible= false;
-                AccessPanel.Visible= false;
-            }
-            else if(AnimalTypeComboBox.SelectedItem.Equals("Horse"))
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = true;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible = false;
-                LitterPanel.Visible = false;
-                FoodPanel.Visible = false;
-                AccessPanel.Visible = false;
-            }else if(AnimalTypeComboBox.SelectedItem != "Horse" && AnimalCatComboBox.SelectedItem.Equals("Farm Animal"))
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = false;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible = true;
-                LitterPanel.Visible = false;
-                FoodPanel.Visible = false;
-                AccessPanel.Visible = false;
-            }else if(AnimalTypeComboBox.SelectedItem != "Dog")
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = false;
-                GenericAnimalPanel.Visible = true;
-                FarmAnimalPanel.Visible = false;
-                LitterPanel.Visible = false;
-                FoodPanel.Visible = false;
-                AccessPanel.Visible = false;
             }
         }
         public byte[] ConvertImageToByte(Image img)
@@ -218,7 +164,7 @@ namespace WindowsClient
 
         private void AccessCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(AccessCatComboBox.SelectedItem.Equals(" Health"))
+            if(AccessCatComboBox.SelectedItem.Equals("Health"))
             {
                 AccessTypeComboBox.Items.Clear();
                 AccessTypeComboBox.Items.Add("Supplements");
@@ -578,6 +524,50 @@ namespace WindowsClient
                 int notifID = 0;
                 do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
                 if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+            }
+        }
+
+        private void AnimalTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(AnimalCatComboBox.SelectedIndex.Equals(0) && AnimalTypeComboBox.SelectedIndex.Equals(0))
+            {
+                DogPanel.Visible = true;
+                HorsePanel.Visible = false;
+                LitterPanel.Visible = false;
+                GenericAnimalPanel.Visible = false;
+                FarmAnimalPanel.Visible = false;
+            }
+            else if(AnimalCatComboBox.SelectedIndex.Equals(1) && AnimalTypeComboBox.SelectedIndex.Equals(0))
+            {
+                DogPanel.Visible = false;
+                HorsePanel.Visible = true;
+                LitterPanel.Visible = false;
+                GenericAnimalPanel.Visible = false;
+                FarmAnimalPanel.Visible = false;
+            }
+            else if(AnimalCatComboBox.SelectedIndex.Equals(1) && AnimalTypeComboBox.SelectedIndex > 0)
+            {
+                DogPanel.Visible = false;
+                HorsePanel.Visible = false;
+                LitterPanel.Visible = false;
+                GenericAnimalPanel.Visible = false;
+                FarmAnimalPanel.Visible = true;
+            }
+            else if(AnimalCatComboBox.SelectedIndex.Equals(3))
+            {
+                DogPanel.Visible = false;
+                HorsePanel.Visible = false;
+                LitterPanel.Visible = true;
+                GenericAnimalPanel.Visible = false;
+                FarmAnimalPanel.Visible = false;
+            }
+            else
+            {
+                DogPanel.Visible = false;
+                HorsePanel.Visible = false;
+                LitterPanel.Visible = false;
+                GenericAnimalPanel.Visible = true;
+                FarmAnimalPanel.Visible = false;
             }
         }
     }

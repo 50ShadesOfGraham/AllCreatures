@@ -101,6 +101,8 @@
             this.DogBreedComboBox = new System.Windows.Forms.ComboBox();
             this.DogBreedLbl = new System.Windows.Forms.Label();
             this.DogHeaderPanel = new System.Windows.Forms.Panel();
+            this.DogGenderComboBox = new System.Windows.Forms.ComboBox();
+            this.DogGenderLbl = new System.Windows.Forms.Label();
             this.DogPurebreedNoBttn = new System.Windows.Forms.RadioButton();
             this.DogPurebreedYesRadBttn = new System.Windows.Forms.RadioButton();
             this.DogAgeTxt = new System.Windows.Forms.TextBox();
@@ -131,8 +133,8 @@
             this.SpecifyLbl = new System.Windows.Forms.Label();
             this.SpecifyAnimalTxtBx = new System.Windows.Forms.TextBox();
             this.AnimalTypePanel = new System.Windows.Forms.Panel();
-            this.TypeOfAnimallbl = new System.Windows.Forms.Label();
             this.AnimalTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.TypeOfAnimallbl = new System.Windows.Forms.Label();
             this.AnimalCatLbl = new System.Windows.Forms.Label();
             this.AnimalCatComboBox = new System.Windows.Forms.ComboBox();
             this.AnimalCatPanel = new System.Windows.Forms.Panel();
@@ -148,8 +150,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.AccessCatLbl = new System.Windows.Forms.Label();
             this.AccessConfirmBttn = new System.Windows.Forms.Button();
-            this.DogGenderLbl = new System.Windows.Forms.Label();
-            this.DogGenderComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.GeneralAdvertPanel.SuspendLayout();
             this.ImageUploadGroupBox.SuspendLayout();
@@ -253,16 +253,16 @@
             this.GeneralAdvertPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GeneralAdvertPanel.Location = new System.Drawing.Point(0, 0);
             this.GeneralAdvertPanel.Name = "GeneralAdvertPanel";
-            this.GeneralAdvertPanel.Size = new System.Drawing.Size(822, 1208);
+            this.GeneralAdvertPanel.Size = new System.Drawing.Size(868, 1208);
             this.GeneralAdvertPanel.TabIndex = 7;
             // 
             // AdvertComboBox
             // 
             this.AdvertComboBox.FormattingEnabled = true;
             this.AdvertComboBox.Items.AddRange(new object[] {
-            "    Animal",
-            "    Food",
-            "    Accessories"});
+            "Animal",
+            "Food",
+            "Accessories"});
             this.AdvertComboBox.Location = new System.Drawing.Point(286, 171);
             this.AdvertComboBox.Name = "AdvertComboBox";
             this.AdvertComboBox.Size = new System.Drawing.Size(247, 33);
@@ -410,7 +410,7 @@
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 1208);
             this.AnimalPanel.Name = "AnimalPanel";
-            this.AnimalPanel.Size = new System.Drawing.Size(822, 2976);
+            this.AnimalPanel.Size = new System.Drawing.Size(868, 2976);
             this.AnimalPanel.TabIndex = 8;
             // 
             // LitterPanel
@@ -422,7 +422,7 @@
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LitterPanel.Location = new System.Drawing.Point(0, 2457);
             this.LitterPanel.Name = "LitterPanel";
-            this.LitterPanel.Size = new System.Drawing.Size(822, 566);
+            this.LitterPanel.Size = new System.Drawing.Size(868, 566);
             this.LitterPanel.TabIndex = 11;
             // 
             // NotPurebreedPanel
@@ -434,7 +434,7 @@
             this.NotPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.NotPurebreedPanel.Location = new System.Drawing.Point(0, 330);
             this.NotPurebreedPanel.Name = "NotPurebreedPanel";
-            this.NotPurebreedPanel.Size = new System.Drawing.Size(822, 149);
+            this.NotPurebreedPanel.Size = new System.Drawing.Size(868, 149);
             this.NotPurebreedPanel.TabIndex = 18;
             // 
             // BreedTwoComboBox
@@ -482,7 +482,7 @@
             this.IsPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.IsPurebreedPanel.Location = new System.Drawing.Point(0, 241);
             this.IsPurebreedPanel.Name = "IsPurebreedPanel";
-            this.IsPurebreedPanel.Size = new System.Drawing.Size(822, 89);
+            this.IsPurebreedPanel.Size = new System.Drawing.Size(868, 89);
             this.IsPurebreedPanel.TabIndex = 17;
             // 
             // BreedComboBox
@@ -517,7 +517,7 @@
             this.LitterHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LitterHeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.LitterHeaderPanel.Name = "LitterHeaderPanel";
-            this.LitterHeaderPanel.Size = new System.Drawing.Size(822, 241);
+            this.LitterHeaderPanel.Size = new System.Drawing.Size(868, 241);
             this.LitterHeaderPanel.TabIndex = 16;
             // 
             // LitterAgeTxt
@@ -623,7 +623,7 @@
             this.FarmAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 2014);
             this.FarmAnimalPanel.Name = "FarmAnimalPanel";
-            this.FarmAnimalPanel.Size = new System.Drawing.Size(822, 443);
+            this.FarmAnimalPanel.Size = new System.Drawing.Size(868, 443);
             this.FarmAnimalPanel.TabIndex = 10;
             // 
             // FAGenderComboBox
@@ -734,7 +734,7 @@
             this.GenericAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GenericAnimalPanel.Location = new System.Drawing.Point(0, 1451);
             this.GenericAnimalPanel.Name = "GenericAnimalPanel";
-            this.GenericAnimalPanel.Size = new System.Drawing.Size(822, 563);
+            this.GenericAnimalPanel.Size = new System.Drawing.Size(868, 563);
             this.GenericAnimalPanel.TabIndex = 9;
             // 
             // DetailThreeTxt
@@ -869,7 +869,7 @@
             this.DogPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DogPanel.Location = new System.Drawing.Point(0, 826);
             this.DogPanel.Name = "DogPanel";
-            this.DogPanel.Size = new System.Drawing.Size(822, 625);
+            this.DogPanel.Size = new System.Drawing.Size(868, 625);
             this.DogPanel.TabIndex = 7;
             // 
             // DogIsNotPurebreedPanel
@@ -881,7 +881,7 @@
             this.DogIsNotPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DogIsNotPurebreedPanel.Location = new System.Drawing.Point(0, 366);
             this.DogIsNotPurebreedPanel.Name = "DogIsNotPurebreedPanel";
-            this.DogIsNotPurebreedPanel.Size = new System.Drawing.Size(822, 171);
+            this.DogIsNotPurebreedPanel.Size = new System.Drawing.Size(868, 171);
             this.DogIsNotPurebreedPanel.TabIndex = 18;
             // 
             // DogBreedTwoComboBox
@@ -929,7 +929,7 @@
             this.DogisPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DogisPurebreedPanel.Location = new System.Drawing.Point(0, 294);
             this.DogisPurebreedPanel.Name = "DogisPurebreedPanel";
-            this.DogisPurebreedPanel.Size = new System.Drawing.Size(822, 72);
+            this.DogisPurebreedPanel.Size = new System.Drawing.Size(868, 72);
             this.DogisPurebreedPanel.TabIndex = 17;
             // 
             // DogBreedComboBox
@@ -965,8 +965,30 @@
             this.DogHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DogHeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.DogHeaderPanel.Name = "DogHeaderPanel";
-            this.DogHeaderPanel.Size = new System.Drawing.Size(822, 294);
+            this.DogHeaderPanel.Size = new System.Drawing.Size(868, 294);
             this.DogHeaderPanel.TabIndex = 16;
+            // 
+            // DogGenderComboBox
+            // 
+            this.DogGenderComboBox.FormattingEnabled = true;
+            this.DogGenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.DogGenderComboBox.Location = new System.Drawing.Point(187, 162);
+            this.DogGenderComboBox.Name = "DogGenderComboBox";
+            this.DogGenderComboBox.Size = new System.Drawing.Size(222, 33);
+            this.DogGenderComboBox.TabIndex = 22;
+            // 
+            // DogGenderLbl
+            // 
+            this.DogGenderLbl.AutoSize = true;
+            this.DogGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogGenderLbl.ForeColor = System.Drawing.Color.White;
+            this.DogGenderLbl.Location = new System.Drawing.Point(75, 161);
+            this.DogGenderLbl.Name = "DogGenderLbl";
+            this.DogGenderLbl.Size = new System.Drawing.Size(101, 30);
+            this.DogGenderLbl.TabIndex = 21;
+            this.DogGenderLbl.Text = "Gender :";
             // 
             // DogPurebreedNoBttn
             // 
@@ -1078,7 +1100,7 @@
             this.HorsePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HorsePanel.Location = new System.Drawing.Point(0, 217);
             this.HorsePanel.Name = "HorsePanel";
-            this.HorsePanel.Size = new System.Drawing.Size(822, 609);
+            this.HorsePanel.Size = new System.Drawing.Size(868, 609);
             this.HorsePanel.TabIndex = 6;
             // 
             // HorsePurposeTxt
@@ -1355,7 +1377,7 @@
             this.TypeAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TypeAnimalPanel.Location = new System.Drawing.Point(0, 0);
             this.TypeAnimalPanel.Name = "TypeAnimalPanel";
-            this.TypeAnimalPanel.Size = new System.Drawing.Size(822, 217);
+            this.TypeAnimalPanel.Size = new System.Drawing.Size(868, 217);
             this.TypeAnimalPanel.TabIndex = 5;
             // 
             // SpecifyPanel
@@ -1365,7 +1387,7 @@
             this.SpecifyPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SpecifyPanel.Location = new System.Drawing.Point(0, 147);
             this.SpecifyPanel.Name = "SpecifyPanel";
-            this.SpecifyPanel.Size = new System.Drawing.Size(822, 69);
+            this.SpecifyPanel.Size = new System.Drawing.Size(868, 69);
             this.SpecifyPanel.TabIndex = 12;
             // 
             // SpecifyLbl
@@ -1388,13 +1410,22 @@
             // 
             // AnimalTypePanel
             // 
-            this.AnimalTypePanel.Controls.Add(this.TypeOfAnimallbl);
             this.AnimalTypePanel.Controls.Add(this.AnimalTypeComboBox);
+            this.AnimalTypePanel.Controls.Add(this.TypeOfAnimallbl);
             this.AnimalTypePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalTypePanel.Location = new System.Drawing.Point(0, 89);
             this.AnimalTypePanel.Name = "AnimalTypePanel";
-            this.AnimalTypePanel.Size = new System.Drawing.Size(822, 58);
+            this.AnimalTypePanel.Size = new System.Drawing.Size(868, 58);
             this.AnimalTypePanel.TabIndex = 11;
+            // 
+            // AnimalTypeComboBox
+            // 
+            this.AnimalTypeComboBox.FormattingEnabled = true;
+            this.AnimalTypeComboBox.Location = new System.Drawing.Point(279, 11);
+            this.AnimalTypeComboBox.Name = "AnimalTypeComboBox";
+            this.AnimalTypeComboBox.Size = new System.Drawing.Size(310, 33);
+            this.AnimalTypeComboBox.TabIndex = 7;
+            this.AnimalTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.AnimalTypeComboBox_SelectedIndexChanged);
             // 
             // TypeOfAnimallbl
             // 
@@ -1406,15 +1437,6 @@
             this.TypeOfAnimallbl.Size = new System.Drawing.Size(180, 30);
             this.TypeOfAnimallbl.TabIndex = 6;
             this.TypeOfAnimallbl.Text = "Type of Animal :";
-            // 
-            // AnimalTypeComboBox
-            // 
-            this.AnimalTypeComboBox.FormattingEnabled = true;
-            this.AnimalTypeComboBox.Location = new System.Drawing.Point(279, 11);
-            this.AnimalTypeComboBox.Name = "AnimalTypeComboBox";
-            this.AnimalTypeComboBox.Size = new System.Drawing.Size(310, 33);
-            this.AnimalTypeComboBox.TabIndex = 7;
-            this.AnimalTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.AnimalTypeComboBox_SelectedIndexChanged);
             // 
             // AnimalCatLbl
             // 
@@ -1447,7 +1469,7 @@
             this.AnimalCatPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalCatPanel.Location = new System.Drawing.Point(0, 0);
             this.AnimalCatPanel.Name = "AnimalCatPanel";
-            this.AnimalCatPanel.Size = new System.Drawing.Size(822, 89);
+            this.AnimalCatPanel.Size = new System.Drawing.Size(868, 89);
             this.AnimalCatPanel.TabIndex = 10;
             // 
             // FoodPanel
@@ -1460,7 +1482,7 @@
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FoodPanel.Location = new System.Drawing.Point(0, 4184);
             this.FoodPanel.Name = "FoodPanel";
-            this.FoodPanel.Size = new System.Drawing.Size(822, 343);
+            this.FoodPanel.Size = new System.Drawing.Size(868, 343);
             this.FoodPanel.TabIndex = 9;
             this.FoodPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FoodPanel_Paint);
             // 
@@ -1542,7 +1564,7 @@
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AccessPanel.Location = new System.Drawing.Point(0, 4527);
             this.AccessPanel.Name = "AccessPanel";
-            this.AccessPanel.Size = new System.Drawing.Size(822, 295);
+            this.AccessPanel.Size = new System.Drawing.Size(868, 295);
             this.AccessPanel.TabIndex = 10;
             // 
             // AccessTypeComboBox
@@ -1603,35 +1625,13 @@
             this.AccessConfirmBttn.UseVisualStyleBackColor = false;
             this.AccessConfirmBttn.Click += new System.EventHandler(this.AccessConfirmBttn_Click);
             // 
-            // DogGenderLbl
-            // 
-            this.DogGenderLbl.AutoSize = true;
-            this.DogGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DogGenderLbl.ForeColor = System.Drawing.Color.White;
-            this.DogGenderLbl.Location = new System.Drawing.Point(75, 161);
-            this.DogGenderLbl.Name = "DogGenderLbl";
-            this.DogGenderLbl.Size = new System.Drawing.Size(101, 30);
-            this.DogGenderLbl.TabIndex = 21;
-            this.DogGenderLbl.Text = "Gender :";
-            // 
-            // DogGenderComboBox
-            // 
-            this.DogGenderComboBox.FormattingEnabled = true;
-            this.DogGenderComboBox.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.DogGenderComboBox.Location = new System.Drawing.Point(187, 162);
-            this.DogGenderComboBox.Name = "DogGenderComboBox";
-            this.DogGenderComboBox.Size = new System.Drawing.Size(222, 33);
-            this.DogGenderComboBox.TabIndex = 22;
-            // 
             // CreateSingleAdvertisement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(848, 449);
+            this.ClientSize = new System.Drawing.Size(894, 564);
             this.Controls.Add(this.AccessPanel);
             this.Controls.Add(this.FoodPanel);
             this.Controls.Add(this.AnimalPanel);
@@ -1641,7 +1641,10 @@
             this.Controls.Add(this.PriceLbl);
             this.Controls.Add(this.TitleLbl);
             this.Controls.Add(this.GeneralAdvertPanel);
+            this.MaximumSize = new System.Drawing.Size(916, 620);
+            this.MinimumSize = new System.Drawing.Size(916, 620);
             this.Name = "CreateSingleAdvertisement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Place Advertisement";
             this.Load += new System.EventHandler(this.CreateSingleAdvertisement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
@@ -1721,7 +1724,6 @@
         private TextBox SpecifyAnimalTxtBx;
         private Panel AnimalTypePanel;
         private Label TypeOfAnimallbl;
-        private ComboBox AnimalTypeComboBox;
         private Label AnimalCatLbl;
         private ComboBox AnimalCatComboBox;
         private Panel AnimalCatPanel;
@@ -1814,5 +1816,6 @@
         private Label DogPurebreedLbl;
         private ComboBox DogGenderComboBox;
         private Label DogGenderLbl;
+        private ComboBox AnimalTypeComboBox;
     }
 }
