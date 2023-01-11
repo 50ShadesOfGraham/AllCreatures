@@ -95,10 +95,12 @@ namespace WindowsClient
             SpecifyPanel.Visible = false;
 
             DogPanel.Visible = false;
+            DogisPurebreedPanel.Visible = true;
             HorsePanel.Visible = false;
             GenericAnimalPanel.Visible = false;
             FarmAnimalPanel.Visible = false;
             LitterPanel.Visible = false;
+            IsPurebreedPanel.Visible = true;
         }
 
         private void AdvertComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -520,6 +522,58 @@ namespace WindowsClient
             {
                 string message = "Item #" + AdvertID + " has been added to our system. " +
                "Admin must verify item before advertisement is made public";
+                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                int notifID = 0;
+                do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+            }
+        }
+
+        private void DogPurebreedYesRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            if(DogPurebreedYesRadBttn.Checked)
+            {
+                DogisPurebreedPanel.Visible = true;
+                DogIsNotPurebreedPanel.Visible = false;
+            }
+        }
+
+        private void DogPurebreedNoBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (DogPurebreedNoBttn.Checked)
+            {
+                DogisPurebreedPanel.Visible = false;
+                DogIsNotPurebreedPanel.Visible = true;
+            }
+        }
+
+        private void DogConfirmBttn_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            int AdvertID = 0;
+            do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+
+            byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+            byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+            byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+
+            Dog dog = new Dog();
+
+            if(DogPurebreedYesRadBttn.Checked)
+            {
+                dog = new Dog(AdvertID, Model.CurrentUser.Email.Trim(), TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "AVAILABLE",
+                    DogNameTxt.Text, "Dog", Convert.ToInt32(DogAgeTxt.Text), DogGenderComboBox.SelectedItem.ToString(), true, DogBreedComboBox.SelectedItem.ToString(), "");
+            }
+            if(DogPurebreedNoBttn.Checked)
+            {
+                dog = new Dog(AdvertID, Model.CurrentUser.Email.Trim(), TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "AVAILABLE",
+                    DogNameTxt.Text, "Dog", Convert.ToInt32(DogAgeTxt.Text), DogGenderComboBox.SelectedItem.ToString(), false, DogBreedOneComboBox.SelectedItem.ToString(),DogBreedTwoComboBox.SelectedItem.ToString());
+            }
+
+            if(Model.addNewDog(dog))
+            {
+                string message = "Item #" + AdvertID + " has been added to our system. " +
+                "Admin must verify item before advertisement is made public";
                 string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                 int notifID = 0;
                 do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));

@@ -92,6 +92,22 @@
             this.GANameLbl = new System.Windows.Forms.Label();
             this.GenericAnimalConfirmBttn = new System.Windows.Forms.Button();
             this.DogPanel = new System.Windows.Forms.Panel();
+            this.DogIsNotPurebreedPanel = new System.Windows.Forms.Panel();
+            this.DogBreedTwoComboBox = new System.Windows.Forms.ComboBox();
+            this.DogBreedOneComboBox = new System.Windows.Forms.ComboBox();
+            this.DogBreedTwoLbl = new System.Windows.Forms.Label();
+            this.DogBreedOneLbl = new System.Windows.Forms.Label();
+            this.DogisPurebreedPanel = new System.Windows.Forms.Panel();
+            this.DogBreedComboBox = new System.Windows.Forms.ComboBox();
+            this.DogBreedLbl = new System.Windows.Forms.Label();
+            this.DogHeaderPanel = new System.Windows.Forms.Panel();
+            this.DogPurebreedNoBttn = new System.Windows.Forms.RadioButton();
+            this.DogPurebreedYesRadBttn = new System.Windows.Forms.RadioButton();
+            this.DogAgeTxt = new System.Windows.Forms.TextBox();
+            this.DogNameTxt = new System.Windows.Forms.TextBox();
+            this.DogPurebreedLbl = new System.Windows.Forms.Label();
+            this.DogNameLbl = new System.Windows.Forms.Label();
+            this.DogAgeLbl = new System.Windows.Forms.Label();
             this.DogConfirmBttn = new System.Windows.Forms.Button();
             this.HorsePanel = new System.Windows.Forms.Panel();
             this.HorsePurposeTxt = new System.Windows.Forms.TextBox();
@@ -132,8 +148,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.AccessCatLbl = new System.Windows.Forms.Label();
             this.AccessConfirmBttn = new System.Windows.Forms.Button();
-            this.DogNameLbl = new System.Windows.Forms.Label();
-            this.DogAgeLbl = new System.Windows.Forms.Label();
+            this.DogGenderLbl = new System.Windows.Forms.Label();
+            this.DogGenderComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.GeneralAdvertPanel.SuspendLayout();
             this.ImageUploadGroupBox.SuspendLayout();
@@ -151,6 +167,9 @@
             this.FarmAnimalPanel.SuspendLayout();
             this.GenericAnimalPanel.SuspendLayout();
             this.DogPanel.SuspendLayout();
+            this.DogIsNotPurebreedPanel.SuspendLayout();
+            this.DogisPurebreedPanel.SuspendLayout();
+            this.DogHeaderPanel.SuspendLayout();
             this.HorsePanel.SuspendLayout();
             this.TypeAnimalPanel.SuspendLayout();
             this.SpecifyPanel.SuspendLayout();
@@ -391,7 +410,7 @@
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 1208);
             this.AnimalPanel.Name = "AnimalPanel";
-            this.AnimalPanel.Size = new System.Drawing.Size(822, 2917);
+            this.AnimalPanel.Size = new System.Drawing.Size(822, 2976);
             this.AnimalPanel.TabIndex = 8;
             // 
             // LitterPanel
@@ -401,7 +420,7 @@
             this.LitterPanel.Controls.Add(this.LitterHeaderPanel);
             this.LitterPanel.Controls.Add(this.LitterConfirmBttn);
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LitterPanel.Location = new System.Drawing.Point(0, 2346);
+            this.LitterPanel.Location = new System.Drawing.Point(0, 2457);
             this.LitterPanel.Name = "LitterPanel";
             this.LitterPanel.Size = new System.Drawing.Size(822, 566);
             this.LitterPanel.TabIndex = 11;
@@ -602,7 +621,7 @@
             this.FarmAnimalPanel.Controls.Add(this.FANameLbl);
             this.FarmAnimalPanel.Controls.Add(this.FarmAnimalConfirmBttn);
             this.FarmAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 1903);
+            this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 2014);
             this.FarmAnimalPanel.Name = "FarmAnimalPanel";
             this.FarmAnimalPanel.Size = new System.Drawing.Size(822, 443);
             this.FarmAnimalPanel.TabIndex = 10;
@@ -713,7 +732,7 @@
             this.GenericAnimalPanel.Controls.Add(this.GANameLbl);
             this.GenericAnimalPanel.Controls.Add(this.GenericAnimalConfirmBttn);
             this.GenericAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GenericAnimalPanel.Location = new System.Drawing.Point(0, 1340);
+            this.GenericAnimalPanel.Location = new System.Drawing.Point(0, 1451);
             this.GenericAnimalPanel.Name = "GenericAnimalPanel";
             this.GenericAnimalPanel.Size = new System.Drawing.Size(822, 563);
             this.GenericAnimalPanel.TabIndex = 9;
@@ -843,14 +862,186 @@
             // 
             // DogPanel
             // 
-            this.DogPanel.Controls.Add(this.DogAgeLbl);
-            this.DogPanel.Controls.Add(this.DogNameLbl);
+            this.DogPanel.Controls.Add(this.DogIsNotPurebreedPanel);
+            this.DogPanel.Controls.Add(this.DogisPurebreedPanel);
+            this.DogPanel.Controls.Add(this.DogHeaderPanel);
             this.DogPanel.Controls.Add(this.DogConfirmBttn);
             this.DogPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DogPanel.Location = new System.Drawing.Point(0, 826);
             this.DogPanel.Name = "DogPanel";
-            this.DogPanel.Size = new System.Drawing.Size(822, 514);
+            this.DogPanel.Size = new System.Drawing.Size(822, 625);
             this.DogPanel.TabIndex = 7;
+            // 
+            // DogIsNotPurebreedPanel
+            // 
+            this.DogIsNotPurebreedPanel.Controls.Add(this.DogBreedTwoComboBox);
+            this.DogIsNotPurebreedPanel.Controls.Add(this.DogBreedOneComboBox);
+            this.DogIsNotPurebreedPanel.Controls.Add(this.DogBreedTwoLbl);
+            this.DogIsNotPurebreedPanel.Controls.Add(this.DogBreedOneLbl);
+            this.DogIsNotPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DogIsNotPurebreedPanel.Location = new System.Drawing.Point(0, 366);
+            this.DogIsNotPurebreedPanel.Name = "DogIsNotPurebreedPanel";
+            this.DogIsNotPurebreedPanel.Size = new System.Drawing.Size(822, 171);
+            this.DogIsNotPurebreedPanel.TabIndex = 18;
+            // 
+            // DogBreedTwoComboBox
+            // 
+            this.DogBreedTwoComboBox.FormattingEnabled = true;
+            this.DogBreedTwoComboBox.Location = new System.Drawing.Point(240, 109);
+            this.DogBreedTwoComboBox.Name = "DogBreedTwoComboBox";
+            this.DogBreedTwoComboBox.Size = new System.Drawing.Size(287, 33);
+            this.DogBreedTwoComboBox.TabIndex = 21;
+            // 
+            // DogBreedOneComboBox
+            // 
+            this.DogBreedOneComboBox.FormattingEnabled = true;
+            this.DogBreedOneComboBox.Location = new System.Drawing.Point(240, 31);
+            this.DogBreedOneComboBox.Name = "DogBreedOneComboBox";
+            this.DogBreedOneComboBox.Size = new System.Drawing.Size(287, 33);
+            this.DogBreedOneComboBox.TabIndex = 20;
+            // 
+            // DogBreedTwoLbl
+            // 
+            this.DogBreedTwoLbl.AutoSize = true;
+            this.DogBreedTwoLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogBreedTwoLbl.ForeColor = System.Drawing.Color.White;
+            this.DogBreedTwoLbl.Location = new System.Drawing.Point(85, 109);
+            this.DogBreedTwoLbl.Name = "DogBreedTwoLbl";
+            this.DogBreedTwoLbl.Size = new System.Drawing.Size(135, 30);
+            this.DogBreedTwoLbl.TabIndex = 19;
+            this.DogBreedTwoLbl.Text = "Breed Two :";
+            // 
+            // DogBreedOneLbl
+            // 
+            this.DogBreedOneLbl.AutoSize = true;
+            this.DogBreedOneLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogBreedOneLbl.ForeColor = System.Drawing.Color.White;
+            this.DogBreedOneLbl.Location = new System.Drawing.Point(88, 30);
+            this.DogBreedOneLbl.Name = "DogBreedOneLbl";
+            this.DogBreedOneLbl.Size = new System.Drawing.Size(134, 30);
+            this.DogBreedOneLbl.TabIndex = 18;
+            this.DogBreedOneLbl.Text = "Breed One :";
+            // 
+            // DogisPurebreedPanel
+            // 
+            this.DogisPurebreedPanel.Controls.Add(this.DogBreedComboBox);
+            this.DogisPurebreedPanel.Controls.Add(this.DogBreedLbl);
+            this.DogisPurebreedPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DogisPurebreedPanel.Location = new System.Drawing.Point(0, 294);
+            this.DogisPurebreedPanel.Name = "DogisPurebreedPanel";
+            this.DogisPurebreedPanel.Size = new System.Drawing.Size(822, 72);
+            this.DogisPurebreedPanel.TabIndex = 17;
+            // 
+            // DogBreedComboBox
+            // 
+            this.DogBreedComboBox.FormattingEnabled = true;
+            this.DogBreedComboBox.Location = new System.Drawing.Point(187, 19);
+            this.DogBreedComboBox.Name = "DogBreedComboBox";
+            this.DogBreedComboBox.Size = new System.Drawing.Size(287, 33);
+            this.DogBreedComboBox.TabIndex = 21;
+            // 
+            // DogBreedLbl
+            // 
+            this.DogBreedLbl.AutoSize = true;
+            this.DogBreedLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogBreedLbl.ForeColor = System.Drawing.Color.White;
+            this.DogBreedLbl.Location = new System.Drawing.Point(85, 18);
+            this.DogBreedLbl.Name = "DogBreedLbl";
+            this.DogBreedLbl.Size = new System.Drawing.Size(86, 30);
+            this.DogBreedLbl.TabIndex = 17;
+            this.DogBreedLbl.Text = "Breed :";
+            // 
+            // DogHeaderPanel
+            // 
+            this.DogHeaderPanel.Controls.Add(this.DogGenderComboBox);
+            this.DogHeaderPanel.Controls.Add(this.DogGenderLbl);
+            this.DogHeaderPanel.Controls.Add(this.DogPurebreedNoBttn);
+            this.DogHeaderPanel.Controls.Add(this.DogPurebreedYesRadBttn);
+            this.DogHeaderPanel.Controls.Add(this.DogAgeTxt);
+            this.DogHeaderPanel.Controls.Add(this.DogNameTxt);
+            this.DogHeaderPanel.Controls.Add(this.DogPurebreedLbl);
+            this.DogHeaderPanel.Controls.Add(this.DogNameLbl);
+            this.DogHeaderPanel.Controls.Add(this.DogAgeLbl);
+            this.DogHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DogHeaderPanel.Location = new System.Drawing.Point(0, 0);
+            this.DogHeaderPanel.Name = "DogHeaderPanel";
+            this.DogHeaderPanel.Size = new System.Drawing.Size(822, 294);
+            this.DogHeaderPanel.TabIndex = 16;
+            // 
+            // DogPurebreedNoBttn
+            // 
+            this.DogPurebreedNoBttn.AutoSize = true;
+            this.DogPurebreedNoBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogPurebreedNoBttn.ForeColor = System.Drawing.Color.White;
+            this.DogPurebreedNoBttn.Location = new System.Drawing.Point(286, 231);
+            this.DogPurebreedNoBttn.Name = "DogPurebreedNoBttn";
+            this.DogPurebreedNoBttn.Size = new System.Drawing.Size(65, 32);
+            this.DogPurebreedNoBttn.TabIndex = 20;
+            this.DogPurebreedNoBttn.TabStop = true;
+            this.DogPurebreedNoBttn.Text = "No";
+            this.DogPurebreedNoBttn.UseVisualStyleBackColor = true;
+            this.DogPurebreedNoBttn.CheckedChanged += new System.EventHandler(this.DogPurebreedNoBttn_CheckedChanged);
+            // 
+            // DogPurebreedYesRadBttn
+            // 
+            this.DogPurebreedYesRadBttn.AutoSize = true;
+            this.DogPurebreedYesRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogPurebreedYesRadBttn.ForeColor = System.Drawing.Color.White;
+            this.DogPurebreedYesRadBttn.Location = new System.Drawing.Point(192, 231);
+            this.DogPurebreedYesRadBttn.Name = "DogPurebreedYesRadBttn";
+            this.DogPurebreedYesRadBttn.Size = new System.Drawing.Size(67, 32);
+            this.DogPurebreedYesRadBttn.TabIndex = 19;
+            this.DogPurebreedYesRadBttn.TabStop = true;
+            this.DogPurebreedYesRadBttn.Text = "Yes";
+            this.DogPurebreedYesRadBttn.UseVisualStyleBackColor = true;
+            this.DogPurebreedYesRadBttn.CheckedChanged += new System.EventHandler(this.DogPurebreedYesRadBttn_CheckedChanged);
+            // 
+            // DogAgeTxt
+            // 
+            this.DogAgeTxt.Location = new System.Drawing.Point(187, 99);
+            this.DogAgeTxt.Name = "DogAgeTxt";
+            this.DogAgeTxt.Size = new System.Drawing.Size(176, 31);
+            this.DogAgeTxt.TabIndex = 18;
+            // 
+            // DogNameTxt
+            // 
+            this.DogNameTxt.Location = new System.Drawing.Point(187, 35);
+            this.DogNameTxt.Name = "DogNameTxt";
+            this.DogNameTxt.Size = new System.Drawing.Size(426, 31);
+            this.DogNameTxt.TabIndex = 17;
+            // 
+            // DogPurebreedLbl
+            // 
+            this.DogPurebreedLbl.AutoSize = true;
+            this.DogPurebreedLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogPurebreedLbl.ForeColor = System.Drawing.Color.White;
+            this.DogPurebreedLbl.Location = new System.Drawing.Point(48, 230);
+            this.DogPurebreedLbl.Name = "DogPurebreedLbl";
+            this.DogPurebreedLbl.Size = new System.Drawing.Size(134, 30);
+            this.DogPurebreedLbl.TabIndex = 16;
+            this.DogPurebreedLbl.Text = "Purebreed :";
+            // 
+            // DogNameLbl
+            // 
+            this.DogNameLbl.AutoSize = true;
+            this.DogNameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogNameLbl.ForeColor = System.Drawing.Color.White;
+            this.DogNameLbl.Location = new System.Drawing.Point(96, 34);
+            this.DogNameLbl.Name = "DogNameLbl";
+            this.DogNameLbl.Size = new System.Drawing.Size(86, 30);
+            this.DogNameLbl.TabIndex = 14;
+            this.DogNameLbl.Text = "Name :";
+            // 
+            // DogAgeLbl
+            // 
+            this.DogAgeLbl.AutoSize = true;
+            this.DogAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogAgeLbl.ForeColor = System.Drawing.Color.White;
+            this.DogAgeLbl.Location = new System.Drawing.Point(116, 98);
+            this.DogAgeLbl.Name = "DogAgeLbl";
+            this.DogAgeLbl.Size = new System.Drawing.Size(66, 30);
+            this.DogAgeLbl.TabIndex = 15;
+            this.DogAgeLbl.Text = "Age :";
             // 
             // DogConfirmBttn
             // 
@@ -858,12 +1049,13 @@
             this.DogConfirmBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DogConfirmBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DogConfirmBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.DogConfirmBttn.Location = new System.Drawing.Point(583, 431);
+            this.DogConfirmBttn.Location = new System.Drawing.Point(583, 541);
             this.DogConfirmBttn.Name = "DogConfirmBttn";
             this.DogConfirmBttn.Size = new System.Drawing.Size(139, 71);
             this.DogConfirmBttn.TabIndex = 1;
             this.DogConfirmBttn.Text = "Dog";
             this.DogConfirmBttn.UseVisualStyleBackColor = false;
+            this.DogConfirmBttn.Click += new System.EventHandler(this.DogConfirmBttn_Click);
             // 
             // HorsePanel
             // 
@@ -1266,7 +1458,7 @@
             this.FoodPanel.Controls.Add(this.FodForLbl);
             this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FoodPanel.Location = new System.Drawing.Point(0, 4125);
+            this.FoodPanel.Location = new System.Drawing.Point(0, 4184);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(822, 343);
             this.FoodPanel.TabIndex = 9;
@@ -1348,7 +1540,7 @@
             this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 4468);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 4527);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(822, 295);
             this.AccessPanel.TabIndex = 10;
@@ -1411,27 +1603,27 @@
             this.AccessConfirmBttn.UseVisualStyleBackColor = false;
             this.AccessConfirmBttn.Click += new System.EventHandler(this.AccessConfirmBttn_Click);
             // 
-            // DogNameLbl
+            // DogGenderLbl
             // 
-            this.DogNameLbl.AutoSize = true;
-            this.DogNameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DogNameLbl.ForeColor = System.Drawing.Color.White;
-            this.DogNameLbl.Location = new System.Drawing.Point(106, 49);
-            this.DogNameLbl.Name = "DogNameLbl";
-            this.DogNameLbl.Size = new System.Drawing.Size(86, 30);
-            this.DogNameLbl.TabIndex = 14;
-            this.DogNameLbl.Text = "Name :";
+            this.DogGenderLbl.AutoSize = true;
+            this.DogGenderLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DogGenderLbl.ForeColor = System.Drawing.Color.White;
+            this.DogGenderLbl.Location = new System.Drawing.Point(75, 161);
+            this.DogGenderLbl.Name = "DogGenderLbl";
+            this.DogGenderLbl.Size = new System.Drawing.Size(101, 30);
+            this.DogGenderLbl.TabIndex = 21;
+            this.DogGenderLbl.Text = "Gender :";
             // 
-            // DogAgeLbl
+            // DogGenderComboBox
             // 
-            this.DogAgeLbl.AutoSize = true;
-            this.DogAgeLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.DogAgeLbl.ForeColor = System.Drawing.Color.White;
-            this.DogAgeLbl.Location = new System.Drawing.Point(124, 119);
-            this.DogAgeLbl.Name = "DogAgeLbl";
-            this.DogAgeLbl.Size = new System.Drawing.Size(66, 30);
-            this.DogAgeLbl.TabIndex = 15;
-            this.DogAgeLbl.Text = "Age :";
+            this.DogGenderComboBox.FormattingEnabled = true;
+            this.DogGenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.DogGenderComboBox.Location = new System.Drawing.Point(187, 162);
+            this.DogGenderComboBox.Name = "DogGenderComboBox";
+            this.DogGenderComboBox.Size = new System.Drawing.Size(222, 33);
+            this.DogGenderComboBox.TabIndex = 22;
             // 
             // CreateSingleAdvertisement
             // 
@@ -1475,7 +1667,12 @@
             this.GenericAnimalPanel.ResumeLayout(false);
             this.GenericAnimalPanel.PerformLayout();
             this.DogPanel.ResumeLayout(false);
-            this.DogPanel.PerformLayout();
+            this.DogIsNotPurebreedPanel.ResumeLayout(false);
+            this.DogIsNotPurebreedPanel.PerformLayout();
+            this.DogisPurebreedPanel.ResumeLayout(false);
+            this.DogisPurebreedPanel.PerformLayout();
+            this.DogHeaderPanel.ResumeLayout(false);
+            this.DogHeaderPanel.PerformLayout();
             this.HorsePanel.ResumeLayout(false);
             this.HorsePanel.PerformLayout();
             this.TypeAnimalPanel.ResumeLayout(false);
@@ -1601,5 +1798,21 @@
         private Label HorseNameLbl;
         private Label DogAgeLbl;
         private Label DogNameLbl;
+        private Panel DogIsNotPurebreedPanel;
+        private ComboBox DogBreedTwoComboBox;
+        private ComboBox DogBreedOneComboBox;
+        private Label DogBreedTwoLbl;
+        private Label DogBreedOneLbl;
+        private Panel DogisPurebreedPanel;
+        private ComboBox DogBreedComboBox;
+        private Label DogBreedLbl;
+        private Panel DogHeaderPanel;
+        private RadioButton DogPurebreedNoBttn;
+        private RadioButton DogPurebreedYesRadBttn;
+        private TextBox DogAgeTxt;
+        private TextBox DogNameTxt;
+        private Label DogPurebreedLbl;
+        private ComboBox DogGenderComboBox;
+        private Label DogGenderLbl;
     }
 }
