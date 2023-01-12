@@ -48,7 +48,8 @@ namespace BusinessEntities
             this.age = age;
             this.gender = gender;
         }
-        public Animal(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string animalname, string animaltype, int age, string gender) : base(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree)
+        public Animal(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string animalname, string animaltype, int age, string gender) 
+            : base(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree)
         {
             this.animalname = animalname;
             this.animaltype = animaltype;
