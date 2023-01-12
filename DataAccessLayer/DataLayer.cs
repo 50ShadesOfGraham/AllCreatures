@@ -628,27 +628,39 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewDogToDB(int dogid, int animalid, bool purebreed, string breedone, string breedtwo)
+        public void addNewHorseToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo,byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
         {
             try
             {
                 DataSet ds = new DataSet();
-                string sql = "SELECT * From Dog";
+                string sql = "SELECT * From HorseAdvertisement";
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "DogData");
-                maxAdverts = ds.Tables["DogData"].Rows.Count;
-                DataRow dRow = ds.Tables["DogData"].NewRow();
-                dRow[0] = dogid;
-                dRow[1] = animalid;
-                dRow[2] = purebreed;
-                dRow[3] = breedone;
-                dRow[4] = breedtwo;
-                ds.Tables["DogData"].Rows.Add(dRow);
-                da.Update(ds, "DogData");
+                da.Fill(ds, "HorseData");
+                maxAdverts = ds.Tables["HorseData"].Rows.Count;
+                DataRow dRow = ds.Tables["HorseData"].NewRow();
+                dRow[0] = advertid;
+                dRow[1] = selleremail;
+                dRow[2] = title;
+                dRow[3] = description;
+                dRow[4] = price;
+                dRow[5] = verified;
+                dRow[6] = status;
+                dRow[7] = imageone;
+                dRow[8] = imagetwo;
+                dRow[9] = imagethree;
+                dRow[10] = animalname;
+                dRow[11] = age;
+                dRow[12] = size;
+                dRow[13] = broken;
+                dRow[14] = breed;
+                dRow[15] = purpose;
+                ds.Tables["HorseData"].Rows.Add(dRow);
+                da.Update(ds, "HorseData");
             }
             catch (System.Exception excep)
             {
+                MessageBox.Show("Data Layer: " + excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 Application.Exit();

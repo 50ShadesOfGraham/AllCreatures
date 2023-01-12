@@ -440,39 +440,46 @@ namespace WindowsClient
 
         private void HorseConfirmBttn_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            int AdvertID = 0;
-            do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-
-            byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
-            byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
-            byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
-
-            Horse horse = new Horse();
-
-            if(BrokenYesRadBttn.Checked)
+            try
             {
-                horse = new Horse(AdvertID,Model.CurrentUser.Email.Trim(),TitleTxt.Text,DescriptionTxt.Text,Convert.ToDouble(PriceTxt.Text),false,"AVAILABLE",
-                    HorseNameTxt.Text,Convert.ToInt32(HorseAgeTxt),HorseGenderComboBox.SelectedItem.ToString(),HorseSizeTxt.Text,true,BreedComboBox.SelectedItem.ToString(),
-                    HorsePurposeTxt.Text);
-            }
 
-            if(BrokenNoRadBttn.Checked) 
-            {
-                horse = new Horse(AdvertID, Model.CurrentUser.Email.Trim(), TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "AVAILABLE",
-                    HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt), HorseGenderComboBox.SelectedItem.ToString(), HorseSizeTxt.Text, false, BreedComboBox.SelectedItem.ToString(),
-                    HorsePurposeTxt.Text);
-            }
 
-            if(Model.addNewHorse(horse))
+                //Random rnd = new Random();
+                int AdvertID = 0;
+                // do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+
+                 byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+                 byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+                 byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+                
+                //Horse horse = new Horse();
+
+                //double price = 0.00;
+                //string breed = BreedComboBox.SelectedItem.ToString();
+                //double.TryParse(PriceTxt.Text, out price);
+
+             
+                    if (Model.addNewHorseAdvert(1, "dss", "horse 4 sale", "des", 20.00, false, "Available", ImageOne, ImageTwo, ImageThree,
+                        "Dizzie", 12, "Male", "22", false, "Unknown", "Racing"))
+                    {
+                        string message = "Item #" + AdvertID + " has been added to our system. " +
+                       "Admin must verify item before advertisement is made public";
+                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        int notifID = 0;
+                        //do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                        //if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        System.Windows.MessageBox.Show(message);
+                    }
+                
+                //(Model.addNewHorseAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "AVAILABLE",
+                       //ImageOne, ImageTwo, ImageThree, HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), HorseGenderComboBox.SelectedItem.ToString(), HorseSizeTxt.Text, false, BreedComboBox.SelectedItem.ToString(),
+                       //HorsePurposeTxt.Text)
+                
+            }catch(Exception excep)
             {
-                string message = "Item #" + AdvertID + " has been added to our system. " +
-               "Admin must verify item before advertisement is made public";
-                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
-                int notifID = 0;
-                do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                System.Windows.MessageBox.Show("Form:" + excep.Message);
             }
+            
         }
 
         private void DogPurebreedYesRadBttn_CheckedChanged(object sender, EventArgs e)

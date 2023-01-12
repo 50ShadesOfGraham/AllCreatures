@@ -410,7 +410,7 @@
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 1208);
             this.AnimalPanel.Name = "AnimalPanel";
-            this.AnimalPanel.Size = new System.Drawing.Size(868, 2976);
+            this.AnimalPanel.Size = new System.Drawing.Size(868, 3035);
             this.AnimalPanel.TabIndex = 8;
             // 
             // LitterPanel
@@ -1480,7 +1480,7 @@
             this.FoodPanel.Controls.Add(this.FodForLbl);
             this.FoodPanel.Controls.Add(this.FoodConfirmBttn);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FoodPanel.Location = new System.Drawing.Point(0, 4184);
+            this.FoodPanel.Location = new System.Drawing.Point(0, 4243);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(868, 343);
             this.FoodPanel.TabIndex = 9;
@@ -1562,7 +1562,7 @@
             this.AccessPanel.Controls.Add(this.AccessCatLbl);
             this.AccessPanel.Controls.Add(this.AccessConfirmBttn);
             this.AccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccessPanel.Location = new System.Drawing.Point(0, 4527);
+            this.AccessPanel.Location = new System.Drawing.Point(0, 4586);
             this.AccessPanel.Name = "AccessPanel";
             this.AccessPanel.Size = new System.Drawing.Size(868, 295);
             this.AccessPanel.TabIndex = 10;
