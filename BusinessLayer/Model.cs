@@ -199,13 +199,13 @@ namespace BusinessLayer
             }
         }
 
-        public Boolean addNewHorseAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
+        public Boolean addNewHorseAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
         { 
             try
             {
                 //DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title, newimage);
                // DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
-                DataLayer.addNewHorseToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animalname,age,gender,size,broken,breed,purpose);
+                DataLayer.addNewHorseToDB(advertid,selleremail,title,description,price,verified,status,animalname,age,gender,size,broken,breed,purpose);
                 return true;
             }
             catch (System.Exception excep)

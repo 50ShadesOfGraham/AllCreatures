@@ -17,10 +17,10 @@ namespace WindowsClient
     {
 
         private IModel Model;
-        public CreateSingleAdvertisement(IModel Model)
+        public CreateSingleAdvertisement(IModel _model)
         {
             InitializeComponent();
-            this.Model = Model;
+            this.Model = _model;
         }
         private void FoodPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -459,7 +459,7 @@ namespace WindowsClient
                 //double.TryParse(PriceTxt.Text, out price);
 
              
-                    if (Model.addNewHorseAdvert(1, "dss", "horse 4 sale", "des", 20.00, false, "Available", ImageOne, ImageTwo, ImageThree,
+                    if (Model.addNewHorseAdvert(1, "dss", "horse 4 sale", "des", 20.00, false, "Available",
                         "Dizzie", 12, "Male", "22", false, "Unknown", "Racing"))
                     {
                         string message = "Item #" + AdvertID + " has been added to our system. " +

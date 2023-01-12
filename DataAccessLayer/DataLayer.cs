@@ -628,7 +628,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewHorseToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo,byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
+        public void addNewHorseToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
         {
             try
             {
@@ -646,9 +646,9 @@ namespace DataAccessLayer
                 dRow[4] = price;
                 dRow[5] = verified;
                 dRow[6] = status;
-                dRow[7] = imageone;
-                dRow[8] = imagetwo;
-                dRow[9] = imagethree;
+                //dRow[7] = imageone;
+                //dRow[8] = imagetwo;
+               // dRow[9] = imagethree;
                 dRow[10] = animalname;
                 dRow[11] = age;
                 dRow[12] = size;
