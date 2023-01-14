@@ -445,12 +445,12 @@ namespace WindowsClient
 
 
                 //Random rnd = new Random();
-                int AdvertID = 0;
+                //int AdvertID = 0;
                 // do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
 
-                 byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
-                 byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
-                 byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+                  byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+                 //byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+                 //byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 
                 //Horse horse = new Horse();
 
@@ -459,13 +459,13 @@ namespace WindowsClient
                 //double.TryParse(PriceTxt.Text, out price);
 
              
-                    if (Model.addNewHorseAdvert(1, "dss", "horse 4 sale", "des", 20.00, false, "Available",
+                   if (Model.addNewHorseAdvert(1, "dss", "horse 4 sale", "des", 20.00, false, "Available",
                         "Dizzie", 12, "Male", "22", false, "Unknown", "Racing"))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
+                        string message = "Item #22 has been added to our system. " +
                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
-                        int notifID = 0;
+                        //string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                       // int notifID = 0;
                         //do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
                         //if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
                         System.Windows.MessageBox.Show(message);

@@ -651,10 +651,11 @@ namespace DataAccessLayer
                // dRow[9] = imagethree;
                 dRow[10] = animalname;
                 dRow[11] = age;
-                dRow[12] = size;
-                dRow[13] = broken;
-                dRow[14] = breed;
-                dRow[15] = purpose;
+                dRow[12] = gender;
+                dRow[13] = size;
+                dRow[14] = broken;
+                dRow[15] = breed;
+                dRow[16] = purpose;
                 ds.Tables["HorseData"].Rows.Add(dRow);
                 da.Update(ds, "HorseData");
             }
