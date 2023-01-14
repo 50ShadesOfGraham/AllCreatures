@@ -113,7 +113,7 @@
             this.DogConfirmBttn = new System.Windows.Forms.Button();
             this.HorsePanel = new System.Windows.Forms.Panel();
             this.HorsePurposeTxt = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.HorseBreedComboBox = new System.Windows.Forms.ComboBox();
             this.BrokenNoRadBttn = new System.Windows.Forms.RadioButton();
             this.BrokenYesRadBttn = new System.Windows.Forms.RadioButton();
             this.HorseSizeTxt = new System.Windows.Forms.TextBox();
@@ -340,7 +340,7 @@
             this.UploadOneBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadOneBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadOneBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.UploadOneBttn.Location = new System.Drawing.Point(561, 62);
+            this.UploadOneBttn.Location = new System.Drawing.Point(551, 133);
             this.UploadOneBttn.Name = "UploadOneBttn";
             this.UploadOneBttn.Size = new System.Drawing.Size(149, 67);
             this.UploadOneBttn.TabIndex = 1;
@@ -1082,7 +1082,7 @@
             // HorsePanel
             // 
             this.HorsePanel.Controls.Add(this.HorsePurposeTxt);
-            this.HorsePanel.Controls.Add(this.comboBox1);
+            this.HorsePanel.Controls.Add(this.HorseBreedComboBox);
             this.HorsePanel.Controls.Add(this.BrokenNoRadBttn);
             this.HorsePanel.Controls.Add(this.BrokenYesRadBttn);
             this.HorsePanel.Controls.Add(this.HorseSizeTxt);
@@ -1110,10 +1110,10 @@
             this.HorsePurposeTxt.Size = new System.Drawing.Size(312, 31);
             this.HorsePurposeTxt.TabIndex = 23;
             // 
-            // comboBox1
+            // HorseBreedComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.HorseBreedComboBox.FormattingEnabled = true;
+            this.HorseBreedComboBox.Items.AddRange(new object[] {
             "Abtenauer",
             "Abyssinian, see Ethiopian horses",
             "Aegidienberger",
@@ -1216,10 +1216,10 @@
             "Cumberland Island horse",
             "Curly Horse",
             "Czech Warmblood"});
-            this.comboBox1.Location = new System.Drawing.Point(206, 370);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 33);
-            this.comboBox1.TabIndex = 22;
+            this.HorseBreedComboBox.Location = new System.Drawing.Point(206, 370);
+            this.HorseBreedComboBox.Name = "HorseBreedComboBox";
+            this.HorseBreedComboBox.Size = new System.Drawing.Size(286, 33);
+            this.HorseBreedComboBox.TabIndex = 22;
             // 
             // BrokenNoRadBttn
             // 
@@ -1257,6 +1257,9 @@
             // HorseGenderComboBox
             // 
             this.HorseGenderComboBox.FormattingEnabled = true;
+            this.HorseGenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.HorseGenderComboBox.Location = new System.Drawing.Point(206, 179);
             this.HorseGenderComboBox.Name = "HorseGenderComboBox";
             this.HorseGenderComboBox.Size = new System.Drawing.Size(222, 33);
@@ -1784,7 +1787,7 @@
         private Label GAAgeLbl;
         private Label GANameLbl;
         private TextBox HorsePurposeTxt;
-        private ComboBox comboBox1;
+        private ComboBox HorseBreedComboBox;
         private RadioButton BrokenNoRadBttn;
         private RadioButton BrokenYesRadBttn;
         private TextBox HorseSizeTxt;

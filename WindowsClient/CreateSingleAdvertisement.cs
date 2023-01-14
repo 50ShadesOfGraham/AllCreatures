@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -73,6 +75,9 @@ namespace WindowsClient
         private void CreateSingleAdvertisement_Load(object sender, EventArgs e)
         {
             GeneralAdvertPanel.Visible = true;
+
+            HorseGenderComboBox.SelectedText = "Male";
+            HorseBreedComboBox.SelectedText = "Arabian horse";
             
             AnimalPanel.Visible = false;
             FoodPanel.Visible = false;
@@ -112,7 +117,7 @@ namespace WindowsClient
                 FoodPanel.Visible = false;
             }
         }
-        public byte[] ConvertImageToByte(Image img)
+        public byte[] ConvertImageToByte(System.Drawing.Image img)
         {
             using (MemoryStream ms = new MemoryStream())
             {
@@ -122,15 +127,12 @@ namespace WindowsClient
         }
         private void UploadOneBttn_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image files(*jpeg;|*jpg)|*.jpg|*.jpeg", Multiselect = false })
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
             {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    ImageOnePictureBx.Image = Image.FromFile(ofd.FileName);
-                    ConfirmationOnePictureBx.Image = Properties.Resources.ImageConfirmation;
-                    ConfirmationOnePictureBx.Refresh();
-                    ConfirmationOnePictureBx.Visible = true;
-                }
+                ImageOnePictureBx.Image = Image.FromFile(open.FileName);
             }
         }
 
@@ -442,42 +444,61 @@ namespace WindowsClient
         {
             try
             {
-
-
-                //Random rnd = new Random();
-                //int AdvertID = 0;
-                // do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-
-                  byte[] ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
-                 //byte[] ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
-                 //byte[] ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+                 Random rnd = new Random();
+                 int AdvertID = 0;
+                 do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
+                byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
+                byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
+                if (ImageTwoPictureBx.Image == null && ImageThreePictureBx.Image == null)
+                {
+                    ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+                }
+                else if(ImageTwoPictureBx.Image == null)
+                {
+                    ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+                    ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+                }
+                else if(ImageThreePictureBx.Image == null)
+                {
+                    ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+                    ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+                }
+                else
+                {
+                    ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
+                    ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
+                    ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
+                }
+                 string horsebreed = this.HorseBreedComboBox.GetItemText(this.HorseBreedComboBox.SelectedItem);
+                 string horsegender = this.HorseGenderComboBox.GetItemText(this.HorseGenderComboBox.SelectedItem);
+                 Horse horse = new Horse(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                       HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
+                       HorsePurposeTxt.Text);
                 
-                //Horse horse = new Horse();
-
-                //double price = 0.00;
-                //string breed = BreedComboBox.SelectedItem.ToString();
-                //double.TryParse(PriceTxt.Text, out price);
-
-             
-                   if (Model.addNewHorseAdvert(1, "dss", "horse 4 sale", "des", 20.00, false, "Available",
-                        "Dizzie", 12, "Male", "22", false, "Unknown", "Racing"))
+                if (Model.addNewHorseAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                       HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
+                       HorsePurposeTxt.Text))
                     {
-                        string message = "Item #22 has been added to our system. " +
+                        string message = "Item #" + AdvertID + " has been added to our system. " +
                        "Admin must verify item before advertisement is made public";
-                        //string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
-                       // int notifID = 0;
-                        //do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        //if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        int notifID = 0;
+                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
                         System.Windows.MessageBox.Show(message);
                     }
                 
-                //(Model.addNewHorseAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "AVAILABLE",
-                       //ImageOne, ImageTwo, ImageThree, HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), HorseGenderComboBox.SelectedItem.ToString(), HorseSizeTxt.Text, false, BreedComboBox.SelectedItem.ToString(),
-                       //HorsePurposeTxt.Text)
                 
             }catch(Exception excep)
             {
-                System.Windows.MessageBox.Show("Form:" + excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+               
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
             }
             
         }
