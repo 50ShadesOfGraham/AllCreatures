@@ -251,7 +251,7 @@ namespace BusinessLayer
         {
             try
             {
-                //DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid,ItemTwo_advertid, ItemThree_advertid,bundleprice);
+                DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid,ItemTwo_advertid, ItemThree_advertid,bundleprice);
                 return true;
             }
             catch (System.Exception excep)
