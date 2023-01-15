@@ -472,9 +472,6 @@ namespace WindowsClient
                 }
                  string horsebreed = this.HorseBreedComboBox.GetItemText(this.HorseBreedComboBox.SelectedItem);
                  string horsegender = this.HorseGenderComboBox.GetItemText(this.HorseGenderComboBox.SelectedItem);
-                 Horse horse = new Horse(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
-                       HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
-                       HorsePurposeTxt.Text);
                 
                 if (Model.addNewHorseAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
                        HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
