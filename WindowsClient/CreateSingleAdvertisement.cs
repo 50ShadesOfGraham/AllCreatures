@@ -483,7 +483,7 @@ namespace WindowsClient
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
-                        System.Windows.MessageBox.Show(message);
+                        //System.Windows.MessageBox.Show(message);
                     }
                 
                 
