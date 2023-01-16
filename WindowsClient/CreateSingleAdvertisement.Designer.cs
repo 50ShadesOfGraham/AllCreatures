@@ -340,7 +340,7 @@
             this.UploadOneBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadOneBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadOneBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.UploadOneBttn.Location = new System.Drawing.Point(551, 133);
+            this.UploadOneBttn.Location = new System.Drawing.Point(551, 62);
             this.UploadOneBttn.Name = "UploadOneBttn";
             this.UploadOneBttn.Size = new System.Drawing.Size(149, 67);
             this.UploadOneBttn.TabIndex = 1;
@@ -422,7 +422,7 @@
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LitterPanel.Location = new System.Drawing.Point(0, 2457);
             this.LitterPanel.Name = "LitterPanel";
-            this.LitterPanel.Size = new System.Drawing.Size(868, 566);
+            this.LitterPanel.Size = new System.Drawing.Size(868, 575);
             this.LitterPanel.TabIndex = 11;
             // 
             // NotPurebreedPanel

@@ -1,4 +1,5 @@
-﻿using BusinessLayer;
+﻿using BusinessEntities;
+using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,13 +43,40 @@ namespace WindowsClient
 
         private void AdvertBttn_Click(object sender, EventArgs e)
         {
-            CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model);
+            Bundle bundle = new Bundle();
+            CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model,bundle,false);
             advertisement.Show();
+            this.Hide();
         }
 
         private void BundleBttn_Click(object sender, EventArgs e)
         {
+            Random rnd = new Random();
+            int bundleID = 0;
+            int ItemOne = 0;
+            int ItemTwo = 0;
+            int ItemThree = 0;
+            do { ItemOne = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(ItemOne));
+            do { ItemTwo = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(ItemTwo) && ItemTwo != ItemOne);
+            do { ItemThree = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(ItemThree) && ItemThree != ItemOne && ItemThree != ItemTwo);
+            //do { bundleID = rnd.Next(0, 99999); } while (Model.BundleIDPresent(bundleID));
+            bundleID = rnd.Next(0, 99999);
+            if(NoOfItemsComboBx.SelectedIndex.Equals(1))
+            {
+                Bundle bundle = new Bundle(bundleID, ItemOne, ItemTwo, 0,Convert.ToDouble(BundlePriceTextBox.Text));
+                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundle,true);
+                _advertisement.Show();
+                this.Hide();
+            }
 
+            if(NoOfItemsComboBx.SelectedIndex.Equals(2))
+            {
+                Bundle bundle = new Bundle(bundleID, ItemOne, ItemTwo, ItemThree, Convert.ToDouble(BundlePriceTextBox.Text));
+                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundle, true);
+                _advertisement.Show();
+                this.Hide();
+            }
+            
         }
 
         private void NoOfItemsComboBx_SelectedIndexChanged(object sender, EventArgs e)

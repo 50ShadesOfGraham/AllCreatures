@@ -29,20 +29,7 @@ namespace WindowsClient
 
             }else if(AdCatComboBx.SelectedIndex == 1)
             {
-                Random rnd = new Random();
-                int AdvertID = rnd.Next(0, 99999);
-                int FoodID = rnd.Next(0, 99999);
-                String AnimalType = AnimalTypeComboBox.SelectedItem.ToString();
-                byte[] updatedImage = ConvertImageToByte(ImageOnePictureBox.Image);
-                if (Model.addNewFoodAdvert(AdvertID,Model.CurrentUser.Email,Convert.ToDouble(PriceTextBox.Text),DescriptionTextBox.Text,false,"Available","Food",AdvertTitleTextBox.Text,updatedImage,FoodID,AnimalType,FoodDetailsTextBox.Text))
-                {
-                    MessageBox.Show("Food Successfully Added To DB");
-                    Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Food Fail");
-                }
+             
 
             } else if(AdCatComboBx.SelectedIndex == 2)
             {
