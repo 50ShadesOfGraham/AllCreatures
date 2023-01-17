@@ -1,56 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="AccessoryAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="AdminIndex.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="BundleAdvert.cs">
+    <Compile Update="CreateAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CreateAdvertisement.cs">
+    <Compile Update="CreateAdvertStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CreateAdvertisementStart.cs">
+    <Compile Update="CreateSingleAdvertisement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DisplaySingleUser.cs">
+    <Compile Update="GeneralDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DisplayUserControl1.cs">
+    <Compile Update="Notification.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="DisplayUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="DogAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FarmAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FoodAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="GenericAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="HorseAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="IndividualAnimalAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="LitterAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PaymentDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PlaceAdvertisement.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Product.cs">
       <SubType>UserControl</SubType>
@@ -64,13 +31,10 @@
     <Compile Update="UserIndex.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UserRejectReason.cs">
+    <Compile Update="UserNotifications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="verifiyAdvertisements.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="verifyUser.cs">
+    <Compile Update="ViewAdForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ViewAds.cs">

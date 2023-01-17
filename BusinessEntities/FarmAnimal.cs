@@ -23,19 +23,16 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public FarmAnimal(string Purpose)
+        //With Images
+        public FarmAnimal(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string purpose)
+            : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animalname, animaltype, age, gender)
         {
-            this.purpose = Purpose; 
+            this.purpose= purpose;
         }
         public FarmAnimal(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, string purpose)
-        : base(advertid, selleremail, title, description, price, verified,status,animalname,animaltype,age, gender)
+            : base(advertid, selleremail, title, description, price, verified, status, animalname, animaltype, age, gender)
         {
-            this.purpose = Purpose;
-        }
-        public FarmAnimal(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, string purpose)
-        : base(advertid, selleremail, title, description, price, verified, status,imageone,imagetwo,imagethree, animalname, animaltype, age, gender)
-        {
-            this.purpose = Purpose;
+            this.purpose = purpose;
         }
         #endregion
     }

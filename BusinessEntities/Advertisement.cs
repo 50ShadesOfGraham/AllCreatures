@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Advertisement
+    public class Advertisement 
     {
         #region Instance Properties
         private int advertid;
@@ -78,7 +78,7 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public Advertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree)
+        public Advertisement(int advertid, string selleremail, string title, string description, double price,bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree)
         {
             this.advertid = AdvertID;
             this.title = Title;
@@ -91,16 +91,15 @@ namespace BusinessEntities
             this.imagetwo = ImageTwo;
             this.imagethree = ImageThree;
         }
-        //Without Images
         public Advertisement(int advertid, string selleremail, string title, string description, double price, bool verified, string status)
         {
-            this.advertid = AdvertID;
-            this.title = Title;
-            this.description = Description;
-            this.price = Price;
-            this.selleremail = SellerEmail;
-            this.verified = Verified;
-            this.status = Status;
+            this.advertid = advertid;
+            this.title = title;
+            this.description = description;
+            this.price = price;
+            this.selleremail = selleremail;
+            this.verified = verified;
+            this.status = status;
         }
         public Advertisement(Advertisement advert)
         {

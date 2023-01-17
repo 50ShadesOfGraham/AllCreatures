@@ -10,7 +10,7 @@ namespace BusinessEntities
     {
         #region Instance Properties
         private string accesscategory;
-        private string accesscubcategory;
+        private string subaccesscategory;
         #endregion
         #region Instance Properties
         public string AccessCategory
@@ -18,35 +18,29 @@ namespace BusinessEntities
             get { return accesscategory; }
             set { accesscategory = value; }
         }
-        public string AccessSubCategory
+        public string SubAccessCategory
         {
-            get { return accesscubcategory; }
-            set { AccessSubCategory = value; }
+            get { return subaccesscategory; }
+            set { subaccesscategory = value; }
         }
         #endregion
         #region Constructor
-        public Accessories()
+        public Accessories() 
         {
             throw new System.NotImplementedException();
         }
-        public Accessories(string accesscategory, string accesscubcategory)
+        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string subaccesscategory)
+            : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree)
         {
             this.accesscategory = accesscategory;
-            this.accesscubcategory = accesscubcategory;
+            this.subaccesscategory = subaccesscategory;
         }
-        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string accesscategory, string accesscubcategory) 
-            : base(advertid,selleremail,title,description,price,verified,status)
+        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string accesscategory,string subaccesscategory)
+           : base(advertid, selleremail, title, description, price, verified, status)
         {
             this.accesscategory = accesscategory;
-            this.accesscubcategory = accesscubcategory;
+            this.subaccesscategory = subaccesscategory;
         }
-        public Accessories(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesscubcategory)
-            : base(advertid, selleremail, title, description, price, verified, status,imageone,imagetwo,imagethree)
-        {
-            this.accesscategory = accesscategory;
-            this.accesscubcategory = accesscubcategory;
-        }
-
         #endregion
     }
 }

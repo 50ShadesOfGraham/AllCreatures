@@ -35,26 +35,26 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Dog(bool purebreed, string breedone, string breedtwo)
+        public Dog(bool purebreed,string breedone,string breedtwo)
         {
             this.purebreed = purebreed;
             this.breedone = breedone;
             this.breedtwo = breedtwo;
         }
 
-        public Dog(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo)
-            : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animalname, animaltype, age, gender)
+        public Dog(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender,bool purebreed,string breedone, string breedtwo) 
+            : base(advertid,selleremail,title,description,price,verified,status,imageone, imagetwo,imagethree,animalname,animaltype,age,gender)
         {
-            this.purebreed = Purebreed;
-            this.breedone = BreedOne;
-            this.breedtwo = BreedTwo;
+            this.purebreed = purebreed;
+            this.breedone = breedone;
+            this.breedtwo = breedtwo;
         }
-        public Dog(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo)
-            : base(advertid, selleremail, title, description, price, verified, status, animalname, animaltype, age, gender)
+        public Dog(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string animalname, string animaltype, int age, string gender, bool purebreed, string breedone, string breedtwo)
+            : base(advertid, selleremail, title, description, price, verified, status,animalname, animaltype, age, gender)
         {
-            this.purebreed = Purebreed;
-            this.breedone = BreedOne;
-            this.breedtwo = BreedTwo;
+            this.purebreed = purebreed;
+            this.breedone = breedone;
+            this.breedtwo = breedtwo;
         }
         #endregion
     }
