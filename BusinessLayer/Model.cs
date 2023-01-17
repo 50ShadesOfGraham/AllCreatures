@@ -252,6 +252,7 @@ namespace BusinessLayer
             try
             {
                 DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid,ItemTwo_advertid, ItemThree_advertid,bundleprice);
+                MessageBox.Show("Bundle #" + bundleID + " successfully created!");
                 return true;
             }
             catch (System.Exception excep)

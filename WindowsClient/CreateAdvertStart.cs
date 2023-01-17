@@ -44,7 +44,7 @@ namespace WindowsClient
         private void AdvertBttn_Click(object sender, EventArgs e)
         {
             Bundle bundle = new Bundle();
-            CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model,bundle,false);
+            CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model,0,0,0,0,false,0.00,0);
             advertisement.Show();
             this.Hide();
         }
@@ -61,18 +61,16 @@ namespace WindowsClient
             do { ItemThree = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(ItemThree) && ItemThree != ItemOne && ItemThree != ItemTwo);
             //do { bundleID = rnd.Next(0, 99999); } while (Model.BundleIDPresent(bundleID));
             bundleID = rnd.Next(0, 99999);
-            if(NoOfItemsComboBx.SelectedIndex.Equals(1))
+            if(NoOfItemsComboBx.SelectedIndex.Equals(0))
             {
-                Bundle bundle = new Bundle(bundleID, ItemOne, ItemTwo, 0,Convert.ToDouble(BundlePriceTextBox.Text));
-                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundle,true);
+                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundleID, ItemOne, ItemTwo,0,true,Convert.ToDouble(BundlePriceTextBox.Text),2);
                 _advertisement.Show();
                 this.Hide();
             }
 
-            if(NoOfItemsComboBx.SelectedIndex.Equals(2))
+            if(NoOfItemsComboBx.SelectedIndex.Equals(1))
             {
-                Bundle bundle = new Bundle(bundleID, ItemOne, ItemTwo, ItemThree, Convert.ToDouble(BundlePriceTextBox.Text));
-                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundle, true);
+                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundleID, ItemOne, ItemTwo, ItemThree, true, Convert.ToDouble(BundlePriceTextBox.Text),3);
                 _advertisement.Show();
                 this.Hide();
             }

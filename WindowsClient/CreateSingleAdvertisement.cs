@@ -22,22 +22,26 @@ namespace WindowsClient
         private IModel Model;
         private bool isBundle;
         private int NoItems;
-        private Bundle bundle;
-        public CreateSingleAdvertisement(IModel _model, Bundle bundle, bool isBundle)
+        private double BundlePrice;
+        private int BundleID;
+        private int ItemNoOne;
+        private int ItemNoTwo;
+        private int ItemNoThree;
+        public CreateSingleAdvertisement(IModel _model,int BundleID, int ItemOne, int ItemTwo, int ItemThree, bool isBundle, double BundlePrice,int NoItems)
         {
             InitializeComponent();
             this.Model = _model;
             this.isBundle = isBundle;
-            this.bundle = bundle;
-            if (isBundle.Equals(false)) { NoItems = 1; }
-            if (isBundle.Equals(true) && bundle.ItemNoThree.Equals(0))
-            {
-                NoItems = 2;
-            } else if (isBundle.Equals(true) && bundle.ItemNoThree != 0)
-            {
-                NoItems = 3;
-            }
+            this.BundleID = BundleID;
+            this.ItemNoOne = ItemOne;
+            this.ItemNoTwo = ItemTwo;
+            this.ItemNoThree = ItemThree;
 
+            if (isBundle.Equals(true))
+            {
+                this.NoItems = NoItems;
+            }
+            this.BundlePrice = BundlePrice;
         }
         private void FoodPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -113,19 +117,20 @@ namespace WindowsClient
 
         private void AdvertComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(AdvertComboBox.SelectedItem.Equals("Animal"))
+            string AdvertCombo  = this.AdvertComboBox.GetItemText(this.AdvertComboBox.SelectedItem);
+            if (AdvertCombo.Equals("Animal"))
             {
                 AnimalPanel.Visible = true;
                 AccessPanel.Visible = false;
                 FoodPanel.Visible = false;
             }
-            else if(AdvertComboBox.SelectedItem.Equals("Food"))
+            else if(AdvertCombo.Equals("Food"))
             {
                 AnimalPanel.Visible = false;
                 AccessPanel.Visible = false;
                 FoodPanel.Visible = true;
             }
-            else if(AdvertComboBox.SelectedItem.Equals("Accessories"))
+            else if(AdvertCombo.Equals("Accessories"))
             {
                 AnimalPanel.Visible = false;
                 AccessPanel.Visible = true;
@@ -184,14 +189,15 @@ namespace WindowsClient
 
         private void AccessCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(AccessCatComboBox.SelectedItem.Equals("Health"))
+            string AccessCombo = this.AccessCatComboBox.GetItemText(this.AccessCatComboBox.SelectedItem);
+            if (AccessCombo.Equals("Health"))
             {
                 AccessTypeComboBox.Items.Clear();
                 AccessTypeComboBox.Items.Add("Supplements");
                 AccessTypeComboBox.Items.Add("Medication");
                 AccessTypeComboBox.Items.Add("Other");
             }
-            else if(AccessCatComboBox.SelectedItem.Equals(" Bedding"))
+            else if(AccessCombo.Equals(" Bedding"))
             {
                 AccessTypeComboBox.Items.Clear();
                 AccessTypeComboBox.Items.Add("Tanks and Enclosures");
@@ -199,19 +205,21 @@ namespace WindowsClient
                 AccessTypeComboBox.Items.Add("Small Animals");
                 AccessTypeComboBox.Items.Add("Other");
             }
-            else if(AccessCatComboBox.SelectedItem.Equals(" Cleaning"))
+            else if(AccessCombo.Equals(" Cleaning"))
             {
                 AccessTypeComboBox.Items.Clear();
                 AccessTypeComboBox.Items.Add("Tanks and Enclosures");
                 AccessTypeComboBox.Items.Add("Shampoos");
                 AccessTypeComboBox.Items.Add("Other");
             }
-            else if(AccessCatComboBox.SelectedItem.Equals(" Other"))
+            else if(AccessCombo.Equals(" Other"))
             {
                 AccessTypeComboBox.Items.Clear();
                 AccessTypeComboBox.Items.Add("Horse Riding");
                 AccessTypeComboBox.Items.Add("Aquariums");
                 AccessTypeComboBox.Items.Add("Clothing");
+                AccessTypeComboBox.Items.Add("Other");
+
             }
         }
 
@@ -229,15 +237,15 @@ namespace WindowsClient
                 {
                     if(NoItems.Equals(3))
                     {
-                        AdvertID = bundle.ItemNoThree;
+                        AdvertID = ItemNoThree;
                     }
                     else if(NoItems.Equals(2))
                     {
-                        AdvertID = bundle.ItemNoTwo;
+                        AdvertID = ItemNoTwo;
                     }
                     else if(NoItems.Equals(1))
                     {
-                        AdvertID = bundle.ItemNoOne;
+                        AdvertID = ItemNoOne;
                     }
                 }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -274,21 +282,23 @@ namespace WindowsClient
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
                     do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
-                    if(isBundle.Equals(true) && NoItems.Equals(1))
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
                     {
-                        //Create Bundle
-                        if(Model.addNewBundle(bundle.BundleID,bundle.ItemNoOne,bundle.ItemNoTwo,bundle.ItemNoThree,bundle.Price)){ }
-                        Close();
-                    }
-                    else if(isBundle.Equals(true) && NoItems > 1)
-                    {
-                        NoItems--;
-                        ResetForm(this); //Resetting back to original state
-                    }
-                    else if(isBundle.Equals(false))
-                    {
-                        Close();
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if(Model.addNewBundle(BundleID,ItemNoOne,ItemNoTwo,ItemNoThree,BundlePrice)){ }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
                     }
                 }
             }
@@ -844,61 +854,61 @@ namespace WindowsClient
         public static void ResetForm(CreateSingleAdvertisement advertForm)
         {
             //Clearing General Advertisement 
-            advertForm.TitleTxt = null; 
-            advertForm.DescriptionTxt = null;
-            advertForm.AdvertComboBox.SelectedIndex = 0;
-            advertForm.PriceTxt= null;
+            advertForm.TitleTxt.Text = String.Empty; 
+            advertForm.DescriptionTxt.Text = String.Empty;
+            advertForm.AdvertComboBox.SelectedItem = null;
+            advertForm.PriceTxt.Text = String.Empty;
             advertForm.ImageOnePictureBx.Image = null;
             advertForm.ImageTwoPictureBx.Image = null;
             advertForm.ImageThreePictureBx.Image = null;
             //Clearing Animal
-            advertForm.AnimalCatComboBox.SelectedIndex = 0;
-            advertForm.AnimalTypeComboBox.SelectedIndex = 0;
-            advertForm.SpecifyAnimalTxtBx = null;
+            advertForm.AnimalCatComboBox.SelectedItem = null;
+            advertForm.AnimalTypeComboBox.SelectedItem = null;
+            advertForm.SpecifyAnimalTxtBx.Text = String.Empty;
             //Clearing Horse
-            advertForm.HorseNameTxt= null;
-            advertForm.HorseAgeTxt= null;
-            advertForm.HorseGenderComboBox.SelectedIndex = 0;
-            advertForm.HorseSizeTxt= null;
+            advertForm.HorseNameTxt.Text = String.Empty;
+            advertForm.HorseAgeTxt.Text = String.Empty;
+            advertForm.HorseGenderComboBox.SelectedItem = null;
+            advertForm.HorseSizeTxt.Text = String.Empty;
             advertForm.BrokenYesRadBttn.Checked= false;
             advertForm.BrokenNoRadBttn.Checked = false;
-            advertForm.HorseBreedComboBox.SelectedIndex= 0;
-            advertForm.HorsePurposeTxt = null;
+            advertForm.HorseBreedComboBox.SelectedItem = null;
+            advertForm.HorsePurposeTxt.Text = String.Empty;
             //Clearing Dog
-            advertForm.DogNameTxt = null;
-            advertForm.DogAgeTxt= null;
-            advertForm.DogGenderComboBox.SelectedIndex = 0;
+            advertForm.DogNameTxt.Text = String.Empty;
+            advertForm.DogAgeTxt.Text = String.Empty;
+            advertForm.DogGenderComboBox.SelectedItem = null;
             advertForm.DogPurebreedYesRadBttn.Checked = false;
             advertForm.DogPurebreedYesRadBttn.Checked = false;
-            advertForm.DogBreedComboBox.SelectedIndex = 0;
-            advertForm.DogBreedOneComboBox.SelectedIndex = 0;
-            advertForm.DogBreedTwoComboBox.SelectedIndex = 0;
+            advertForm.DogBreedComboBox.SelectedItem = null;
+            advertForm.DogBreedOneComboBox.SelectedItem = null;
+            advertForm.DogBreedTwoComboBox.SelectedItem = null;
             //Clearing Generic Animal
-            advertForm.GANameTxt = null;
-            advertForm.GAAgeTxt = null;
-            advertForm.GAGenderComboBox.SelectedIndex = 0;
-            advertForm.DetailOneTxt= null;
-            advertForm.DetailTwoTxt= null;
-            advertForm.DetailThreeTxt= null;
+            advertForm.GANameTxt.Text = String.Empty;
+            advertForm.GAAgeTxt.Text = String.Empty;
+            advertForm.GAGenderComboBox.SelectedItem = null;
+            advertForm.DetailOneTxt.Text = String.Empty;
+            advertForm.DetailTwoTxt.Text = String.Empty;
+            advertForm.DetailThreeTxt.Text = String.Empty;
             //Clearing Farm Animal
-            advertForm.FANameTxt= null;
-            advertForm.FAAgeTxt= null;
-            advertForm.FAGenderComboBox.SelectedIndex = 0;
-            advertForm.FAPurposeTxt= null;
+            advertForm.FANameTxt.Text = String.Empty;
+            advertForm.FAAgeTxt.Text = String.Empty;
+            advertForm.FAGenderComboBox.SelectedItem = null;
+            advertForm.FAPurposeTxt.Text = String.Empty;
             //Clearing Litter
-            advertForm.LitterSizeTxt = null;
+            advertForm.LitterSizeTxt.Text = String.Empty;
             advertForm.LitterYesRadBttn.Checked= false;
             advertForm.LitterNoRadBttn.Checked = false;
-            advertForm.LitterAgeTxt = null;
-            advertForm.BreedComboBox.SelectedIndex = 0;
-            advertForm.BreedOneComboBox.SelectedIndex = 0;
-            advertForm.BreedTwoComboBox.SelectedIndex = 0;
+            advertForm.LitterAgeTxt.Text = String.Empty;
+            advertForm.BreedComboBox.SelectedItem = null;
+            advertForm.BreedOneComboBox.SelectedItem = null;
+            advertForm.BreedTwoComboBox.SelectedItem = null;
             //Clearing Food
-            advertForm.AnimalFoodTypeComboBox.SelectedIndex = 0;
-            advertForm.DetailTxt= null;
+            advertForm.AnimalFoodTypeComboBox.SelectedItem = null;
+            advertForm.DetailTxt.Text = String.Empty;
             //Clearing Accessories
-            advertForm.AccessCatComboBox.SelectedIndex = 0;
-            advertForm.AccessTypeComboBox.SelectedIndex = 0;
+            advertForm.AccessCatComboBox.SelectedItem = null;
+            advertForm.AccessTypeComboBox.SelectedItem = null;
             //Clearing Panels Back To Original State
             advertForm.GeneralAdvertPanel.Visible = true;
             advertForm.HorseGenderComboBox.SelectedText = "Male";

@@ -9,38 +9,14 @@ using System.Threading.Tasks;
 namespace BusinessEntities
 {
     public static class AdvertisementCreator
-    {
-        private static Advertisement advertisement = null;
-        
+    {        
         private static Dog dog = null;
-
-        private static Animal animal = null;
-        public static Advertisement GetAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree)
-        {
-            if (advertisement != null)
-            {
-                return advertisement;
-            }
-            else
-            {
-                return new Advertisement(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree);
-            }
-        }
-        public static void SetAdvert(Advertisement aAdvert)
-        {
-            advertisement = aAdvert;
-        }
-        public static Animal GetAnimal(string animalname, string animaltype, int age, string gender)
-        {
-            if (animal != null)
-            {
-                return animal;
-            }
-            else
-            {
-                return new Animal(animalname, animaltype, age, gender);
-            }
-        }
+        private static Horse horse = null;
+        private static GenericAnimal genericAnimal = null;
+        private static FarmAnimal farmAnimal = null;
+        private static Litter litter = null;
+        private static Food food = null;
+        private static Accessories accessories = null;
 
        
         public static Dog GetDog(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo, byte[] imagethree,string animalname,int age, string gender,bool purebreed, string breedone, string breedtwo)
@@ -52,6 +28,14 @@ namespace BusinessEntities
             else
             {
                 return new Dog(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animalname,"Dog",age,gender, purebreed,breedone,breedtwo);
+            }
+        }
+
+        public static Horse GetHorse()
+        {
+            if(horse != null)
+            {
+                return horse;
             }
         }
     }
