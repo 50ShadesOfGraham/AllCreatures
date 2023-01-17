@@ -115,9 +115,8 @@ namespace DataAccessLayer
             }
             return UserList;
         }
-        public List<Advertisement> getAllAdvertisements()
+        public void getAllDogAdvertisements(ref List<Advertisement> advertisements)
         {
-            List<Advertisement> AdvertList = new List<Advertisement>();
             
             try
             {
@@ -137,24 +136,285 @@ namespace DataAccessLayer
                                                                              Convert.ToDouble(dRow.ItemArray.GetValue(4)),
                                                                              Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
                                                                              dRow.ItemArray.GetValue(6).ToString(),
-                                                                             System.Text.UTF8Encoding.ASCII.GetBytes(dRow.ItemArray.GetValue(6).ToString()),
-                                                                             System.Text.UTF8Encoding.ASCII.GetBytes(dRow.ItemArray.GetValue(7).ToString()),
-                                                                             System.Text.UTF8Encoding.ASCII.GetBytes(dRow.ItemArray.GetValue(8).ToString()),
                                                                              dRow.ItemArray.GetValue(10).ToString(),
                                                                              Convert.ToInt32(dRow.ItemArray.GetValue(11)),
                                                                              dRow.ItemArray.GetValue(12).ToString(),
                                                                              Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
                                                                              dRow.ItemArray.GetValue(14).ToString(),
                                                                              dRow.ItemArray.GetValue(15).ToString()
-                                                                             );                                                   
-                                                             
-                    AdvertList.Add(newDog);
+                                                                             );
+
+                    advertisements.Add(newDog);
                     MessageBox.Show("Dog: " + newDog.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
             {
                 MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void getAllHorseAdvertisements(ref List<Advertisement> advertisements)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From HorseAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    Horse horse = AdvertisementCreator.GetHorse(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                             dRow.ItemArray.GetValue(1).ToString(),
+                                                                             dRow.ItemArray.GetValue(2).ToString(),
+                                                                             dRow.ItemArray.GetValue(3).ToString(),
+                                                                             Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                             dRow.ItemArray.GetValue(6).ToString(),
+                                                                             dRow.ItemArray.GetValue(10).ToString(),
+                                                                             Convert.ToInt32(dRow.ItemArray.GetValue(11)),
+                                                                             dRow.ItemArray.GetValue(12).ToString(),
+                                                                             dRow.ItemArray.GetValue(13).ToString(),
+                                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(14)),
+                                                                             dRow.ItemArray.GetValue(15).ToString(),
+                                                                             dRow.ItemArray.GetValue(16).ToString()
+                                                                             );
+
+                    advertisements.Add(horse);
+                    MessageBox.Show("Horse: " + horse.AdvertID + " successfully added");
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void getAllFarmAnimalAdvertisements(ref List<Advertisement> advertisements)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FarmAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    FarmAnimal farmAnimal = AdvertisementCreator.GetFarmAnimal(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                             dRow.ItemArray.GetValue(1).ToString(),
+                                                                             dRow.ItemArray.GetValue(2).ToString(),
+                                                                             dRow.ItemArray.GetValue(3).ToString(),
+                                                                             Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                             Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                             dRow.ItemArray.GetValue(6).ToString(),
+                                                                             dRow.ItemArray.GetValue(11).ToString(),
+                                                                             dRow.ItemArray.GetValue(10).ToString(),
+                                                                             Convert.ToInt32(dRow.ItemArray.GetValue(12)),
+                                                                             dRow.ItemArray.GetValue(13).ToString(),
+                                                                             dRow.ItemArray.GetValue(14).ToString()
+                                                                             );
+
+                    advertisements.Add(farmAnimal);
+                    MessageBox.Show("Farm Animal: " + farmAnimal.AdvertID + " successfully added");
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void getAllGenericAnimalAdvertisements(ref List<Advertisement> advertisements)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From GenericAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    GenericAnimal genricAnimal = AdvertisementCreator.GetGenericAnimal(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                                         dRow.ItemArray.GetValue(1).ToString(),
+                                                                                         dRow.ItemArray.GetValue(2).ToString(),
+                                                                                         dRow.ItemArray.GetValue(3).ToString(),
+                                                                                         Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                                         Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                                         dRow.ItemArray.GetValue(6).ToString(),
+                                                                                         dRow.ItemArray.GetValue(11).ToString(),
+                                                                                         dRow.ItemArray.GetValue(10).ToString(),
+                                                                                         Convert.ToInt32(dRow.ItemArray.GetValue(12)),
+                                                                                         dRow.ItemArray.GetValue(13).ToString(),
+                                                                                         dRow.ItemArray.GetValue(14).ToString(),
+                                                                                         dRow.ItemArray.GetValue(15).ToString(),
+                                                                                         dRow.ItemArray.GetValue(16).ToString()
+                                                                             );
+
+                    advertisements.Add(genricAnimal);
+                    MessageBox.Show("Farm Animal: " + genricAnimal.AdvertID + " successfully added");
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void getAllLitterAdvertisements(ref List<Advertisement> advertisements)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From LitterAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    Litter litter = AdvertisementCreator.GetLitter(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                   dRow.ItemArray.GetValue(1).ToString(),
+                                                                   dRow.ItemArray.GetValue(2).ToString(),
+                                                                   dRow.ItemArray.GetValue(3).ToString(),
+                                                                   Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                   Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                   dRow.ItemArray.GetValue(6).ToString(),
+                                                                   "MULTI",
+                                                                   dRow.ItemArray.GetValue(10).ToString(),
+                                                                   Convert.ToInt32(dRow.ItemArray.GetValue(12)),
+                                                                   "MULTI",
+                                                                   Convert.ToInt32(dRow.ItemArray.GetValue(11)),
+                                                                   Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
+                                                                   dRow.ItemArray.GetValue(14).ToString(),
+                                                                   dRow.ItemArray.GetValue(15).ToString()
+                                                                    );
+
+                    advertisements.Add(litter);
+                    MessageBox.Show("Litter: " + litter.AdvertID + " successfully added");
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void getAllFoodAdvertisements(ref List<Advertisement> advertisements)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FoodAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    Food food = AdvertisementCreator.GetFood(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                   dRow.ItemArray.GetValue(1).ToString(),
+                                                                   dRow.ItemArray.GetValue(2).ToString(),
+                                                                   dRow.ItemArray.GetValue(3).ToString(),
+                                                                   Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                   Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                   dRow.ItemArray.GetValue(6).ToString(),
+                                                                   dRow.ItemArray.GetValue(10).ToString(),
+                                                                   dRow.ItemArray.GetValue(11).ToString()
+                                                                   );
+
+                    advertisements.Add(food);
+                    MessageBox.Show("Food: " + food.AdvertID + " successfully added");
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+        public void getAllAccessoryAdvertisements(ref List<Advertisement> advertisements)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From AccessoriesAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdvertData");
+                maxAdverts = ds.Tables["AdvertData"].Rows.Count;
+                for (int i = 0; i < maxAdverts; i++)
+                {
+                    DataRow dRow = ds.Tables["AdvertData"].Rows[i];
+                    Accessories accessories = AdvertisementCreator.GetAccessories(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                                                                                  dRow.ItemArray.GetValue(1).ToString(),
+                                                                                  dRow.ItemArray.GetValue(2).ToString(),
+                                                                                  dRow.ItemArray.GetValue(3).ToString(),
+                                                                                  Convert.ToDouble(dRow.ItemArray.GetValue(4)),
+                                                                                  Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
+                                                                                  dRow.ItemArray.GetValue(6).ToString(),
+                                                                                  dRow.ItemArray.GetValue(10).ToString(),
+                                                                                  dRow.ItemArray.GetValue(11).ToString()
+                                                                                  );
+
+                    advertisements.Add(accessories);
+                    MessageBox.Show("Litter: " + accessories.AdvertID + " successfully added");
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+
+        public List<Advertisement> getAllAdvertisements()
+        {
+            List<Advertisement> AdvertList= new List<Advertisement>();
+            try
+            {
+                getAllDogAdvertisements(ref AdvertList);
+                getAllHorseAdvertisements(ref AdvertList);
+                getAllFarmAnimalAdvertisements(ref AdvertList);
+                getAllGenericAnimalAdvertisements(ref AdvertList);
+                getAllLitterAdvertisements(ref AdvertList);
+                getAllFoodAdvertisements(ref AdvertList);
+                getAllAccessoryAdvertisements(ref AdvertList);
+            }
+            catch(Exception excep)
+            {
+                MessageBox.Show("Notifications: " + excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();

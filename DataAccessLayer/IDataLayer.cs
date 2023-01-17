@@ -23,6 +23,13 @@ namespace DataAccessLayer
         System.Data.SqlClient.SqlConnection getConnection();
         List<User> getAllUsers();
         List<Advertisement> getAllAdvertisements();
+        public void getAllDogAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllHorseAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllFarmAnimalAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllGenericAnimalAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllLitterAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllFoodAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllAccessoryAdvertisements(ref List<Advertisement> advertisements);
         List<Notifications> getAllNotifications();
         void openConnection();
         

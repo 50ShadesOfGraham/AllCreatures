@@ -29,7 +29,7 @@ namespace WindowsClient
         private void UserIndex_Load(object sender, EventArgs e)
         {
             int counter = 0;
-            foreach(Dog dog in Model.AdvertList)
+            foreach(Advertisement dog in Model.AdvertList)
             {
                 counter++;
             }
