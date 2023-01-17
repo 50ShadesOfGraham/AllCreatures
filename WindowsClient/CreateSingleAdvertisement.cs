@@ -278,13 +278,17 @@ namespace WindowsClient
                     if(isBundle.Equals(true) && NoItems.Equals(1))
                     {
                         //Create Bundle
-                        //Model.addNewBundle(bundle.BundleID,bundle.ItemOne,bundle.ItemTwo,bundle.ItemThree,bundle.Price){ }
+                        if(Model.addNewBundle(bundle.BundleID,bundle.ItemNoOne,bundle.ItemNoTwo,bundle.ItemNoThree,bundle.Price)){ }
                         Close();
                     }
                     else if(isBundle.Equals(true) && NoItems > 1)
                     {
                         NoItems--;
                         ResetForm(this); //Resetting back to original state
+                    }
+                    else if(isBundle.Equals(false))
+                    {
+                        Close();
                     }
                 }
             }
