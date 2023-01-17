@@ -17,27 +17,27 @@ namespace WindowsClient
     public partial class ViewAds : UserControl
     {
         private IModel Model;
-        private Dog Dog;
-        public ViewAds(IModel Model, Dog dog)
+        private Advertisement advert;
+        public ViewAds(IModel Model, Advertisement advert)
         {
             InitializeComponent();
             this.Model = Model;
-            this.Dog = dog;
+            this.advert = advert;
         }
 
 
-        public void SetLabel(String FirstName, String LastName,String Email)
+        public void SetLabel(String Title, String SellerEmail, String Price, String Status )
         {
-           label1.Text = FirstName;
-           label2.Text = LastName;
-           label3.Text = Email;
-
+            this.TitleLbl.Text = Title;
+            this.UserLinkLabel.Text = SellerEmail;
+            this.PriceLbl.Text = Price;
+            this.StatusLbl.Text = Status;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ViewAdForm viewAd = new ViewAdForm(Model,Dog);
-            viewAd.Show();
+            //ViewAdForm viewAd = new ViewAdForm(Model,advert);
+            //viewAd.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

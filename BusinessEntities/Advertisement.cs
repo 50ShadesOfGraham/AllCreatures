@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Advertisement 
+    public abstract class Advertisement 
     {
         #region Instance Properties
         private int advertid;
@@ -111,6 +111,7 @@ namespace BusinessEntities
             this.verified = advert.Verified;
             this.status = advert.Status;
         }
+        public abstract string GetClass();
         #endregion
     }
 }

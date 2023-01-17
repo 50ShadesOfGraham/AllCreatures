@@ -107,7 +107,6 @@
             this.HousePetBttn = new System.Windows.Forms.Button();
             this.AnimalBttn = new System.Windows.Forms.Button();
             this.LogoBox = new System.Windows.Forms.PictureBox();
-            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.TopNavBar.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.AccessPanel.SuspendLayout();
@@ -1010,6 +1009,7 @@
             this.ChickenBttn.TabIndex = 5;
             this.ChickenBttn.Text = "Chickens";
             this.ChickenBttn.UseVisualStyleBackColor = false;
+            this.ChickenBttn.Click += new System.EventHandler(this.ChickenBttn_Click);
             // 
             // SheepBttn
             // 
@@ -1024,6 +1024,7 @@
             this.SheepBttn.TabIndex = 4;
             this.SheepBttn.Text = "Sheep and Goats";
             this.SheepBttn.UseVisualStyleBackColor = false;
+            this.SheepBttn.Click += new System.EventHandler(this.SheepBttn_Click);
             // 
             // PigBttn
             // 
@@ -1038,6 +1039,7 @@
             this.PigBttn.TabIndex = 3;
             this.PigBttn.Text = "Pigs";
             this.PigBttn.UseVisualStyleBackColor = false;
+            this.PigBttn.Click += new System.EventHandler(this.PigBttn_Click);
             // 
             // CowBttn
             // 
@@ -1052,6 +1054,7 @@
             this.CowBttn.TabIndex = 2;
             this.CowBttn.Text = "Cows";
             this.CowBttn.UseVisualStyleBackColor = false;
+            this.CowBttn.Click += new System.EventHandler(this.CowBttn_Click);
             // 
             // HorseBttn
             // 
@@ -1066,6 +1069,7 @@
             this.HorseBttn.TabIndex = 1;
             this.HorseBttn.Text = "Horses";
             this.HorseBttn.UseVisualStyleBackColor = false;
+            this.HorseBttn.Click += new System.EventHandler(this.HorseBttn_Click);
             // 
             // FarmBttn
             // 
@@ -1110,6 +1114,7 @@
             this.RabbitBttn.TabIndex = 5;
             this.RabbitBttn.Text = "Rabbits";
             this.RabbitBttn.UseVisualStyleBackColor = false;
+            this.RabbitBttn.Click += new System.EventHandler(this.RabbitBttn_Click);
             // 
             // BirdsBttn
             // 
@@ -1124,6 +1129,7 @@
             this.BirdsBttn.TabIndex = 4;
             this.BirdsBttn.Text = "Birds";
             this.BirdsBttn.UseVisualStyleBackColor = false;
+            this.BirdsBttn.Click += new System.EventHandler(this.BirdsBttn_Click);
             // 
             // SmallAnimalsBttn
             // 
@@ -1138,6 +1144,7 @@
             this.SmallAnimalsBttn.TabIndex = 3;
             this.SmallAnimalsBttn.Text = "Small Animals ";
             this.SmallAnimalsBttn.UseVisualStyleBackColor = false;
+            this.SmallAnimalsBttn.Click += new System.EventHandler(this.SmallAnimalsBttn_Click);
             // 
             // FishBttn
             // 
@@ -1152,6 +1159,7 @@
             this.FishBttn.TabIndex = 2;
             this.FishBttn.Text = "Fish";
             this.FishBttn.UseVisualStyleBackColor = false;
+            this.FishBttn.Click += new System.EventHandler(this.FishBttn_Click);
             // 
             // CatBttn
             // 
@@ -1226,20 +1234,11 @@
             this.LogoBox.TabIndex = 0;
             this.LogoBox.TabStop = false;
             // 
-            // FlowLayout
-            // 
-            this.FlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowLayout.Location = new System.Drawing.Point(228, 45);
-            this.FlowLayout.Name = "FlowLayout";
-            this.FlowLayout.Size = new System.Drawing.Size(770, 687);
-            this.FlowLayout.TabIndex = 4;
-            // 
             // UserIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 732);
-            this.Controls.Add(this.FlowLayout);
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.TopNavBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1354,6 +1353,5 @@
         private Button ClothingBttn;
         private Button HorseRidingBttn;
         private ToolStripMenuItem notificationsToolStripMenuItem;
-        private FlowLayoutPanel FlowLayout;
     }
 }

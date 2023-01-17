@@ -41,6 +41,10 @@ namespace BusinessEntities
             this.accesscategory = accesscategory;
             this.subaccesscategory = subaccesscategory;
         }
+        public override string GetClass()
+        {
+            return "Accessories";
+        }
         #endregion
     }
 }

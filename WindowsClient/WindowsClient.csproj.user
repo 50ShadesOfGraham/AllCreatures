@@ -34,6 +34,9 @@
     <Compile Update="UserNotifications.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="User_Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ViewAdForm.cs">
       <SubType>Form</SubType>
     </Compile>

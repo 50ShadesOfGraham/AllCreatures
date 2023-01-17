@@ -279,3 +279,4 @@ C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\W
 C:\Users\eddie\Desktop\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateSingleAdvertisement.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.User_Notifications.resources

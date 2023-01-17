@@ -49,6 +49,10 @@ namespace BusinessEntities
             this.detailtwo = detailtwo;
             this.detailthree = detailthree;
         }
+        public override string GetClass()
+        {
+            return this.AnimalType;
+        }
         #endregion
     }
 }

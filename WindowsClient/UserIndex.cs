@@ -220,32 +220,82 @@ namespace WindowsClient
 
         private void DogBttn_Click(object sender, EventArgs e)
         {
-            FlowLayout.Controls.Clear();
-            foreach (Dog u in Model.AdvertList)
-            {
-                MessageBox.Show("Advertisement:" + u.AdvertID);
-                ViewAds ads = new ViewAds(Model,u);
-                ads.SetLabel(u.Title, u.SellerEmail, u.Price.ToString()); //function
-                FlowLayout.Controls.Add(ads);
-            }
+            GetAdvertisements("Dog");
         }
 
         private void CatBttn_Click(object sender, EventArgs e)
         {
-            //FlowLayout.Controls.Clear();  //testing git changes
-
-            foreach (User u in Model.UserList)
-            {
-                //ViewAds ads = new ViewAds();
-                //ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
-                //FlowLayout.Controls.Add(ads);
-            }
+            GetAdvertisements("Cat");
         }
 
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserNotifications userNotifications = new UserNotifications(Model);
+            User_Notifications userNotifications = new User_Notifications(Model);
+            userNotifications.Dock= DockStyle.Fill;
             userNotifications.Show();
+            this.Controls.Add(userNotifications);
+        }
+
+        public void GetAdvertisements(String adverttype)
+        {
+            //FlowLayout.Controls.Clear();
+
+            foreach (Advertisement u in Model.AdvertList)
+            {
+                //string advertType = u.GetClass().Trim();
+                if (u.GetClass().Trim().Equals(adverttype))
+                {
+                    ViewAds ads = new ViewAds(Model, u);
+                    ads.SetLabel(u.Title.Trim(), u.SellerEmail.Trim(), u.Price.ToString().Trim(), u.Status.Trim()); //function
+                   // FlowLayout.Controls.Add(ads);
+                }
+            }
+        }
+
+        private void FishBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Fish");
+        }
+
+        private void SmallAnimalsBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Small Animals");
+        }
+
+        private void BirdsBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Birds");
+        }
+
+        private void RabbitBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Rabbit");
+        }
+
+        private void HorseBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Horse");
+        }
+
+        private void CowBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Cow");
+        }
+
+        private void PigBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Pig");
+        }
+
+        private void SheepBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Sheep");
+            //GetAdvertisements("Goat");
+        }
+
+        private void ChickenBttn_Click(object sender, EventArgs e)
+        {
+            GetAdvertisements("Chicken");
         }
     }
 }

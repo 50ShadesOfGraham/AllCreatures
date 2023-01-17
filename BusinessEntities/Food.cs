@@ -41,6 +41,10 @@ namespace BusinessEntities
             this.animaltype = animaltype;
             this.details = details;
         }
+        public override string GetClass()
+        {
+            return "Food";
+        }
         #endregion
 
     }

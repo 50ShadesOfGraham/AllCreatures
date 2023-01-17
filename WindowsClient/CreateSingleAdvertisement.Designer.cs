@@ -887,6 +887,8 @@
             // DogBreedTwoComboBox
             // 
             this.DogBreedTwoComboBox.FormattingEnabled = true;
+            this.DogBreedTwoComboBox.Items.AddRange(new object[] {
+            "Labrador"});
             this.DogBreedTwoComboBox.Location = new System.Drawing.Point(240, 109);
             this.DogBreedTwoComboBox.Name = "DogBreedTwoComboBox";
             this.DogBreedTwoComboBox.Size = new System.Drawing.Size(287, 33);
@@ -895,6 +897,8 @@
             // DogBreedOneComboBox
             // 
             this.DogBreedOneComboBox.FormattingEnabled = true;
+            this.DogBreedOneComboBox.Items.AddRange(new object[] {
+            "Labrador"});
             this.DogBreedOneComboBox.Location = new System.Drawing.Point(240, 31);
             this.DogBreedOneComboBox.Name = "DogBreedOneComboBox";
             this.DogBreedOneComboBox.Size = new System.Drawing.Size(287, 33);
@@ -935,6 +939,8 @@
             // DogBreedComboBox
             // 
             this.DogBreedComboBox.FormattingEnabled = true;
+            this.DogBreedComboBox.Items.AddRange(new object[] {
+            "Labrador"});
             this.DogBreedComboBox.Location = new System.Drawing.Point(187, 19);
             this.DogBreedComboBox.Name = "DogBreedComboBox";
             this.DogBreedComboBox.Size = new System.Drawing.Size(287, 33);

@@ -70,6 +70,10 @@ namespace BusinessEntities
             this.age = animal.Age;
             this.gender = animal.Gender;
         }
+        public override string GetClass()
+        {
+            return this.AnimalType;
+        }
         #endregion
     }
 }

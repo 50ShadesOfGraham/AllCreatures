@@ -34,6 +34,10 @@ namespace BusinessEntities
         {
             this.purpose = purpose;
         }
+        public override string GetClass()
+        {
+            return this.AnimalType;
+        }
         #endregion
     }
 }
