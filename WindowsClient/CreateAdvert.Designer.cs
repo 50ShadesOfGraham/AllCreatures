@@ -147,7 +147,7 @@
             // 
             this.LogoBox.Image = global::WindowsClient.Properties.Resources.LogoWhiteThumbnail;
             this.LogoBox.Location = new System.Drawing.Point(2, 2);
-            this.LogoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LogoBox.Margin = new System.Windows.Forms.Padding(2);
             this.LogoBox.Name = "LogoBox";
             this.LogoBox.Size = new System.Drawing.Size(105, 95);
             this.LogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -161,7 +161,7 @@
             this.WAISPanel.Controls.Add(this.LogoBox);
             this.WAISPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.WAISPanel.Location = new System.Drawing.Point(0, 0);
-            this.WAISPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WAISPanel.Margin = new System.Windows.Forms.Padding(2);
             this.WAISPanel.Name = "WAISPanel";
             this.WAISPanel.Size = new System.Drawing.Size(639, 97);
             this.WAISPanel.TabIndex = 1;
@@ -177,7 +177,7 @@
             "   Food",
             "   Accessories"});
             this.AdCatComboBx.Location = new System.Drawing.Point(328, 70);
-            this.AdCatComboBx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdCatComboBx.Margin = new System.Windows.Forms.Padding(2);
             this.AdCatComboBx.Name = "AdCatComboBx";
             this.AdCatComboBx.Size = new System.Drawing.Size(198, 23);
             this.AdCatComboBx.TabIndex = 2;
@@ -194,6 +194,7 @@
             this.WAYSlbl.Size = new System.Drawing.Size(193, 20);
             this.WAYSlbl.TabIndex = 1;
             this.WAYSlbl.Text = "Advertisement Category : ";
+            this.WAYSlbl.Click += new System.EventHandler(this.WAYSlbl_Click);
             // 
             // AnimalCategoryPanel
             // 
@@ -202,7 +203,7 @@
             this.AnimalCategoryPanel.Controls.Add(this.label1);
             this.AnimalCategoryPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalCategoryPanel.Location = new System.Drawing.Point(0, 97);
-            this.AnimalCategoryPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalCategoryPanel.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalCategoryPanel.Name = "AnimalCategoryPanel";
             this.AnimalCategoryPanel.Size = new System.Drawing.Size(639, 52);
             this.AnimalCategoryPanel.TabIndex = 3;
@@ -214,7 +215,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(639, 52);
             this.panel1.TabIndex = 4;
@@ -225,7 +226,7 @@
             this.panel2.Controls.Add(this.AnimalCatLbl);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(639, 52);
             this.panel2.TabIndex = 5;
@@ -242,7 +243,7 @@
             "  Reptile",
             "  Other"});
             this.AnimalCatComboBox.Location = new System.Drawing.Point(287, 17);
-            this.AnimalCatComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalCatComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalCatComboBox.Name = "AnimalCatComboBox";
             this.AnimalCatComboBox.Size = new System.Drawing.Size(198, 23);
             this.AnimalCatComboBox.TabIndex = 3;
@@ -270,7 +271,7 @@
             "   an Advertisement",
             "   a Bundle(Multiple Advertisements)"});
             this.comboBox2.Location = new System.Drawing.Point(328, 17);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(198, 23);
             this.comboBox2.TabIndex = 3;
@@ -297,7 +298,7 @@
             "   an Advertisement",
             "   a Bundle(Multiple Advertisements)"});
             this.comboBox1.Location = new System.Drawing.Point(328, 17);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 23);
             this.comboBox1.TabIndex = 3;
@@ -320,7 +321,7 @@
             this.AnimalTypePanel.Controls.Add(this.AnimalTypeSubPanel);
             this.AnimalTypePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalTypePanel.Location = new System.Drawing.Point(0, 149);
-            this.AnimalTypePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalTypePanel.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalTypePanel.Name = "AnimalTypePanel";
             this.AnimalTypePanel.Size = new System.Drawing.Size(639, 97);
             this.AnimalTypePanel.TabIndex = 4;
@@ -331,7 +332,7 @@
             this.SpecifyPanel.Controls.Add(this.PleaseSpecify);
             this.SpecifyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SpecifyPanel.Location = new System.Drawing.Point(0, 49);
-            this.SpecifyPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SpecifyPanel.Margin = new System.Windows.Forms.Padding(2);
             this.SpecifyPanel.Name = "SpecifyPanel";
             this.SpecifyPanel.Size = new System.Drawing.Size(639, 48);
             this.SpecifyPanel.TabIndex = 6;
@@ -339,7 +340,7 @@
             // OtherAnimalTextBox
             // 
             this.OtherAnimalTextBox.Location = new System.Drawing.Point(287, 8);
-            this.OtherAnimalTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OtherAnimalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.OtherAnimalTextBox.Name = "OtherAnimalTextBox";
             this.OtherAnimalTextBox.Size = new System.Drawing.Size(198, 23);
             this.OtherAnimalTextBox.TabIndex = 6;
@@ -362,7 +363,7 @@
             this.AnimalTypeSubPanel.Controls.Add(this.AnimalTypeComboBox);
             this.AnimalTypeSubPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalTypeSubPanel.Location = new System.Drawing.Point(0, 0);
-            this.AnimalTypeSubPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalTypeSubPanel.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalTypeSubPanel.Name = "AnimalTypeSubPanel";
             this.AnimalTypeSubPanel.Size = new System.Drawing.Size(639, 49);
             this.AnimalTypeSubPanel.TabIndex = 5;
@@ -386,7 +387,7 @@
             this.AnimalTypeComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.AnimalTypeComboBox.FormattingEnabled = true;
             this.AnimalTypeComboBox.Location = new System.Drawing.Point(287, 11);
-            this.AnimalTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalTypeComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalTypeComboBox.Name = "AnimalTypeComboBox";
             this.AnimalTypeComboBox.Size = new System.Drawing.Size(198, 23);
             this.AnimalTypeComboBox.TabIndex = 4;
@@ -402,7 +403,7 @@
             this.GeneralAdvertPanel.Controls.Add(this.label3);
             this.GeneralAdvertPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GeneralAdvertPanel.Location = new System.Drawing.Point(0, 246);
-            this.GeneralAdvertPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GeneralAdvertPanel.Margin = new System.Windows.Forms.Padding(2);
             this.GeneralAdvertPanel.Name = "GeneralAdvertPanel";
             this.GeneralAdvertPanel.Size = new System.Drawing.Size(639, 187);
             this.GeneralAdvertPanel.TabIndex = 5;
@@ -410,7 +411,7 @@
             // DescriptionTextBox
             // 
             this.DescriptionTextBox.Location = new System.Drawing.Point(209, 86);
-            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(306, 88);
@@ -431,7 +432,7 @@
             // PriceTextBox
             // 
             this.PriceTextBox.Location = new System.Drawing.Point(209, 52);
-            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(131, 23);
             this.PriceTextBox.TabIndex = 8;
@@ -451,7 +452,7 @@
             // AdvertTitleTextBox
             // 
             this.AdvertTitleTextBox.Location = new System.Drawing.Point(209, 14);
-            this.AdvertTitleTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdvertTitleTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AdvertTitleTextBox.Name = "AdvertTitleTextBox";
             this.AdvertTitleTextBox.Size = new System.Drawing.Size(306, 23);
             this.AdvertTitleTextBox.TabIndex = 6;
@@ -476,7 +477,7 @@
             this.AccessoriesPanel.Controls.Add(this.AccessCatlbl);
             this.AccessoriesPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AccessoriesPanel.Location = new System.Drawing.Point(0, 433);
-            this.AccessoriesPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccessoriesPanel.Margin = new System.Windows.Forms.Padding(2);
             this.AccessoriesPanel.Name = "AccessoriesPanel";
             this.AccessoriesPanel.Size = new System.Drawing.Size(639, 89);
             this.AccessoriesPanel.TabIndex = 6;
@@ -491,7 +492,7 @@
             "   an Advertisement",
             "   a Bundle(Multiple Advertisements)"});
             this.AccessTypeComboBox.Location = new System.Drawing.Point(228, 59);
-            this.AccessTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccessTypeComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.AccessTypeComboBox.Name = "AccessTypeComboBox";
             this.AccessTypeComboBox.Size = new System.Drawing.Size(198, 23);
             this.AccessTypeComboBox.TabIndex = 14;
@@ -508,7 +509,7 @@
             "  Cleaning",
             "  Other"});
             this.AccessCatComboBox.Location = new System.Drawing.Point(228, 20);
-            this.AccessCatComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccessCatComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.AccessCatComboBox.Name = "AccessCatComboBox";
             this.AccessCatComboBox.Size = new System.Drawing.Size(198, 23);
             this.AccessCatComboBox.TabIndex = 13;
@@ -544,7 +545,7 @@
             this.FoodPanel.Controls.Add(this.FoodDetailslbl);
             this.FoodPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FoodPanel.Location = new System.Drawing.Point(0, 522);
-            this.FoodPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FoodPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(639, 94);
             this.FoodPanel.TabIndex = 7;
@@ -552,7 +553,7 @@
             // FoodDetailsTextBox
             // 
             this.FoodDetailsTextBox.Location = new System.Drawing.Point(187, 17);
-            this.FoodDetailsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FoodDetailsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FoodDetailsTextBox.Multiline = true;
             this.FoodDetailsTextBox.Name = "FoodDetailsTextBox";
             this.FoodDetailsTextBox.Size = new System.Drawing.Size(329, 68);
@@ -582,7 +583,7 @@
             this.AnimalPanel.Controls.Add(this.AnimalNamelbl);
             this.AnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AnimalPanel.Location = new System.Drawing.Point(0, 616);
-            this.AnimalPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalPanel.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalPanel.Name = "AnimalPanel";
             this.AnimalPanel.Size = new System.Drawing.Size(639, 118);
             this.AnimalPanel.TabIndex = 8;
@@ -602,7 +603,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(185, 52);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(62, 23);
             this.numericUpDown1.TabIndex = 20;
@@ -610,7 +611,7 @@
             // AnimalNameTextBox
             // 
             this.AnimalNameTextBox.Location = new System.Drawing.Point(184, 16);
-            this.AnimalNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnimalNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AnimalNameTextBox.Name = "AnimalNameTextBox";
             this.AnimalNameTextBox.Size = new System.Drawing.Size(256, 23);
             this.AnimalNameTextBox.TabIndex = 19;
@@ -621,7 +622,7 @@
             this.NoRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NoRadBttn.ForeColor = System.Drawing.Color.White;
             this.NoRadBttn.Location = new System.Drawing.Point(261, 80);
-            this.NoRadBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NoRadBttn.Margin = new System.Windows.Forms.Padding(2);
             this.NoRadBttn.Name = "NoRadBttn";
             this.NoRadBttn.Size = new System.Drawing.Size(47, 23);
             this.NoRadBttn.TabIndex = 18;
@@ -635,7 +636,7 @@
             this.YesRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.YesRadBttn.ForeColor = System.Drawing.Color.White;
             this.YesRadBttn.Location = new System.Drawing.Point(200, 80);
-            this.YesRadBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.YesRadBttn.Margin = new System.Windows.Forms.Padding(2);
             this.YesRadBttn.Name = "YesRadBttn";
             this.YesRadBttn.Size = new System.Drawing.Size(49, 23);
             this.YesRadBttn.TabIndex = 17;
@@ -689,7 +690,7 @@
             this.DogPanel.Controls.Add(this.Purebreedlbl);
             this.DogPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DogPanel.Location = new System.Drawing.Point(0, 734);
-            this.DogPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DogPanel.Margin = new System.Windows.Forms.Padding(2);
             this.DogPanel.Name = "DogPanel";
             this.DogPanel.Size = new System.Drawing.Size(639, 122);
             this.DogPanel.TabIndex = 9;
@@ -700,7 +701,7 @@
             this.PurebreedNoRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PurebreedNoRadBttn.ForeColor = System.Drawing.Color.White;
             this.PurebreedNoRadBttn.Location = new System.Drawing.Point(251, 14);
-            this.PurebreedNoRadBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PurebreedNoRadBttn.Margin = new System.Windows.Forms.Padding(2);
             this.PurebreedNoRadBttn.Name = "PurebreedNoRadBttn";
             this.PurebreedNoRadBttn.Size = new System.Drawing.Size(47, 23);
             this.PurebreedNoRadBttn.TabIndex = 22;
@@ -714,7 +715,7 @@
             this.PurebreedYesRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PurebreedYesRadBttn.ForeColor = System.Drawing.Color.White;
             this.PurebreedYesRadBttn.Location = new System.Drawing.Point(187, 13);
-            this.PurebreedYesRadBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PurebreedYesRadBttn.Margin = new System.Windows.Forms.Padding(2);
             this.PurebreedYesRadBttn.Name = "PurebreedYesRadBttn";
             this.PurebreedYesRadBttn.Size = new System.Drawing.Size(49, 23);
             this.PurebreedYesRadBttn.TabIndex = 21;
@@ -732,7 +733,7 @@
             "   an Advertisement",
             "   a Bundle(Multiple Advertisements)"});
             this.BreedOneComboBox.Location = new System.Drawing.Point(160, 53);
-            this.BreedOneComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BreedOneComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.BreedOneComboBox.Name = "BreedOneComboBox";
             this.BreedOneComboBox.Size = new System.Drawing.Size(198, 23);
             this.BreedOneComboBox.TabIndex = 20;
@@ -755,7 +756,7 @@
             this.BreedTwoPanel.Controls.Add(this.BreedTwoLbl);
             this.BreedTwoPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BreedTwoPanel.Location = new System.Drawing.Point(0, 80);
-            this.BreedTwoPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BreedTwoPanel.Margin = new System.Windows.Forms.Padding(2);
             this.BreedTwoPanel.Name = "BreedTwoPanel";
             this.BreedTwoPanel.Size = new System.Drawing.Size(639, 42);
             this.BreedTwoPanel.TabIndex = 18;
@@ -770,7 +771,7 @@
             "   an Advertisement",
             "   a Bundle(Multiple Advertisements)"});
             this.comboBox3.Location = new System.Drawing.Point(160, 11);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(198, 23);
             this.comboBox3.TabIndex = 21;
@@ -813,7 +814,7 @@
             this.HorsePanel.Controls.Add(this.PurposeLbl);
             this.HorsePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HorsePanel.Location = new System.Drawing.Point(0, 856);
-            this.HorsePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorsePanel.Margin = new System.Windows.Forms.Padding(2);
             this.HorsePanel.Name = "HorsePanel";
             this.HorsePanel.Size = new System.Drawing.Size(639, 160);
             this.HorsePanel.TabIndex = 10;
@@ -824,7 +825,7 @@
             this.HorseNoRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HorseNoRadBttn.ForeColor = System.Drawing.Color.White;
             this.HorseNoRadBttn.Location = new System.Drawing.Point(228, 128);
-            this.HorseNoRadBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorseNoRadBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HorseNoRadBttn.Name = "HorseNoRadBttn";
             this.HorseNoRadBttn.Size = new System.Drawing.Size(47, 23);
             this.HorseNoRadBttn.TabIndex = 26;
@@ -838,7 +839,7 @@
             this.HorseBrokenYesRadBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.HorseBrokenYesRadBttn.ForeColor = System.Drawing.Color.White;
             this.HorseBrokenYesRadBttn.Location = new System.Drawing.Point(160, 128);
-            this.HorseBrokenYesRadBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorseBrokenYesRadBttn.Margin = new System.Windows.Forms.Padding(2);
             this.HorseBrokenYesRadBttn.Name = "HorseBrokenYesRadBttn";
             this.HorseBrokenYesRadBttn.Size = new System.Drawing.Size(49, 23);
             this.HorseBrokenYesRadBttn.TabIndex = 25;
@@ -868,7 +869,7 @@
             "   an Advertisement",
             "   a Bundle(Multiple Advertisements)"});
             this.HorseBreedComboBox.Location = new System.Drawing.Point(160, 88);
-            this.HorseBreedComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HorseBreedComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.HorseBreedComboBox.Name = "HorseBreedComboBox";
             this.HorseBreedComboBox.Size = new System.Drawing.Size(206, 23);
             this.HorseBreedComboBox.TabIndex = 22;
@@ -900,7 +901,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(160, 55);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(62, 23);
             this.numericUpDown2.TabIndex = 21;
@@ -920,7 +921,7 @@
             // PurposeTextBox
             // 
             this.PurposeTextBox.Location = new System.Drawing.Point(160, 18);
-            this.PurposeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PurposeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PurposeTextBox.Name = "PurposeTextBox";
             this.PurposeTextBox.Size = new System.Drawing.Size(206, 23);
             this.PurposeTextBox.TabIndex = 19;
@@ -943,7 +944,7 @@
             this.FarmAnimalPanel.Controls.Add(this.label6);
             this.FarmAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FarmAnimalPanel.Location = new System.Drawing.Point(0, 1016);
-            this.FarmAnimalPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FarmAnimalPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FarmAnimalPanel.Name = "FarmAnimalPanel";
             this.FarmAnimalPanel.Size = new System.Drawing.Size(639, 57);
             this.FarmAnimalPanel.TabIndex = 11;
@@ -951,7 +952,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(160, 23);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(256, 23);
             this.textBox4.TabIndex = 20;
@@ -978,7 +979,7 @@
             this.GenericAnimalPanel.Controls.Add(this.DetailOneLbl);
             this.GenericAnimalPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GenericAnimalPanel.Location = new System.Drawing.Point(0, 1073);
-            this.GenericAnimalPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenericAnimalPanel.Margin = new System.Windows.Forms.Padding(2);
             this.GenericAnimalPanel.Name = "GenericAnimalPanel";
             this.GenericAnimalPanel.Size = new System.Drawing.Size(639, 124);
             this.GenericAnimalPanel.TabIndex = 12;
@@ -986,7 +987,7 @@
             // DetailThreeTextBox
             // 
             this.DetailThreeTextBox.Location = new System.Drawing.Point(160, 93);
-            this.DetailThreeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DetailThreeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DetailThreeTextBox.Name = "DetailThreeTextBox";
             this.DetailThreeTextBox.Size = new System.Drawing.Size(256, 23);
             this.DetailThreeTextBox.TabIndex = 25;
@@ -994,7 +995,7 @@
             // DetailTwoTextBox
             // 
             this.DetailTwoTextBox.Location = new System.Drawing.Point(160, 57);
-            this.DetailTwoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DetailTwoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DetailTwoTextBox.Name = "DetailTwoTextBox";
             this.DetailTwoTextBox.Size = new System.Drawing.Size(256, 23);
             this.DetailTwoTextBox.TabIndex = 24;
@@ -1026,7 +1027,7 @@
             // DetailOneTextBox
             // 
             this.DetailOneTextBox.Location = new System.Drawing.Point(160, 16);
-            this.DetailOneTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DetailOneTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DetailOneTextBox.Name = "DetailOneTextBox";
             this.DetailOneTextBox.Size = new System.Drawing.Size(256, 23);
             this.DetailOneTextBox.TabIndex = 21;
@@ -1049,7 +1050,7 @@
             this.LitterPanel.Controls.Add(this.LitterSizeLbl);
             this.LitterPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.LitterPanel.Location = new System.Drawing.Point(0, 1197);
-            this.LitterPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LitterPanel.Margin = new System.Windows.Forms.Padding(2);
             this.LitterPanel.Name = "LitterPanel";
             this.LitterPanel.Size = new System.Drawing.Size(639, 47);
             this.LitterPanel.TabIndex = 13;
@@ -1057,7 +1058,7 @@
             // numericUpDown3
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(176, 17);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(62, 23);
             this.numericUpDown3.TabIndex = 25;
@@ -1084,7 +1085,7 @@
             this.ImageUploadPanel.Controls.Add(this.ImageTwoPictureBox);
             this.ImageUploadPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ImageUploadPanel.Location = new System.Drawing.Point(0, 1244);
-            this.ImageUploadPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImageUploadPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ImageUploadPanel.Name = "ImageUploadPanel";
             this.ImageUploadPanel.Size = new System.Drawing.Size(639, 268);
             this.ImageUploadPanel.TabIndex = 14;
@@ -1092,7 +1093,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(279, 166);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(92, 34);
             this.pictureBox1.TabIndex = 5;
@@ -1105,7 +1106,7 @@
             this.UploadImageThreeBttne.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadImageThreeBttne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.UploadImageThreeBttne.Location = new System.Drawing.Point(371, 194);
-            this.UploadImageThreeBttne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UploadImageThreeBttne.Margin = new System.Windows.Forms.Padding(2);
             this.UploadImageThreeBttne.Name = "UploadImageThreeBttne";
             this.UploadImageThreeBttne.Size = new System.Drawing.Size(113, 44);
             this.UploadImageThreeBttne.TabIndex = 4;
@@ -1119,7 +1120,7 @@
             this.UploadImageOnBttne.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadImageOnBttne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.UploadImageOnBttne.Location = new System.Drawing.Point(244, 23);
-            this.UploadImageOnBttne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UploadImageOnBttne.Margin = new System.Windows.Forms.Padding(2);
             this.UploadImageOnBttne.Name = "UploadImageOnBttne";
             this.UploadImageOnBttne.Size = new System.Drawing.Size(113, 44);
             this.UploadImageOnBttne.TabIndex = 0;
@@ -1134,7 +1135,7 @@
             this.UploadImageTwoBttne.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadImageTwoBttne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.UploadImageTwoBttne.Location = new System.Drawing.Point(326, 107);
-            this.UploadImageTwoBttne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UploadImageTwoBttne.Margin = new System.Windows.Forms.Padding(2);
             this.UploadImageTwoBttne.Name = "UploadImageTwoBttne";
             this.UploadImageTwoBttne.Size = new System.Drawing.Size(113, 44);
             this.UploadImageTwoBttne.TabIndex = 2;
@@ -1144,7 +1145,7 @@
             // ImageOnePictureBox
             // 
             this.ImageOnePictureBox.Location = new System.Drawing.Point(378, 23);
-            this.ImageOnePictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImageOnePictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ImageOnePictureBox.Name = "ImageOnePictureBox";
             this.ImageOnePictureBox.Size = new System.Drawing.Size(92, 34);
             this.ImageOnePictureBox.TabIndex = 1;
@@ -1154,7 +1155,7 @@
             // ImageTwoPictureBox
             // 
             this.ImageTwoPictureBox.Location = new System.Drawing.Point(378, 107);
-            this.ImageTwoPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImageTwoPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.ImageTwoPictureBox.Name = "ImageTwoPictureBox";
             this.ImageTwoPictureBox.Size = new System.Drawing.Size(92, 34);
             this.ImageTwoPictureBox.TabIndex = 3;
@@ -1166,7 +1167,7 @@
             this.SubmitPanel.Controls.Add(this.SubmitBttn);
             this.SubmitPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SubmitPanel.Location = new System.Drawing.Point(0, 1512);
-            this.SubmitPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitPanel.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitPanel.Name = "SubmitPanel";
             this.SubmitPanel.Size = new System.Drawing.Size(639, 63);
             this.SubmitPanel.TabIndex = 15;
@@ -1178,7 +1179,7 @@
             this.CancelBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CancelBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.CancelBttn.Location = new System.Drawing.Point(279, 12);
-            this.CancelBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelBttn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelBttn.Name = "CancelBttn";
             this.CancelBttn.Size = new System.Drawing.Size(110, 44);
             this.CancelBttn.TabIndex = 1;
@@ -1193,7 +1194,7 @@
             this.SubmitBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SubmitBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.SubmitBttn.Location = new System.Drawing.Point(414, 12);
-            this.SubmitBttn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitBttn.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitBttn.Name = "SubmitBttn";
             this.SubmitBttn.Size = new System.Drawing.Size(110, 44);
             this.SubmitBttn.TabIndex = 0;
@@ -1222,7 +1223,7 @@
             this.Controls.Add(this.AnimalTypePanel);
             this.Controls.Add(this.AnimalCategoryPanel);
             this.Controls.Add(this.WAISPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateAdvert";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Place Advertisement";

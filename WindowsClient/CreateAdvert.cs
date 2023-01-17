@@ -230,5 +230,10 @@ namespace WindowsClient
         {
 
         }
+
+        private void WAYSlbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
