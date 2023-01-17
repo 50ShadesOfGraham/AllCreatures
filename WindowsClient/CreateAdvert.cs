@@ -235,5 +235,10 @@ namespace WindowsClient
         {
 
         }
+
+        private void AnimalTypelbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

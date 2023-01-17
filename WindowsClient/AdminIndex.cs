@@ -154,5 +154,21 @@ namespace WindowsClient
                 MessageBox.Show("Cancel signout");
             }
         }
+
+        private void verifyAdvertisementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            verifyAdvertisements verifyAds = new verifyAdvertisements(Model);
+            verifyAds.Show();
+        }
+
+        private void verifyAdsFood_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void verifyAdsAssessories_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
