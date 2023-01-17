@@ -322,6 +322,12 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
+
+        public bool verifyAdvertisement(Advertisement advertisement)
+        {
+            DataLayer.verifyAdvertisement(advertisement);
+                return true;
+        }
     }
 }
 

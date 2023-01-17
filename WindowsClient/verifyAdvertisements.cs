@@ -105,5 +105,18 @@ namespace WindowsClient
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            foreach(Advertisement advertisement in model.AdvertList)
+            {
+                if(advertisement.Title == listboxAni.SelectedItem.ToString())
+                {
+                    advertisement.Verified= true;
+                    model.verifyAdvertisement(advertisement);
+                    MessageBox.Show("Success");
+                }
+            }
+        }
     }
 }
