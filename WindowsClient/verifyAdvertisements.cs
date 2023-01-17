@@ -110,6 +110,9 @@ namespace WindowsClient
                         txtGender.Text=animal1.Gender;
                         
                     }*/
+                    
+                    
+                    
                     if (animal is Dog dog)
                     {
                         txtBreed.Text = dog.Purebreed.ToString();
