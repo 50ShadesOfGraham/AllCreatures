@@ -832,7 +832,7 @@ namespace DataAccessLayer
                 MessageBox.Show(excep.Message);
                 if (getConnection().ToString() == "Open")
                     closeConnection();
-               
+                System.Windows.Forms.Application.Exit();
             }
             return true;
         }

@@ -65,16 +65,22 @@
             this.txtDetail3 = new System.Windows.Forms.RichTextBox();
             this.txtVerified = new System.Windows.Forms.TextBox();
             this.panelAnimalsDisp = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.txtStat = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panelAccess = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtSubCat = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtAccessCat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.panelAssBtn.SuspendLayout();
             this.panelAnimalsBtn.SuspendLayout();
             this.panelfoodBtn.SuspendLayout();
             this.panelAnimalsDisp.SuspendLayout();
+            this.panelAccess.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdCatComboBx
@@ -130,6 +136,7 @@
             this.btnFood.TabIndex = 98;
             this.btnFood.Text = "Display Food";
             this.btnFood.UseVisualStyleBackColor = false;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // btnAssess
             // 
@@ -144,6 +151,7 @@
             this.btnAssess.TabIndex = 99;
             this.btnAssess.Text = "Display Assessories";
             this.btnAssess.UseVisualStyleBackColor = false;
+            this.btnAssess.Click += new System.EventHandler(this.btnAssess_Click);
             // 
             // btnAnimals
             // 
@@ -168,6 +176,7 @@
             this.listboxAni.Name = "listboxAni";
             this.listboxAni.Size = new System.Drawing.Size(186, 34);
             this.listboxAni.TabIndex = 101;
+            this.listboxAni.SelectedIndexChanged += new System.EventHandler(this.listboxAni_SelectedIndexChanged);
             this.listboxAni.DoubleClick += new System.EventHandler(this.listboxAni_DoubleClick);
             // 
             // listBoxAssess
@@ -178,6 +187,7 @@
             this.listBoxAssess.Name = "listBoxAssess";
             this.listBoxAssess.Size = new System.Drawing.Size(186, 34);
             this.listBoxAssess.TabIndex = 102;
+            this.listBoxAssess.DoubleClick += new System.EventHandler(this.listBoxAssess_DoubleClick);
             // 
             // listBoxFood
             // 
@@ -187,6 +197,7 @@
             this.listBoxFood.Name = "listBoxFood";
             this.listBoxFood.Size = new System.Drawing.Size(186, 34);
             this.listBoxFood.TabIndex = 103;
+            this.listBoxFood.DoubleClick += new System.EventHandler(this.listBoxFood_DoubleClick);
             // 
             // panelAssBtn
             // 
@@ -220,7 +231,7 @@
             this.ttlLabel.AutoSize = true;
             this.ttlLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ttlLabel.ForeColor = System.Drawing.Color.White;
-            this.ttlLabel.Location = new System.Drawing.Point(21, 29);
+            this.ttlLabel.Location = new System.Drawing.Point(148, 211);
             this.ttlLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ttlLabel.Name = "ttlLabel";
             this.ttlLabel.Size = new System.Drawing.Size(44, 21);
@@ -232,7 +243,7 @@
             this.lblVerified.AutoSize = true;
             this.lblVerified.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVerified.ForeColor = System.Drawing.Color.White;
-            this.lblVerified.Location = new System.Drawing.Point(20, 169);
+            this.lblVerified.Location = new System.Drawing.Point(147, 351);
             this.lblVerified.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVerified.Name = "lblVerified";
             this.lblVerified.Size = new System.Drawing.Size(70, 21);
@@ -244,7 +255,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(17, 137);
+            this.label10.Location = new System.Drawing.Point(144, 319);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 21);
@@ -256,7 +267,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(17, 77);
+            this.label2.Location = new System.Drawing.Point(144, 259);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 21);
@@ -265,7 +276,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(161, 137);
+            this.txtPrice.Location = new System.Drawing.Point(288, 319);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
@@ -275,7 +286,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(161, 80);
+            this.txtDescription.Location = new System.Drawing.Point(288, 262);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
@@ -285,7 +296,7 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(164, 32);
+            this.txtTitle.Location = new System.Drawing.Point(291, 214);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
@@ -298,7 +309,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(17, 204);
+            this.lblStatus.Location = new System.Drawing.Point(144, 386);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(48, 21);
@@ -307,7 +318,7 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(161, 203);
+            this.txtStatus.Location = new System.Drawing.Point(288, 385);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
@@ -320,7 +331,7 @@
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblType.ForeColor = System.Drawing.Color.White;
-            this.lblType.Location = new System.Drawing.Point(17, 232);
+            this.lblType.Location = new System.Drawing.Point(29, 10);
             this.lblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(101, 21);
@@ -329,7 +340,7 @@
             // 
             // txtAnimalType
             // 
-            this.txtAnimalType.Location = new System.Drawing.Point(161, 235);
+            this.txtAnimalType.Location = new System.Drawing.Point(173, 13);
             this.txtAnimalType.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnimalType.Multiline = true;
             this.txtAnimalType.Name = "txtAnimalType";
@@ -342,7 +353,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(17, 263);
+            this.label1.Location = new System.Drawing.Point(29, 41);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 21);
@@ -351,7 +362,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(161, 266);
+            this.txtName.Location = new System.Drawing.Point(173, 44);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
@@ -364,7 +375,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 293);
+            this.label5.Location = new System.Drawing.Point(33, 71);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 21);
@@ -373,7 +384,7 @@
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(161, 296);
+            this.txtAge.Location = new System.Drawing.Point(173, 74);
             this.txtAge.Margin = new System.Windows.Forms.Padding(2);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
@@ -386,7 +397,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 325);
+            this.label6.Location = new System.Drawing.Point(31, 103);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 21);
@@ -395,7 +406,7 @@
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(161, 329);
+            this.txtGender.Location = new System.Drawing.Point(173, 107);
             this.txtGender.Margin = new System.Windows.Forms.Padding(2);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
@@ -408,7 +419,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(19, 361);
+            this.label7.Location = new System.Drawing.Point(31, 139);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 21);
@@ -417,7 +428,7 @@
             // 
             // txtDetail1
             // 
-            this.txtDetail1.Location = new System.Drawing.Point(161, 361);
+            this.txtDetail1.Location = new System.Drawing.Point(173, 139);
             this.txtDetail1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail1.Name = "txtDetail1";
             this.txtDetail1.ReadOnly = true;
@@ -430,7 +441,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(17, 415);
+            this.label8.Location = new System.Drawing.Point(29, 193);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 21);
@@ -439,7 +450,7 @@
             // 
             // txtDetail2
             // 
-            this.txtDetail2.Location = new System.Drawing.Point(161, 415);
+            this.txtDetail2.Location = new System.Drawing.Point(173, 193);
             this.txtDetail2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail2.Name = "txtDetail2";
             this.txtDetail2.ReadOnly = true;
@@ -452,7 +463,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(17, 481);
+            this.label9.Location = new System.Drawing.Point(29, 259);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 21);
@@ -461,7 +472,7 @@
             // 
             // txtDetail3
             // 
-            this.txtDetail3.Location = new System.Drawing.Point(157, 481);
+            this.txtDetail3.Location = new System.Drawing.Point(169, 259);
             this.txtDetail3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail3.Name = "txtDetail3";
             this.txtDetail3.ReadOnly = true;
@@ -471,7 +482,7 @@
             // 
             // txtVerified
             // 
-            this.txtVerified.Location = new System.Drawing.Point(161, 169);
+            this.txtVerified.Location = new System.Drawing.Point(288, 351);
             this.txtVerified.Margin = new System.Windows.Forms.Padding(2);
             this.txtVerified.Multiline = true;
             this.txtVerified.Name = "txtVerified";
@@ -481,43 +492,78 @@
             // 
             // panelAnimalsDisp
             // 
-            this.panelAnimalsDisp.Controls.Add(this.button2);
-            this.panelAnimalsDisp.Controls.Add(this.button1);
-            this.panelAnimalsDisp.Controls.Add(this.button3);
-            this.panelAnimalsDisp.Controls.Add(this.txtStat);
-            this.panelAnimalsDisp.Controls.Add(this.label3);
-            this.panelAnimalsDisp.Controls.Add(this.txtVerified);
+            this.panelAnimalsDisp.Controls.Add(this.lblType);
+            this.panelAnimalsDisp.Controls.Add(this.txtAnimalType);
+            this.panelAnimalsDisp.Controls.Add(this.label1);
+            this.panelAnimalsDisp.Controls.Add(this.txtName);
+            this.panelAnimalsDisp.Controls.Add(this.label5);
+            this.panelAnimalsDisp.Controls.Add(this.txtAge);
             this.panelAnimalsDisp.Controls.Add(this.txtDetail3);
+            this.panelAnimalsDisp.Controls.Add(this.label6);
+            this.panelAnimalsDisp.Controls.Add(this.txtGender);
             this.panelAnimalsDisp.Controls.Add(this.label9);
+            this.panelAnimalsDisp.Controls.Add(this.label7);
+            this.panelAnimalsDisp.Controls.Add(this.txtDetail1);
             this.panelAnimalsDisp.Controls.Add(this.txtDetail2);
             this.panelAnimalsDisp.Controls.Add(this.label8);
-            this.panelAnimalsDisp.Controls.Add(this.txtDetail1);
-            this.panelAnimalsDisp.Controls.Add(this.label7);
-            this.panelAnimalsDisp.Controls.Add(this.txtGender);
-            this.panelAnimalsDisp.Controls.Add(this.label6);
-            this.panelAnimalsDisp.Controls.Add(this.txtAge);
-            this.panelAnimalsDisp.Controls.Add(this.label5);
-            this.panelAnimalsDisp.Controls.Add(this.txtName);
-            this.panelAnimalsDisp.Controls.Add(this.label1);
-            this.panelAnimalsDisp.Controls.Add(this.txtAnimalType);
-            this.panelAnimalsDisp.Controls.Add(this.lblType);
-            this.panelAnimalsDisp.Controls.Add(this.txtStatus);
-            this.panelAnimalsDisp.Controls.Add(this.lblStatus);
-            this.panelAnimalsDisp.Controls.Add(this.txtTitle);
-            this.panelAnimalsDisp.Controls.Add(this.txtDescription);
-            this.panelAnimalsDisp.Controls.Add(this.txtPrice);
-            this.panelAnimalsDisp.Controls.Add(this.label2);
-            this.panelAnimalsDisp.Controls.Add(this.label10);
-            this.panelAnimalsDisp.Controls.Add(this.lblVerified);
-            this.panelAnimalsDisp.Controls.Add(this.ttlLabel);
-            this.panelAnimalsDisp.Location = new System.Drawing.Point(155, 168);
+            this.panelAnimalsDisp.Location = new System.Drawing.Point(119, 438);
             this.panelAnimalsDisp.Name = "panelAnimalsDisp";
-            this.panelAnimalsDisp.Size = new System.Drawing.Size(753, 598);
+            this.panelAnimalsDisp.Size = new System.Drawing.Size(633, 321);
             this.panelAnimalsDisp.TabIndex = 107;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button2.Location = new System.Drawing.Point(350, 764);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 34);
+            this.button2.TabIndex = 145;
+            this.button2.Text = "Remove";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button1.Location = new System.Drawing.Point(520, 764);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 34);
+            this.button1.TabIndex = 144;
+            this.button1.Text = "&Exit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.button3.Location = new System.Drawing.Point(174, 764);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(124, 34);
+            this.button3.TabIndex = 143;
+            this.button3.Text = "Verify";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtStat
             // 
-            this.txtStat.Location = new System.Drawing.Point(492, 32);
+            this.txtStat.Location = new System.Drawing.Point(619, 214);
             this.txtStat.Margin = new System.Windows.Forms.Padding(2);
             this.txtStat.Multiline = true;
             this.txtStat.Name = "txtStat";
@@ -530,61 +576,67 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(377, 32);
+            this.label3.Location = new System.Drawing.Point(504, 214);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 21);
             this.label3.TabIndex = 141;
             this.label3.Text = "Status";
             // 
-            // button3
+            // panelAccess
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button3.Location = new System.Drawing.Point(71, 553);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 34);
-            this.button3.TabIndex = 143;
-            this.button3.Text = "Verify";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panelAccess.Controls.Add(this.label11);
+            this.panelAccess.Controls.Add(this.txtSubCat);
+            this.panelAccess.Controls.Add(this.label4);
+            this.panelAccess.Controls.Add(this.txtAccessCat);
+            this.panelAccess.Location = new System.Drawing.Point(528, 253);
+            this.panelAccess.Name = "panelAccess";
+            this.panelAccess.Size = new System.Drawing.Size(334, 72);
+            this.panelAccess.TabIndex = 146;
             // 
-            // button1
+            // label11
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button1.Location = new System.Drawing.Point(417, 553);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 34);
-            this.button1.TabIndex = 144;
-            this.button1.Text = "&Exit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(22, 40);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 21);
+            this.label11.TabIndex = 144;
+            this.label11.Text = "AccessSubCategory";
             // 
-            // button2
+            // txtSubCat
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.button2.Location = new System.Drawing.Point(247, 553);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 34);
-            this.button2.TabIndex = 145;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = false;
+            this.txtSubCat.Location = new System.Drawing.Point(179, 42);
+            this.txtSubCat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubCat.Multiline = true;
+            this.txtSubCat.Name = "txtSubCat";
+            this.txtSubCat.ReadOnly = true;
+            this.txtSubCat.Size = new System.Drawing.Size(143, 19);
+            this.txtSubCat.TabIndex = 143;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(22, 7);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 21);
+            this.label4.TabIndex = 142;
+            this.label4.Text = "AccessCategory";
+            // 
+            // txtAccessCat
+            // 
+            this.txtAccessCat.Location = new System.Drawing.Point(179, 9);
+            this.txtAccessCat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAccessCat.Multiline = true;
+            this.txtAccessCat.Name = "txtAccessCat";
+            this.txtAccessCat.ReadOnly = true;
+            this.txtAccessCat.Size = new System.Drawing.Size(143, 19);
+            this.txtAccessCat.TabIndex = 141;
             // 
             // verifyAdvertisements
             // 
@@ -592,13 +644,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1115, 860);
+            this.Controls.Add(this.panelAccess);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panelAnimalsDisp);
             this.Controls.Add(this.panelfoodBtn);
             this.Controls.Add(this.panelAnimalsBtn);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtStat);
             this.Controls.Add(this.panelAssBtn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.AdCatComboBx);
+            this.Controls.Add(this.txtVerified);
             this.Controls.Add(this.WAYSlbl);
             this.Controls.Add(this.LogoBox);
+            this.Controls.Add(this.ttlLabel);
+            this.Controls.Add(this.lblVerified);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.txtStatus);
             this.Name = "verifyAdvertisements";
             this.Text = "verifyAdvertisements";
             this.Load += new System.EventHandler(this.verifyAdvertisements_Load);
@@ -608,6 +676,8 @@
             this.panelfoodBtn.ResumeLayout(false);
             this.panelAnimalsDisp.ResumeLayout(false);
             this.panelAnimalsDisp.PerformLayout();
+            this.panelAccess.ResumeLayout(false);
+            this.panelAccess.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -656,5 +726,10 @@
         private Button button2;
         private Button button1;
         private Button button3;
+        private Panel panelAccess;
+        private Label label11;
+        private TextBox txtSubCat;
+        private Label label4;
+        private TextBox txtAccessCat;
     }
 }

@@ -30,6 +30,7 @@ namespace WindowsClient
                 panelfoodBtn.Visible = false;
                 panelAssBtn.Visible = false;
                 panelAnimalsDisp.Visible = true;
+                panelAccess.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 1)
             {
@@ -37,6 +38,7 @@ namespace WindowsClient
                 panelAnimalsDisp.Visible = false;
                 panelAnimalsBtn.Visible = false;
                 panelAssBtn.Visible = false;
+                panelAccess.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 2)
             {
@@ -44,7 +46,7 @@ namespace WindowsClient
                 panelAnimalsDisp.Visible = false;
                 panelAnimalsBtn.Visible = false;
                 panelfoodBtn.Visible = false;
-               
+                panelAccess.Visible = true;
             }
         }
 
@@ -54,6 +56,7 @@ namespace WindowsClient
             panelAnimalsBtn.Visible = false;
             panelAssBtn.Visible = false;
             panelfoodBtn.Visible= false;
+            panelAccess.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -82,6 +85,7 @@ namespace WindowsClient
         private void listboxAni_DoubleClick(object sender, EventArgs e)
         {
             txtTitle.Text=listboxAni.SelectedItem.ToString();   
+         
             foreach(Advertisement animal in model.AdvertList)
             {
                 if(animal.Title == txtTitle.Text)
@@ -92,7 +96,7 @@ namespace WindowsClient
                     txtPrice.Text=animal.Price.ToString();
                     txtStat.Text=animal.Status.ToString();
 
-                   
+                
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
                         txtAnimalType.Text=animal1.AnimalType.ToString();
@@ -108,15 +112,80 @@ namespace WindowsClient
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             foreach(Advertisement advertisement in model.AdvertList)
             {
                 if(advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
-                    advertisement.Verified= true;
+                    advertisement.Verified = true;
                     model.verifyAdvertisement(advertisement);
                     MessageBox.Show("Success");
                 }
             }
+        }
+
+        private void listboxAni_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAssess_Click(object sender, EventArgs e)
+        {
+            foreach(Advertisement advertisement in model.AdvertList)
+            {
+                foreach(Accessories accessories in model.AdvertList)
+                {
+                    listBoxAssess.Items.Add(accessories.Title);
+                }
+            }
+        }
+
+        private void btnFood_Click(object sender, EventArgs e)
+        {
+            foreach (Advertisement advertisement in model.AdvertList)
+            {
+                foreach (Food food in model.AdvertList)
+                {
+                    listBoxFood.Items.Add(food.Title);
+                }
+            }
+        }
+
+        private void listBoxAssess_DoubleClick(object sender, EventArgs e)
+        {
+            txtTitle.Text=listBoxAssess.SelectedItem.ToString();
+            foreach (Advertisement advertisement in model.AdvertList)
+            {
+                if (advertisement.Title == txtTitle.Text)
+                {
+                    txtTitle.Text = advertisement.Title;
+                    txtDescription.Text = advertisement.Description;
+                    txtVerified.Text = advertisement.Verified.ToString();
+                    txtPrice.Text = advertisement.Price.ToString();
+                    txtStat.Text = advertisement.Status.ToString();
+                }
+            }
+        }
+
+        private void listBoxFood_DoubleClick(object sender, EventArgs e)
+        {
+            txtTitle.Text = listBoxFood.SelectedItem.ToString();
+            foreach (Advertisement advertisement in model.AdvertList)
+            {
+                if (advertisement.Title == txtTitle.Text)
+                {
+                    txtTitle.Text = advertisement.Title;
+                    txtDescription.Text = advertisement.Description;
+                    txtVerified.Text = advertisement.Verified.ToString();
+                    txtPrice.Text = advertisement.Price.ToString();
+                    txtStat.Text = advertisement.Status.ToString();
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
