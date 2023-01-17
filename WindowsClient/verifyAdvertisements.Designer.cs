@@ -78,6 +78,8 @@
             this.panelFood = new System.Windows.Forms.Panel();
             this.txtDetails = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtBreed = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.panelAssBtn.SuspendLayout();
             this.panelAnimalsBtn.SuspendLayout();
@@ -496,6 +498,8 @@
             // 
             // panelAnimalsDisp
             // 
+            this.panelAnimalsDisp.Controls.Add(this.label13);
+            this.panelAnimalsDisp.Controls.Add(this.txtBreed);
             this.panelAnimalsDisp.Controls.Add(this.lblType);
             this.panelAnimalsDisp.Controls.Add(this.txtAnimalType);
             this.panelAnimalsDisp.Controls.Add(this.label1);
@@ -675,6 +679,28 @@
             this.label12.TabIndex = 126;
             this.label12.Text = "Details";
             // 
+            // txtBreed
+            // 
+            this.txtBreed.Location = new System.Drawing.Point(447, 13);
+            this.txtBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBreed.Multiline = true;
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.ReadOnly = true;
+            this.txtBreed.Size = new System.Drawing.Size(143, 19);
+            this.txtBreed.TabIndex = 140;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(341, 11);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 21);
+            this.label13.TabIndex = 141;
+            this.label13.Text = "PureBreed";
+            // 
             // verifyAdvertisements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -772,5 +798,7 @@
         private Panel panelFood;
         private TextBox txtDetails;
         private Label label12;
+        private Label label13;
+        private TextBox txtBreed;
     }
 }

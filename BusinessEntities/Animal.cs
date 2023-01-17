@@ -29,11 +29,13 @@ namespace BusinessEntities
         {
             get { return age; }
             set { age = value; }
+
+
         }
         public string Gender
         {
-            get { return Gender; }
-            set { Gender = value; }
+            get { return gender; }
+            set { gender = value; }
         }
         #endregion
         #region Constructor

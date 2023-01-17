@@ -88,7 +88,7 @@ namespace WindowsClient
         {
             txtTitle.Text=listboxAni.SelectedItem.ToString();   
          
-            foreach(Advertisement animal in model.AdvertList)
+            foreach(Animal animal in model.AdvertList.OfType<Animal>())
             {
                 if(animal.Title == txtTitle.Text)
                 {
@@ -97,8 +97,12 @@ namespace WindowsClient
                     txtVerified.Text = animal.Verified.ToString();
                     txtPrice.Text=animal.Price.ToString();
                     txtStat.Text=animal.Status.ToString();
+                   txtAnimalType.Text=animal.AnimalType;
+                    txtName.Text=animal.AnimalName;
+                    txtAge.Text=animal.Age.ToString();
+                    txtGender.Text=animal.Gender;
 
-                
+
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
                         txtAnimalType.Text=animal1.AnimalType.ToString();
@@ -106,9 +110,15 @@ namespace WindowsClient
                         txtGender.Text=animal1.Gender;
                         
                     }*/
-                    
+                    if (animal is Dog dog)
+                    {
+                        txtBreed.Text = dog.Purebreed.ToString();
+
+                    }
+
 
                 }
+                
             }
         }
 
