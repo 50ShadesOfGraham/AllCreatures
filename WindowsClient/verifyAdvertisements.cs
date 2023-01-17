@@ -31,6 +31,7 @@ namespace WindowsClient
                 panelAssBtn.Visible = false;
                 panelAnimalsDisp.Visible = true;
                 panelAccess.Visible = false;
+                panelFood.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 1)
             {
@@ -39,6 +40,7 @@ namespace WindowsClient
                 panelAnimalsBtn.Visible = false;
                 panelAssBtn.Visible = false;
                 panelAccess.Visible = false;
+                panelFood.Visible = true;
             }
             else if(AdCatComboBx.SelectedIndex == 2)
             {
@@ -47,6 +49,7 @@ namespace WindowsClient
                 panelAnimalsBtn.Visible = false;
                 panelfoodBtn.Visible = false;
                 panelAccess.Visible = true;
+                panelFood.Visible = false;
             }
         }
 
@@ -66,14 +69,13 @@ namespace WindowsClient
 
         private void btnAnimals_Click(object sender, EventArgs e)
         {
-            foreach(Advertisement advertisement in model.AdvertList)
+            foreach(Animal advertisement in model.AdvertList.OfType<Animal>())
             {
                 /*  listboxAni.Items.Add(advertisement.Title);*/
 
-                foreach (Animal horse in model.AdvertList)
-                {
-                    listboxAni.Items.Add(horse.Title);
-                }
+               
+                    listboxAni.Items.Add(advertisement.Title);
+                
 
                 /*foreach(Dog dog in model.AdvertList)
                 {
@@ -131,29 +133,35 @@ namespace WindowsClient
 
         private void btnAssess_Click(object sender, EventArgs e)
         {
-            foreach(Advertisement advertisement in model.AdvertList)
+            foreach(Advertisement advertisement in model.AdvertList.OfType<Accessories>())
             {
-                foreach(Accessories accessories in model.AdvertList)
-                {
-                    listBoxAssess.Items.Add(accessories.Title);
-                }
+                
+                    listBoxAssess.Items.Add(advertisement.Title);
+                
             }
         }
 
         private void btnFood_Click(object sender, EventArgs e)
         {
-            foreach (Advertisement advertisement in model.AdvertList)
+
+
+
+            foreach (Food advertisement in model.AdvertList.OfType<Food>())
             {
-                foreach (Food food in model.AdvertList)
+
+
+                listBoxFood.Items.Add(advertisement.Title);
+                /*foreach (Food food in model.AdvertList)
                 {
-                    listBoxFood.Items.Add(food.Title);
-                }
+                    
+                }*/
             }
         }
 
         private void listBoxAssess_DoubleClick(object sender, EventArgs e)
         {
             txtTitle.Text=listBoxAssess.SelectedItem.ToString();
+
             foreach (Advertisement advertisement in model.AdvertList)
             {
                 if (advertisement.Title == txtTitle.Text)
@@ -163,7 +171,17 @@ namespace WindowsClient
                     txtVerified.Text = advertisement.Verified.ToString();
                     txtPrice.Text = advertisement.Price.ToString();
                     txtStat.Text = advertisement.Status.ToString();
+                    /*txtType.Text = advertisement.animalType*/ //Animal type missing from class
+                    if (advertisement is Accessories accessories)
+                    {
+                        //txtType.Text = accessories.details
+                        txtAccessCat.Text = accessories.AccessCategory.ToString();
+                        txtSubCat.Text = accessories.SubAccessCategory.ToString();
+                    }
                 }
+              
+               
+
             }
         }
 

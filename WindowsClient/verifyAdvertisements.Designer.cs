@@ -48,7 +48,7 @@
             this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
             this.txtAnimalType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,12 +75,16 @@
             this.txtSubCat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAccessCat = new System.Windows.Forms.TextBox();
+            this.panelFood = new System.Windows.Forms.Panel();
+            this.txtDetails = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.panelAssBtn.SuspendLayout();
             this.panelAnimalsBtn.SuspendLayout();
             this.panelfoodBtn.SuspendLayout();
             this.panelAnimalsDisp.SuspendLayout();
             this.panelAccess.SuspendLayout();
+            this.panelFood.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdCatComboBx
@@ -309,22 +313,22 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(144, 386);
+            this.lblStatus.Location = new System.Drawing.Point(2, 2);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(48, 21);
+            this.lblStatus.Size = new System.Drawing.Size(101, 21);
             this.lblStatus.TabIndex = 124;
-            this.lblStatus.Text = "Price";
+            this.lblStatus.Text = "AnimalType";
             // 
-            // txtStatus
+            // txtType
             // 
-            this.txtStatus.Location = new System.Drawing.Point(288, 385);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStatus.Multiline = true;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(143, 19);
-            this.txtStatus.TabIndex = 125;
+            this.txtType.Location = new System.Drawing.Point(142, 2);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2);
+            this.txtType.Multiline = true;
+            this.txtType.Name = "txtType";
+            this.txtType.ReadOnly = true;
+            this.txtType.Size = new System.Drawing.Size(143, 19);
+            this.txtType.TabIndex = 125;
             // 
             // lblType
             // 
@@ -638,12 +642,46 @@
             this.txtAccessCat.Size = new System.Drawing.Size(143, 19);
             this.txtAccessCat.TabIndex = 141;
             // 
+            // panelFood
+            // 
+            this.panelFood.Controls.Add(this.txtDetails);
+            this.panelFood.Controls.Add(this.label12);
+            this.panelFood.Controls.Add(this.txtType);
+            this.panelFood.Controls.Add(this.lblStatus);
+            this.panelFood.Location = new System.Drawing.Point(144, 375);
+            this.panelFood.Name = "panelFood";
+            this.panelFood.Size = new System.Drawing.Size(290, 45);
+            this.panelFood.TabIndex = 147;
+            // 
+            // txtDetails
+            // 
+            this.txtDetails.Location = new System.Drawing.Point(141, 23);
+            this.txtDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDetails.Multiline = true;
+            this.txtDetails.Name = "txtDetails";
+            this.txtDetails.ReadOnly = true;
+            this.txtDetails.Size = new System.Drawing.Size(143, 19);
+            this.txtDetails.TabIndex = 127;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(1, 23);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 21);
+            this.label12.TabIndex = 126;
+            this.label12.Text = "Details";
+            // 
             // verifyAdvertisements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1115, 860);
+            this.Controls.Add(this.panelFood);
             this.Controls.Add(this.panelAccess);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panelAnimalsDisp);
@@ -665,8 +703,6 @@
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.txtStatus);
             this.Name = "verifyAdvertisements";
             this.Text = "verifyAdvertisements";
             this.Load += new System.EventHandler(this.verifyAdvertisements_Load);
@@ -678,6 +714,8 @@
             this.panelAnimalsDisp.PerformLayout();
             this.panelAccess.ResumeLayout(false);
             this.panelAccess.PerformLayout();
+            this.panelFood.ResumeLayout(false);
+            this.panelFood.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,7 +742,7 @@
         private RichTextBox txtDescription;
         private TextBox txtTitle;
         private Label lblStatus;
-        private TextBox txtStatus;
+        private TextBox txtType;
         private Label lblType;
         private TextBox txtAnimalType;
         private Label label1;
@@ -731,5 +769,8 @@
         private TextBox txtSubCat;
         private Label label4;
         private TextBox txtAccessCat;
+        private Panel panelFood;
+        private TextBox txtDetails;
+        private Label label12;
     }
 }
