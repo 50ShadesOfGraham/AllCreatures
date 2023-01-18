@@ -152,13 +152,24 @@ namespace WindowsClient
 
             foreach(Advertisement advertisement in model.AdvertList)
             {
+                
+
                 if(advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
-                    model.verifyAdvertisement(advertisement);
-                    MessageBox.Show("Success");
+                    if (advertisement is Dog dog)
+                    { 
+                        model.verifyAdvertisement(dog);
+                    }
+                    else if(advertisement is Horse horse)
+                    {
+                        model.verifyAdvertisement(horse);
+                    }
+                     MessageBox.Show("Success");
                 }
             }
+
+
         }
 
         private void listboxAni_SelectedIndexChanged(object sender, EventArgs e)
@@ -267,7 +278,7 @@ namespace WindowsClient
                 {
                    if(advertisement is Dog dog) 
                     {
-                        model.deleteAdvertisementDog(dog);
+                        model.deleteAdvertisement(dog);
                         listboxAni.Items.Remove(listboxAni.SelectedItem);
                         MessageBox.Show(dog.Title);
                         break;

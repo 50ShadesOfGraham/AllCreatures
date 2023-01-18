@@ -815,13 +815,71 @@ namespace DataAccessLayer
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.Title);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.AdvertID);
                 if (findRow != null) 
                 {
                     findRow[5] = advertisement.Verified;
                 }
                 da.Update(ds, "AdsData");
             }catch(System.Exception excep) 
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(Dog dog)
+        {
+            //throw new NotImplementedException();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From DogAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(dog.DogId);
+                if (findRow != null)
+                {
+                    findRow[5] = dog.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(Horse horse)
+        {
+            //throw new NotImplementedException();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From HorseAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.HorseId);
+                if (findRow != null)
+                {
+                    findRow[5] = horse.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
             {
                 MessageBox.Show(excep.Message);
                 if (getConnection().ToString() == "Open")
@@ -860,7 +918,7 @@ namespace DataAccessLayer
 
         }
 
-        public bool deleteAdvertisementDog(Dog dog)
+        public bool deleteAdvertisement(Dog dog)
         {
 
             try
@@ -889,7 +947,7 @@ namespace DataAccessLayer
 
         }
 
-        public bool deleteAdvertisementHorse(Horse horse)
+        public bool deleteAdvertisement(Horse horse)
         {
 
             try

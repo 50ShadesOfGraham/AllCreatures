@@ -32,9 +32,11 @@ namespace DataAccessLayer
         public void getAllAccessoriesAdvertisements(ref List<Advertisement> advertisements);
         List<Notifications> getAllNotifications();
         public bool verifyAdvertisement(Advertisement advertisement);
+        public bool verifyAdvertisement(Dog dog);
+        public bool verifyAdvertisement(Horse horse);
         public bool deleteAdvertisement(Advertisement advertisement);
-        public bool deleteAdvertisementDog(Dog dog);
-        public bool deleteAdvertisementHorse(Horse horse);
+        public bool deleteAdvertisement(Dog dog);
+        public bool deleteAdvertisement(Horse horse);
         void openConnection();
        
     }

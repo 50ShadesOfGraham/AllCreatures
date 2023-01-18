@@ -328,19 +328,30 @@ namespace BusinessLayer
             DataLayer.verifyAdvertisement(advertisement);
             return true;
         }
+        public bool verifyAdvertisement(Dog dog)
+        {
+            DataLayer.verifyAdvertisement(dog);
+            return true;
+        }
+        public bool verifyAdvertisement(Horse horse)
+        {
+            DataLayer.verifyAdvertisement(horse);
+            return true;
+        }
+
         public bool deleteAdvertisement(Advertisement advertisement)
         {
             DataLayer.deleteAdvertisement(advertisement);
             return true;
         }
-        public bool deleteAdvertisementDog(Dog dog)
+        public bool deleteAdvertisement(Dog dog)
         {
-            DataLayer.deleteAdvertisementDog(dog); return true;
+            DataLayer.deleteAdvertisement(dog); return true;
         }
         
-        public bool deleteAdvertisementHorse(Horse horse)
+        public bool deleteAdvertisement(Horse horse)
         {
-            DataLayer.deleteAdvertisementHorse(horse); return true;
+            DataLayer.deleteAdvertisement(horse); return true;
         }
     }
 }
