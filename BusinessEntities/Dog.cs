@@ -9,6 +9,7 @@ namespace BusinessEntities
     public class Dog : Animal
     {
         #region Instance Properties
+        private int dogId;
         private bool purebreed;
         private string breedone;
         private string breedtwo;
@@ -28,6 +29,11 @@ namespace BusinessEntities
         {
             get { return breedtwo; }
             set { breedtwo = value; }
+        }
+        public int DogId
+        {
+            get { return dogId; }
+            set { dogId = value; }
         }
         #endregion
         #region Constructor

@@ -258,19 +258,31 @@ namespace WindowsClient
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Advertisement advertisement in model.AdvertList)
+            foreach (Advertisement advertisement in model.AdvertList.OfType<Animal>())
             {
-                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                    return;
+               /* if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;*/
+                
                 if (advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
-                   
-                    model.deleteAdvertisement(advertisement);
+                   if(advertisement is Dog dog) 
+                    {
+                        model.deleteAdvertisementDog(dog);
+                        listboxAni.Items.Remove(listboxAni.SelectedItem);
+                        MessageBox.Show(dog.Title);
+                        break;
+                        
+                    }
+                   /* model.deleteAdvertisement(advertisement);
                     listboxAni.Items.Remove(listboxAni.SelectedItem);
                     break;
-                    MessageBox.Show("Success");
+                    MessageBox.Show("Success");*/
                 }
+
+                
             }
+         
+                
         }
     }
 }

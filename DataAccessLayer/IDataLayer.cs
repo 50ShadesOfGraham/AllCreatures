@@ -33,6 +33,8 @@ namespace DataAccessLayer
         List<Notifications> getAllNotifications();
         public bool verifyAdvertisement(Advertisement advertisement);
         public bool deleteAdvertisement(Advertisement advertisement);
+        public bool deleteAdvertisementDog(Dog dog);
+        public bool deleteAdvertisementHorse(Horse horse);
         void openConnection();
        
     }

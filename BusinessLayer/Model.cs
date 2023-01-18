@@ -333,6 +333,15 @@ namespace BusinessLayer
             DataLayer.deleteAdvertisement(advertisement);
             return true;
         }
+        public bool deleteAdvertisementDog(Dog dog)
+        {
+            DataLayer.deleteAdvertisementDog(dog); return true;
+        }
+        
+        public bool deleteAdvertisementHorse(Horse horse)
+        {
+            DataLayer.deleteAdvertisementHorse(horse); return true;
+        }
     }
 }
 

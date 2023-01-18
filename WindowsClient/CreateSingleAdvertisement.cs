@@ -927,5 +927,10 @@ namespace WindowsClient
             advertForm.LitterPanel.Visible = false;
             advertForm.IsPurebreedPanel.Visible = true;
         }
+
+        private void GeneralAdvertPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
