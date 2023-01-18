@@ -65,6 +65,8 @@
             this.txtDetail3 = new System.Windows.Forms.RichTextBox();
             this.txtVerified = new System.Windows.Forms.TextBox();
             this.panelAnimalsDisp = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtBreed = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -78,8 +80,7 @@
             this.panelFood = new System.Windows.Forms.Panel();
             this.txtDetails = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtBreed = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.panelDog = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.panelAssBtn.SuspendLayout();
             this.panelAnimalsBtn.SuspendLayout();
@@ -87,6 +88,7 @@
             this.panelAnimalsDisp.SuspendLayout();
             this.panelAccess.SuspendLayout();
             this.panelFood.SuspendLayout();
+            this.panelDog.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdCatComboBx
@@ -498,8 +500,6 @@
             // 
             // panelAnimalsDisp
             // 
-            this.panelAnimalsDisp.Controls.Add(this.label13);
-            this.panelAnimalsDisp.Controls.Add(this.txtBreed);
             this.panelAnimalsDisp.Controls.Add(this.lblType);
             this.panelAnimalsDisp.Controls.Add(this.txtAnimalType);
             this.panelAnimalsDisp.Controls.Add(this.label1);
@@ -518,6 +518,28 @@
             this.panelAnimalsDisp.Name = "panelAnimalsDisp";
             this.panelAnimalsDisp.Size = new System.Drawing.Size(633, 321);
             this.panelAnimalsDisp.TabIndex = 107;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(2, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 21);
+            this.label13.TabIndex = 141;
+            this.label13.Text = "PureBreed";
+            // 
+            // txtBreed
+            // 
+            this.txtBreed.Location = new System.Drawing.Point(95, 0);
+            this.txtBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBreed.Multiline = true;
+            this.txtBreed.Name = "txtBreed";
+            this.txtBreed.ReadOnly = true;
+            this.txtBreed.Size = new System.Drawing.Size(143, 19);
+            this.txtBreed.TabIndex = 140;
             // 
             // button2
             // 
@@ -679,27 +701,14 @@
             this.label12.TabIndex = 126;
             this.label12.Text = "Details";
             // 
-            // txtBreed
+            // panelDog
             // 
-            this.txtBreed.Location = new System.Drawing.Point(447, 13);
-            this.txtBreed.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBreed.Multiline = true;
-            this.txtBreed.Name = "txtBreed";
-            this.txtBreed.ReadOnly = true;
-            this.txtBreed.Size = new System.Drawing.Size(143, 19);
-            this.txtBreed.TabIndex = 140;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(341, 11);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 21);
-            this.label13.TabIndex = 141;
-            this.label13.Text = "PureBreed";
+            this.panelDog.Controls.Add(this.label13);
+            this.panelDog.Controls.Add(this.txtBreed);
+            this.panelDog.Location = new System.Drawing.Point(440, 377);
+            this.panelDog.Name = "panelDog";
+            this.panelDog.Size = new System.Drawing.Size(240, 21);
+            this.panelDog.TabIndex = 148;
             // 
             // verifyAdvertisements
             // 
@@ -707,6 +716,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1115, 860);
+            this.Controls.Add(this.panelDog);
             this.Controls.Add(this.panelFood);
             this.Controls.Add(this.panelAccess);
             this.Controls.Add(this.button2);
@@ -742,6 +752,8 @@
             this.panelAccess.PerformLayout();
             this.panelFood.ResumeLayout(false);
             this.panelFood.PerformLayout();
+            this.panelDog.ResumeLayout(false);
+            this.panelDog.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,5 +812,6 @@
         private Label label12;
         private Label label13;
         private TextBox txtBreed;
+        private Panel panelDog;
     }
 }

@@ -26,7 +26,7 @@ namespace WindowsClient
             if(AdCatComboBx.SelectedIndex == 0) 
             {
                 panelAnimalsBtn.Visible = true;
-                
+                panelDog.Visible = false;
                 panelfoodBtn.Visible = false;
                 panelAssBtn.Visible = false;
                 panelAnimalsDisp.Visible = true;
@@ -41,6 +41,7 @@ namespace WindowsClient
                 panelAssBtn.Visible = false;
                 panelAccess.Visible = false;
                 panelFood.Visible = true;
+                panelDog.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 2)
             {
@@ -50,12 +51,13 @@ namespace WindowsClient
                 panelfoodBtn.Visible = false;
                 panelAccess.Visible = true;
                 panelFood.Visible = false;
+                panelDog.Visible = false;
             }
         }
 
         private void verifyAdvertisements_Load(object sender, EventArgs e)
         {
-         
+            panelDog.Visible = false;
             panelAnimalsBtn.Visible = false;
             panelAssBtn.Visible = false;
             panelfoodBtn.Visible= false;
@@ -101,7 +103,7 @@ namespace WindowsClient
                     txtName.Text=animal.AnimalName;
                     txtAge.Text=animal.Age.ToString();
                     txtGender.Text=animal.Gender;
-
+                    panelDog.Visible = false;
 
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
@@ -110,13 +112,13 @@ namespace WindowsClient
                         txtGender.Text=animal1.Gender;
                         
                     }*/
-                    
-                    
-                    
+
+
+
                     if (animal is Dog dog)
                     {
                         txtBreed.Text = dog.Purebreed.ToString();
-
+                        panelDog.Visible = true;
                     }
 
 
