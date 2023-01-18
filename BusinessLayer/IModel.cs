@@ -34,5 +34,6 @@ namespace BusinessLayer
         List<Advertisement> AdvertList { get; }
         List<Notifications> NotificationList { get; }
         bool verifyAdvertisement(Advertisement advertisement);
+        bool deleteAdvertisement(Advertisement advertisement);
     }
 }

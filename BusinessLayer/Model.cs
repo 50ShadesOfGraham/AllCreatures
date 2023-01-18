@@ -131,10 +131,10 @@ namespace BusinessLayer
         {
             try
             {
-               // DataLayer.InsertImageToDB(image);
+                // DataLayer.InsertImageToDB(image);
                 return true;
 
-            }catch(System.Exception excep)
+            } catch (System.Exception excep)
             {
                 MessageBox.Show(excep.Message);
                 return false;
@@ -159,7 +159,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAccessoriesToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,accesscategory, accesssubcat);
+                DataLayer.addNewAccessoriesToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, accesscategory, accesssubcat);
                 return true;
             }
             catch (System.Exception excep)
@@ -172,7 +172,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewFoodToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animaltype,details);
+                DataLayer.addNewFoodToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animaltype, details);
                 return true;
             }
             catch (System.Exception excep)
@@ -185,7 +185,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewDogToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,dogname,gender,purebreed,breedone,breedtwo);
+                DataLayer.addNewDogToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, dogname, gender, purebreed, breedone, breedtwo);
                 return true;
             }
             catch (System.Exception excep)
@@ -194,11 +194,11 @@ namespace BusinessLayer
             }
         }
 
-        public Boolean addNewHorseAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone,byte[] imagetwo,byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
-        { 
+        public Boolean addNewHorseAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
+        {
             try
             {
-                DataLayer.addNewHorseToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animalname,age,gender,size,broken,breed,purpose);
+                DataLayer.addNewHorseToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animalname, age, gender, size, broken, breed, purpose);
                 return true;
             }
             catch (System.Exception excep)
@@ -212,7 +212,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewFarmAnimalToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animaltype,animalname,age,gender,purpose);
+                DataLayer.addNewFarmAnimalToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animaltype, animalname, age, gender, purpose);
                 return true;
             }
             catch (System.Exception excep)
@@ -225,7 +225,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewGenericAnimalToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animaltype,animalname,age,gender,detailone,detailtwo,detailthree);
+                DataLayer.addNewGenericAnimalToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animaltype, animalname, age, gender, detailone, detailtwo, detailthree);
                 return true;
             }
             catch (System.Exception excep)
@@ -238,7 +238,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewLitterToDB(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo,imagethree,animaltype,size,age,purebreed,breedone,breedtwo);
+                DataLayer.addNewLitterToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animaltype, size, age, purebreed, breedone, breedtwo);
                 return true;
             }
             catch (System.Exception excep)
@@ -251,7 +251,7 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid,ItemTwo_advertid, ItemThree_advertid,bundleprice);
+                DataLayer.addNewBundleToDB(bundleID, ItemOne_advertid, ItemTwo_advertid, ItemThree_advertid, bundleprice);
                 MessageBox.Show("Bundle #" + bundleID + " successfully created!");
                 return true;
             }
@@ -297,9 +297,9 @@ namespace BusinessLayer
         }
         public Boolean AdvertIDPresent(int number)
         {
-            foreach(Advertisement advert in advertList)
+            foreach (Advertisement advert in advertList)
             {
-                if(advert.AdvertID.Equals(number)) { return true; }
+                if (advert.AdvertID.Equals(number)) { return true; }
             }
 
             return false;
@@ -326,7 +326,12 @@ namespace BusinessLayer
         public bool verifyAdvertisement(Advertisement advertisement)
         {
             DataLayer.verifyAdvertisement(advertisement);
-                return true;
+            return true;
+        }
+        public bool deleteAdvertisement(Advertisement advertisement)
+        {
+            DataLayer.deleteAdvertisement(advertisement);
+            return true;
         }
     }
 }
