@@ -63,6 +63,26 @@ namespace WindowsClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImageConfirmation {
+            get {
+                object obj = ResourceManager.GetObject("ImageConfirmation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImageUploadWait {
+            get {
+                object obj = ResourceManager.GetObject("ImageUploadWait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoWhiteSignIn {
             get {
                 object obj = ResourceManager.GetObject("LogoWhiteSignIn", resourceCulture);

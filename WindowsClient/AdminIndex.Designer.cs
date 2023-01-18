@@ -115,8 +115,6 @@
             this.verificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verifyAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verifyUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CreateAdmin = new System.Windows.Forms.ToolStripMenuItem();
-            this.DisplayUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.SidePanel.SuspendLayout();
             this.ReportPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -154,10 +152,10 @@
             this.SidePanel.Controls.Add(this.AnimalBttn);
             this.SidePanel.Controls.Add(this.LogoBox);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePanel.Location = new System.Drawing.Point(0, 35);
+            this.SidePanel.Location = new System.Drawing.Point(0, 33);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(157, 393);
+            this.SidePanel.Size = new System.Drawing.Size(157, 395);
             this.SidePanel.TabIndex = 0;
             // 
             // ReportPanel
@@ -165,7 +163,7 @@
             this.ReportPanel.Controls.Add(this.panel1);
             this.ReportPanel.Controls.Add(this.ReportAdsBttn);
             this.ReportPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ReportPanel.Location = new System.Drawing.Point(0, 1589);
+            this.ReportPanel.Location = new System.Drawing.Point(0, 1588);
             this.ReportPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ReportPanel.Name = "ReportPanel";
             this.ReportPanel.Size = new System.Drawing.Size(140, 62);
@@ -216,7 +214,7 @@
             this.ReportsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportsBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ReportsBttn.ForeColor = System.Drawing.Color.White;
-            this.ReportsBttn.Location = new System.Drawing.Point(0, 1547);
+            this.ReportsBttn.Location = new System.Drawing.Point(0, 1546);
             this.ReportsBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReportsBttn.Name = "ReportsBttn";
             this.ReportsBttn.Size = new System.Drawing.Size(140, 42);
@@ -233,7 +231,7 @@
             this.UserPanel.Location = new System.Drawing.Point(0, 1485);
             this.UserPanel.Margin = new System.Windows.Forms.Padding(2);
             this.UserPanel.Name = "UserPanel";
-            this.UserPanel.Size = new System.Drawing.Size(140, 62);
+            this.UserPanel.Size = new System.Drawing.Size(140, 61);
             this.UserPanel.TabIndex = 9;
             // 
             // BUsersBttn
@@ -303,10 +301,10 @@
             this.OtherAccessPanel.Controls.Add(this.ClothingBttn);
             this.OtherAccessPanel.Controls.Add(this.HorseRidingBttn);
             this.OtherAccessPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.OtherAccessPanel.Location = new System.Drawing.Point(0, 330);
+            this.OtherAccessPanel.Location = new System.Drawing.Point(0, 329);
             this.OtherAccessPanel.Margin = new System.Windows.Forms.Padding(2);
             this.OtherAccessPanel.Name = "OtherAccessPanel";
-            this.OtherAccessPanel.Size = new System.Drawing.Size(140, 64);
+            this.OtherAccessPanel.Size = new System.Drawing.Size(140, 65);
             this.OtherAccessPanel.TabIndex = 10;
             // 
             // AquariumBttn
@@ -357,7 +355,7 @@
             this.OtherAccessBttn.Dock = System.Windows.Forms.DockStyle.Top;
             this.OtherAccessBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.OtherAccessBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OtherAccessBttn.Location = new System.Drawing.Point(0, 299);
+            this.OtherAccessBttn.Location = new System.Drawing.Point(0, 298);
             this.OtherAccessBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherAccessBttn.Name = "OtherAccessBttn";
             this.OtherAccessBttn.Size = new System.Drawing.Size(140, 31);
@@ -375,7 +373,7 @@
             this.CleaningPanel.Location = new System.Drawing.Point(0, 237);
             this.CleaningPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CleaningPanel.Name = "CleaningPanel";
-            this.CleaningPanel.Size = new System.Drawing.Size(140, 62);
+            this.CleaningPanel.Size = new System.Drawing.Size(140, 61);
             this.CleaningPanel.TabIndex = 8;
             // 
             // OtherCleaningBttn
@@ -442,10 +440,10 @@
             this.BeddingPanel.Controls.Add(this.KennelBttn);
             this.BeddingPanel.Controls.Add(this.TanksBttn);
             this.BeddingPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BeddingPanel.Location = new System.Drawing.Point(0, 124);
+            this.BeddingPanel.Location = new System.Drawing.Point(0, 123);
             this.BeddingPanel.Margin = new System.Windows.Forms.Padding(2);
             this.BeddingPanel.Name = "BeddingPanel";
-            this.BeddingPanel.Size = new System.Drawing.Size(140, 82);
+            this.BeddingPanel.Size = new System.Drawing.Size(140, 83);
             this.BeddingPanel.TabIndex = 6;
             // 
             // OtherBeddingBttn
@@ -510,7 +508,7 @@
             this.BeddingBttn.Dock = System.Windows.Forms.DockStyle.Top;
             this.BeddingBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.BeddingBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BeddingBttn.Location = new System.Drawing.Point(0, 93);
+            this.BeddingBttn.Location = new System.Drawing.Point(0, 92);
             this.BeddingBttn.Margin = new System.Windows.Forms.Padding(2);
             this.BeddingBttn.Name = "BeddingBttn";
             this.BeddingBttn.Size = new System.Drawing.Size(140, 31);
@@ -528,7 +526,7 @@
             this.HealthPanel.Location = new System.Drawing.Point(0, 31);
             this.HealthPanel.Margin = new System.Windows.Forms.Padding(2);
             this.HealthPanel.Name = "HealthPanel";
-            this.HealthPanel.Size = new System.Drawing.Size(140, 62);
+            this.HealthPanel.Size = new System.Drawing.Size(140, 61);
             this.HealthPanel.TabIndex = 4;
             // 
             // OtherHealthBttn
@@ -954,7 +952,7 @@
             this.OtherBttn.Dock = System.Windows.Forms.DockStyle.Top;
             this.OtherBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.OtherBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OtherBttn.Location = new System.Drawing.Point(0, 383);
+            this.OtherBttn.Location = new System.Drawing.Point(0, 382);
             this.OtherBttn.Margin = new System.Windows.Forms.Padding(2);
             this.OtherBttn.Name = "OtherBttn";
             this.OtherBttn.Size = new System.Drawing.Size(140, 31);
@@ -968,7 +966,7 @@
             this.ReptilePanel.Controls.Add(this.LizardsBttn);
             this.ReptilePanel.Controls.Add(this.SnakeBttn);
             this.ReptilePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ReptilePanel.Location = new System.Drawing.Point(0, 319);
+            this.ReptilePanel.Location = new System.Drawing.Point(0, 318);
             this.ReptilePanel.Margin = new System.Windows.Forms.Padding(2);
             this.ReptilePanel.Name = "ReptilePanel";
             this.ReptilePanel.Size = new System.Drawing.Size(140, 64);
@@ -1022,7 +1020,7 @@
             this.ReptileBttn.Dock = System.Windows.Forms.DockStyle.Top;
             this.ReptileBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(227)))), ((int)(((byte)(252)))));
             this.ReptileBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReptileBttn.Location = new System.Drawing.Point(0, 288);
+            this.ReptileBttn.Location = new System.Drawing.Point(0, 287);
             this.ReptileBttn.Margin = new System.Windows.Forms.Padding(2);
             this.ReptileBttn.Name = "ReptileBttn";
             this.ReptileBttn.Size = new System.Drawing.Size(140, 31);
@@ -1042,7 +1040,7 @@
             this.FarmPanel.Location = new System.Drawing.Point(0, 184);
             this.FarmPanel.Margin = new System.Windows.Forms.Padding(2);
             this.FarmPanel.Name = "FarmPanel";
-            this.FarmPanel.Size = new System.Drawing.Size(140, 104);
+            this.FarmPanel.Size = new System.Drawing.Size(140, 103);
             this.FarmPanel.TabIndex = 12;
             // 
             // ChickenBttn
@@ -1281,8 +1279,8 @@
             this.verificationToolStripMenuItem});
             this.NavBar.Location = new System.Drawing.Point(0, 0);
             this.NavBar.Name = "NavBar";
-            this.NavBar.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.NavBar.Size = new System.Drawing.Size(690, 35);
+            this.NavBar.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.NavBar.Size = new System.Drawing.Size(689, 33);
             this.NavBar.TabIndex = 1;
             this.NavBar.Text = "menuStrip1";
             // 
@@ -1321,17 +1319,12 @@
             this.verificationToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.verificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verifyAdvertisementsToolStripMenuItem,
-            this.verifyUsersToolStripMenuItem,
-            this.CreateAdmin,
-            this.DisplayUsers});
+            this.verifyUsersToolStripMenuItem});
             this.verificationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.verificationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
             this.verificationToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.verificationToolStripMenuItem.Text = "Verification";
-
-          //  this.verificationToolStripMenuItem.Click += new System.EventHandler(this.verificationToolStripMenuItem_Click);
-
             // 
             // verifyAdvertisementsToolStripMenuItem
             // 
@@ -1349,35 +1342,17 @@
             this.verifyUsersToolStripMenuItem.Name = "verifyUsersToolStripMenuItem";
             this.verifyUsersToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.verifyUsersToolStripMenuItem.Text = "Verify Users";
-          //  this.verifyUsersToolStripMenuItem.Click += new System.EventHandler(this.verifyUsersToolStripMenuItem_Click);
-            // 
-            // CreateAdmin
-            // 
-            this.CreateAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.CreateAdmin.ForeColor = System.Drawing.Color.White;
-            this.CreateAdmin.Name = "CreateAdmin";
-            this.CreateAdmin.Size = new System.Drawing.Size(199, 22);
-            this.CreateAdmin.Text = "CreateAdmin";
-            // 
-            // DisplayUsers
-            // 
-            this.DisplayUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.DisplayUsers.ForeColor = System.Drawing.Color.White;
-            this.DisplayUsers.Name = "DisplayUsers";
-            this.DisplayUsers.Size = new System.Drawing.Size(199, 22);
-            this.DisplayUsers.Text = "Display Users";
-            this.DisplayUsers.Click += new System.EventHandler(this.DisplayUsers_Click);
             // 
             // AdminIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 428);
+            this.ClientSize = new System.Drawing.Size(689, 428);
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.NavBar);
             this.MainMenuStrip = this.NavBar;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(706, 457);
+            this.MinimumSize = new System.Drawing.Size(705, 457);
             this.Name = "AdminIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACGS - Admin";
@@ -1496,7 +1471,5 @@
         private Button HorseRidingBttn;
         private Button AquariumBttn;
         private Button ClothingBttn;
-        private ToolStripMenuItem CreateAdmin;
-        private ToolStripMenuItem DisplayUsers;
     }
 }

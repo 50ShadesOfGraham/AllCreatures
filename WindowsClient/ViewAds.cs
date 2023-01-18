@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessEntities;
+using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,23 +16,31 @@ namespace WindowsClient
 {
     public partial class ViewAds : UserControl
     {
-        public ViewAds()
+        private IModel Model;
+        private Dog Dog;
+        public ViewAds(IModel Model, Dog dog)
         {
             InitializeComponent();
+            this.Model = Model;
+            this.Dog = dog;
         }
 
 
-        public void SetLabel(String FirstName, String LastName,String Email, String Password, String UserType)
+        public void SetLabel(String FirstName, String LastName,String Email)
         {
            label1.Text = FirstName;
            label2.Text = LastName;
            label3.Text = Email;
-           label4.Text = Password;
-           label5.Text = UserType;
-            
+
         }
 
-        private void ViewAds_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ViewAdForm viewAd = new ViewAdForm(Model,Dog);
+            viewAd.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

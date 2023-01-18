@@ -10,7 +10,7 @@ namespace BusinessEntities
     {
         #region Instance Properties
         private string animaltype;
-        private string fooddetails;
+        private string details;
         #endregion
         #region Instance Properties
         public string AnimalType
@@ -18,10 +18,10 @@ namespace BusinessEntities
             get { return animaltype; }
             set { animaltype = value; }
         }
-        public string FoodDetails
+        public string Details
         {
-            get { return fooddetails; }
-            set { fooddetails = value; }
+            get { return details; }
+            set { details = value; }
         }
         #endregion
         #region Constructor
@@ -29,24 +29,18 @@ namespace BusinessEntities
         {
             throw new System.NotImplementedException();
         }
-        public Food(string animaltype, string fooddetails)
+        public Food(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string animaltype, string details)
+        : base(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo, imagethree)
         {
-            this.animaltype = AnimalType;
-            this.fooddetails = FoodDetails;
+            this.animaltype= animaltype;
+            this.details = details;
         }
-        public Food(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animaltype, string fooddetails)
-        : base(advertid, selleremail, title, description, price, verified, status)
+        public Food(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animaltype, string details)
+        : base(advertid, selleremail, title, details, price, verified, status)
         {
-            this.animaltype = AnimalType;
-            this.fooddetails = FoodDetails;
+            this.animaltype = animaltype;
+            this.details = details;
         }
-        public Food(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string fooddetails)
-        : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo,imagethree)
-        {
-            this.animaltype = AnimalType;
-            this.fooddetails = FoodDetails;
-        }
-
         #endregion
 
     }
