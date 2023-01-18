@@ -1,19 +1,10 @@
 ﻿using BusinessEntities;
-using System;
-using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing.Imaging;
-using System.Drawing.Drawing2D;
-using System.Windows.Controls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
-using System.Drawing;
-using System.Text;
-using System.Windows;
 using Microsoft.VisualBasic.ApplicationServices;
+using User = BusinessEntities.User;
 
 namespace DataAccessLayer
 {

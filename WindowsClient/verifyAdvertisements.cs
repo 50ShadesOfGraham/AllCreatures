@@ -255,5 +255,22 @@ namespace WindowsClient
             listBoxAssess.Items.Clear();
             listBoxFood.Items.Clear();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Advertisement advertisement in model.AdvertList)
+            {
+                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;
+                if (advertisement.Title == listboxAni.SelectedItem.ToString())
+                {
+                   
+                    model.deleteAdvertisement(advertisement);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    break;
+                    MessageBox.Show("Success");
+                }
+            }
+        }
     }
 }
