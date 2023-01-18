@@ -165,6 +165,7 @@
             this.pnlLitterAdvert.Name = "pnlLitterAdvert";
             this.pnlLitterAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlLitterAdvert.TabIndex = 13;
+            this.pnlLitterAdvert.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLitterAdvert_Paint);
             // 
             // btnBuy
             // 

@@ -46,5 +46,10 @@ namespace WindowsClient
             Hide();
             paymentDetails.Show();
         }
+
+        private void pnlLitterAdvert_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
