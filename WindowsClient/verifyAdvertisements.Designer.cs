@@ -65,6 +65,15 @@
             this.txtDetail3 = new System.Windows.Forms.RichTextBox();
             this.txtVerified = new System.Windows.Forms.TextBox();
             this.panelAnimalsDisp = new System.Windows.Forms.Panel();
+            this.panelHorse = new System.Windows.Forms.Panel();
+            this.txtHPurpose = new System.Windows.Forms.TextBox();
+            this.txtHBreed = new System.Windows.Forms.TextBox();
+            this.txtHBroken = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txthSize = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBreed = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -81,14 +90,18 @@
             this.txtDetails = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panelDog = new System.Windows.Forms.Panel();
+            this.PictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.panelAssBtn.SuspendLayout();
             this.panelAnimalsBtn.SuspendLayout();
             this.panelfoodBtn.SuspendLayout();
             this.panelAnimalsDisp.SuspendLayout();
+            this.panelHorse.SuspendLayout();
             this.panelAccess.SuspendLayout();
             this.panelFood.SuspendLayout();
             this.panelDog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
             this.SuspendLayout();
             // 
             // AdCatComboBx
@@ -500,6 +513,7 @@
             // 
             // panelAnimalsDisp
             // 
+            this.panelAnimalsDisp.Controls.Add(this.panelHorse);
             this.panelAnimalsDisp.Controls.Add(this.lblType);
             this.panelAnimalsDisp.Controls.Add(this.txtAnimalType);
             this.panelAnimalsDisp.Controls.Add(this.label1);
@@ -518,6 +532,109 @@
             this.panelAnimalsDisp.Name = "panelAnimalsDisp";
             this.panelAnimalsDisp.Size = new System.Drawing.Size(633, 321);
             this.panelAnimalsDisp.TabIndex = 107;
+            // 
+            // panelHorse
+            // 
+            this.panelHorse.Controls.Add(this.txtHPurpose);
+            this.panelHorse.Controls.Add(this.txtHBreed);
+            this.panelHorse.Controls.Add(this.txtHBroken);
+            this.panelHorse.Controls.Add(this.label17);
+            this.panelHorse.Controls.Add(this.label16);
+            this.panelHorse.Controls.Add(this.label15);
+            this.panelHorse.Controls.Add(this.label14);
+            this.panelHorse.Controls.Add(this.txthSize);
+            this.panelHorse.Location = new System.Drawing.Point(328, 13);
+            this.panelHorse.Name = "panelHorse";
+            this.panelHorse.Size = new System.Drawing.Size(262, 121);
+            this.panelHorse.TabIndex = 140;
+            // 
+            // txtHPurpose
+            // 
+            this.txtHPurpose.Location = new System.Drawing.Point(117, 96);
+            this.txtHPurpose.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHPurpose.Multiline = true;
+            this.txtHPurpose.Name = "txtHPurpose";
+            this.txtHPurpose.ReadOnly = true;
+            this.txtHPurpose.Size = new System.Drawing.Size(143, 19);
+            this.txtHPurpose.TabIndex = 135;
+            // 
+            // txtHBreed
+            // 
+            this.txtHBreed.Location = new System.Drawing.Point(117, 63);
+            this.txtHBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHBreed.Multiline = true;
+            this.txtHBreed.Name = "txtHBreed";
+            this.txtHBreed.ReadOnly = true;
+            this.txtHBreed.Size = new System.Drawing.Size(143, 19);
+            this.txtHBreed.TabIndex = 134;
+            // 
+            // txtHBroken
+            // 
+            this.txtHBroken.Location = new System.Drawing.Point(117, 33);
+            this.txtHBroken.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHBroken.Multiline = true;
+            this.txtHBroken.Name = "txtHBroken";
+            this.txtHBroken.ReadOnly = true;
+            this.txtHBroken.Size = new System.Drawing.Size(143, 19);
+            this.txtHBroken.TabIndex = 133;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(2, 94);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(72, 21);
+            this.label17.TabIndex = 132;
+            this.label17.Text = "Purpose";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(2, 61);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(54, 21);
+            this.label16.TabIndex = 131;
+            this.label16.Text = "Breed";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(2, 31);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 21);
+            this.label15.TabIndex = 130;
+            this.label15.Text = "Broken";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(2, 2);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 21);
+            this.label14.TabIndex = 128;
+            this.label14.Text = "Size";
+            // 
+            // txthSize
+            // 
+            this.txthSize.Location = new System.Drawing.Point(117, 4);
+            this.txthSize.Margin = new System.Windows.Forms.Padding(2);
+            this.txthSize.Multiline = true;
+            this.txthSize.Name = "txthSize";
+            this.txthSize.ReadOnly = true;
+            this.txthSize.Size = new System.Drawing.Size(143, 19);
+            this.txthSize.TabIndex = 129;
             // 
             // label13
             // 
@@ -710,12 +827,37 @@
             this.panelDog.Size = new System.Drawing.Size(240, 21);
             this.panelDog.TabIndex = 148;
             // 
+            // PictureBoxImage
+            // 
+            this.PictureBoxImage.Location = new System.Drawing.Point(600, 38);
+            this.PictureBoxImage.Name = "PictureBoxImage";
+            this.PictureBoxImage.Size = new System.Drawing.Size(152, 124);
+            this.PictureBoxImage.TabIndex = 149;
+            this.PictureBoxImage.TabStop = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.White;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.btnClear.Location = new System.Drawing.Point(11, 129);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(71, 33);
+            this.btnClear.TabIndex = 150;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // verifyAdvertisements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1115, 860);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.PictureBoxImage);
             this.Controls.Add(this.panelDog);
             this.Controls.Add(this.panelFood);
             this.Controls.Add(this.panelAccess);
@@ -748,12 +890,15 @@
             this.panelfoodBtn.ResumeLayout(false);
             this.panelAnimalsDisp.ResumeLayout(false);
             this.panelAnimalsDisp.PerformLayout();
+            this.panelHorse.ResumeLayout(false);
+            this.panelHorse.PerformLayout();
             this.panelAccess.ResumeLayout(false);
             this.panelAccess.PerformLayout();
             this.panelFood.ResumeLayout(false);
             this.panelFood.PerformLayout();
             this.panelDog.ResumeLayout(false);
             this.panelDog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -813,5 +958,16 @@
         private Label label13;
         private TextBox txtBreed;
         private Panel panelDog;
+        private PictureBox PictureBoxImage;
+        private Panel panelHorse;
+        private TextBox txtHPurpose;
+        private TextBox txtHBreed;
+        private TextBox txtHBroken;
+        private Label label17;
+        private Label label16;
+        private Label label15;
+        private Label label14;
+        private TextBox txthSize;
+        private Button btnClear;
     }
 }

@@ -13,6 +13,7 @@ using System.IO;
 using System.Drawing;
 using System.Text;
 using System.Windows;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace DataAccessLayer
 {
@@ -158,6 +159,8 @@ namespace DataAccessLayer
             }
         }
         public void getAllHorseAdvertisements(ref List<Advertisement> advertisements)
+        
+        
         {
             try
             {
@@ -361,7 +364,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void getAllAccessoryAdvertisements(ref List<Advertisement> advertisements)
+        public void getAllAccessoriesAdvertisements(ref List<Advertisement> advertisements)
         {
             try
             {
@@ -410,7 +413,7 @@ namespace DataAccessLayer
                 getAllGenericAnimalAdvertisements(ref AdvertList);
                 getAllLitterAdvertisements(ref AdvertList);
                 getAllFoodAdvertisements(ref AdvertList);
-                getAllAccessoryAdvertisements(ref AdvertList);
+                getAllAccessoriesAdvertisements(ref AdvertList);
             }
             catch(Exception excep)
             {
@@ -835,6 +838,35 @@ namespace DataAccessLayer
                 System.Windows.Forms.Application.Exit();
             }
             return true;
+        }
+
+        public bool deleteAdvertisement(Advertisement advertisement)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Advertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.Title);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+
         }
     }
 }

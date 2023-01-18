@@ -29,9 +29,10 @@ namespace DataAccessLayer
         public void getAllGenericAnimalAdvertisements(ref List<Advertisement> advertisements);
         public void getAllLitterAdvertisements(ref List<Advertisement> advertisements);
         public void getAllFoodAdvertisements(ref List<Advertisement> advertisements);
-        public void getAllAccessoryAdvertisements(ref List<Advertisement> advertisements);
+        public void getAllAccessoriesAdvertisements(ref List<Advertisement> advertisements);
         List<Notifications> getAllNotifications();
         public bool verifyAdvertisement(Advertisement advertisement);
+        public bool deleteAdvertisement(Advertisement advertisement);
         void openConnection();
        
     }
