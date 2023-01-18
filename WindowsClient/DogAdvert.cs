@@ -29,15 +29,17 @@ namespace WindowsClient
 
         private void DogAdvert_Load(object sender, EventArgs e)
         {
-            lblTitle.Text = Advertisement.Title;
-            txtName.Text = Advertisement.AnimalName;
-            txtGender.Text = Advertisement.Gender;
-            txtAge.Text = Advertisement.Age.ToString();
-            txtPrice.Text = Advertisement.Price.ToString();
-            txtDescription.Text = Advertisement.Description;
-            txtPurebreed.Text = Advertisement.Purebreed.ToString();
-            txtBreedOne.Text = Advertisement.BreedOne;
-            txtBreedTwo.Text = Advertisement.BreedTwo;
+            
+                lblTitle.Text = Advertisement.Title;
+                txtName.Text = Advertisement.AnimalName;
+                txtGender.Text = Advertisement.Gender;
+                txtAge.Text = Advertisement.Age.ToString();
+                txtPrice.Text = Advertisement.Price.ToString();
+                txtDescription.Text = Advertisement.Description;
+                txtPurebreed.Text = Advertisement.Purebreed.ToString();
+                txtBreedOne.Text = Advertisement.BreedOne;
+                txtBreedTwo.Text = Advertisement.BreedTwo;
+           
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

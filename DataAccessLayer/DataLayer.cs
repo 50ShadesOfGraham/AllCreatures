@@ -1,9 +1,7 @@
 ﻿using BusinessEntities;
-<<<<<<< HEAD
 using Microsoft.VisualBasic.Logging;
-=======
+
 using Microsoft.VisualBasic.ApplicationServices;
->>>>>>> parent of 2ebb2c0 (Revert "User Verification")
 using System;
 using System.Collections;
 using System.Data;
@@ -884,21 +882,8 @@ namespace DataAccessLayer
             }
         }
 
-<<<<<<< HEAD
       
-        public void verifyUser(string email)
-        {
-            try
-            {
-                
-                DataSet ds = new DataSet();
-                string sql = "SELECT UserEmail,Verified FROM Users";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-               // SqlDataAdapter.UpdateCommand = new SqlCommand("UPDATE Users SET Verified = 1 WHERE UserEmail = @UserEmail", con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "UserData");
-                foreach (DataRow dr in ds.Tables) // search whole table
-=======
+        
         public void verifyUser(User user)
         {
             try
@@ -912,7 +897,7 @@ namespace DataAccessLayer
                 da.Fill(ds, "UsersData");
                 DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
                 if (findRow != null)
->>>>>>> parent of 2ebb2c0 (Revert "User Verification")
+
                 {
                     findRow[4] = 1;
 

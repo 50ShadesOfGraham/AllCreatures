@@ -127,6 +127,7 @@ namespace BusinessLayer
             }
             return false;
         }
+        
 
         public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
             string userType,string address1,string address2,string address3,string county,string eircode)
@@ -395,11 +396,11 @@ namespace BusinessLayer
         {
             //try
             //{
-<<<<<<< HEAD
+
                 //DataLayer.verifyUser(email);
-=======
-                DataLayer.verifyUser(user);
->>>>>>> parent of 2ebb2c0 (Revert "User Verification")
+
+               // DataLayer.verifyUser(user);
+
             //}
             /*catch (System.Exception excep)
             {
