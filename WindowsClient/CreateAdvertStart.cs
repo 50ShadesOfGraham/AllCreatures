@@ -43,7 +43,7 @@ namespace WindowsClient
 
         private void AdvertBttn_Click(object sender, EventArgs e)
         {
-            Bundle bundle = new Bundle();
+        //b   Bundle bundle = new Bundle();
             CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model,0,0,0,0,false,0.00,0);
             advertisement.Show();
             this.Hide();

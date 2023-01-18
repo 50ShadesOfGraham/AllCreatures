@@ -379,6 +379,7 @@
             this.AnimalTypelbl.Size = new System.Drawing.Size(104, 20);
             this.AnimalTypelbl.TabIndex = 4;
             this.AnimalTypelbl.Text = "Animal Type :";
+            this.AnimalTypelbl.Click += new System.EventHandler(this.AnimalTypelbl_Click);
             // 
             // AnimalTypeComboBox
             // 

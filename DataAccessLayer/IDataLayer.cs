@@ -31,7 +31,8 @@ namespace DataAccessLayer
         public void getAllFoodAdvertisements(ref List<Advertisement> advertisements);
         public void getAllAccessoryAdvertisements(ref List<Advertisement> advertisements);
         List<Notifications> getAllNotifications();
+        public bool verifyAdvertisement(Advertisement advertisement);
         void openConnection();
-        
+       
     }
 }
