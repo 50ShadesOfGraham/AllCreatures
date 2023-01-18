@@ -11,14 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+     
 
         #region Windows Form Designer generated code
 
@@ -129,7 +122,7 @@
             this.BeddingPanel.SuspendLayout();
             this.HealthPanel.SuspendLayout();
             this.SidePanel.SuspendLayout();
-            this.SuspendLayout();
+            //this.SuspendLayout();
             // 
             // myAccountToolStripMenuItem
             // 
@@ -1257,11 +1250,11 @@
             this.btnBuy.TabIndex = 39;
             this.btnBuy.Text = "BUY";
             this.btnBuy.UseVisualStyleBackColor = false;
-            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+         //   this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // BundleAdvert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            /*this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
@@ -1275,7 +1268,7 @@
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.TopNavBar);
             this.Name = "BundleAdvert";
-            this.Text = "BundleAdvert";
+            this.Text = "BundleAdvert";*/
             this.TopNavBar.ResumeLayout(false);
             this.TopNavBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).EndInit();
@@ -1293,8 +1286,8 @@
             this.BeddingPanel.ResumeLayout(false);
             this.HealthPanel.ResumeLayout(false);
             this.SidePanel.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            /*this.ResumeLayout(false);
+            this.PerformLayout();*/
 
         }
 

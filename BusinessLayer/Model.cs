@@ -127,10 +127,10 @@ namespace BusinessLayer
             }
             return false;
         }
-        
+
 
         public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
-            string userType,string address1,string address2,string address3,string county,string eircode)
+            string userType, string address1, string address2, string address3, string county, string eircode)
         {
             try
             {
@@ -146,8 +146,8 @@ namespace BusinessLayer
         {
             try
             {
-                DataLayer.addNewAdvertToDB(advertid,selleremail,price,description,verified,status,adverttype,title);
-                DataLayer.addNewAccessoriesToDB(accessid, animaltype, advertid, accesscategory, accesssubcat);
+            //    DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+            //DataLayer.addNewAccessoriesToDB(accessid, animaltype, advertid, accesscategory, accesssubcat);
                 return true;
             }
             catch (System.Exception excep)
@@ -327,10 +327,12 @@ namespace BusinessLayer
             //try
             //{
 
-                //DataLayer.verifyUser(email);
+            //DataLayer.verifyUser(email);
 
-               // DataLayer.verifyUser(user);
+            // DataLayer.verifyUser(user);
 
+           
+        }
         public bool verifyAdvertisement(Advertisement advertisement)
         {
             DataLayer.verifyAdvertisement(advertisement);
@@ -341,6 +343,6 @@ namespace BusinessLayer
             DataLayer.deleteAdvertisement(advertisement);
             return true;
         }
-    }
+    } 
 }
 

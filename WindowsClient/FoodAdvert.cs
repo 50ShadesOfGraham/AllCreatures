@@ -1,15 +1,5 @@
 ﻿using BusinessEntities;
 using BusinessLayer;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace WindowsClient
 {
@@ -33,7 +23,7 @@ namespace WindowsClient
             lblTitle.Text = Advertisement.Title;
             txtPrice.Text = Advertisement.Price.ToString();
             txtDescription.Text = Advertisement.Description;
-            txtDetails.Text = Advertisement.FoodDetails;
+            //txtDetails.Text = Advertisement.FoodDetails;
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

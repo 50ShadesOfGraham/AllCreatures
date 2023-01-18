@@ -1,22 +1,9 @@
 ﻿using BusinessEntities;
-using Microsoft.VisualBasic.Logging;
-
-using Microsoft.VisualBasic.ApplicationServices;
-using System;
-using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing.Imaging;
-using System.Drawing.Drawing2D;
-using System.Windows.Controls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
-using System.Drawing;
-using System.Text;
 using System.Windows;
-using Microsoft.VisualBasic.ApplicationServices;
 
 namespace DataAccessLayer
 {
@@ -96,7 +83,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                   User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
@@ -428,8 +415,8 @@ namespace DataAccessLayer
             }
             return AdvertList;
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
-            string county, string eircode)
+       
+       
         public List<Notifications> getAllNotifications()
         {
             List<Notifications> NotificationList = new List<Notifications>();
@@ -465,7 +452,8 @@ namespace DataAccessLayer
             }
             return NotificationList;
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype, string address1, string address2, string address3,
+            string county, string eircode)
         {
             try
             {
@@ -794,7 +782,7 @@ namespace DataAccessLayer
         }
 
         
-        public bool banUserInDB(User user)
+        public bool banUserInDB(BusinessEntities.User user)
         {
             try
             {
@@ -817,7 +805,7 @@ namespace DataAccessLayer
                 MessageBox.Show(excep.Message);
                 if (getConnection().ToString() == "Open")
                     closeConnection();
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
             }
             return true;
 
@@ -854,7 +842,7 @@ namespace DataAccessLayer
             {
                 if (con.State.ToString() == "Open")
                     con.Close();
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
         }
@@ -891,7 +879,7 @@ namespace DataAccessLayer
             {
                 if (con.State.ToString() == "Open")
                     con.Close();
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
         }
@@ -927,11 +915,11 @@ namespace DataAccessLayer
             {
                 if (con.State.ToString() == "Open")
                     con.Close();
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
         }
-
+/*
         public void insertHorseAdvertisement(Horse horse)
         {
             try
@@ -959,9 +947,9 @@ namespace DataAccessLayer
                 System.Windows.Forms.Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
-        }
+        }*/
 
-        public bool verifyAdvertisement(Advertisement advertisement)
+       /* public bool verifyAdvertisement(Advertisement advertisement)
         {
             //throw new NotImplementedException();
 
@@ -993,7 +981,7 @@ namespace DataAccessLayer
                 Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
-        }
+        }*/
 
         public void insertAccessoriesAdvertisement(Accessories accessories)
         {
@@ -1014,7 +1002,7 @@ namespace DataAccessLayer
                 dRow[5] = accessories.Verified;
                 dRow[6] = accessories.Status;
                 dRow[10] = accessories.AccessCategory;
-                dRow[11] = accessories.AccessSubCategory;
+                dRow[11] = accessories.SubAccessCategory;
                 ds.Tables["AccessData"].Rows.Add(dRow);
                 da.Update(ds, "AccessData");
             }
@@ -1022,14 +1010,14 @@ namespace DataAccessLayer
             {
                 if (con.State.ToString() == "Open")
                     con.Close();
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
         }
 
       
         
-        public void verifyUser(User user)
+        public void verifyUser(BusinessEntities.User user)
         {
             try
             {
@@ -1061,13 +1049,7 @@ namespace DataAccessLayer
                 */
             }
         }
-                MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
-            }
-            return true;
-        }
+              
 
         public bool deleteAdvertisement(Advertisement advertisement)
         {
@@ -1096,6 +1078,23 @@ namespace DataAccessLayer
             }
             return true;
 
+        }
+
+      
+
+        public void addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool verifyAdvertisement(Advertisement advertisement)
+        {
+            throw new NotImplementedException();
         }
     }
 }
