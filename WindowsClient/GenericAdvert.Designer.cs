@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlGenericAdvert = new System.Windows.Forms.Panel();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.txtExtra3 = new System.Windows.Forms.TextBox();
             this.txtExtra2 = new System.Windows.Forms.TextBox();
             this.txtExtra1 = new System.Windows.Forms.TextBox();
@@ -145,6 +146,7 @@
             // 
             // pnlGenericAdvert
             // 
+            this.pnlGenericAdvert.Controls.Add(this.btnBuy);
             this.pnlGenericAdvert.Controls.Add(this.txtExtra3);
             this.pnlGenericAdvert.Controls.Add(this.txtExtra2);
             this.pnlGenericAdvert.Controls.Add(this.txtExtra1);
@@ -166,20 +168,34 @@
             this.pnlGenericAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlGenericAdvert.TabIndex = 7;
             // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBuy.Location = new System.Drawing.Point(455, 346);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(83, 27);
+            this.btnBuy.TabIndex = 39;
+            this.btnBuy.Text = "BUY";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
             // txtExtra3
             // 
-            this.txtExtra3.Location = new System.Drawing.Point(413, 332);
+            this.txtExtra3.Location = new System.Drawing.Point(413, 310);
             this.txtExtra3.Multiline = true;
             this.txtExtra3.Name = "txtExtra3";
-            this.txtExtra3.Size = new System.Drawing.Size(183, 36);
+            this.txtExtra3.ReadOnly = true;
+            this.txtExtra3.Size = new System.Drawing.Size(183, 25);
             this.txtExtra3.TabIndex = 34;
             // 
             // txtExtra2
             // 
-            this.txtExtra2.Location = new System.Drawing.Point(413, 290);
+            this.txtExtra2.Location = new System.Drawing.Point(413, 277);
             this.txtExtra2.Multiline = true;
             this.txtExtra2.Name = "txtExtra2";
-            this.txtExtra2.Size = new System.Drawing.Size(183, 36);
+            this.txtExtra2.ReadOnly = true;
+            this.txtExtra2.Size = new System.Drawing.Size(183, 21);
             this.txtExtra2.TabIndex = 33;
             // 
             // txtExtra1
@@ -187,7 +203,8 @@
             this.txtExtra1.Location = new System.Drawing.Point(413, 244);
             this.txtExtra1.Multiline = true;
             this.txtExtra1.Name = "txtExtra1";
-            this.txtExtra1.Size = new System.Drawing.Size(183, 36);
+            this.txtExtra1.ReadOnly = true;
+            this.txtExtra1.Size = new System.Drawing.Size(183, 27);
             this.txtExtra1.TabIndex = 32;
             // 
             // label3
@@ -258,6 +275,7 @@
             this.txtDescription.Location = new System.Drawing.Point(121, 280);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(236, 88);
             this.txtDescription.TabIndex = 23;
             // 
@@ -265,6 +283,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(121, 240);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(236, 23);
             this.txtPrice.TabIndex = 22;
             // 
@@ -272,6 +291,7 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(121, 197);
             this.txtAge.Name = "txtAge";
+            this.txtAge.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(236, 23);
             this.txtAge.TabIndex = 21;
             // 
@@ -279,6 +299,7 @@
             // 
             this.txtGender.Location = new System.Drawing.Point(121, 146);
             this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(236, 23);
             this.txtGender.TabIndex = 20;
             // 
@@ -286,6 +307,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(121, 97);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(236, 23);
             this.txtName.TabIndex = 19;
             // 
@@ -1499,5 +1521,6 @@
         private TextBox txtExtra2;
         private TextBox txtExtra1;
         private Label label3;
+        private Button btnBuy;
     }
 }

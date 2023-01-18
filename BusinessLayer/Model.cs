@@ -116,8 +116,8 @@ namespace BusinessLayer
             {
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
-              // MessageBox.Show("DBUserEmail: " + DBUserEmail);
-                //MessageBox.Show("DBUserPassword: " + DBUserPassword);
+                MessageBox.Show("DBUserEmail: " + DBUserEmail);
+                MessageBox.Show("DBUserPassword: " + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
@@ -127,6 +127,7 @@ namespace BusinessLayer
             }
             return false;
         }
+        
 
         public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
             string userType,string address1,string address2,string address3,string county,string eircode)
@@ -398,7 +399,7 @@ namespace BusinessLayer
 
                 //DataLayer.verifyUser(email);
 
-                DataLayer.verifyUser(user);
+               // DataLayer.verifyUser(user);
 
             //}
             /*catch (System.Exception excep)

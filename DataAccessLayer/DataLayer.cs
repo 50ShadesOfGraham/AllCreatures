@@ -1,9 +1,7 @@
 ﻿using BusinessEntities;
-
 using Microsoft.VisualBasic.Logging;
 
 using Microsoft.VisualBasic.ApplicationServices;
-
 using System;
 using System.Collections;
 using System.Data;
@@ -140,7 +138,7 @@ namespace DataAccessLayer
                                                                 Convert.ToBoolean(dRow.ItemArray.GetValue(13)),
                                                                 dRow.ItemArray.GetValue(14).ToString(),
                                                                 dRow.ItemArray.GetValue(15).ToString());
-                    AdvertList.Add(advert);
+                        AdvertList.Add(advert);
                 }
                 ds = new DataSet();
                 sql = "SELECT * From HorseAdvertisement";
@@ -189,7 +187,7 @@ namespace DataAccessLayer
                                                                 Convert.ToInt32(dRow.ItemArray.GetValue(12)),
                                                                 dRow.ItemArray.GetValue(13).ToString(),
                                                                 dRow.ItemArray.GetValue(14).ToString());
-
+                  
                     AdvertList.Add(advert);
                 }
                 ds = new DataSet();
@@ -299,7 +297,7 @@ namespace DataAccessLayer
             }
             return AdvertList;
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype, string address1, string address2, string address3,
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
             string county, string eircode)
         {
             try
@@ -321,7 +319,7 @@ namespace DataAccessLayer
                 dRow[7] = address3;
                 dRow[8] = county;
                 dRow[9] = eircode;
-
+              
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
             }
@@ -605,12 +603,12 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3, string county, string eircode)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1,string address2,string address3,string county,string eircode)
         {
             throw new NotImplementedException();
         }
 
-
+        
         public bool banUserInDB(User user)
         {
             try
@@ -625,7 +623,7 @@ namespace DataAccessLayer
                 if (findRow != null)
                 {
                     findRow[5] = user.UserType;
-
+                  
                 }
                 da.Update(ds, "UsersData"); //remove row from database table
             }
@@ -838,7 +836,7 @@ namespace DataAccessLayer
                 dRow[4] = food.Price;
                 dRow[5] = food.Verified;
                 dRow[6] = food.Status;
-                dRow[10] = food.AnimalType;
+                dRow[10] =  food.AnimalType;
                 dRow[11] = food.FoodDetails;
                 ds.Tables["FoodData"].Rows.Add(dRow);
                 da.Update(ds, "FoodData");
@@ -884,59 +882,39 @@ namespace DataAccessLayer
             }
         }
 
+      
+        
         public void verifyUser(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                ds = new DataSet();
+                string userEmail = user.Email;
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                if (findRow != null)
+
+                {
+                    findRow[4] = 1;
+
+                }
+                da.Update(ds, "UsersData"); //adjust Verified from 0 to 1 in DB
+                MessageBox.Show("Success");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show("Error with verifying user on DB");
+                /*
+                   if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                */
+            }
         }
-
-
-
-        /*   public void verifyUser(string email)
-           {
-               try
-               {
-
-                   DataSet ds = new DataSet();
-                   string sql = "SELECT UserEmail,Verified FROM Users";
-                   SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                   // SqlDataAdapter.UpdateCommand = new SqlCommand("UPDATE Users SET Verified = 1 WHERE UserEmail = @UserEmail", con);
-                   SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                   da.Fill(ds, "UserData");
-                   foreach (DataRow dr in ds.Tables) // search whole table
-
-                       public void verifyUser(User user)
-                       {
-                           try
-                           {
-                               ds = new DataSet();
-                               string userEmail = user.Email;
-                               string sql = "SELECT * From Users";
-                               da = new SqlDataAdapter(sql, con);
-                               da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                               cb = new SqlCommandBuilder(da);  //Generates
-                               da.Fill(ds, "UsersData");
-                               DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
-                               if (findRow != null)
-
-                               {
-                                   findRow[4] = 1;
-
-                               }
-                               da.Update(ds, "UsersData"); //adjust Verified from 0 to 1 in DB
-                               MessageBox.Show("Success");
-                           }
-                           catch (System.Exception excep)
-                           {
-                               MessageBox.Show("Error with verifying user on DB");
-
-                               if (con.State.ToString() == "Open")
-                                   con.Close();
-                               Application.Exit();
-                               //Environment.Exit(0); //Force the application to close
-
-                           }
-                       }*/
-
-
     }
 }

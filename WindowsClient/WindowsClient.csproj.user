@@ -40,9 +40,6 @@
     <Compile Update="HorseAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="IndividualAnimalAdvert.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="LitterAdvert.cs">
       <SubType>Form</SubType>
     </Compile>

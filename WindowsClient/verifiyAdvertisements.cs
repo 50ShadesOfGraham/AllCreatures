@@ -33,14 +33,13 @@ namespace WindowsClient
         {
             foreach (Advertisement advertisement1 in model.AdvertList)
             {
-
-                /* listAdverts.Items.Add(advertisement1.Price);*/
-
-                foreach (GenericAnimal advertisement in model.AdvertList)
-                {
-                    listAdverts.Items.Add(advertisement.AnimalName);
-                }
-
+                
+                
+                    foreach (GenericAnimal advertisement in model.AdvertList)
+                    {
+                        listAdverts.Items.Add(advertisement1.AdvertID);
+                    }
+               
             }
 
         }
@@ -60,15 +59,14 @@ namespace WindowsClient
 
                 foreach (GenericAnimal genericAdvert in model.AdvertList)
                 {
-                    if (genericAdvert.AnimalName == txtEmail.Text)
-                    {
+                    if (genericAnimal.SellerEmail == txtEmail.Text)
+                    { 
+                       /* txtDescription.Text = genericAdvert.Description;
                         txtAge.Text = Convert.ToString(genericAdvert.Age);
-                        // txtGender.Text = genericAdvert.Gender;
-                        txtAnimalType.Text = genericAdvert.AnimalName;
                         txtDetail1.Text = genericAdvert.DetailOne;
                         txtDetail2.Text = genericAdvert.DetailTwo;
                         txtDetail3.Text = genericAdvert.DetailThree;
-
+                       */
                     }
                 }
 

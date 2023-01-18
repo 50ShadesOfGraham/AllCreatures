@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHorseAdvert = new System.Windows.Forms.Panel();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPurpose = new System.Windows.Forms.TextBox();
@@ -149,6 +150,7 @@
             // 
             // pnlHorseAdvert
             // 
+            this.pnlHorseAdvert.Controls.Add(this.btnBuy);
             this.pnlHorseAdvert.Controls.Add(this.label6);
             this.pnlHorseAdvert.Controls.Add(this.label5);
             this.pnlHorseAdvert.Controls.Add(this.txtPurpose);
@@ -174,10 +176,22 @@
             this.pnlHorseAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlHorseAdvert.TabIndex = 13;
             // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBuy.Location = new System.Drawing.Point(449, 356);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(83, 27);
+            this.btnBuy.TabIndex = 39;
+            this.btnBuy.Text = "BUY";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(389, 346);
+            this.label6.Location = new System.Drawing.Point(389, 317);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 15);
             this.label6.TabIndex = 38;
@@ -186,7 +200,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(389, 309);
+            this.label5.Location = new System.Drawing.Point(389, 280);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 15);
             this.label5.TabIndex = 37;
@@ -194,29 +208,32 @@
             // 
             // txtPurpose
             // 
-            this.txtPurpose.Location = new System.Drawing.Point(477, 343);
+            this.txtPurpose.Location = new System.Drawing.Point(477, 314);
             this.txtPurpose.Name = "txtPurpose";
+            this.txtPurpose.ReadOnly = true;
             this.txtPurpose.Size = new System.Drawing.Size(100, 23);
             this.txtPurpose.TabIndex = 36;
             // 
             // txtBroken
             // 
-            this.txtBroken.Location = new System.Drawing.Point(477, 306);
+            this.txtBroken.Location = new System.Drawing.Point(477, 277);
             this.txtBroken.Name = "txtBroken";
+            this.txtBroken.ReadOnly = true;
             this.txtBroken.Size = new System.Drawing.Size(100, 23);
             this.txtBroken.TabIndex = 35;
             // 
             // txtBreed
             // 
-            this.txtBreed.Location = new System.Drawing.Point(477, 277);
+            this.txtBreed.Location = new System.Drawing.Point(477, 248);
             this.txtBreed.Name = "txtBreed";
+            this.txtBreed.ReadOnly = true;
             this.txtBreed.Size = new System.Drawing.Size(100, 23);
             this.txtBreed.TabIndex = 34;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(389, 277);
+            this.label4.Location = new System.Drawing.Point(389, 248);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 33;
@@ -224,15 +241,16 @@
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(477, 240);
+            this.txtSize.Location = new System.Drawing.Point(477, 211);
             this.txtSize.Name = "txtSize";
+            this.txtSize.ReadOnly = true;
             this.txtSize.Size = new System.Drawing.Size(100, 23);
             this.txtSize.TabIndex = 32;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(389, 244);
+            this.label3.Location = new System.Drawing.Point(389, 215);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 15);
             this.label3.TabIndex = 31;
@@ -297,6 +315,7 @@
             this.txtDescription.Location = new System.Drawing.Point(121, 283);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(236, 88);
             this.txtDescription.TabIndex = 23;
             // 
@@ -304,6 +323,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(121, 240);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(236, 23);
             this.txtPrice.TabIndex = 22;
             // 
@@ -311,6 +331,7 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(121, 197);
             this.txtAge.Name = "txtAge";
+            this.txtAge.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(236, 23);
             this.txtAge.TabIndex = 21;
             // 
@@ -318,6 +339,7 @@
             // 
             this.txtGender.Location = new System.Drawing.Point(121, 146);
             this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(236, 23);
             this.txtGender.TabIndex = 20;
             // 
@@ -325,6 +347,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(121, 97);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(236, 23);
             this.txtName.TabIndex = 19;
             // 
@@ -1542,5 +1565,6 @@
         private ToolStripMenuItem myAdvertisementsToolStripMenuItem;
         private ToolStripMenuItem signOutToolStripMenuItem;
         private ToolStripMenuItem placeAdvertisementToolStripMenuItem;
+        private Button btnBuy;
     }
 }

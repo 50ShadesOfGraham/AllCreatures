@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlFoodAdvert = new System.Windows.Forms.Panel();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.txtDetails = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -137,6 +138,7 @@
             // 
             // pnlFoodAdvert
             // 
+            this.pnlFoodAdvert.Controls.Add(this.btnBuy);
             this.pnlFoodAdvert.Controls.Add(this.txtDetails);
             this.pnlFoodAdvert.Controls.Add(this.label1);
             this.pnlFoodAdvert.Controls.Add(this.lblTitle);
@@ -150,11 +152,24 @@
             this.pnlFoodAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlFoodAdvert.TabIndex = 22;
             // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBuy.Location = new System.Drawing.Point(455, 343);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(83, 27);
+            this.btnBuy.TabIndex = 39;
+            this.btnBuy.Text = "BUY";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
             // txtDetails
             // 
             this.txtDetails.Location = new System.Drawing.Point(120, 269);
             this.txtDetails.Multiline = true;
             this.txtDetails.Name = "txtDetails";
+            this.txtDetails.ReadOnly = true;
             this.txtDetails.Size = new System.Drawing.Size(236, 74);
             this.txtDetails.TabIndex = 32;
             // 
@@ -199,6 +214,7 @@
             this.txtDescription.Location = new System.Drawing.Point(120, 157);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(236, 88);
             this.txtDescription.TabIndex = 23;
             // 
@@ -206,6 +222,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(120, 114);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(236, 23);
             this.txtPrice.TabIndex = 22;
             // 
@@ -1411,5 +1428,6 @@
         private ToolStripMenuItem myAdvertisementsToolStripMenuItem;
         private ToolStripMenuItem signOutToolStripMenuItem;
         private ToolStripMenuItem placeAdvertisementToolStripMenuItem;
+        private Button btnBuy;
     }
 }
