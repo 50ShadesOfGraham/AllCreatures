@@ -141,13 +141,14 @@ namespace BusinessLayer
             }
         }
 
-        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified, string userType)
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
+             string userType, string address1, string address2, string address3, string county, string eircode)
         {
             try
             {
-                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType);
+                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType, address1, address2, address3, county, eircode);
                 UserList.Add(user);
-                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType, address1, address2, address3, county, eircode);
                 return true;
             }
             catch (System.Exception excep)
@@ -352,6 +353,12 @@ namespace BusinessLayer
         public bool deleteAdvertisement(Horse horse)
         {
             DataLayer.deleteAdvertisement(horse); return true;
+        }
+
+        public bool banUserInDB(User user)
+        {
+            DataLayer.banUserInDB(user);
+            return true;
         }
     }
 }

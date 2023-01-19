@@ -88,7 +88,6 @@ C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\bin\De
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\bin\Debug\net6.0-windows\DataAccessLayer.pdb
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.csproj.AssemblyReference.cache
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.AdminIndex.resources
-C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.PlaceAdvertisement.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Product.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Properties.Resources.resources
 C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.RegisterUser.resources
@@ -401,3 +400,13 @@ C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windo
 C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.pdb
 C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateAdvert.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateAdvertStart.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateSingleAdvertisement.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.DisplayUsers.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.GeneralDisplay.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Notification.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.UserNotifications.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.verifyAdvertisements.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.ViewAdForm.resources
+C:\Users\Darragh\source\repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.reportUser.resources

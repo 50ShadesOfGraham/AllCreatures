@@ -9,7 +9,8 @@ namespace DataAccessLayer
 {
     public interface IDataLayer
     {
-        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype);
+        void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3,
+            string county, string eircode);
         public void addNewAccessoriesToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat);
         public void addNewFoodToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string details);
         public void addNewDogToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string dogname,string gender,bool purebreed,string breedone,string breedtwo);
@@ -37,6 +38,7 @@ namespace DataAccessLayer
         public bool deleteAdvertisement(Advertisement advertisement);
         public bool deleteAdvertisement(Dog dog);
         public bool deleteAdvertisement(Horse horse);
+        public bool banUserInDB(BusinessEntities.User user);
         void openConnection();
        
     }

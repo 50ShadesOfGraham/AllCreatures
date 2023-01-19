@@ -39,5 +39,6 @@ namespace BusinessLayer
         bool deleteAdvertisement(Advertisement advertisement);
         bool deleteAdvertisement(Horse horse);
         bool deleteAdvertisement(Dog dog);
+        bool banUserInDB(BusinessEntities.User user);
     }
 }

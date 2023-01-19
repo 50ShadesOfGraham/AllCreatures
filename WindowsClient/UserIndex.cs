@@ -247,5 +247,10 @@ namespace WindowsClient
             UserNotifications userNotifications = new UserNotifications(Model);
             userNotifications.Show();
         }
+
+        private void reportUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

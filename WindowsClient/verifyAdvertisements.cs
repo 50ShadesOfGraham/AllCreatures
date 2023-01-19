@@ -67,6 +67,7 @@ namespace WindowsClient
             panelAssBtn.Visible = false;
             panelfoodBtn.Visible= false;
             panelAccess.Visible = false;
+            panelGeneric.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -139,7 +140,15 @@ namespace WindowsClient
                         txtBreed.Text = dog.Purebreed.ToString();
                         panelDog.Visible = true;
                     }
-
+                    if(animal is GenericAnimal generic)
+                    {
+                        panelGeneric.Visible = true;
+                        
+                        txtDetail1.Text = generic.DetailOne;
+                        txtDetail2.Text = generic.DetailTwo;
+                        txtDetail3.Text = generic.DetailThree;
+                        
+                    }
 
                 }
                 
@@ -265,22 +274,25 @@ namespace WindowsClient
             listboxAni.Items.Clear();
             listBoxAssess.Items.Clear();
             listBoxFood.Items.Clear();
+            txtDetail1.Clear();
+            txtDetail2.Clear();
+            txtDetail3.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (Advertisement advertisement in model.AdvertList.OfType<Animal>())
             {
-               /* if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                    return;*/
-                
+                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;
+
                 if (advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
                    if(advertisement is Dog dog) 
                     {
                         model.deleteAdvertisement(dog);
                         listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(dog.Title);
+                        MessageBox.Show(dog.AnimalName);
                         break;
                         
                     }
@@ -294,6 +306,11 @@ namespace WindowsClient
             }
          
                 
+        }
+
+        private void panelGeneric_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
