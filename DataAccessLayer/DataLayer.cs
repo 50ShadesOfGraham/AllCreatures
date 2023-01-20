@@ -3,7 +3,8 @@ using System.Data;
 using System.Data.SqlClient;
 using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
-using System.Windows;
+using Microsoft.VisualBasic.ApplicationServices;
+using User = BusinessEntities.User;
 
 namespace DataAccessLayer
 {
@@ -83,16 +84,19 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                   User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
                                                         Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
-                                                        dRow.ItemArray.GetValue(5).ToString());
+                                                        dRow.ItemArray.GetValue(5).ToString(),
+                                                        dRow.ItemArray.GetValue(6).ToString(),
+                                                        dRow.ItemArray.GetValue(7).ToString(),
+                                                        dRow.ItemArray.GetValue(8).ToString(),
+                                                        dRow.ItemArray.GetValue(9).ToString(),
+                                                        dRow.ItemArray.GetValue(10).ToString());
                     UserList.Add(user);
                 }
-
-
 
 
             }
@@ -101,7 +105,7 @@ namespace DataAccessLayer
                 MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
-                System.Windows.Forms.Application.Exit();
+                Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
             return UserList;
@@ -415,8 +419,6 @@ namespace DataAccessLayer
             }
             return AdvertList;
         }
-       
-       
         public List<Notifications> getAllNotifications()
         {
             List<Notifications> NotificationList = new List<Notifications>();
@@ -474,7 +476,7 @@ namespace DataAccessLayer
                 dRow[7] = address3;
                 dRow[8] = county;
                 dRow[9] = eircode;
-              
+                //Darragh
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
             }
@@ -482,7 +484,7 @@ namespace DataAccessLayer
             {
                 if (con.State.ToString() == "Open")
                     con.Close();
-                System.Windows.Forms.Application.Exit();
+                Application.Exit();
                 //Environment.Exit(0); //Force the application to close
                 //eddie
             }
@@ -776,151 +778,12 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype,string address1,string address2,string address3,string county,string eircode)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype)
         {
             throw new NotImplementedException();
         }
 
-        
-        public bool banUserInDB(BusinessEntities.User user)
-        {
-            try
-            {
-                ds = new DataSet();
-                string sql = "SELECT * From Users";
-                da = new SqlDataAdapter(sql, con);
-                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "UsersData");
-                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
-                if (findRow != null)
-                {
-                    findRow[5] = user.UserType;
-                  
-                }
-                da.Update(ds, "UsersData"); //remove row from database table
-            }
-            catch (System.Exception excep)
-            {
-                MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
-            }
-            return true;
-
-        }
-
-        public void insertDogAdvertisement(Dog dog)
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                string sql = "SELECT * From DogAdvertisement";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "DogData");
-                maxAdverts = ds.Tables["DogData"].Rows.Count;
-                DataRow dRow = ds.Tables["DogData"].NewRow();
-                dRow[0] = dog.AdvertID;
-                dRow[1] = dog.SellerEmail;
-                dRow[2] = dog.Title;
-                dRow[3] = dog.Description;
-                dRow[4] = dog.Price;
-                dRow[5] = dog.Verified;
-                dRow[6] = dog.Status;
-                dRow[10] = dog.AnimalName;
-                dRow[11] = dog.Age;
-                dRow[12] = dog.Gender;
-                dRow[13] = dog.Purebreed;
-                dRow[14] = dog.BreedOne;
-                dRow[15] = dog.BreedTwo;
-                ds.Tables["DogData"].Rows.Add(dRow);
-                da.Update(ds, "DogData");
-            }
-            catch (System.Exception excep)
-            {
-                if (con.State.ToString() == "Open")
-                    con.Close();
-                System.Windows.Forms.Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-            }
-        }
-
-        public void insertGenericAnimalAdvertisement(GenericAnimal generic_animal)
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                string sql = "SELECT * From GenericAnimalAdvertisement";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "GAData");
-                maxAdverts = ds.Tables["GAData"].Rows.Count;
-                DataRow dRow = ds.Tables["GAData"].NewRow();
-                dRow[0] = generic_animal.AdvertID;
-                dRow[1] = generic_animal.SellerEmail;
-                dRow[2] = generic_animal.Title;
-                dRow[3] = generic_animal.Description;
-                dRow[4] = generic_animal.Price;
-                dRow[5] = generic_animal.Verified;
-                dRow[6] = generic_animal.Status;
-                dRow[10] = generic_animal.AnimalType;
-                dRow[11] = generic_animal.AnimalName;
-                dRow[12] = generic_animal.Age;
-                dRow[13] = generic_animal.Gender;
-                dRow[14] = generic_animal.DetailOne;
-                dRow[15] = generic_animal.DetailTwo;
-                dRow[16] = generic_animal.DetailThree;
-                ds.Tables["GAData"].Rows.Add(dRow);
-                da.Update(ds, "GAData");
-            }
-            catch (System.Exception excep)
-            {
-                if (con.State.ToString() == "Open")
-                    con.Close();
-                System.Windows.Forms.Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-            }
-        }
-
-        public void insertLitterAdvertisement(Litter litter)
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                string sql = "SELECT * From LitterAdvertisement";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "LitterData");
-                maxAdverts = ds.Tables["LitterData"].Rows.Count;
-                DataRow dRow = ds.Tables["LitterData"].NewRow();
-                dRow[0] = litter.AdvertID;
-                dRow[1] = litter.SellerEmail;
-                dRow[2] = litter.Title;
-                dRow[3] = litter.Description;
-                dRow[4] = litter.Price;
-                dRow[5] = litter.Verified;
-                dRow[6] = litter.Status;
-                dRow[10] = litter.AnimalType;
-                dRow[11] = litter.LitterSize;
-                dRow[12] = litter.Age;
-                dRow[13] = litter.Purebreed;
-                dRow[14] = litter.BreedOne;
-                dRow[15] = litter.BreedTwo;
-                ds.Tables["LitterData"].Rows.Add(dRow);
-                da.Update(ds, "LitterData");
-            }
-            catch (System.Exception excep)
-            {
-                if (con.State.ToString() == "Open")
-                    con.Close();
-                System.Windows.Forms.Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-            }
-        }
-/*
-        public void insertHorseAdvertisement(Horse horse)
+        public void addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail)
         {
             try
             {
@@ -947,109 +810,207 @@ namespace DataAccessLayer
                 System.Windows.Forms.Application.Exit();
                 //Environment.Exit(0); //Force the application to close
             }
-        }*/
+        }
 
-       /* public bool verifyAdvertisement(Advertisement advertisement)
+        public bool verifyAdvertisement(Advertisement advertisement)
         {
             //throw new NotImplementedException();
 
             try
             {
-                DataSet ds = new DataSet();
-                string sql = "SELECT * From FoodAdvertisement";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "FoodData");
-                maxAdverts = ds.Tables["FoodData"].Rows.Count;
-                DataRow dRow = ds.Tables["FoodData"].NewRow();
-                dRow[0] = food.AdvertID;
-                dRow[1] = food.SellerEmail;
-                dRow[2] = food.Title;
-                dRow[3] = food.Description;
-                dRow[4] = food.Price;
-                dRow[5] = food.Verified;
-                dRow[6] = food.Status;
-                dRow[10] =  food.AnimalType;
-                dRow[11] = food.FoodDetails;
-                ds.Tables["FoodData"].Rows.Add(dRow);
-                da.Update(ds, "FoodData");
-            }
-            catch (System.Exception excep)
+                ds = new DataSet();
+                string sql = "SELECT * From Advertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.AdvertID);
+                if (findRow != null) 
+                {
+                    findRow[5] = advertisement.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }catch(System.Exception excep) 
             {
-                if (con.State.ToString() == "Open")
-                    con.Close();
-                Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-            }
-        }*/
-
-        public void insertAccessoriesAdvertisement(Accessories accessories)
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                string sql = "SELECT * From AccessoriesAdvertisement";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "AccessData");
-                maxAdverts = ds.Tables["AccessData"].Rows.Count;
-                DataRow dRow = ds.Tables["AccessData"].NewRow();
-                dRow[0] = accessories.AdvertID;
-                dRow[1] = accessories.SellerEmail;
-                dRow[2] = accessories.Title;
-                dRow[3] = accessories.Description;
-                dRow[4] = accessories.Price;
-                dRow[5] = accessories.Verified;
-                dRow[6] = accessories.Status;
-                dRow[10] = accessories.AccessCategory;
-                dRow[11] = accessories.SubAccessCategory;
-                ds.Tables["AccessData"].Rows.Add(dRow);
-                da.Update(ds, "AccessData");
-            }
-            catch (System.Exception excep)
-            {
-                if (con.State.ToString() == "Open")
-                    con.Close();
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
                 System.Windows.Forms.Application.Exit();
-                //Environment.Exit(0); //Force the application to close
             }
+            return true;
         }
 
-      
-        
-        public void verifyUser(BusinessEntities.User user)
+        public bool verifyAdvertisement(Dog dog)
         {
+            //throw new NotImplementedException();
+
             try
             {
                 ds = new DataSet();
-                string userEmail = user.Email;
-                string sql = "SELECT * From Users";
+                string sql = "SELECT * From DogAdvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "UsersData");
-                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(dog.DogId);
                 if (findRow != null)
-
                 {
-                    findRow[4] = 1;
-
+                    findRow[5] = dog.Verified;
                 }
-                da.Update(ds, "UsersData"); //adjust Verified from 0 to 1 in DB
-                MessageBox.Show("Success");
+                da.Update(ds, "AdsData");
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show("Error with verifying user on DB");
-                /*
-                   if (con.State.ToString() == "Open")
-                    con.Close();
-                Application.Exit();
-                //Environment.Exit(0); //Force the application to close
-                */
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
             }
+            return true;
         }
-              
+
+        public bool verifyAdvertisement(Horse horse)
+        {
+            //throw new NotImplementedException();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From HorseAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.HorseId);
+                if (findRow != null)
+                {
+                    findRow[5] = horse.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(GenericAnimal generic)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From GenericAnimaladvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(generic.GenericID);
+                if (findRow != null)
+                {
+                    findRow[5] = generic.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+
+        public bool verifyAdvertisement(FarmAnimal farmAnimal)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FarmAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(farmAnimal.FarmId);
+                if (findRow != null)
+                {
+                    findRow[5] = farmAnimal.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(Food food)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FoodAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(food.FoodId);
+                if (findRow != null)
+                {
+                    findRow[5] = food.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(Accessories accessories)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From AccessoriesAdvertisment";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
+                if (findRow != null)
+                {
+                    findRow[5] = accessories.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
 
         public bool deleteAdvertisement(Advertisement advertisement)
         {
@@ -1080,19 +1041,94 @@ namespace DataAccessLayer
 
         }
 
-      
-
-        public void addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail)
+        public bool deleteAdvertisement(Dog dog)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From DogAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(dog.DogId);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+
         }
 
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype)
+        public bool deleteAdvertisement(Horse horse)
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From HorseAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.Title);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+
         }
 
-        public bool verifyAdvertisement(Advertisement advertisement)
+        public bool banUserInDB(User user)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                if (findRow != null)
+                {
+                    findRow[5] = user.UserType;
+
+                }
+                da.Update(ds, "UsersData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                Application.Exit();
+            }
+            return true;
+
+        }
+
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3, string county, string eircode)
         {
             throw new NotImplementedException();
         }

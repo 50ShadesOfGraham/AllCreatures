@@ -117,7 +117,6 @@ namespace BusinessLayer
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
                 MessageBox.Show("DBUserEmail: " + DBUserEmail);
-                MessageBox.Show("DBUserPassword: " + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
@@ -128,26 +127,28 @@ namespace BusinessLayer
             return false;
         }
 
-
-        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
-            string userType, string address1, string address2, string address3, string county, string eircode)
+        public Boolean addNewImageToDB(byte[] image)
         {
             try
             {
                 // DataLayer.InsertImageToDB(image);
                 return true;
-            }
-            catch (System.Exception excep)
+
+            } catch (System.Exception excep)
             {
+                MessageBox.Show(excep.Message);
                 return false;
             }
         }
-        public Boolean addNewAccessoriesAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string accessid, string animaltype, string accesscategory, string accesssubcat)
+
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
+             string userType, string address1, string address2, string address3, string county, string eircode)
         {
             try
             {
-            //    DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
-            //DataLayer.addNewAccessoriesToDB(accessid, animaltype, advertid, accesscategory, accesssubcat);
+                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType, address1, address2, address3, county, eircode);
+                UserList.Add(user);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType, address1, address2, address3, county, eircode);
                 return true;
             }
             catch (System.Exception excep)
@@ -322,27 +323,59 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
-        public void verifyUser(User user)
-        {
-            //try
-            //{
 
-            //DataLayer.verifyUser(email);
-
-            // DataLayer.verifyUser(user);
-
-           
-        }
         public bool verifyAdvertisement(Advertisement advertisement)
         {
             DataLayer.verifyAdvertisement(advertisement);
             return true;
         }
+        public bool verifyAdvertisement(Dog dog)
+        {
+            DataLayer.verifyAdvertisement(dog);
+            return true;
+        }
+        public bool verifyAdvertisement(Horse horse)
+        {
+            DataLayer.verifyAdvertisement(horse);
+            return true;
+        }
+
+        public bool verifyAdvertisement(Food food)
+        {
+            DataLayer.verifyAdvertisement(food);
+            return true;
+        }
+        public bool verifyAdvertisement(FarmAnimal farmAnimal)
+        {
+            DataLayer.verifyAdvertisement(farmAnimal);
+            return true;
+        } 
+        public bool verifyAdvertisement(Accessories accessories)
+        {
+            DataLayer.verifyAdvertisement(accessories);
+            return true;
+        }
+
         public bool deleteAdvertisement(Advertisement advertisement)
         {
             DataLayer.deleteAdvertisement(advertisement);
             return true;
         }
-    } 
+        public bool deleteAdvertisement(Dog dog)
+        {
+            DataLayer.deleteAdvertisement(dog); return true;
+        }
+        
+        public bool deleteAdvertisement(Horse horse)
+        {
+            DataLayer.deleteAdvertisement(horse); return true;
+        }
+
+        public bool banUserInDB(User user)
+        {
+            DataLayer.banUserInDB(user);
+            return true;
+        }
+    }
 }
 

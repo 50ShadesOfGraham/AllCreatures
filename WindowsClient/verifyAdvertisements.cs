@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,13 +26,12 @@ namespace WindowsClient
             if(AdCatComboBx.SelectedIndex == 0) 
             {
                 panelAnimalsBtn.Visible = true;
-                panelDog.Visible = false;
+                
                 panelfoodBtn.Visible = false;
                 panelAssBtn.Visible = false;
                 panelAnimalsDisp.Visible = true;
                 panelAccess.Visible = false;
                 panelFood.Visible = false;
-                panelHorse.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 1)
             {
@@ -43,8 +41,6 @@ namespace WindowsClient
                 panelAssBtn.Visible = false;
                 panelAccess.Visible = false;
                 panelFood.Visible = true;
-                panelDog.Visible = false;
-                panelHorse.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 2)
             {
@@ -54,15 +50,12 @@ namespace WindowsClient
                 panelfoodBtn.Visible = false;
                 panelAccess.Visible = true;
                 panelFood.Visible = false;
-                panelDog.Visible = false;
-                panelHorse.Visible = false;
             }
         }
 
         private void verifyAdvertisements_Load(object sender, EventArgs e)
         {
-            panelHorse.Visible = false;
-            panelDog.Visible = false;
+         
             panelAnimalsBtn.Visible = false;
             panelAssBtn.Visible = false;
             panelfoodBtn.Visible= false;
@@ -93,13 +86,9 @@ namespace WindowsClient
 
         private void listboxAni_DoubleClick(object sender, EventArgs e)
         {
-           /* PictureBoxImage.Image = GetImage(); */
-
-            txtTitle.Text=listboxAni.SelectedItem.ToString();
-
-          
-
-            foreach (Animal animal in model.AdvertList.OfType<Animal>())
+            txtTitle.Text=listboxAni.SelectedItem.ToString();   
+         
+            foreach(Animal animal in model.AdvertList.OfType<Animal>())
             {
                 if(animal.Title == txtTitle.Text)
                 {
@@ -112,8 +101,7 @@ namespace WindowsClient
                     txtName.Text=animal.AnimalName;
                     txtAge.Text=animal.Age.ToString();
                     txtGender.Text=animal.Gender;
-                    panelDog.Visible = false;
-                    panelHorse.Visible = false;
+
 
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
@@ -122,22 +110,13 @@ namespace WindowsClient
                         txtGender.Text=animal1.Gender;
                         
                     }*/
-
-                    if (animal is Horse horse)
-                    {
-                        txtGender.Text=horse.Gender;
-                        panelHorse.Visible = true;
-                        txthSize.Text = horse.Size;
-                        txtHBreed.Text = horse.Breed;
-                        txtHBroken.Text =horse.Broken.ToString();
-                        txtHPurpose.Text = horse.Purpose;
-
-                    }
-
+                    
+                    
+                    
                     if (animal is Dog dog)
                     {
                         txtBreed.Text = dog.Purebreed.ToString();
-                        panelDog.Visible = true;
+
                     }
 
 
@@ -145,7 +124,6 @@ namespace WindowsClient
                 
             }
         }
-
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -197,12 +175,10 @@ namespace WindowsClient
         {
             txtTitle.Text=listBoxAssess.SelectedItem.ToString();
 
-            foreach (Advertisement advertisement in model.AdvertList.OfType<Accessories>())
+            foreach (Advertisement advertisement in model.AdvertList)
             {
                 if (advertisement.Title == txtTitle.Text)
                 {
-                    
-                    
                     txtTitle.Text = advertisement.Title;
                     txtDescription.Text = advertisement.Description;
                     txtVerified.Text = advertisement.Verified.ToString();
@@ -234,12 +210,6 @@ namespace WindowsClient
                     txtVerified.Text = advertisement.Verified.ToString();
                     txtPrice.Text = advertisement.Price.ToString();
                     txtStat.Text = advertisement.Status.ToString();
-                   
-                    if(advertisement is Food food) 
-                    {
-                        txtType.Text = food.AnimalType;
-                        txtDetail1.Text = food.Details;
-                    }
                 }
             }
         }
@@ -247,13 +217,6 @@ namespace WindowsClient
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            listboxAni.Items.Clear();
-            listBoxAssess.Items.Clear();
-            listBoxFood.Items.Clear();
         }
     }
 }

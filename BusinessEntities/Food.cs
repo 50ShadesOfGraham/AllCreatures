@@ -9,6 +9,7 @@ namespace BusinessEntities
     public class Food : Advertisement
     {
         #region Instance Properties
+        private int foodId;
         private string animaltype;
         private string details;
         #endregion
@@ -23,6 +24,11 @@ namespace BusinessEntities
             get { return details; }
             set { details = value; }
         }
+        public int FoodId
+        {
+            get { return foodId; }
+            set { foodId = value; }
+        }
         #endregion
         #region Constructor
         public Food()
@@ -32,12 +38,14 @@ namespace BusinessEntities
         public Food(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string animaltype, string details)
         : base(advertid,selleremail,title,description,price,verified,status,imageone,imagetwo, imagethree)
         {
+            this.foodId = advertid;
             this.animaltype= animaltype;
             this.details = details;
         }
         public Food(int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animaltype, string details)
         : base(advertid, selleremail, title, details, price, verified, status)
         {
+            this.foodId= advertid;
             this.animaltype = animaltype;
             this.details = details;
         }

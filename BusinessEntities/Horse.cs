@@ -9,6 +9,7 @@ namespace BusinessEntities
     public class Horse : Animal
     {
         #region Instance Properties
+        private int horseId;
         private string size;
         private bool broken;
         private string breed;
@@ -35,6 +36,12 @@ namespace BusinessEntities
             get { return purpose; }
             set { purpose = value; }
         }
+        public int HorseId
+        {
+            get { return horseId; }
+            set { horseId= value; }
+        }
+
         #endregion
         #region Constructor
         public Horse()
@@ -44,6 +51,7 @@ namespace BusinessEntities
         public Horse(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname,int age, string gender,string size,bool broken,string breed,string purpose)
             : base(advertid, selleremail, title, description, price, verified, status,imageone,imagetwo,imagethree, animalname, "Horse", age, gender)
         {
+            this.horseId= advertid;
             this.size = Size;
             this.broken = Broken;
             this.breed = Breed;
@@ -52,6 +60,7 @@ namespace BusinessEntities
         public Horse(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
             : base(advertid, selleremail, title, description, price, verified, status, animalname, "Horse", age, gender)
         {
+            this.horseId = advertid;
             this.size = Size;
             this.broken = Broken;
             this.breed = Breed;

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Darraghs\\Desktop\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectUniqueName": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "projectName": "BusinessEntities",
-      "projectPath": "C:\\Users\\Darraghs\\Desktop\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "packagesPath": "C:\\Users\\Darraghs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Darraghs\\Desktop\\AllCreatures\\BusinessEntities\\obj\\",
+      "outputPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
