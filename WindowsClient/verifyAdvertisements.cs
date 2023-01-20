@@ -146,10 +146,11 @@ namespace WindowsClient
 
         private void btnAssess_Click(object sender, EventArgs e)
         {
-            foreach(Advertisement advertisement in model.AdvertList.OfType<Accessories>())
+            foreach(Accessories advertisement in model.AdvertList.OfType<Accessories>())
             {
                 
-                    listBoxAssess.Items.Add(advertisement.Title);
+                    
+                listBoxAssess.Items.Add(advertisement.Title);
                 
             }
         }
