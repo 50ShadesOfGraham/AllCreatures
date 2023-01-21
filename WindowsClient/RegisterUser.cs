@@ -100,13 +100,13 @@ namespace WindowsClient
             if (twoShow)
             {
                 this.Text = "Hide";
-                Passwordtxt.PasswordChar = '\0';
+                PasswordTwotxt.PasswordChar = '\0';
                 twoShow = false;
             }
             else
             {
                 this.Text = "Show";
-                Passwordtxt.PasswordChar = '*';
+                PasswordTwotxt.PasswordChar = '*';
                 twoShow = true;
             }
         }
