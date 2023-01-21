@@ -239,5 +239,23 @@ namespace WindowsClient
                 SecurityPanel.Visible = true;
             }
         }
+
+        private void CardNumberTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(CardNumberTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                CardNumberTxt.Text = CardNumberTxt.Text.Remove(CardNumberTxt.Text.Length - 1);
+            }
+        }
+
+        private void CVSTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(CVSTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                CVSTxt.Text = CVSTxt.Text.Remove(CVSTxt.Text.Length - 1);
+            }
+        }
     }
 }

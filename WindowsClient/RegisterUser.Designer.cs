@@ -76,10 +76,10 @@
             this.CardHolderTxt = new System.Windows.Forms.TextBox();
             this.SecurityPanel = new System.Windows.Forms.Panel();
             this.SecurityGroupBox = new System.Windows.Forms.GroupBox();
+            this.SecurityQComboBox = new System.Windows.Forms.ComboBox();
             this.SecurityQLbl = new System.Windows.Forms.Label();
             this.SecurityALbl = new System.Windows.Forms.Label();
             this.SecurityAnswerTxt = new System.Windows.Forms.TextBox();
-            this.SecurityQComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.HeaderPanel.SuspendLayout();
             this.GeneralInfoPanel.SuspendLayout();
@@ -580,9 +580,11 @@
             // 
             this.CVSTxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CVSTxt.Location = new System.Drawing.Point(271, 229);
+            this.CVSTxt.MaxLength = 3;
             this.CVSTxt.Name = "CVSTxt";
             this.CVSTxt.Size = new System.Drawing.Size(155, 31);
             this.CVSTxt.TabIndex = 10;
+            this.CVSTxt.TextChanged += new System.EventHandler(this.CVSTxt_TextChanged);
             // 
             // CVSLbl
             // 
@@ -599,6 +601,7 @@
             // 
             this.ExpiryDateTxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ExpiryDateTxt.Location = new System.Drawing.Point(272, 170);
+            this.ExpiryDateTxt.MaxLength = 5;
             this.ExpiryDateTxt.Name = "ExpiryDateTxt";
             this.ExpiryDateTxt.Size = new System.Drawing.Size(155, 31);
             this.ExpiryDateTxt.TabIndex = 6;
@@ -629,9 +632,11 @@
             // 
             this.CardNumberTxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CardNumberTxt.Location = new System.Drawing.Point(272, 112);
+            this.CardNumberTxt.MaxLength = 16;
             this.CardNumberTxt.Name = "CardNumberTxt";
             this.CardNumberTxt.Size = new System.Drawing.Size(401, 31);
             this.CardNumberTxt.TabIndex = 4;
+            this.CardNumberTxt.TextChanged += new System.EventHandler(this.CardNumberTxt_TextChanged);
             // 
             // CardHolderTxt
             // 
@@ -667,6 +672,23 @@
             this.SecurityGroupBox.TabStop = false;
             this.SecurityGroupBox.Text = "Security Details";
             // 
+            // SecurityQComboBox
+            // 
+            this.SecurityQComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SecurityQComboBox.FormattingEnabled = true;
+            this.SecurityQComboBox.Items.AddRange(new object[] {
+            "In what city were you born?",
+            "What is the name of your favorite pet?",
+            "What is your mother\'s maiden name?",
+            "What secondaryschool did you attend?",
+            "What was the name of your primary school?",
+            "What was the make of your first car?",
+            "What was your favorite food as a child?"});
+            this.SecurityQComboBox.Location = new System.Drawing.Point(271, 88);
+            this.SecurityQComboBox.Name = "SecurityQComboBox";
+            this.SecurityQComboBox.Size = new System.Drawing.Size(401, 33);
+            this.SecurityQComboBox.TabIndex = 5;
+            // 
             // SecurityQLbl
             // 
             this.SecurityQLbl.AutoSize = true;
@@ -696,23 +718,6 @@
             this.SecurityAnswerTxt.Name = "SecurityAnswerTxt";
             this.SecurityAnswerTxt.Size = new System.Drawing.Size(401, 31);
             this.SecurityAnswerTxt.TabIndex = 4;
-            // 
-            // SecurityQComboBox
-            // 
-            this.SecurityQComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SecurityQComboBox.FormattingEnabled = true;
-            this.SecurityQComboBox.Items.AddRange(new object[] {
-            "In what city were you born?",
-            "What is the name of your favorite pet?",
-            "What is your mother\'s maiden name?",
-            "What secondaryschool did you attend?",
-            "What was the name of your primary school?",
-            "What was the make of your first car?",
-            "What was your favorite food as a child?"});
-            this.SecurityQComboBox.Location = new System.Drawing.Point(271, 88);
-            this.SecurityQComboBox.Name = "SecurityQComboBox";
-            this.SecurityQComboBox.Size = new System.Drawing.Size(401, 33);
-            this.SecurityQComboBox.TabIndex = 5;
             // 
             // RegisterUser
             // 
