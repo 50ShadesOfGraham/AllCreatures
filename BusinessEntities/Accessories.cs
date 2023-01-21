@@ -31,6 +31,10 @@ namespace BusinessEntities
         }
         #endregion
         #region Constructor
+        public override string GetAdvertisementType()
+        {
+            return "Accessories";
+        }
         public Accessories() 
         {
             throw new System.NotImplementedException();

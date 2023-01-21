@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Advertisement 
+    public abstract class Advertisement 
     {
         #region Instance Properties
         private int advertid;
@@ -73,6 +73,7 @@ namespace BusinessEntities
         }
         #endregion
         #region Constructors
+        public abstract string GetAdvertisementType();
         public Advertisement()
         {
             throw new System.NotImplementedException();

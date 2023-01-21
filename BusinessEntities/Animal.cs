@@ -39,6 +39,10 @@ namespace BusinessEntities
         }
         #endregion
         #region Constructor
+        public override string GetAdvertisementType()
+        {
+            return this.AnimalType;
+        }
         public Animal()
         {
             throw new System.NotImplementedException();

@@ -31,6 +31,10 @@ namespace BusinessEntities
         }
         #endregion
         #region Constructor
+        public override string GetAdvertisementType()
+        {
+            return "Food";
+        }
         public Food()
         {
             throw new System.NotImplementedException();
