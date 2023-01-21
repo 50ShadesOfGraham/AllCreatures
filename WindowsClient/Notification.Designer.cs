@@ -60,9 +60,9 @@
             this.HeaderFlowLayoutPanel.AutoSize = true;
             this.HeaderFlowLayoutPanel.Controls.Add(this.NotificationHeaderBttn);
             this.HeaderFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HeaderFlowLayoutPanel.Location = new System.Drawing.Point(80, 0);
+            this.HeaderFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderFlowLayoutPanel.Name = "HeaderFlowLayoutPanel";
-            this.HeaderFlowLayoutPanel.Size = new System.Drawing.Size(1048, 126);
+            this.HeaderFlowLayoutPanel.Size = new System.Drawing.Size(1128, 126);
             this.HeaderFlowLayoutPanel.TabIndex = 3;
             // 
             // MessageTextBox
@@ -74,7 +74,7 @@
             this.MessageTextBox.Multiline = true;
             this.MessageTextBox.Name = "MessageTextBox";
             this.MessageTextBox.ReadOnly = true;
-            this.MessageTextBox.Size = new System.Drawing.Size(1048, 225);
+            this.MessageTextBox.Size = new System.Drawing.Size(1128, 225);
             this.MessageTextBox.TabIndex = 2;
             // 
             // MessagePanel
@@ -82,9 +82,9 @@
             this.MessagePanel.AutoSize = true;
             this.MessagePanel.Controls.Add(this.MessageTextBox);
             this.MessagePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MessagePanel.Location = new System.Drawing.Point(80, 126);
+            this.MessagePanel.Location = new System.Drawing.Point(0, 126);
             this.MessagePanel.Name = "MessagePanel";
-            this.MessagePanel.Size = new System.Drawing.Size(1048, 225);
+            this.MessagePanel.Size = new System.Drawing.Size(1128, 225);
             this.MessagePanel.TabIndex = 4;
             // 
             // Notification
@@ -94,7 +94,6 @@
             this.Controls.Add(this.MessagePanel);
             this.Controls.Add(this.HeaderFlowLayoutPanel);
             this.Name = "Notification";
-            this.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.Size = new System.Drawing.Size(1128, 351);
             this.Load += new System.EventHandler(this.Notification_Load);
             this.HeaderFlowLayoutPanel.ResumeLayout(false);

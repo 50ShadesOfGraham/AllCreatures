@@ -107,6 +107,9 @@
             this.HousePetBttn = new System.Windows.Forms.Button();
             this.AnimalBttn = new System.Windows.Forms.Button();
             this.LogoBox = new System.Windows.Forms.PictureBox();
+            this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.HeaderLbl = new System.Windows.Forms.Label();
+            this.ContainerFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.TopNavBar.SuspendLayout();
             this.SidePanel.SuspendLayout();
             this.AccessPanel.SuspendLayout();
@@ -123,6 +126,7 @@
             this.FarmPanel.SuspendLayout();
             this.HousePetPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
+            this.HeaderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // TopNavBar
@@ -162,6 +166,7 @@
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
             this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
             this.editAccountToolStripMenuItem.Text = "Edit Account";
+            this.editAccountToolStripMenuItem.Click += new System.EventHandler(this.editAccountToolStripMenuItem_Click);
             // 
             // myPurchasesToolStripMenuItem
             // 
@@ -178,6 +183,7 @@
             this.myAdvertisementsToolStripMenuItem.Name = "myAdvertisementsToolStripMenuItem";
             this.myAdvertisementsToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
             this.myAdvertisementsToolStripMenuItem.Text = "My Advertisements";
+            this.myAdvertisementsToolStripMenuItem.Click += new System.EventHandler(this.myAdvertisementsToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
@@ -1234,15 +1240,46 @@
             this.LogoBox.TabIndex = 0;
             this.LogoBox.TabStop = false;
             // 
+            // HeaderPanel
+            // 
+            this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.HeaderPanel.Controls.Add(this.HeaderLbl);
+            this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HeaderPanel.Location = new System.Drawing.Point(228, 45);
+            this.HeaderPanel.Name = "HeaderPanel";
+            this.HeaderPanel.Size = new System.Drawing.Size(770, 113);
+            this.HeaderPanel.TabIndex = 8;
+            // 
+            // HeaderLbl
+            // 
+            this.HeaderLbl.AutoSize = true;
+            this.HeaderLbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HeaderLbl.ForeColor = System.Drawing.Color.White;
+            this.HeaderLbl.Location = new System.Drawing.Point(332, 38);
+            this.HeaderLbl.Name = "HeaderLbl";
+            this.HeaderLbl.Size = new System.Drawing.Size(121, 48);
+            this.HeaderLbl.TabIndex = 0;
+            this.HeaderLbl.Text = "label1";
+            // 
+            // ContainerFlowLayout
+            // 
+            this.ContainerFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContainerFlowLayout.Location = new System.Drawing.Point(228, 158);
+            this.ContainerFlowLayout.Name = "ContainerFlowLayout";
+            this.ContainerFlowLayout.Size = new System.Drawing.Size(770, 574);
+            this.ContainerFlowLayout.TabIndex = 9;
+            // 
             // UserIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(998, 732);
+            this.Controls.Add(this.ContainerFlowLayout);
+            this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.TopNavBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.TopNavBar;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MdiChildrenMinimizedAnchorBottom = false;
@@ -1268,6 +1305,8 @@
             this.FarmPanel.ResumeLayout(false);
             this.HousePetPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).EndInit();
+            this.HeaderPanel.ResumeLayout(false);
+            this.HeaderPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1353,5 +1392,8 @@
         private Button ClothingBttn;
         private Button HorseRidingBttn;
         private ToolStripMenuItem notificationsToolStripMenuItem;
+        private Panel HeaderPanel;
+        private Label HeaderLbl;
+        private FlowLayoutPanel ContainerFlowLayout;
     }
 }

@@ -11,6 +11,8 @@ namespace BusinessLayer
     public interface IModel
     {
         bool addNewUser(string email, string firstname, string lastname, string password, string userType);
+        bool addNewUser(string email, string firstname, string lastname, string password, bool verified, string userType, string addressOne, string addressTwo, string addressThree, string county,
+            string eircode, string cardname, string cardNo, string exdate, string question, string answer);
         //Eddie - 'addNew' function created to add advertisements to the data layer and returns true if successful
         bool addNewAccessoriesAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat);
         bool addNewFoodAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string details);
@@ -20,7 +22,17 @@ namespace BusinessLayer
         bool addNewGenericAnimalAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string animalname, int age, string gender, string detailone, string detailtwo, string detailthree);
         bool addNewLitterAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, int size, int age, bool purebreed, string breedone, string breedtwo);
         bool addNewBundle(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
-        bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);        
+        bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
+        bool updateUserDetails(string currentemail,string email, string firstname, string lastname, string password,string userType, string addressOne, string addressTwo, string addressThree, string county, string eircode);
+        bool addNewAccessoriesAdvert(Accessories accessories);
+        bool addNewFoodAdvert(Food food);
+        bool addNewDogAdvert(Dog dog);
+        bool addNewHorseAdvert(Horse horse);
+        bool addNewFarmAnimalAdvert(FarmAnimal farmAnimal);
+        bool addNewGenericAnimalAdvert(GenericAnimal genericAnimal);
+        bool addNewLitterAdvert(Litter litter);
+        bool addNewBundle(Bundle bundle);
+
         BusinessEntities.User CurrentUser { get; set; }
         DataAccessLayer.IDataLayer DataLayer { get; set; }
         string getUserTypeForCurrentuser();

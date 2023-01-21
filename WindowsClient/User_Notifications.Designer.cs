@@ -28,35 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LeftPanel = new System.Windows.Forms.Panel();
-            this.TopPanel = new System.Windows.Forms.Panel();
             this.UserFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // LeftPanel
-            // 
-            this.LeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(169, 450);
-            this.LeftPanel.TabIndex = 1;
-            // 
-            // TopPanel
-            // 
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(169, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(631, 61);
-            this.TopPanel.TabIndex = 3;
             // 
             // UserFlowLayout
             // 
             this.UserFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UserFlowLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.UserFlowLayout.Location = new System.Drawing.Point(169, 61);
+            this.UserFlowLayout.Location = new System.Drawing.Point(0, 0);
             this.UserFlowLayout.Name = "UserFlowLayout";
-            this.UserFlowLayout.Size = new System.Drawing.Size(631, 389);
+            this.UserFlowLayout.Size = new System.Drawing.Size(986, 450);
             this.UserFlowLayout.TabIndex = 4;
+            this.UserFlowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.UserFlowLayout_Paint_1);
             // 
             // User_Notifications
             // 
@@ -64,22 +47,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(986, 450);
             this.Controls.Add(this.UserFlowLayout);
-            this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.LeftPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimumSize = new System.Drawing.Size(1008, 506);
             this.Name = "User_Notifications";
-            this.Text = "User_Notifications";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "User Notifications";
             this.Load += new System.EventHandler(this.User_Notifications_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Panel LeftPanel;
-        private Panel TopPanel;
         private FlowLayoutPanel UserFlowLayout;
     }
 }

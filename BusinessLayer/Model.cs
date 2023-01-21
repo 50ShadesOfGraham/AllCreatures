@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Diagnostics.Metrics;
 
 namespace BusinessLayer
 {
@@ -140,7 +141,7 @@ namespace BusinessLayer
                 return false;
             }
         }
-
+        
         public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified, string userType)
         {
             try
@@ -148,6 +149,24 @@ namespace BusinessLayer
                 User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType);
                 UserList.Add(user);
                 DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
+            string userType, string addressOne, string addressTwo, string addressThree, string county,
+            string eircode, string cardname, string cardNo, string exdate, string question, string answer)
+        {
+            try
+            {
+                User user = UserCreator.GetUser(email,firstname,lastname,password,verified,userType, addressOne,addressTwo, addressThree,county,
+                eircode,cardname,cardNo,exdate,question, answer);
+                UserList.Add(user);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password,userType, addressOne, addressTwo, addressThree, county,
+                eircode, cardname, cardNo, exdate, question, answer);
                 return true;
             }
             catch (System.Exception excep)
@@ -271,6 +290,120 @@ namespace BusinessLayer
                 return true;
             }
             catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean updateUserDetails(string currentemail,string email, string firstname, string lastname, string password, string userType, string addressOne, string addressTwo, string addressThree, string county, string eircode)
+        {
+            try
+            {
+                if(DataLayer.UpdateUser(currentemail, email,firstname,lastname,password,userType,addressOne,addressTwo,addressThree,county,eircode))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch(Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewAccessoriesAdvert(Accessories accessories)
+        {
+            try
+            {
+               DataLayer.addNewAccessoriesAdvert(accessories);
+                return true;
+            }
+            catch(Exception excep) 
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFoodAdvert(Food food)
+        {
+            try
+            {
+                DataLayer.addNewFoodAdvert(food);
+                return true;
+            }
+            catch (Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewDogAdvert(Dog dog)
+        {
+            try
+            {
+                DataLayer.addNewDogAdvert(dog);
+                return true;
+            }
+            catch (Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewHorseAdvert(Horse horse)
+        {
+            try
+            {
+                DataLayer.addNewHorseAdvert(horse);
+                return true;
+            }
+            catch (Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFarmAnimalAdvert(FarmAnimal farmAnimal)
+        {
+            try
+            {
+                DataLayer.addNewFarmAnimalAdvert(farmAnimal);
+                return true;
+            }
+            catch (Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewGenericAnimalAdvert(GenericAnimal genericAnimal)
+        {
+            try
+            {
+                DataLayer.addNewGenericAnimalAdvert(genericAnimal);
+                return true;
+            }
+            catch (Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewLitterAdvert(Litter litter)
+        {
+            try
+            {
+                DataLayer.addNewLitterAdvert(litter);
+                return true;
+            }
+            catch (Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewBundle(Bundle bundle)
+        {
+            try
+            {
+                DataLayer.addNewBundle(bundle);
+                return true;
+            }
+            catch (Exception excep)
             {
                 return false;
             }

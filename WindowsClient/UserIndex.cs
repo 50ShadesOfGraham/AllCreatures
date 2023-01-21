@@ -29,6 +29,7 @@ namespace WindowsClient
         private void UserIndex_Load(object sender, EventArgs e)
         {
             int counter = 0;
+            HeaderPanel.Visible = false;  
             foreach(Advertisement dog in Model.AdvertList)
             {
                 counter++;
@@ -231,9 +232,9 @@ namespace WindowsClient
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             User_Notifications userNotifications = new User_Notifications(Model);
-            userNotifications.Dock= DockStyle.Fill;
+            //userNotifications.Dock= DockStyle.Fill;
             userNotifications.Show();
-            this.Controls.Add(userNotifications);
+            //this.Controls.Add(userNotifications);
         }
 
         public void GetAdvertisements(String adverttype)
@@ -247,7 +248,7 @@ namespace WindowsClient
                 {
                     ViewAds ads = new ViewAds(Model, u);
                     ads.SetLabel(u.Title.Trim(), u.SellerEmail.Trim(), u.Price.ToString().Trim(), u.Status.Trim()); //function
-                   // FlowLayout.Controls.Add(ads);
+                    //FlowLayout.Controls.Add(ads);
                 }
             }
         }
@@ -296,6 +297,28 @@ namespace WindowsClient
         private void ChickenBttn_Click(object sender, EventArgs e)
         {
             GetAdvertisements("Chicken");
+        }
+
+        private void myAdvertisementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ContainerFlowLayout.Controls.Clear();
+            HeaderPanel.Visible = true;
+            HeaderLbl.Text = "My Advertisements";
+            foreach (Advertisement u in Model.AdvertList)
+            {
+                if (u.SellerEmail.Trim().Equals(Model.CurrentUser.Email.Trim()))
+                {
+                    EditAdvert advert = new EditAdvert(Model, u);
+                    advert.SetLabel(u.Title.Trim(), u.Price.ToString(), u.Status.Trim());
+                    ContainerFlowLayout.Controls.Add(advert);
+                }
+            }
+        }
+
+        private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserDetails details = new UserDetails(Model,Model.CurrentUser);
+            details.Show();
         }
     }
 }

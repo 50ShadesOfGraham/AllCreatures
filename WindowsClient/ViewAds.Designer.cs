@@ -66,9 +66,9 @@
             // ViewBttn
             // 
             this.ViewBttn.BackColor = System.Drawing.Color.White;
-            this.ViewBttn.Location = new System.Drawing.Point(3, 0);
+            this.ViewBttn.Location = new System.Drawing.Point(-21, -17);
             this.ViewBttn.Name = "ViewBttn";
-            this.ViewBttn.Size = new System.Drawing.Size(748, 262);
+            this.ViewBttn.Size = new System.Drawing.Size(790, 300);
             this.ViewBttn.TabIndex = 6;
             this.ViewBttn.UseVisualStyleBackColor = false;
             this.ViewBttn.Click += new System.EventHandler(this.button1_Click);
@@ -85,7 +85,7 @@
             // SELbl
             // 
             this.SELbl.AutoSize = true;
-            this.SELbl.BackColor = System.Drawing.Color.Transparent;
+            this.SELbl.BackColor = System.Drawing.Color.White;
             this.SELbl.Location = new System.Drawing.Point(338, 74);
             this.SELbl.Name = "SELbl";
             this.SELbl.Size = new System.Drawing.Size(110, 25);
@@ -96,7 +96,7 @@
             // 
             this.PriceLbl.AutoSize = true;
             this.PriceLbl.BackColor = System.Drawing.Color.Transparent;
-            this.PriceLbl.Location = new System.Drawing.Point(338, 132);
+            this.PriceLbl.Location = new System.Drawing.Point(351, 132);
             this.PriceLbl.Name = "PriceLbl";
             this.PriceLbl.Size = new System.Drawing.Size(88, 25);
             this.PriceLbl.TabIndex = 9;
@@ -106,7 +106,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(338, 183);
+            this.label4.Location = new System.Drawing.Point(365, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 25);
             this.label4.TabIndex = 10;

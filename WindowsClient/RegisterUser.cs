@@ -33,9 +33,13 @@ namespace WindowsClient
             {
                 if(Passwordtxt.Text.Trim() == PasswordTwotxt.Text.Trim())
                 {
-                    if(Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,"User"))
+                    string county = this.CountyComboBox.GetItemText(this.CountyComboBox.SelectedItem);
+                    string question = this.QuestionComboBox.GetItemText(this.QuestionComboBox.SelectedItem);
+                    if (Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,false,"User",AddLineOneTxt.Text,AddLineTwoTxt.Text,AddLineThreeTxt.Text,county,EirCodeTxt.Text,CardHolderTxt.Text,
+                        CardNoTxt.Text,ExDateTxt.Text,question,AnswerTxt.Text))
                     {
                         MessageBox.Show("Registration Successful");
+                        this.Hide();
                         Model.login(Emailtxt.Text.Trim(), Passwordtxt.Text.Trim());
                         switch (Model.getUserTypeForCurrentuser().Trim())
                         {

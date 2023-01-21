@@ -20,7 +20,7 @@ namespace WindowsClient
         {
             InitializeComponent();
             this.Model = Model;
-            this.TopLevel = false;
+            //this.TopLevel = false;
         }
 
         private void User_Notifications_Load(object sender, EventArgs e)
@@ -42,6 +42,11 @@ namespace WindowsClient
         }
 
         private void UserFlowLayout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UserFlowLayout_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

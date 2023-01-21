@@ -317,10 +317,27 @@ namespace WindowsClient
         {
             try
             {
-                //if(isBundle.Equals(true)) { }
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -344,16 +361,38 @@ namespace WindowsClient
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
+
+                //System.Windows.Forms.MessageBox.Show("Image Cinverted");
                 string AnimalType = this.AnimalFoodTypeComboBox.GetItemText(this.AnimalFoodTypeComboBox.SelectedItem);
-                if (Model.addNewFoodAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
-                    ImageTwo, ImageThree, AnimalType, DetailTxt.Text))
+                System.Windows.Forms.MessageBox.Show("Object Created");
+                Food food = new Food(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
+                    ImageTwo, ImageThree, AnimalType, DetailTxt.Text);
+                if (Model.addNewFoodAdvert(food))
                 {
+                    System.Windows.Forms.MessageBox.Show("Food Added");
                     string message = "Item #" + AdvertID + " has been added to our system. " +
                     "Admin must verify item before advertisement is made public";
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
                     do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                    {
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
+                    }
                 }
             }
             catch (Exception excep)
@@ -462,7 +501,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -500,7 +557,24 @@ namespace WindowsClient
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
 
@@ -536,7 +610,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -571,7 +663,24 @@ namespace WindowsClient
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
                     do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                    {
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
+                    }
                 }
             }
             catch (Exception excep)
@@ -593,7 +702,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -638,7 +765,24 @@ namespace WindowsClient
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
                     do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                    {
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
+                    }
                     //System.Windows.MessageBox.Show(message);
                 }
 
@@ -658,9 +802,27 @@ namespace WindowsClient
         {
             try
             {
-                 Random rnd = new Random();
-                 int AdvertID = 0;
-                 do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                Random rnd = new Random();
+                int AdvertID = 0;
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -668,12 +830,12 @@ namespace WindowsClient
                 {
                     ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
                 }
-                else if(ImageTwoPictureBx.Image == null)
+                else if (ImageTwoPictureBx.Image == null)
                 {
                     ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
-                else if(ImageThreePictureBx.Image == null)
+                else if (ImageThreePictureBx.Image == null)
                 {
                     ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
@@ -684,7 +846,7 @@ namespace WindowsClient
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
-                 string horsebreed = this.HorseBreedComboBox.GetItemText(this.HorseBreedComboBox.SelectedItem);
+                string horsebreed = this.HorseBreedComboBox.GetItemText(this.HorseBreedComboBox.SelectedItem);
                  string horsegender = this.HorseGenderComboBox.GetItemText(this.HorseGenderComboBox.SelectedItem);
                 
                 if (Model.addNewHorseAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
@@ -696,7 +858,24 @@ namespace WindowsClient
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                    }
                         //System.Windows.MessageBox.Show(message);
                     }
                 
@@ -738,7 +917,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -762,7 +959,6 @@ namespace WindowsClient
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
-
                 string DogPurebreed = this.DogBreedComboBox.GetItemText(this.DogBreedComboBox.SelectedItem);
                 string DogBreedOne = this.DogBreedOneComboBox.GetItemText(this.DogBreedOneComboBox.SelectedItem);
                 string DogBreedTwo = this.DogBreedTwoComboBox.GetItemText(this.DogBreedTwoComboBox.SelectedItem);
@@ -777,7 +973,24 @@ namespace WindowsClient
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
 
@@ -791,7 +1004,24 @@ namespace WindowsClient
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
             }
