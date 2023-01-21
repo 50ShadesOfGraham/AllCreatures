@@ -36,6 +36,10 @@ namespace BusinessLayer
         bool verifyAdvertisement(Advertisement advertisement);
         bool verifyAdvertisement(Dog dog);
         bool verifyAdvertisement(Horse horse);
+        bool verifyAdvertisement(Accessories accessories);
+        bool verifyAdvertisement(Food food);
+        bool verifyAdvertisement(GenericAnimal genericAnimal);
+        bool verifyAdvertisement(Litter litter);
         bool deleteAdvertisement(Advertisement advertisement);
         bool deleteAdvertisement(Horse horse);
         bool deleteAdvertisement(Dog dog);

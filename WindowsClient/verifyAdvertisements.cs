@@ -161,23 +161,54 @@ namespace WindowsClient
 
             foreach(Advertisement advertisement in model.AdvertList)
             {
-                
 
-                if(advertisement.Title == listboxAni.SelectedItem.ToString())
+
+                if (advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
                     if (advertisement is Dog dog)
-                    { 
+                    {
                         model.verifyAdvertisement(dog);
                     }
-                    else if(advertisement is Horse horse)
+                    else if (advertisement is Horse horse)
                     {
                         model.verifyAdvertisement(horse);
                     }
-                     MessageBox.Show("Success");
-                }
-            }
+                    else if (advertisement is FarmAnimal farmAnimal)
+                    {
+                        model.verifyAdvertisement(farmAnimal);
+                    }
+                    else if (advertisement is Litter litter)
+                    {
+                        model.verifyAdvertisement(litter);
+                    }
+                    else if (advertisement is GenericAnimal generic)
+                    {
+                        model.verifyAdvertisement(generic);
+                    }
 
+
+                }
+                else if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
+                {
+                    advertisement.Verified = true;
+                    if (advertisement is Accessories accessories)
+                    {
+                        model.verifyAdvertisement(accessories);
+                    }
+
+                }
+                /*if (advertisement.Title == listBoxFood.SelectedItem.ToString())
+                {
+                    advertisement.Verified = true;
+                    if (advertisement is Food food)
+                    {
+                        model.verifyAdvertisement(food);
+                    }
+                }*/
+
+            }
+            MessageBox.Show("Success");
 
         }
 
@@ -283,8 +314,7 @@ namespace WindowsClient
         {
             foreach (Advertisement advertisement in model.AdvertList.OfType<Animal>())
             {
-                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                    return;
+                
 
                 if (advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
@@ -301,8 +331,9 @@ namespace WindowsClient
                     break;
                     MessageBox.Show("Success");*/
                 }
+                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;
 
-                
             }
          
                 

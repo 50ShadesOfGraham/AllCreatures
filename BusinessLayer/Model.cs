@@ -1,14 +1,7 @@
 ﻿using BusinessEntities;
 using DataAccessLayer;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace BusinessLayer
 {
@@ -136,7 +129,7 @@ namespace BusinessLayer
 
             } catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                System.Windows.MessageBox.Show(excep.Message);
                 return false;
             }
         }
@@ -340,6 +333,18 @@ namespace BusinessLayer
             return true;
         }
 
+        public bool verifyAdvertisement(Litter litter)
+        {
+            DataLayer.verifyAdvertisement(litter);
+            return true;
+        }
+          
+        public bool verifyAdvertisement(FarmAnimal farmAnimal)
+        {
+            DataLayer.verifyAdvertisement(farmAnimal);
+            return true;
+        }
+
         public bool deleteAdvertisement(Advertisement advertisement)
         {
             DataLayer.deleteAdvertisement(advertisement);
@@ -358,6 +363,24 @@ namespace BusinessLayer
         public bool banUserInDB(User user)
         {
             DataLayer.banUserInDB(user);
+            return true;
+        }
+
+        public bool verifyAdvertisement(Accessories accessories)
+        {
+            DataLayer.verifyAdvertisement(accessories);
+            return true;
+        }
+
+        public bool verifyAdvertisement(Food food)
+        {
+            DataLayer.verifyAdvertisement(food);
+            return true;
+        }
+
+        public bool verifyAdvertisement(GenericAnimal genericAnimal)
+        {
+            DataLayer.verifyAdvertisement(genericAnimal);
             return true;
         }
     }

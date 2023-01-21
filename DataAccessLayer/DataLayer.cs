@@ -140,7 +140,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(newDog);
-                    MessageBox.Show("Dog: " + newDog.AdvertID + " successfully added");
+                   // MessageBox.Show("Dog: " + newDog.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -184,7 +184,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(horse);
-                    MessageBox.Show("Horse: " + horse.AdvertID + " successfully added");
+                  //  MessageBox.Show("Horse: " + horse.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -224,7 +224,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(farmAnimal);
-                    MessageBox.Show("Farm Animal: " + farmAnimal.AdvertID + " successfully added");
+                   // MessageBox.Show("Farm Animal: " + farmAnimal.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -266,7 +266,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(genricAnimal);
-                    MessageBox.Show("Farm Animal: " + genricAnimal.AdvertID + " successfully added");
+                   // MessageBox.Show("Farm Animal: " + genricAnimal.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -309,7 +309,7 @@ namespace DataAccessLayer
                                                                     );
 
                     advertisements.Add(litter);
-                    MessageBox.Show("Litter: " + litter.AdvertID + " successfully added");
+                 //   MessageBox.Show("Litter: " + litter.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -346,7 +346,7 @@ namespace DataAccessLayer
                                                                    );
 
                     advertisements.Add(food);
-                    MessageBox.Show("Food: " + food.AdvertID + " successfully added");
+                  //  MessageBox.Show("Food: " + food.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -383,7 +383,7 @@ namespace DataAccessLayer
                                                                                   );
 
                     advertisements.Add(accessories);
-                    MessageBox.Show("Litter: " + accessories.AdvertID + " successfully added");
+                 //   MessageBox.Show("Litter: " + accessories.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -411,7 +411,7 @@ namespace DataAccessLayer
             }
             catch(Exception excep)
             {
-                MessageBox.Show("Notifications: " + excep.Message);
+              //  MessageBox.Show("Notifications: " + excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -441,7 +441,7 @@ namespace DataAccessLayer
                                                                                       dRow.ItemArray.GetValue(5).ToString());
                     NotificationList.Add(notification);
                     //MessageBox.Show("Notification: " + notification.Title);
-                    MessageBox.Show("NL: " + NotificationList.Count);
+                    //MessageBox.Show("NL: " + NotificationList.Count);
                 }
             }
             catch (System.Exception excep)
@@ -927,6 +927,89 @@ namespace DataAccessLayer
         }
 
 
+        public bool verifyAdvertisement(FarmAnimal farmAnimal)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FarmAnimaladvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(farmAnimal.FarmId);
+                if (findRow != null)
+                {
+                    findRow[5] = farmAnimal.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+
+        public bool verifyAdvertisement(Litter litter)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Litteradvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(litter.LitterId);
+                if (findRow != null)
+                {
+                    findRow[5] = litter.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(Accessories accessories)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From AccessoriesAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
+                if (findRow != null)
+                {
+                    findRow[5] = accessories.AccessoriesID;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
 
         public bool deleteAdvertisement(Advertisement advertisement)
         {
