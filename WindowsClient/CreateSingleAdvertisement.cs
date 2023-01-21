@@ -49,6 +49,46 @@ namespace WindowsClient
         }
         private void AnimalCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string AnimalCategory = this.AnimalCatComboBox.GetItemText(this.AnimalCatComboBox.SelectedItem);
+            switch (AnimalCategory.Trim())
+            {
+                case "House Pets":
+                    AnimalTypeComboBox.Items.Clear();
+                    AnimalTypeComboBox.Items.Add("Dog");
+                    AnimalTypeComboBox.Items.Add("Cat");
+                    AnimalTypeComboBox.Items.Add("Fish");
+                    AnimalTypeComboBox.Items.Add("Hamster");
+                    AnimalTypeComboBox.Items.Add("Rabbit");
+                    break;
+                case "Farm Animals":
+                    AnimalTypeComboBox.Items.Clear();
+                    AnimalTypeComboBox.Items.Add("Horse");
+                    AnimalTypeComboBox.Items.Add("Chicken");
+                    AnimalTypeComboBox.Items.Add("Cow");
+                    AnimalTypeComboBox.Items.Add("Pig");
+                    AnimalTypeComboBox.Items.Add("Sheep");
+                    AnimalTypeComboBox.Items.Add("Goat");
+                    break;
+                case "Reptiles":
+                    AnimalTypeComboBox.Items.Clear();
+                    AnimalTypeComboBox.Items.Add("Snake");
+                    AnimalTypeComboBox.Items.Add("Lizard");
+                    AnimalTypeComboBox.Items.Add("Turtle");
+                    AnimalTypeComboBox.Items.Add("Turtoise");
+                    break;
+                case "Litter":
+                    AnimalTypeComboBox.Items.Clear();
+                    AnimalTypeComboBox.Items.Add("Dogs");
+                    AnimalTypeComboBox.Items.Add("Cats");
+                    break;
+                case "Other":
+                    AnimalTypePanel.Visible = false;
+                    SpecifyPanel.Visible = true;
+                    break;
+            }
+
+
+            /*
             if (AnimalCatComboBox.SelectedIndex.Equals(0))
             {
                 AnimalTypeComboBox.Items.Clear();
@@ -89,11 +129,13 @@ namespace WindowsClient
                 AccessPanel.Visible = false;
                 FoodPanel.Visible = false;
             }
+            */
         }
 
         private void CreateSingleAdvertisement_Load(object sender, EventArgs e)
         {
-            GeneralAdvertPanel.Visible = true;
+            IntroPanel.Visible = true;
+            FileUploadPanel.Visible = false;
 
             HorseGenderComboBox.SelectedText = "Male";
             HorseBreedComboBox.SelectedText = "Arabian horse";
@@ -320,7 +362,25 @@ namespace WindowsClient
                 //if(isBundle.Equals(true)) { }
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -352,8 +412,25 @@ namespace WindowsClient
                     "Admin must verify item before advertisement is made public";
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
-                    do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                    {
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
+                    }
                 }
             }
             catch (Exception excep)
@@ -447,13 +524,11 @@ namespace WindowsClient
         private void LitterYesRadBttn_CheckedChanged(object sender, EventArgs e)
         {
             IsPurebreedPanel.Visible = true;
-            NotPurebreedPanel.Visible = false;
         }
 
         private void LitterNoRadBttn_CheckedChanged(object sender, EventArgs e)
         {
             IsPurebreedPanel.Visible = false;
-            NotPurebreedPanel.Visible = true;
         }
 
         private void LitterConfirmBttn_Click(object sender, EventArgs e)
@@ -462,7 +537,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -499,8 +592,25 @@ namespace WindowsClient
                         "Admin must verify item before advertisement is made public";
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
 
@@ -513,8 +623,25 @@ namespace WindowsClient
                         "Admin must verify item before advertisement is made public";
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
             }
@@ -536,7 +663,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -570,8 +715,25 @@ namespace WindowsClient
                     "Admin must verify item before advertisement is made public";
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
-                    do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                    {
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
+                    }
                 }
             }
             catch (Exception excep)
@@ -593,7 +755,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -617,7 +797,6 @@ namespace WindowsClient
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
-
                 string animaltype = "";
                 if(SpecifyAnimalTxtBx != null) 
                 { 
@@ -637,8 +816,25 @@ namespace WindowsClient
                        "Admin must verify item before advertisement is made public";
                     string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                     int notifID = 0;
-                    do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                    {
+                        if (isBundle.Equals(true) && NoItems.Equals(1))
+                        {
+                            //Create Bundle
+                            if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                            Close();
+                        }
+                        else if (isBundle.Equals(true) && NoItems > 1)
+                        {
+                            NoItems--;
+                            ResetForm(this); //Resetting back to original state
+                        }
+                        else if (isBundle.Equals(false))
+                        {
+                            Close();
+                        }
+                    }
                     //System.Windows.MessageBox.Show(message);
                 }
 
@@ -658,9 +854,27 @@ namespace WindowsClient
         {
             try
             {
-                 Random rnd = new Random();
-                 int AdvertID = 0;
-                 do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                Random rnd = new Random();
+                int AdvertID = 0;
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -668,12 +882,12 @@ namespace WindowsClient
                 {
                     ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
                 }
-                else if(ImageTwoPictureBx.Image == null)
+                else if (ImageTwoPictureBx.Image == null)
                 {
                     ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
-                else if(ImageThreePictureBx.Image == null)
+                else if (ImageThreePictureBx.Image == null)
                 {
                     ImageOne = ConvertImageToByte(ImageOnePictureBx.Image);
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
@@ -684,24 +898,40 @@ namespace WindowsClient
                     ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
                     ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                 }
-                 string horsebreed = this.HorseBreedComboBox.GetItemText(this.HorseBreedComboBox.SelectedItem);
+                string horsebreed = this.HorseBreedComboBox.GetItemText(this.HorseBreedComboBox.SelectedItem);
                  string horsegender = this.HorseGenderComboBox.GetItemText(this.HorseGenderComboBox.SelectedItem);
                 
                 if (Model.addNewHorseAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
                        HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
                        HorsePurposeTxt.Text))
-                    {
+                {
                         string message = "Item #" + AdvertID + " has been added to our system. " +
                        "Admin must verify item before advertisement is made public";
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
-                        //System.Windows.MessageBox.Show(message);
-                    }
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
+                }
                 
-                
-            }catch(Exception excep)
+            }
+            catch(Exception excep)
             {
                 var st = new StackTrace(excep, true);
                 // Get the top stack frame
@@ -730,6 +960,11 @@ namespace WindowsClient
                 DogisPurebreedPanel.Visible = false;
                 DogIsNotPurebreedPanel.Visible = true;
             }
+            else
+            {
+                DogisPurebreedPanel.Visible = true;
+                DogIsNotPurebreedPanel.Visible = false;
+            }
         }
 
         private void DogConfirmBttn_Click(object sender, EventArgs e)
@@ -738,7 +973,25 @@ namespace WindowsClient
             {
                 Random rnd = new Random();
                 int AdvertID = 0;
-                do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                if (isBundle.Equals(false))
+                {
+                    do { AdvertID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                }
+                else
+                {
+                    if (NoItems.Equals(3))
+                    {
+                        AdvertID = ItemNoThree;
+                    }
+                    else if (NoItems.Equals(2))
+                    {
+                        AdvertID = ItemNoTwo;
+                    }
+                    else if (NoItems.Equals(1))
+                    {
+                        AdvertID = ItemNoOne;
+                    }
+                }
                 byte[] ImageOne = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageTwo = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
                 byte[] ImageThree = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 };
@@ -770,28 +1023,62 @@ namespace WindowsClient
                 if(DogPurebreedYesRadBttn.Checked == true)
                 {
                     if(Model.addNewDogAdvert(AdvertID,Model.CurrentUser.Email,TitleTxt.Text,DescriptionTxt.Text,Convert.ToDouble(PriceTxt.Text),false,"Available",ImageOne,ImageTwo,ImageThree,
-                        DogNameTxt.Text,DogGender,true,DogPurebreed,""))
+                        DogNameTxt.Text,Convert.ToInt32(DogAgeTxt.Text),DogGender,true,DogPurebreed,""))
                     {
                         string message = "Item #" + AdvertID + " has been added to our system. " +
                        "Admin must verify item before advertisement is made public";
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
 
                 if (DogPurebreedNoBttn.Checked == true)
                 {
                     if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
-                        DogNameTxt.Text, DogGender, false, DogBreedOne, DogBreedTwo))
+                        DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, false, DogBreedOne, DogBreedTwo))
                     {
                         string message = "Item #" + AdvertID + " has been added to our system. " +
                        "Admin must verify item before advertisement is made public";
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(AdvertID));
+                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now.Date, false, Model.CurrentUser.Email)) 
+                        {
+                            if (isBundle.Equals(true) && NoItems.Equals(1))
+                            {
+                                //Create Bundle
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                Close();
+                            }
+                            else if (isBundle.Equals(true) && NoItems > 1)
+                            {
+                                NoItems--;
+                                ResetForm(this); //Resetting back to original state
+                            }
+                            else if (isBundle.Equals(false))
+                            {
+                                Close();
+                            }
+                        }
                     }
                 }
             }
@@ -809,46 +1096,7 @@ namespace WindowsClient
 
         private void AnimalTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(AnimalCatComboBox.SelectedIndex.Equals(0) && AnimalTypeComboBox.SelectedIndex.Equals(0))
-            {
-                DogPanel.Visible = true;
-                HorsePanel.Visible = false;
-                LitterPanel.Visible = false;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible = false;
-            }
-            else if(AnimalCatComboBox.SelectedIndex.Equals(1) && AnimalTypeComboBox.SelectedIndex.Equals(0))
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = true;
-                LitterPanel.Visible = false;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible = false;
-            }
-            else if(AnimalCatComboBox.SelectedIndex.Equals(1) && AnimalTypeComboBox.SelectedIndex > 0)
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = false;
-                LitterPanel.Visible = false;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible = true;
-            }
-            else if(AnimalCatComboBox.SelectedIndex.Equals(3))
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = false;
-                LitterPanel.Visible = true;
-                GenericAnimalPanel.Visible = false;
-                FarmAnimalPanel.Visible = false;
-            }
-            else
-            {
-                DogPanel.Visible = false;
-                HorsePanel.Visible = false;
-                LitterPanel.Visible = false;
-                GenericAnimalPanel.Visible = true;
-                FarmAnimalPanel.Visible = false;
-            }
+
         }
 
         public static void ResetForm(CreateSingleAdvertisement advertForm)
@@ -910,8 +1158,8 @@ namespace WindowsClient
             advertForm.AccessCatComboBox.SelectedItem = null;
             advertForm.AccessTypeComboBox.SelectedItem = null;
             //Clearing Panels Back To Original State
-            advertForm.GeneralAdvertPanel.Visible = true;
-            advertForm.HorseGenderComboBox.SelectedText = "Male";
+            //advertForm.GeneralAdvertPanel.Visible = true;
+            //advertForm.HorseGenderComboBox.SelectedText = "Male";
             advertForm.HorseBreedComboBox.SelectedText = "Arabian horse";
             advertForm.AnimalPanel.Visible = false;
             advertForm.FoodPanel.Visible = false;
@@ -926,6 +1174,120 @@ namespace WindowsClient
             advertForm.FarmAnimalPanel.Visible = false;
             advertForm.LitterPanel.Visible = false;
             advertForm.IsPurebreedPanel.Visible = true;
+            advertForm.IntroPanel.Visible = true;
+            advertForm.FileUploadPanel.Visible = false;
+            //Setting Images Back
+            advertForm.ConfirmationOnePictureBx.Image = Properties.Resources.ImageUploadWait;
+            advertForm.ConfirmationTwoPictureBx.Image = Properties.Resources.ImageUploadWait;
+            advertForm.ConfirmationThreePictureBx.Image = Properties.Resources.ImageUploadWait;
+        }
+
+        private void InfoNextBttn_Click(object sender, EventArgs e)
+        {
+            IntroPanel.Visible = false;
+            FileUploadPanel.Visible = true;
+        }
+
+        private void CancelBttn_Click(object sender, EventArgs e)
+        {
+            CreateAdvert newAdvert = new CreateAdvert(Model);
+            this.Hide();
+            newAdvert.Show();
+        }
+
+        private void ImageUploadBackBttn_Click(object sender, EventArgs e)
+        {
+            IntroPanel.Visible = true;
+            FileUploadPanel.Visible = false;
+        }
+
+        private void ImageUploadBttn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void AnimalHeaderNextBttn_Click(object sender, EventArgs e)
+        {
+            string AnimalCategory = this.AnimalCatComboBox.GetItemText(this.AnimalCatComboBox.SelectedItem);
+            string AnimalType = "";
+            if(string.IsNullOrEmpty(SpecifyAnimalTxtBx.Text) ) 
+            { 
+                GenericAnimalPanel.Visible = true;
+            }
+            else
+            {
+                AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
+            }
+
+            switch(AnimalCategory)
+            {
+                case "House Pets":
+                    if(AnimalType.Equals("Dog"))
+                    {
+
+                        DogPanel.Visible = true;
+                    }
+                    else
+                    {
+                        GenericAnimalPanel.Visible = true;
+                    }
+                break;
+                case "Farm Animals":
+                    if (AnimalType.Equals("Horse"))
+                    {
+
+                        HorsePanel.Visible = true;
+                    }
+                    else
+                    {
+                        FarmAnimalPanel.Visible = true;
+                    }
+                break;
+                case "Litter":
+                    LitterPanel.Visible = true;
+                    LitterPurebreedPanel.Visible = true;
+                break;
+            }
+        }
+
+        private void HorseBackBttn_Click(object sender, EventArgs e)
+        {
+            HorsePanel.Visible = false;
+        }
+
+        private void DogBackBttn_Click(object sender, EventArgs e)
+        {
+            DogPanel.Visible = false;
+        }
+
+        private void GABackBttn_Click(object sender, EventArgs e)
+        {
+            GenericAnimalPanel.Visible = false;
+        }
+
+        private void LitterBackBttn_Click(object sender, EventArgs e)
+        {
+            LitterPanel.Visible = false;
+
+        }
+
+        private void FoodBackBttn_Click(object sender, EventArgs e)
+        {
+            FoodPanel.Visible = false;
+            FileUploadPanel.Visible = true;
+            IntroPanel.Visible = false;
+        }
+
+        private void AccessBackBttn_Click(object sender, EventArgs e)
+        {
+            AccessPanel.Visible = false;
+            FileUploadPanel.Visible = true;
+            IntroPanel.Visible = false;
+        }
+
+        private void FileUploadPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
