@@ -16,6 +16,11 @@ namespace BusinessEntities
         private string purpose;
         #endregion
         #region Instance Properties
+        public int HorseID
+        {
+            get { return horseId; }
+            set { horseId = value; }
+        }
         public string Size
         {
             get { return size; }

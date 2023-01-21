@@ -929,7 +929,6 @@ namespace DataAccessLayer
 
         public bool verifyAdvertisement(FarmAnimal farmAnimal)
         {
-
             try
             {
                 ds = new DataSet();

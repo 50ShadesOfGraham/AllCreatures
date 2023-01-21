@@ -15,6 +15,11 @@ namespace BusinessEntities
         private string breedtwo;
         #endregion
         #region Instance Properties
+        public int DogID
+        {
+            get { return dogId; }
+            set { dogId = value; }
+        }
         public bool Purebreed
         {
             get { return purebreed; }
