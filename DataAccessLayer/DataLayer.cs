@@ -140,7 +140,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(newDog);
-                    MessageBox.Show("Dog: " + newDog.AdvertID + " successfully added");
+                    //MessageBox.Show("Dog: " + newDog.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -182,7 +182,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(horse);
-                    MessageBox.Show("Horse: " + horse.AdvertID + " successfully added");
+                    //MessageBox.Show("Horse: " + horse.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -222,7 +222,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(farmAnimal);
-                    MessageBox.Show("Farm Animal: " + farmAnimal.AdvertID + " successfully added");
+                    //MessageBox.Show("Farm Animal: " + farmAnimal.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -264,7 +264,7 @@ namespace DataAccessLayer
                                                                              );
 
                     advertisements.Add(genricAnimal);
-                    MessageBox.Show("Farm Animal: " + genricAnimal.AdvertID + " successfully added");
+                    //MessageBox.Show("Farm Animal: " + genricAnimal.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -307,7 +307,7 @@ namespace DataAccessLayer
                                                                     );
 
                     advertisements.Add(litter);
-                    MessageBox.Show("Litter: " + litter.AdvertID + " successfully added");
+                    //MessageBox.Show("Litter: " + litter.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -344,7 +344,7 @@ namespace DataAccessLayer
                                                                    );
 
                     advertisements.Add(food);
-                    MessageBox.Show("Food: " + food.AdvertID + " successfully added");
+                    //MessageBox.Show("Food: " + food.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -381,7 +381,7 @@ namespace DataAccessLayer
                                                                                   );
 
                     advertisements.Add(accessories);
-                    MessageBox.Show("Litter: " + accessories.AdvertID + " successfully added");
+                    //MessageBox.Show("Litter: " + accessories.AdvertID + " successfully added");
                 }
             }
             catch (System.Exception excep)
@@ -439,7 +439,7 @@ namespace DataAccessLayer
                                                                                       dRow.ItemArray.GetValue(5).ToString());
                     NotificationList.Add(notification);
                     //MessageBox.Show("Notification: " + notification.Title);
-                    MessageBox.Show("NL: " + NotificationList.Count);
+                    //MessageBox.Show("NL: " + NotificationList.Count);
                 }
             }
             catch (System.Exception excep)
