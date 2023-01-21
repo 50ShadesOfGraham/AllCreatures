@@ -11,6 +11,8 @@ namespace BusinessLayer
     public interface IModel
     {
         bool addNewUser(string email, string firstname, string lastname, string password, string userType);
+        bool addNewUserUpdate(string email, string firstname, string lastname, string password, bool verified, string userType, string address1, string address2, string address3, string county, string eircode,
+            string cardholder, string cardnumber, string expirydate, string cvs, string question, string answer);
         //Eddie - 'addNew' function created to add advertisements to the data layer and returns true if successful
         bool addNewAccessoriesAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat);
         bool addNewFoodAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string details);

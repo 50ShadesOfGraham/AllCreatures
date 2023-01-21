@@ -20,6 +20,15 @@ namespace BusinessEntities
         private string address3;
         private string county;
         private string eircode;
+        //User Payment
+        private string cardholder;
+        private string cardnumber;
+        private string expirydate;
+        private string cvs;
+        //User Security Q & A
+        private string securityquestion;
+        private string securityanswer;
+        
         #endregion
         #region Instance Properties
         public string FirstName
@@ -109,7 +118,37 @@ namespace BusinessEntities
             get { return eircode; }
             set { eircode = value; }
         }
-        
+        public string CardHolder
+        {
+            get { return cardholder; }
+            set { cardholder = value; }
+        }
+        public string CardNumber
+        {
+            get { return cardnumber; }
+            set { cardnumber = value; }
+        }
+        public string ExpiryDate
+        {
+            get { return expirydate; }
+            set { expirydate = value; }
+        }
+        public string CVS
+        {
+            get { return cvs; }
+            set { cvs = value; }
+        }
+        public string SecurityQuestion
+        {
+            get { return securityquestion; }
+            set { securityquestion = value; }
+        }
+        public string SecurityAnswer
+        {
+            get { return securityanswer; }
+            set { securityanswer = value; }
+        }
+
         #endregion
         #region Constructors
         public User()
@@ -134,6 +173,44 @@ namespace BusinessEntities
             this.address3 = address3;
             this.county = county;
             this.eircode = eircode;
+        }
+        public User(string cardholder, string cardnumber, string expirydate, string cvs)
+        {
+            this.cardholder = cardholder;
+            this.cardnumber = cardnumber;
+            this.expirydate = expirydate;
+            this.cvs = cvs;
+        }
+        public User(string securityquestion,string securityanswer)
+        {
+            this.securityanswer = securityanswer;
+            this.securityquestion = securityquestion;
+        }
+        public User(string email, string firstname, string lastname,
+            string password, bool verified,
+            string userType, string address1,
+            string address2, string address3,
+            string county, string eircode, string cardholder, 
+            string cardnumber, string expirydate, string cvs,
+            string securityquestion, string securityanswer)
+        {
+            this.email = email;
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.password = password;
+            this.verified = verified;
+            this.userType = userType;
+            this.address1 = address1;
+            this.address2 = address2;
+            this.address3 = address3;
+            this.county = county;
+            this.eircode = eircode;
+            this.cardholder = cardholder;
+            this.cardnumber = cardnumber;
+            this.expirydate = expirydate;
+            this.cvs = cvs;
+            this.securityanswer = securityanswer;
+            this.securityquestion = securityquestion;
         }
         #endregion
     }

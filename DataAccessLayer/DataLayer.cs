@@ -152,9 +152,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void getAllHorseAdvertisements(ref List<Advertisement> advertisements)
-        
-        
+        public void getAllHorseAdvertisements(ref List<Advertisement> advertisements)        
         {
             try
             {
@@ -489,7 +487,46 @@ namespace DataAccessLayer
                 //eddie
             }
         }
-
+        public void addNewUserToDBUpdate(string email, string firstname, string lastname, string password, bool verified, string userType, string address1, string address2, string address3, string county, string eircode,
+            string cardholder, string cardnumber, string expirydate, string cvs, string question, string answer)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Users";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                maxAdverts = ds.Tables["UsersData"].Rows.Count;
+                DataRow dRow = ds.Tables["UsersData"].NewRow();
+                dRow[0] = email;
+                dRow[1] = password;
+                dRow[2] = firstname;
+                dRow[3] = lastname;
+                dRow[4] = verified;
+                dRow[5] = userType;
+                dRow[6] = address1;
+                dRow[7] = address2;
+                dRow[8] = address3;
+                dRow[9] = county;
+                dRow[10] = eircode;
+                dRow[11] = cardholder;
+                dRow[12] = cardnumber;
+                dRow[13] = expirydate;
+                dRow[14] = question;
+                dRow[15] = answer;
+                ds.Tables["UsersData"].Rows.Add(dRow);
+                da.Update(ds, "UsersData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+                //eddie
+            }
+        }
         public void addNewAccessoriesToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat)
         {
             try

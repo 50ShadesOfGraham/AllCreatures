@@ -695,7 +695,7 @@ namespace WindowsClient
                        "Admin must verify item before advertisement is made public";
                         string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
                         //System.Windows.MessageBox.Show(message);
                     }

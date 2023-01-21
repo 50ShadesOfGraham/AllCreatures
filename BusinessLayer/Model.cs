@@ -156,6 +156,23 @@ namespace BusinessLayer
                 return false;
             }
         }
+        public Boolean addNewUserUpdate(string email, string firstname, string lastname, string password, bool verified, string userType, string address1, string address2, string address3, string county, string eircode,
+            string cardholder, string cardnumber, string expirydate, string cvs, string question, string answer)
+        {
+            try
+            {
+                User newUser = UserCreator.GetUserUpdate(email, firstname, lastname, password, verified, userType, address1, address2, address3, county, eircode,
+                cardholder, cardnumber, expirydate, cvs, question, answer);
+                UserList.Add(newUser);
+                DataLayer.addNewUserToDBUpdate(email, firstname, lastname, password, verified, userType, address1, address2, address3, county, eircode,
+                cardholder, cardnumber, expirydate, cvs, question, answer);
+                return true;
+            }
+            catch(System.Exception excep)
+            {
+                return false;
+            }
+        }
         public Boolean addNewAccessoriesAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat)
         {
             try

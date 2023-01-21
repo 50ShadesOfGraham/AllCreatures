@@ -1,4 +1,5 @@
-﻿using BusinessLayer;
+﻿using BusinessEntities;
+using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,9 @@ namespace WindowsClient
     {
         #region Instance Attributes
         private IModel Model;
+        private string addressthree;
+        private bool oneShow;
+        private bool twoShow;
         #endregion 
         public RegisterUser(IModel _model)
         {
@@ -31,31 +35,37 @@ namespace WindowsClient
             }
             else
             {
-                if(Passwordtxt.Text.Trim() == PasswordTwotxt.Text.Trim())
+                string County = this.CountyComboBox.GetItemText(this.CountyComboBox.SelectedItem);
+                string securityQ = this.SecurityQComboBox.GetItemText(this.SecurityQComboBox.SelectedItem);
+ 
+                if (Model.addNewUserUpdate(Emailtxt.Text, FirstNametxt.Text, LastNametxt.Text, Passwordtxt.Text, false, "User", AddressOneTxtBx.Text, AddressTwoTxtBx.Text, addressthree, County, EircodeTxtBx.Text,
+                    CardHolderTxt.Text, CardNumberTxt.Text, ExpiryDateTxt.Text, CVSTxt.Text, securityQ, SecurityAnswerTxt.Text))
                 {
-                    if(Model.addNewUser(Emailtxt.Text,FirstNametxt.Text,LastNametxt.Text,Passwordtxt.Text,"User"))
+                    MessageBox.Show("Registration Successful");
+                    Model.login(Emailtxt.Text.Trim(), Passwordtxt.Text.Trim());
+                    string message = "Welcome to ACGS " + Model.CurrentUser.FirstName.Trim() + " !";
+                    string notificationtitle = "You Have Limited Access Until An Admin Verifies Your Account";
+                    int notifID = 0;
+                    Random rnd = new Random();
+                    do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
+                    
+                    if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email)) { }
+                    switch (Model.getUserTypeForCurrentuser().Trim())
                     {
-                        MessageBox.Show("Registration Successful");
-                        Model.login(Emailtxt.Text.Trim(), Passwordtxt.Text.Trim());
-                        switch (Model.getUserTypeForCurrentuser().Trim())
-                        {
-                            case "User":
-                                UserIndex userview = new UserIndex(Model); // All forms get passed the formContainer and a reference to the model object. 
-                                this.Text = this.Text + "-User";
-                                userview.Dock = DockStyle.Fill;
-                                userview.Show();
-                                break;
-                            case "Admin":
-                                MessageBox.Show(Model.getUserNameCurrentuser().Trim() + " is an admin!");
-                                break;
-                        }
+                        case "User":
+                            UserIndex userview = new UserIndex(Model); // All forms get passed the formContainer and a reference to the model object. 
+                            this.Text = this.Text + "-User";
+                            userview.Dock = DockStyle.Fill;
+                            userview.Show();
+                            Hide();
+                            break;
+                        case "Admin":
+                            MessageBox.Show(Model.getUserNameCurrentuser().Trim() + " is an admin!");
+                            Hide();
+                            break;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Please Confirm Password");
-                    PasswordTwotxt.Text = "";
-                }
+
             }
         }
 
@@ -63,41 +73,171 @@ namespace WindowsClient
         {
             Passwordtxt.PasswordChar = '*';
             PasswordTwotxt.PasswordChar = '*';
+            GeneralInfoPanel.Visible = true;
+            AddressPanel.Visible = false;
+            PaymentPanel.Visible = false;
+            SecurityPanel.Visible = false;
         }
 
         private void ShowOneBttn_Click(object sender, EventArgs e)
         {
-            if(this.Text == "Show")
+            if(oneShow)
             {
                 this.Text = "Hide";
                 Passwordtxt.PasswordChar = '\0';
+                oneShow = false;
             }
-
-            if(this.Text == "Hide")
+            else
             {
                 this.Text = "Show";
                 Passwordtxt.PasswordChar = '*';
+                oneShow = true;
             }
         }
 
         private void ShowTwoBttn_Click(object sender, EventArgs e)
         {
-            if (this.Text == "Show")
+            if (twoShow)
             {
                 this.Text = "Hide";
-                PasswordTwotxt.PasswordChar = '\0';
+                Passwordtxt.PasswordChar = '\0';
+                twoShow = false;
             }
-
-            if (this.Text == "Hide")
+            else
             {
                 this.Text = "Show";
-                PasswordTwotxt.PasswordChar = '*';
+                Passwordtxt.PasswordChar = '*';
+                twoShow = true;
             }
         }
 
         private void CancelBttn_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
+            SignIn newsignIn = new SignIn(Model);
+            newsignIn.Show();
+        }
+
+        private void GeneralNextBttn_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(FirstNametxt.Text))
+            {
+                MessageBox.Show("Please Enter First Name");
+            }
+            else if(string.IsNullOrEmpty(LastNametxt.Text))
+            {
+                MessageBox.Show("Please Enter Last Name");
+            }
+            else if(string.IsNullOrEmpty(Emailtxt.Text))
+            {
+                MessageBox.Show("Please Enter Email Address");
+            }
+            else if(string.IsNullOrEmpty(Passwordtxt.Text))
+            {
+                MessageBox.Show("Please Enter Password");
+            }
+            else if(string.IsNullOrEmpty(PasswordTwotxt.Text))
+            {
+                MessageBox.Show("Please Confirm Password");
+            }
+            else if(Passwordtxt.Text != PasswordTwotxt.Text)
+            {
+                MessageBox.Show("Passwords Don't Match");
+            }
+            else
+            {
+                GeneralInfoPanel.Visible = false;
+                AddressPanel.Visible = true;
+                PaymentPanel.Visible = false;
+                SecurityPanel.Visible = false;
+            }
+        }
+
+        private void AddressNxtBttn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(AddressOneTxtBx.Text))
+            {
+                MessageBox.Show("Please Enter Address Line One");
+            }
+            else if (string.IsNullOrEmpty(AddressTwoTxtBx.Text))
+            {
+                MessageBox.Show("Please Enter Address Line Two");
+            }
+            else if (string.IsNullOrEmpty(CountyComboBox.Text))
+            {
+                MessageBox.Show("Please Choose A County");
+            }
+            else if (string.IsNullOrEmpty(EircodeTxtBx.Text))
+            {
+                MessageBox.Show("Please Enter EirCode");
+            }
+            else
+            {
+                if(string.IsNullOrEmpty(AddressThreeTxtBx.Text))
+                {
+                    addressthree = " ";
+                }
+                else
+                {
+                    addressthree = AddressThreeTxtBx.Text;
+                }
+
+                GeneralInfoPanel.Visible = false;
+                AddressPanel.Visible = false;
+                PaymentPanel.Visible = true;
+                SecurityPanel.Visible = false;
+            }
+        }
+
+        private void AddressBackBttn_Click(object sender, EventArgs e)
+        {
+            GeneralInfoPanel.Visible = true;
+            AddressPanel.Visible = false;
+            PaymentPanel.Visible = false;
+            SecurityPanel.Visible = false;
+        }
+
+        private void PaymentBackBttn_Click(object sender, EventArgs e)
+        {
+            GeneralInfoPanel.Visible = false;
+            AddressPanel.Visible = true;
+            PaymentPanel.Visible = false;
+            SecurityPanel.Visible = false;
+        }
+
+        private void BackSecurityBttn_Click(object sender, EventArgs e)
+        {
+            GeneralInfoPanel.Visible = false;
+            AddressPanel.Visible = false;
+            PaymentPanel.Visible = true;
+            SecurityPanel.Visible = false;
+        }
+
+        private void PaymentNextBttn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(CardHolderTxt.Text))
+            {
+                MessageBox.Show("Please Enter Cardholder Name");
+            }
+            else if(string.IsNullOrEmpty(CardNumberTxt.Text))
+            {
+                MessageBox.Show("Please Enter Card Number");
+            }
+            else if(string.IsNullOrEmpty(ExpiryDateTxt.Text))
+            {
+                MessageBox.Show("Please Enter Expiry Date");
+            }
+            else if(string.IsNullOrEmpty(CVSTxt.Text))
+            {
+                MessageBox.Show("Please Enter CVS");
+            }
+            else
+            {
+                GeneralInfoPanel.Visible = false;
+                AddressPanel.Visible = false;
+                PaymentPanel.Visible = false;
+                SecurityPanel.Visible = true;
+            }
         }
     }
 }
