@@ -618,15 +618,16 @@ namespace DataAccessLayer
                 dRow[9] = imagethree;
                 dRow[10] = dogname;
                 dRow[11] = age;
-                dRow[11] = gender;
-                dRow[12] = purebreed;
-                dRow[13] = breedone;
-                dRow[14] = breedtwo;
+                dRow[12] = gender;
+                dRow[13] = purebreed;
+                dRow[14] = breedone;
+                dRow[15] = breedtwo;
                 ds.Tables["DogData"].Rows.Add(dRow);
                 da.Update(ds, "DogData");
             }
             catch (System.Exception excep)
             {
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();

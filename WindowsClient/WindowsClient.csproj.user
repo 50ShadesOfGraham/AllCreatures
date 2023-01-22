@@ -10,6 +10,9 @@
     <Compile Update="CreateAdvertStart.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateOneAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CreateSingleAdvertisement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,6 +37,9 @@
     <Compile Update="Notification.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="NotificationContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PaymentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -44,6 +50,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SingleNotification.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserIndex.cs">
