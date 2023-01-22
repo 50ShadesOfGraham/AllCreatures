@@ -31,16 +31,17 @@ namespace WindowsClient
         {
             try
             {
-              
+
+
                 foreach (User user in model.UserList)
                 {
                     //txtUser.Text = user.Email;
-                    if ()
+                    if (txtUser.Text.Equals(user.Email))
                     {
                         model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text);
                         
                         MessageBox.Show(comboReason.Text);
-                        MessageBox.Show("Report Submitted");
+                       
                     }
                     else if(txtUser.Text != user.Email)//if (model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text))
                     {
@@ -49,8 +50,9 @@ namespace WindowsClient
                         //listboxReason.Text = S
 
                     }
+
                 }
-               
+                MessageBox.Show("Report Submitted");
 
             }
             catch(Exception ex)

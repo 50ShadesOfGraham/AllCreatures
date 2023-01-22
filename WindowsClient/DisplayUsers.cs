@@ -127,5 +127,10 @@ namespace WindowsClient
             }
 
         }
+
+        private void txtReports_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
