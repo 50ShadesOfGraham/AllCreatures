@@ -308,6 +308,22 @@ namespace WindowsClient
             txtDetail1.Clear();
             txtDetail2.Clear();
             txtDetail3.Clear();
+            txtDescription.Clear();
+            txtAge.Clear();
+            txtAnimalType.Clear();
+            txtBreed.Clear();
+            txtAccessCat.Clear();
+            txtName.Clear();
+            txtVerified.Clear();
+            txtType.Clear();
+            txthSize.Clear();
+            txtHBreed.Clear();
+            txtHBroken.Clear();
+            txtHPurpose.Clear();
+            txtTitle.Clear();
+            txtPrice.Clear();
+            txtStat.Clear();
+            txtGender.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
