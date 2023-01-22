@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.LogoBox = new System.Windows.Forms.PictureBox();
-            this.listboxReason = new System.Windows.Forms.ListBox();
-            this.txtDescR = new System.Windows.Forms.TextBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ttlLabel = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.RichTextBox();
+            this.comboReason = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,31 +51,6 @@
             this.LogoBox.TabIndex = 2;
             this.LogoBox.TabStop = false;
             // 
-            // listboxReason
-            // 
-            this.listboxReason.FormattingEnabled = true;
-            this.listboxReason.ItemHeight = 15;
-            this.listboxReason.Items.AddRange(new object[] {
-            "Animal Abuse",
-            "Spam",
-            "Harrassment",
-            "Racism"});
-            this.listboxReason.Location = new System.Drawing.Point(346, 69);
-            this.listboxReason.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listboxReason.Name = "listboxReason";
-            this.listboxReason.Size = new System.Drawing.Size(144, 19);
-            this.listboxReason.TabIndex = 127;
-            // 
-            // txtDescR
-            // 
-            this.txtDescR.Location = new System.Drawing.Point(346, 114);
-            this.txtDescR.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescR.Multiline = true;
-            this.txtDescR.Name = "txtDescR";
-            this.txtDescR.ReadOnly = true;
-            this.txtDescR.Size = new System.Drawing.Size(143, 65);
-            this.txtDescR.TabIndex = 129;
-            // 
             // btnReport
             // 
             this.btnReport.BackColor = System.Drawing.Color.White;
@@ -84,7 +59,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.btnReport.Location = new System.Drawing.Point(154, 205);
+            this.btnReport.Location = new System.Drawing.Point(154, 243);
             this.btnReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(124, 34);
@@ -101,7 +76,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.btnExit.Location = new System.Drawing.Point(366, 205);
+            this.btnExit.Location = new System.Drawing.Point(380, 243);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(124, 34);
@@ -148,10 +123,31 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(346, 24);
+            this.txtUser.Location = new System.Drawing.Point(360, 24);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(144, 23);
             this.txtUser.TabIndex = 149;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(312, 115);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(192, 100);
+            this.txtDesc.TabIndex = 150;
+            this.txtDesc.Text = "";
+            // 
+            // comboReason
+            // 
+            this.comboReason.FormattingEnabled = true;
+            this.comboReason.Items.AddRange(new object[] {
+            "Animal Abuse",
+            "Spam",
+            "Harrassment",
+            "Racism"});
+            this.comboReason.Location = new System.Drawing.Point(360, 68);
+            this.comboReason.Name = "comboReason";
+            this.comboReason.Size = new System.Drawing.Size(144, 23);
+            this.comboReason.TabIndex = 151;
             // 
             // reportUser
             // 
@@ -159,14 +155,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.comboReason);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ttlLabel);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.txtDescR);
-            this.Controls.Add(this.listboxReason);
             this.Controls.Add(this.LogoBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "reportUser";
@@ -180,13 +176,13 @@
         #endregion
 
         private PictureBox LogoBox;
-        private ListBox listboxReason;
-        private TextBox txtDescR;
         private Button btnReport;
         private Button btnExit;
         private Label label2;
         private Label label1;
         private Label ttlLabel;
         private TextBox txtUser;
+        private RichTextBox txtDesc;
+        private ComboBox comboReason;
     }
 }

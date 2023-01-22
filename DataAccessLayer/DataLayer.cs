@@ -1138,7 +1138,7 @@ namespace DataAccessLayer
             try
             {
                 DataSet ds = new DataSet();
-                string sql = "SELECT * From ReportedUsers";
+                string sql = "SELECT * From Reports";
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "reporData");

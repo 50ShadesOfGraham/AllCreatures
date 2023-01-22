@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Report : User
+    public class Report 
     {
         private int reportId;
         private string reportUser;
@@ -42,7 +42,7 @@ namespace BusinessEntities
         }
         public Report(string reportUser, string reason, DateTime dateTime, string description, int reportId)
         {
-            this.reportUser = Email;
+            this.reportUser = reportUser;
             this.reportId = reportId;
             this.reason = reason;
             this.description = description;

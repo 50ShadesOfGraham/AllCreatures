@@ -1,4 +1,5 @@
-﻿using BusinessLayer;
+﻿using BusinessEntities;
+using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WindowsClient
 {
@@ -27,10 +29,34 @@ namespace WindowsClient
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            if(model.addNewReportS(txtUser.Text, listboxReason.Text, DateTime.Now, txtDescR.Text))
+            try
             {
-                MessageBox.Show("Report Submitted");
+              /*foreach(User user in model.UserList)
+                {
+                    if (txtUser.Text != user.Email)
+                    {
+                        MessageBox.Show("Not a valid Username");
+                    }
+                    else */
+                if (model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text))
+                    {
+
+                        //
+                        //listboxReason.Text = S
+                        MessageBox.Show(comboReason.Text);
+                        MessageBox.Show("Report Submitted");
+                    }
+                //}
+               
+
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+            
+            //MessageBox.Show("Test");
             
         }
     }

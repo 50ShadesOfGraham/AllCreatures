@@ -421,7 +421,7 @@ namespace BusinessLayer
             DataLayer.banUserInDB(user);
             return true;
         }
-        public Boolean addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
+        public bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
         {
             try
             {
@@ -432,14 +432,15 @@ namespace BusinessLayer
                         maxReports = report1.ReportId;
                 }
 
-                Report report = ReportCreator.GetReport(reportUser,reason,dateTime,description,maxReports);
+                Report report = ReportCreator.GetReport(reportUser,reason,dateTime,description,++maxReports);
                 ReportList.Add(report);
-                DataLayer.addNewReportS( reportUser, reason, dateTime, description,maxReports);
+                DataLayer.addNewReportS( reportUser, reason, dateTime, description,++maxReports);
                 MessageBox.Show(report.Reason);
                 return true;
             }
             catch (System.Exception excep)
             {
+                MessageBox.Show(excep.Message);
                 return false;
             }
         }
