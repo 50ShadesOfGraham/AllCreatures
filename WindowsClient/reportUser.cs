@@ -32,27 +32,35 @@ namespace WindowsClient
             try
             {
 
-
+                var check = 0;
                 foreach (User user in model.UserList)
                 {
                     //txtUser.Text = user.Email;
-                    if (txtUser.Text.Equals(user.Email))
+                    
+                    if (txtUser.Text.Equals(user.Email.Trim()))
                     {
                         model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text);
-                        
-                        MessageBox.Show(comboReason.Text);
-                       
-                    }
-                    else if(txtUser.Text != user.Email)//if (model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text))
-                    {
-                        MessageBox.Show("Not a valid Username");
-                        //
-                        //listboxReason.Text = S
+                        check = 1;
+                      //  MessageBox.Show(comboReason.Text);
+                        MessageBox.Show("Report Submitted");
 
                     }
+
+                    //else  //if(txtUser.Text != user.Email)//if (model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text))
+                    //{
+                        
+                    //    //
+                    //    //listboxReason.Text = S
+
+                    //}
 
                 }
-                MessageBox.Show("Report Submitted");
+                if(check == 0)
+                {
+                    MessageBox.Show("Not a valid Username");
+                }
+               
+                
 
             }
             catch(Exception ex)
