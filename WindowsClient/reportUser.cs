@@ -31,22 +31,25 @@ namespace WindowsClient
         {
             try
             {
-              /*foreach(User user in model.UserList)
+              
+                foreach (User user in model.UserList)
                 {
-                    if (txtUser.Text != user.Email)
+                    //txtUser.Text = user.Email;
+                    if ()
                     {
-                        MessageBox.Show("Not a valid Username");
-                    }
-                    else */
-                if (model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text))
-                    {
-
-                        //
-                        //listboxReason.Text = S
+                        model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text);
+                        
                         MessageBox.Show(comboReason.Text);
                         MessageBox.Show("Report Submitted");
                     }
-                //}
+                    else if(txtUser.Text != user.Email)//if (model.addNewReportS(txtUser.Text, comboReason.Text, DateTime.Now, txtDesc.Text))
+                    {
+                        MessageBox.Show("Not a valid Username");
+                        //
+                        //listboxReason.Text = S
+
+                    }
+                }
                
 
             }
