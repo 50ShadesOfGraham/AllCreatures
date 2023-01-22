@@ -16,6 +16,7 @@ namespace DataAccessLayer
         SqlDataAdapter da;
         int maxUsers;
         int maxAdverts;
+        int maxReports;
         SqlCommandBuilder cb;
         #endregion
         #region Static Attributes
@@ -464,7 +465,7 @@ namespace DataAccessLayer
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "UsersData");
-                maxAdverts = ds.Tables["UsersData"].Rows.Count;
+                maxUsers = ds.Tables["UsersData"].Rows.Count;
                 DataRow dRow = ds.Tables["UsersData"].NewRow();
                 dRow[0] = email;
                 dRow[1] = firstname;
@@ -1131,5 +1132,74 @@ namespace DataAccessLayer
         {
             throw new NotImplementedException();
         }
+
+        public void addNewReportS( string reportUser, string reason, DateTime dateTime, string description,int reportId)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From ReportedUsers";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "reporData");
+                maxReports = ds.Tables["reporData"].Rows.Count;
+                DataRow dRow = ds.Tables["reporData"].NewRow();
+                
+                dRow[0] = reportUser;
+                dRow[1] = reason;
+                dRow[2] = dateTime;
+                dRow[3] = description;
+                dRow[4] = reportId;
+                ds.Tables["reporData"].Rows.Add(dRow);
+                da.Update(ds, "reporData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+
+        public List<Report> getAllReports()
+        {
+            List<Report> reportList = new List<Report>();
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Reports";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "reporData");
+                maxReports = ds.Tables["reporData"].Rows.Count;
+                for (int i = 0; i < maxReports; i++)
+                {
+                    DataRow dRow = ds.Tables["reporData"].Rows[i];
+                    Report report = ReportCreator.GetReport(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        Convert.ToDateTime(dRow.ItemArray.GetValue(2).ToString()),
+                                                        dRow.ItemArray.GetValue(3).ToString(),
+                                                        Convert.ToInt16(dRow.ItemArray.GetValue(4).ToString()));
+
+                    reportList.Add(report);                              
+                    
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+            return reportList;
+        }
+
+       /* public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
+        {
+            throw new NotImplementedException();
+        }*/
     }
 }

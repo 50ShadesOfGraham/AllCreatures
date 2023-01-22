@@ -250,7 +250,8 @@ namespace WindowsClient
 
         private void reportUser_Click(object sender, EventArgs e)
         {
-
+            reportUser reportuser = new reportUser(Model);
+            reportuser.Show();
         }
     }
 }

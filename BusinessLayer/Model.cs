@@ -1,6 +1,7 @@
 ﻿using BusinessEntities;
 using DataAccessLayer;
 using System.Windows;
+using System.Windows.Forms;
 using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace BusinessLayer
@@ -18,6 +19,7 @@ namespace BusinessLayer
         private List<User> userList;
         private List<Advertisement> advertList;
         private List<Notifications> notificationList;
+        private List<Report> reportList;
         #endregion
         #region Instance Properties
         public IDataLayer DataLayer
@@ -68,6 +70,13 @@ namespace BusinessLayer
             //{
             //}
         }
+        public List<Report> ReportList
+        {
+            get
+            {
+                return reportList;
+            }
+        }
         #endregion
         //Eddies Class Comment
         //Graham's First Comment
@@ -96,6 +105,9 @@ namespace BusinessLayer
 
             notificationList = new List<Notifications>();
             notificationList = dataLayer.getAllNotifications();
+
+            reportList= new List<Report>();
+            reportList = dataLayer.getAllReports();
         }
 
         ~Model()
@@ -345,27 +357,6 @@ namespace BusinessLayer
             return true;
         }
 
-        public bool deleteAdvertisement(Advertisement advertisement)
-        {
-            DataLayer.deleteAdvertisement(advertisement);
-            return true;
-        }
-        public bool deleteAdvertisement(Dog dog)
-        {
-            DataLayer.deleteAdvertisement(dog); return true;
-        }
-        
-        public bool deleteAdvertisement(Horse horse)
-        {
-            DataLayer.deleteAdvertisement(horse); return true;
-        }
-
-        public bool banUserInDB(User user)
-        {
-            DataLayer.banUserInDB(user);
-            return true;
-        }
-
         public bool verifyAdvertisement(Accessories accessories)
         {
             DataLayer.verifyAdvertisement(accessories);
@@ -383,6 +374,77 @@ namespace BusinessLayer
             DataLayer.verifyAdvertisement(genericAnimal);
             return true;
         }
+
+        public bool deleteAdvertisement(Advertisement advertisement)
+        {
+            DataLayer.deleteAdvertisement(advertisement);
+            return true;
+        }
+        public bool deleteAdvertisement(Dog dog)
+        {
+            DataLayer.deleteAdvertisement(dog); return true;
+        }
+        
+        public bool deleteAdvertisement(Horse horse)
+        {
+            DataLayer.deleteAdvertisement(horse); return true;
+        }
+        
+        public bool deleteAdvertisement(Accessories accessories)
+        {
+            DataLayer.deleteAdvertisement(accessories); return true;
+        }
+        
+        public bool deleteAdvertisement(Food food)
+        {
+            DataLayer.deleteAdvertisement(food); return true;
+        } 
+        
+        public bool deleteAdvertisement(FarmAnimal farmAnimal)
+        {
+            DataLayer.deleteAdvertisement(farmAnimal); return true;
+        }
+        
+        public bool deleteAdvertisement(Litter litter)
+        {
+            DataLayer.deleteAdvertisement(litter); return true;
+        }
+
+        public bool deleteAdvertisement(GenericAnimal genericAnimal)
+        {
+            DataLayer.deleteAdvertisement(genericAnimal); return true;
+        }
+
+
+        public bool banUserInDB(User user)
+        {
+            DataLayer.banUserInDB(user);
+            return true;
+        }
+        public Boolean addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
+        {
+            try
+            {
+                int maxReports = 0;
+                foreach (Report report1 in reportList)
+                {
+                    if (report1.ReportId > maxReports)
+                        maxReports = report1.ReportId;
+                }
+
+                Report report = ReportCreator.GetReport(reportUser,reason,dateTime,description,maxReports);
+                ReportList.Add(report);
+                DataLayer.addNewReportS( reportUser, reason, dateTime, description,maxReports);
+                MessageBox.Show(report.Reason);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+
+
     }
 }
 

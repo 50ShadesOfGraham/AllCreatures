@@ -43,6 +43,11 @@ namespace BusinessLayer
         bool deleteAdvertisement(Advertisement advertisement);
         bool deleteAdvertisement(Horse horse);
         bool deleteAdvertisement(Dog dog);
+        bool deleteAdvertisement(Accessories accessories);
+        bool deleteAdvertisement(Food food);
+        bool deleteAdvertisement(GenericAnimal genericAnimal);
+        bool deleteAdvertisement(Litter litter);
         bool banUserInDB(BusinessEntities.User user);
+        bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace WindowsClient
 {
     public partial class reportUser : Form
     {
-        public reportUser()
+        IModel model;
+        public reportUser(IModel model)
         {
             InitializeComponent();
+            this.model = model;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -24,7 +27,11 @@ namespace WindowsClient
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            if(model.addNewReportS(txtUser.Text, listboxReason.Text, DateTime.Now, txtDescR.Text))
+            {
+                MessageBox.Show("Report Submitted");
+            }
+            
         }
     }
 }
