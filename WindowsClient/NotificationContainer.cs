@@ -20,21 +20,18 @@ namespace WindowsClient
         {
             InitializeComponent();
             this.Model = Model;
-            this.Text = Model.getUserNameCurrentuser() + " Notifications";
+            this.Text = Model.getUserNameCurrentuser().Trim() + " Notifications";
+
         }
 
         private void NotificationContainer_Load(object sender, EventArgs e)
         {
-            List<Notifications> sortedDates = new List<Notifications>();
-
-            sortedDates = Model.NotificationList.OrderBy(x => x.Messagetime).ToList();
-
-            foreach (Notifications n in sortedDates) 
+           foreach(Notifications notif in Model.NotificationList)
             {
-                SingleNotification notif = new SingleNotification(n);
-                notif.Show();
-
-                this.Controls.Add(notif);
+                Notification m = new Notification();
+                m.Width = 892;
+                m.SetHeader(notif.Title.Trim(),notif.Messagetime.ToString().Trim());
+                panel.Controls.Add(m);
             }
         }
     }

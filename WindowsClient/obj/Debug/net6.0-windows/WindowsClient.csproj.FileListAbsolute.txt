@@ -350,3 +350,4 @@ C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.NotificationContainer.resources
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.SingleNotification.resources
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateOneAdvert.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.OneNotification.resources

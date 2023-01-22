@@ -14,25 +14,20 @@ namespace WindowsClient
     public partial class Notification : UserControl
     {
         public static bool open = false;
-        public FlowLayoutPanel FlowLayoutPanel;
-        public Notification(FlowLayoutPanel flowLayoutPanel)
+        public Notification()
         {
             InitializeComponent();
-            this.FlowLayoutPanel = flowLayoutPanel;
         }
 
         private void Notification_Load(object sender, EventArgs e)
-        {
-            this.Width = FlowLayoutPanel.Width;
-            NotificationHeaderBttn.Size = new Size(FlowLayoutPanel.Width, 120);
-            MessageTextBox.Width = this.Width;
+        { 
             this.Height = 121;
         }
 
         public void SetHeader(string text, string textTwo)
         {
             NotificationHeaderBttn.Text = text;
-            NotificationHeaderBttn.Text += "\t\t\t\t " + textTwo;
+            NotificationHeaderBttn.Text += "\t\t " + textTwo;
         }
 
         public void SetMessage(string text)

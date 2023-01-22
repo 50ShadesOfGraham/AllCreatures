@@ -19,6 +19,9 @@
     <Compile Update="DogAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FarmAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -40,6 +43,9 @@
     <Compile Update="NotificationContainer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="OneNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PaymentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -50,9 +56,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="SingleNotification.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserIndex.cs">

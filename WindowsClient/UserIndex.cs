@@ -244,7 +244,7 @@ namespace WindowsClient
 
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserNotifications userNotifications = new UserNotifications(Model);
+            NotificationContainer userNotifications = new NotificationContainer(Model);
             userNotifications.Show();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsClient
 {
-    partial class NotificationContainer
+    partial class OneNotification
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.TitleLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // panel
+            // TitleLbl
             // 
-            this.panel.AutoScroll = true;
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(892, 578);
-            this.panel.TabIndex = 0;
+            this.TitleLbl.AutoSize = true;
+            this.TitleLbl.BackColor = System.Drawing.Color.Transparent;
+            this.TitleLbl.Location = new System.Drawing.Point(24, 30);
+            this.TitleLbl.Name = "TitleLbl";
+            this.TitleLbl.Size = new System.Drawing.Size(58, 25);
+            this.TitleLbl.TabIndex = 0;
+            this.TitleLbl.Text = "Hello ";
             // 
-            // NotificationContainer
+            // OneNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(892, 578);
-            this.Controls.Add(this.panel);
-            this.MaximumSize = new System.Drawing.Size(914, 634);
-            this.MinimumSize = new System.Drawing.Size(914, 634);
-            this.Name = "NotificationContainer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.NotificationContainer_Load);
+            this.ClientSize = new System.Drawing.Size(800, 99);
+            this.Controls.Add(this.TitleLbl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "OneNotification";
+            this.Load += new System.EventHandler(this.OneNotification_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private FlowLayoutPanel panel;
+        private Label TitleLbl;
     }
 }
