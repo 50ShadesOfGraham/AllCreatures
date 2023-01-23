@@ -156,6 +156,11 @@ namespace WindowsClient
             }
         }
 
+<<<<<<< HEAD
+        private void CreateAdmin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Testing create admin");
+=======
         private void verifyAdvertisementsToolStripMenuItem_Click(object sender, EventArgs e)
         {
            verifiyAdvertisements verifiyAdvertisements = new verifiyAdvertisements(Model);
@@ -166,6 +171,7 @@ namespace WindowsClient
         {
             DisplayUsers displayUsers = new DisplayUsers(Model);
             displayUsers.Show();
+>>>>>>> e7d557dffeb04aac35ae896ddfa40e116afc6717
         }
 
         private void verifyUsersToolStripMenuItem_Click(object sender, EventArgs e)

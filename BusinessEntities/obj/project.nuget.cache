@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "xYsvykYTQV/eGgnZXwNWdIh0Uj+8hur766ZC7jRVXN7C7dHTg2xF/TwaX9rQizIMNLYo19B5QRn3Uhy1y8OZtQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+=======
+  "dgSpecHash": "ZWAbAqPxuZOE5gbxNbiDpYZHIAE4ulTgW0vAxQjRNg6E7i/ybMFMw6ZH56eeDpRq7Gdp/S1BQB3K7yvgWF2sCw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
   "expectedPackageFiles": [],
   "logs": []
 }

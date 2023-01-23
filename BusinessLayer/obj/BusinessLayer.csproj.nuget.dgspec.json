@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\obj\\",
+=======
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectName": "BusinessEntities",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Annayap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -60,10 +78,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -72,12 +91,26 @@
         "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessLayer\\obj\\",
+=======
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+        "projectName": "BusinessLayer",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\obj\\",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Annayap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -93,11 +126,19 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
                 "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
               },
               "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
                 "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+=======
+              "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              },
+              "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
               }
             }
           }
@@ -130,10 +171,11 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -142,12 +184,26 @@
         "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\obj\\",
+=======
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectName": "DataAccessLayer",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\obj\\",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Annayap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -163,8 +219,13 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
                 "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+=======
+              "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+>>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
               }
             }
           }
@@ -211,7 +272,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
