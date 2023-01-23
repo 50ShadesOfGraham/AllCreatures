@@ -117,6 +117,7 @@
             this.verifyUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.DisplayUsers = new System.Windows.Forms.ToolStripMenuItem();
+            this.verifiedBannedUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SidePanel.SuspendLayout();
             this.ReportPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1323,15 +1324,13 @@
             this.verifyAdvertisementsToolStripMenuItem,
             this.verifyUsersToolStripMenuItem,
             this.CreateAdmin,
-            this.DisplayUsers});
+            this.DisplayUsers,
+            this.verifiedBannedUsersToolStripMenuItem});
             this.verificationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.verificationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
             this.verificationToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.verificationToolStripMenuItem.Text = "Verification";
-
-          //  this.verificationToolStripMenuItem.Click += new System.EventHandler(this.verificationToolStripMenuItem_Click);
-
             // 
             // verifyAdvertisementsToolStripMenuItem
             // 
@@ -1349,7 +1348,6 @@
             this.verifyUsersToolStripMenuItem.Name = "verifyUsersToolStripMenuItem";
             this.verifyUsersToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.verifyUsersToolStripMenuItem.Text = "Verify Users";
-          //  this.verifyUsersToolStripMenuItem.Click += new System.EventHandler(this.verifyUsersToolStripMenuItem_Click);
             // 
             // CreateAdmin
             // 
@@ -1367,6 +1365,15 @@
             this.DisplayUsers.Size = new System.Drawing.Size(199, 22);
             this.DisplayUsers.Text = "Display Users";
             this.DisplayUsers.Click += new System.EventHandler(this.DisplayUsers_Click);
+            // 
+            // verifiedBannedUsersToolStripMenuItem
+            // 
+            this.verifiedBannedUsersToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.verifiedBannedUsersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.verifiedBannedUsersToolStripMenuItem.Name = "verifiedBannedUsersToolStripMenuItem";
+            this.verifiedBannedUsersToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.verifiedBannedUsersToolStripMenuItem.Text = "Verified/Banned Users";
+            this.verifiedBannedUsersToolStripMenuItem.Click += new System.EventHandler(this.verifiedBannedUsersToolStripMenuItem_Click);
             // 
             // AdminIndex
             // 
@@ -1498,5 +1505,6 @@
         private Button ClothingBttn;
         private ToolStripMenuItem CreateAdmin;
         private ToolStripMenuItem DisplayUsers;
+        private ToolStripMenuItem verifiedBannedUsersToolStripMenuItem;
     }
 }

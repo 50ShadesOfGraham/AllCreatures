@@ -3,6 +3,7 @@ using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -29,17 +30,22 @@ namespace WindowsClient
 
         private void DogAdvert_Load(object sender, EventArgs e)
         {
-            
-                lblTitle.Text = Advertisement.Title;
-                txtName.Text = Advertisement.AnimalName;
-                txtGender.Text = Advertisement.Gender;
-                txtAge.Text = Advertisement.Age.ToString();
-                txtPrice.Text = Advertisement.Price.ToString();
-                txtDescription.Text = Advertisement.Description;
-                txtPurebreed.Text = Advertisement.Purebreed.ToString();
-                txtBreedOne.Text = Advertisement.BreedOne;
-                txtBreedTwo.Text = Advertisement.BreedTwo;
-           
+            SqlCommand cmd = new SqlCommand("SELECT title,name,gender,age,price,description,purebreed,breedone,breedtwo from DogAdvertisement WHERE DogID = @DogID");
+            cmd.Parameters.AddWithValue("@DogID", 1);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblTitle.Text = dr.GetValue(0).ToString();
+                txtName.Text = dr.GetValue(1).ToString();
+                txtGender.Text = dr.GetValue(2).ToString();
+                txtAge.Text = dr.GetValue(3).ToString();
+                txtPrice.Text = dr.GetValue(4).ToString();
+                txtDescription.Text = dr.GetValue(5).ToString();
+                txtPurebreed.Text = dr.GetValue(6).ToString();
+                txtBreedOne.Text = dr.GetValue(7).ToString();
+                txtBreedTwo.Text = dr.GetValue(8).ToString();
+            }
+
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

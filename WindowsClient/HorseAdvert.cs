@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsClient
 {
@@ -29,16 +30,22 @@ namespace WindowsClient
 
         private void HorseAdvert_Load(object sender, EventArgs e)
         {
-            lblTitle.Text = Advertisement.Title;
-            txtName.Text = Advertisement.AnimalName;
-            txtGender.Text = Advertisement.Gender;
-            txtAge.Text = Advertisement.Age.ToString();
-            txtPrice.Text = Advertisement.Price.ToString();
-            txtDescription.Text = Advertisement.Description;
-            txtPurpose.Text = Advertisement.Purpose;
-            txtBroken.Text = Advertisement.Broken.ToString();
-            txtSize.Text = Advertisement.Size.ToString();
-            txtBreed.Text = Advertisement.Breed;
+            SqlCommand cmd = new SqlCommand("SELECT title,name,gender,age,price,description,purpose,broken,size,breed from HorseAdvertisement WHERE HorseID = @HorseID");
+            cmd.Parameters.AddWithValue("@HorseID", 1);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblTitle.Text = dr.GetValue(0).ToString();
+                txtName.Text = dr.GetValue(0).ToString();
+                txtGender.Text = dr.GetValue(0).ToString();
+                txtAge.Text = dr.GetValue(0).ToString();
+                txtPrice.Text = dr.GetValue(0).ToString();
+                txtDescription.Text = dr.GetValue(0).ToString();
+                txtPurpose.Text = dr.GetValue(0).ToString();
+                txtBroken.Text = dr.GetValue(0).ToString();
+                txtSize.Text = dr.GetValue(0).ToString();
+                txtBreed.Text = dr.GetValue(0).ToString();
+            }
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

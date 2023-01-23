@@ -14,11 +14,17 @@ namespace WindowsClient
 {
     public partial class ViewAds : UserControl
     {
+        private string query;
+
         public ViewAds()
         {
             InitializeComponent();
         }
 
+        public ViewAds(string query)
+        {
+            this.query = query;
+        }
 
         public void SetLabel(String FirstName, String LastName,String Email, String Password, String UserType)
         {

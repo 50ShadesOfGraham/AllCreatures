@@ -172,6 +172,13 @@ namespace WindowsClient
         {
             verifyUser verifyUser = new verifyUser(Model);
             verifyUser.Show();
+
+        }
+
+        private void verifiedBannedUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerifiedBannedUsers verifiedBannedUsers = new VerifiedBannedUsers(Model);
+            verifiedBannedUsers.Show();
         }
     }
 }

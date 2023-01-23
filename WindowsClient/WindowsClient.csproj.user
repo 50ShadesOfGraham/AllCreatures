@@ -64,6 +64,9 @@
     <Compile Update="UserRejectReason.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="VerifiedBannedUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="verifiyAdvertisements.cs">
       <SubType>Form</SubType>
     </Compile>

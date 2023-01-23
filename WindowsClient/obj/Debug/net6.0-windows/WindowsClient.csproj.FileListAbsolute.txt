@@ -186,3 +186,4 @@ C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windo
 C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.pdb
 C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\Darraghs\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
+C:\Users\Eoghan\Downloads\AllCreatures\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.VerifiedBannedUsers.resources

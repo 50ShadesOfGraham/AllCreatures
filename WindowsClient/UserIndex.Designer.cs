@@ -36,6 +36,8 @@
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchBtn = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.AccessPanel = new System.Windows.Forms.Panel();
             this.OtherAccessPanel = new System.Windows.Forms.Panel();
@@ -133,7 +135,9 @@
             this.TopNavBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.myAccountToolStripMenuItem,
             this.notificationsToolStripMenuItem,
-            this.placeAdvertisementToolStripMenuItem});
+            this.placeAdvertisementToolStripMenuItem,
+            this.searchBtn,
+            this.toolStripTextBox1});
             this.TopNavBar.Location = new System.Drawing.Point(0, 0);
             this.TopNavBar.Name = "TopNavBar";
             this.TopNavBar.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -209,6 +213,21 @@
             this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             this.placeAdvertisementToolStripMenuItem.Click += new System.EventHandler(this.placeAdvertisementToolStripMenuItem_Click);
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(57, 31);
+            this.searchBtn.Text = "Search";
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(200, 31);
             // 
             // SidePanel
             // 
@@ -1249,7 +1268,7 @@
             this.MainMenuStrip = this.TopNavBar;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MdiChildrenMinimizedAnchorBottom = false;
-            this.MinimumSize = new System.Drawing.Size(705, 454);
+            this.MinimumSize = new System.Drawing.Size(705, 450);
             this.Name = "UserIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACGS";
@@ -1357,5 +1376,7 @@
         private Button HorseRidingBttn;
         private FlowLayoutPanel FlowLayout;
         private ToolStripMenuItem notificationsToolStripMenuItem;
+        private ToolStripMenuItem searchBtn;
+        private ToolStripTextBox toolStripTextBox1;
     }
 }

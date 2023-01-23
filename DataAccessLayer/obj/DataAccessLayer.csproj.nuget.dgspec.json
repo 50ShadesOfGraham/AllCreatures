@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+    "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectUniqueName": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "projectName": "BusinessEntities",
-        "projectPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-        "packagesPath": "C:\\Users\\Darraghs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\obj\\",
+        "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Darraghs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,20 +64,20 @@
         }
       }
     },
-    "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Darraghs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Darraghs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,14 +86,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Eoghan\\Downloads\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
               }
             }
           }

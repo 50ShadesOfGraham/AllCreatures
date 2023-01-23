@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Data.SqlClient;
 
 namespace WindowsClient
 {
@@ -23,10 +24,16 @@ namespace WindowsClient
 
         private void AccessoryAdvert_Load(object sender, EventArgs e)
         {
-            lblTitle.Text = Advertisement.Title;
-            txtPrice.Text = Advertisement.Price.ToString();
-            txtDescription.Text = Advertisement.Description;
-            
+            SqlCommand cmd = new SqlCommand("SELECT title,price,description from AccessoriesAdvertisement WHERE AccessID = @AccessID");
+            cmd.Parameters.AddWithValue("@AccessID", 1);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblTitle.Text = dr.GetValue(0).ToString();
+                txtPrice.Text = dr.GetValue(1).ToString();
+                txtDescription.Text = dr.GetValue(2).ToString();
+            }
+
         }
     }
 }

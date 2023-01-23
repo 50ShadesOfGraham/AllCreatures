@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Data.SqlClient;
+
 
 namespace WindowsClient
 {
@@ -30,10 +32,18 @@ namespace WindowsClient
 
         private void FoodAdvert_Load(object sender, EventArgs e)
         {
-            lblTitle.Text = Advertisement.Title;
-            txtPrice.Text = Advertisement.Price.ToString();
-            txtDescription.Text = Advertisement.Description;
-            txtDetails.Text = Advertisement.FoodDetails;
+
+            SqlCommand cmd = new SqlCommand("SELECT title,price,description,details from FoodAdvertisement WHERE FoodID = @FoodID");
+            cmd.Parameters.AddWithValue("@FoodID", 1);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblTitle.Text = dr.GetValue(0).ToString();
+                txtPrice.Text = dr.GetValue(1).ToString();
+                txtDescription.Text = dr.GetValue(2).ToString();
+                txtDetails.Text = dr.GetValue(3).ToString();
+            }
+
         }
 
         private void btnBuy_Click(object sender, EventArgs e)

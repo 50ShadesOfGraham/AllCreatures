@@ -28,6 +28,30 @@ namespace WindowsClient
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
+ 
+                    if(Model.addUserPayment(txtEmail.Text,txtCardType.Text,txtCardName.Text,txtCardNum.Text,Convert.ToInt32(txtCVC.Text)))
+                    {
+
+
+
+
+                        MessageBox.Show("Payment Successful");
+
+
+                        
+                    }
+                
+            
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

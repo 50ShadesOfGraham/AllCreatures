@@ -42,6 +42,10 @@ namespace BusinessEntities
         {
             paymentDetails= aPaymentDetails;
         }
-            
+
+        public static User GetPaymentDetails(string email, string paymenttype, string cardnumber, string cardholdername, int cvc)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

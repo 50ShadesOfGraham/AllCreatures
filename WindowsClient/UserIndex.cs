@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsClient
 {
@@ -216,8 +217,8 @@ namespace WindowsClient
                 //ViewAds ads = new ViewAds();
                 //ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
                 //FlowLayout.Controls.Add(ads);
-                DogAdvert dog = new DogAdvert(Model);
-                dog.Show();
+                GenericAdvert advert = new GenericAdvert(Model);
+                advert.Show();
             }
         }
 
@@ -240,6 +241,23 @@ namespace WindowsClient
 
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM AccessoriesAdvertisement,Bundle,DogAdvertisement,FarmAnimalAdvertisement,FoodAdvertisement,GenericAnimalAdvertisement,HorseAdvertisement";
+            query += " WHERE Title LIKE '%' + @Title + '%'";
+            query += " OR @Title = ''";
+
+            FlowLayout.Controls.Clear();  
+
+            foreach (User u in Model.UserList)
+            {
+                ViewAds ads = new ViewAds(query);
+                ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+                FlowLayout.Controls.Add(ads);
+            }
 
         }
     }

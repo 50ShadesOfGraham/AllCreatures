@@ -10,6 +10,7 @@ namespace BusinessLayer
 {
     public interface IModel
     {
+        bool addUserPayment(string email, string paymenttype, string cardnumber, string cardholdername, int cvc);
         bool addNewUser(string email, string firstname, string lastname, string password,bool verified, string userType,string address1, string address2, string address3,
             string county, string eircode);
         //bool addNewAdvert(string advertid, string title, string description, string price, string quantity, string selleremail);

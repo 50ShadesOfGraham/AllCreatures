@@ -12,6 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using User = BusinessEntities.User;
+using System.Diagnostics.Metrics;
 
 namespace DataAccessLayer
 {
@@ -297,6 +298,37 @@ namespace DataAccessLayer
             }
             return AdvertList;
         }
+
+        public void addUserPaymentDetailsToDB(string email, string paymenttype, string cardnumber, string cardholdername, int cvc)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From UserPayment";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                maxAdverts = ds.Tables["UsersData"].Rows.Count;
+                DataRow dRow = ds.Tables["UsersData"].NewRow();
+                dRow[0] = email;
+                dRow[1] = paymenttype;
+                dRow[2] = cardnumber;
+                dRow[3] = cardholdername;
+                dRow[4] = cvc;
+
+                ds.Tables["UsersData"].Rows.Add(dRow);
+                da.Update(ds, "UsersData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+
+            }
+        }
+
         public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype,string address1, string address2, string address3,
             string county, string eircode)
         {

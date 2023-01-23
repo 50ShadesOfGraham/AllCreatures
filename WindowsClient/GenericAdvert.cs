@@ -33,17 +33,23 @@ namespace WindowsClient
 
         private void GenericAdvert_Load(object sender, EventArgs e)
         {
-
-            lblTitle.Text = Advertisement.Title;
-            txtName.Text = Advertisement.AnimalName;
-            txtGender.Text = Advertisement.Gender;
-            txtAge.Text = Advertisement.Age.ToString();
-            txtPrice.Text = Advertisement.Price.ToString();
-            txtDescription.Text = Advertisement.Description;
-            txtExtra1.Text = Advertisement.DetailOne;
-            txtExtra2.Text = Advertisement.DetailTwo;
-            txtExtra3.Text = Advertisement.DetailThree;
            
+            SqlCommand cmd = new SqlCommand ("SELECT title,name,gender,age,price,description,detailsone,detailstwo,detailsthree from GenericAnimalAdvertisement WHERE GenericAnimalID = @GenericAnimalID");
+            cmd.Parameters.AddWithValue("@GenericAnimalID", 1);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                lblTitle.Text = dr.GetValue(0).ToString();
+                txtName.Text = dr.GetValue(1).ToString();
+                txtGender.Text = dr.GetValue(2).ToString();
+                txtAge.Text = dr.GetValue(3).ToString();
+                txtPrice.Text = dr.GetValue(4).ToString();
+                txtDescription.Text = dr.GetValue(5).ToString();
+                txtExtra1.Text = dr.GetValue(6).ToString();
+                txtExtra2.Text = dr.GetValue(7).ToString();
+                txtExtra3.Text = dr.GetValue(8).ToString();
+            }
+            
 
         }
 

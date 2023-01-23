@@ -127,7 +127,21 @@ namespace BusinessLayer
             }
             return false;
         }
-        
+
+        public Boolean addUserPayment(string email, string paymenttype, string cardnumber, string cardholdername, int cvc)
+        {
+            try
+            {
+                User userpayment = UserCreator.GetPaymentDetails(email, paymenttype, cardnumber, cardholdername, cvc);
+                UserList.Add(userpayment);
+                DataLayer.addUserPaymentDetailsToDB(email, paymenttype, cardnumber, cardholdername, cvc); ;
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
 
         public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
             string userType,string address1,string address2,string address3,string county,string eircode)
