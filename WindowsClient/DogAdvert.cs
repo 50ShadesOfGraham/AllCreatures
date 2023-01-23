@@ -54,5 +54,22 @@ namespace WindowsClient
             Hide();
             paymentDetails.Show();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM AccessoriesAdvertisement,Bundle,DogAdvertisement,FarmAnimalAdvertisement,FoodAdvertisement,GenericAnimalAdvertisement,HorseAdvertisement";
+            query += " WHERE Title LIKE '%'" + searchBox.Text.Trim() + "'%'";
+
+
+            //FlowLayout.Controls.Clear();  
+
+            //foreach (User u in Model.UserList)
+            //{
+            //    ViewAds ads = new ViewAds(query);
+            //    ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+            //    FlowLayout.Controls.Add(ads);
+            //}
+
+        }
     }
 }
