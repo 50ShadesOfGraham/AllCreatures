@@ -452,8 +452,7 @@ namespace DataAccessLayer
             }
             return NotificationList;
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype, string address1, string address2, string address3,
-            string county, string eircode)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string userType, string address1, string address2, string address3, string county, string eircode)
         {
             try
             {
@@ -465,15 +464,16 @@ namespace DataAccessLayer
                 maxAdverts = ds.Tables["UsersData"].Rows.Count;
                 DataRow dRow = ds.Tables["UsersData"].NewRow();
                 dRow[0] = email;
-                dRow[1] = firstname;
-                dRow[2] = lastname;
-                dRow[3] = password;
-                dRow[4] = usertype;
-                dRow[5] = address1;
-                dRow[6] = address2;
-                dRow[7] = address3;
-                dRow[8] = county;
-                dRow[9] = eircode;
+                dRow[1] = password;
+                dRow[2] = firstname;
+                dRow[3] = lastname;
+                dRow[4] = verified;
+                dRow[5] = userType;
+                dRow[6] = address1;
+                dRow[7] = address2;
+                dRow[8] = address3;
+                dRow[9] = county;
+                dRow[10] = eircode;
                 //Darragh
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
