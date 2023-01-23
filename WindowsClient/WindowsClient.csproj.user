@@ -16,6 +16,9 @@
     <Compile Update="CreateSingleAdvertisement.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DisplayUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="DogAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +56,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="RegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="reportUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SignIn.cs">
