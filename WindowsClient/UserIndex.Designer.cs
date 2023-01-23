@@ -37,7 +37,7 @@
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBtn = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.searchBox = new System.Windows.Forms.ToolStripTextBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.AccessPanel = new System.Windows.Forms.Panel();
             this.OtherAccessPanel = new System.Windows.Forms.Panel();
@@ -137,7 +137,7 @@
             this.notificationsToolStripMenuItem,
             this.placeAdvertisementToolStripMenuItem,
             this.searchBtn,
-            this.toolStripTextBox1});
+            this.searchBox});
             this.TopNavBar.Location = new System.Drawing.Point(0, 0);
             this.TopNavBar.Name = "TopNavBar";
             this.TopNavBar.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -223,11 +223,11 @@
             this.searchBtn.Text = "Search";
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // toolStripTextBox1
+            // searchBox
             // 
-            this.toolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(200, 31);
+            this.searchBox.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(200, 31);
             // 
             // SidePanel
             // 
@@ -1377,6 +1377,6 @@
         private FlowLayoutPanel FlowLayout;
         private ToolStripMenuItem notificationsToolStripMenuItem;
         private ToolStripMenuItem searchBtn;
-        private ToolStripTextBox toolStripTextBox1;
+        private ToolStripTextBox searchBox;
     }
 }
