@@ -127,6 +127,7 @@ namespace BusinessLayer
             }
             return false;
         }
+        
 
         public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
             string userType,string address1,string address2,string address3,string county,string eircode)
@@ -391,11 +392,15 @@ namespace BusinessLayer
         {
             throw new NotImplementedException();
         }
-        public void verifyUser(string email)
+        public void verifyUser(User user)
         {
             //try
             //{
+
                 //DataLayer.verifyUser(email);
+
+               // DataLayer.verifyUser(user);
+
             //}
             /*catch (System.Exception excep)
             {

@@ -1,4 +1,5 @@
 ﻿using BusinessEntities;
+using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,12 @@ namespace WindowsClient
     public partial class LitterAdvert : Form
     {
         private Litter Advertisement;
+        private IModel Model;
+        public LitterAdvert(IModel _model)
+        {
+            InitializeComponent();
+            Model = _model;
+        }
         public LitterAdvert(Litter advert)
         {
             InitializeComponent();
@@ -31,6 +38,18 @@ namespace WindowsClient
             txtBreedOne.Text = Advertisement.BreedOne;
             txtBreedTwo.Text = Advertisement.BreedTwo;
             txtSize.Text = Advertisement.LitterSize.ToString();
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            PaymentDetails paymentDetails = new PaymentDetails(Model);
+            Hide();
+            paymentDetails.Show();
+        }
+
+        private void pnlLitterAdvert_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

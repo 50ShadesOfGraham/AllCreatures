@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Annayap\\.nuget\\packages\\": {},
+    "C:\\Users\\Darraghs\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectUniqueName": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "projectName": "BusinessEntities",
-      "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-      "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
+      "projectPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "packagesPath": "C:\\Users\\Darraghs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Darraghs\\Source\\Repos\\AllCreatures\\BusinessEntities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Annayap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Darraghs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -66,16 +66,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

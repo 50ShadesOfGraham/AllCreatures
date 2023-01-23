@@ -1,5 +1,7 @@
 ﻿using BusinessEntities;
 using Microsoft.VisualBasic.Logging;
+
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections;
 using System.Data;
@@ -9,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using User = BusinessEntities.User;
 
 namespace DataAccessLayer
 {
@@ -881,26 +883,27 @@ namespace DataAccessLayer
         }
 
       
-        public void verifyUser(string email)
+        
+        public void verifyUser(User user)
         {
             try
             {
-                
-                DataSet ds = new DataSet();
-                string sql = "SELECT UserEmail,Verified FROM Users";
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-               // SqlDataAdapter.UpdateCommand = new SqlCommand("UPDATE Users SET Verified = 1 WHERE UserEmail = @UserEmail", con);
-                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "UserData");
-                foreach (DataRow dr in ds.Tables) // search whole table
+                ds = new DataSet();
+                string userEmail = user.Email;
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(user.Email);
+                if (findRow != null)
+
                 {
-                    
-                    if (dr[0] == email) // if email matches
-                    {
-                        dr[4] = 1; //change the status
-                    }
+                    findRow[4] = 1;
+
                 }
-                
+                da.Update(ds, "UsersData"); //adjust Verified from 0 to 1 in DB
+                MessageBox.Show("Success");
             }
             catch (System.Exception excep)
             {

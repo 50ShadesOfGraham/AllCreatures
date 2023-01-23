@@ -38,6 +38,7 @@
             this.txtCVC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCardType = new System.Windows.Forms.TextBox();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -120,12 +121,25 @@
             this.txtCardType.Size = new System.Drawing.Size(215, 23);
             this.txtCardType.TabIndex = 9;
             // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBuy.Location = new System.Drawing.Point(432, 271);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(83, 27);
+            this.btnBuy.TabIndex = 39;
+            this.btnBuy.Text = "BUY";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
             // PaymentDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(557, 353);
+            this.Controls.Add(this.btnBuy);
             this.Controls.Add(this.txtCardType);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCVC);
@@ -156,5 +170,6 @@
         private TextBox txtCVC;
         private Label label5;
         private TextBox txtCardType;
+        private Button btnBuy;
     }
 }

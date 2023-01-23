@@ -173,5 +173,11 @@ namespace WindowsClient
             displayUsers.Show();
 >>>>>>> e7d557dffeb04aac35ae896ddfa40e116afc6717
         }
+
+        private void verifyUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            verifyUser verifyUser = new verifyUser(Model);
+            verifyUser.Show();
+        }
     }
 }

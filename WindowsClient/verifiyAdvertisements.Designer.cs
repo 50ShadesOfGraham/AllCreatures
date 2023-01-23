@@ -115,12 +115,12 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(192, 60);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmail.Location = new System.Drawing.Point(168, 45);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(163, 24);
+            this.txtEmail.Size = new System.Drawing.Size(143, 19);
             this.txtEmail.TabIndex = 117;
             // 
             // lblEmail
@@ -128,19 +128,20 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(192, 9);
+            this.lblEmail.Location = new System.Drawing.Point(168, 7);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(64, 28);
+            this.lblEmail.Size = new System.Drawing.Size(53, 21);
             this.lblEmail.TabIndex = 116;
             this.lblEmail.Text = "Email";
             // 
             // txtDetail3
             // 
-            this.txtDetail3.Location = new System.Drawing.Point(563, 547);
+            this.txtDetail3.Location = new System.Drawing.Point(493, 410);
+            this.txtDetail3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail3.Name = "txtDetail3";
             this.txtDetail3.ReadOnly = true;
-            this.txtDetail3.Size = new System.Drawing.Size(228, 62);
+            this.txtDetail3.Size = new System.Drawing.Size(200, 48);
             this.txtDetail3.TabIndex = 115;
             this.txtDetail3.Text = "";
             // 
@@ -149,19 +150,20 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(420, 543);
+            this.label9.Location = new System.Drawing.Point(368, 407);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 28);
+            this.label9.Size = new System.Drawing.Size(110, 21);
             this.label9.TabIndex = 114;
             this.label9.Text = "Details Three";
             // 
             // txtDetail2
             // 
-            this.txtDetail2.Location = new System.Drawing.Point(189, 613);
+            this.txtDetail2.Location = new System.Drawing.Point(165, 460);
+            this.txtDetail2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail2.Name = "txtDetail2";
             this.txtDetail2.ReadOnly = true;
-            this.txtDetail2.Size = new System.Drawing.Size(214, 52);
+            this.txtDetail2.Size = new System.Drawing.Size(188, 40);
             this.txtDetail2.TabIndex = 113;
             this.txtDetail2.Text = "";
             // 
@@ -170,19 +172,20 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(29, 613);
+            this.label8.Location = new System.Drawing.Point(25, 460);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 28);
+            this.label8.Size = new System.Drawing.Size(98, 21);
             this.label8.TabIndex = 112;
             this.label8.Text = "Details Two";
             // 
             // txtDetail1
             // 
-            this.txtDetail1.Location = new System.Drawing.Point(189, 541);
+            this.txtDetail1.Location = new System.Drawing.Point(165, 406);
+            this.txtDetail1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail1.Name = "txtDetail1";
             this.txtDetail1.ReadOnly = true;
-            this.txtDetail1.Size = new System.Drawing.Size(218, 52);
+            this.txtDetail1.Size = new System.Drawing.Size(191, 40);
             this.txtDetail1.TabIndex = 111;
             this.txtDetail1.Text = "";
             // 
@@ -191,21 +194,21 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(26, 541);
+            this.label7.Location = new System.Drawing.Point(23, 406);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 28);
+            this.label7.Size = new System.Drawing.Size(98, 21);
             this.label7.TabIndex = 110;
             this.label7.Text = "Details One";
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(189, 498);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtGender.Location = new System.Drawing.Point(165, 374);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(2);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
-            this.txtGender.Size = new System.Drawing.Size(163, 24);
+            this.txtGender.Size = new System.Drawing.Size(143, 19);
             this.txtGender.TabIndex = 109;
             // 
             // label6
@@ -216,18 +219,18 @@
             this.label6.Location = new System.Drawing.Point(24, 500);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 28);
+            this.label6.Size = new System.Drawing.Size(65, 21);
             this.label6.TabIndex = 108;
             this.label6.Text = "Gender";
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(189, 455);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAge.Location = new System.Drawing.Point(165, 341);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(2);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
-            this.txtAge.Size = new System.Drawing.Size(50, 24);
+            this.txtAge.Size = new System.Drawing.Size(44, 19);
             this.txtAge.TabIndex = 107;
             // 
             // label5
@@ -238,18 +241,18 @@
             this.label5.Location = new System.Drawing.Point(24, 457);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 28);
+            this.label5.Size = new System.Drawing.Size(40, 21);
             this.label5.TabIndex = 106;
             this.label5.Text = "Age";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(189, 415);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtName.Location = new System.Drawing.Point(165, 311);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(163, 24);
+            this.txtName.Size = new System.Drawing.Size(143, 19);
             this.txtName.TabIndex = 105;
             // 
             // label4
@@ -260,7 +263,7 @@
             this.label4.Location = new System.Drawing.Point(24, 417);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 28);
+            this.label4.Size = new System.Drawing.Size(56, 21);
             this.label4.TabIndex = 104;
             this.label4.Text = "Name";
             // 
@@ -282,18 +285,18 @@
             this.lblType.Location = new System.Drawing.Point(24, 375);
             this.lblType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(124, 28);
+            this.lblType.Size = new System.Drawing.Size(101, 21);
             this.lblType.TabIndex = 102;
             this.lblType.Text = "AnimalType";
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(189, 330);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtStatus.Location = new System.Drawing.Point(165, 248);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(163, 24);
+            this.txtStatus.Size = new System.Drawing.Size(143, 19);
             this.txtStatus.TabIndex = 101;
             // 
             // lblStatus
@@ -301,10 +304,10 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblStatus.ForeColor = System.Drawing.Color.White;
-            this.lblStatus.Location = new System.Drawing.Point(24, 332);
+            this.lblStatus.Location = new System.Drawing.Point(21, 249);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(59, 28);
+            this.lblStatus.Size = new System.Drawing.Size(48, 21);
             this.lblStatus.TabIndex = 100;
             this.lblStatus.Text = "Price";
             // 
@@ -313,10 +316,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(182, 286);
+            this.label3.Location = new System.Drawing.Point(159, 214);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 28);
+            this.label3.Size = new System.Drawing.Size(91, 21);
             this.label3.TabIndex = 99;
             this.label3.Text = "Unverified";
             // 
@@ -325,11 +328,13 @@
             this.listAdverts.BackColor = System.Drawing.SystemColors.HighlightText;
             this.listAdverts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.listAdverts.FormattingEnabled = true;
-            this.listAdverts.ItemHeight = 20;
-            this.listAdverts.Location = new System.Drawing.Point(29, 60);
+            this.listAdverts.ItemHeight = 15;
+            this.listAdverts.Location = new System.Drawing.Point(25, 45);
+            this.listAdverts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listAdverts.Name = "listAdverts";
-            this.listAdverts.Size = new System.Drawing.Size(156, 24);
+            this.listAdverts.Size = new System.Drawing.Size(137, 19);
             this.listAdverts.TabIndex = 98;
+            this.listAdverts.SelectedIndexChanged += new System.EventHandler(this.listAdverts_SelectedIndexChanged);
             this.listAdverts.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listAdverts_MouseDoubleClick);
             // 
             // btnDisplay
@@ -338,10 +343,10 @@
             this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisplay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDisplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.btnDisplay.Location = new System.Drawing.Point(29, 11);
+            this.btnDisplay.Location = new System.Drawing.Point(25, 8);
             this.btnDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(156, 44);
+            this.btnDisplay.Size = new System.Drawing.Size(136, 33);
             this.btnDisplay.TabIndex = 97;
             this.btnDisplay.Text = "Display";
             this.btnDisplay.UseVisualStyleBackColor = false;
@@ -349,12 +354,12 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(192, 103);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTitle.Location = new System.Drawing.Point(168, 77);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.ReadOnly = true;
-            this.txtTitle.Size = new System.Drawing.Size(163, 24);
+            this.txtTitle.Size = new System.Drawing.Size(143, 19);
             this.txtTitle.TabIndex = 96;
             // 
             // button1
@@ -368,7 +373,7 @@
             this.button1.Location = new System.Drawing.Point(521, 697);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 45);
+            this.button1.Size = new System.Drawing.Size(124, 34);
             this.button1.TabIndex = 95;
             this.button1.Text = "&Exit";
             this.button1.UseVisualStyleBackColor = false;
@@ -385,7 +390,7 @@
             this.button2.Location = new System.Drawing.Point(323, 697);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 45);
+            this.button2.Size = new System.Drawing.Size(124, 34);
             this.button2.TabIndex = 94;
             this.button2.Text = "Flag";
             this.button2.UseVisualStyleBackColor = false;
@@ -401,28 +406,29 @@
             this.button3.Location = new System.Drawing.Point(114, 697);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 45);
+            this.button3.Size = new System.Drawing.Size(124, 34);
             this.button3.TabIndex = 93;
             this.button3.Text = "Verify";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(189, 167);
+            this.txtDescription.Location = new System.Drawing.Point(165, 125);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
-            this.txtDescription.Size = new System.Drawing.Size(211, 52);
+            this.txtDescription.Size = new System.Drawing.Size(185, 40);
             this.txtDescription.TabIndex = 92;
             this.txtDescription.Text = "";
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(189, 242);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPrice.Location = new System.Drawing.Point(165, 182);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(163, 24);
+            this.txtPrice.Size = new System.Drawing.Size(143, 19);
             this.txtPrice.TabIndex = 91;
             // 
             // label2
@@ -433,7 +439,7 @@
             this.label2.Location = new System.Drawing.Point(29, 163);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 28);
+            this.label2.Size = new System.Drawing.Size(98, 21);
             this.label2.TabIndex = 90;
             this.label2.Text = "Description";
             // 
@@ -442,10 +448,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 242);
+            this.label1.Location = new System.Drawing.Point(21, 182);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 28);
+            this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 89;
             this.label1.Text = "Price";
             // 
@@ -454,10 +460,10 @@
             this.lblVerified.AutoSize = true;
             this.lblVerified.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblVerified.ForeColor = System.Drawing.Color.White;
-            this.lblVerified.Location = new System.Drawing.Point(27, 286);
+            this.lblVerified.Location = new System.Drawing.Point(24, 214);
             this.lblVerified.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVerified.Name = "lblVerified";
-            this.lblVerified.Size = new System.Drawing.Size(86, 28);
+            this.lblVerified.Size = new System.Drawing.Size(70, 21);
             this.lblVerified.TabIndex = 88;
             this.lblVerified.Text = "Verified";
             // 
@@ -466,19 +472,19 @@
             this.ttlLabel.AutoSize = true;
             this.ttlLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ttlLabel.ForeColor = System.Drawing.Color.White;
-            this.ttlLabel.Location = new System.Drawing.Point(29, 99);
+            this.ttlLabel.Location = new System.Drawing.Point(25, 74);
             this.ttlLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ttlLabel.Name = "ttlLabel";
-            this.ttlLabel.Size = new System.Drawing.Size(55, 28);
+            this.ttlLabel.Size = new System.Drawing.Size(44, 21);
             this.ttlLabel.TabIndex = 87;
             this.ttlLabel.Text = "Title";
             // 
             // verifiyAdvertisements
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(981, 784);
+            this.ClientSize = new System.Drawing.Size(858, 588);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtDetail3);

@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BusinessEntities;
+﻿using BusinessEntities;
 using BusinessLayer;
 namespace WindowsClient
 {
-  
+
     public partial class verifiyAdvertisements : Form
     {
         IModel model;
@@ -25,12 +16,12 @@ namespace WindowsClient
         {
 
 
-         
+
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void descriptionTxt_TextChanged(object sender, EventArgs e)
@@ -40,7 +31,7 @@ namespace WindowsClient
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            foreach(Advertisement advertisement1 in model.AdvertList)
+            foreach (Advertisement advertisement1 in model.AdvertList)
             {
                 
                 
@@ -50,7 +41,7 @@ namespace WindowsClient
                     }
                
             }
-            
+
         }
 
         private void listAdverts_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -58,17 +49,28 @@ namespace WindowsClient
             txtEmail.Text = listAdverts.SelectedItem.ToString();
             foreach (Advertisement genericAnimal in model.AdvertList)
             {
+                // txtEmail.Text = genericAnimal.SellerEmail;
+                txtTitle.Text = genericAnimal.Title;
+                txtDescription.Text = genericAnimal.Description;
+
+                MessageBox.Show(genericAnimal.Title, genericAnimal.Description);
+
+                txtPrice.Text = Convert.ToString(genericAnimal.Price);
+
                 foreach (GenericAnimal genericAdvert in model.AdvertList)
                 {
                     if (genericAnimal.SellerEmail == txtEmail.Text)
+                    { 
                        /* txtDescription.Text = genericAdvert.Description;
                         txtAge.Text = Convert.ToString(genericAdvert.Age);
                         txtDetail1.Text = genericAdvert.DetailOne;
-                        txtPrice.Text = Convert.ToString((double)genericAdvert.Price);*/
-                       txtGender.Text = genericAnimal.SellerEmail;
+                        txtDetail2.Text = genericAdvert.DetailTwo;
+                        txtDetail3.Text = genericAdvert.DetailThree;
+                       */
+                    }
                 }
-                
-                    
+
+
 
             }
         }
@@ -76,6 +78,16 @@ namespace WindowsClient
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listAdverts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

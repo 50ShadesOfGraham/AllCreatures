@@ -214,9 +214,11 @@ namespace WindowsClient
             FlowLayout.Controls.Clear();
             foreach (User u in Model.UserList)
             {
-                ViewAds ads = new ViewAds();
-                ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
-                FlowLayout.Controls.Add(ads);
+                //ViewAds ads = new ViewAds();
+                //ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+                //FlowLayout.Controls.Add(ads);
+                DogAdvert dog = new DogAdvert(Model);
+                dog.Show();
             }
         }
 

@@ -9,14 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessEntities;
+using BusinessLayer;
+
 namespace WindowsClient
 {
     public partial class GenericAdvert : Form
     {
-        
+  
 
         private GenericAnimal Advertisement;
+        private IModel Model;
+        public GenericAdvert(IModel _model)
+        {
+            InitializeComponent();
+            this.Model = _model;
+        }
         public GenericAdvert(GenericAnimal advert)
         {
             InitializeComponent();
@@ -38,6 +45,13 @@ namespace WindowsClient
             txtExtra3.Text = Advertisement.DetailThree;
            
 
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            PaymentDetails paymentDetails = new PaymentDetails(Model);
+            Hide();
+            paymentDetails.Show();
         }
     }
 }

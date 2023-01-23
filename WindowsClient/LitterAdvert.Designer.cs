@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLitterAdvert = new System.Windows.Forms.Panel();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.txtSize = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBreedTwo = new System.Windows.Forms.TextBox();
@@ -144,6 +145,7 @@
             // 
             // pnlLitterAdvert
             // 
+            this.pnlLitterAdvert.Controls.Add(this.btnBuy);
             this.pnlLitterAdvert.Controls.Add(this.txtSize);
             this.pnlLitterAdvert.Controls.Add(this.label1);
             this.pnlLitterAdvert.Controls.Add(this.txtBreedTwo);
@@ -163,11 +165,25 @@
             this.pnlLitterAdvert.Name = "pnlLitterAdvert";
             this.pnlLitterAdvert.Size = new System.Drawing.Size(617, 386);
             this.pnlLitterAdvert.TabIndex = 13;
+            this.pnlLitterAdvert.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLitterAdvert_Paint);
+            // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.btnBuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBuy.Location = new System.Drawing.Point(470, 356);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(83, 27);
+            this.btnBuy.TabIndex = 38;
+            this.btnBuy.Text = "BUY";
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // txtSize
             // 
             this.txtSize.Location = new System.Drawing.Point(478, 240);
             this.txtSize.Name = "txtSize";
+            this.txtSize.ReadOnly = true;
             this.txtSize.Size = new System.Drawing.Size(75, 23);
             this.txtSize.TabIndex = 37;
             // 
@@ -184,6 +200,7 @@
             // 
             this.txtBreedTwo.Location = new System.Drawing.Point(121, 164);
             this.txtBreedTwo.Name = "txtBreedTwo";
+            this.txtBreedTwo.ReadOnly = true;
             this.txtBreedTwo.Size = new System.Drawing.Size(188, 23);
             this.txtBreedTwo.TabIndex = 35;
             // 
@@ -191,6 +208,7 @@
             // 
             this.txtBreedOne.Location = new System.Drawing.Point(121, 128);
             this.txtBreedOne.Name = "txtBreedOne";
+            this.txtBreedOne.ReadOnly = true;
             this.txtBreedOne.Size = new System.Drawing.Size(188, 23);
             this.txtBreedOne.TabIndex = 34;
             // 
@@ -207,6 +225,7 @@
             // 
             this.txtPurebreed.Location = new System.Drawing.Point(121, 95);
             this.txtPurebreed.Name = "txtPurebreed";
+            this.txtPurebreed.ReadOnly = true;
             this.txtPurebreed.Size = new System.Drawing.Size(100, 23);
             this.txtPurebreed.TabIndex = 32;
             // 
@@ -260,6 +279,7 @@
             this.txtDescription.Location = new System.Drawing.Point(121, 283);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
+            this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(236, 88);
             this.txtDescription.TabIndex = 23;
             // 
@@ -267,6 +287,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(121, 240);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(236, 23);
             this.txtPrice.TabIndex = 22;
             // 
@@ -274,6 +295,7 @@
             // 
             this.txtAge.Location = new System.Drawing.Point(121, 197);
             this.txtAge.Name = "txtAge";
+            this.txtAge.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(236, 23);
             this.txtAge.TabIndex = 21;
             // 
@@ -1486,5 +1508,6 @@
         private ToolStripMenuItem placeAdvertisementToolStripMenuItem;
         private TextBox txtSize;
         private Label label1;
+        private Button btnBuy;
     }
 }
