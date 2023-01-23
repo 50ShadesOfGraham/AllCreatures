@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//testing by anna
 namespace BusinessEntities
 {
     public interface IAdvertisement
