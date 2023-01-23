@@ -247,5 +247,11 @@ namespace WindowsClient
             NotificationContainer userNotifications = new NotificationContainer(Model);
             userNotifications.Show();
         }
+
+        private void reportUser_Click(object sender, EventArgs e)
+        {
+            reportUser reportuser = new reportUser(Model);
+            reportuser.Show();
+        }
     }
 }

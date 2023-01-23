@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "klx/dzmDIAkGzKRgGCBRPyisRHpuE2jWIzsJF+Ca+shY7ktaxil0KTH1K/KP8xJPx5RgWoaXCO/cikhYLFBjzw==",
+  "dgSpecHash": "h09CwskO7KJRSpO3jv5hNX6aI43pIvuHLd2tKheMPESSpdD5dCmRyvc3Ocbw7R1ahLUarH6mRXOy4EAhnEhbMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Darragh\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512",
     "C:\\Users\\Darragh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

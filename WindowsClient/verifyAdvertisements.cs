@@ -35,6 +35,7 @@ namespace WindowsClient
                 panelFood.Visible = true;
                 panelDog.Visible = false;
                 panelHorse.Visible = false;
+                panelGeneric.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 2)
             {
@@ -46,6 +47,7 @@ namespace WindowsClient
                 panelFood.Visible = false;
                 panelDog.Visible = false;
                 panelHorse.Visible = false;
+                panelGeneric.Visible = false;
             }
         }
 
@@ -122,13 +124,14 @@ namespace WindowsClient
                         txtHBreed.Text = horse.Breed;
                         txtHBroken.Text =horse.Broken.ToString();
                         txtHPurpose.Text = horse.Purpose;
-
+                        panelGeneric.Visible = false;
                     }
 
                     if (animal is Dog dog)
                     {
                         txtBreed.Text = dog.Purebreed.ToString();
                         panelDog.Visible = true;
+                        panelGeneric.Visible = false;
                     }
                     if(animal is GenericAnimal generic)
                     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sPlP1oYhuIMzOaJaMyChvxnPzinP/n/zXt3eFkcBDmbOdbUtV8t1U6M2YmZ02U+zKVnRtNFvAM66z6qeDupaFA==",
+  "dgSpecHash": "tn4dG+9RJXlQraQ2i6kcI0NWMkl1bHMb+iYiChbL7bRG0XvGC+fV0xk1DHQ0V52NkHUtni75UPCEtcVs3MSxcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\Darragh\\source\\repos\\50ShadesOfGraham\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Darragh\\.nuget\\packages\\extended.wpf.toolkit\\4.4.0\\extended.wpf.toolkit.4.4.0.nupkg.sha512",
     "C:\\Users\\Darragh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
