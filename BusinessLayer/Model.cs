@@ -6,6 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Diagnostics.Metrics;
+using Microsoft.VisualBasic.Logging;
 
 namespace BusinessLayer
 {
@@ -19,8 +24,8 @@ namespace BusinessLayer
         #region Instance Attribures
         private IDataLayer dataLayer;
         private User currentUser;
-        private ArrayList userList;
-        private ArrayList advertList;
+        private List<User> userList;
+        private List<Advertisement> advertList;
         #endregion
         #region Instance Properties
         public IDataLayer DataLayer
@@ -41,32 +46,37 @@ namespace BusinessLayer
         }
 
 
-        public ArrayList UserList
+        public List<User> UserList
         {
             get
             {
                 return userList;
             }
-            //set
-            //{
-            //}
+            set
+            {
+                userList = value;
+            }
         }
 
-        public ArrayList AdvertList
+        public List<Advertisement> AdvertList
         {
             get
             {
                 return advertList;
             }
-            //set
-            //{
-            //}
+            set { advertList = value; }
         }
+
+        /*public ArrayList UserAddressList
+        {
+            get
+            {
+                return UserAddressList;
+            }
+            set { UserAddressList = value; }
+        }*/
+      //  ArrayList IModel.AdvertList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         #endregion
-        //Eddies Class Comment
-        //Graham's First Comment
-        //Darragh's First Comment
-        //Anna's First Comment
         #region Constructors/Destructors
         public static IModel GetInstance(IDataLayer _DataLayer) // With Singleton pattern this method is used rather than constructor
         {
@@ -81,12 +91,18 @@ namespace BusinessLayer
         }
         private Model(IDataLayer _DataLayer)  // The constructor is private as its a singleton and I only allow one instance which is created with the GetInstance() method
         {
-            userList = new ArrayList();
+            userList = new List<User>();
             dataLayer = _DataLayer;
             userList = dataLayer.getAllUsers(); // setup Models userList so we can login
 
-            advertList = new ArrayList();
+            advertList = new List<Advertisement>();
             dataLayer.getAllAdvertisements();
+            advertList = dataLayer.getAllAdvertisements();
+
+            /*UserAddressList = new ArrayList();
+            dataLayer.GetUserAddress();
+            UserAddressList = dataLayer.GetUserAddress();*/
+
         }
 
         ~Model()
@@ -101,6 +117,7 @@ namespace BusinessLayer
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
                 MessageBox.Show("DBUserEmail: " + DBUserEmail);
+                MessageBox.Show("DBUserPassword: " + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
@@ -111,13 +128,14 @@ namespace BusinessLayer
             return false;
         }
 
-        public Boolean addNewUser(string email, string firstname, string lastname, string password, string userType)
+        public Boolean addNewUser(string email, string firstname, string lastname, string password, bool verified,
+            string userType,string address1,string address2,string address3,string county,string eircode)
         {
             try
             {
-                IUser user = UserCreator.GetUser(email, firstname, lastname, password, userType);
+                User user = UserCreator.GetUser(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 UserList.Add(user);
-                DataLayer.addNewUserToDB(email, firstname, lastname, password, userType);
+                DataLayer.addNewUserToDB(email, firstname, lastname, password, verified, userType,address1,address2,address3,county,eircode);
                 return true;
             }
             catch (System.Exception excep)
@@ -125,14 +143,12 @@ namespace BusinessLayer
                 return false;
             }
         }
-
-        public Boolean addNewAdvert(string advertid, string title, string description, string price, string quantity, string selleremail)
+        public Boolean addNewAccessoriesAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string accessid, string animaltype, string accesscategory, string accesssubcat)
         {
             try
             {
-                IAdvertisement ad = AdvertisementCreator.GetAdvert(advertid, title, description, price, quantity, selleremail);
-                AdvertList.Add(ad);
-                DataLayer.addNewAdvertToDB(advertid, title, description, price, quantity, selleremail);
+                DataLayer.addNewAdvertToDB(advertid,selleremail,price,description,verified,status,adverttype,title);
+                DataLayer.addNewAccessoriesToDB(accessid, animaltype, advertid, accesscategory, accesssubcat);
                 return true;
             }
             catch (System.Exception excep)
@@ -141,8 +157,107 @@ namespace BusinessLayer
             }
         }
 
+        public Boolean addNewFoodAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string foodID, string animaltype, string details)
+        {
+            try
+            {
+                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+                DataLayer.addNewFoodToDB(foodID, animaltype, advertid, details);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
 
+        public Boolean addNewDogAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string dogid, bool purebreed, string breedone, string breedtwo)
+        {
+            try
+            {
+                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+                DataLayer.addNewDogToDB(dogid, animalid, purebreed, breedone, breedtwo);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
 
+        public Boolean addNewHorseAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string horseid, string purpose, string size, bool broken, string breed)
+        {
+            try
+            {
+                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+                DataLayer.addNewHorseToDB(horseid,animalid,purpose,size,broken, breed);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+
+        public Boolean addNewFarmAnimalAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string farmid, string purpose)
+        {
+            try
+            {
+                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+                DataLayer.addNewFarmAnimalToDB(farmid, animalid, purpose);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+
+        public Boolean addNewGenericAnimalAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string gaID, string animalID, string detailone, string detailtwo, string detailthree)
+        {
+            try
+            {
+                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+                DataLayer.addNewGenericAnimalToDB(gaID,animalID,detailone, detailtwo, detailthree);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+
+        public Boolean addNewLitterAdvert(string advertid, string selleremail, double price, string description, bool verified, string status, string adverttype, string title, string animalid, string animalname, string animaltype, int age, bool islitter, string litterid, int littersize)
+        {
+            try
+            {
+                DataLayer.addNewAdvertToDB(advertid, selleremail, price, description, verified, status, adverttype, title);
+                DataLayer.addNewAnimalToDB(animalid, advertid, animalname, animaltype, age, islitter);
+                DataLayer.addNewLitterToDB(litterid, littersize, animalid);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+
+        public Boolean addNewBundle(string bundleID, string advertid, double bundleprice, int bundlesize)
+        {
+            try
+            {
+                DataLayer.addNewBundleToDB(bundleID,advertid,bundleprice,bundlesize);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
         public String getUserTypeForCurrentuser()
         {
             return currentUser.UserType;
@@ -166,9 +281,133 @@ namespace BusinessLayer
             return false;
         }
 
+        public Boolean addNewDogAdvertisement(Dog dog)
+        {
+            try
+            {
+                AdvertList.Add(dog);
+                DataLayer.insertDogAdvertisement(dog);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewHorseAdvertisement(Horse horse)
+        {
+            try
+            {
+                AdvertList.Add(horse);
+                DataLayer.insertHorseAdvertisement(horse);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewLitterAdvertisement(Litter litter)
+        {
+            try
+            {
+                AdvertList.Add(litter);
+                DataLayer.insertLitterAdvertisement(litter);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFarmAnimalAdvertisement(FarmAnimal farmanimal)
+        {
+            try
+            {
+                AdvertList.Add(farmanimal);
+                DataLayer.insertFarmAnimalAdvertisement(farmanimal);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewGenericAnimalAdvertisement(GenericAnimal genericanimal)
+        {
+            try
+            {
+                AdvertList.Add(genericanimal);
+                DataLayer.insertGenericAnimalAdvertisement(genericanimal);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewFoodAdvertisement(Food food)
+        {
+            try
+            {
+                AdvertList.Add(food);
+                DataLayer.insertFoodAdvertisement(food);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
+        public Boolean addNewAccessoriesAdvertisement(Accessories access)
+        {
+            try
+            {
+                AdvertList.Add(access);
+                DataLayer.insertAccessoriesAdvertisement(access);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                return false;
+            }
+        }
         public void tearDown()
         {
             DataLayer.closeConnection();
+        }
+
+/*
+        private bool verified;
+        private string userType;
+        private string email;
+        private string address1;
+        private string address2;
+        private string address3;
+        private string county;
+        private string eircode;*/
+
+        public bool addNewUser(string email, string firstname, string lastname, string password,string verified, string userType,string address1,string address2,string address3,string county,string eircode)
+        {
+            throw new NotImplementedException();
+        }
+        public void verifyUser(string email)
+        {
+            //try
+            //{
+                //DataLayer.verifyUser(email);
+            //}
+            /*catch (System.Exception excep)
+            {
+                return false;
+            }
+            */
+        }
+
+        public bool banUserInDB(User user)
+        {
+            DataLayer.banUserInDB(user);
+            return true;
         }
     }
 }

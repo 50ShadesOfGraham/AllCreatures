@@ -14,3 +14,6 @@ ACGS/obj/ACGS.csproj.nuget.dgspec.json
 .vs/ACGS/v17/.suo
 *.editorconfig
 *.cache
+*.editorconfig
+*.cache
+/BusinessEntities/Horse.cs

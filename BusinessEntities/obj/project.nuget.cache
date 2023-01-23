@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RKlZzQ9XpeJBQ8zW185EdrVAGUC4RR6gO4dqV0JDqnKf9x3Xxihi+i+/tOvutyuCiiN0b6rboNgpf2ZnZkAWUw==",
+  "dgSpecHash": "ZWAbAqPxuZOE5gbxNbiDpYZHIAE4ulTgW0vAxQjRNg6E7i/ybMFMw6ZH56eeDpRq7Gdp/S1BQB3K7yvgWF2sCw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
