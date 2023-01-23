@@ -176,28 +176,30 @@ namespace WindowsClient
                     {
                         model.verifyAdvertisement(generic);
                     }
-
+                    break;
 
                 }
-                else if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
+                
+                if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
                     if (advertisement is Accessories accessories)
                     {
                         model.verifyAdvertisement(accessories);
                     }
-
+                    break;
                 }
-                /*if (advertisement.Title == listBoxFood.SelectedItem.ToString())
+                if (advertisement.Title == listBoxFood.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
                     if (advertisement is Food food)
                     {
                         model.verifyAdvertisement(food);
                     }
-                }*/
+                    break;
+                }
 
-            }
+        }
             MessageBox.Show("Success");
 
         }
@@ -209,10 +211,11 @@ namespace WindowsClient
 
         private void btnAssess_Click(object sender, EventArgs e)
         {
-            foreach(Advertisement advertisement in model.AdvertList.OfType<Accessories>())
+            foreach(Accessories advertisement in model.AdvertList.OfType<Accessories>())
             {
                 
                     listBoxAssess.Items.Add(advertisement.Title);
+
                 
             }
         }
@@ -238,11 +241,11 @@ namespace WindowsClient
         {
             txtTitle.Text=listBoxAssess.SelectedItem.ToString();
 
-            foreach (Advertisement advertisement in model.AdvertList.OfType<Accessories>())
+            foreach (Advertisement
+                advertisement in model.AdvertList.OfType<Accessories>())
             {
                 if (advertisement.Title == txtTitle.Text)
                 {
-                    
                     
                     txtTitle.Text = advertisement.Title;
                     txtDescription.Text = advertisement.Description;
