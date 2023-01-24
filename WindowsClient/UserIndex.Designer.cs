@@ -31,8 +31,8 @@
             this.TopNavBar = new System.Windows.Forms.MenuStrip();
             this.myAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReportUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.placeAdvertisementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,6 +167,14 @@
             this.editAccountToolStripMenuItem.Text = "Edit Account";
             this.editAccountToolStripMenuItem.Click += new System.EventHandler(this.editAccountToolStripMenuItem_Click);
             // 
+            // myAdvertisementsToolStripMenuItem
+            // 
+            this.myAdvertisementsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.myAdvertisementsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.myAdvertisementsToolStripMenuItem.Name = "myAdvertisementsToolStripMenuItem";
+            this.myAdvertisementsToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
+            this.myAdvertisementsToolStripMenuItem.Text = "My Advertisements";
+            // 
             // ReportUserToolStripMenuItem
             // 
             this.ReportUserToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
@@ -175,14 +183,6 @@
             this.ReportUserToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
             this.ReportUserToolStripMenuItem.Text = "Report User";
             this.ReportUserToolStripMenuItem.Click += new System.EventHandler(this.ReportUserToolStripMenuItem_Click);
-            // 
-            // myAdvertisementsToolStripMenuItem
-            // 
-            this.myAdvertisementsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.myAdvertisementsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.myAdvertisementsToolStripMenuItem.Name = "myAdvertisementsToolStripMenuItem";
-            this.myAdvertisementsToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
-            this.myAdvertisementsToolStripMenuItem.Text = "My Advertisements";
             // 
             // signOutToolStripMenuItem
             // 

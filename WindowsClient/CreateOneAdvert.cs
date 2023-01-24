@@ -219,10 +219,8 @@ namespace WindowsClient
                     if (Model.addNewFoodAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, animalfood, DetailTxt.Text))
                     {
-                        System.Windows.Forms.MessageBox.Show("Food Added");
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -441,9 +439,8 @@ namespace WindowsClient
                     if (Model.addNewAccessoriesAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, AccessCat, AccessSubCat))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string notificationtitle = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -801,9 +798,8 @@ namespace WindowsClient
                            HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
                            HorsePurposeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                       "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string notificationtitle = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -1159,9 +1155,8 @@ namespace WindowsClient
                     if (Model.addNewFarmAnimalAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                            ImageTwo, ImageThree, AnimalType, FANameTxt.Text, Convert.ToInt32(FAAgeTxt.Text), FarmGender, FAPurposeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -1313,9 +1308,8 @@ namespace WindowsClient
                     if (Model.addNewGenericAnimalAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
                         AnimalType, GANameTxt.Text, Convert.ToInt32(GAAgeTxt.Text), GAGender, DetailOneTxt.Text, DetailTwoTxt.Text, DetailThreeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                           "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -1542,9 +1536,8 @@ namespace WindowsClient
                     if (Model.addNewLitterAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, AnimalType, Convert.ToInt32(LitterSizeTxt.Text), Convert.ToInt32(LitterAgeTxt.Text), isPurebreed, LitterBreedOne, LitterBreedTwo))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))

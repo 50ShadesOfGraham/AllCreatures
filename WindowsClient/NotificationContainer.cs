@@ -24,36 +24,16 @@ namespace WindowsClient
             this.Text = Model.getUserNameCurrentuser().Trim() + " Notifications";
 
         }
-
-        private void ProcessAllControls<T>(Control rootControl, Action<T> action) where T : Control
-        {
-            foreach (T childControl in rootControl.Controls.OfType<T>())
-            {
-                action(childControl);
-            }
-            foreach (Control childControl in rootControl.Controls)
-            {
-                ProcessAllControls<T>(childControl, action);
-            }
-        }
         private void NotificationContainer_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            List<Notifications> organisedlist = Model.NotificationList.OrderBy(x => x.Messagetime).ToList();
+            foreach(Notifications notif in organisedlist)
             {
-                Notification notif = new Notification();
-                this.Controls.Add(notif);
-                notif.Dock = DockStyle.Top;
+                Notification notifCard = new Notification(notif);
+                this.Controls.Add(notifCard);
+                notifCard.Dock = DockStyle.Top;
             }
-        }
 
-        public void OpenTextBox(Button bttn, TextBox txt)
-        {
-            
-        }
-
-        public void ClickedButton(object sender,EventArgs e)
-        {
-            MessageBox.Show((sender as Button).Text);
         }
     }
 }
