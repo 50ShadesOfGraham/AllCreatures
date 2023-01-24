@@ -32,7 +32,7 @@ namespace WindowsClient
             try
             {
 
-                var check = 0;
+                var check = 0; // check to see if user email is in the list
                 foreach (User user in model.UserList)
                 {
                     //txtUser.Text = user.Email;
