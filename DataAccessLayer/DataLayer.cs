@@ -16,6 +16,7 @@ namespace DataAccessLayer
         SqlDataAdapter da;
         int maxUsers;
         int maxAdverts;
+        int maxReports;
         SqlCommandBuilder cb;
         #endregion
         #region Static Attributes
@@ -968,10 +969,11 @@ namespace DataAccessLayer
 
         public bool verifyAdvertisement(FarmAnimal farmAnimal)
         {
+
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From FarmAnimalAdvertisement";
+                string sql = "SELECT * From FarmAnimaladvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
@@ -993,21 +995,22 @@ namespace DataAccessLayer
             return true;
         }
 
-        public bool verifyAdvertisement(Food food)
+
+        public bool verifyAdvertisement(Litter litter)
         {
 
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From FoodAdvertisement";
+                string sql = "SELECT * From Litteradvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(food.FoodId);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(litter.LitterId);
                 if (findRow != null)
                 {
-                    findRow[5] = food.Verified;
+                    findRow[5] = litter.Verified;
                 }
                 da.Update(ds, "AdsData");
             }
@@ -1023,11 +1026,10 @@ namespace DataAccessLayer
 
         public bool verifyAdvertisement(Accessories accessories)
         {
-
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From AccessoriesAdvertisment";
+                string sql = "SELECT * From AccessoriesAdvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
@@ -1035,7 +1037,7 @@ namespace DataAccessLayer
                 DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
                 if (findRow != null)
                 {
-                    findRow[5] = accessories.Verified;
+                    findRow[5] = accessories.AccessoriesID;
                 }
                 da.Update(ds, "AdsData");
             }
@@ -1048,7 +1050,6 @@ namespace DataAccessLayer
             }
             return true;
         }
-
 
         public bool deleteAdvertisement(Advertisement advertisement)
         {
@@ -1169,6 +1170,70 @@ namespace DataAccessLayer
         public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3, string county, string eircode)
         {
             throw new NotImplementedException();
+        }
+
+        public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Reports";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "reporData");
+                maxReports = ds.Tables["reporData"].Rows.Count;
+                DataRow dRow = ds.Tables["reporData"].NewRow();
+
+                dRow[0] = reportUser;
+                dRow[1] = reason;
+                dRow[2] = dateTime;
+                dRow[3] = description;
+                dRow[4] = reportId;
+                ds.Tables["reporData"].Rows.Add(dRow);
+                da.Update(ds, "reporData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+
+        public List<Report> getAllReports()
+        {
+            List<Report> reportList = new List<Report>();
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Reports";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "reporData");
+                maxReports = ds.Tables["reporData"].Rows.Count;
+                for (int i = 0; i < maxReports; i++)
+                {
+                    DataRow dRow = ds.Tables["reporData"].Rows[i];
+                    Report report = ReportCreator.GetReport(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        Convert.ToDateTime(dRow.ItemArray.GetValue(2).ToString()),
+                                                        dRow.ItemArray.GetValue(3).ToString(),
+                                                        Convert.ToInt16(dRow.ItemArray.GetValue(4).ToString()));
+
+                    reportList.Add(report);
+
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+            return reportList;
         }
     }
 }

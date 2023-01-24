@@ -170,5 +170,11 @@ namespace WindowsClient
         {
            
         }
+
+        private void displayUsers_Click(object sender, EventArgs e)
+        {
+            DisplayUsers displayUsers = new DisplayUsers(Model);
+            displayUsers.Show();
+        }
     }
 }

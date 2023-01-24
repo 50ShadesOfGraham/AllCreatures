@@ -46,6 +46,11 @@ namespace WindowsClient
                         AdminIndex adminview = new AdminIndex(Model);
                         adminview.Show();
                         break;
+                    case "Banned":
+                        MessageBox.Show("Error cannot sign in as you are currently banned, Message an Admin for more information at admin@ACGS.ie");
+                        SignIn signIn = new SignIn(Model);
+                        signIn.Show();
+                        break;
                     default:
                         MessageBox.Show("Error::(");
                         break;
