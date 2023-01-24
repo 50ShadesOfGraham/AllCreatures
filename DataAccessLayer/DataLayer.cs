@@ -85,7 +85,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                    User user = UserCreator.GetUserUpdate(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
@@ -95,7 +95,13 @@ namespace DataAccessLayer
                                                         dRow.ItemArray.GetValue(7).ToString(),
                                                         dRow.ItemArray.GetValue(8).ToString(),
                                                         dRow.ItemArray.GetValue(9).ToString(),
-                                                        dRow.ItemArray.GetValue(10).ToString());
+                                                        dRow.ItemArray.GetValue(10).ToString(),
+                                                        dRow.ItemArray.GetValue(11).ToString(),
+                                                        dRow.ItemArray.GetValue(12).ToString(),
+                                                        dRow.ItemArray.GetValue(13).ToString(),
+                                                        dRow.ItemArray.GetValue(14).ToString(),
+                                                        dRow.ItemArray.GetValue(15).ToString(),
+                                                        dRow.ItemArray.GetValue(16).ToString());
                     UserList.Add(user);
                 }
 

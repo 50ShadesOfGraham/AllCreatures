@@ -48,6 +48,11 @@ namespace WindowsClient
                 return ms.ToArray();
             }
         }
+        public void Alert(string message, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(message, type);
+        }
         private void CreateOneAdvert_Load(object sender, EventArgs e)
         {
             IntroPanel.Visible = true;
@@ -235,7 +240,7 @@ namespace WindowsClient
                             }
                             else if (isBundle.Equals(false))
                             {
-                                Close();
+                                this.Hide();
                             }
                         }
                     }
@@ -978,10 +983,11 @@ namespace WindowsClient
                         ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                     }
                     bool isPurebred = false;
-                if(string.IsNullOrEmpty(DogBreedTwo)) { isPurebred = true; }
-                if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
-                            DogNameTxt.Text,Convert.ToInt32(DogAgeTxt.Text), DogGender, isPurebred, DogBreedOne, DogBreedTwo))
-                {
+                    if (DogPurebreedYesRadBttn.Checked.Equals(true))
+                    {
+                        if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                            DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, true, DogBreedOne, DogBreedTwo))
+                        {
                             string message = "Item #" + AdvertID + " has been added to our system. " +
                            "Admin must verify item before advertisement is made public";
                             string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
@@ -992,7 +998,10 @@ namespace WindowsClient
                                 if (isBundle.Equals(true) && NoItems.Equals(1))
                                 {
                                     //Create Bundle
-                                    if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                    if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                    {
+                                        this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                    }
                                     Close();
                                 }
                                 else if (isBundle.Equals(true) && NoItems > 1)
@@ -1002,10 +1011,47 @@ namespace WindowsClient
                                 }
                                 else if (isBundle.Equals(false))
                                 {
+                                    this.Alert("Advertisement Created", Form_Alert.enmType.Success);
                                     Close();
                                 }
                             }
                         }
+                        else if (DogPurebreedNoBttn.Checked.Equals(true))
+                        {
+                            if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                                 DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, true, DogBreedOne, DogBreedTwo))
+                            {
+                                string message = "Item #" + AdvertID + " has been added to our system. " +
+                               "Admin must verify item before advertisement is made public";
+                                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                                int notifID = 0;
+                                do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
+                                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                                {
+                                    if (isBundle.Equals(true) && NoItems.Equals(1))
+                                    {
+                                        //Create Bundle
+                                        if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                        {
+                                            this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                        }
+                                        Close();
+                                    }
+                                    else if (isBundle.Equals(true) && NoItems > 1)
+                                    {
+                                        NoItems--;
+                                        //ResetForm(this); //Resetting back to original state
+                                    }
+                                    else if (isBundle.Equals(false))
+                                    {
+                                        this.Alert("Advertisement Created", Form_Alert.enmType.Success);
+                                        Close();
+                                    }
+                                }
+                            }
+
+                        }
+                    }
                 }
                 catch (Exception excep)
                 {
@@ -1123,7 +1169,10 @@ namespace WindowsClient
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
@@ -1274,7 +1323,10 @@ namespace WindowsClient
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
@@ -1284,6 +1336,7 @@ namespace WindowsClient
                             }
                             else if (isBundle.Equals(false))
                             {
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
                                 Close();
                             }
                         }
@@ -1499,7 +1552,10 @@ namespace WindowsClient
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
@@ -1509,6 +1565,7 @@ namespace WindowsClient
                             }
                             else if (isBundle.Equals(false))
                             {
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
                                 Close();
                             }
                         }
@@ -1527,6 +1584,56 @@ namespace WindowsClient
 
             }
             
+        }
+
+        private void PriceTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HorseAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(HorseAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                HorseAgeTxt.Text = HorseAgeTxt.Text.Remove(HorseAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void DogAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(DogAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                DogAgeTxt.Text = DogAgeTxt.Text.Remove(DogAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void FAAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(FAAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                FAAgeTxt.Text = FAAgeTxt.Text.Remove(FAAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void GAAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(GAAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                GAAgeTxt.Text = GAAgeTxt.Text.Remove(GAAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void LitterAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(LitterAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                LitterAgeTxt.Text = LitterAgeTxt.Text.Remove(LitterAgeTxt.Text.Length - 1);
+            }
         }
     }
 }

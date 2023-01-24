@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace WindowsClient
 {
@@ -212,8 +213,6 @@ namespace WindowsClient
 
         private void placeAdvertisementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //PlaceAdvertisement placeAd = new PlaceAdvertisement(Model);
-            //placeAd.Show();
             CreateAdvertStart createAd = new CreateAdvertStart(Model);
             createAd.Show();
         }

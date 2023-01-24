@@ -152,7 +152,6 @@
             this.GABackBttn = new System.Windows.Forms.Button();
             this.GAConfirmBttn = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.LitterPanel = new System.Windows.Forms.Panel();
             this.CatLitterPanel = new System.Windows.Forms.Panel();
             this.CatLNotPanel = new System.Windows.Forms.Panel();
@@ -258,6 +257,7 @@
             this.PriceTxt.Name = "PriceTxt";
             this.PriceTxt.Size = new System.Drawing.Size(150, 31);
             this.PriceTxt.TabIndex = 9;
+            this.PriceTxt.TextChanged += new System.EventHandler(this.PriceTxt_TextChanged);
             // 
             // TitleTxt
             // 
@@ -1071,6 +1071,7 @@
             this.HorseAgeTxt.Name = "HorseAgeTxt";
             this.HorseAgeTxt.Size = new System.Drawing.Size(178, 31);
             this.HorseAgeTxt.TabIndex = 18;
+            this.HorseAgeTxt.TextChanged += new System.EventHandler(this.HorseAgeTxt_TextChanged);
             // 
             // HorseNameTxt
             // 
@@ -1356,6 +1357,7 @@
             this.DogAgeTxt.Name = "DogAgeTxt";
             this.DogAgeTxt.Size = new System.Drawing.Size(176, 31);
             this.DogAgeTxt.TabIndex = 27;
+            this.DogAgeTxt.TextChanged += new System.EventHandler(this.DogAgeTxt_TextChanged);
             // 
             // DogGenderComboBox
             // 
@@ -1521,6 +1523,7 @@
             this.FAAgeTxt.Name = "FAAgeTxt";
             this.FAAgeTxt.Size = new System.Drawing.Size(150, 31);
             this.FAAgeTxt.TabIndex = 18;
+            this.FAAgeTxt.TextChanged += new System.EventHandler(this.FAAgeTxt_TextChanged);
             // 
             // FANameTxt
             // 
@@ -1669,6 +1672,7 @@
             this.GAAgeTxt.Name = "GAAgeTxt";
             this.GAAgeTxt.Size = new System.Drawing.Size(177, 31);
             this.GAAgeTxt.TabIndex = 21;
+            this.GAAgeTxt.TextChanged += new System.EventHandler(this.GAAgeTxt_TextChanged);
             // 
             // GANameTxt
             // 
@@ -2094,6 +2098,7 @@
             this.LitterAgeTxt.Name = "LitterAgeTxt";
             this.LitterAgeTxt.Size = new System.Drawing.Size(187, 31);
             this.LitterAgeTxt.TabIndex = 18;
+            this.LitterAgeTxt.TextChanged += new System.EventHandler(this.LitterAgeTxt_TextChanged);
             // 
             // LitterAgeLbl
             // 
@@ -2301,7 +2306,6 @@
         private Label TypeAdLbl;
         private Button GABackBttn;
         private Button GAConfirmBttn;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private GroupBox ImageUploadGroupBox;
         private Button UploadThreeBttn;
         private PictureBox ImageThreePictureBx;
