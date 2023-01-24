@@ -28,87 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.NotificationHeaderBttn = new System.Windows.Forms.Button();
-            this.HeaderFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.MessageTextBox = new System.Windows.Forms.TextBox();
-            this.MessagePanel = new System.Windows.Forms.Panel();
-            this.HeaderFlowLayoutPanel.SuspendLayout();
-            this.MessagePanel.SuspendLayout();
+            this.NotifTitleBttn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // NotificationHeaderBttn
+            // NotifTitleBttn
             // 
-            this.NotificationHeaderBttn.AutoSize = true;
-            this.NotificationHeaderBttn.BackColor = System.Drawing.Color.White;
-            this.NotificationHeaderBttn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NotificationHeaderBttn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.NotificationHeaderBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotificationHeaderBttn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.NotificationHeaderBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.NotificationHeaderBttn.Location = new System.Drawing.Point(3, 3);
-            this.NotificationHeaderBttn.Name = "NotificationHeaderBttn";
-            this.NotificationHeaderBttn.Padding = new System.Windows.Forms.Padding(6);
-            this.NotificationHeaderBttn.Size = new System.Drawing.Size(1122, 120);
-            this.NotificationHeaderBttn.TabIndex = 0;
-            this.NotificationHeaderBttn.Text = "button1";
-            this.NotificationHeaderBttn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NotificationHeaderBttn.UseVisualStyleBackColor = false;
-            this.NotificationHeaderBttn.Click += new System.EventHandler(this.NotificationHeaderBttn_Click);
+            this.NotifTitleBttn.Location = new System.Drawing.Point(3, 3);
+            this.NotifTitleBttn.Name = "NotifTitleBttn";
+            this.NotifTitleBttn.Size = new System.Drawing.Size(908, 81);
+            this.NotifTitleBttn.TabIndex = 0;
+            this.NotifTitleBttn.Text = "button1";
+            this.NotifTitleBttn.UseVisualStyleBackColor = true;
+            this.NotifTitleBttn.Click += new System.EventHandler(this.NotifTitleBttn_Click);
             // 
-            // HeaderFlowLayoutPanel
+            // textBox1
             // 
-            this.HeaderFlowLayoutPanel.AutoSize = true;
-            this.HeaderFlowLayoutPanel.Controls.Add(this.NotificationHeaderBttn);
-            this.HeaderFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.HeaderFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.HeaderFlowLayoutPanel.Name = "HeaderFlowLayoutPanel";
-            this.HeaderFlowLayoutPanel.Size = new System.Drawing.Size(1128, 126);
-            this.HeaderFlowLayoutPanel.TabIndex = 3;
-            // 
-            // MessageTextBox
-            // 
-            this.MessageTextBox.BackColor = System.Drawing.Color.White;
-            this.MessageTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MessageTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.MessageTextBox.Location = new System.Drawing.Point(0, 0);
-            this.MessageTextBox.Multiline = true;
-            this.MessageTextBox.Name = "MessageTextBox";
-            this.MessageTextBox.ReadOnly = true;
-            this.MessageTextBox.Size = new System.Drawing.Size(1128, 225);
-            this.MessageTextBox.TabIndex = 2;
-            // 
-            // MessagePanel
-            // 
-            this.MessagePanel.AutoSize = true;
-            this.MessagePanel.Controls.Add(this.MessageTextBox);
-            this.MessagePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MessagePanel.Location = new System.Drawing.Point(0, 126);
-            this.MessagePanel.Name = "MessagePanel";
-            this.MessagePanel.Size = new System.Drawing.Size(1128, 225);
-            this.MessagePanel.TabIndex = 4;
+            this.textBox1.Location = new System.Drawing.Point(3, 90);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(908, 258);
+            this.textBox1.TabIndex = 1;
             // 
             // Notification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.MessagePanel);
-            this.Controls.Add(this.HeaderFlowLayoutPanel);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NotifTitleBttn);
             this.Name = "Notification";
-            this.Size = new System.Drawing.Size(1128, 351);
+            this.Size = new System.Drawing.Size(914, 352);
             this.Load += new System.EventHandler(this.Notification_Load);
-            this.HeaderFlowLayoutPanel.ResumeLayout(false);
-            this.HeaderFlowLayoutPanel.PerformLayout();
-            this.MessagePanel.ResumeLayout(false);
-            this.MessagePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Button NotificationHeaderBttn;
-        private FlowLayoutPanel HeaderFlowLayoutPanel;
-        private TextBox MessageTextBox;
-        private Panel MessagePanel;
+
+        private Button NotifTitleBttn;
+        private TextBox textBox1;
     }
 }

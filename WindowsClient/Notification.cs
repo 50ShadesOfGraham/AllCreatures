@@ -13,7 +13,7 @@ namespace WindowsClient
 {
     public partial class Notification : UserControl
     {
-        public static bool open = false;
+        private bool open = false;
         public Notification()
         {
             InitializeComponent();
@@ -24,28 +24,17 @@ namespace WindowsClient
             this.Height = 121;
         }
 
-        public void SetHeader(string text, string textTwo)
+        private void NotifTitleBttn_Click(object sender, EventArgs e)
         {
-            NotificationHeaderBttn.Text = text;
-            NotificationHeaderBttn.Text += "\t\t " + textTwo;
-        }
-
-        public void SetMessage(string text)
-        {
-            MessageTextBox.Text = text;
-        }
-
-        private void NotificationHeaderBttn_Click(object sender, EventArgs e)
-        {
-            if(!open)
+            if(open)
             {
-                this.Height = 412;
-                open = true;
+                this.Height = 352;
+                open = false;
             }
             else
             {
-                this.Height = 121;
-                open = false;
+                this.Height = 87;
+                open = true;
             }
         }
     }

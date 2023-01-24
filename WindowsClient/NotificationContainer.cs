@@ -38,25 +38,12 @@ namespace WindowsClient
         }
         private void NotificationContainer_Load(object sender, EventArgs e)
         {
- 
-            Button bttn = new Button();
-            TextBox txt = new TextBox();
-            this.Controls.Add(bttn);
-            this.Controls.Add(txt);
-            txt.Dock = DockStyle.Top;
-            bttn.Dock = DockStyle.Top;
-            bttn.Visible = true;
-            bttn.Text = "Button";
-            bttn.Height = 84;
-
-        
-   
-            txt.Visible = true;
-            
-            txt.Multiline = true;
-            txt.Height = 152;
-            txt.Width = 892;
-            txt.Text = "Hello World";
+            for (int i = 0; i < 10; i++)
+            {
+                Notification notif = new Notification();
+                this.Controls.Add(notif);
+                notif.Dock = DockStyle.Top;
+            }
         }
 
         public void OpenTextBox(Button bttn, TextBox txt)

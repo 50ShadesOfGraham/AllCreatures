@@ -31,7 +31,7 @@
             this.TopNavBar = new System.Windows.Forms.MenuStrip();
             this.myAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.myPurchasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReportUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,8 +147,8 @@
             this.myAccountToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.myAccountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editAccountToolStripMenuItem,
-            this.myPurchasesToolStripMenuItem,
             this.myAdvertisementsToolStripMenuItem,
+            this.ReportUserToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.myAccountToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myAccountToolStripMenuItem.ForeColor = System.Drawing.Color.White;
@@ -165,14 +165,16 @@
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
             this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
             this.editAccountToolStripMenuItem.Text = "Edit Account";
+            this.editAccountToolStripMenuItem.Click += new System.EventHandler(this.editAccountToolStripMenuItem_Click);
             // 
-            // myPurchasesToolStripMenuItem
+            // ReportUserToolStripMenuItem
             // 
-            this.myPurchasesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.myPurchasesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.myPurchasesToolStripMenuItem.Name = "myPurchasesToolStripMenuItem";
-            this.myPurchasesToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
-            this.myPurchasesToolStripMenuItem.Text = "My Purchases";
+            this.ReportUserToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.ReportUserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.ReportUserToolStripMenuItem.Name = "ReportUserToolStripMenuItem";
+            this.ReportUserToolStripMenuItem.Size = new System.Drawing.Size(280, 34);
+            this.ReportUserToolStripMenuItem.Text = "Report User";
+            this.ReportUserToolStripMenuItem.Click += new System.EventHandler(this.ReportUserToolStripMenuItem_Click);
             // 
             // myAdvertisementsToolStripMenuItem
             // 
@@ -1291,7 +1293,7 @@
         private ToolStripMenuItem myAccountToolStripMenuItem;
         private ToolStripMenuItem placeAdvertisementToolStripMenuItem;
         private ToolStripMenuItem editAccountToolStripMenuItem;
-        private ToolStripMenuItem myPurchasesToolStripMenuItem;
+        private ToolStripMenuItem ReportUserToolStripMenuItem;
         private ToolStripMenuItem myAdvertisementsToolStripMenuItem;
         private ToolStripMenuItem signOutToolStripMenuItem;
         private Panel SidePanel;
