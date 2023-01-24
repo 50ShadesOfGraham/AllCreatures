@@ -16,7 +16,7 @@ namespace BusinessLayer
         //Eddie - 'addNew' function created to add advertisements to the data layer and returns true if successful
         bool addNewAccessoriesAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat);
         bool addNewFoodAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string details);
-        bool addNewDogAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname, string gender, bool purebreed, string breedone, string breedtwo);
+        bool addNewDogAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname,  int age,string gender, bool purebreed, string breedone, string breedtwo);
         bool addNewHorseAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo,byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose);        
         bool addNewFarmAnimalAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string animalname, int age, string gender, string purpose);
         bool addNewGenericAnimalAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string animalname, int age, string gender, string detailone, string detailtwo, string detailthree);
@@ -38,12 +38,18 @@ namespace BusinessLayer
         bool verifyAdvertisement(Advertisement advertisement);
         bool verifyAdvertisement(Dog dog);
         bool verifyAdvertisement(Horse horse);
-        bool verifyAdvertisement(Food food);
         bool verifyAdvertisement(Accessories accessories);
-        bool verifyAdvertisement(FarmAnimal farmAnimal);
+        bool verifyAdvertisement(Food food);
+        bool verifyAdvertisement(GenericAnimal genericAnimal);
+        bool verifyAdvertisement(Litter litter);
         bool deleteAdvertisement(Advertisement advertisement);
         bool deleteAdvertisement(Horse horse);
         bool deleteAdvertisement(Dog dog);
+        bool deleteAdvertisement(Accessories accessories);
+        bool deleteAdvertisement(Food food);
+        bool deleteAdvertisement(GenericAnimal genericAnimal);
+        bool deleteAdvertisement(Litter litter);
         bool banUserInDB(BusinessEntities.User user);
+        bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description);
     }
 }

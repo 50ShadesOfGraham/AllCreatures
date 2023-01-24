@@ -25,6 +25,7 @@ namespace BusinessLayer
         private List<User> userList;
         private List<Advertisement> advertList;
         private List<Notifications> notificationList;
+        private List<Report> reportList;
         #endregion
         #region Instance Properties
         public IDataLayer DataLayer
@@ -75,6 +76,14 @@ namespace BusinessLayer
             //{
             //}
         }
+
+        public List<Report> ReportList
+        {
+            get
+            {
+                return reportList;
+            }
+        }
         #endregion
         //Eddies Class Comment
         //Graham's First Comment
@@ -116,7 +125,7 @@ namespace BusinessLayer
             {
                 String DBUserEmail = user.Email.Trim();
                 String DBUserPassword = user.Password.Trim();
-                MessageBox.Show("DBUserEmail: " + DBUserEmail);
+                MessageBox.Show("DBUserEmail: " + DBUserEmail + "| Password :" + DBUserPassword);
 
                 if (email.Equals(DBUserEmail) && password.Equals(DBUserPassword))
                 {
@@ -199,11 +208,11 @@ namespace BusinessLayer
             }
         }
 
-        public Boolean addNewDogAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname, string gender, bool purebreed, string breedone, string breedtwo)
+        public Boolean addNewDogAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname, int age,string gender, bool purebreed, string breedone, string breedtwo)
         {
             try
             {
-                DataLayer.addNewDogToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, dogname, gender, purebreed, breedone, breedtwo);
+                DataLayer.addNewDogToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, dogname,age, gender, purebreed, breedone, breedtwo);
                 return true;
             }
             catch (System.Exception excep)
@@ -357,19 +366,33 @@ namespace BusinessLayer
             return true;
         }
 
+        public bool verifyAdvertisement(Litter litter)
+        {
+            DataLayer.verifyAdvertisement(litter);
+            return true;
+        }
+
+        public bool verifyAdvertisement(FarmAnimal farmAnimal)
+        {
+            DataLayer.verifyAdvertisement(farmAnimal);
+            return true;
+        }
+
+        public bool verifyAdvertisement(Accessories accessories)
+        {
+            DataLayer.verifyAdvertisement(accessories);
+            return true;
+        }
+
         public bool verifyAdvertisement(Food food)
         {
             DataLayer.verifyAdvertisement(food);
             return true;
         }
-        public bool verifyAdvertisement(FarmAnimal farmAnimal)
+
+        public bool verifyAdvertisement(GenericAnimal genericAnimal)
         {
-            DataLayer.verifyAdvertisement(farmAnimal);
-            return true;
-        } 
-        public bool verifyAdvertisement(Accessories accessories)
-        {
-            DataLayer.verifyAdvertisement(accessories);
+            DataLayer.verifyAdvertisement(genericAnimal);
             return true;
         }
 
@@ -382,16 +405,66 @@ namespace BusinessLayer
         {
             DataLayer.deleteAdvertisement(dog); return true;
         }
-        
+
         public bool deleteAdvertisement(Horse horse)
         {
             DataLayer.deleteAdvertisement(horse); return true;
         }
 
+        public bool deleteAdvertisement(Accessories accessories)
+        {
+            DataLayer.deleteAdvertisement(accessories); return true;
+        }
+
+        public bool deleteAdvertisement(Food food)
+        {
+            DataLayer.deleteAdvertisement(food); return true;
+        }
+
+        public bool deleteAdvertisement(FarmAnimal farmAnimal)
+        {
+            DataLayer.deleteAdvertisement(farmAnimal); return true;
+        }
+
+        public bool deleteAdvertisement(Litter litter)
+        {
+            DataLayer.deleteAdvertisement(litter); return true;
+        }
+
+        public bool deleteAdvertisement(GenericAnimal genericAnimal)
+        {
+            DataLayer.deleteAdvertisement(genericAnimal); return true;
+        }
+
+
         public bool banUserInDB(User user)
         {
             DataLayer.banUserInDB(user);
             return true;
+        }
+
+        public bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
+        {
+            try
+            {
+                int maxReports = 0;
+                foreach (Report report1 in reportList)
+                {
+                    if (report1.ReportId > maxReports)
+                        maxReports = report1.ReportId;
+                }
+
+                Report report = ReportCreator.GetReport(reportUser, reason, dateTime, description, ++maxReports);
+                ReportList.Add(report);
+                DataLayer.addNewReportS(reportUser, reason, dateTime, description, ++maxReports);
+                MessageBox.Show(report.Reason);
+                return true;
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                return false;
+            }
         }
     }
 }

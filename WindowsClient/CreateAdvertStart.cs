@@ -44,7 +44,7 @@ namespace WindowsClient
         private void AdvertBttn_Click(object sender, EventArgs e)
         {
         //b   Bundle bundle = new Bundle();
-            CreateSingleAdvertisement advertisement = new CreateSingleAdvertisement(Model,0,0,0,0,false,0.00,0);
+            CreateOneAdvert advertisement = new CreateOneAdvert(Model,0,0,0,0,false,0.00,0);
             advertisement.Show();
             this.Hide();
         }
@@ -63,14 +63,14 @@ namespace WindowsClient
             bundleID = rnd.Next(0, 99999);
             if(NoOfItemsComboBx.SelectedIndex.Equals(0))
             {
-                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundleID, ItemOne, ItemTwo,0,true,Convert.ToDouble(BundlePriceTextBox.Text),2);
+                CreateOneAdvert _advertisement = new CreateOneAdvert(Model, bundleID, ItemOne, ItemTwo,0,true,Convert.ToDouble(BundlePriceTextBox.Text),2);
                 _advertisement.Show();
                 this.Hide();
             }
 
             if(NoOfItemsComboBx.SelectedIndex.Equals(1))
             {
-                CreateSingleAdvertisement _advertisement = new CreateSingleAdvertisement(Model, bundleID, ItemOne, ItemTwo, ItemThree, true, Convert.ToDouble(BundlePriceTextBox.Text),3);
+                CreateOneAdvert _advertisement = new CreateOneAdvert(Model, bundleID, ItemOne, ItemTwo, ItemThree, true, Convert.ToDouble(BundlePriceTextBox.Text),3);
                 _advertisement.Show();
                 this.Hide();
             }

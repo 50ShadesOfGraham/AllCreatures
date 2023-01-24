@@ -30,20 +30,7 @@ namespace WindowsClient
 
         private void UserNotifications_Load(object sender, EventArgs e)
         {
-            int count = 0;
-            NotificationFlowLayoutPanel.Controls.Clear();
-            foreach (Notifications u in Model.NotificationList)
-            {
-                if(Model.CurrentUser.Email.Trim().Equals(u.UserEmail.Trim()))
-                {
-                    Notification notification = new Notification(NotificationFlowLayoutPanel);
-                    notification.SetHeader(u.Title.Trim(),Convert.ToString(u.Messagetime));
-                    notification.SetMessage(u.Title.Trim());
-                    NotificationFlowLayoutPanel.Controls.Add(notification);
-                }
-            }
 
-            MessageBox.Show("Number of Notifications:" + count);
         }
     }
 }

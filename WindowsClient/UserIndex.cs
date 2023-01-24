@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace WindowsClient
 {
@@ -28,14 +29,9 @@ namespace WindowsClient
 
         private void UserIndex_Load(object sender, EventArgs e)
         {
-            int counter = 0;
-            foreach(Advertisement advertisement in Model.AdvertList)
-            {
-                counter++;
-            }
-
-            MessageBox.Show("Number of Ads: " + counter);
-
+            Form_LandingPage intro = new Form_LandingPage(Model);
+            FlowLayout.Controls.Add(intro);
+            intro.Show();
             //Animal Panel
             AnimalPanel.Visible = false;
             HousePetPanel.Visible = false;
@@ -96,6 +92,11 @@ namespace WindowsClient
                 panel.Visible = false;
             }
         }
+        public void Alert(string message, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(message, type);
+        }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -105,7 +106,7 @@ namespace WindowsClient
 
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Good Bye, " + Model.getUserNameCurrentuser());
+                this.Alert("GoodBye", Form_Alert.enmType.Leaving);
                 Hide();
                 SignIn signin = new SignIn(Model);
                 signin.Show();
@@ -212,8 +213,6 @@ namespace WindowsClient
 
         private void placeAdvertisementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //PlaceAdvertisement placeAd = new PlaceAdvertisement(Model);
-            //placeAd.Show();
             CreateAdvertStart createAd = new CreateAdvertStart(Model);
             createAd.Show();
         }
@@ -244,8 +243,26 @@ namespace WindowsClient
 
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UserNotifications userNotifications = new UserNotifications(Model);
+            NotificationContainer userNotifications = new NotificationContainer(Model);
             userNotifications.Show();
+        }
+
+        private void reportUser_Click(object sender, EventArgs e)
+        {
+            reportUser reportuser = new reportUser(Model);
+            reportuser.Show();
+        }
+
+        private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditAccount editAccount = new EditAccount();
+            editAccount.Show();
+        }
+
+        private void ReportUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportUser reportuser = new reportUser(Model);
+            reportuser.Show();
         }
     }
 }

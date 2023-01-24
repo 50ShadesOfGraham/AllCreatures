@@ -134,7 +134,11 @@ namespace WindowsClient
             //Reports Panel
             ReportPanel.Visible = false;
         }
-
+        public void Alert(string message, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(message, type);
+        }
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do You Want To Sign Out?",
@@ -143,7 +147,7 @@ namespace WindowsClient
 
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Good Bye, " + Model.getUserNameCurrentuser());
+                this.Alert("GoodBye ", Form_Alert.enmType.Leaving);
                 Hide();
                 SignIn signin = new SignIn(Model);
                 signin.Show();
@@ -169,6 +173,17 @@ namespace WindowsClient
         private void verifyAdsAssessories_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void displayUsers_Click(object sender, EventArgs e)
+        {
+            DisplayUsers displayUsers = new DisplayUsers(Model);
+            displayUsers.Show();
+        }
+
+        private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

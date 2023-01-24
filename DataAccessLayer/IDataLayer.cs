@@ -15,7 +15,7 @@ namespace DataAccessLayer
             string cardholder, string cardnumber, string expirydate, string cvs, string question, string answer);
         public void addNewAccessoriesToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string accesscategory, string accesssubcat);
         public void addNewFoodToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string details);
-        public void addNewDogToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string dogname,string gender,bool purebreed,string breedone,string breedtwo);
+        public void addNewDogToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string dogname,int age,string gender,bool purebreed,string breedone,string breedtwo);
         public void addNewHorseToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status,byte[] imageone,byte[] imagetwo,byte[] imagethree, string animalname, int age, string gender, string size, bool broken, string breed, string purpose);
         public void addNewFarmAnimalToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree,string animaltype,string animalname,int age,string gender,string purpose);
         public void addNewGenericAnimalToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string animalname, int age, string gender, string detailone,string detailtwo,string detailthree);
@@ -37,13 +37,15 @@ namespace DataAccessLayer
         public bool verifyAdvertisement(Advertisement advertisement);
         public bool verifyAdvertisement(Dog dog);
         public bool verifyAdvertisement(Horse horse);
-        public bool verifyAdvertisement(Food food);
         public bool verifyAdvertisement(Accessories accessories);
         public bool verifyAdvertisement(FarmAnimal farmAnimal);
+        public bool verifyAdvertisement(Litter litter);
         public bool deleteAdvertisement(Advertisement advertisement);
         public bool deleteAdvertisement(Dog dog);
         public bool deleteAdvertisement(Horse horse);
         public bool banUserInDB(BusinessEntities.User user);
+        public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId);
+        List<Report> getAllReports();
         void openConnection();
        
     }

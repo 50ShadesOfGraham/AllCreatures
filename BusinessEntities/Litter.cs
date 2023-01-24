@@ -9,6 +9,7 @@ namespace BusinessEntities
     public class Litter : Animal
     {
         #region Instance Properties
+        private int litterId;
         private int littersize;
         private bool purebreed;
         private string breedone;
@@ -35,6 +36,11 @@ namespace BusinessEntities
             get { return breedtwo; }
             set { breedtwo = value; }
         }
+        public int LitterId
+        {
+            get { return litterId; }
+            set { litterId = value; }
+        }
         #endregion
         #region Constructor
         public Litter()
@@ -44,6 +50,7 @@ namespace BusinessEntities
         public Litter(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animalname, string animaltype, int age, string gender, int littersize, bool purebreed, string breedone, string breedtwo)
             : base(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, animalname, animaltype, age, gender)
         {
+            this.litterId = advertid;
             this.littersize = littersize;
             this.purebreed = purebreed;
             this.breedone = breedone;
@@ -53,6 +60,7 @@ namespace BusinessEntities
         public Litter(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string animalname, string animaltype, int age, string gender,int littersize,bool purebreed,string breedone,string breedtwo)
             : base(advertid, selleremail, title, description, price, verified, status,animalname, animaltype, age, gender)
         {
+            this.litterId = advertid;
             this.littersize = littersize;
             this.purebreed = purebreed;
             this.breedone = breedone;

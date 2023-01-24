@@ -16,6 +16,7 @@ namespace DataAccessLayer
         SqlDataAdapter da;
         int maxUsers;
         int maxAdverts;
+        int maxReports;
         SqlCommandBuilder cb;
         #endregion
         #region Static Attributes
@@ -84,7 +85,7 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                    User user = UserCreator.GetUserUpdate(dRow.ItemArray.GetValue(0).ToString(),
                                                         dRow.ItemArray.GetValue(1).ToString(),
                                                         dRow.ItemArray.GetValue(2).ToString(),
                                                         dRow.ItemArray.GetValue(3).ToString(),
@@ -94,7 +95,13 @@ namespace DataAccessLayer
                                                         dRow.ItemArray.GetValue(7).ToString(),
                                                         dRow.ItemArray.GetValue(8).ToString(),
                                                         dRow.ItemArray.GetValue(9).ToString(),
-                                                        dRow.ItemArray.GetValue(10).ToString());
+                                                        dRow.ItemArray.GetValue(10).ToString(),
+                                                        dRow.ItemArray.GetValue(11).ToString(),
+                                                        dRow.ItemArray.GetValue(12).ToString(),
+                                                        dRow.ItemArray.GetValue(13).ToString(),
+                                                        dRow.ItemArray.GetValue(14).ToString(),
+                                                        dRow.ItemArray.GetValue(15).ToString(),
+                                                        dRow.ItemArray.GetValue(16).ToString());
                     UserList.Add(user);
                 }
 
@@ -595,7 +602,7 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
         }
-        public void addNewDogToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname, string gender, bool purebreed, string breedone, string breedtwo)
+        public void addNewDogToDB(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname,int age, string gender, bool purebreed, string breedone, string breedtwo)
         {
             try
             {
@@ -617,15 +624,17 @@ namespace DataAccessLayer
                 dRow[8] = imagetwo;
                 dRow[9] = imagethree;
                 dRow[10] = dogname;
-                dRow[11] = gender;
-                dRow[12] = purebreed;
-                dRow[13] = breedone;
-                dRow[14] = breedtwo;
+                dRow[11] = age;
+                dRow[12] = gender;
+                dRow[13] = purebreed;
+                dRow[14] = breedone;
+                dRow[15] = breedtwo;
                 ds.Tables["DogData"].Rows.Add(dRow);
                 da.Update(ds, "DogData");
             }
             catch (System.Exception excep)
             {
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -966,10 +975,11 @@ namespace DataAccessLayer
 
         public bool verifyAdvertisement(FarmAnimal farmAnimal)
         {
+
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From FarmAnimalAdvertisement";
+                string sql = "SELECT * From FarmAnimaladvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
@@ -991,21 +1001,22 @@ namespace DataAccessLayer
             return true;
         }
 
-        public bool verifyAdvertisement(Food food)
+
+        public bool verifyAdvertisement(Litter litter)
         {
 
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From FoodAdvertisement";
+                string sql = "SELECT * From Litteradvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(food.FoodId);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(litter.LitterId);
                 if (findRow != null)
                 {
-                    findRow[5] = food.Verified;
+                    findRow[5] = litter.Verified;
                 }
                 da.Update(ds, "AdsData");
             }
@@ -1021,11 +1032,10 @@ namespace DataAccessLayer
 
         public bool verifyAdvertisement(Accessories accessories)
         {
-
             try
             {
                 ds = new DataSet();
-                string sql = "SELECT * From AccessoriesAdvertisment";
+                string sql = "SELECT * From AccessoriesAdvertisement";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);
@@ -1033,7 +1043,7 @@ namespace DataAccessLayer
                 DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
                 if (findRow != null)
                 {
-                    findRow[5] = accessories.Verified;
+                    findRow[5] = accessories.AccessoriesID;
                 }
                 da.Update(ds, "AdsData");
             }
@@ -1046,7 +1056,6 @@ namespace DataAccessLayer
             }
             return true;
         }
-
 
         public bool deleteAdvertisement(Advertisement advertisement)
         {
@@ -1167,6 +1176,70 @@ namespace DataAccessLayer
         public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3, string county, string eircode)
         {
             throw new NotImplementedException();
+        }
+
+        public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Reports";
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                SqlCommandBuilder cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "reporData");
+                maxReports = ds.Tables["reporData"].Rows.Count;
+                DataRow dRow = ds.Tables["reporData"].NewRow();
+
+                dRow[0] = reportUser;
+                dRow[1] = reason;
+                dRow[2] = dateTime;
+                dRow[3] = description;
+                dRow[4] = reportId;
+                ds.Tables["reporData"].Rows.Add(dRow);
+                da.Update(ds, "reporData");
+            }
+            catch (System.Exception excep)
+            {
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+        }
+
+        public List<Report> getAllReports()
+        {
+            List<Report> reportList = new List<Report>();
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From Reports";
+                da = new SqlDataAdapter(sql, con);
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "reporData");
+                maxReports = ds.Tables["reporData"].Rows.Count;
+                for (int i = 0; i < maxReports; i++)
+                {
+                    DataRow dRow = ds.Tables["reporData"].Rows[i];
+                    Report report = ReportCreator.GetReport(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        Convert.ToDateTime(dRow.ItemArray.GetValue(2).ToString()),
+                                                        dRow.ItemArray.GetValue(3).ToString(),
+                                                        Convert.ToInt16(dRow.ItemArray.GetValue(4).ToString()));
+
+                    reportList.Add(report);
+
+                }
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+                //Environment.Exit(0); //Force the application to close
+            }
+            return reportList;
         }
     }
 }
