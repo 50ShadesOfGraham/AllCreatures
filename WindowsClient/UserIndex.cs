@@ -29,14 +29,9 @@ namespace WindowsClient
 
         private void UserIndex_Load(object sender, EventArgs e)
         {
-            int counter = 0;
-            foreach(Advertisement advertisement in Model.AdvertList)
-            {
-                counter++;
-            }
-
-            MessageBox.Show("Number of Ads: " + counter);
-
+            Form_LandingPage intro = new Form_LandingPage(Model);
+            FlowLayout.Controls.Add(intro);
+            intro.Show();
             //Animal Panel
             AnimalPanel.Visible = false;
             HousePetPanel.Visible = false;

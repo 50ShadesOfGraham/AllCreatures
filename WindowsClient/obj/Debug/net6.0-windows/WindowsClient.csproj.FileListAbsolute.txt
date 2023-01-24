@@ -356,3 +356,4 @@ C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
 C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Form_Alert.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.Form_LandingPage.resources
