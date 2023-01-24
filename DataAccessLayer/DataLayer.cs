@@ -210,20 +210,21 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxAdverts; i++)
                 {
                     DataRow dRow = ds.Tables["AdvertData"].Rows[i];
-                    FarmAnimal farmAnimal = AdvertisementCreator.GetFarmAnimal(Convert.ToInt32(dRow.ItemArray.GetValue(0)),
+                    FarmAnimal farmAnimal = AdvertisementCreator.GetFarmAnimal(Convert.ToInt16(dRow.ItemArray.GetValue(0)),
                                                                              dRow.ItemArray.GetValue(1).ToString(),
                                                                              dRow.ItemArray.GetValue(2).ToString(),
                                                                              dRow.ItemArray.GetValue(3).ToString(),
                                                                              Convert.ToDouble(dRow.ItemArray.GetValue(4)),
                                                                              Convert.ToBoolean(dRow.ItemArray.GetValue(5)),
                                                                              dRow.ItemArray.GetValue(6).ToString(),
-                                                                             dRow.ItemArray.GetValue(11).ToString(),
                                                                              dRow.ItemArray.GetValue(10).ToString(),
+                                                                             dRow.ItemArray.GetValue(11).ToString(),
                                                                              Convert.ToInt32(dRow.ItemArray.GetValue(12)),
                                                                              dRow.ItemArray.GetValue(13).ToString(),
                                                                              dRow.ItemArray.GetValue(14).ToString()
                                                                              );
-
+                    //int advertid, string selleremail, string title, string description, double price, bool verified, string status, string animalname,
+                    //string animaltype, int age, string gender, string purpose)
                     advertisements.Add(farmAnimal);
                    // MessageBox.Show("Farm Animal: " + farmAnimal.AdvertID + " successfully added");
                 }
@@ -1099,6 +1100,90 @@ namespace DataAccessLayer
 
         }
 
+        public bool deleteAdvertisement(GenericAnimal genericAnimal)
+        {
+
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From GenericAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(genericAnimal.Title);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+
+        }
+
+        public bool deleteAdvertisement(Litter litter)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From LitterAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(litter.Title);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool deleteAdvertisement(Accessories accessories)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From AccessoriesAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.Title);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+
         public bool banUserInDB(User user)
         {
             try
@@ -1197,9 +1282,11 @@ namespace DataAccessLayer
             return reportList;
         }
 
-       /* public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
-        {
-            throw new NotImplementedException();
-        }*/
+     
+
+        /* public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description)
+         {
+             throw new NotImplementedException();
+         }*/
     }
 }
