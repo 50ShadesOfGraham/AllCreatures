@@ -2123,6 +2123,7 @@
             this.LitterNoRadBttn.TabStop = true;
             this.LitterNoRadBttn.Text = "No";
             this.LitterNoRadBttn.UseVisualStyleBackColor = true;
+            this.LitterNoRadBttn.CheckedChanged += new System.EventHandler(this.LitterNoRadBttn_CheckedChanged);
             // 
             // LitterYesRadBttn
             // 
@@ -2136,6 +2137,7 @@
             this.LitterYesRadBttn.TabStop = true;
             this.LitterYesRadBttn.Text = "Yes";
             this.LitterYesRadBttn.UseVisualStyleBackColor = true;
+            this.LitterYesRadBttn.CheckedChanged += new System.EventHandler(this.LitterYesRadBttn_CheckedChanged);
             // 
             // PurebreedLbl
             // 
