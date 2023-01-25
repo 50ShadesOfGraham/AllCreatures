@@ -448,13 +448,21 @@ namespace BusinessLayer
             try
             {
                 int maxReports = 0;
-                foreach (Report report1 in reportList)
+                
+                if(reportList != null)
                 {
-                    if (report1.ReportId > maxReports)
-                        maxReports = report1.ReportId;
+                    reportList.MaxBy(e => e.ReportId);
+                   /* foreach (Report report1 in reportList)
+                    {
+                        if (report1.ReportId > maxReports)
+                            maxReports = report1.ReportId;
+                    }*/
+                   maxReports = reportList.MaxBy(e => e.ReportId).ReportId; 
                 }
+                
 
                 Report report = ReportCreator.GetReport(reportUser, reason, dateTime, description, ++maxReports);
+                reportList ??= new List<Report>();
                 ReportList.Add(report);
                 DataLayer.addNewReportS(reportUser, reason, dateTime, description, ++maxReports);
                 MessageBox.Show(report.Reason);

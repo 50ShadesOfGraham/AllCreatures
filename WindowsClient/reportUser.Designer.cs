@@ -63,7 +63,7 @@
             this.btnReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(124, 34);
-            this.btnReport.TabIndex = 144;
+            this.btnReport.TabIndex = 4;
             this.btnReport.Text = "Report";
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
@@ -80,7 +80,7 @@
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(124, 34);
-            this.btnExit.TabIndex = 145;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "&Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -126,14 +126,14 @@
             this.txtUser.Location = new System.Drawing.Point(360, 24);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(144, 23);
-            this.txtUser.TabIndex = 149;
+            this.txtUser.TabIndex = 1;
             // 
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(312, 115);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(192, 100);
-            this.txtDesc.TabIndex = 150;
+            this.txtDesc.TabIndex = 3;
             this.txtDesc.Text = "";
             // 
             // comboReason
@@ -147,7 +147,7 @@
             this.comboReason.Location = new System.Drawing.Point(360, 68);
             this.comboReason.Name = "comboReason";
             this.comboReason.Size = new System.Drawing.Size(144, 23);
-            this.comboReason.TabIndex = 151;
+            this.comboReason.TabIndex = 2;
             // 
             // reportUser
             // 

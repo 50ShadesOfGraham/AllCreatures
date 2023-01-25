@@ -24,6 +24,7 @@ namespace WindowsClient
                 panelAccess.Visible = false;
                 panelFood.Visible = false;
                 panelHorse.Visible = false;
+                panelLitter.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 1) //food
             {
@@ -36,6 +37,7 @@ namespace WindowsClient
                 panelDog.Visible = false;
                 panelHorse.Visible = false;
                 panelGeneric.Visible = false;
+                panelLitter.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 2) //Accessories
             {
@@ -48,6 +50,7 @@ namespace WindowsClient
                 panelDog.Visible = false;
                 panelHorse.Visible = false;
                 panelGeneric.Visible = false;
+                panelLitter.Visible = false;
             }
         }
 
@@ -60,6 +63,7 @@ namespace WindowsClient
             panelfoodBtn.Visible= false;
             panelAccess.Visible = false;
             panelGeneric.Visible = false;
+            panelLitter.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -107,6 +111,7 @@ namespace WindowsClient
                     txtGender.Text=animal.Gender;
                     panelDog.Visible = false;
                     panelHorse.Visible = false;
+                    panelLitter.Visible = false;    
 
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
@@ -125,6 +130,7 @@ namespace WindowsClient
                         txtHBroken.Text =horse.Broken.ToString();
                         txtHPurpose.Text = horse.Purpose;
                         panelGeneric.Visible = false;
+                        panelLitter.Visible = false;
                     }
 
                     if (animal is Dog dog)
@@ -132,6 +138,7 @@ namespace WindowsClient
                         txtBreed.Text = dog.Purebreed.ToString();
                         panelDog.Visible = true;
                         panelGeneric.Visible = false;
+                        panelLitter.Visible = false;
                     }
                     if(animal is GenericAnimal generic)
                     {
@@ -140,7 +147,17 @@ namespace WindowsClient
                         txtDetail1.Text = generic.DetailOne;
                         txtDetail2.Text = generic.DetailTwo;
                         txtDetail3.Text = generic.DetailThree;
-                        
+                        panelLitter.Visible = false;
+
+                    }
+                    if(animal is Litter litter)
+                    {
+                        panelLitter.Visible = true;
+                        txtAnimalType.Text = litter.AnimalType;
+                        txtLitterBr1.Text = litter.BreedOne;
+                        txtLitterBr2.Text = litter.BreedTwo;
+                        txtLitterSize.Text = litter.LitterSize.ToString();
+                        txtLitterPure.Text = litter.Purebreed.ToString() ;
                     }
 
                 }
@@ -295,7 +312,7 @@ namespace WindowsClient
                     if(advertisement is Food food) 
                     {
                         txtType.Text = food.AnimalType;
-                        txtDetail1.Text = food.Details;
+                        txtDetails.Text = food.Details;
                     }
                 }
             }
@@ -357,28 +374,28 @@ namespace WindowsClient
                         if(advertisement is GenericAnimal genericAdvert)
                         {
                             model.deleteAdvertisement(genericAdvert);
-                           // listboxAni.Items.Remove(listboxAni.SelectedItem);
+                            listboxAni.Items.Remove(listboxAni.SelectedItem);
                             MessageBox.Show(genericAdvert.Title);
                             break;
                         }
                         if(advertisement is FarmAnimal farm)
                         {
                             model.deleteAdvertisement(farm);
-                          //  listboxAni.Items.Remove(listboxAni.SelectedItem);
+                            listboxAni.Items.Remove(listboxAni.SelectedItem);
                             MessageBox.Show(farm.Title);
                             break;
                         }
                         if(advertisement is FarmAnimal farmAnimal)
                         {
                             model.deleteAdvertisement(farmAnimal);
-                            //listboxAni.Items.Remove(listboxAni.SelectedItem);
+                            listboxAni.Items.Remove(listboxAni.SelectedItem);
                             MessageBox.Show(farmAnimal.Title);
                             break;
                         }
                         if(advertisement is Litter litter)
                         {
                             model.deleteAdvertisement(litter);
-                           // listboxAni.Items.Remove(listboxAni.SelectedItem);
+                            listboxAni.Items.Remove(listboxAni.SelectedItem);
                             MessageBox.Show(litter.Title);
                             break;
                         }

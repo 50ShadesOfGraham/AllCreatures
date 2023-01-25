@@ -41,6 +41,7 @@ namespace DataAccessLayer
         public bool verifyAdvertisement(FarmAnimal farmAnimal);
         public bool verifyAdvertisement(Litter litter);
         public bool verifyAdvertisement(GenericAnimal genericAnimal);
+        public bool verifyAdvertisement(Food food);
         public bool deleteAdvertisement(Advertisement advertisement);
         public bool deleteAdvertisement(Dog dog);
         public bool deleteAdvertisement(Horse horse);

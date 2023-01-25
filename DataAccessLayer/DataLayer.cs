@@ -1090,7 +1090,34 @@ namespace DataAccessLayer
                 DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
                 if (findRow != null)
                 {
-                    findRow[5] = accessories.AccessoriesID;
+                    findRow[5] = accessories.Verified;
+                }
+                da.Update(ds, "AdsData");
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool verifyAdvertisement(Food food)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FoodAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(food.FoodId);
+                if (findRow != null)
+                {
+                    findRow[5] = food.Verified;
                 }
                 da.Update(ds, "AdsData");
             }
