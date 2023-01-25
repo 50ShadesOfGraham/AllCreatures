@@ -156,8 +156,8 @@ namespace BusinessEntities
             throw new System.NotImplementedException();
         }
 
-        public User(string email, string firstname,string lastname,
-            string password,bool verified, 
+        public User(string email, string password, string firstname,string lastname
+           ,bool verified, 
             string userType,string address1,
             string address2,string address3,
             string county,string eircode)

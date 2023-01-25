@@ -163,27 +163,27 @@ namespace WindowsClient
                     {
                         model.verifyAdvertisement(dog);
                     }
-                    else if (advertisement is Horse horse)
+                    if (advertisement is Horse horse)
                     {
                         model.verifyAdvertisement(horse);
                     }
-                    else if (advertisement is FarmAnimal farmAnimal)
+                    if (advertisement is FarmAnimal farmAnimal)
                     {
                         model.verifyAdvertisement(farmAnimal);
                     }
-                    else if (advertisement is Litter litter)
+                     if (advertisement is Litter litter)
                     {
                         model.verifyAdvertisement(litter);
                     }
-                    else if (advertisement is GenericAnimal generic)
+                     if (advertisement is GenericAnimal generic)
                     {
                         model.verifyAdvertisement(generic);
                     }
-                    break;
+                    //break;
 
                 }
                 
-                if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
+               /* if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
                     if (advertisement is Accessories accessories)
@@ -200,7 +200,7 @@ namespace WindowsClient
                         model.verifyAdvertisement(food);
                     }
                     break;
-                }
+                }*/
 
         }
             MessageBox.Show("Success");
@@ -330,48 +330,52 @@ namespace WindowsClient
 
                 if (advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
-                   if(advertisement is Dog dog) 
-                    {
-                        model.deleteAdvertisement(dog);
-                        listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(dog.AnimalName);
-                        break;
+                if(advertisement is Dog dog) 
+                {
+                    model.deleteAdvertisement(dog);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    MessageBox.Show(dog.AnimalName);
+                    break;
                         
-                    }
-                   else if(advertisement is Horse horse)
-                    {
-                        model.deleteAdvertisement(horse);
-                        listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(horse.Title);
-                    }else if(advertisement is GenericAnimal genericAdvert)
-                    {
-                        model.deleteAdvertisement(genericAdvert);
-                        listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(genericAdvert.Title);
-                    }else if(advertisement is FarmAnimal farm)
-                    {
-                        model.deleteAdvertisement(farm);
-                        listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(farm.Title);
-                    }else if(advertisement is FarmAnimal farmAnimal)
-                    {
-                        model.deleteAdvertisement(farmAnimal);
-                        listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(farmAnimal.Title);
-                    }else if(advertisement is Litter litter)
-                    {
-                        model.deleteAdvertisement(litter);
-                        listboxAni.Items.Remove(listboxAni.SelectedItem);
-                        MessageBox.Show(litter.Title);
-                    }
+                }
+                if(advertisement is Horse horse)
+                {
+                    model.deleteAdvertisement(horse);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    MessageBox.Show(horse.Title);
+                }
+                if(advertisement is GenericAnimal genericAdvert)
+                {
+                    model.deleteAdvertisement(genericAdvert);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    MessageBox.Show(genericAdvert.Title);
+                }
+                if(advertisement is FarmAnimal farm)
+                {
+                    model.deleteAdvertisement(farm);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    MessageBox.Show(farm.Title);
+                }
+                if(advertisement is FarmAnimal farmAnimal)
+                {
+                    model.deleteAdvertisement(farmAnimal);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    MessageBox.Show(farmAnimal.Title);
+                }
+                if(advertisement is Litter litter)
+                {
+                    model.deleteAdvertisement(litter);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    MessageBox.Show(litter.Title);
+                }
                    /* model.deleteAdvertisement(advertisement);
                     listboxAni.Items.Remove(listboxAni.SelectedItem);
                     break;
                     MessageBox.Show("Success");*/
                 }
-                }
-                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                    return;
+             }
+                /*if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;*/
 
             }
          
