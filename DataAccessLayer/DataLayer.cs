@@ -1068,7 +1068,7 @@ namespace DataAccessLayer
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.Title);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.AdvertID);
                 if (findRow != null)
                 {
                     findRow.Delete(); //mark row as deleted
@@ -1126,7 +1126,7 @@ namespace DataAccessLayer
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.Title);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.HorseId);
                 if (findRow != null)
                 {
                     findRow.Delete(); //mark row as deleted
@@ -1240,6 +1240,87 @@ namespace DataAccessLayer
                 //Environment.Exit(0); //Force the application to close
             }
             return reportList;
+        }
+
+        public bool deleteAdvertisement(Accessories accessories)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From AccessoriesAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.Title);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool deleteAdvertisement(FarmAnimal farmAnimal)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From FarmAnimalAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(farmAnimal.FarmId);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
+        }
+
+        public bool deleteAdvertisement(Litter litter)
+        {
+            try
+            {
+                ds = new DataSet();
+                string sql = "SELECT * From LitterAdvertisement";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);  //Generates
+                da.Fill(ds, "AdsData");
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(litter.LitterId);
+                if (findRow != null)
+                {
+                    findRow.Delete(); //mark row as deleted
+                }
+                da.Update(ds, "AdsData"); //remove row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (getConnection().ToString() == "Open")
+                    closeConnection();
+                System.Windows.Forms.Application.Exit();
+            }
+            return true;
         }
     }
 }

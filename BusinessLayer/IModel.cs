@@ -42,6 +42,7 @@ namespace BusinessLayer
         bool verifyAdvertisement(Food food);
         bool verifyAdvertisement(GenericAnimal genericAnimal);
         bool verifyAdvertisement(Litter litter);
+        bool verifyAdvertisement(FarmAnimal farmAnimal);
         bool deleteAdvertisement(Advertisement advertisement);
         bool deleteAdvertisement(Horse horse);
         bool deleteAdvertisement(Dog dog);
@@ -49,6 +50,7 @@ namespace BusinessLayer
         bool deleteAdvertisement(Food food);
         bool deleteAdvertisement(GenericAnimal genericAnimal);
         bool deleteAdvertisement(Litter litter);
+        bool deleteAdvertisement(FarmAnimal farmAnimal);
         bool banUserInDB(BusinessEntities.User user);
         bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description);
     }

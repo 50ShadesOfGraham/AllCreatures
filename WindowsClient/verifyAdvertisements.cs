@@ -183,7 +183,7 @@ namespace WindowsClient
 
                 }
                 
-                if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
+               /* if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
                     if (advertisement is Accessories accessories)
@@ -200,22 +200,9 @@ namespace WindowsClient
                         model.verifyAdvertisement(food);
                     }
                     break;
-                }
-                //Put into own button
-                //foreach (Advertisement ad in model.AdvertList.OfType<Accessories>())
-                //{
-                //    if (ad.Title == listBoxAssess.SelectedItem.ToString())
-                //    {
-                //        ad.Verified = true;
-                //        if (ad is Accessories accessories)
-                //        {
-                //            model.verifyAdvertisement(accessories);
-                //        }
-                //        break;
-                //    }
-                //}
+                }*/
 
-            }
+        }
             MessageBox.Show("Success");
 
         }
@@ -382,7 +369,7 @@ namespace WindowsClient
 /*                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
                     return;*/
 
-            }
+            //}
          
                 
         }
