@@ -5,6 +5,7 @@ using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
 using User = BusinessEntities.User;
+using System.Diagnostics;
 
 namespace DataAccessLayer
 {
@@ -55,14 +56,6 @@ namespace DataAccessLayer
                 Environment.Exit(0); //Force the application to close
             }
         }
-        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
-        {
-            using (var ms = new MemoryStream())
-            {
-                imageIn.Save(ms, imageIn.RawFormat);
-                return ms.ToArray();
-            }
-        }
         public void closeConnection()
         {
             con.Close();
@@ -85,17 +78,23 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
-                                                        dRow.ItemArray.GetValue(1).ToString(),
-                                                        dRow.ItemArray.GetValue(2).ToString(),
-                                                        dRow.ItemArray.GetValue(3).ToString(),
-                                                        Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
-                                                        dRow.ItemArray.GetValue(5).ToString(),
-                                                        dRow.ItemArray.GetValue(6).ToString(),
-                                                        dRow.ItemArray.GetValue(7).ToString(),
-                                                        dRow.ItemArray.GetValue(8).ToString(),
-                                                        dRow.ItemArray.GetValue(9).ToString(),
-                                                        dRow.ItemArray.GetValue(10).ToString());
+                    User user = UserCreator.GetUserUpdate(dRow.ItemArray.GetValue(0).ToString(),
+                                                          dRow.ItemArray.GetValue(1).ToString(),
+                                                          dRow.ItemArray.GetValue(2).ToString(),
+                                                          dRow.ItemArray.GetValue(3).ToString(),
+                                                          Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
+                                                          dRow.ItemArray.GetValue(5).ToString(),
+                                                          dRow.ItemArray.GetValue(6).ToString(),
+                                                          dRow.ItemArray.GetValue(7).ToString(),
+                                                          dRow.ItemArray.GetValue(8).ToString(),
+                                                          dRow.ItemArray.GetValue(9).ToString(),
+                                                          dRow.ItemArray.GetValue(10).ToString(),
+                                                          dRow.ItemArray.GetValue(11).ToString(),
+                                                        dRow.ItemArray.GetValue(12).ToString(),
+                                                        dRow.ItemArray.GetValue(13).ToString(),
+                                                        dRow.ItemArray.GetValue(14).ToString(),
+                                                        dRow.ItemArray.GetValue(15).ToString(),
+                                                        dRow.ItemArray.GetValue(16).ToString());
                     UserList.Add(user);
                 }
 
@@ -103,7 +102,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Datalayer: User" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 Application.Exit();
@@ -146,7 +151,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -188,7 +199,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -228,7 +245,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -270,7 +293,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -313,7 +342,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -350,7 +385,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -387,7 +428,13 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                MessageBox.Show(excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -410,7 +457,13 @@ namespace DataAccessLayer
             }
             catch(Exception excep)
             {
-                MessageBox.Show("Notifications: " + excep.Message);
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+
+                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();

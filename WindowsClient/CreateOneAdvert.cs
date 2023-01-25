@@ -48,6 +48,11 @@ namespace WindowsClient
                 return ms.ToArray();
             }
         }
+        public void Alert(string message, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(message, type);
+        }
         private void CreateOneAdvert_Load(object sender, EventArgs e)
         {
             IntroPanel.Visible = true;
@@ -214,10 +219,8 @@ namespace WindowsClient
                     if (Model.addNewFoodAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, animalfood, DetailTxt.Text))
                     {
-                        System.Windows.Forms.MessageBox.Show("Food Added");
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -235,7 +238,7 @@ namespace WindowsClient
                             }
                             else if (isBundle.Equals(false))
                             {
-                                Close();
+                                this.Hide();
                             }
                         }
                     }
@@ -436,9 +439,8 @@ namespace WindowsClient
                     if (Model.addNewAccessoriesAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, AccessCat, AccessSubCat))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string notificationtitle = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -637,7 +639,7 @@ namespace WindowsClient
                         }
                         break;
                     case "Litter":
-                        if (AnimalType.Equals("Dog"))
+                        if (AnimalType.Equals("Dogs"))
                         {
                             IntroPanel.Visible = false;
                             FileUploadPanel.Visible = false;
@@ -656,7 +658,7 @@ namespace WindowsClient
                             LitterYesRadBttn.Checked = true;
                             LitterNoRadBttn.Checked = false;
                         }
-                        else if (AnimalType.Equals("Cat"))
+                        else if (AnimalType.Equals("Cats"))
                         {
                             IntroPanel.Visible = false;
                             FileUploadPanel.Visible = false;
@@ -796,9 +798,8 @@ namespace WindowsClient
                            HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
                            HorsePurposeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                       "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string notificationtitle = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -978,10 +979,11 @@ namespace WindowsClient
                         ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                     }
                     bool isPurebred = false;
-                if(string.IsNullOrEmpty(DogBreedTwo)) { isPurebred = true; }
-                if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
-                            DogNameTxt.Text,Convert.ToInt32(DogAgeTxt.Text), DogGender, isPurebred, DogBreedOne, DogBreedTwo))
-                {
+                    if (DogPurebreedYesRadBttn.Checked.Equals(true))
+                    {
+                        if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                            DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, true, DogBreedOne, DogBreedTwo))
+                        {
                             string message = "Item #" + AdvertID + " has been added to our system. " +
                            "Admin must verify item before advertisement is made public";
                             string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
@@ -992,7 +994,10 @@ namespace WindowsClient
                                 if (isBundle.Equals(true) && NoItems.Equals(1))
                                 {
                                     //Create Bundle
-                                    if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                    if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                    {
+                                        this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                    }
                                     Close();
                                 }
                                 else if (isBundle.Equals(true) && NoItems > 1)
@@ -1002,10 +1007,47 @@ namespace WindowsClient
                                 }
                                 else if (isBundle.Equals(false))
                                 {
+                                    this.Alert("Advertisement Created", Form_Alert.enmType.Success);
                                     Close();
                                 }
                             }
                         }
+                        else if (DogPurebreedNoBttn.Checked.Equals(true))
+                        {
+                            if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                                 DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, true, DogBreedOne, DogBreedTwo))
+                            {
+                                string message = "Item #" + AdvertID + " has been added to our system. " +
+                               "Admin must verify item before advertisement is made public";
+                                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                                int notifID = 0;
+                                do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
+                                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                                {
+                                    if (isBundle.Equals(true) && NoItems.Equals(1))
+                                    {
+                                        //Create Bundle
+                                        if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                        {
+                                            this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                        }
+                                        Close();
+                                    }
+                                    else if (isBundle.Equals(true) && NoItems > 1)
+                                    {
+                                        NoItems--;
+                                        //ResetForm(this); //Resetting back to original state
+                                    }
+                                    else if (isBundle.Equals(false))
+                                    {
+                                        this.Alert("Advertisement Created", Form_Alert.enmType.Success);
+                                        Close();
+                                    }
+                                }
+                            }
+
+                        }
+                    }
                 }
                 catch (Exception excep)
                 {
@@ -1113,9 +1155,8 @@ namespace WindowsClient
                     if (Model.addNewFarmAnimalAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                            ImageTwo, ImageThree, AnimalType, FANameTxt.Text, Convert.ToInt32(FAAgeTxt.Text), FarmGender, FAPurposeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -1123,7 +1164,10 @@ namespace WindowsClient
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
@@ -1264,9 +1308,8 @@ namespace WindowsClient
                     if (Model.addNewGenericAnimalAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
                         AnimalType, GANameTxt.Text, Convert.ToInt32(GAAgeTxt.Text), GAGender, DetailOneTxt.Text, DetailTwoTxt.Text, DetailThreeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                           "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -1274,7 +1317,10 @@ namespace WindowsClient
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
@@ -1284,6 +1330,7 @@ namespace WindowsClient
                             }
                             else if (isBundle.Equals(false))
                             {
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
                                 Close();
                             }
                         }
@@ -1489,9 +1536,8 @@ namespace WindowsClient
                     if (Model.addNewLitterAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, AnimalType, Convert.ToInt32(LitterSizeTxt.Text), Convert.ToInt32(LitterAgeTxt.Text), isPurebreed, LitterBreedOne, LitterBreedTwo))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system. " +
-                        "Admin must verify item before advertisement is made public";
-                        string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                        string message = "Item #" + AdvertID + " has been added to our system.";
+                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
                         if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
@@ -1499,7 +1545,10 @@ namespace WindowsClient
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
@@ -1509,6 +1558,7 @@ namespace WindowsClient
                             }
                             else if (isBundle.Equals(false))
                             {
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
                                 Close();
                             }
                         }
@@ -1527,6 +1577,88 @@ namespace WindowsClient
 
             }
             
+        }
+
+        private void PriceTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HorseAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(HorseAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                HorseAgeTxt.Text = HorseAgeTxt.Text.Remove(HorseAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void DogAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(DogAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                DogAgeTxt.Text = DogAgeTxt.Text.Remove(DogAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void FAAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(FAAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                FAAgeTxt.Text = FAAgeTxt.Text.Remove(FAAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void GAAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(GAAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                GAAgeTxt.Text = GAAgeTxt.Text.Remove(GAAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void LitterAgeTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(LitterAgeTxt.Text, "[^0-9]"))
+            {
+                //MessageBox.Show("Please enter only numbers.");
+                LitterAgeTxt.Text = LitterAgeTxt.Text.Remove(LitterAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void LitterYesRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            string AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
+            if(AnimalType.Equals("Dogs"))
+            {
+                DogLPurebredPanel.Visible = true;
+                DogLNotPanel.Visible = false;
+            }
+
+            if(AnimalType.Equals("Cats"))
+            {
+                CatLPurebredPanel.Visible = true;
+                CatLNotPanel.Visible = false;
+            }
+        }
+
+        private void LitterNoRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            string AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
+            if (AnimalType.Equals("Dogs"))
+            {
+                DogLPurebredPanel.Visible = false;
+                DogLNotPanel.Visible = true;
+            }
+
+            if (AnimalType.Equals("Cats"))
+            {
+                CatLPurebredPanel.Visible = false;
+                CatLNotPanel.Visible = true;
+            }
         }
     }
 }
