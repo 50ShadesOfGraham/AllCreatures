@@ -639,7 +639,7 @@ namespace WindowsClient
                         }
                         break;
                     case "Litter":
-                        if (AnimalType.Equals("Dog"))
+                        if (AnimalType.Equals("Dogs"))
                         {
                             IntroPanel.Visible = false;
                             FileUploadPanel.Visible = false;
@@ -658,7 +658,7 @@ namespace WindowsClient
                             LitterYesRadBttn.Checked = true;
                             LitterNoRadBttn.Checked = false;
                         }
-                        else if (AnimalType.Equals("Cat"))
+                        else if (AnimalType.Equals("Cats"))
                         {
                             IntroPanel.Visible = false;
                             FileUploadPanel.Visible = false;
@@ -1626,6 +1626,38 @@ namespace WindowsClient
             {
                 //MessageBox.Show("Please enter only numbers.");
                 LitterAgeTxt.Text = LitterAgeTxt.Text.Remove(LitterAgeTxt.Text.Length - 1);
+            }
+        }
+
+        private void LitterYesRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            string AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
+            if(AnimalType.Equals("Dogs"))
+            {
+                DogLPurebredPanel.Visible = true;
+                DogLNotPanel.Visible = false;
+            }
+
+            if(AnimalType.Equals("Cats"))
+            {
+                CatLPurebredPanel.Visible = true;
+                CatLNotPanel.Visible = false;
+            }
+        }
+
+        private void LitterNoRadBttn_CheckedChanged(object sender, EventArgs e)
+        {
+            string AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
+            if (AnimalType.Equals("Dogs"))
+            {
+                DogLPurebredPanel.Visible = false;
+                DogLNotPanel.Visible = true;
+            }
+
+            if (AnimalType.Equals("Cats"))
+            {
+                CatLPurebredPanel.Visible = false;
+                CatLNotPanel.Visible = true;
             }
         }
     }
