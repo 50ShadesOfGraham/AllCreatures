@@ -447,7 +447,7 @@ namespace BusinessLayer
         {
             try
             {
-                int maxReports = 0;
+                int maxReports = 9421;
                 
                 if(reportList != null)
                 {

@@ -14,7 +14,7 @@ namespace WindowsClient
 
         private void AdCatComboBx_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (AdCatComboBx.SelectedIndex == 0)
+            if (AdCatComboBx.SelectedIndex == 0) //Animal   
             {
                 panelAnimalsBtn.Visible = true;
                 panelDog.Visible = false;
@@ -26,7 +26,7 @@ namespace WindowsClient
                 panelHorse.Visible = false;
                 panelLitter.Visible = false;
             }
-            else if (AdCatComboBx.SelectedIndex == 1)
+            else if (AdCatComboBx.SelectedIndex == 1) //Food
             {
                 panelfoodBtn.Visible = true;
                 panelAnimalsDisp.Visible = false;
@@ -39,7 +39,7 @@ namespace WindowsClient
                 panelGeneric.Visible = false;
                 panelLitter.Visible = false;
             }
-            else if (AdCatComboBx.SelectedIndex == 2)
+            else if (AdCatComboBx.SelectedIndex == 2)//Accessories
             {
                 panelAssBtn.Visible = true;
                 panelAnimalsDisp.Visible = false;
@@ -167,64 +167,73 @@ namespace WindowsClient
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            foreach (Advertisement advertisement in model.AdvertList)
+            if (AdCatComboBx.SelectedIndex == 0)
             {
-
-
-                if (advertisement.Title == listboxAni.SelectedItem.ToString())
+                foreach (Advertisement advertisement in model.AdvertList)
                 {
-                    advertisement.Verified = true;
-                    if (advertisement is Dog dog)
+                    if (advertisement.Title == listboxAni.SelectedItem.ToString())
                     {
-                        model.verifyAdvertisement(dog);
+                        advertisement.Verified = true;
+                        if (advertisement is Dog dog)
+                        {
+                            model.verifyAdvertisement(dog);
+                        }
+                        if (advertisement is Horse horse)
+                        {
+                            model.verifyAdvertisement(horse);
+                        }
+                        if (advertisement is FarmAnimal farmAnimal)
+                        {
+                            model.verifyAdvertisement(farmAnimal);
+                        }
+                        if (advertisement is Litter litter)
+                        {
+                            model.verifyAdvertisement(litter);
+                        }
+                        if (advertisement is GenericAnimal generic)
+                        {
+                            model.verifyAdvertisement(generic);
+                        }
+                        //break;
+
                     }
-                    else if (advertisement is Horse horse)
-                    {
-                        model.verifyAdvertisement(horse);
-                    }
-                    else if (advertisement is FarmAnimal farmAnimal)
-                    {
-                        model.verifyAdvertisement(farmAnimal);
-                    }
-                    else if (advertisement is Litter litter)
-                    {
-                        model.verifyAdvertisement(litter);
-                    }
-                    else if (advertisement is GenericAnimal generic)
-                    {
-                        model.verifyAdvertisement(generic);
-                    }
-                    break;
 
                 }
+            }
+            else if (AdCatComboBx.SelectedIndex == 1)
+            {
+                foreach (Food food1 in model.AdvertList.OfType<Food>())
+                {
+                    if (food1.Title == listBoxFood.SelectedItem.ToString())
+                    {
+                        food1.Verified = true;
+                        model.verifyAdvertisement(food1);
+                        break;
+                    }
+                }
 
-                if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
-                 {
-                     advertisement.Verified = true;
-                     if (advertisement is Accessories accessories)
-                     {
-                         model.verifyAdvertisement(accessories);
-                     }
-                     break;
-                 }
-                 if (advertisement.Title == listBoxFood.SelectedItem.ToString())
-                 {
-                     advertisement.Verified = true;
-                     if (advertisement is Food food)
-                     {
-                         model.verifyAdvertisement(food);
-                     }
-                     break;
-                 }
-               
+            }
+            else if (AdCatComboBx.SelectedIndex == 2)
+            {
+                foreach (Accessories accessories1 in model.AdvertList.OfType<Accessories>())
+                {
+                    if (accessories1.Title == listBoxAssess.SelectedItem.ToString())
+                    {
+                        accessories1.Verified = true;
+                        model.verifyAdvertisement(accessories1);
+                        break;
+                    }
 
-         }
-             MessageBox.Show("Success");
+                }
+            }
 
-         }
 
-         private void listboxAni_SelectedIndexChanged(object sender, EventArgs e)
+
+            MessageBox.Show("Sucessfully verifed Advertisement");
+
+        }
+
+        private void listboxAni_SelectedIndexChanged(object sender, EventArgs e)
          {
 
          }
@@ -341,39 +350,44 @@ namespace WindowsClient
                         {
                             model.deleteAdvertisement(dog);
                             listboxAni.Items.Remove(listboxAni.SelectedItem);
-                            MessageBox.Show(dog.AnimalName);
+                            MessageBox.Show(dog.Title + " Was deleted");
                             break;
 
                         }
-                        else if (advertisement is Horse horse)
+                       if (advertisement is Horse horse)
                         {
                             model.deleteAdvertisement(horse);
                             listboxAni.Items.Remove(listboxAni.SelectedItem);
-                            MessageBox.Show(horse.Title);
+                            MessageBox.Show(horse.Title + " Was deleted");
+                            break;
                         }
-                        else if (advertisement is GenericAnimal genericAdvert)
+                         if (advertisement is GenericAnimal genericAdvert)
                         {
                             model.deleteAdvertisement(genericAdvert);
                             listboxAni.Items.Remove(listboxAni.SelectedItem);
-                            MessageBox.Show(genericAdvert.Title);
+                            MessageBox.Show(genericAdvert.Title + " Was deleted");
+                            break;
                         }
-                        else if (advertisement is FarmAnimal farm)
+                         if (advertisement is FarmAnimal farm)
                         {
                             model.deleteAdvertisement(farm);
                             listboxAni.Items.Remove(listboxAni.SelectedItem);
-                            MessageBox.Show(farm.Title);
+                            MessageBox.Show(farm.Title + " Was deleted");
+                            break;
                         }
-                        else if (advertisement is FarmAnimal farmAnimal)
+                         if (advertisement is FarmAnimal farmAnimal)
                         {
                             model.deleteAdvertisement(farmAnimal);
                             listboxAni.Items.Remove(listboxAni.SelectedItem);
-                            MessageBox.Show(farmAnimal.Title);
+                            MessageBox.Show(farmAnimal.Title + " Was deleted");
+                            break;
                         }
-                        else if (advertisement is Litter litter)
+                       if (advertisement is Litter litter)
                         {
                             model.deleteAdvertisement(litter);
                             listboxAni.Items.Remove(listboxAni.SelectedItem);
-                            MessageBox.Show(litter.Title);
+                            MessageBox.Show(litter.Title + " Was deleted");
+                            break;
                         }
                         /* model.deleteAdvertisement(advertisement);
                          listboxAni.Items.Remove(listboxAni.SelectedItem);
@@ -381,12 +395,32 @@ namespace WindowsClient
                          MessageBox.Show("Success");*/
                     }
                 }
-                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
-                    return;
+               /* if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;*/
 
                 //}
 
 
+            }
+            if (AdCatComboBx.SelectedIndex == 1)
+            {
+                foreach(Food food in model.AdvertList.OfType<Food>()) 
+                {
+                    model.deleteAdvertisement(food);
+                    listBoxFood.Items.Remove(listBoxFood.SelectedItem);
+                    MessageBox.Show(food.Title + " Was deleted");
+                    break;
+                }
+            }
+            if (AdCatComboBx.SelectedIndex == 2)
+            {
+                foreach(Accessories accessories in model.AdvertList.OfType<Accessories>()) 
+                {
+                    model.deleteAdvertisement(accessories);
+                    listBoxAssess.Items.Remove(listBoxAssess.SelectedItem);
+                    MessageBox.Show(accessories.Title + " Was deleted");
+                    break;
+                }
             }
 
             //private void panelGeneric_Paint(object sender, PaintEventArgs e)
