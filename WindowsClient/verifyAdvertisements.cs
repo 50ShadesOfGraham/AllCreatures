@@ -1,6 +1,6 @@
 ﻿using BusinessEntities;
 using BusinessLayer;
-
+using System.Drawing;
 namespace WindowsClient
 {
     public partial class verifyAdvertisements : Form
@@ -112,6 +112,24 @@ namespace WindowsClient
                         panelDog.Visible = false;
                         panelHorse.Visible = false;
                         panelLitter.Visible = false;
+                    lbluserEmail.Text = animal.SellerEmail;
+                   /*     //pictureBox = animal.ImageOne;
+                    byte[] imagedata = animal.ImageOne;
+                    using (MemoryStream ms = new MemoryStream(imagedata))
+                    {
+                        Image image = Image.FromStream(ms);
+                        pictureBox.Image = image;
+                        
+                    }
+                    if (imagedata != null)
+                    {
+                        using (MemoryStream ms = new MemoryStream(imagedata))
+                        {
+                            Image image = Image.FromStream(ms);
+                            pictureBox.Image = image;
+                        }
+                    }*/
+
 
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
@@ -147,11 +165,12 @@ namespace WindowsClient
                             txtDetail1.Text = generic.DetailOne;
                             txtDetail2.Text = generic.DetailTwo;
                             txtDetail3.Text = generic.DetailThree;
-                        panelLitter.Visible = false;
+                            panelLitter.Visible = false;
 
                     }
                     if (animal is Litter litter)
                         {
+                        panelGeneric.Visible = false;
                         txtLitterBr1.Text = litter.BreedOne;
                         txtLitterBr2.Text = litter.BreedTwo;
                         txtLitterPure.Text = litter.Purebreed.ToString() ;
@@ -259,8 +278,7 @@ namespace WindowsClient
         {
             txtTitle.Text = listBoxAssess.SelectedItem.ToString();
 
-            foreach (Advertisement
-                advertisement in model.AdvertList.OfType<Accessories>())
+            foreach (Advertisement advertisement in model.AdvertList.OfType<Accessories>())
             {
                 if (advertisement.Title == txtTitle.Text)
                 {
@@ -270,12 +288,14 @@ namespace WindowsClient
                     txtVerified.Text = advertisement.Verified.ToString();
                     txtPrice.Text = advertisement.Price.ToString();
                     txtStat.Text = advertisement.Status.ToString();
+                    lbluserEmail.Text = advertisement.SellerEmail;
                     /*txtType.Text = advertisement.animalType*/ //Animal type missing from class
                     if (advertisement is Accessories accessories)
                     {
                         //txtType.Text = accessories.details
                         txtAccessCat.Text = accessories.AccessCategory.ToString();
                         txtSubCat.Text = accessories.SubAccessCategory.ToString();
+                       
                     }
                 }
 
@@ -296,11 +316,13 @@ namespace WindowsClient
                     txtVerified.Text = advertisement.Verified.ToString();
                     txtPrice.Text = advertisement.Price.ToString();
                     txtStat.Text = advertisement.Status.ToString();
+                    
 
                     if (advertisement is Food food)
                     {
                         txtType.Text = food.AnimalType;
                         txtDetail1.Text = food.Details;
+                        lbluserEmail.Text = advertisement.SellerEmail;
                     }
                 }
             }

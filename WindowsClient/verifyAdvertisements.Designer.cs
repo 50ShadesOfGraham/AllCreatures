@@ -51,11 +51,11 @@
             this.txtType = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
             this.txtAnimalType = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.txtGender = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDetail1 = new System.Windows.Forms.RichTextBox();
@@ -100,9 +100,11 @@
             this.txtDetails = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panelDog = new System.Windows.Forms.Panel();
-            this.PictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lbluserEmail = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.panelAssBtn.SuspendLayout();
             this.panelAnimalsBtn.SuspendLayout();
@@ -114,7 +116,7 @@
             this.panelAccess.SuspendLayout();
             this.panelFood.SuspendLayout();
             this.panelDog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // AdCatComboBx
@@ -381,17 +383,17 @@
             this.txtAnimalType.Size = new System.Drawing.Size(143, 19);
             this.txtAnimalType.TabIndex = 127;
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 41);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 21);
-            this.label1.TabIndex = 128;
-            this.label1.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(29, 41);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(56, 21);
+            this.lblName.TabIndex = 128;
+            this.lblName.Text = "Name";
             // 
             // txtName
             // 
@@ -403,17 +405,17 @@
             this.txtName.Size = new System.Drawing.Size(143, 19);
             this.txtName.TabIndex = 129;
             // 
-            // label5
+            // lblAge
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 71);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 21);
-            this.label5.TabIndex = 130;
-            this.label5.Text = "Age";
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAge.ForeColor = System.Drawing.Color.White;
+            this.lblAge.Location = new System.Drawing.Point(33, 71);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(40, 21);
+            this.lblAge.TabIndex = 130;
+            this.lblAge.Text = "Age";
             // 
             // txtAge
             // 
@@ -425,17 +427,17 @@
             this.txtAge.Size = new System.Drawing.Size(44, 19);
             this.txtAge.TabIndex = 131;
             // 
-            // label6
+            // lblGender
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(31, 103);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 21);
-            this.label6.TabIndex = 132;
-            this.label6.Text = "Gender";
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGender.ForeColor = System.Drawing.Color.White;
+            this.lblGender.Location = new System.Drawing.Point(31, 103);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(65, 21);
+            this.lblGender.TabIndex = 132;
+            this.lblGender.Text = "Gender";
             // 
             // txtGender
             // 
@@ -530,11 +532,11 @@
             this.panelAnimalsDisp.Controls.Add(this.panelHorse);
             this.panelAnimalsDisp.Controls.Add(this.lblType);
             this.panelAnimalsDisp.Controls.Add(this.txtAnimalType);
-            this.panelAnimalsDisp.Controls.Add(this.label1);
+            this.panelAnimalsDisp.Controls.Add(this.lblName);
             this.panelAnimalsDisp.Controls.Add(this.txtName);
-            this.panelAnimalsDisp.Controls.Add(this.label5);
+            this.panelAnimalsDisp.Controls.Add(this.lblAge);
             this.panelAnimalsDisp.Controls.Add(this.txtAge);
-            this.panelAnimalsDisp.Controls.Add(this.label6);
+            this.panelAnimalsDisp.Controls.Add(this.lblGender);
             this.panelAnimalsDisp.Controls.Add(this.txtGender);
             this.panelAnimalsDisp.Location = new System.Drawing.Point(140, 438);
             this.panelAnimalsDisp.Name = "panelAnimalsDisp";
@@ -551,7 +553,7 @@
             this.panelLitter.Controls.Add(this.label20);
             this.panelLitter.Controls.Add(this.lbl18);
             this.panelLitter.Controls.Add(this.label19);
-            this.panelLitter.Location = new System.Drawing.Point(328, 10);
+            this.panelLitter.Location = new System.Drawing.Point(328, 13);
             this.panelLitter.Name = "panelLitter";
             this.panelLitter.Size = new System.Drawing.Size(223, 121);
             this.panelLitter.TabIndex = 151;
@@ -941,13 +943,13 @@
             this.panelDog.Size = new System.Drawing.Size(240, 21);
             this.panelDog.TabIndex = 148;
             // 
-            // PictureBoxImage
+            // pictureBox
             // 
-            this.PictureBoxImage.Location = new System.Drawing.Point(600, 38);
-            this.PictureBoxImage.Name = "PictureBoxImage";
-            this.PictureBoxImage.Size = new System.Drawing.Size(152, 124);
-            this.PictureBoxImage.TabIndex = 149;
-            this.PictureBoxImage.TabStop = false;
+            this.pictureBox.Location = new System.Drawing.Point(600, 38);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(152, 124);
+            this.pictureBox.TabIndex = 149;
+            this.pictureBox.TabStop = false;
             // 
             // btnClear
             // 
@@ -968,6 +970,28 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lbluserEmail
+            // 
+            this.lbluserEmail.AutoSize = true;
+            this.lbluserEmail.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbluserEmail.ForeColor = System.Drawing.Color.White;
+            this.lbluserEmail.Location = new System.Drawing.Point(932, 449);
+            this.lbluserEmail.Name = "lbluserEmail";
+            this.lbluserEmail.Size = new System.Drawing.Size(83, 32);
+            this.lbluserEmail.TabIndex = 151;
+            this.lbluserEmail.Text = "label1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(767, 448);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 32);
+            this.label5.TabIndex = 152;
+            this.label5.Text = "User Email";
+            // 
             // verifyAdvertisements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -975,10 +999,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1115, 791);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbluserEmail);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.PictureBoxImage);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.panelDog);
             this.Controls.Add(this.panelFood);
             this.Controls.Add(this.panelAccess);
@@ -1021,7 +1047,7 @@
             this.panelFood.PerformLayout();
             this.panelDog.ResumeLayout(false);
             this.panelDog.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1051,11 +1077,11 @@
         private TextBox txtType;
         private Label lblType;
         private TextBox txtAnimalType;
-        private Label label1;
+        private Label lblName;
         private TextBox txtName;
-        private Label label5;
+        private Label lblAge;
         private TextBox txtAge;
-        private Label label6;
+        private Label lblGender;
         private TextBox txtGender;
         private Label label7;
         private RichTextBox txtDetail1;
@@ -1081,7 +1107,7 @@
         private Label label13;
         private TextBox txtBreed;
         private Panel panelDog;
-        private PictureBox PictureBoxImage;
+        private PictureBox pictureBox;
         private Panel panelHorse;
         private TextBox txtHPurpose;
         private TextBox txtHBreed;
@@ -1103,5 +1129,7 @@
         private Label label20;
         private Label lbl18;
         private Label label19;
+        private Label lbluserEmail;
+        private Label label5;
     }
 }
