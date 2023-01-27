@@ -587,3 +587,7 @@ C:\Users\Annayap\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-window
 C:\Users\Annayap\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.verifiyAdvertisements.resources
 C:\Users\Annayap\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.verifyUser.resources
 >>>>>>> c9955576460736a0f1da078e2bf492e5144ce3c7
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.AccessoryAdvert.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.CreateAdvertisement.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.PaymentDetails.resources
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.VerifiedBannedUsers.resources
