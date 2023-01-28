@@ -1326,7 +1326,7 @@ namespace DataAccessLayer
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.Title);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
                 if (findRow != null)
                 {
                     findRow.Delete(); //mark row as deleted
