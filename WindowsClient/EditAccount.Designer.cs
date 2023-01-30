@@ -42,11 +42,11 @@
             this.ShowOneBttn = new System.Windows.Forms.Button();
             this.Passwordtxt = new System.Windows.Forms.TextBox();
             this.Passwordlbl = new System.Windows.Forms.Label();
-            this.Emailtxt = new System.Windows.Forms.TextBox();
-            this.Emaillbl = new System.Windows.Forms.Label();
             this.LastNamelbl = new System.Windows.Forms.Label();
             this.LastNametxt = new System.Windows.Forms.TextBox();
             this.FirstNametxt = new System.Windows.Forms.TextBox();
+            this.Emailtxt = new System.Windows.Forms.TextBox();
+            this.Emaillbl = new System.Windows.Forms.Label();
             this.AddressBttnPanel = new System.Windows.Forms.Panel();
             this.AddressBttn = new System.Windows.Forms.Button();
             this.AddressPanel = new System.Windows.Forms.Panel();
@@ -129,6 +129,8 @@
             this.GeneralInfoPanel.Controls.Add(this.CancelPersonalBttn);
             this.GeneralInfoPanel.Controls.Add(this.UpdatePersonalBttn);
             this.GeneralInfoPanel.Controls.Add(this.GeneralGroupBox);
+            this.GeneralInfoPanel.Controls.Add(this.Emailtxt);
+            this.GeneralInfoPanel.Controls.Add(this.Emaillbl);
             this.GeneralInfoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.GeneralInfoPanel.Location = new System.Drawing.Point(0, 253);
             this.GeneralInfoPanel.Name = "GeneralInfoPanel";
@@ -142,12 +144,13 @@
             this.CancelPersonalBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelPersonalBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CancelPersonalBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.CancelPersonalBttn.Location = new System.Drawing.Point(91, 413);
+            this.CancelPersonalBttn.Location = new System.Drawing.Point(91, 385);
             this.CancelPersonalBttn.Name = "CancelPersonalBttn";
             this.CancelPersonalBttn.Size = new System.Drawing.Size(144, 76);
             this.CancelPersonalBttn.TabIndex = 4;
             this.CancelPersonalBttn.Text = "Cancel";
             this.CancelPersonalBttn.UseVisualStyleBackColor = false;
+            this.CancelPersonalBttn.Click += new System.EventHandler(this.CancelPersonalBttn_Click);
             // 
             // UpdatePersonalBttn
             // 
@@ -155,7 +158,7 @@
             this.UpdatePersonalBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdatePersonalBttn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UpdatePersonalBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.UpdatePersonalBttn.Location = new System.Drawing.Point(724, 413);
+            this.UpdatePersonalBttn.Location = new System.Drawing.Point(724, 385);
             this.UpdatePersonalBttn.Name = "UpdatePersonalBttn";
             this.UpdatePersonalBttn.Size = new System.Drawing.Size(144, 76);
             this.UpdatePersonalBttn.TabIndex = 2;
@@ -172,8 +175,6 @@
             this.GeneralGroupBox.Controls.Add(this.ShowOneBttn);
             this.GeneralGroupBox.Controls.Add(this.Passwordtxt);
             this.GeneralGroupBox.Controls.Add(this.Passwordlbl);
-            this.GeneralGroupBox.Controls.Add(this.Emailtxt);
-            this.GeneralGroupBox.Controls.Add(this.Emaillbl);
             this.GeneralGroupBox.Controls.Add(this.LastNamelbl);
             this.GeneralGroupBox.Controls.Add(this.LastNametxt);
             this.GeneralGroupBox.Controls.Add(this.FirstNametxt);
@@ -181,7 +182,7 @@
             this.GeneralGroupBox.ForeColor = System.Drawing.Color.White;
             this.GeneralGroupBox.Location = new System.Drawing.Point(62, 24);
             this.GeneralGroupBox.Name = "GeneralGroupBox";
-            this.GeneralGroupBox.Size = new System.Drawing.Size(735, 369);
+            this.GeneralGroupBox.Size = new System.Drawing.Size(735, 330);
             this.GeneralGroupBox.TabIndex = 3;
             this.GeneralGroupBox.TabStop = false;
             this.GeneralGroupBox.Text = "Personal Details";
@@ -203,7 +204,7 @@
             this.ShowTwoBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowTwoBttn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ShowTwoBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ShowTwoBttn.Location = new System.Drawing.Point(552, 294);
+            this.ShowTwoBttn.Location = new System.Drawing.Point(552, 248);
             this.ShowTwoBttn.Name = "ShowTwoBttn";
             this.ShowTwoBttn.Size = new System.Drawing.Size(80, 32);
             this.ShowTwoBttn.TabIndex = 14;
@@ -213,7 +214,7 @@
             // PasswordTwotxt
             // 
             this.PasswordTwotxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordTwotxt.Location = new System.Drawing.Point(272, 296);
+            this.PasswordTwotxt.Location = new System.Drawing.Point(271, 249);
             this.PasswordTwotxt.Name = "PasswordTwotxt";
             this.PasswordTwotxt.Size = new System.Drawing.Size(274, 31);
             this.PasswordTwotxt.TabIndex = 10;
@@ -223,11 +224,11 @@
             this.PasswordClbl.AutoSize = true;
             this.PasswordClbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.PasswordClbl.ForeColor = System.Drawing.Color.White;
-            this.PasswordClbl.Location = new System.Drawing.Point(29, 293);
+            this.PasswordClbl.Location = new System.Drawing.Point(63, 250);
             this.PasswordClbl.Name = "PasswordClbl";
-            this.PasswordClbl.Size = new System.Drawing.Size(213, 30);
+            this.PasswordClbl.Size = new System.Drawing.Size(177, 30);
             this.PasswordClbl.TabIndex = 8;
-            this.PasswordClbl.Text = "Confirm Password :";
+            this.PasswordClbl.Text = "New Password :";
             // 
             // ShowOneBttn
             // 
@@ -235,7 +236,7 @@
             this.ShowOneBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowOneBttn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ShowOneBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.ShowOneBttn.Location = new System.Drawing.Point(552, 229);
+            this.ShowOneBttn.Location = new System.Drawing.Point(552, 180);
             this.ShowOneBttn.Name = "ShowOneBttn";
             this.ShowOneBttn.Size = new System.Drawing.Size(80, 32);
             this.ShowOneBttn.TabIndex = 13;
@@ -245,7 +246,7 @@
             // Passwordtxt
             // 
             this.Passwordtxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Passwordtxt.Location = new System.Drawing.Point(272, 230);
+            this.Passwordtxt.Location = new System.Drawing.Point(271, 180);
             this.Passwordtxt.Name = "Passwordtxt";
             this.Passwordtxt.Size = new System.Drawing.Size(274, 31);
             this.Passwordtxt.TabIndex = 9;
@@ -255,30 +256,11 @@
             this.Passwordlbl.AutoSize = true;
             this.Passwordlbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Passwordlbl.ForeColor = System.Drawing.Color.White;
-            this.Passwordlbl.Location = new System.Drawing.Point(118, 231);
+            this.Passwordlbl.Location = new System.Drawing.Point(73, 182);
             this.Passwordlbl.Name = "Passwordlbl";
-            this.Passwordlbl.Size = new System.Drawing.Size(124, 30);
+            this.Passwordlbl.Size = new System.Drawing.Size(167, 30);
             this.Passwordlbl.TabIndex = 7;
-            this.Passwordlbl.Text = "Password :";
-            // 
-            // Emailtxt
-            // 
-            this.Emailtxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Emailtxt.Location = new System.Drawing.Point(272, 170);
-            this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.Size = new System.Drawing.Size(274, 31);
-            this.Emailtxt.TabIndex = 6;
-            // 
-            // Emaillbl
-            // 
-            this.Emaillbl.AutoSize = true;
-            this.Emaillbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Emaillbl.ForeColor = System.Drawing.Color.White;
-            this.Emaillbl.Location = new System.Drawing.Point(159, 170);
-            this.Emaillbl.Name = "Emaillbl";
-            this.Emaillbl.Size = new System.Drawing.Size(81, 30);
-            this.Emaillbl.TabIndex = 5;
-            this.Emaillbl.Text = "Email :";
+            this.Passwordlbl.Text = "Old Password :";
             // 
             // LastNamelbl
             // 
@@ -306,6 +288,28 @@
             this.FirstNametxt.Name = "FirstNametxt";
             this.FirstNametxt.Size = new System.Drawing.Size(274, 31);
             this.FirstNametxt.TabIndex = 2;
+            // 
+            // Emailtxt
+            // 
+            this.Emailtxt.Enabled = false;
+            this.Emailtxt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Emailtxt.Location = new System.Drawing.Point(156, 409);
+            this.Emailtxt.Name = "Emailtxt";
+            this.Emailtxt.Size = new System.Drawing.Size(38, 31);
+            this.Emailtxt.TabIndex = 6;
+            this.Emailtxt.Visible = false;
+            // 
+            // Emaillbl
+            // 
+            this.Emaillbl.AutoSize = true;
+            this.Emaillbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Emaillbl.ForeColor = System.Drawing.Color.White;
+            this.Emaillbl.Location = new System.Drawing.Point(113, 385);
+            this.Emaillbl.Name = "Emaillbl";
+            this.Emaillbl.Size = new System.Drawing.Size(81, 30);
+            this.Emaillbl.TabIndex = 5;
+            this.Emaillbl.Text = "Email :";
+            this.Emaillbl.Visible = false;
             // 
             // AddressBttnPanel
             // 
@@ -354,6 +358,7 @@
             this.CancelAddressBttn.TabIndex = 6;
             this.CancelAddressBttn.Text = "Cancel";
             this.CancelAddressBttn.UseVisualStyleBackColor = false;
+            this.CancelAddressBttn.Click += new System.EventHandler(this.CancelAddressBttn_Click);
             // 
             // UpdateAddressBttn
             // 
@@ -560,6 +565,7 @@
             this.CancelPaymentBttn.TabIndex = 7;
             this.CancelPaymentBttn.Text = "Cancel";
             this.CancelPaymentBttn.UseVisualStyleBackColor = false;
+            this.CancelPaymentBttn.Click += new System.EventHandler(this.CancelPaymentBttn_Click);
             // 
             // button1
             // 
@@ -695,6 +701,7 @@
             this.HeaderPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GeneralInfoPanel.ResumeLayout(false);
+            this.GeneralInfoPanel.PerformLayout();
             this.GeneralGroupBox.ResumeLayout(false);
             this.GeneralGroupBox.PerformLayout();
             this.AddressBttnPanel.ResumeLayout(false);

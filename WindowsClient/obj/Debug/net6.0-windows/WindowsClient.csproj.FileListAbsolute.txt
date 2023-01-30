@@ -188,3 +188,7 @@ C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.pdb
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.genruntimeconfig.cache
 C:\Users\eddie\Source\Repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\ref\WindowsClient.dll
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.EditAdvertisement.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.MyAdvertisements.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.SingleAdvertisement.resources
+C:\Users\eddie\source\repos\AllCreatures\WindowsClient\obj\Debug\net6.0-windows\WindowsClient.DogAdvert.resources

@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.Drawing.Drawing2D;
+using System.Reflection;
+using System.Xml.Linq;
 
 namespace BusinessLayer
 {
@@ -257,6 +262,12 @@ namespace BusinessLayer
             }
             catch (System.Exception excep)
             {
+                var st = new StackTrace(excep, true);
+                // Get the top stack frame
+                var frame = st.GetFrame(0);
+                // Get the line number from the stack frame
+                var line = frame.GetFileLineNumber();
+                System.Windows.MessageBox.Show("Model:" + excep.Message + "\n Line : " + line.ToString());
                 return false;
             }
         }
@@ -287,20 +298,92 @@ namespace BusinessLayer
                 return false;
             }
         }
-        public Boolean addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail)
+        public Boolean addNewNotification(string notificationid, string title, string message, DateTime messagetime, bool messageread, string useremail)
         {
             try
             {
-                Notifications notification = NotificationsCreator.GetNotification(notificationid, message, title, messagetime, messageread, useremail);
+                Notifications notification = NotificationsCreator.GetNotification(notificationid, title, title, messagetime, messageread, useremail);
                 NotificationList.Add(notification);
-                DataLayer.addNewNotification(notificationid, message, title, messagetime, messageread, useremail);
-                MessageBox.Show(notification.Message);
+                DataLayer.addNewNotification(notificationid, title, message, messagetime, messageread, useremail);
+                MessageBox.Show(notification.Title);
                 return true;
             }
             catch (System.Exception excep)
             {
                 return false;
             }
+        }
+        public Boolean UpdateUser(string currentEmail, string password, string firstName, string lastName, bool verified, string UserType, string addressOne, string addressTwo, string addressThree, string County, string eirCode, string cardHolder, string carNumb, string expDate, string Cvs)
+        {
+            try
+            {
+                DataLayer.UpdateUser(currentEmail, password, firstName, lastName, verified, UserType, addressOne, addressTwo, addressThree, County, eirCode, cardHolder, carNumb, expDate, Cvs);
+                return true;
+            }
+            catch(System.Exception excep) { return false; }
+        }
+        public Boolean UpdateAccessAdvert(int advertid, string title, string description, double price, string accesscategory, string accesssubcat)
+        {
+            try
+            {
+                DataLayer.UpdateAccessAdvert(advertid,title,description,price,accesscategory,accesssubcat);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
+        }
+        public Boolean UpdateFoodAdvert(int advertid, string title, string description, double price, string animaltype, string moredetails)
+        {
+            try
+            {
+                DataLayer.UpdateFoodAdvert(advertid,title,description,price,animaltype,moredetails);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
+        }
+        public Boolean UpdateDogAdvert(int advertid, string title, string description, double price, string dogname, int dogage, string doggender, bool purebreed, string breedone, string breedtwo)
+        {
+            try
+            {
+                DataLayer.UpdateDogAdvert(advertid,title,description,price,dogname,dogage,doggender,purebreed,breedone,breedtwo);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
+        }
+        public Boolean UpdateHorseAdvert(int advertid, string title, string description, double price, string horsename, int horseage, string horsegender, string size, bool broken, string breed, string purpose)
+        {
+            try
+            {
+                DataLayer.UpdateHorseadvert(advertid,title,description,price,horsename,horseage, horsegender,size,broken,breed,purpose);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
+        }
+        public Boolean UpdateFarmAnimalAdvert(int advertid, string title, string description, double price, string FAName, int age, string gender, string purpose)
+        {
+            try
+            {
+                DataLayer.UpdateFarmAnimalAdvert(advertid,title,description,price,FAName,age,gender,purpose);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
+        }
+        public Boolean UpdateGenericAnimalAdvert(int advertid, string title, string description, double price, string name, int age, string gender, string detailone, string detailtwo, string detailthree)
+        {
+            try
+            {
+                DataLayer.UpdateGenericAnimalAdvert(advertid,title,description,price,name,age, gender, detailone, detailtwo, detailthree);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
+        }
+        public Boolean UpdateLitterAdvert(int advertid, string title, string description, double price, int littersize, int age, bool purebreed, string breedone, string breedtwo)
+        {
+            try
+            {
+                DataLayer.UpdateLitterAdvert(advertid,title,description,price,littersize,age,purebreed, breedone,breedtwo);
+                return true;
+            }
+            catch (System.Exception excep) { return false; }
         }
         public String getUserTypeForCurrentuser()
         {

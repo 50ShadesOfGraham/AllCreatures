@@ -24,6 +24,7 @@ namespace WindowsClient
         private int ItemNoOne;
         private int ItemNoTwo;
         private int ItemNoThree;
+        private bool isPurebreed;
         public CreateOneAdvert(IModel _model, int BundleID, int ItemOne, int ItemTwo, int ItemThree, bool isBundle, double BundlePrice, int NoItems)
         {
             InitializeComponent();
@@ -57,7 +58,7 @@ namespace WindowsClient
         {
             IntroPanel.Visible = true;
             FileUploadPanel.Visible = false;
-            
+
             FoodPanel.Visible = false;
             AccessPanel.Visible = false;
 
@@ -72,19 +73,19 @@ namespace WindowsClient
         private void IntroNextBttn_Click(object sender, EventArgs e)
         {
             string advertType = this.AdvertTypeComboBox.GetItemText(this.AdvertTypeComboBox.SelectedItem);
-            if(string.IsNullOrEmpty(advertType) ) 
+            if (string.IsNullOrEmpty(advertType))
             {
                 MessageBox.Show("Please Choose An Advert Type");
             }
-            else if(string.IsNullOrEmpty(TitleTxt.Text))
+            else if (string.IsNullOrEmpty(TitleTxt.Text))
             {
                 MessageBox.Show("Please Enter Title");
             }
-            else if(string.IsNullOrEmpty(PriceTxt.Text))
+            else if (string.IsNullOrEmpty(PriceTxt.Text))
             {
                 MessageBox.Show("Please Enter Price");
             }
-            else if(string.IsNullOrEmpty(DescriptionTxt.Text))
+            else if (string.IsNullOrEmpty(DescriptionTxt.Text))
             {
                 MessageBox.Show("Please Enter Description");
             }
@@ -116,7 +117,7 @@ namespace WindowsClient
             {
                 IntroPanel.Visible = false;
                 FileUploadPanel.Visible = false;
-                switch(advertType)
+                switch (advertType)
                 {
                     case "Animal":
                         FoodPanel.Visible = false;
@@ -163,7 +164,7 @@ namespace WindowsClient
             {
                 MessageBox.Show("Please Choose Animal For Food");
             }
-            else if(string.IsNullOrEmpty(DetailTxt.Text)) 
+            else if (string.IsNullOrEmpty(DetailTxt.Text))
             {
                 MessageBox.Show("Please Enter Food Details");
             }
@@ -219,26 +220,30 @@ namespace WindowsClient
                     if (Model.addNewFoodAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, animalfood, DetailTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system.";
-                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
+                        string title = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                        if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                         {
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
                             {
                                 NoItems--;
-                                //ResetForm(this); //Resetting back to original state
+                                ResetForm(); //Resetting back to original state
                             }
                             else if (isBundle.Equals(false))
                             {
-                                this.Hide();
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
+                                this.Close();
                             }
                         }
                     }
@@ -253,7 +258,7 @@ namespace WindowsClient
                     System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 }
             }
-        }  
+        }
 
         private void FoodBackBttn_Click(object sender, EventArgs e)
         {
@@ -345,7 +350,7 @@ namespace WindowsClient
         private void AccessCatComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string AccessCat = this.AccessCatComboBox.GetItemText(this.AccessCatComboBox.SelectedItem);
-            switch (AccessCat.Trim()) 
+            switch (AccessCat.Trim())
             {
                 case "Health":
                     AccessTypeComboBox.Items.Clear();
@@ -384,7 +389,7 @@ namespace WindowsClient
             {
                 MessageBox.Show("Please Choose An Accessory Category");
             }
-            else if(string.IsNullOrEmpty(AccessSubCat)) 
+            else if (string.IsNullOrEmpty(AccessSubCat))
             {
                 MessageBox.Show("Please Choose An Accessory Type");
             }
@@ -439,26 +444,30 @@ namespace WindowsClient
                     if (Model.addNewAccessoriesAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                         ImageTwo, ImageThree, AccessCat, AccessSubCat))
                     {
-                        string notificationtitle = "Item #" + AdvertID + " has been added to our system.";
+                        string title = "Item #" + AdvertID + " has been added to our system.";
                         string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                        if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                         {
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
                             {
                                 NoItems--;
-                                //ResetForm(this); //Resetting back to original state
+                                ResetForm(); //Resetting back to original state
                             }
                             else if (isBundle.Equals(false))
                             {
-                                Close();
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
+                                this.Close();
                             }
                         }
                     }
@@ -480,7 +489,7 @@ namespace WindowsClient
             string AnimalCategory = this.AnimalCatComboBox.GetItemText(this.AnimalCatComboBox.SelectedItem);
             SpecifyAnimalTxtBx.Enabled = false;
             AnimalTypeComboBox.Enabled = false;
-            switch (AnimalCategory.Trim()) 
+            switch (AnimalCategory.Trim())
             {
                 case "House Pets":
                     TypeAnimalPanel.Visible = true;
@@ -561,20 +570,20 @@ namespace WindowsClient
             {
                 MessageBox.Show("Please Choose An Animal Category");
             }
-            else if(string.IsNullOrEmpty(SpecifyAnimalTxtBx.Text) && string.IsNullOrEmpty(AnimalType))
+            else if (string.IsNullOrEmpty(SpecifyAnimalTxtBx.Text) && string.IsNullOrEmpty(AnimalType))
             {
                 MessageBox.Show("Please Choose An Animal Type");
             }
             else
             {
-                if(string.IsNullOrEmpty(AnimalType))
+                if (string.IsNullOrEmpty(AnimalType))
                 {
                     AnimalType = SpecifyAnimalTxtBx.Text;
                 }
                 switch (AnimalCategory.Trim())
                 {
                     case "House Pets":
-                        if(AnimalType.Equals("Dog"))
+                        if (AnimalType.Equals("Dog"))
                         {
                             IntroPanel.Visible = false;
                             FileUploadPanel.Visible = true;
@@ -606,7 +615,7 @@ namespace WindowsClient
                         }
                         break;
                     case "Farm Animals":
-                        if(AnimalType.Equals("Horse"))
+                        if (AnimalType.Equals("Horse"))
                         {
                             IntroPanel.Visible = false;
                             FileUploadPanel.Visible = false;
@@ -719,27 +728,27 @@ namespace WindowsClient
             {
                 MessageBox.Show("Please Enter Horse Name");
             }
-            else if(string.IsNullOrEmpty(HorseAgeTxt.Text))
+            else if (string.IsNullOrEmpty(HorseAgeTxt.Text))
             {
                 MessageBox.Show("Please Enter Horse Age");
             }
-            else if(string.IsNullOrEmpty(HorseGender))
+            else if (string.IsNullOrEmpty(HorseGender))
             {
                 MessageBox.Show("Please Choose Horse Gender");
             }
-            else if(string.IsNullOrEmpty(HorseBreed))
+            else if (string.IsNullOrEmpty(HorseBreed))
             {
                 MessageBox.Show("Please Choose Horse Breed");
             }
-            else if(string.IsNullOrEmpty(HorseSizeTxt.Text))
+            else if (string.IsNullOrEmpty(HorseSizeTxt.Text))
             {
                 MessageBox.Show("Please Enter Horse Size");
             }
-            else if(BrokenYesRadBttn.Checked || BrokenNoRadBttn.Checked) 
+            else if (BrokenYesRadBttn.Checked && BrokenNoRadBttn.Checked)
             {
                 MessageBox.Show("Please Check If Horse Is Broken");
             }
-            else if(string.IsNullOrEmpty(HorsePurposeTxt.Text))
+            else if (string.IsNullOrEmpty(HorsePurposeTxt.Text))
             {
                 MessageBox.Show("Please Enter Purpose");
             }
@@ -798,29 +807,32 @@ namespace WindowsClient
                            HorseNameTxt.Text, Convert.ToInt32(HorseAgeTxt.Text), horsegender, HorseSizeTxt.Text, false, horsebreed,
                            HorsePurposeTxt.Text))
                     {
-                        string notificationtitle = "Item #" + AdvertID + " has been added to our system.";
+                        string title = "Item #" + AdvertID + " has been added to our system.";
                         string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                        if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                         {
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) { }
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
+                                {
+                                    this.Alert("Bundle Created", Form_Alert.enmType.Success);
+                                }
                                 Close();
                             }
                             else if (isBundle.Equals(true) && NoItems > 1)
                             {
                                 NoItems--;
-                                //ResetForm(this); //Resetting back to original state
+                                ResetForm(); //Resetting back to original state
                             }
                             else if (isBundle.Equals(false))
                             {
-                                Close();
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
+                                this.Close();
                             }
                         }
-                        //System.Windows.MessageBox.Show(message);
                     }
 
 
@@ -899,30 +911,30 @@ namespace WindowsClient
             {
                 MessageBox.Show("Please Enter Dog Name");
             }
-            else if(string.IsNullOrEmpty(DogAgeTxt.Text))
+            else if (string.IsNullOrEmpty(DogAgeTxt.Text))
             {
                 MessageBox.Show("Please Enter Dog Age");
             }
-            else if(string.IsNullOrEmpty(DogGender))
+            else if (string.IsNullOrEmpty(DogGender))
             {
                 MessageBox.Show("Please Enter Dog Gender");
             }
-            else if(DogPurebreedYesRadBttn.Checked.Equals(false) && DogPurebreedNoBttn.Checked.Equals(false))
+            else if (DogPurebreedYesRadBttn.Checked.Equals(false) && DogPurebreedNoBttn.Checked.Equals(false))
             {
                 MessageBox.Show("Please Confirm If Dog Is A Purebreed");
             }
             else
             {
-                if(DogPurebreedYesRadBttn.Checked.Equals(true))
+                if (DogPurebreedYesRadBttn.Checked.Equals(true))
                 {
                     DogBreedOne = this.DogBreedComboBox.GetItemText(this.DogBreedComboBox.SelectedItem);
 
-                    if(string.IsNullOrEmpty(DogBreedOne))
+                    if (string.IsNullOrEmpty(DogBreedOne))
                     {
                         MessageBox.Show("Please Choose Dog Breed");
                     }
                 }
-                else if(DogPurebreedNoBttn.Checked.Equals(true))
+                else if (DogPurebreedNoBttn.Checked.Equals(true))
                 {
                     DogBreedOne = this.DogBreedOneComboBox.GetItemText(this.DogBreedOneComboBox.SelectedItem);
                     DogBreedTwo = this.DogBreedTwoComboBox.GetItemText(this.DogBreedTwoComboBox.SelectedItem);
@@ -984,17 +996,16 @@ namespace WindowsClient
                         if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
                             DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, true, DogBreedOne, DogBreedTwo))
                         {
-                            string message = "Item #" + AdvertID + " has been added to our system. " +
-                           "Admin must verify item before advertisement is made public";
-                            string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                            string title = "Item #" + AdvertID + " has been added to our system.";
+                            string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                             int notifID = 0;
                             do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                            if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                            if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                             {
                                 if (isBundle.Equals(true) && NoItems.Equals(1))
                                 {
                                     //Create Bundle
-                                    if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                    if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
                                     {
                                         this.Alert("Bundle Created", Form_Alert.enmType.Success);
                                     }
@@ -1003,12 +1014,12 @@ namespace WindowsClient
                                 else if (isBundle.Equals(true) && NoItems > 1)
                                 {
                                     NoItems--;
-                                    //ResetForm(this); //Resetting back to original state
+                                    ResetForm(); //Resetting back to original state
                                 }
                                 else if (isBundle.Equals(false))
                                 {
                                     this.Alert("Advertisement Created", Form_Alert.enmType.Success);
-                                    Close();
+                                    this.Close();
                                 }
                             }
                         }
@@ -1017,17 +1028,16 @@ namespace WindowsClient
                             if (Model.addNewDogAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
                                  DogNameTxt.Text, Convert.ToInt32(DogAgeTxt.Text), DogGender, true, DogBreedOne, DogBreedTwo))
                             {
-                                string message = "Item #" + AdvertID + " has been added to our system. " +
-                               "Admin must verify item before advertisement is made public";
-                                string notificationtitle = "Item #" + AdvertID + " Waiting on Admin Verification";
+                                string title = "Item #" + AdvertID + " has been added to our system.";
+                                string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                                 int notifID = 0;
                                 do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                                if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                                if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                                 {
                                     if (isBundle.Equals(true) && NoItems.Equals(1))
                                     {
                                         //Create Bundle
-                                        if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                        if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
                                         {
                                             this.Alert("Bundle Created", Form_Alert.enmType.Success);
                                         }
@@ -1036,12 +1046,12 @@ namespace WindowsClient
                                     else if (isBundle.Equals(true) && NoItems > 1)
                                     {
                                         NoItems--;
-                                        //ResetForm(this); //Resetting back to original state
+                                        ResetForm(); //Resetting back to original state
                                     }
                                     else if (isBundle.Equals(false))
                                     {
                                         this.Alert("Advertisement Created", Form_Alert.enmType.Success);
-                                        Close();
+                                        this.Close();
                                     }
                                 }
                             }
@@ -1085,11 +1095,11 @@ namespace WindowsClient
         {
             string FAGender = this.FAGenderComboBox.GetItemText(this.FAGenderComboBox.SelectedItem);
             string FAAnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
-            if(string.IsNullOrEmpty(FANameTxt.Text))
+            if (string.IsNullOrEmpty(FANameTxt.Text))
             {
                 MessageBox.Show("Please Enter" + FAAnimalType + "'s Name");
             }
-            else if(string.IsNullOrEmpty(FAAgeTxt.Text))
+            else if (string.IsNullOrEmpty(FAAgeTxt.Text))
             {
                 MessageBox.Show("Please Enter" + FAAnimalType + "'s Age");
             }
@@ -1155,16 +1165,16 @@ namespace WindowsClient
                     if (Model.addNewFarmAnimalAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
                            ImageTwo, ImageThree, AnimalType, FANameTxt.Text, Convert.ToInt32(FAAgeTxt.Text), FarmGender, FAPurposeTxt.Text))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system.";
-                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
+                        string title = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
-                        do { notifID = rnd.Next(0, 99999); } while (Model.AdvertIDPresent(AdvertID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                        do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
+                        if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                         {
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
                                 {
                                     this.Alert("Bundle Created", Form_Alert.enmType.Success);
                                 }
@@ -1173,11 +1183,12 @@ namespace WindowsClient
                             else if (isBundle.Equals(true) && NoItems > 1)
                             {
                                 NoItems--;
-                                //ResetForm(this); //Resetting back to original state
+                                ResetForm(); //Resetting back to original state
                             }
                             else if (isBundle.Equals(false))
                             {
-                                Close();
+                                this.Alert("Advertisement Created", Form_Alert.enmType.Success);
+                                this.Close();
                             }
                         }
                     }
@@ -1215,46 +1226,31 @@ namespace WindowsClient
 
         private void GAConfirmBttn_Click(object sender, EventArgs e)
         {
-            string AnimalType = "";
-            if(string.IsNullOrEmpty(SpecifyAnimalTxtBx.Text))
-            {
-                AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
-            }
-            else
+            string AnimalType = this.AnimalTypeComboBox.GetItemText(this.AnimalTypeComboBox.SelectedItem);
+
+            if (string.IsNullOrEmpty(AnimalType))
             {
                 AnimalType = SpecifyAnimalTxtBx.Text;
             }
+
             string GAGender = this.GAGenderComboBox.GetItemText(this.GAGenderComboBox.SelectedItem);
             string detailTwo = DetailTwoTxt.Text;
             string detailThree = DetailTwoTxt.Text;
-            if(string.IsNullOrEmpty(GANameTxt.Text))
+            if (string.IsNullOrEmpty(GANameTxt.Text))
             {
                 MessageBox.Show("Please Enter " + AnimalType.Trim() + "'s Name");
             }
-            else if(string.IsNullOrEmpty(GAAgeTxt.Text))
+            else if (string.IsNullOrEmpty(GAAgeTxt.Text))
             {
                 MessageBox.Show("Please Enter " + AnimalType.Trim() + "'s Age");
             }
-            else if(string.IsNullOrEmpty(GAGender))
+            else if (string.IsNullOrEmpty(GAGender))
             {
                 MessageBox.Show("Please Enter " + AnimalType.Trim() + "'s Gender");
             }
-            else if(string.IsNullOrEmpty(DetailOneTxt.Text))
+            else if (string.IsNullOrEmpty(DetailOneTxt.Text) && string.IsNullOrEmpty(detailTwo) && string.IsNullOrEmpty(detailThree))
             {
-                MessageBox.Show("Please Enter At Least One Detail");
-            }
-            else if(string.IsNullOrEmpty(detailTwo) && string.IsNullOrEmpty(detailThree))
-            {
-                detailTwo = "";
-                detailThree = "";
-            }
-            else if(string.IsNullOrEmpty(detailTwo))
-            {
-                detailTwo = "";
-            }
-            else if(string.IsNullOrEmpty(detailThree))
-            {
-                detailThree = "";
+                MessageBox.Show("Please Enter At Least Three Details");
             }
             else
             {
@@ -1306,18 +1302,18 @@ namespace WindowsClient
                     }
 
                     if (Model.addNewGenericAnimalAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
-                        AnimalType, GANameTxt.Text, Convert.ToInt32(GAAgeTxt.Text), GAGender, DetailOneTxt.Text, DetailTwoTxt.Text, DetailThreeTxt.Text))
+                        AnimalType, GANameTxt.Text, Convert.ToInt32(GAAgeTxt.Text), GAGender, DetailOneTxt.Text, detailTwo, detailThree))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system.";
-                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
+                        string title = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                        if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                         {
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
                                 {
                                     this.Alert("Bundle Created", Form_Alert.enmType.Success);
                                 }
@@ -1326,12 +1322,12 @@ namespace WindowsClient
                             else if (isBundle.Equals(true) && NoItems > 1)
                             {
                                 NoItems--;
-                                //ResetForm(this); //Resetting back to original state
+                                ResetForm(); //Resetting back to original state
                             }
                             else if (isBundle.Equals(false))
                             {
                                 this.Alert("Advertisement Created", Form_Alert.enmType.Success);
-                                Close();
+                                this.Close();
                             }
                         }
                         //System.Windows.MessageBox.Show(message);
@@ -1387,102 +1383,42 @@ namespace WindowsClient
             }
             else
             {
-                if (AnimalType.Trim().Equals("Dog"))
+                if (AnimalType.Trim().Equals("Dogs") && LitterYesRadBttn.Checked)
                 {
-                    switch (LitterYesRadBttn.Checked)
+                    isPurebreed = true;
+                    LitterBreedOne = this.DogLPComboBox.GetItemText(this.DogLPComboBox.SelectedItem);
+                    if (string.IsNullOrEmpty(LitterBreedOne))
                     {
-                        case true:
-                            LitterBreedOne = this.DogLPComboBox.GetItemText(this.DogLPComboBox.SelectedItem);
-                            LitterBreedTwo = "";
-                            if(string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
-                        case false:
-                            LitterBreedOne = this.DogLNOneComboBox.GetItemText(this.DogLNOneComboBox.SelectedItem);
-                            LitterBreedTwo = this.DogLNTwoComboBox.GetItemText(this.DogLNOneComboBox.SelectedItem); ;
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            else if(string.IsNullOrEmpty(LitterBreedTwo))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
-                    }
-                    switch (LitterNoRadBttn.Checked)
-                    {
-                        case true:
-                            LitterBreedOne = this.DogLNOneComboBox.GetItemText(this.DogLNOneComboBox.SelectedItem);
-                            LitterBreedTwo = this.DogLNTwoComboBox.GetItemText(this.DogLNOneComboBox.SelectedItem);
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            else if (string.IsNullOrEmpty(LitterBreedTwo))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
-                        case false:
-                            LitterBreedOne = this.DogLPComboBox.GetItemText(this.DogLPComboBox.SelectedItem);
-                            LitterBreedTwo = "";
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
+                        MessageBox.Show("Please Enter Breed");
                     }
                 }
-                else if (AnimalType.Trim().Equals("Cat"))
+                else if (AnimalType.Trim().Equals("Dogs") && LitterNoRadBttn.Checked)
                 {
-                    switch (LitterYesRadBttn.Checked)
+                    isPurebreed = false;
+                    LitterBreedOne = this.DogLNOneComboBox.GetItemText(this.DogLNOneComboBox.SelectedItem);
+                    LitterBreedTwo = this.DogLNTwoComboBox.GetItemText(this.DogLNTwoComboBox.SelectedItem);
+                    if (string.IsNullOrEmpty(LitterBreedOne) && string.IsNullOrEmpty(LitterBreedTwo))
                     {
-                        case true:
-                            LitterBreedOne = this.CatLPComboBox.GetItemText(this.CatLPComboBox.SelectedItem);
-                            LitterBreedTwo = "";
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
-                        case false:
-                            LitterBreedOne = this.CatLNOneComboBox.GetItemText(this.CatLNOneComboBox.SelectedItem);
-                            LitterBreedTwo = this.CatLNTwoComboBox.GetItemText(this.CatLNOneComboBox.SelectedItem);
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            else if (string.IsNullOrEmpty(LitterBreedTwo))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
+                        MessageBox.Show("Please Enter Both Breeds");
                     }
-                    switch (LitterNoRadBttn.Checked)
+                }
+                else if (AnimalType.Trim().Equals("Cats") && LitterYesRadBttn.Checked)
+                {
+                    isPurebreed = true;
+                    LitterBreedOne = this.CatLPComboBox.GetItemText(this.CatLPComboBox.SelectedItem);
+                    if (string.IsNullOrEmpty(LitterBreedOne) && string.IsNullOrEmpty(LitterBreedTwo))
                     {
-                        case true:
-                            LitterBreedOne = this.CatLNOneComboBox.GetItemText(this.CatLNOneComboBox.SelectedItem);
-                            LitterBreedTwo = this.CatLNTwoComboBox.GetItemText(this.CatLNOneComboBox.SelectedItem);
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            else if (string.IsNullOrEmpty(LitterBreedTwo))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
-                        case false:
-                            LitterBreedOne = this.CatLPComboBox.GetItemText(this.CatLPComboBox.SelectedItem);
-                            LitterBreedTwo = "";
-                            if (string.IsNullOrEmpty(LitterBreedOne))
-                            {
-                                MessageBox.Show("Please Enter Breed");
-                            }
-                            break;
+                        MessageBox.Show("Please Enter Breed");
+                    }
+                }
+                else if (AnimalType.Trim().Equals("Cats") && LitterNoRadBttn.Checked)
+                {
+                    isPurebreed = false;
+                    LitterBreedOne = this.CatLNOneComboBox.GetItemText(this.CatLNOneComboBox.SelectedItem);
+                    LitterBreedTwo = this.CatLNTwoComboBox.GetItemText(this.CatLNTwoComboBox.SelectedItem);
+                    if (string.IsNullOrEmpty(LitterBreedOne) && string.IsNullOrEmpty(LitterBreedTwo))
+                    {
+                        MessageBox.Show("Please Enter Both Breeds");
                     }
                 }
                 try
@@ -1531,21 +1467,20 @@ namespace WindowsClient
                         ImageTwo = ConvertImageToByte(ImageTwoPictureBx.Image);
                         ImageThree = ConvertImageToByte(ImageThreePictureBx.Image);
                     }
-                    bool isPurebreed = false;
-                    if (LitterBreedTwo.Equals("")) { isPurebreed = true; }
-                    if (Model.addNewLitterAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne,
-                        ImageTwo, ImageThree, AnimalType, Convert.ToInt32(LitterSizeTxt.Text), Convert.ToInt32(LitterAgeTxt.Text), isPurebreed, LitterBreedOne, LitterBreedTwo))
+
+                    if (Model.addNewLitterAdvert(AdvertID, Model.CurrentUser.Email, TitleTxt.Text, DescriptionTxt.Text, Convert.ToDouble(PriceTxt.Text), false, "Available", ImageOne, ImageTwo, ImageThree,
+                        AnimalType,Convert.ToInt32(LitterSizeTxt.Text), Convert.ToInt32(LitterAgeTxt.Text),isPurebreed,LitterBreedOne, LitterBreedTwo))
                     {
-                        string message = "Item #" + AdvertID + " has been added to our system.";
-                        string notificationtitle = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
+                        string title = "Item #" + AdvertID + " has been added to our system.";
+                        string message = "Item #" + AdvertID + " ad been added to our system. Admin must verify item before advertisement before it is made public.";
                         int notifID = 0;
                         do { notifID = rnd.Next(0, 99999); } while (Model.NotifIDPresent(notifID));
-                        if (Model.addNewNotification(notifID.ToString(), message, notificationtitle, DateTime.Now, false, Model.CurrentUser.Email))
+                        if (Model.addNewNotification(notifID.ToString(), title, message, DateTime.Now, false, Model.CurrentUser.Email))
                         {
                             if (isBundle.Equals(true) && NoItems.Equals(1))
                             {
                                 //Create Bundle
-                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice)) 
+                                if (Model.addNewBundle(BundleID, ItemNoOne, ItemNoTwo, ItemNoThree, BundlePrice))
                                 {
                                     this.Alert("Bundle Created", Form_Alert.enmType.Success);
                                 }
@@ -1554,31 +1489,28 @@ namespace WindowsClient
                             else if (isBundle.Equals(true) && NoItems > 1)
                             {
                                 NoItems--;
-                                //ResetForm(this); //Resetting back to original state
+                                ResetForm(); //Resetting back to original state
                             }
                             else if (isBundle.Equals(false))
                             {
                                 this.Alert("Advertisement Created", Form_Alert.enmType.Success);
-                                Close();
+                                this.Close();
                             }
                         }
+                        //System.Windows.MessageBox.Show(message);
                     }
                 }
-                catch(Exception excep)
+                catch (Exception excep)
                 {
                     var st = new StackTrace(excep, true);
                     // Get the top stack frame
                     var frame = st.GetFrame(0);
                     // Get the line number from the stack frame
                     var line = frame.GetFileLineNumber();
-
                     System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
                 }
-
             }
-            
         }
-
         private void PriceTxt_TextChanged(object sender, EventArgs e)
         {
 
@@ -1659,6 +1591,83 @@ namespace WindowsClient
                 CatLPurebredPanel.Visible = false;
                 CatLNotPanel.Visible = true;
             }
+        }
+        public void ResetForm()
+        {
+            //Resetting The Major Panels
+            this.IntroPanel.Visible = true;
+            this.FileUploadPanel.Visible = false;
+            this.FoodPanel.Visible = false;
+            this.AccessPanel.Visible = false;
+            this.AnimalCatPanel.Visible = false;
+            this.HorsePanel.Visible = false;
+            this.DogPanel.Visible = false;
+            this.FarmAnimalPanel.Visible = false;
+            this.GenericAnimalPanel.Visible = false;
+            this.LitterPanel.Visible = false;
+            //Resetting Contents of Intro Panel
+            this.AdvertTypeComboBox.SelectedIndex = -1;
+            this.TitleTxt.Text = string.Empty;
+            this.PriceTxt.Text = string.Empty;
+            this.DescriptionTxt.Text = string.Empty;
+            //Resetting the Images in FileUpload Panel
+            this.ImageOnePictureBx.Image = null;
+            this.ImageTwoPictureBx.Image = null;
+            this.ImageThreePictureBx.Image = null;
+            this.ConfirmationOnePictureBx.Image = Properties.Resources.ImageUploadWait;
+            this.ConfirmationTwoPictureBx.Image = Properties.Resources.ImageUploadWait;
+            this.ConfirmationThreePictureBx.Image = Properties.Resources.ImageUploadWait;
+            //Resetting Contents of Food Panel
+            this.AnimalFoodTypeComboBox.SelectedIndex = -1;
+            this.DetailTxt.Text = string.Empty;
+            //Resettimg Contents of Accessories Panel
+            this.AccessCatComboBox.SelectedIndex = -1;
+            this.AccessTypeComboBox.SelectedIndex = -1;
+            //Resetting Contents of AnimalCat Panel
+            this.AnimalCatComboBox.SelectedIndex = -1;
+            this.AnimalTypeComboBox.SelectedIndex = -1;
+            this.SpecifyAnimalTxtBx.Text = string.Empty;
+            //Resetting Contents of Horse Panel
+            this.HorseNameTxt.Text = string.Empty;
+            this.HorseAgeTxt.Text = string.Empty;
+            this.HorseGenderComboBox.SelectedIndex = -1;
+            this.BrokenYesRadBttn.Checked = false;
+            this.BrokenNoRadBttn.Checked = false;
+            this.HorsePurposeTxt.Text = string.Empty;
+            //Resetting Contents of Dog Panel
+            this.DogNameTxt.Text = string.Empty;
+            this.DogAgeTxt.Text = string.Empty;
+            this.DogPurebreedNoBttn.Checked = false;
+            this.DogPurebreedYesRadBttn.Checked = false;
+            this.DogBreedComboBox.SelectedIndex = -1;
+            this.DogBreedOneComboBox.SelectedIndex = -1;
+            this.DogBreedTwoComboBox.SelectedIndex = -1;
+            //Resetting Contents of FarmAnimal Panel
+            this.FANameTxt.Text = string.Empty;
+            this.FAAgeTxt.Text = string.Empty;
+            this.FAGenderComboBox.SelectedIndex = -1;
+            this.FAPurposeTxt.Text = string.Empty;
+            //Resetting Generic Animal Panel
+            this.GANameTxt.Text = string.Empty;
+            this.GAAgeTxt.Text = string.Empty;
+            this.GAGenderComboBox.SelectedIndex = -1;
+            this.DetailOneTxt.Text = string.Empty;
+            this.DetailTwoTxt.Text = string.Empty;
+            this.DetailThreeTxt.Text = string.Empty;
+            //Resetting Contents of Litter Panel
+            this.LitterSizeTxt.Text = string.Empty;
+            this.LitterAgeTxt.Text = string.Empty;
+            this.DogLPComboBox.SelectedIndex = -1;
+            this.DogLNOneComboBox.SelectedIndex = -1;
+            this.DogLNTwoComboBox.SelectedIndex = -1;
+            this.CatLPComboBox.SelectedIndex = -1;
+            this.CatLNOneComboBox.SelectedIndex = -1;
+            this.CatLNTwoComboBox.SelectedIndex = -1;
+        }
+
+        private void CancelBttn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

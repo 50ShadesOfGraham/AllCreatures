@@ -334,6 +334,7 @@
             this.CancelBttn.TabIndex = 2;
             this.CancelBttn.Text = "Cancel";
             this.CancelBttn.UseVisualStyleBackColor = false;
+            this.CancelBttn.Click += new System.EventHandler(this.CancelBttn_Click);
             // 
             // IntroNextBttn
             // 
@@ -431,7 +432,7 @@
             this.UploadOneBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UploadOneBttn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UploadOneBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
-            this.UploadOneBttn.Location = new System.Drawing.Point(371, 61);
+            this.UploadOneBttn.Location = new System.Drawing.Point(371, 36);
             this.UploadOneBttn.Name = "UploadOneBttn";
             this.UploadOneBttn.Size = new System.Drawing.Size(149, 67);
             this.UploadOneBttn.TabIndex = 1;
@@ -621,7 +622,7 @@
             this.FoodConfirmBttn.Name = "FoodConfirmBttn";
             this.FoodConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.FoodConfirmBttn.TabIndex = 2;
-            this.FoodConfirmBttn.Text = "Food";
+            this.FoodConfirmBttn.Text = "Confirm";
             this.FoodConfirmBttn.UseVisualStyleBackColor = false;
             this.FoodConfirmBttn.Click += new System.EventHandler(this.FoodConfirmBttn_Click);
             // 
@@ -718,7 +719,7 @@
             this.AccessConfirmBttn.Name = "AccessConfirmBttn";
             this.AccessConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.AccessConfirmBttn.TabIndex = 2;
-            this.AccessConfirmBttn.Text = "Access";
+            this.AccessConfirmBttn.Text = "Confirm";
             this.AccessConfirmBttn.UseVisualStyleBackColor = false;
             this.AccessConfirmBttn.Click += new System.EventHandler(this.AccessConfirmBttn_Click);
             // 
@@ -1191,7 +1192,7 @@
             this.HorseConfirmBttn.Name = "HorseConfirmBttn";
             this.HorseConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.HorseConfirmBttn.TabIndex = 4;
-            this.HorseConfirmBttn.Text = "Horse";
+            this.HorseConfirmBttn.Text = "Confirm";
             this.HorseConfirmBttn.UseVisualStyleBackColor = false;
             this.HorseConfirmBttn.Click += new System.EventHandler(this.HorseConfirmBttn_Click);
             // 
@@ -1476,7 +1477,7 @@
             this.DogConfirmBttn.Name = "DogConfirmBttn";
             this.DogConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.DogConfirmBttn.TabIndex = 5;
-            this.DogConfirmBttn.Text = "Dog";
+            this.DogConfirmBttn.Text = "Confirm";
             this.DogConfirmBttn.UseVisualStyleBackColor = false;
             this.DogConfirmBttn.Click += new System.EventHandler(this.DogConfirmBttn_Click);
             // 
@@ -1600,7 +1601,7 @@
             this.FAConfirmBttn.Name = "FAConfirmBttn";
             this.FAConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.FAConfirmBttn.TabIndex = 6;
-            this.FAConfirmBttn.Text = "FA";
+            this.FAConfirmBttn.Text = "Confirm";
             this.FAConfirmBttn.UseVisualStyleBackColor = false;
             this.FAConfirmBttn.Click += new System.EventHandler(this.FAConfirmBttn_Click);
             // 
@@ -1661,6 +1662,9 @@
             // GAGenderComboBox
             // 
             this.GAGenderComboBox.FormattingEnabled = true;
+            this.GAGenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
             this.GAGenderComboBox.Location = new System.Drawing.Point(319, 240);
             this.GAGenderComboBox.Name = "GAGenderComboBox";
             this.GAGenderComboBox.Size = new System.Drawing.Size(182, 33);
@@ -1771,7 +1775,7 @@
             this.GAConfirmBttn.Name = "GAConfirmBttn";
             this.GAConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.GAConfirmBttn.TabIndex = 7;
-            this.GAConfirmBttn.Text = "GA";
+            this.GAConfirmBttn.Text = "Confirm";
             this.GAConfirmBttn.UseVisualStyleBackColor = false;
             this.GAConfirmBttn.Click += new System.EventHandler(this.GAConfirmBttn_Click);
             // 
@@ -2072,7 +2076,7 @@
             this.LitterConfirmBttn.Name = "LitterConfirmBttn";
             this.LitterConfirmBttn.Size = new System.Drawing.Size(152, 96);
             this.LitterConfirmBttn.TabIndex = 27;
-            this.LitterConfirmBttn.Text = "Litter";
+            this.LitterConfirmBttn.Text = "Confirm";
             this.LitterConfirmBttn.UseVisualStyleBackColor = false;
             this.LitterConfirmBttn.Click += new System.EventHandler(this.LitterConfirmBttn_Click);
             // 
