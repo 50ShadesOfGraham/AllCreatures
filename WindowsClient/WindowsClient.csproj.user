@@ -25,6 +25,9 @@
     <Compile Update="EditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EditAdvertisement.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FarmAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -44,6 +47,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LitterAdvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyAdvertisements.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Notification.cs">
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Update="SignIn.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SingleAdvertisement.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UserIndex.cs">
       <SubType>Form</SubType>

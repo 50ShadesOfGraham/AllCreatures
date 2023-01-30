@@ -57,19 +57,19 @@ namespace BusinessEntities
             : base(advertid, selleremail, title, description, price, verified, status,imageone,imagetwo,imagethree, animalname, "Horse", age, gender)
         {
             this.horseId= advertid;
-            this.size = Size;
-            this.broken = Broken;
-            this.breed = Breed;
-            this.purpose = Purpose;
+            this.size = size;
+            this.broken = broken;
+            this.breed = breed;
+            this.purpose = purpose;
         }
         public Horse(int advertid, string selleremail, string title, string description, double price, bool verified, string status,string animalname, int age, string gender, string size, bool broken, string breed, string purpose)
             : base(advertid, selleremail, title, description, price, verified, status, animalname, "Horse", age, gender)
         {
             this.horseId = advertid;
-            this.size = Size;
-            this.broken = Broken;
-            this.breed = Breed;
-            this.purpose = Purpose;
+            this.size = size;
+            this.broken = broken;
+            this.breed = breed;
+            this.purpose = purpose;
         }
         #endregion
     }

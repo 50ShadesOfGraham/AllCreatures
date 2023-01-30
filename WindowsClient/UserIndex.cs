@@ -255,7 +255,7 @@ namespace WindowsClient
 
         private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditAccount editAccount = new EditAccount();
+            EditAccount editAccount = new EditAccount(Model);
             editAccount.Show();
         }
 
@@ -263,6 +263,12 @@ namespace WindowsClient
         {
             reportUser reportuser = new reportUser(Model);
             reportuser.Show();
+        }
+
+        private void myAdvertisementsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyAdvertisements myadverts = new MyAdvertisements(Model);
+            myadverts.Show();
         }
     }
 }
