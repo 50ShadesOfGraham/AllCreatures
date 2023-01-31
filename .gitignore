@@ -20,3 +20,7 @@ ACGS/obj/ACGS.csproj.nuget.dgspec.json
 *.editorconfig
 *.cache
 /BusinessEntities/Horse.cs
+.dll
+.pdb
+.cache
+.exe

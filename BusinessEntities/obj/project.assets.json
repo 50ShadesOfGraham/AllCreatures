@@ -8,32 +8,47 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Eoghan\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Darragh\\.nuget\\packages\\": {},
+>>>>>>> 5f5725541f2c498d6e813aeba8abb35c948c03f5
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Eoghan\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "projectName": "BusinessEntities",
       "projectPath": "C:\\Users\\Eoghan\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
       "packagesPath": "C:\\Users\\Eoghan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Eoghan\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "projectName": "BusinessEntities",
+      "projectPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+      "packagesPath": "C:\\Users\\Darragh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\obj\\",
+>>>>>>> 5f5725541f2c498d6e813aeba8abb35c948c03f5
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\Eoghan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Darragh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 5f5725541f2c498d6e813aeba8abb35c948c03f5
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -57,8 +72,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -67,7 +81,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+>>>>>>> 5f5725541f2c498d6e813aeba8abb35c948c03f5
       }
     }
   }
