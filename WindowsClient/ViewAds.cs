@@ -18,6 +18,13 @@ namespace WindowsClient
     {
         private IModel Model;
         private Dog Dog;
+        private Accessories access;
+        private Food fo;
+        private Horse pony;
+        private FarmAnimal fA;
+        private GenericAnimal gA;
+        private Litter lttr;
+
         public ViewAds(IModel Model, Dog dog)
         {
             InitializeComponent();
@@ -25,6 +32,41 @@ namespace WindowsClient
             this.Dog = dog;
         }
 
+        public ViewAds(IModel model, Accessories access)
+        {
+            Model = model;
+            this.access = access;
+        }
+
+        public ViewAds(IModel model, Food fo)
+        {
+            Model = model;
+            this.fo = fo;
+        }
+
+        public ViewAds(IModel model, Horse pony)
+        {
+            Model = model;
+            this.pony = pony;
+        }
+
+        public ViewAds(IModel model, FarmAnimal fA)
+        {
+            Model = model;
+            this.fA = fA;
+        }
+
+        public ViewAds(IModel model, GenericAnimal gA)
+        {
+            Model = model;
+            this.gA = gA;
+        }
+
+        public ViewAds(IModel model, Litter lttr)
+        {
+            Model = model;
+            this.lttr = lttr;
+        }
 
         public void SetLabel(String FirstName, String LastName,String Email)
         {
