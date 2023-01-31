@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {}
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj",
         "projectName": "BusinessEntities",
-        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

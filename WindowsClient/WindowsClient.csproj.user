@@ -4,6 +4,9 @@
     <Compile Update="AdminIndex.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CreateAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CreateAdvert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,7 +82,16 @@
     <Compile Update="ViewAds.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ViewMyAds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ViewMyPurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ViewReportedUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ViewUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

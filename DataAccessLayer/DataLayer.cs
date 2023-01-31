@@ -5,10 +5,12 @@ using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
 using User = BusinessEntities.User;
+using Advertisement = BusinessEntities.Advertisement;
 
 namespace DataAccessLayer
 {
-    public class DataLayer : IDataLayer
+    public class DataLayer : 
+        IDataLayer
     {
         #region Instance Attributes
         private SqlConnection con;
@@ -1167,10 +1169,7 @@ namespace DataAccessLayer
 
         }
 
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3, string county, string eircode)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId)
         {
@@ -1235,5 +1234,56 @@ namespace DataAccessLayer
             }
             return reportList;
         }
+
+        //Anna
+        public bool editUserInDB(IUser u)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Users";
+                da = new SqlDataAdapter(sql, con);
+                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(u.Email); //primary key
+
+                if (findRow != null)
+                {
+                    findRow[5] = u.UserType;
+                }
+                da.Update(ds, "UsersData"); //edit the following row from database table
+            }
+            catch (System.Exception excep)
+            {
+                MessageBox.Show(excep.Message);
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
+            }
+            return true;
+        }
     }
+
+        //public bool filterAdsByUserEmail(IUser u)
+        //{
+        //    try
+        //    {
+        //        DataSet ds = new DataSet();
+        //        string sql = "SELECT * From Users WHERE UserType = User";
+        //        da = new SqlDataAdapter(sql, con);
+        //        cb = new SqlCommandBuilder(da);
+        //        da.Fill(ds, "UsersData");
+        //        DataRow findRow = ds.Tables["UsersData"].Rows.Find(u.Email); //primary key
+        //    }
+        //    catch (System.Exception excep)
+        //    {
+        //        MessageBox.Show(excep.Message);
+        //        if (con.State.ToString() == "Open")
+        //            con.Close();
+        //        Application.Exit();
+        //    }
+        //    return true;
+        //}
+    //}
 }

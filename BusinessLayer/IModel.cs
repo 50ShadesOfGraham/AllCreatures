@@ -51,5 +51,14 @@ namespace BusinessLayer
         bool deleteAdvertisement(Litter litter);
         bool banUserInDB(BusinessEntities.User user);
         bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description);
+
+        //Anna
+        bool editUser(BusinessEntities.IUser u);
+     //   bool deleteUser(BusinessEntities.IUser u);
+
+      //  bool filterAds(BusinessEntities.IUser u);
+
+        //Anna display ads for the following user.
+
     }
 }

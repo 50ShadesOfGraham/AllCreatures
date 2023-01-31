@@ -40,6 +40,12 @@ namespace WindowsClient
             }
             this.BundlePrice = BundlePrice;
         }
+
+        public CreateOneAdvert(IModel model)
+        {
+            Model = model;
+        }
+
         public byte[] ConvertImageToByte(System.Drawing.Image img)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -1527,6 +1533,16 @@ namespace WindowsClient
 
             }
             
+        }
+
+        private void AdvertTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelBttn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

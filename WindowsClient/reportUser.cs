@@ -31,7 +31,6 @@ namespace WindowsClient
         {
             try
             {
-
                 var check = 0;
                 foreach (User user in model.UserList)
                 {
@@ -71,6 +70,11 @@ namespace WindowsClient
             
             //MessageBox.Show("Test");
             
+        }
+
+        private void reportUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

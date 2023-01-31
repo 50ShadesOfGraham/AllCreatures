@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj",
         "projectName": "BusinessEntities",
-        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,11 +91,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj"
               },
-              "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -132,14 +132,14 @@
         }
       }
     },
-    "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Annayap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -160,8 +160,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\Annayap\\source\\repos\\AllCreatures - Back up\\BusinessEntities\\BusinessEntities.csproj"
               }
             }
           }

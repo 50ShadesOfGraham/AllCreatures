@@ -116,6 +116,13 @@
             this.verifyAdvertisementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verifyUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.displayUsers = new System.Windows.Forms.ToolStripMenuItem();
+            this.createAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporttoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewReporttoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ViewReportflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.FlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.SidePanel.SuspendLayout();
             this.ReportPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -135,6 +142,7 @@
             this.HousePetPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).BeginInit();
             this.NavBar.SuspendLayout();
+            this.ViewReportflowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -1277,13 +1285,15 @@
             this.NavBar.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.NavBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.myAccountToolStripMenuItem,
-            this.verificationToolStripMenuItem});
+            this.verificationToolStripMenuItem,
+            this.reporttoolStripMenuItem});
             this.NavBar.Location = new System.Drawing.Point(0, 0);
             this.NavBar.Name = "NavBar";
             this.NavBar.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
             this.NavBar.Size = new System.Drawing.Size(787, 38);
             this.NavBar.TabIndex = 1;
             this.NavBar.Text = "menuStrip1";
+            this.NavBar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.NavBar_ItemClicked);
             // 
             // myAccountToolStripMenuItem
             // 
@@ -1321,7 +1331,8 @@
             this.verificationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verifyAdvertisementsToolStripMenuItem,
             this.verifyUsersToolStripMenuItem,
-            this.displayUsers});
+            this.displayUsers,
+            this.createAdminToolStripMenuItem});
             this.verificationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.verificationToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.verificationToolStripMenuItem.Name = "verificationToolStripMenuItem";
@@ -1354,11 +1365,82 @@
             this.displayUsers.Text = "DisplayUsers";
             this.displayUsers.Click += new System.EventHandler(this.displayUsers_Click);
             // 
+            // createAdminToolStripMenuItem
+            // 
+            this.createAdminToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.createAdminToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.createAdminToolStripMenuItem.Name = "createAdminToolStripMenuItem";
+            this.createAdminToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
+            this.createAdminToolStripMenuItem.Text = "Create Admin";
+            this.createAdminToolStripMenuItem.Click += new System.EventHandler(this.createAdminToolStripMenuItem_Click);
+            // 
+            // reporttoolStripMenuItem
+            // 
+            this.reporttoolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.reporttoolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewReporttoolStripMenuItem});
+            this.reporttoolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.reporttoolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.reporttoolStripMenuItem.Name = "reporttoolStripMenuItem";
+            this.reporttoolStripMenuItem.Size = new System.Drawing.Size(78, 36);
+            this.reporttoolStripMenuItem.Text = "Reports";
+            // 
+            // viewReporttoolStripMenuItem
+            // 
+            this.viewReporttoolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
+            this.viewReporttoolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.viewReporttoolStripMenuItem.Name = "viewReporttoolStripMenuItem";
+            this.viewReporttoolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.viewReporttoolStripMenuItem.Text = "View Reports";
+            this.viewReporttoolStripMenuItem.Click += new System.EventHandler(this.viewReporttoolStripMenuItem_Click);
+            // 
+            // ViewReportflowLayoutPanel
+            // 
+            this.ViewReportflowLayoutPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ViewReportflowLayoutPanel.Controls.Add(this.label1);
+            this.ViewReportflowLayoutPanel.Controls.Add(this.linkLabel1);
+            this.ViewReportflowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ViewReportflowLayoutPanel.Location = new System.Drawing.Point(179, 534);
+            this.ViewReportflowLayoutPanel.Name = "ViewReportflowLayoutPanel";
+            this.ViewReportflowLayoutPanel.Size = new System.Drawing.Size(608, 37);
+            this.ViewReportflowLayoutPanel.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(361, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Dear Admin, having question on account suspension?";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(370, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(73, 20);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Click here";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // FlowLayout
+            // 
+            this.FlowLayout.AutoScroll = true;
+            this.FlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowLayout.Location = new System.Drawing.Point(179, 38);
+            this.FlowLayout.Name = "FlowLayout";
+            this.FlowLayout.Size = new System.Drawing.Size(608, 496);
+            this.FlowLayout.TabIndex = 3;
+            // 
             // AdminIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 571);
+            this.Controls.Add(this.FlowLayout);
+            this.Controls.Add(this.ViewReportflowLayoutPanel);
             this.Controls.Add(this.SidePanel);
             this.Controls.Add(this.NavBar);
             this.MainMenuStrip = this.NavBar;
@@ -1388,6 +1470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.LogoBox)).EndInit();
             this.NavBar.ResumeLayout(false);
             this.NavBar.PerformLayout();
+            this.ViewReportflowLayoutPanel.ResumeLayout(false);
+            this.ViewReportflowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1483,5 +1567,12 @@
         private Button AquariumBttn;
         private Button ClothingBttn;
         private ToolStripMenuItem displayUsers;
+        private ToolStripMenuItem createAdminToolStripMenuItem;
+        private ToolStripMenuItem reporttoolStripMenuItem;
+        private ToolStripMenuItem viewReporttoolStripMenuItem;
+        private FlowLayoutPanel ViewReportflowLayoutPanel;
+        private FlowLayoutPanel FlowLayout;
+        private Label label1;
+        private LinkLabel linkLabel1;
     }
 }

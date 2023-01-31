@@ -17,24 +17,36 @@ namespace WindowsClient
         #region Instance Attributes
         //private ACGSContainer container;
         private IModel Model;
+        private User User;
+        private Advertisement Advertisement;    
         #endregion
         public UserIndex(IModel Model)
         {
             InitializeComponent();
-            //MdiParent = parent;
-            //container = parent;
             this.Model = Model;
+        }
+
+        public UserIndex(User user)
+        {
+            this.User = user;
+        }
+
+        public UserIndex(Advertisement ad)
+        {
+            this.Advertisement = ad;
         }
 
         private void UserIndex_Load(object sender, EventArgs e)
         {
             int counter = 0;
-            foreach(Advertisement advertisement in Model.AdvertList)
+            foreach (Advertisement advertisement in Model.AdvertList)
             {
                 counter++;
             }
 
             MessageBox.Show("Number of Ads: " + counter);
+
+            //Telling computer the current log in user...
 
             //Animal Panel
             AnimalPanel.Visible = false;
@@ -218,28 +230,42 @@ namespace WindowsClient
             createAd.Show();
         }
 
+        //View Advertisement.
+        //why got 
         private void DogBttn_Click(object sender, EventArgs e)
         {
             FlowLayout.Controls.Clear();
-            foreach (Dog u in Model.AdvertList)
+           // foreach (Dog dg in Model.AdvertList)
             {
-                MessageBox.Show("Advertisement:" + u.AdvertID);
-                ViewAds ads = new ViewAds(Model,u);
-                ads.SetLabel(u.Title, u.SellerEmail, u.Price.ToString()); //function
-                FlowLayout.Controls.Add(ads);
+                foreach (Advertisement advertisement in Model.AdvertList)
+                {
+                    if (advertisement is Dog dog)
+                    {
+                        ViewAds ads = new ViewAds(Model, dog);
+                        ads.SetLabel(dog.Title, dog.Description, dog.Status, dog.Price, dog.SellerEmail);
+                        FlowLayout.Controls.Add(ads);
+                    }
+                }
+            }
+        }
+
+        private void HorseBttn_Click(object sender, EventArgs e)
+        {
+            FlowLayout.Controls.Clear();
+            foreach (Advertisement advertisement in Model.AdvertList)
+            {
+                if (advertisement is Horse horse)
+                {
+                    ViewAds ads = new ViewAds(Model, horse);
+                    ads.SetLabel(horse.Title, horse.Description, horse.Status, horse.Price, horse.SellerEmail);
+                    FlowLayout.Controls.Add(ads);
+                }
             }
         }
 
         private void CatBttn_Click(object sender, EventArgs e)
         {
-            //FlowLayout.Controls.Clear();  //testing git changes
-
-            foreach (User u in Model.UserList)
-            {
-                //ViewAds ads = new ViewAds();
-                //ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
-                //FlowLayout.Controls.Add(ads);
-            }
+            MessageBox.Show("Testing cat!");
         }
 
         private void notificationsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -247,5 +273,33 @@ namespace WindowsClient
             NotificationContainer userNotifications = new NotificationContainer(Model);
             userNotifications.Show();
         }
+
+        //Anna myPurchase
+        private void myPurchasesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        //Anna view myAdvertisement
+        private void myAdvertisementsToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            //FlowLayout.Controls.Clear();
+            //foreach (Advertisement advertisement in Model.AdvertList)
+            //{
+            //    //Anna
+            //    ViewMyAds vma = new ViewMyAds();
+            //    // Model.displayFilteredData(advertisement);
+            //    vma.SetAdsLabel(advertisement.Title, advertisement.Description, advertisement.Price);
+            //    FlowLayout.Controls.Add(vma);
+
+            //    //direct User to add ads page, yes or no
+            //    //if (FlowLayout.Controls.Count == 0)
+            //    //{
+            //    //    CreateOneAdvert coa = new CreateOneAdvert(Model);
+            //    //    coa.Show();
+            //    //}
+            //    // }
+            //}
+        }
+
     }
 }

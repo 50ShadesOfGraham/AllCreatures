@@ -143,7 +143,8 @@ namespace BusinessLayer
                 // DataLayer.InsertImageToDB(image);
                 return true;
 
-            } catch (System.Exception excep)
+            }
+            catch (System.Exception excep)
             {
                 MessageBox.Show(excep.Message);
                 return false;
@@ -177,7 +178,7 @@ namespace BusinessLayer
                 cardholder, cardnumber, expirydate, cvs, question, answer);
                 return true;
             }
-            catch(System.Exception excep)
+            catch (System.Exception excep)
             {
                 return false;
             }
@@ -208,11 +209,11 @@ namespace BusinessLayer
             }
         }
 
-        public Boolean addNewDogAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname, int age,string gender, bool purebreed, string breedone, string breedtwo)
+        public Boolean addNewDogAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string dogname, int age, string gender, bool purebreed, string breedone, string breedtwo)
         {
             try
             {
-                DataLayer.addNewDogToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, dogname,age, gender, purebreed, breedone, breedtwo);
+                DataLayer.addNewDogToDB(advertid, selleremail, title, description, price, verified, status, imageone, imagetwo, imagethree, dogname, age, gender, purebreed, breedone, breedtwo);
                 return true;
             }
             catch (System.Exception excep)
@@ -466,6 +467,25 @@ namespace BusinessLayer
                 return false;
             }
         }
+        //Anna
+        public bool editUser(IUser u)
+        {
+            DataLayer.editUserInDB(u);
+            return true;
+        }
+
+        //public bool deleteUser(IUser u)
+        //{
+        //    DataLayer.deleteUserAccount(u);
+        //    return true;
+        //}
+
+        //public bool filterAds(IUser u)
+        //{
+        //    DataLayer.filterAdsByUserEmail(u);
+        //    return true;
+        //}
+
     }
 }
 

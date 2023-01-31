@@ -43,6 +43,12 @@ namespace DataAccessLayer
         public bool deleteAdvertisement(Dog dog);
         public bool deleteAdvertisement(Horse horse);
         public bool banUserInDB(BusinessEntities.User user);
+
+        //Anna
+        bool editUserInDB(BusinessEntities.IUser u);
+      //  bool filterAdsByUserEmail(BusinessEntities.IUser u);
+       // public bool deleteUserAccount(BusinessEntities.IUser u);
+
         public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId);
         List<Report> getAllReports();
         void openConnection();

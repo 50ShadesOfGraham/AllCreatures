@@ -1,8 +1,10 @@
-﻿using BusinessLayer;
+﻿using BusinessEntities;
+using BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,11 +18,12 @@ namespace WindowsClient
         #region Instance Attributes
         //private ACGSContainer container;
         private IModel Model;
+
         #endregion
         public AdminIndex(IModel Model)
         {
             InitializeComponent();
-            this.Model = Model;
+            this.Model = Model; 
         }
 
         private void showSubMenu(Panel panel)
@@ -133,6 +136,9 @@ namespace WindowsClient
             UserPanel.Visible = false;
             //Reports Panel
             ReportPanel.Visible = false;
+
+            //View report by Anna
+            ViewReportflowLayoutPanel.Visible = false;
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -161,20 +167,58 @@ namespace WindowsClient
             verifyAds.Show();
         }
 
-        private void verifyAdsFood_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void verifyAdsAssessories_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void displayUsers_Click(object sender, EventArgs e)
         {
             DisplayUsers displayUsers = new DisplayUsers(Model);
             displayUsers.Show();
+        }
+        //ANNA (direct user to create admin form)
+        private void createAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateAdmin ca = new CreateAdmin(Model);
+            ca.Show();
+        }
+
+        private void NavBar_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void viewReporttoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //View report Panel by Anna
+            ViewReportflowLayoutPanel.Visible = true;
+
+            if (ViewReportflowLayoutPanel.Visible == true)
+            {
+                FlowLayout.Controls.Clear();
+                foreach (User u in Model.UserList)
+                {
+                   // Model.filterAds(u);
+                    ViewReportedUser vru = new ViewReportedUser(Model);
+                    vru.SetLabel(u.Email, u.Password, u.UserType);
+                    FlowLayout.Controls.Add(vru);
+                }
+            }
+        }
+
+        private void ViewReportPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel1.Text = "Click Here";
+            this.linkLabel1.AutoSize = true;
+
+
+            System.Diagnostics.Process.Start("http://www.microsoft.com");
         }
     }
 }
