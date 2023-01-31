@@ -22,7 +22,15 @@ namespace BusinessLayer
         bool addNewGenericAnimalAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, string animalname, int age, string gender, string detailone, string detailtwo, string detailthree);
         bool addNewLitterAdvert(int advertid, string selleremail, string title, string description, double price, bool verified, string status, byte[] imageone, byte[] imagetwo, byte[] imagethree, string animaltype, int size, int age, bool purebreed, string breedone, string breedtwo);
         bool addNewBundle(int bundleID, int ItemOne_advertid, int ItemTwo_advertid, int ItemThree_advertid, double bundleprice);
-        bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);        
+        bool addNewNotification(string notificationid, string message, string title, DateTime messagetime, bool messageread, string useremail);
+        bool UpdateUser(string currentEmail, string password, string firstName, string lastName, bool verified, string UserType, string addressOne, string addressTwo, string addressThree, string County, string eirCode, string cardHolder, string carNumb, string expDate, string Cvs);
+        bool UpdateAccessAdvert(int advertid, string title, string description, double price, string accesscategory, string accesssubcat);
+        bool UpdateFoodAdvert(int advertid, string title, string description, double price, string animaltype, string moredetails);
+        bool UpdateDogAdvert(int advertid, string title, string description, double price, string dogname, int dogage, string doggender, bool purebreed, string breedone, string breedtwo);
+        bool UpdateHorseAdvert(int advertid, string title, string description, double price, string horsename, int horseage, string horsegender, string size, bool broken, string breed, string purpose);
+        bool UpdateFarmAnimalAdvert(int advertid, string title, string description, double price, string FAName, int age, string gender, string purpose);
+        bool UpdateGenericAnimalAdvert(int advertid, string title, string description, double price, string name, int age, string gender, string detailone, string detailtwo, string detailthree);
+        bool UpdateLitterAdvert(int advertid, string title, string description, double price, int littersize, int age, bool purebreed, string breedone, string breedtwo);
         BusinessEntities.User CurrentUser { get; set; }
         DataAccessLayer.IDataLayer DataLayer { get; set; }
         string getUserTypeForCurrentuser();
@@ -53,5 +61,14 @@ namespace BusinessLayer
         bool deleteAdvertisement(FarmAnimal farmAnimal);
         bool banUserInDB(BusinessEntities.User user);
         bool addNewReportS(string reportUser, string reason, DateTime dateTime, string description);
+
+        //Anna
+        bool editUser(BusinessEntities.IUser u);
+     //   bool deleteUser(BusinessEntities.IUser u);
+
+      //  bool filterAds(BusinessEntities.IUser u);
+
+        //Anna display ads for the following user.
+
     }
 }

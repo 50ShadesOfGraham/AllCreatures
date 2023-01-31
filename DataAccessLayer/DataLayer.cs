@@ -5,11 +5,12 @@ using MessageBox = System.Windows.Forms.MessageBox;
 using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
 using User = BusinessEntities.User;
-using System.Diagnostics;
+using Advertisement = BusinessEntities.Advertisement;
 
 namespace DataAccessLayer
 {
-    public class DataLayer : IDataLayer
+    public class DataLayer : 
+        IDataLayer
     {
         #region Instance Attributes
         private SqlConnection con;
@@ -56,6 +57,14 @@ namespace DataAccessLayer
                 Environment.Exit(0); //Force the application to close
             }
         }
+        public byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
         public void closeConnection()
         {
             con.Close();
@@ -78,23 +87,17 @@ namespace DataAccessLayer
                 for (int i = 0; i < maxUsers; i++)
                 {
                     DataRow dRow = ds.Tables["UsersData"].Rows[i];
-                    User user = UserCreator.GetUserUpdate(dRow.ItemArray.GetValue(0).ToString(),
-                                                          dRow.ItemArray.GetValue(1).ToString(),
-                                                          dRow.ItemArray.GetValue(2).ToString(),
-                                                          dRow.ItemArray.GetValue(3).ToString(),
-                                                          Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
-                                                          dRow.ItemArray.GetValue(5).ToString(),
-                                                          dRow.ItemArray.GetValue(6).ToString(),
-                                                          dRow.ItemArray.GetValue(7).ToString(),
-                                                          dRow.ItemArray.GetValue(8).ToString(),
-                                                          dRow.ItemArray.GetValue(9).ToString(),
-                                                          dRow.ItemArray.GetValue(10).ToString(),
-                                                          dRow.ItemArray.GetValue(11).ToString(),
-                                                        dRow.ItemArray.GetValue(12).ToString(),
-                                                        dRow.ItemArray.GetValue(13).ToString(),
-                                                        dRow.ItemArray.GetValue(14).ToString(),
-                                                        dRow.ItemArray.GetValue(15).ToString(),
-                                                        dRow.ItemArray.GetValue(16).ToString());
+                    User user = UserCreator.GetUser(dRow.ItemArray.GetValue(0).ToString(),
+                                                        dRow.ItemArray.GetValue(1).ToString(),
+                                                        dRow.ItemArray.GetValue(2).ToString(),
+                                                        dRow.ItemArray.GetValue(3).ToString(),
+                                                        Convert.ToBoolean(dRow.ItemArray.GetValue(4)),
+                                                        dRow.ItemArray.GetValue(5).ToString(),
+                                                        dRow.ItemArray.GetValue(6).ToString(),
+                                                        dRow.ItemArray.GetValue(7).ToString(),
+                                                        dRow.ItemArray.GetValue(8).ToString(),
+                                                        dRow.ItemArray.GetValue(9).ToString(),
+                                                        dRow.ItemArray.GetValue(10).ToString());
                     UserList.Add(user);
                 }
 
@@ -102,13 +105,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Datalayer: User" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 Application.Exit();
@@ -151,13 +148,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -199,13 +190,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -245,13 +230,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -293,13 +272,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -342,13 +315,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -385,13 +352,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -428,13 +389,7 @@ namespace DataAccessLayer
             }
             catch (System.Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show(excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -457,13 +412,7 @@ namespace DataAccessLayer
             }
             catch(Exception excep)
             {
-                var st = new StackTrace(excep, true);
-                // Get the top stack frame
-                var frame = st.GetFrame(0);
-                // Get the line number from the stack frame
-                var line = frame.GetFileLineNumber();
-
-                System.Windows.MessageBox.Show("Form:" + excep.Message + "\n Line : " + line.ToString());
+                MessageBox.Show("Notifications: " + excep.Message);
                 if (con.State.ToString() == "Open")
                     con.Close();
                 System.Windows.Forms.Application.Exit();
@@ -506,8 +455,7 @@ namespace DataAccessLayer
             }
             return NotificationList;
         }
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, string usertype, string address1, string address2, string address3,
-            string county, string eircode)
+        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string userType, string address1, string address2, string address3, string county, string eircode)
         {
             try
             {
@@ -519,15 +467,16 @@ namespace DataAccessLayer
                 maxAdverts = ds.Tables["UsersData"].Rows.Count;
                 DataRow dRow = ds.Tables["UsersData"].NewRow();
                 dRow[0] = email;
-                dRow[1] = firstname;
-                dRow[2] = lastname;
-                dRow[3] = password;
-                dRow[4] = usertype;
-                dRow[5] = address1;
-                dRow[6] = address2;
-                dRow[7] = address3;
-                dRow[8] = county;
-                dRow[9] = eircode;
+                dRow[1] = password;
+                dRow[2] = firstname;
+                dRow[3] = lastname;
+                dRow[4] = verified;
+                dRow[5] = userType;
+                dRow[6] = address1;
+                dRow[7] = address2;
+                dRow[8] = address3;
+                dRow[9] = county;
+                dRow[10] = eircode;
                 //Darragh
                 ds.Tables["UsersData"].Rows.Add(dRow);
                 da.Update(ds, "UsersData");
@@ -1090,34 +1039,7 @@ namespace DataAccessLayer
                 DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
                 if (findRow != null)
                 {
-                    findRow[5] = accessories.Verified;
-                }
-                da.Update(ds, "AdsData");
-            }
-            catch (System.Exception excep)
-            {
-                MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
-            }
-            return true;
-        }
-
-        public bool verifyAdvertisement(Food food)
-        {
-            try
-            {
-                ds = new DataSet();
-                string sql = "SELECT * From FoodAdvertisement";
-                da = new SqlDataAdapter(sql, con);
-                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);
-                da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(food.FoodId);
-                if (findRow != null)
-                {
-                    findRow[5] = food.Verified;
+                    findRow[5] = accessories.AccessoriesID;
                 }
                 da.Update(ds, "AdsData");
             }
@@ -1142,7 +1064,7 @@ namespace DataAccessLayer
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.AdvertID);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(advertisement.Title);
                 if (findRow != null)
                 {
                     findRow.Delete(); //mark row as deleted
@@ -1200,7 +1122,7 @@ namespace DataAccessLayer
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
                 cb = new SqlCommandBuilder(da);  //Generates
                 da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.HorseId);
+                DataRow findRow = ds.Tables["AdsData"].Rows.Find(horse.Title);
                 if (findRow != null)
                 {
                     findRow.Delete(); //mark row as deleted
@@ -1247,10 +1169,7 @@ namespace DataAccessLayer
 
         }
 
-        public void addNewUserToDB(string email, string firstname, string lastname, string password, bool verified, string usertype, string address1, string address2, string address3, string county, string eircode)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId)
         {
@@ -1316,112 +1235,55 @@ namespace DataAccessLayer
             return reportList;
         }
 
-        public bool deleteAdvertisement(Accessories accessories)
+        //Anna
+        public bool editUserInDB(IUser u)
         {
             try
             {
-                ds = new DataSet();
-                string sql = "SELECT * From AccessoriesAdvertisement";
+                DataSet ds = new DataSet();
+                string sql = "SELECT * From Users";
                 da = new SqlDataAdapter(sql, con);
                 da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(accessories.AccessoriesID);
-                if (findRow != null)
-                {
-                    findRow.Delete(); //mark row as deleted
-                }
-                da.Update(ds, "AdsData"); //remove row from database table
-            }
-            catch (System.Exception excep)
-            {
-                MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
-            }
-            return true;
-        }
+                cb = new SqlCommandBuilder(da);
+                da.Fill(ds, "UsersData");
+                DataRow findRow = ds.Tables["UsersData"].Rows.Find(u.Email); //primary key
 
-        public bool deleteAdvertisement(FarmAnimal farmAnimal)
-        {
-            try
-            {
-                ds = new DataSet();
-                string sql = "SELECT * From FarmAnimalAdvertisement";
-                da = new SqlDataAdapter(sql, con);
-                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(farmAnimal.FarmId);
                 if (findRow != null)
                 {
-                    findRow.Delete(); //mark row as deleted
+                    findRow[5] = u.UserType;
                 }
-                da.Update(ds, "AdsData"); //remove row from database table
+                da.Update(ds, "UsersData"); //edit the following row from database table
             }
             catch (System.Exception excep)
             {
                 MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
-            }
-            return true;
-        }
-
-        public bool deleteAdvertisement(Litter litter)
-        {
-            try
-            {
-                ds = new DataSet();
-                string sql = "SELECT * From LitterAdvertisement";
-                da = new SqlDataAdapter(sql, con);
-                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(litter.LitterId);
-                if (findRow != null)
-                {
-                    findRow.Delete(); //mark row as deleted
-                }
-                da.Update(ds, "AdsData"); //remove row from database table
-            }
-            catch (System.Exception excep)
-            {
-                MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
-            }
-            return true;
-        }
-
-        public bool deleteAdvertisement(GenericAnimal genericAnimal)
-        {
-            try
-            {
-                ds = new DataSet();
-                string sql = "SELECT * From GenericAnimalAdvertisement";
-                da = new SqlDataAdapter(sql, con);
-                da.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-                cb = new SqlCommandBuilder(da);  //Generates
-                da.Fill(ds, "AdsData");
-                DataRow findRow = ds.Tables["AdsData"].Rows.Find(genericAnimal.GenericID);
-                if (findRow != null)
-                {
-                    findRow.Delete(); //mark row as deleted
-                }
-                da.Update(ds, "AdsData"); //remove row from database table
-            }
-            catch (System.Exception excep)
-            {
-                MessageBox.Show(excep.Message);
-                if (getConnection().ToString() == "Open")
-                    closeConnection();
-                System.Windows.Forms.Application.Exit();
+                if (con.State.ToString() == "Open")
+                    con.Close();
+                Application.Exit();
             }
             return true;
         }
     }
+
+        //public bool filterAdsByUserEmail(IUser u)
+        //{
+        //    try
+        //    {
+        //        DataSet ds = new DataSet();
+        //        string sql = "SELECT * From Users WHERE UserType = User";
+        //        da = new SqlDataAdapter(sql, con);
+        //        cb = new SqlCommandBuilder(da);
+        //        da.Fill(ds, "UsersData");
+        //        DataRow findRow = ds.Tables["UsersData"].Rows.Find(u.Email); //primary key
+        //    }
+        //    catch (System.Exception excep)
+        //    {
+        //        MessageBox.Show(excep.Message);
+        //        if (con.State.ToString() == "Open")
+        //            con.Close();
+        //        Application.Exit();
+        //    }
+        //    return true;
+        //}
+    //}
 }
