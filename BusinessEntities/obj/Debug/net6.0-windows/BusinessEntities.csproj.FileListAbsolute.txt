@@ -21,3 +21,15 @@ C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj
 C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.dll
 C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
 C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.deps.json
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\ref\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.pdb
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.AssemblyReference.cache
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfoInputs.cache
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfo.cs
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
+C:\Users\Darragh\Source\Repos\50ShadesOfGraham\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
