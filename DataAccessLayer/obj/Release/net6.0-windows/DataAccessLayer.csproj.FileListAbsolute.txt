@@ -1,0 +1,5 @@
+C:\Users\Annayap\source\repos\AllCreatures - Back up\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Annayap\source\repos\AllCreatures - Back up\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Annayap\source\repos\AllCreatures - Back up\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Annayap\source\repos\AllCreatures - Back up\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Annayap\source\repos\AllCreatures - Back up\DataAccessLayer\obj\Release\net6.0-windows\DataAccessLayer.csproj.CoreCompileInputs.cache
