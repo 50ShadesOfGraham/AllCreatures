@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eddie\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+    "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectUniqueName": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "projectName": "BusinessEntities",
-        "projectPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
+        "projectPath": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
         "packagesPath": "C:\\Users\\eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\obj\\",
+        "outputPath": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\BusinessEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\eddie\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\eddie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -97,8 +97,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
-                "projectPath": "C:\\Users\\eddie\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
+              "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj": {
+                "projectPath": "C:\\Users\\eddie\\Desktop\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj"
               }
             }
           }

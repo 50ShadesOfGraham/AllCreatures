@@ -22,3 +22,15 @@ C:\Users\eddie\Source\Repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windo
 C:\Users\eddie\Source\Repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\refint\BusinessEntities.dll
 C:\Users\eddie\Source\Repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
 C:\Users\eddie\Source\Repos\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.deps.json
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.dll
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\bin\Debug\net6.0-windows\BusinessEntities.pdb
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.AssemblyReference.cache
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfoInputs.cache
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.AssemblyInfo.cs
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.dll
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\refint\BusinessEntities.dll
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\BusinessEntities.pdb
+C:\Users\eddie\Desktop\AllCreatures\AllCreatures\BusinessEntities\obj\Debug\net6.0-windows\ref\BusinessEntities.dll
