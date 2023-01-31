@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessEntities;
 using BusinessLayer;
 
 
@@ -23,15 +24,19 @@ namespace WindowsClient
             InitializeComponent();
             this.Model = _model;
         }
-
+        public void Alert(string message,Form_Alert.enmType type) 
+        { 
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(message,type);
+        }
         private void SignInBttn_Click(object sender, EventArgs e)
         {
 
             bool validUser = Model.login(Emailtxt.Text.Trim(), Passwordtxt.Text.Trim());
-
+           // bool validUser = true;
             if (validUser)
             {
-                MessageBox.Show("Successs");
+                this.Alert("Sign In Successful", Form_Alert.enmType.Success);
                 Hide();
                 //
                 //ACGSContainer aCGSContainer = new ACGSContainer(Model);
@@ -46,6 +51,11 @@ namespace WindowsClient
                         AdminIndex adminview = new AdminIndex(Model);
                         adminview.Show();
                         break;
+                    case "Banned":
+                        MessageBox.Show("Error cannot sign in as you are currently banned, Message an Admin for more information at admin@ACGS.ie");
+                        SignIn signIn = new SignIn(Model);
+                        signIn.Show();
+                        break;
                     default:
                         MessageBox.Show("Error::(");
                         break;
@@ -53,8 +63,8 @@ namespace WindowsClient
             }
             else
             {
-                MessageBox.Show("Fail");
-                
+                this.Alert("Sign In UnSuccessful", Form_Alert.enmType.Error);
+                Hide();
             }
         }
 

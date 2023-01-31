@@ -8,13 +8,14 @@ namespace BusinessEntities
 {
     public class Report 
     {
+        #region Instance Properties
         private int reportId;
         private string reportUser;
         private string reason;
         private string description;
         private DateTime dateTime;
-        
-
+        #endregion
+        #region Instance Properties
         public int ReportId
         {
             get { return reportId; }
@@ -40,6 +41,7 @@ namespace BusinessEntities
             get { return description; }
             set { description = value; }
         }
+        #endregion
         public Report(string reportUser, string reason, DateTime dateTime, string description, int reportId)
         {
             this.reportUser = reportUser;

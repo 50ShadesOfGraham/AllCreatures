@@ -16,6 +16,7 @@ namespace WindowsClient
     public partial class NotificationContainer : Form
     {
         private IModel Model;
+        private bool show = true;
         public NotificationContainer(IModel Model)
         {
             InitializeComponent();
@@ -23,16 +24,16 @@ namespace WindowsClient
             this.Text = Model.getUserNameCurrentuser().Trim() + " Notifications";
 
         }
-
         private void NotificationContainer_Load(object sender, EventArgs e)
         {
-           foreach(Notifications notif in Model.NotificationList)
+            List<Notifications> organisedlist = Model.NotificationList.OrderBy(x => x.Messagetime).ToList();
+            foreach(Notifications notif in organisedlist)
             {
-                Notification m = new Notification();
-                m.Width = 892;
-                m.SetHeader(notif.Title.Trim(),notif.Messagetime.ToString().Trim());
-                panel.Controls.Add(m);
+                Notification notifCard = new Notification(notif);
+                this.Controls.Add(notifCard);
+                notifCard.Dock = DockStyle.Top;
             }
+
         }
     }
 }
