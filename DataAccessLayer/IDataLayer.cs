@@ -36,13 +36,15 @@ namespace DataAccessLayer
         public bool verifyAdvertisement(Advertisement advertisement);
         public bool verifyAdvertisement(Dog dog);
         public bool verifyAdvertisement(Horse horse);
-        public bool verifyAdvertisement(Food food);
         public bool verifyAdvertisement(Accessories accessories);
         public bool verifyAdvertisement(FarmAnimal farmAnimal);
+        public bool verifyAdvertisement(Litter litter);
         public bool deleteAdvertisement(Advertisement advertisement);
         public bool deleteAdvertisement(Dog dog);
         public bool deleteAdvertisement(Horse horse);
         public bool banUserInDB(BusinessEntities.User user);
+        public void addNewReportS(string reportUser, string reason, DateTime dateTime, string description, int reportId);
+        List<Report> getAllReports();
         void openConnection();
        
     }

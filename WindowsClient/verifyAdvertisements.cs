@@ -1,14 +1,5 @@
 ﻿using BusinessEntities;
 using BusinessLayer;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace WindowsClient
 {
@@ -26,12 +17,13 @@ namespace WindowsClient
             if(AdCatComboBx.SelectedIndex == 0) 
             {
                 panelAnimalsBtn.Visible = true;
-                
+                panelDog.Visible = false;
                 panelfoodBtn.Visible = false;
                 panelAssBtn.Visible = false;
                 panelAnimalsDisp.Visible = true;
                 panelAccess.Visible = false;
                 panelFood.Visible = false;
+                panelHorse.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 1)
             {
@@ -41,6 +33,8 @@ namespace WindowsClient
                 panelAssBtn.Visible = false;
                 panelAccess.Visible = false;
                 panelFood.Visible = true;
+                panelDog.Visible = false;
+                panelHorse.Visible = false;
             }
             else if(AdCatComboBx.SelectedIndex == 2)
             {
@@ -50,16 +44,20 @@ namespace WindowsClient
                 panelfoodBtn.Visible = false;
                 panelAccess.Visible = true;
                 panelFood.Visible = false;
+                panelDog.Visible = false;
+                panelHorse.Visible = false;
             }
         }
 
         private void verifyAdvertisements_Load(object sender, EventArgs e)
         {
-         
+            panelHorse.Visible = false;
+            panelDog.Visible = false;
             panelAnimalsBtn.Visible = false;
             panelAssBtn.Visible = false;
             panelfoodBtn.Visible= false;
             panelAccess.Visible = false;
+            panelGeneric.Visible = false;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -86,9 +84,13 @@ namespace WindowsClient
 
         private void listboxAni_DoubleClick(object sender, EventArgs e)
         {
-            txtTitle.Text=listboxAni.SelectedItem.ToString();   
-         
-            foreach(Animal animal in model.AdvertList.OfType<Animal>())
+           /* PictureBoxImage.Image = GetImage(); */
+
+            txtTitle.Text=listboxAni.SelectedItem.ToString();
+
+          
+
+            foreach (Animal animal in model.AdvertList.OfType<Animal>())
             {
                 if(animal.Title == txtTitle.Text)
                 {
@@ -101,7 +103,8 @@ namespace WindowsClient
                     txtName.Text=animal.AnimalName;
                     txtAge.Text=animal.Age.ToString();
                     txtGender.Text=animal.Gender;
-
+                    panelDog.Visible = false;
+                    panelHorse.Visible = false;
 
                     /*foreach (Animal animal1 in model.AdvertList)
                     {
@@ -110,33 +113,95 @@ namespace WindowsClient
                         txtGender.Text=animal1.Gender;
                         
                     }*/
-                    
-                    
-                    
-                    if (animal is Dog dog)
+
+                    if (animal is Horse horse)
                     {
-                        txtBreed.Text = dog.Purebreed.ToString();
+                        txtGender.Text=horse.Gender;
+                        panelHorse.Visible = true;
+                        txthSize.Text = horse.Size;
+                        txtHBreed.Text = horse.Breed;
+                        txtHBroken.Text =horse.Broken.ToString();
+                        txtHPurpose.Text = horse.Purpose;
 
                     }
 
+                    if (animal is Dog dog)
+                    {
+                        txtBreed.Text = dog.Purebreed.ToString();
+                        panelDog.Visible = true;
+                    }
+                    if(animal is GenericAnimal generic)
+                    {
+                        panelGeneric.Visible = true;
+                        
+                        txtDetail1.Text = generic.DetailOne;
+                        txtDetail2.Text = generic.DetailTwo;
+                        txtDetail3.Text = generic.DetailThree;
+                        
+                    }
 
                 }
                 
             }
         }
 
+
         private void button3_Click(object sender, EventArgs e)
         {
 
             foreach(Advertisement advertisement in model.AdvertList)
             {
-                if(advertisement.Title == listboxAni.SelectedItem.ToString())
+
+
+                if (advertisement.Title == listboxAni.SelectedItem.ToString())
                 {
                     advertisement.Verified = true;
-                    model.verifyAdvertisement(advertisement);
-                    MessageBox.Show("Success");
+                    if (advertisement is Dog dog)
+                    {
+                        model.verifyAdvertisement(dog);
+                    }
+                    else if (advertisement is Horse horse)
+                    {
+                        model.verifyAdvertisement(horse);
+                    }
+                    else if (advertisement is FarmAnimal farmAnimal)
+                    {
+                        model.verifyAdvertisement(farmAnimal);
+                    }
+                    else if (advertisement is Litter litter)
+                    {
+                        model.verifyAdvertisement(litter);
+                    }
+                    else if (advertisement is GenericAnimal generic)
+                    {
+                        model.verifyAdvertisement(generic);
+                    }
+                    break;
+
                 }
-            }
+                
+                if (advertisement.Title == listBoxAssess.SelectedItem.ToString())
+                {
+                    advertisement.Verified = true;
+                    if (advertisement is Accessories accessories)
+                    {
+                        model.verifyAdvertisement(accessories);
+                    }
+                    break;
+                }
+                if (advertisement.Title == listBoxFood.SelectedItem.ToString())
+                {
+                    advertisement.Verified = true;
+                    if (advertisement is Food food)
+                    {
+                        model.verifyAdvertisement(food);
+                    }
+                    break;
+                }
+
+        }
+            MessageBox.Show("Success");
+
         }
 
         private void listboxAni_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,8 +214,8 @@ namespace WindowsClient
             foreach(Accessories advertisement in model.AdvertList.OfType<Accessories>())
             {
                 
-                    
-                listBoxAssess.Items.Add(advertisement.Title);
+                    listBoxAssess.Items.Add(advertisement.Title);
+
                 
             }
         }
@@ -176,10 +241,12 @@ namespace WindowsClient
         {
             txtTitle.Text=listBoxAssess.SelectedItem.ToString();
 
-            foreach (Advertisement advertisement in model.AdvertList)
+            foreach (Advertisement
+                advertisement in model.AdvertList.OfType<Accessories>())
             {
                 if (advertisement.Title == txtTitle.Text)
                 {
+                    
                     txtTitle.Text = advertisement.Title;
                     txtDescription.Text = advertisement.Description;
                     txtVerified.Text = advertisement.Verified.ToString();
@@ -211,6 +278,12 @@ namespace WindowsClient
                     txtVerified.Text = advertisement.Verified.ToString();
                     txtPrice.Text = advertisement.Price.ToString();
                     txtStat.Text = advertisement.Status.ToString();
+                   
+                    if(advertisement is Food food) 
+                    {
+                        txtType.Text = food.AnimalType;
+                        txtDetail1.Text = food.Details;
+                    }
                 }
             }
         }
@@ -218,6 +291,66 @@ namespace WindowsClient
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listboxAni.Items.Clear();
+            listBoxAssess.Items.Clear();
+            listBoxFood.Items.Clear();
+            txtDetail1.Clear();
+            txtDetail2.Clear();
+            txtDetail3.Clear();
+            txtDescription.Clear();
+            txtAge.Clear();
+            txtAnimalType.Clear();
+            txtBreed.Clear();
+            txtAccessCat.Clear();
+            txtName.Clear();
+            txtVerified.Clear();
+            txtType.Clear();
+            txthSize.Clear();
+            txtHBreed.Clear();
+            txtHBroken.Clear();
+            txtHPurpose.Clear();
+            txtTitle.Clear();
+            txtPrice.Clear();
+            txtStat.Clear();
+            txtGender.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (Advertisement advertisement in model.AdvertList.OfType<Animal>())
+            {
+                
+
+                if (advertisement.Title == listboxAni.SelectedItem.ToString())
+                {
+                   if(advertisement is Dog dog) 
+                    {
+                        model.deleteAdvertisement(dog);
+                        listboxAni.Items.Remove(listboxAni.SelectedItem);
+                        MessageBox.Show(dog.AnimalName);
+                        break;
+                        
+                    }
+                   /* model.deleteAdvertisement(advertisement);
+                    listboxAni.Items.Remove(listboxAni.SelectedItem);
+                    break;
+                    MessageBox.Show("Success");*/
+                }
+                if (MessageBox.Show("Delete " + listboxAni.SelectedItem.ToString() + " ? ", "Are you sure !", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                    return;
+
+            }
+         
+                
+        }
+
+        private void panelGeneric_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
