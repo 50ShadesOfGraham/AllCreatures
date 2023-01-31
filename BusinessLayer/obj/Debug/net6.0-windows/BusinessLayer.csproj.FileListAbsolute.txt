@@ -1,0 +1,5 @@
+C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.AssemblyInfo.cs
+C:\Users\eddie\source\repos\AllCreatures\BusinessLayer\obj\Debug\net6.0-windows\BusinessLayer.csproj.CoreCompileInputs.cache
