@@ -356,5 +356,10 @@ namespace WindowsClient
                 }
             }
         }
+
+        private void FlowLayout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
