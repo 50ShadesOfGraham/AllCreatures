@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "L9vAQ2UsKECOYQ4CFndQDecjoCAwn0n75KRZwnjfK4MZzCWop5wQhnthmgOJwf6VpMzTMFbWX3blLUHaw8sPjA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Eoghan\\source\\repos\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
-=======
   "dgSpecHash": "x4QeE7nLiSHHNRitcgnFNoTJYa/Ya2tnwytOgE3olLM1j+/Hj4TqAebXE/dREwKGvFGBS6DOhTdQlgeeibtkmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Darragh\\Source\\Repos\\50ShadesOfGraham\\AllCreatures\\AllCreatures\\BusinessEntities\\BusinessEntities.csproj",
->>>>>>> 5f5725541f2c498d6e813aeba8abb35c948c03f5
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -157,6 +157,12 @@ namespace WindowsClient
                             panelDog.Visible = true;
                             panelGeneric.Visible = false;
                             panelLitter.Visible = false;
+                        if (dog.Purebreed == false)
+                        {
+                            txtDogBreed1.Text = dog.BreedOne;
+                            txtDogBreed2.Text = dog.BreedTwo;
+                        }
+                        txtDogBreed1.Text = dog.BreedOne;
                     }
                         if (animal is GenericAnimal generic)
                         {
