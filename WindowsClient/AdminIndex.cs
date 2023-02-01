@@ -26,7 +26,7 @@ namespace WindowsClient
         private void showSubMenu(Panel panel)
         {
             if (panel.Visible == false)
-            {
+            {';.'
                 //hideSubMenu();
                 panel.Visible = true;
             }
