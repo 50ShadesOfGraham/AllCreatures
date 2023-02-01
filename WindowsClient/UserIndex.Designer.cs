@@ -1143,6 +1143,7 @@
             this.LogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.LogoBox.TabIndex = 0;
             this.LogoBox.TabStop = false;
+            this.LogoBox.Click += new System.EventHandler(this.LogoBox_Click);
             // 
             // FlowLayout
             // 

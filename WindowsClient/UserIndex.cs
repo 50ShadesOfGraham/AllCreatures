@@ -411,5 +411,13 @@ namespace WindowsClient
             NotificationContainer userNotifications = new NotificationContainer(Model);
             userNotifications.Show();
         }
+
+        private void LogoBox_Click(object sender, EventArgs e)
+        {
+            
+            /*UserIndex userIndex = new UserIndex(Model);
+            userIndex.*/
+            
+        }
     }
 }
