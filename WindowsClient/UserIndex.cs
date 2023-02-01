@@ -270,5 +270,91 @@ namespace WindowsClient
             MyAdvertisements myadverts = new MyAdvertisements(Model);
             myadverts.Show();
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT AdvertID FROM AccessoriesAdvertisement,Bundle,DogAdvertisement,FarmAnimalAdvertisement,FoodAdvertisement,GenericAnimalAdvertisement,HorseAdvertisement WHERE Title LIKE '%'" + searchBox.Text.Trim() + "'%'";
+
+
+            FlowLayout.Controls.Clear();
+
+            //foreach (User u in Model.UserList)
+            //{
+            //    ViewAds ads = new ViewAds(query);
+            //    ads.SetLabel(u.FirstName, u.LastName, u.Email, u.Password, u.UserType); //function
+            //    FlowLayout.Controls.Add(ads);
+            //}
+
+            foreach (Accessories access in Model.AdvertList.OfType<Accessories>())
+            {
+                if (access.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + access.AdvertID);
+                    ViewAds ads = new ViewAds(Model, access);
+                    ads.SetLabel(access.Title, access.SellerEmail, access.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+            foreach (Food fo in Model.AdvertList.OfType<Food>())
+            {
+                if (fo.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + fo.AdvertID);
+                    ViewAds ads = new ViewAds(Model, fo);
+                    ads.SetLabel(fo.Title, fo.SellerEmail, fo.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+            foreach (Dog doggo in Model.AdvertList.OfType<Dog>())
+            {
+                if (doggo.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + doggo.AdvertID);
+                    ViewAds ads = new ViewAds(Model, doggo);
+                    ads.SetLabel(doggo.Title, doggo.SellerEmail, doggo.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+            foreach (Horse pony in Model.AdvertList.OfType<Horse>())
+            {
+                if (pony.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + pony.AdvertID);
+                    ViewAds ads = new ViewAds(Model, pony);
+                    ads.SetLabel(pony.Title, pony.SellerEmail, pony.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+            foreach (FarmAnimal FA in Model.AdvertList.OfType<FarmAnimal>())
+            {
+                if (FA.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + FA.AdvertID);
+                    ViewAds ads = new ViewAds(Model, FA);
+                    ads.SetLabel(FA.Title, FA.SellerEmail, FA.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+            foreach (GenericAnimal GA in Model.AdvertList.OfType<GenericAnimal>())
+            {
+                if (GA.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + GA.AdvertID);
+                    ViewAds ads = new ViewAds(Model, GA);
+                    ads.SetLabel(GA.Title, GA.SellerEmail, GA.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+            foreach (Litter lttr in Model.AdvertList.OfType<Litter>())
+            {
+                if (lttr.AdvertID.Equals(query))
+                {
+                    System.Windows.Forms.MessageBox.Show("Advertisement:" + lttr.AdvertID);
+                    ViewAds ads = new ViewAds(Model, lttr);
+                    ads.SetLabel(lttr.Title, lttr.SellerEmail, lttr.Price.ToString()); //function
+                    FlowLayout.Controls.Add(ads);
+                }
+            }
+        }
     }
 }
