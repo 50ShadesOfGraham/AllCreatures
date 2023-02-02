@@ -19,16 +19,13 @@ namespace WindowsClient
 
         private GenericAnimal Advertisement;
         private IModel Model;
-        public GenericAdvert(IModel _model)
+        public GenericAdvert(IModel _model, GenericAnimal advert)
         {
             InitializeComponent();
             this.Model = _model;
-        }
-        public GenericAdvert(GenericAnimal advert)
-        {
-            InitializeComponent();
             this.Advertisement = advert;
         }
+       
         
 
         private void GenericAdvert_Load(object sender, EventArgs e)

@@ -7,16 +7,14 @@ namespace WindowsClient
     {
         private Food Advertisement;
         private IModel Model;
-        public FoodAdvert(IModel _model)
+        public FoodAdvert(IModel _model, Food advert)
         {
             InitializeComponent();
             this.Model = _model;
+            this.Advertisement = advert;
+
         }
-        public FoodAdvert(Food advert)
-        {
-            InitializeComponent();
-            Advertisement = advert;
-        }
+        
 
         private void FoodAdvert_Load(object sender, EventArgs e)
         {

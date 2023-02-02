@@ -17,16 +17,13 @@ namespace WindowsClient
         private FarmAnimal Advertisement;
         private IModel Model;
 
-        public FarmAdvert(IModel _model)
+        public FarmAdvert(IModel _model, FarmAnimal advert)
         {
             InitializeComponent();
             this.Model = _model;
-        }
-        public FarmAdvert(FarmAnimal advert)
-        {
-            InitializeComponent();
             this.Advertisement = advert;
         }
+       
 
         private void FarmAdvert_Load(object sender, EventArgs e)
         {

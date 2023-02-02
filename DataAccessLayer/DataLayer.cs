@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Drawing.Drawing2D;
 using System.Xml.Linq;
+using Microsoft.VisualBasic.Logging;
 
 namespace DataAccessLayer
 {
@@ -1756,4 +1757,5 @@ namespace DataAccessLayer
             return true;
         }
     }
+
 }

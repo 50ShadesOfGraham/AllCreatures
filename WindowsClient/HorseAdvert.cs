@@ -16,16 +16,13 @@ namespace WindowsClient
     {
         private Horse Advertisement;
         private IModel Model;
-        public HorseAdvert(IModel _model)
+        public HorseAdvert(IModel _modelHorse, Horse advert)
         {
             InitializeComponent();
-            Model = _model;
-        }
-        public HorseAdvert(Horse advert)
-        {
-            InitializeComponent();
+            this.Model = _modelHorse;
             this.Advertisement = advert;
         }
+        
 
         private void HorseAdvert_Load(object sender, EventArgs e)
         {

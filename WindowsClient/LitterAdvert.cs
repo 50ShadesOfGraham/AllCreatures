@@ -17,16 +17,14 @@ namespace WindowsClient
     {
         private Litter Advertisement;
         private IModel Model;
-        public LitterAdvert(IModel _model)
+        public LitterAdvert(IModel _model, Litter advert)
         {
             InitializeComponent();
-            Model = _model;
-        }
-        public LitterAdvert(Litter advert)
-        {
-            InitializeComponent();
+            this.Model = _model;
             this.Advertisement = advert;
+
         }
+       
 
         private void LitterAdvert_Load(object sender, EventArgs e)
         {
