@@ -117,6 +117,9 @@ namespace BusinessLayer
 
             notificationList = new List<Notifications>();
             notificationList = dataLayer.getAllNotifications();
+
+            reportList = new List<Report>();
+            reportList = dataLayer.getAllReports();
         }
 
         ~Model()

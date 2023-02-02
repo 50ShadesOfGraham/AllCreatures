@@ -1226,7 +1226,7 @@
             this.editAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.editAccount.ForeColor = System.Drawing.Color.White;
             this.editAccount.Name = "editAccount";
-            this.editAccount.Size = new System.Drawing.Size(183, 22);
+            this.editAccount.Size = new System.Drawing.Size(229, 26);
             this.editAccount.Text = "Edit Account";
             this.editAccount.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
@@ -1235,7 +1235,7 @@
             this.myAdvertisements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.myAdvertisements.ForeColor = System.Drawing.Color.White;
             this.myAdvertisements.Name = "myAdvertisements";
-            this.myAdvertisements.Size = new System.Drawing.Size(183, 22);
+            this.myAdvertisements.Size = new System.Drawing.Size(229, 26);
             this.myAdvertisements.Text = "My Advertisements";
             this.myAdvertisements.Click += new System.EventHandler(this.myAdvertisements_Click);
             // 
@@ -1244,7 +1244,7 @@
             this.reportUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.reportUser.ForeColor = System.Drawing.Color.White;
             this.reportUser.Name = "reportUser";
-            this.reportUser.Size = new System.Drawing.Size(183, 22);
+            this.reportUser.Size = new System.Drawing.Size(229, 26);
             this.reportUser.Text = "Report User";
             this.reportUser.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -1253,7 +1253,7 @@
             this.signOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.signOut.ForeColor = System.Drawing.Color.White;
             this.signOut.Name = "signOut";
-            this.signOut.Size = new System.Drawing.Size(183, 22);
+            this.signOut.Size = new System.Drawing.Size(229, 26);
             this.signOut.Text = "Sign Out";
             this.signOut.Click += new System.EventHandler(this.signOut_Click);
             // 
@@ -1263,7 +1263,7 @@
             this.notificationsMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.notificationsMenu.ForeColor = System.Drawing.Color.White;
             this.notificationsMenu.Name = "notificationsMenu";
-            this.notificationsMenu.Size = new System.Drawing.Size(90, 31);
+            this.notificationsMenu.Size = new System.Drawing.Size(114, 36);
             this.notificationsMenu.Text = "Notifications";
             this.notificationsMenu.Click += new System.EventHandler(this.notificationsMenu_Click);
             // 
@@ -1274,7 +1274,7 @@
             this.placeAdvertisementToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.placeAdvertisementToolStripMenuItem.Name = "placeAdvertisementToolStripMenuItem";
             this.placeAdvertisementToolStripMenuItem.Padding = new System.Windows.Forms.Padding(6);
-            this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(139, 31);
+            this.placeAdvertisementToolStripMenuItem.Size = new System.Drawing.Size(169, 36);
             this.placeAdvertisementToolStripMenuItem.Text = "Place Advertisement";
             this.placeAdvertisementToolStripMenuItem.Click += new System.EventHandler(this.placeAdvertisementToolStripMenuItem_Click_1);
             // 
