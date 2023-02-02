@@ -101,7 +101,7 @@ namespace WindowsClient
             frm.showAlert(message, type);
         }
 
-        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+       /* private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Do You Want To Sign Out?",
                "Confirmation", MessageBoxButtons.YesNoCancel
@@ -119,7 +119,7 @@ namespace WindowsClient
             {
                 MessageBox.Show("Cancel signout");
             }
-        }
+        }*/
 
         private void AnimalBttn_Click(object sender, EventArgs e)
         {
@@ -619,6 +619,69 @@ namespace WindowsClient
                     FlowLayout.Controls.Add(ads);
                 }
             }
+        }
+
+        //ToolStripmenu names have changed for some strange reason
+        //Put code from former stripmenus into new menus -Darragh 
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            //report user
+            reportUser reportuser = new reportUser(Model);
+            reportuser.Show();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            //editAccount
+            EditAccount editAccount = new EditAccount(Model);
+            editAccount.Show();
+        }
+
+        private void myAdvertisements_Click(object sender, EventArgs e)
+        {
+            MyAdvertisements myadverts = new MyAdvertisements(Model);
+            myadverts.Show();
+        }
+
+        private void signOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do You Want To Sign Out?",
+               "Confirmation", MessageBoxButtons.YesNoCancel
+               );
+
+            if (result == DialogResult.Yes)
+            {
+                this.Alert("GoodBye", Form_Alert.enmType.Leaving);
+                Hide();
+                SignIn signin = new SignIn(Model);
+                signin.Show();
+                //System.Windows.Forms.Application.Exit();
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Cancel signout");
+            }
+        }
+
+        private void placeAdvertisementToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            CreateAdvertStart createAd = new CreateAdvertStart(Model);
+            createAd.Show();
+        }
+
+        private void notificationsMenu_Click(object sender, EventArgs e)
+        {
+            NotificationContainer userNotifications = new NotificationContainer(Model);
+            userNotifications.Show();
+        }
+
+        private void LogoBox_Click(object sender, EventArgs e)
+        {
+            
+            /*UserIndex userIndex = new UserIndex(Model);
+            userIndex.*/
+            
         }
 
         private void BirdFoodBttn_Click(object sender, EventArgs e)

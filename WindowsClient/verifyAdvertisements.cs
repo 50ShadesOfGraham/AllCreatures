@@ -113,22 +113,26 @@ namespace WindowsClient
                         panelHorse.Visible = false;
                         panelLitter.Visible = false;
                     lbluserEmail.Text = animal.SellerEmail;
-                   /*     //pictureBox = animal.ImageOne;
-                    byte[] imagedata = animal.ImageOne;
-                    using (MemoryStream ms = new MemoryStream(imagedata))
-                    {
-                        Image image = Image.FromStream(ms);
-                        pictureBox.Image = image;
-                        
-                    }
-                    if (imagedata != null)
-                    {
-                        using (MemoryStream ms = new MemoryStream(imagedata))
-                        {
-                            Image image = Image.FromStream(ms);
-                            pictureBox.Image = image;
-                        }
-                    }*/
+                    lblName.Visible = true;
+                    lblGender.Visible = true;
+                    txtGender.Visible = true;
+                    txtName.Visible = true;
+                    /*     //pictureBox = animal.ImageOne;
+                     byte[] imagedata = animal.ImageOne;
+                     using (MemoryStream ms = new MemoryStream(imagedata))
+                     {
+                         Image image = Image.FromStream(ms);
+                         pictureBox.Image = image;
+
+                     }
+                     if (imagedata != null)
+                     {
+                         using (MemoryStream ms = new MemoryStream(imagedata))
+                         {
+                             Image image = Image.FromStream(ms);
+                             pictureBox.Image = image;
+                         }
+                     }*/
 
 
                     /*foreach (Animal animal1 in model.AdvertList)
@@ -157,6 +161,12 @@ namespace WindowsClient
                             panelDog.Visible = true;
                             panelGeneric.Visible = false;
                             panelLitter.Visible = false;
+                        if (dog.Purebreed == false)
+                        {
+                            txtDogBreed1.Text = dog.BreedOne;
+                            txtDogBreed2.Text = dog.BreedTwo;
+                        }
+                        txtDogBreed1.Text = dog.BreedOne;
                     }
                         if (animal is GenericAnimal generic)
                         {
@@ -175,6 +185,11 @@ namespace WindowsClient
                         txtLitterBr2.Text = litter.BreedTwo;
                         txtLitterPure.Text = litter.Purebreed.ToString() ;
                         txtLitterSize.Text = litter.LitterSize.ToString();
+                        txtName.Visible = false;
+                        txtAge.Text = litter.Age.ToString();
+                        lblName.Visible = false;
+                        lblGender.Visible = false;
+                        txtGender.Visible = false;
                         panelLitter.Visible = true;
                         }
                     }
@@ -316,12 +331,12 @@ namespace WindowsClient
                     txtVerified.Text = advertisement.Verified.ToString();
                     txtPrice.Text = advertisement.Price.ToString();
                     txtStat.Text = advertisement.Status.ToString();
-                    
+                   
 
                     if (advertisement is Food food)
                     {
                         txtType.Text = food.AnimalType;
-                        txtDetail1.Text = food.Details;
+                        txtDetails.Text = food.Details;
                         lbluserEmail.Text = advertisement.SellerEmail;
                     }
                 }

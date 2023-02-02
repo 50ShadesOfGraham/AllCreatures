@@ -100,6 +100,10 @@
             this.txtDetails = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panelDog = new System.Windows.Forms.Panel();
+            this.txtDogBreed2 = new System.Windows.Forms.TextBox();
+            this.txtDogBreed1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -130,7 +134,7 @@
             "   Food",
             "   Accessories"});
             this.AdCatComboBx.Location = new System.Drawing.Point(363, 11);
-            this.AdCatComboBx.Margin = new System.Windows.Forms.Padding(2);
+            this.AdCatComboBx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AdCatComboBx.Name = "AdCatComboBx";
             this.AdCatComboBx.Size = new System.Drawing.Size(198, 23);
             this.AdCatComboBx.TabIndex = 4;
@@ -152,7 +156,7 @@
             // 
             this.LogoBox.Image = global::WindowsClient.Properties.Resources.LogoWhiteThumbnail;
             this.LogoBox.Location = new System.Drawing.Point(11, 11);
-            this.LogoBox.Margin = new System.Windows.Forms.Padding(2);
+            this.LogoBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogoBox.Name = "LogoBox";
             this.LogoBox.Size = new System.Drawing.Size(105, 95);
             this.LogoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -166,7 +170,7 @@
             this.btnFood.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnFood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.btnFood.Location = new System.Drawing.Point(0, 0);
-            this.btnFood.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFood.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFood.Name = "btnFood";
             this.btnFood.Size = new System.Drawing.Size(212, 33);
             this.btnFood.TabIndex = 98;
@@ -181,7 +185,7 @@
             this.btnAssess.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAssess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.btnAssess.Location = new System.Drawing.Point(2, 2);
-            this.btnAssess.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAssess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAssess.Name = "btnAssess";
             this.btnAssess.Size = new System.Drawing.Size(212, 33);
             this.btnAssess.TabIndex = 99;
@@ -196,7 +200,7 @@
             this.btnAnimals.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAnimals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.btnAnimals.Location = new System.Drawing.Point(0, 0);
-            this.btnAnimals.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnimals.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAnimals.Name = "btnAnimals";
             this.btnAnimals.Size = new System.Drawing.Size(212, 33);
             this.btnAnimals.TabIndex = 100;
@@ -312,7 +316,7 @@
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(288, 319);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
@@ -332,7 +336,7 @@
             // txtTitle
             // 
             this.txtTitle.Location = new System.Drawing.Point(291, 214);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.ReadOnly = true;
@@ -354,7 +358,7 @@
             // txtType
             // 
             this.txtType.Location = new System.Drawing.Point(142, 2);
-            this.txtType.Margin = new System.Windows.Forms.Padding(2);
+            this.txtType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtType.Multiline = true;
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
@@ -376,7 +380,7 @@
             // txtAnimalType
             // 
             this.txtAnimalType.Location = new System.Drawing.Point(173, 13);
-            this.txtAnimalType.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAnimalType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAnimalType.Multiline = true;
             this.txtAnimalType.Name = "txtAnimalType";
             this.txtAnimalType.ReadOnly = true;
@@ -398,7 +402,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(173, 44);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
@@ -420,7 +424,7 @@
             // txtAge
             // 
             this.txtAge.Location = new System.Drawing.Point(173, 74);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
@@ -442,7 +446,7 @@
             // txtGender
             // 
             this.txtGender.Location = new System.Drawing.Point(173, 107);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtGender.Multiline = true;
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
@@ -518,7 +522,7 @@
             // txtVerified
             // 
             this.txtVerified.Location = new System.Drawing.Point(288, 351);
-            this.txtVerified.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerified.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtVerified.Multiline = true;
             this.txtVerified.Name = "txtVerified";
             this.txtVerified.ReadOnly = true;
@@ -553,7 +557,7 @@
             this.panelLitter.Controls.Add(this.label20);
             this.panelLitter.Controls.Add(this.lbl18);
             this.panelLitter.Controls.Add(this.label19);
-            this.panelLitter.Location = new System.Drawing.Point(328, 13);
+            this.panelLitter.Location = new System.Drawing.Point(331, 10);
             this.panelLitter.Name = "panelLitter";
             this.panelLitter.Size = new System.Drawing.Size(223, 121);
             this.panelLitter.TabIndex = 151;
@@ -617,7 +621,7 @@
             this.lbl18.AutoSize = true;
             this.lbl18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl18.ForeColor = System.Drawing.Color.White;
-            this.lbl18.Location = new System.Drawing.Point(3, 10);
+            this.lbl18.Location = new System.Drawing.Point(2, 9);
             this.lbl18.Name = "lbl18";
             this.lbl18.Size = new System.Drawing.Size(85, 21);
             this.lbl18.TabIndex = 152;
@@ -666,7 +670,7 @@
             // txtHPurpose
             // 
             this.txtHPurpose.Location = new System.Drawing.Point(117, 96);
-            this.txtHPurpose.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHPurpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHPurpose.Multiline = true;
             this.txtHPurpose.Name = "txtHPurpose";
             this.txtHPurpose.ReadOnly = true;
@@ -676,7 +680,7 @@
             // txtHBreed
             // 
             this.txtHBreed.Location = new System.Drawing.Point(117, 63);
-            this.txtHBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHBreed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHBreed.Multiline = true;
             this.txtHBreed.Name = "txtHBreed";
             this.txtHBreed.ReadOnly = true;
@@ -686,7 +690,7 @@
             // txtHBroken
             // 
             this.txtHBroken.Location = new System.Drawing.Point(117, 33);
-            this.txtHBroken.Margin = new System.Windows.Forms.Padding(2);
+            this.txtHBroken.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtHBroken.Multiline = true;
             this.txtHBroken.Name = "txtHBroken";
             this.txtHBroken.ReadOnly = true;
@@ -744,7 +748,7 @@
             // txthSize
             // 
             this.txthSize.Location = new System.Drawing.Point(117, 4);
-            this.txthSize.Margin = new System.Windows.Forms.Padding(2);
+            this.txthSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txthSize.Multiline = true;
             this.txthSize.Name = "txthSize";
             this.txthSize.ReadOnly = true;
@@ -766,7 +770,7 @@
             // txtBreed
             // 
             this.txtBreed.Location = new System.Drawing.Point(95, 0);
-            this.txtBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBreed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBreed.Multiline = true;
             this.txtBreed.Name = "txtBreed";
             this.txtBreed.ReadOnly = true;
@@ -782,7 +786,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.button2.Location = new System.Drawing.Point(11, 497);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 34);
             this.button2.TabIndex = 145;
@@ -799,7 +803,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.button1.Location = new System.Drawing.Point(11, 545);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 34);
             this.button1.TabIndex = 144;
@@ -816,7 +820,7 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.button3.Location = new System.Drawing.Point(11, 443);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 34);
             this.button3.TabIndex = 143;
@@ -827,7 +831,7 @@
             // txtStat
             // 
             this.txtStat.Location = new System.Drawing.Point(619, 214);
-            this.txtStat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtStat.Multiline = true;
             this.txtStat.Name = "txtStat";
             this.txtStat.ReadOnly = true;
@@ -872,7 +876,7 @@
             // txtSubCat
             // 
             this.txtSubCat.Location = new System.Drawing.Point(179, 42);
-            this.txtSubCat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubCat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSubCat.Multiline = true;
             this.txtSubCat.Name = "txtSubCat";
             this.txtSubCat.ReadOnly = true;
@@ -894,7 +898,7 @@
             // txtAccessCat
             // 
             this.txtAccessCat.Location = new System.Drawing.Point(179, 9);
-            this.txtAccessCat.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAccessCat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAccessCat.Multiline = true;
             this.txtAccessCat.Name = "txtAccessCat";
             this.txtAccessCat.ReadOnly = true;
@@ -915,7 +919,7 @@
             // txtDetails
             // 
             this.txtDetails.Location = new System.Drawing.Point(141, 23);
-            this.txtDetails.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDetails.Multiline = true;
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.ReadOnly = true;
@@ -936,12 +940,58 @@
             // 
             // panelDog
             // 
+            this.panelDog.Controls.Add(this.txtDogBreed2);
+            this.panelDog.Controls.Add(this.txtDogBreed1);
+            this.panelDog.Controls.Add(this.label6);
             this.panelDog.Controls.Add(this.label13);
+            this.panelDog.Controls.Add(this.label1);
             this.panelDog.Controls.Add(this.txtBreed);
-            this.panelDog.Location = new System.Drawing.Point(440, 377);
+            this.panelDog.Location = new System.Drawing.Point(441, 375);
             this.panelDog.Name = "panelDog";
-            this.panelDog.Size = new System.Drawing.Size(240, 21);
+            this.panelDog.Size = new System.Drawing.Size(240, 70);
             this.panelDog.TabIndex = 148;
+            // 
+            // txtDogBreed2
+            // 
+            this.txtDogBreed2.Location = new System.Drawing.Point(95, 46);
+            this.txtDogBreed2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDogBreed2.Multiline = true;
+            this.txtDogBreed2.Name = "txtDogBreed2";
+            this.txtDogBreed2.ReadOnly = true;
+            this.txtDogBreed2.Size = new System.Drawing.Size(143, 19);
+            this.txtDogBreed2.TabIndex = 161;
+            // 
+            // txtDogBreed1
+            // 
+            this.txtDogBreed1.Location = new System.Drawing.Point(95, 24);
+            this.txtDogBreed1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDogBreed1.Multiline = true;
+            this.txtDogBreed1.Name = "txtDogBreed1";
+            this.txtDogBreed1.ReadOnly = true;
+            this.txtDogBreed1.Size = new System.Drawing.Size(143, 19);
+            this.txtDogBreed1.TabIndex = 160;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(-2, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 21);
+            this.label6.TabIndex = 159;
+            this.label6.Text = "Breed Two";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-2, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 21);
+            this.label1.TabIndex = 156;
+            this.label1.Text = "Breed";
             // 
             // pictureBox
             // 
@@ -958,7 +1008,7 @@
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(166)))), ((int)(((byte)(247)))));
             this.btnClear.Location = new System.Drawing.Point(11, 129);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(71, 33);
             this.btnClear.TabIndex = 150;
@@ -1131,5 +1181,9 @@
         private Label label19;
         private Label lbluserEmail;
         private Label label5;
+        private TextBox txtDogBreed2;
+        private TextBox txtDogBreed1;
+        private Label label6;
+        private Label label1;
     }
 }

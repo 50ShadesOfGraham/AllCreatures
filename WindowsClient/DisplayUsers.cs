@@ -110,7 +110,11 @@ namespace WindowsClient
 
                 }
             }
-*/
+            */              
+            txtGender.Visible= false;
+            txtDob.Visible= false;
+            lblDOB.Visible= false;
+            lblGD.Visible= false;
 
         }
 
@@ -130,7 +134,15 @@ namespace WindowsClient
 
         private void txtReports_TextChanged(object sender, EventArgs e)
         {
-
+           /* txtEmail.Text = listUsers.SelectedItem.ToString();
+            foreach(Report report in Model.ReportList)
+            {
+                if(report.ReportUser == txtEmail.Text)
+                {
+                    txtReports.Text = report.Description;
+                }
+                
+            }*/
         }
     }
 }

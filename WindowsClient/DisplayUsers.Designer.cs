@@ -37,7 +37,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtReports = new System.Windows.Forms.RichTextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblGD = new System.Windows.Forms.Label();
             this.txtAddr3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAddr2 = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.txtAddr1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDob = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDOB = new System.Windows.Forms.Label();
             this.txtLname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFname = new System.Windows.Forms.TextBox();
@@ -173,17 +173,17 @@
             this.txtGender.Size = new System.Drawing.Size(145, 23);
             this.txtGender.TabIndex = 34;
             // 
-            // label6
+            // lblGD
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(535, 118);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 19);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Gender";
+            this.lblGD.AutoSize = true;
+            this.lblGD.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGD.ForeColor = System.Drawing.Color.White;
+            this.lblGD.Location = new System.Drawing.Point(535, 118);
+            this.lblGD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGD.Name = "lblGD";
+            this.lblGD.Size = new System.Drawing.Size(58, 19);
+            this.lblGD.TabIndex = 33;
+            this.lblGD.Text = "Gender";
             // 
             // txtAddr3
             // 
@@ -253,17 +253,17 @@
             this.txtDob.Size = new System.Drawing.Size(145, 23);
             this.txtDob.TabIndex = 26;
             // 
-            // label2
+            // lblDOB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(208, 202);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Date Of Birth";
+            this.lblDOB.AutoSize = true;
+            this.lblDOB.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDOB.ForeColor = System.Drawing.Color.White;
+            this.lblDOB.Location = new System.Drawing.Point(208, 202);
+            this.lblDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDOB.Name = "lblDOB";
+            this.lblDOB.Size = new System.Drawing.Size(96, 19);
+            this.lblDOB.TabIndex = 25;
+            this.lblDOB.Text = "Date Of Birth";
             // 
             // txtLname
             // 
@@ -409,7 +409,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtReports);
             this.Controls.Add(this.txtGender);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblGD);
             this.Controls.Add(this.txtAddr3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAddr2);
@@ -417,7 +417,7 @@
             this.Controls.Add(this.txtAddr1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDob);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblDOB);
             this.Controls.Add(this.txtLname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFname);
@@ -445,7 +445,7 @@
         private Label label7;
         private RichTextBox txtReports;
         private TextBox txtGender;
-        private Label label6;
+        private Label lblGD;
         private TextBox txtAddr3;
         private Label label5;
         private TextBox txtAddr2;
@@ -453,7 +453,7 @@
         private TextBox txtAddr1;
         private Label label3;
         private TextBox txtDob;
-        private Label label2;
+        private Label lblDOB;
         private TextBox txtLname;
         private Label label1;
         private TextBox txtFname;
